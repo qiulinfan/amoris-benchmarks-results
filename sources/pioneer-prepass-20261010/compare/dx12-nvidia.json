@@ -1,0 +1,424 @@
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-10 14:19",
+ "backend": "dx12",
+ "adapter": "nvidia",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.9,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.001,
+    "psnr_db": 111.48,
+    "max_diff_8bit": 1,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-dense": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-dense-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-dense-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-shadows": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-shadows-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-shadows-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "splats": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/splats-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.2,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/splats-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "gi-room-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/gi-room-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 2.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.6,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "sailing": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/sailing-off.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/sailing-on.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "on"
+    }
+   ]
+  },
+  "anim": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/anim-off.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/anim-on.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "on"
+    }
+   ]
+  },
+  "gi-room": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/gi-room-off.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/gi-room-on.png",
+     "ok": false,
+     "error": "cannot establish that <local-endpoint> is available",
+     "seconds": 2.0,
+     "prepass": "on"
+    }
+   ]
+  },
+  "cubes-orbit": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-orbit-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 5.6,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/dx12-nvidia/cubes-orbit-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": [
+  {
+   "scene": "mixed",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 65,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 59,
+   "entities_visible_on": 59,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "cubes",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 100001,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10766,
+   "entities_visible_on": 10766,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/anim",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 22,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 7,
+   "entities_visible_on": 7,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/sailing",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 5,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 3,
+   "entities_visible_on": 3,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/gi-room",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 8,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 8,
+   "entities_visible_on": 8,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/pt-lab",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Direct3D 12",
+   "instances": 11,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10,
+   "entities_visible_on": 10,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  }
+ ]
+}

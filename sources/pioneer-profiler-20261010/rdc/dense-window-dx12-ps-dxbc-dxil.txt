@@ -1,0 +1,2286 @@
+; shader hash: dc4c23afbc9b85ab04e87ed11ab6c75c
+
+; Pixel Shader, compiled under SM6.8
+
+_dx.types.Handle = type { int8* }
+_dx.types.ResBind = type { int, int, int, int8 }
+_dx.types.ResourceProperties = type { int, int }
+_dx.types.ResRet.i32 = type { int, int, int, int, int }
+_dx.types.ResRet.f32 = type { float, float, float, float, int }
+_dx.types.CBufRet.f32 = type { float, float, float, float }
+_dx.types.Dimensions = type { int, int, int, int }
+_dx.types.CBufRet.i32 = type { int, int, int, int }
+_struct.ByteAddressBuffer = type { int }
+_"class.Texture2DArray<float>" = type { float, _"class.Texture2DArray<float>::mips_type" }
+_"class.Texture2DArray<float>::mips_type" = type { int }
+_"class.StructuredBuffer<unsigned int>" = type { int }
+_"class.TextureCube<vector<float, 4> >" = type { float4 }
+_"class.Texture2DArray<vector<float, 4> >" = type { float4, _"class.Texture2DArray<vector<float, 4> >::mips_type" }
+_"class.Texture2DArray<vector<float, 4> >::mips_type" = type { int }
+_gi_params = type { _struct.GiParams }
+_struct.GiParams = type { float4, float4, int4, float4 }
+_view = type { _struct.View }
+_struct.View = type { _class.matrix.float.4.4, _class.matrix.float.4.4, _class.matrix.float.4.4, _class.matrix.float.4.4, float4, float4, float4, float4, float4, float4, float4, float4, _class.matrix.float.4.4[4], int4, _class.matrix.float.4.4, float4 }
+_class.matrix.float.4.4 = type { float4[4] }
+_sh = type { float4[9] }
+_clusters = type { _struct.Clusters }
+_struct.Clusters = type { int4, float4 }
+_struct.SamplerState = type { int }
+_struct.SamplerComparisonState = type { int }
+
+Inputs
+  float3 LOC0; // Rows:1 StartRow:0 Cols:3 StartCol:0
+  float3 LOC1; // Rows:1 StartRow:1 Cols:3 StartCol:0
+  float2 LOC2; // Rows:1 StartRow:2 Cols:2 StartCol:0
+  float4 LOC3; // Rows:1 StartRow:3 Cols:4 StartCol:0
+  nointerpolation uint LOC4; // Rows:1 StartRow:4 Cols:1 StartCol:0
+  float3 LOC5; // Rows:1 StartRow:5 Cols:3 StartCol:0
+  linear noperspective float4 SV_Position; // Rows:1 StartRow:6 Cols:4 StartCol:0
+  nointerpolation uint SV_IsFrontFace; // Rows:1 StartRow:4 Cols:1 StartCol:1
+
+Outputs
+  float4 SV_Target0; // Rows:1 StartRow:0 Cols:4 StartCol:0
+  float4 SV_Target1; // Rows:1 StartRow:1 Cols:4 StartCol:0
+  float4 SV_Target2; // Rows:1 StartRow:2 Cols:4 StartCol:0
+  float4 SV_Target3; // Rows:1 StartRow:3 Cols:4 StartCol:0
+
+ByteAddressBuffer<int> gi_sh : register(t10, space0);
+ByteAddressBuffer<int> gi_distances : register(t11, space0);
+ByteAddressBuffer<int> materials : register(t2, space0);
+Texture2DArray<float> shadow_map : register(t6, space0);
+StructuredBuffer<int> nagaGroup1SamplerIndexArray : register(t12, space0);
+TextureCube<float4> env_cube : register(t7, space0);
+ByteAddressBuffer<int> lights : register(t8, space0);
+ByteAddressBuffer<int> cluster_lights : register(t9, space0);
+Texture2DArray<float4> tex_srgb : register(t13, space0);
+Texture2DArray<float4> tex_linear : register(t14, space0);
+StructuredBuffer<int> nagaGroup2SamplerIndexArray : register(t16, space0);
+
+cbuffer gi_params : register(b3, space0)
+{
+  GiParams gi_params: packoffset(0); 
+};
+
+cbuffer view : register(b0, space0)
+{
+  View view: packoffset(0); 
+};
+
+cbuffer sh : register(b1, space0)
+{
+  float4 sh[9]: packoffset(0); 
+};
+
+cbuffer clusters : register(b2, space0)
+{
+  Clusters clusters: packoffset(0); 
+};
+
+UNHANDLED RESOURCE TYPE nagaSamplerHeap[2048] : register(s0, space0);
+UNHANDLED RESOURCE TYPE nagaComparisonSamplerHeap[2048] : register(s2048, space0);
+
+void fs()
+{
+_label0: 
+  _dx.types.Handle _156 = InitialiseHandle(nagaGroup2SamplerIndexArray); //  index = 16
+  _dx.types.Handle _157 = InitialiseHandle(tex_linear); //  index = 14
+  _dx.types.Handle _158 = InitialiseHandle(tex_srgb); //  index = 13
+  _dx.types.Handle _159 = InitialiseHandle(cluster_lights); //  index = 9
+  _dx.types.Handle _160 = InitialiseHandle(lights); //  index = 8
+  _dx.types.Handle _161 = InitialiseHandle(env_cube); //  index = 7
+  _dx.types.Handle _162 = InitialiseHandle(nagaGroup1SamplerIndexArray); //  index = 12
+  _dx.types.Handle _163 = InitialiseHandle(shadow_map); //  index = 6
+  _dx.types.Handle _164 = InitialiseHandle(materials); //  index = 2
+  _dx.types.Handle _165 = InitialiseHandle(gi_distances); //  index = 11
+  _dx.types.Handle _166 = InitialiseHandle(gi_sh); //  index = 10
+  _dx.types.Handle _167 = InitialiseHandle(clusters); //  index = 2
+  _dx.types.Handle _168 = InitialiseHandle(sh); //  index = 1
+  _dx.types.Handle _169 = InitialiseHandle(view); //  index = 0
+  _dx.types.Handle _170 = InitialiseHandle(gi_params); //  index = 3
+  float[4]* _171 = alloca float[4], align 4;
+  float[4]* _172 = alloca float[4], align 4;
+  _dx.types.Handle __clusters_173 = (CBuffer)_167;
+  _dx.types.Handle __sh_174 = (CBuffer)_168;
+  _dx.types.Handle __view_175 = (CBuffer)_169;
+  _dx.types.Handle __gi_params_176 = (CBuffer)_170;
+  int _177 = _IN.SV_IsFrontFace.x;
+  bool _178 = (_177 != 0);
+  float _179 = _IN.SV_Position.x;
+  float _180 = _IN.SV_Position.y;
+  float _181 = _IN.SV_Position.z;
+  int _182 = _IN.LOC4.x;
+  float _183 = _IN.LOC3.x;
+  float _184 = _IN.LOC3.y;
+  float _185 = _IN.LOC3.z;
+  float _186 = _IN.LOC3.w;
+  float _187 = _IN.LOC2.x;
+  float _188 = _IN.LOC2.y;
+  float _189 = _IN.LOC1.x;
+  float _190 = _IN.LOC1.y;
+  float _191 = _IN.LOC1.z;
+  float _192 = _IN.LOC0.x;
+  float _193 = _IN.LOC0.y;
+  float _194 = _IN.LOC0.z;
+  float[6]* _195 = alloca float[6], align 4;
+  float[32]* _196 = alloca float[32], align 4;
+  float[32]* _197 = alloca float[32], align 4;
+  float[3]* _198 = alloca float[3], align 4;
+  _dx.types.Handle __nagaGroup1SamplerIndexArray_199 = (StructuredBuffer<stride=4>)_162;
+  _dx.types.ResRet.i32 _200 = __nagaGroup1SamplerIndexArray_199.Load(0);
+  int _201 = extractvalue _200, 0;
+  int _202 = _201 + 2048;
+  _dx.types.Handle _203 = InitialiseHandle(nagaComparisonSamplerHeap[_202 - 2048]);
+  _dx.types.Handle __nagaGroup1SamplerIndexArray_204 = (StructuredBuffer<stride=4>)_162;
+  _dx.types.ResRet.i32 _205 = __nagaGroup1SamplerIndexArray_204.Load(1);
+  int _206 = extractvalue _205, 0;
+  int _207 = _206 + 0;
+  _dx.types.Handle _208 = InitialiseHandle(nagaSamplerHeap[_207 - 0]);
+  _dx.types.Handle __nagaGroup2SamplerIndexArray_209 = (StructuredBuffer<stride=4>)_156;
+  _dx.types.ResRet.i32 _210 = __nagaGroup2SamplerIndexArray_209.Load(0);
+  int _211 = extractvalue _210, 0;
+  int _212 = _211 + 0;
+  _dx.types.Handle _213 = InitialiseHandle(nagaSamplerHeap[_212 - 0]);
+  int _214 = _182 << 6;
+  int _215 = _214 | 60;
+  _dx.types.Handle __materials_216 = (ByteAddressBuffer)_164;
+  _dx.types.ResRet.i32 _217 = __materials_216.Load(_215);
+  int _218 = extractvalue _217, 0;
+  int _219 = _214 | 56;
+  _dx.types.ResRet.i32 _220 = __materials_216.Load(_219);
+  int _221 = extractvalue _220, 0;
+  int _222 = _214 | 52;
+  _dx.types.ResRet.i32 _223 = __materials_216.Load(_222);
+  int _224 = extractvalue _223, 0;
+  int _225 = _214 | 48;
+  _dx.types.ResRet.i32 _226 = __materials_216.Load(_225);
+  int _227 = extractvalue _226, 0;
+  int _228 = _214 | 32;
+  _dx.types.ResRet.i32 _229 = __materials_216.Load(_228);
+  int _230 = extractvalue _229, 0;
+  float _231 = asfloat(_230); // bitcast 
+  int _232 = _214 | 28;
+  _dx.types.ResRet.i32 _233 = __materials_216.Load(_232);
+  int _234 = extractvalue _233, 0;
+  float _235 = asfloat(_234); // bitcast 
+  int _236 = _214 | 16;
+  _dx.types.ResRet.i32 _237 = __materials_216.Load(_236);
+  int _238 = extractvalue _237, 0;
+  int _239 = extractvalue _237, 1;
+  int _240 = extractvalue _237, 2;
+  float _241 = asfloat(_238); // bitcast 
+  float _242 = asfloat(_239); // bitcast 
+  float _243 = asfloat(_240); // bitcast 
+  _dx.types.ResRet.i32 _244 = __materials_216.Load(_214);
+  int _245 = extractvalue _244, 0;
+  int _246 = extractvalue _244, 1;
+  int _247 = extractvalue _244, 2;
+  float _248 = asfloat(_245); // bitcast 
+  float _249 = asfloat(_246); // bitcast 
+  float _250 = asfloat(_247); // bitcast 
+  float _251 = ddx_coarse(_187);
+  float _252 = ddx_coarse(_188);
+  float _253 = ddy_coarse(_187);
+  float _254 = ddy_coarse(_188);
+  bool _255 = (_227 == -1);
+  if (_255) goto _label2; else goto _label1;
+
+_label1:                      
+  float _256 = (float)(_227); // unsigned 
+  _dx.types.Handle __tex_srgb_257 = (Texture2DArray<float4>)_158;
+  _dx.types.Handle __nagaSamplerHeap_258 = (SamplerState)_213;
+  _dx.types.ResRet.f32 _259 = __tex_srgb_257.SampleGrad(__nagaSamplerHeap_258, _187, _188, _256, Offset = {0, 0}, /*ddx0*/ _251, /*ddx1*/ _252, /*ddy0*/ _253, /*ddy1*/ _254);
+  float _260 = extractvalue _259, 0;
+  float _261 = extractvalue _259, 1;
+  float _262 = extractvalue _259, 2;
+  float _263 = _260 * _248;
+  float _264 = _261 * _249;
+  float _265 = _262 * _250;
+  goto _label2;
+
+_label2:                      // preceded by _label1
+  float _266 = phi float [ _label1::_263, _label1 ], [ _label0::_248, _label0 ];
+  float _267 = phi float [ _label1::_264, _label1 ], [ _label0::_249, _label0 ];
+  float _268 = phi float [ _label1::_265, _label1 ], [ _label0::_250, _label0 ];
+  bool _269 = (_221 == -1);
+  if (_269) goto _label4; else goto _label3;
+
+_label3:                      // preceded by _label2
+  float _270 = (float)(_221); // unsigned 
+  _dx.types.Handle __tex_linear_271 = (Texture2DArray<float4>)_157;
+  _dx.types.Handle __nagaSamplerHeap_272 = (SamplerState)_213;
+  _dx.types.ResRet.f32 _273 = __tex_linear_271.SampleGrad(__nagaSamplerHeap_272, _187, _188, _270, Offset = {0, 0}, /*ddx0*/ _251, /*ddx1*/ _252, /*ddy0*/ _253, /*ddy1*/ _254);
+  float _274 = extractvalue _273, 1;
+  float _275 = extractvalue _273, 2;
+  float _276 = _274 * _231;
+  float _277 = _275 * _235;
+  goto _label4;
+
+_label4:                      // preceded by _label3, _label2
+  float _278 = phi float [ _label3::_276, _label3 ], [ _label2::_231, _label2 ];
+  float _279 = phi float [ _label3::_277, _label3 ], [ _label2::_235, _label2 ];
+  bool _280 = (_224 != -1);
+  if (_280) goto _label5; else goto _label6;
+
+_label5:                      // preceded by _label4
+  float _281 = (float)(_224); // unsigned 
+  _dx.types.Handle __tex_linear_282 = (Texture2DArray<float4>)_157;
+  _dx.types.Handle __nagaSamplerHeap_283 = (SamplerState)_213;
+  _dx.types.ResRet.f32 _284 = __tex_linear_282.SampleGrad(__nagaSamplerHeap_283, _187, _188, _281, Offset = {0, 0}, /*ddx0*/ _251, /*ddx1*/ _252, /*ddy0*/ _253, /*ddy1*/ _254);
+  float _285 = extractvalue _284, 0;
+  float _286 = extractvalue _284, 1;
+  float _287 = extractvalue _284, 2;
+  float _288 = _285 * 2.00000;
+  float _289 = _286 * 2.00000;
+  float _290 = _287 * 2.00000;
+  float _291 = _288 + -1.00000;
+  float _292 = _289 + -1.00000;
+  float _293 = _290 + -1.00000;
+  goto _label6;
+
+_label6:                      // preceded by _label5, _label4
+  float _294 = phi float [ _label5::_291, _label5 ], [ _label4::0.000000, _label4 ];
+  float _295 = phi float [ _label5::_292, _label5 ], [ _label4::0.000000, _label4 ];
+  float _296 = phi float [ _label5::_293, _label5 ], [ _label4::0.000000, _label4 ];
+  float _297 = dot({_189, _190, _191}, {_189, _190, _191});
+  float _298 = rsqrt(_297);
+  float _299 = _298 * _189;
+  float _300 = _298 * _190;
+  float _301 = _298 * _191;
+  _dx.types.CBufRet.f32 _302 = {__view_175.view.camera_pos.x, __view_175.view.camera_pos.y, __view_175.view.camera_pos.z, __view_175.view.camera_pos.w}; //  cbuffer = view, byte_offset = 256
+  float _303 = extractvalue _302, 0;
+  float _304 = extractvalue _302, 1;
+  float _305 = extractvalue _302, 2;
+  float _306 = _303 - _192;
+  float _307 = _304 - _193;
+  float _308 = _305 - _194;
+  float _309 = dot({_306, _307, _308}, {_306, _307, _308});
+  float _310 = rsqrt(_309);
+  float _311 = _306 * _310;
+  float _312 = _307 * _310;
+  float _313 = _308 * _310;
+  float _314 = ddx_coarse(_192);
+  float _315 = ddx_coarse(_193);
+  float _316 = ddx_coarse(_194);
+  float _317 = ddy_coarse(_192);
+  float _318 = ddy_coarse(_193);
+  float _319 = ddy_coarse(_194);
+  float _320 = _319 * _315;
+  float _321 = _318 * _316;
+  float _322 = _320 - _321;
+  float _323 = _317 * _316;
+  float _324 = _319 * _314;
+  float _325 = _323 - _324;
+  float _326 = _318 * _314;
+  float _327 = _317 * _315;
+  float _328 = _326 - _327;
+  float _329 = dot({_322, _325, _328}, {_322, _325, _328});
+  bool _330 = (_329 > 1.00000e-12);
+  if (_330) goto _label7; else goto _label9;
+
+_label7:                      // preceded by _label6
+  float _331 = rsqrt(_329);
+  float _332 = _331 * _322;
+  float _333 = _331 * _325;
+  float _334 = _331 * _328;
+  float _335 = dot({_332, _333, _334}, {_311, _312, _313});
+  bool _336 = (_335 < 0.000000);
+  if (_336) goto _label8; else goto _label10;
+
+_label8:                      // preceded by _label7
+  float _337 = -0.000000 - _332;
+  float _338 = -0.000000 - _333;
+  float _339 = -0.000000 - _334;
+  goto _label10;
+
+_label9:                      // preceded by _label6
+  float _340 = -0.000000 - _299;
+  float _341 = -0.000000 - _300;
+  float _342 = -0.000000 - _301;
+  float _343 = _178 ? _299 : _340;
+  float _344 = _178 ? _300 : _341;
+  float _345 = _178 ? _301 : _342;
+  goto _label10;
+
+_label10:                     // preceded by _label9, _label8, _label7
+  float _346 = phi float [ _label9::_343, _label9 ], [ _label8::_337, _label8 ], [ _label7::_332, _label7 ];
+  float _347 = phi float [ _label9::_344, _label9 ], [ _label8::_338, _label8 ], [ _label7::_333, _label7 ];
+  float _348 = phi float [ _label9::_345, _label9 ], [ _label8::_339, _label8 ], [ _label7::_334, _label7 ];
+  float _349 = -0.000000 - _299;
+  float _350 = -0.000000 - _300;
+  float _351 = -0.000000 - _301;
+  float _352 = _178 ? _299 : _349;
+  float _353 = _178 ? _300 : _350;
+  float _354 = _178 ? _301 : _351;
+  float _355 = dot({_352, _353, _354}, {_346, _347, _348});
+  bool _356 = (_355 < 0.000000);
+  float _357 = -0.000000 - _352;
+  float _358 = -0.000000 - _353;
+  float _359 = -0.000000 - _354;
+  float _360 = _356 ? _357 : _352;
+  float _361 = _356 ? _358 : _353;
+  float _362 = _356 ? _359 : _354;
+  float _363 = dot({_360, _361, _362}, {_311, _312, _313});
+  bool _364 = (_363 <= 0.00100000);
+  float _365 = _364 ? _346 : _360;
+  float _366 = _364 ? _347 : _361;
+  float _367 = _364 ? _348 : _362;
+  if (_280) goto _label11; else goto _label15;
+
+_label11:                     // preceded by _label10
+  float _368 = dot({_365, _366, _367}, {_183, _184, _185});
+  float _369 = _368 * _365;
+  float _370 = _368 * _366;
+  float _371 = _368 * _367;
+  float _372 = _183 - _369;
+  float _373 = _184 - _370;
+  float _374 = _185 - _371;
+  float _375 = dot({_372, _373, _374}, {_372, _373, _374});
+  float _376 = rsqrt(_375);
+  float _377 = _372 * _376;
+  float _378 = _373 * _376;
+  float _379 = _374 * _376;
+  float _380 = _379 * _366;
+  float _381 = _378 * _367;
+  float _382 = _380 - _381;
+  float _383 = _377 * _367;
+  float _384 = _379 * _365;
+  float _385 = _383 - _384;
+  float _386 = _378 * _365;
+  float _387 = _377 * _366;
+  float _388 = _386 - _387;
+  float _389 = _377 * _294;
+  float _390 = _378 * _294;
+  float _391 = _379 * _294;
+  float _392 = _295 * _186;
+  float _393 = _382 * _392;
+  float _394 = _385 * _392;
+  float _395 = _388 * _392;
+  float _396 = _365 * _296;
+  float _397 = _366 * _296;
+  float _398 = _367 * _296;
+  float _399 = _389 + _396;
+  float _400 = _399 + _393;
+  float _401 = _390 + _397;
+  float _402 = _401 + _394;
+  float _403 = _391 + _398;
+  float _404 = _403 + _395;
+  float _405 = dot({_400, _402, _404}, {_400, _402, _404});
+  bool _406 = (_405 > 1.00000e-12);
+  if (_406) goto _label12; else goto _label15;
+
+_label12:                     // preceded by _label11
+  float _407 = rsqrt(_405);
+  float _408 = _407 * _400;
+  float _409 = _407 * _402;
+  float _410 = _407 * _404;
+  float _411 = dot({_408, _409, _410}, {_346, _347, _348});
+  bool _412 = (_411 > 0.00100000);
+  if (_412) goto _label13; else goto _label15;
+
+_label13:                     // preceded by _label12
+  float _413 = dot({_408, _409, _410}, {_311, _312, _313});
+  bool _414 = (_413 > 0.00100000);
+  if (_414) goto _label14; else goto _label15;
+
+_label14:                     // preceded by _label13
+  goto _label15;
+
+_label15:                     // preceded by _label14, _label13, _label12, _label11, _label10
+  float _415 = phi float [ _label10::_365, _label10 ], [ _label11::_365, _label11 ], [ _label14::_408, _label14 ], [ _label13::_365, _label13 ], [ _label12::_365, _label12 ];
+  float _416 = phi float [ _label10::_366, _label10 ], [ _label11::_366, _label11 ], [ _label14::_409, _label14 ], [ _label13::_366, _label13 ], [ _label12::_366, _label12 ];
+  float _417 = phi float [ _label10::_367, _label10 ], [ _label11::_367, _label11 ], [ _label14::_410, _label14 ], [ _label13::_367, _label13 ], [ _label12::_367, _label12 ];
+  bool _418 = (_218 == -1);
+  if (_418) goto _label17; else goto _label16;
+
+_label16:                     // preceded by _label15
+  float _419 = (float)(_218); // unsigned 
+  _dx.types.Handle __tex_srgb_420 = (Texture2DArray<float4>)_158;
+  _dx.types.Handle __nagaSamplerHeap_421 = (SamplerState)_213;
+  _dx.types.ResRet.f32 _422 = __tex_srgb_420.SampleGrad(__nagaSamplerHeap_421, _187, _188, _419, Offset = {0, 0}, /*ddx0*/ _251, /*ddx1*/ _252, /*ddy0*/ _253, /*ddy1*/ _254);
+  float _423 = extractvalue _422, 0;
+  float _424 = extractvalue _422, 1;
+  float _425 = extractvalue _422, 2;
+  float _426 = _423 * _241;
+  float _427 = _424 * _242;
+  float _428 = _425 * _243;
+  goto _label17;
+
+_label17:                     // preceded by _label16, _label15
+  float _429 = phi float [ _label16::_426, _label16 ], [ _label15::_241, _label15 ];
+  float _430 = phi float [ _label16::_427, _label16 ], [ _label15::_242, _label15 ];
+  float _431 = phi float [ _label16::_428, _label16 ], [ _label15::_243, _label15 ];
+  float _432 = ddx_coarse(_415);
+  float _433 = ddx_coarse(_416);
+  float _434 = ddx_coarse(_417);
+  float _435 = abs(_432);
+  float _436 = abs(_433);
+  float _437 = abs(_434);
+  float _438 = ddy_coarse(_415);
+  float _439 = ddy_coarse(_416);
+  float _440 = ddy_coarse(_417);
+  float _441 = abs(_438);
+  float _442 = abs(_439);
+  float _443 = abs(_440);
+  float _444 = _441 + _435;
+  float _445 = _442 + _436;
+  float _446 = _443 + _437;
+  float _447 = dot({_444, _445, _446}, {_444, _445, _446});
+  float _448 = _278 * _278;
+  float _449 = _448 * _448;
+  float _450 = _447 * 0.500000;
+  float _451 = min(_450, 0.180000);
+  float _452 = _451 + _449;
+  float _453 = max(_452, 0.000000);
+  float _454 = min(_453, 1.00000);
+  float _455 = sqrt(_454);
+  float _456 = sqrt(_455);
+  float _457 = max(_456, 0.0450000);
+  float _458 = min(_457, 1.00000);
+  int _459 = _214 | 40;
+  _dx.types.ResRet.i32 _460 = __materials_216.Load(_459);
+  int _461 = extractvalue _460, 0;
+  int _462 = _461 & 4;
+  bool _463 = (_462 == 0);
+  if (_463) goto _label19; else goto _label18;
+
+_label18:                     // preceded by _label17
+  float _464 = _429 + _266;
+  float _465 = _430 + _267;
+  float _466 = _431 + _268;
+  goto _label90;
+
+_label19:                     // preceded by _label17
+  float _467 = dot({_415, _416, _417}, {_311, _312, _313});
+  float _468 = max(_467, 0.000100000);
+  float _469 = _458 * _458;
+  float _470 = _266 + -0.0400000;
+  float _471 = _267 + -0.0400000;
+  float _472 = _268 + -0.0400000;
+  float _473 = _279 * _470;
+  float _474 = _279 * _471;
+  float _475 = _279 * _472;
+  float _476 = _473 + 0.0400000;
+  float _477 = _474 + 0.0400000;
+  float _478 = _475 + 0.0400000;
+  float _479 = 1.00000 - _279;
+  float _480 = _479 * _266;
+  float _481 = _479 * _267;
+  float _482 = _479 * _268;
+  _dx.types.CBufRet.f32 _483 = {__view_175.view.sun_dir.x, __view_175.view.sun_dir.y, __view_175.view.sun_dir.z, __view_175.view.sun_dir.w}; //  cbuffer = view, byte_offset = 288
+  float _484 = extractvalue _483, 3;
+  bool _485 = (_484 > 0.000000);
+  if (_485) goto _label20; else goto _label36;
+
+_label20:                     // preceded by _label19
+  float _486 = extractvalue _483, 0;
+  float _487 = extractvalue _483, 1;
+  float _488 = extractvalue _483, 2;
+  float _489 = dot({_415, _416, _417}, {_486, _487, _488});
+  bool _490 = (_489 > 0.000000);
+  if (_490) goto _label21; else goto _label36;
+
+_label21:                     // preceded by _label20
+  float _491 = _486 + _311;
+  float _492 = _487 + _312;
+  float _493 = _488 + _313;
+  float _494 = dot({_491, _492, _493}, {_491, _492, _493});
+  float _495 = rsqrt(_494);
+  float _496 = _495 * _491;
+  float _497 = _495 * _492;
+  float _498 = _495 * _493;
+  float _499 = dot({_415, _416, _417}, {_496, _497, _498});
+  float _500 = max(_499, 0.000000);
+  float _501 = dot({_311, _312, _313}, {_496, _497, _498});
+  float _502 = max(_501, 0.000000);
+  float _503 = 0.960000 - _473;
+  float _504 = 0.960000 - _474;
+  float _505 = 0.960000 - _475;
+  float _506 = 1.00000 - _502;
+  float _507 = log2(_506);
+  float _508 = _507 * 5.00000;
+  float _509 = exp2(_508);
+  float _510 = _509 * _503;
+  float _511 = _509 * _504;
+  float _512 = _509 * _505;
+  float _513 = _510 + _476;
+  float _514 = _511 + _477;
+  float _515 = _512 + _478;
+  float _516 = _469 * _469;
+  float _517 = _516 + -1.00000;
+  float _518 = _500 * _500;
+  float _519 = _518 * _517;
+  float _520 = _519 + 1.00000;
+  float _521 = _520 * _520;
+  float _522 = _521 * 3.14159;
+  float _523 = _516 / _522;
+  float _524 = _468 * _468;
+  float _525 = 1.00000 - _516;
+  float _526 = _524 * _525;
+  float _527 = _526 + _516;
+  float _528 = sqrt(_527);
+  float _529 = _528 * _489;
+  float _530 = _489 * _489;
+  float _531 = _530 * _525;
+  float _532 = _531 + _516;
+  float _533 = sqrt(_532);
+  float _534 = _533 * _468;
+  float _535 = _534 + _529;
+  float _536 = max(_535, 1.00000e-05);
+  float _537 = 0.500000 / _536;
+  float _538 = _537 * _523;
+  float _539 = _538 * _513;
+  float _540 = _538 * _514;
+  float _541 = _538 * _515;
+  float _542 = 1.00000 - _513;
+  float _543 = 1.00000 - _514;
+  float _544 = 1.00000 - _515;
+  float _545 = _480 * 0.318310;
+  float _546 = _545 * _542;
+  float _547 = _481 * 0.318310;
+  float _548 = _547 * _543;
+  float _549 = _482 * 0.318310;
+  float _550 = _549 * _544;
+  _dx.types.CBufRet.f32 _551 = {__view_175.view.view[0]}; //  cbuffer = view, byte_offset = 64
+  float _552 = extractvalue _551, 2;
+  _dx.types.CBufRet.f32 _553 = {__view_175.view.view[1]}; //  cbuffer = view, byte_offset = 80
+  float _554 = extractvalue _553, 2;
+  _dx.types.CBufRet.f32 _555 = {__view_175.view.view[2]}; //  cbuffer = view, byte_offset = 96
+  float _556 = extractvalue _555, 2;
+  float _557 = -0.000000 - _552;
+  float _558 = -0.000000 - _554;
+  float _559 = -0.000000 - _556;
+  float _560 = _192 - _303;
+  float _561 = _193 - _304;
+  float _562 = _194 - _305;
+  float _563 = dot({_560, _561, _562}, {_557, _558, _559});
+  _dx.types.CBufRet.f32 _564 = {__view_175.view.sky_color.x, __view_175.view.sky_color.y, __view_175.view.sky_color.z, __view_175.view.sky_color.w}; //  cbuffer = view, byte_offset = 352
+  float _565 = extractvalue _564, 3;
+  bool _566 = (_565 < 0.500000);
+  if (_566) goto _label35; else goto _label22;
+
+_label22:                     // preceded by _label21
+  goto _label23;
+
+_label23:                     // preceded by _label24, _label22
+  int _567 = phi int [ _label24::1, _label24 ], [ _label22::0, _label22 ];
+  int _568 = phi int [ _label24::_574, _label24 ], [ _label22::-1, _label22 ];
+  int _569 = phi int [ _label24::_577, _label24 ], [ _label22::-1, _label22 ];
+  int _570 = phi int [ _label24::_572, _label24 ], [ _label22::0, _label22 ];
+  int _571 = phi int [ _label24::_591, _label24 ], [ _label22::0, _label22 ];
+  int _572 = _570 + _567;
+  bool _573 = (_572 < 4);
+  if (_573) goto _label24; else goto _label25;
+
+_label24:                     // preceded by _label23
+  int _574 = _568 + -1;
+  bool _575 = (_568 == 0);
+  int _576 = (int)(_575); // zero extend 
+  int _577 = _569 - _576;
+  _dx.types.CBufRet.f32 _578 = {__view_175.view.cascade_splits.x, __view_175.view.cascade_splits.y, __view_175.view.cascade_splits.z, __view_175.view.cascade_splits.w}; //  cbuffer = view, byte_offset = 368
+  float _579 = extractvalue _578, 0;
+  float _580 = extractvalue _578, 1;
+  float _581 = extractvalue _578, 2;
+  float _582 = extractvalue _578, 3;
+   float* _583 = _172[0]; // inbounds 
+  *_583 = _579; // align 4 
+   float* _584 = _172[1]; // inbounds 
+  *_584 = _580; // align 4 
+   float* _585 = _172[2]; // inbounds 
+  *_585 = _581; // align 4 
+   float* _586 = _172[3]; // inbounds 
+  *_586 = _582; // align 4 
+   float* _587 = _172[_572]; // inbounds 
+  float _588 = *_587; // align 4 
+  bool _589 = (_563 > _588);
+  int _590 = _572 + 1;
+  int _591 = _589 ? _590 : _571;
+  int _592 = _577 | _574;
+  bool _593 = (_592 == 0);
+  if (_593) goto _label25; else goto _label23;
+
+_label25:                     // preceded by _label24, _label23
+  int _594 = phi int [ _label23::_571, _label23 ], [ _label24::_591, _label24 ];
+  bool _595 = (_594 > 3);
+  if (_595) goto _label35; else goto _label26;
+
+_label26:                     // preceded by _label25
+  _dx.types.CBufRet.f32 _596 = {__view_175.view.cascade_splits.x, __view_175.view.cascade_splits.y, __view_175.view.cascade_splits.z, __view_175.view.cascade_splits.w}; //  cbuffer = view, byte_offset = 368
+  float _597 = extractvalue _596, 0;
+  float _598 = extractvalue _596, 1;
+  float _599 = extractvalue _596, 2;
+  float _600 = extractvalue _596, 3;
+   float* _601 = _171[0]; // inbounds 
+  *_601 = _597; // align 4 
+   float* _602 = _171[1]; // inbounds 
+  *_602 = _598; // align 4 
+   float* _603 = _171[2]; // inbounds 
+  *_603 = _599; // align 4 
+   float* _604 = _171[3]; // inbounds 
+  *_604 = _600; // align 4 
+   float* _605 = _171[_594]; // inbounds 
+  float _606 = *_605; // align 4 
+  int _607 = _594 << 2;
+  int _608 = _607 + 24;
+  _dx.types.CBufRet.f32 _609 = __view_175.Load4(byte_offset = _608 * 16);
+  float _610 = extractvalue _609, 0;
+  float _611 = extractvalue _609, 1;
+  float _612 = extractvalue _609, 2;
+  int _613 = _607 + 25;
+  _dx.types.CBufRet.f32 _614 = __view_175.Load4(byte_offset = _613 * 16);
+  float _615 = extractvalue _614, 0;
+  float _616 = extractvalue _614, 1;
+  float _617 = extractvalue _614, 2;
+  int _618 = _607 + 26;
+  _dx.types.CBufRet.f32 _619 = __view_175.Load4(byte_offset = _618 * 16);
+  float _620 = extractvalue _619, 0;
+  float _621 = extractvalue _619, 1;
+  float _622 = extractvalue _619, 2;
+  int _623 = _607 + 27;
+  _dx.types.CBufRet.f32 _624 = __view_175.Load4(byte_offset = _623 * 16);
+  float _625 = extractvalue _624, 0;
+  float _626 = extractvalue _624, 1;
+  float _627 = extractvalue _624, 2;
+  float _628 = _606 * 0.00146484;
+  float _629 = _628 * _415;
+  float _630 = _628 * _416;
+  float _631 = _628 * _417;
+  float _632 = _629 + _192;
+  float _633 = _630 + _193;
+  float _634 = _631 + _194;
+  float _635 = _632 * _610;
+  float _636 = mad(_633, _615, _635);
+  float _637 = mad(_634, _620, _636);
+  float _638 = _637 + _625;
+  float _639 = _632 * _611;
+  float _640 = mad(_633, _616, _639);
+  float _641 = mad(_634, _621, _640);
+  float _642 = _641 + _626;
+  float _643 = _632 * _612;
+  float _644 = mad(_633, _617, _643);
+  float _645 = mad(_634, _622, _644);
+  float _646 = _645 + _627;
+  float _647 = _638 * 0.500000;
+  float _648 = _642 * 0.500000;
+  float _649 = _647 + 0.500000;
+  float _650 = 0.500000 - _648;
+  bool _651 = (_649 < 0.000000);
+  bool _652 = (_650 < 0.000000);
+  bool _653 = _651 | _652;
+  if (_653) goto _label35; else goto _label27;
+
+_label27:                     // preceded by _label26
+  bool _654 = (_649 > 1.00000);
+  bool _655 = (_650 > 1.00000);
+  bool _656 = _654 | _655;
+  bool _657 = (_646 > 1.00000);
+  bool _658 = _657 | _656;
+  if (_658) goto _label35; else goto _label28;
+
+_label28:                     // preceded by _label27
+  _dx.types.Handle __shadow_map_659 = (Texture2DArray<float>)_163;
+  _dx.types.Dimensions _660 = __shadow_map_659.GetDimensions(0);
+  int _661 = extractvalue _660, 0;
+  int _662 = extractvalue _660, 1;
+  float _663 = (float)(_661); // unsigned 
+  float _664 = (float)(_662); // unsigned 
+  goto _label30;
+
+_label29:                     // preceded by _label33, _label32
+  float _665 = phi float [ _label33::_702, _label33 ], [ _label32::_683, _label32 ];
+  int _666 = _675 | _676;
+  bool _667 = (_666 == 0);
+  if (_667) goto _label34; else goto _label30;
+
+_label30:                     // preceded by _label29, _label28
+  int _668 = phi int [ _label28::0, _label28 ], [ _label29::1, _label29 ];
+  int _669 = phi int [ _label28::-1, _label28 ], [ _label29::_676, _label29 ];
+  int _670 = phi int [ _label28::-1, _label28 ], [ _label29::_675, _label29 ];
+  int _671 = phi int [ _label28::-1, _label28 ], [ _label29::_677, _label29 ];
+  float _672 = phi float [ _label28::0.000000, _label28 ], [ _label29::_665, _label29 ];
+  bool _673 = (_669 == 0);
+  int _674 = (int)(_673); // zero extend 
+  int _675 = _670 - _674;
+  int _676 = _669 + -1;
+  int _677 = _671 + _668;
+  bool _678 = (_677 < 2); // signed 
+  if (_678) goto _label31; else goto _label34;
+
+_label31:                     // preceded by _label30
+  goto _label32;
+
+_label32:                     // preceded by _label33, _label31
+  int _679 = phi int [ _label33::1, _label33 ], [ _label31::0, _label31 ];
+  int _680 = phi int [ _label33::_686, _label33 ], [ _label31::-1, _label31 ];
+  int _681 = phi int [ _label33::_689, _label33 ], [ _label31::-1, _label31 ];
+  int _682 = phi int [ _label33::_684, _label33 ], [ _label31::-1, _label31 ];
+  float _683 = phi float [ _label33::_702, _label33 ], [ _label31::_672, _label31 ];
+  int _684 = _682 + _679;
+  bool _685 = (_684 < 2); // signed 
+  if (_685) goto _label33; else goto _label29;
+
+_label33:                     // preceded by _label32
+  int _686 = _680 + -1;
+  bool _687 = (_680 == 0);
+  int _688 = (int)(_687); // zero extend 
+  int _689 = _681 - _688;
+  float _690 = (float)(_684);
+  float _691 = (float)(_677);
+  float _692 = _690 / _663;
+  float _693 = _691 / _664;
+  float _694 = _646 + -0.000500000;
+  float _695 = _692 + _649;
+  float _696 = _693 + _650;
+  float _697 = (float)(_594); // unsigned 
+  _dx.types.Handle __shadow_map_698 = (Texture2DArray<float>)_163;
+  _dx.types.Handle __nagaComparisonSamplerHeap_699 = (SamplerComparisonState)_203;
+  _dx.types.ResRet.f32 _700 = __shadow_map_698.SampleCmpLevelZero(__nagaComparisonSamplerHeap_699, _695, _696, _697, Offset = {0, 0}, /*compareValue*/ _694);
+  float _701 = extractvalue _700, 0;
+  float _702 = _701 + _683;
+  int _703 = _689 | _686;
+  bool _704 = (_703 == 0);
+  if (_704) goto _label29; else goto _label32;
+
+_label34:                     // preceded by _label30, _label29
+  float _705 = phi float [ _label30::_672, _label30 ], [ _label29::_665, _label29 ];
+  float _706 = _705 * 0.111111;
+  float _707 = _600 - _563;
+  float _708 = _600 * 0.100000;
+  float _709 = _707 / _708;
+  float _710 = max(_709, 0.000000);
+  float _711 = min(_710, 1.00000);
+  bool _712 = (_594 == 3);
+  float _713 = _712 ? _711 : 1.00000;
+  float _714 = _706 + -1.00000;
+  float _715 = _713 * _714;
+  float _716 = _715 + 1.00000;
+  goto _label35;
+
+_label35:                     // preceded by _label34, _label27, _label26, _label25, _label21
+  float _717 = phi float [ _label21::1.00000, _label21 ], [ _label25::1.00000, _label25 ], [ _label34::_716, _label34 ], [ _label27::1.00000, _label27 ], [ _label26::1.00000, _label26 ];
+  _dx.types.CBufRet.f32 _718 = {__view_175.view.sun_color.x, __view_175.view.sun_color.y, __view_175.view.sun_color.z, __view_175.view.sun_color.w}; //  cbuffer = view, byte_offset = 304
+  float _719 = extractvalue _718, 0;
+  float _720 = extractvalue _718, 1;
+  float _721 = extractvalue _718, 2;
+  float _722 = _539 + _546;
+  float _723 = _540 + _548;
+  float _724 = _541 + _550;
+  float _725 = _717 * _489;
+  float _726 = _725 * _484;
+  float _727 = _726 * _722;
+  float _728 = _727 * _719;
+  float _729 = _726 * _723;
+  float _730 = _729 * _720;
+  float _731 = _726 * _724;
+  float _732 = _731 * _721;
+  goto _label36;
+
+_label36:                     // preceded by _label35, _label20, _label19
+  float _733 = phi float [ _label19::0.000000, _label19 ], [ _label35::_728, _label35 ], [ _label20::0.000000, _label20 ];
+  float _734 = phi float [ _label19::0.000000, _label19 ], [ _label35::_730, _label35 ], [ _label20::0.000000, _label20 ];
+  float _735 = phi float [ _label19::0.000000, _label19 ], [ _label35::_732, _label35 ], [ _label20::0.000000, _label20 ];
+  _dx.types.CBufRet.i32 _736 = {__clusters_173.clusters.grid.x, __clusters_173.clusters.grid.y, __clusters_173.clusters.grid.z, __clusters_173.clusters.grid.w}; //  cbuffer = clusters, byte_offset = 0
+  int _737 = extractvalue _736, 0;
+  int _738 = extractvalue _736, 1;
+  int _739 = extractvalue _736, 2;
+  _dx.types.CBufRet.f32 _740 = {__view_175.view.viewport.x, __view_175.view.viewport.y, __view_175.view.viewport.z, __view_175.view.viewport.w}; //  cbuffer = view, byte_offset = 272
+  float _741 = extractvalue _740, 2;
+  int _742 = _737 + -1;
+  float _743 = _741 * _179;
+  float _744 = (float)(_737); // unsigned 
+  float _745 = _743 * _744;
+  float _746 = max(_745, 0.000000);
+  float _747 = min(_746, 4.29497e+09);
+  int _748 = (int)(_747); // unsigned 
+  int _749 = UMin(_748, _742);
+  float _750 = extractvalue _740, 3;
+  int _751 = _738 + -1;
+  float _752 = (float)(_738); // unsigned 
+  float _753 = _752 * _180;
+  float _754 = _753 * _750;
+  float _755 = max(_754, 0.000000);
+  float _756 = min(_755, 4.29497e+09);
+  int _757 = (int)(_756); // unsigned 
+  int _758 = UMin(_757, _751);
+  _dx.types.CBufRet.f32 _759 = {__clusters_173.clusters.params.x, __clusters_173.clusters.params.y, __clusters_173.clusters.params.z, __clusters_173.clusters.params.w}; //  cbuffer = clusters, byte_offset = 16
+  float _760 = extractvalue _759, 0;
+  float _761 = max(_181, 1.00000e-07);
+  float _762 = _760 / _761;
+  float _763 = extractvalue _759, 1;
+  float _764 = max(_762, _760);
+  float _765 = _764 / _760;
+  float _766 = log2(_765);
+  float _767 = _763 * 0.693147;
+  float _768 = _767 * _766;
+  int _769 = _739 + -1;
+  float _770 = max(_768, 0.000000);
+  float _771 = max(_770, 0.000000);
+  float _772 = min(_771, 4.29497e+09);
+  int _773 = (int)(_772); // unsigned 
+  int _774 = UMin(_773, _769);
+  int _775 = _774 * _738;
+  int _776 = _775 + _758;
+  int _777 = _776 * _737;
+  int _778 = _777 + _749;
+  int _779 = extractvalue _736, 3;
+  int _780 = _779 << 2;
+  int _781 = _780 + 4;
+  int _782 = _778 * _781;
+  _dx.types.Handle __cluster_lights_783 = (ByteAddressBuffer)_159;
+  _dx.types.ResRet.i32 _784 = __cluster_lights_783.Load(_782);
+  int _785 = extractvalue _784, 0;
+  int _786 = UMin(_785, _779);
+  goto _label37;
+
+_label37:                     // preceded by _label42, _label36
+  int _787 = phi int [ _label36::0, _label36 ], [ _label42::1, _label42 ];
+  int _788 = phi int [ _label36::-1, _label36 ], [ _label42::_797, _label42 ];
+  int _789 = phi int [ _label36::-1, _label36 ], [ _label42::_796, _label42 ];
+  int _790 = phi int [ _label36::0, _label36 ], [ _label42::_798, _label42 ];
+  float _791 = phi float [ _label36::_735, _label36 ], [ _label42::_958, _label42 ];
+  float _792 = phi float [ _label36::_734, _label36 ], [ _label42::_957, _label42 ];
+  float _793 = phi float [ _label36::_733, _label36 ], [ _label42::_956, _label42 ];
+  bool _794 = (_788 == 0);
+  int _795 = (int)(_794); // zero extend 
+  int _796 = _789 - _795;
+  int _797 = _788 + -1;
+  int _798 = _790 + _787;
+  bool _799 = (_798 < _786);
+  if (_799) goto _label38; else goto _label43;
+
+_label38:                     // preceded by _label37
+  int _800 = _779 + 1;
+  int _801 = _778 * _800;
+  int _802 = _801 + 1;
+  int _803 = _802 + _798;
+  int _804 = _803 << 2;
+  _dx.types.Handle __cluster_lights_805 = (ByteAddressBuffer)_159;
+  _dx.types.ResRet.i32 _806 = __cluster_lights_805.Load(_804);
+  int _807 = extractvalue _806, 0;
+  int _808 = _807 << 6;
+  int _809 = _808 | 48;
+  _dx.types.Handle __lights_810 = (ByteAddressBuffer)_160;
+  _dx.types.ResRet.i32 _811 = __lights_810.Load(_809);
+  int _812 = extractvalue _811, 0;
+  float _813 = asfloat(_812); // bitcast 
+  int _814 = _808 | 44;
+  _dx.types.ResRet.i32 _815 = __lights_810.Load(_814);
+  int _816 = extractvalue _815, 0;
+  float _817 = asfloat(_816); // bitcast 
+  int _818 = _808 | 32;
+  _dx.types.ResRet.i32 _819 = __lights_810.Load(_818);
+  int _820 = extractvalue _819, 0;
+  int _821 = extractvalue _819, 1;
+  int _822 = extractvalue _819, 2;
+  float _823 = asfloat(_820); // bitcast 
+  float _824 = asfloat(_821); // bitcast 
+  float _825 = asfloat(_822); // bitcast 
+  int _826 = _808 | 16;
+  _dx.types.ResRet.i32 _827 = __lights_810.Load(_826);
+  int _828 = extractvalue _827, 0;
+  int _829 = extractvalue _827, 1;
+  int _830 = extractvalue _827, 2;
+  float _831 = asfloat(_828); // bitcast 
+  float _832 = asfloat(_829); // bitcast 
+  float _833 = asfloat(_830); // bitcast 
+  int _834 = _808 | 12;
+  _dx.types.ResRet.i32 _835 = __lights_810.Load(_834);
+  int _836 = extractvalue _835, 0;
+  float _837 = asfloat(_836); // bitcast 
+  _dx.types.ResRet.i32 _838 = __lights_810.Load(_808);
+  int _839 = extractvalue _838, 0;
+  int _840 = extractvalue _838, 1;
+  int _841 = extractvalue _838, 2;
+  float _842 = asfloat(_839); // bitcast 
+  float _843 = asfloat(_840); // bitcast 
+  float _844 = asfloat(_841); // bitcast 
+  float _845 = _842 - _192;
+  float _846 = _843 - _193;
+  float _847 = _844 - _194;
+  float _848 = dot({_845, _846, _847}, {_845, _846, _847});
+  float _849 = max(_848, 1.00000e-08);
+  float _850 = rsqrt(_849);
+  float _851 = _845 * _850;
+  float _852 = _846 * _850;
+  float _853 = _847 * _850;
+  float _854 = dot({_415, _416, _417}, {_851, _852, _853});
+  bool _855 = (_854 > 0.000000); // unordered 
+  if (_855) goto _label39; else goto _label42;
+
+_label39:                     // preceded by _label38
+  int _856 = _808 | 28;
+  _dx.types.ResRet.i32 _857 = __lights_810.Load(_856);
+  int _858 = extractvalue _857, 0;
+  float _859 = _837 * _837;
+  float _860 = _848 / _859;
+  float _861 = _860 * _860;
+  float _862 = 1.00000 - _861;
+  float _863 = max(_862, 0.000000);
+  float _864 = min(_863, 1.00000);
+  float _865 = _864 * _864;
+  float _866 = max(_848, 0.0100000);
+  float _867 = _865 / _866;
+  bool _868 = (_858 == 2);
+  if (_868) goto _label40; else goto _label41;
+
+_label40:                     // preceded by _label39
+  float _869 = -0.000000 - _851;
+  float _870 = -0.000000 - _852;
+  float _871 = -0.000000 - _853;
+  float _872 = dot({_869, _870, _871}, {_823, _824, _825});
+  float _873 = _813 - _817;
+  float _874 = _872 - _817;
+  float _875 = _874 / _873;
+  float _876 = sat(_875);
+  float _877 = _876 * 2.00000;
+  float _878 = 3.00000 - _877;
+  float _879 = _876 * _876;
+  float _880 = _879 * _867;
+  float _881 = _880 * _878;
+  goto _label41;
+
+_label41:                     // preceded by _label40, _label39
+  float _882 = phi float [ _label40::_881, _label40 ], [ _label39::_867, _label39 ];
+  float _883 = _851 + _311;
+  float _884 = _852 + _312;
+  float _885 = _853 + _313;
+  float _886 = dot({_883, _884, _885}, {_883, _884, _885});
+  float _887 = rsqrt(_886);
+  float _888 = _887 * _883;
+  float _889 = _887 * _884;
+  float _890 = _887 * _885;
+  float _891 = dot({_311, _312, _313}, {_888, _889, _890});
+  float _892 = max(_891, 0.000000);
+  float _893 = 0.960000 - _473;
+  float _894 = 0.960000 - _474;
+  float _895 = 0.960000 - _475;
+  float _896 = 1.00000 - _892;
+  float _897 = log2(_896);
+  float _898 = _897 * 5.00000;
+  float _899 = exp2(_898);
+  float _900 = _899 * _893;
+  float _901 = _899 * _894;
+  float _902 = _899 * _895;
+  float _903 = _900 + _476;
+  float _904 = _901 + _477;
+  float _905 = _902 + _478;
+  float _906 = dot({_415, _416, _417}, {_888, _889, _890});
+  float _907 = max(_906, 0.000000);
+  float _908 = _469 * _469;
+  float _909 = _908 + -1.00000;
+  float _910 = _907 * _907;
+  float _911 = _910 * _909;
+  float _912 = _911 + 1.00000;
+  float _913 = _912 * _912;
+  float _914 = _913 * 3.14159;
+  float _915 = _908 / _914;
+  float _916 = _468 * _468;
+  float _917 = 1.00000 - _908;
+  float _918 = _916 * _917;
+  float _919 = _918 + _908;
+  float _920 = sqrt(_919);
+  float _921 = _920 * _854;
+  float _922 = _854 * _854;
+  float _923 = _922 * _917;
+  float _924 = _923 + _908;
+  float _925 = sqrt(_924);
+  float _926 = _925 * _468;
+  float _927 = _926 + _921;
+  float _928 = max(_927, 1.00000e-05);
+  float _929 = 0.500000 / _928;
+  float _930 = _929 * _915;
+  float _931 = _930 * _903;
+  float _932 = _930 * _904;
+  float _933 = _930 * _905;
+  float _934 = 1.00000 - _903;
+  float _935 = 1.00000 - _904;
+  float _936 = 1.00000 - _905;
+  float _937 = _480 * 0.318310;
+  float _938 = _937 * _934;
+  float _939 = _481 * 0.318310;
+  float _940 = _939 * _935;
+  float _941 = _482 * 0.318310;
+  float _942 = _941 * _936;
+  float _943 = _931 + _938;
+  float _944 = _932 + _940;
+  float _945 = _933 + _942;
+  float _946 = _882 * _854;
+  float _947 = _946 * _831;
+  float _948 = _947 * _943;
+  float _949 = _946 * _832;
+  float _950 = _949 * _944;
+  float _951 = _946 * _833;
+  float _952 = _951 * _945;
+  float _953 = _948 + _793;
+  float _954 = _950 + _792;
+  float _955 = _952 + _791;
+  goto _label42;
+
+_label42:                     // preceded by _label41, _label38
+  float _956 = phi float [ _label41::_953, _label41 ], [ _label38::_793, _label38 ];
+  float _957 = phi float [ _label41::_954, _label41 ], [ _label38::_792, _label38 ];
+  float _958 = phi float [ _label41::_955, _label41 ], [ _label38::_791, _label38 ];
+  int _959 = _796 | _797;
+  bool _960 = (_959 == 0);
+  if (_960) goto _label43; else goto _label37;
+
+_label43:                     // preceded by _label42, _label37
+  float _961 = phi float [ _label37::_791, _label37 ], [ _label42::_958, _label42 ];
+  float _962 = phi float [ _label37::_792, _label37 ], [ _label42::_957, _label42 ];
+  float _963 = phi float [ _label37::_793, _label37 ], [ _label42::_956, _label42 ];
+  _dx.types.CBufRet.f32 _964 = {__view_175.view.sun_color.x, __view_175.view.sun_color.y, __view_175.view.sun_color.z, __view_175.view.sun_color.w}; //  cbuffer = view, byte_offset = 304
+  float _965 = extractvalue _964, 3;
+  float _966 = -0.000000 - _311;
+  float _967 = -0.000000 - _312;
+  float _968 = -0.000000 - _313;
+  float _969 = dot({_966, _967, _968}, {_415, _416, _417});
+  float _970 = _969 * 2.00000;
+  float _971 = _970 * _415;
+  float _972 = _970 * _416;
+  float _973 = _970 * _417;
+  float _974 = _966 - _971;
+  float _975 = _967 - _972;
+  float _976 = _968 - _973;
+  _dx.types.Handle __env_cube_977 = (TextureCube<float4>)_161;
+  _dx.types.Dimensions _978 = __env_cube_977.GetDimensions(0);
+  int _979 = extractvalue _978, 3;
+  int _980 = _979 + -1;
+  float _981 = (float)(_980); // unsigned 
+  float _982 = _981 * _458;
+  _dx.types.Handle __nagaSamplerHeap_983 = (SamplerState)_208;
+  _dx.types.ResRet.f32 _984 = __env_cube_977.SampleLevel(__nagaSamplerHeap_983, _974, _975, _976, /*LOD*/ _982);
+  float _985 = extractvalue _984, 0;
+  float _986 = extractvalue _984, 1;
+  float _987 = extractvalue _984, 2;
+  float _988 = _458 * 0.0275000;
+  float _989 = _458 * 0.572000;
+  float _990 = _458 * 0.0220000;
+  float _991 = 1.00000 - _458;
+  float _992 = 0.0425000 - _988;
+  float _993 = 1.04000 - _989;
+  float _994 = _990 + -0.0400000;
+  float _995 = _468 * -9.28000;
+  float _996 = exp2(_995);
+  float _997 = _991 * _991;
+  float _998 = min(_997, _996);
+  float _999 = _998 * _991;
+  float _1000 = _992 + _999;
+  float _1001 = _1000 * 1.04000;
+  float _1002 = _993 - _1001;
+  float _1003 = _994 + _1001;
+  float _1004 = _1002 * _476;
+  float _1005 = _1002 * _477;
+  float _1006 = _1002 * _478;
+  float _1007 = _1004 + _1003;
+  float _1008 = _1005 + _1003;
+  float _1009 = _1006 + _1003;
+  float _1010 = dot({_974, _975, _976}, {_299, _300, _301});
+  float _1011 = _1010 + 1.00000;
+  float _1012 = max(_1011, 0.000000);
+  float _1013 = min(_1012, 1.00000);
+  _dx.types.CBufRet.f32 _1014 = {__gi_params_176.gi_params.settings.x, __gi_params_176.gi_params.settings.y, __gi_params_176.gi_params.settings.z, __gi_params_176.gi_params.settings.w}; //  cbuffer = gi_params, byte_offset = 48
+  float _1015 = extractvalue _1014, 3;
+  bool _1016 = (_1015 == 0.000000);
+  if (_1016) goto _label87; else goto _label44;
+
+_label44:                     // preceded by _label43
+  float _1017 = extractvalue _1014, 0;
+  bool _1018 = (_1017 == 0.000000);
+  if (_1018) goto _label87; else goto _label45;
+
+_label45:                     // preceded by _label44
+  bool _1019 = (_1015 == 2.00000);
+  _dx.types.CBufRet.f32 _1020 = {__gi_params_176.gi_params.origin.x, __gi_params_176.gi_params.origin.y, __gi_params_176.gi_params.origin.z, __gi_params_176.gi_params.origin.w}; //  cbuffer = gi_params, byte_offset = 0
+  float _1021 = extractvalue _1020, 0;
+  float _1022 = extractvalue _1020, 1;
+  float _1023 = extractvalue _1020, 2;
+  _dx.types.CBufRet.f32 _1024 = {__gi_params_176.gi_params.spacing.x, __gi_params_176.gi_params.spacing.y, __gi_params_176.gi_params.spacing.z, __gi_params_176.gi_params.spacing.w}; //  cbuffer = gi_params, byte_offset = 16
+  float _1025 = extractvalue _1024, 0;
+  float _1026 = extractvalue _1024, 1;
+  float _1027 = extractvalue _1024, 2;
+  if (_1019) goto _label46; else goto _label68;
+
+_label46:                     // preceded by _label45
+  int8* _1028 = (int8*)(_196); // bitcast 
+   float* _1029 = _196[0]; // inbounds 
+  *_1029 = 0.000000; // align 4 
+   float* _1030 = _196[1]; // inbounds 
+  *_1030 = 0.000000; // align 4 
+   float* _1031 = _196[2]; // inbounds 
+  *_1031 = 0.000000; // align 4 
+   float* _1032 = _196[3]; // inbounds 
+  *_1032 = 0.000000; // align 4 
+   float* _1033 = _196[4]; // inbounds 
+  *_1033 = 0.000000; // align 4 
+   float* _1034 = _196[5]; // inbounds 
+  *_1034 = 0.000000; // align 4 
+   float* _1035 = _196[6]; // inbounds 
+  *_1035 = 0.000000; // align 4 
+   float* _1036 = _196[7]; // inbounds 
+  *_1036 = 0.000000; // align 4 
+   float* _1037 = _196[8]; // inbounds 
+  *_1037 = 0.000000; // align 4 
+   float* _1038 = _196[9]; // inbounds 
+  *_1038 = 0.000000; // align 4 
+   float* _1039 = _196[10]; // inbounds 
+  *_1039 = 0.000000; // align 4 
+   float* _1040 = _196[11]; // inbounds 
+  *_1040 = 0.000000; // align 4 
+   float* _1041 = _196[12]; // inbounds 
+  *_1041 = 0.000000; // align 4 
+   float* _1042 = _196[13]; // inbounds 
+  *_1042 = 0.000000; // align 4 
+   float* _1043 = _196[14]; // inbounds 
+  *_1043 = 0.000000; // align 4 
+   float* _1044 = _196[15]; // inbounds 
+  *_1044 = 0.000000; // align 4 
+   float* _1045 = _196[16]; // inbounds 
+  *_1045 = 0.000000; // align 4 
+   float* _1046 = _196[17]; // inbounds 
+  *_1046 = 0.000000; // align 4 
+   float* _1047 = _196[18]; // inbounds 
+  *_1047 = 0.000000; // align 4 
+   float* _1048 = _196[19]; // inbounds 
+  *_1048 = 0.000000; // align 4 
+   float* _1049 = _196[20]; // inbounds 
+  *_1049 = 0.000000; // align 4 
+   float* _1050 = _196[21]; // inbounds 
+  *_1050 = 0.000000; // align 4 
+   float* _1051 = _196[22]; // inbounds 
+  *_1051 = 0.000000; // align 4 
+   float* _1052 = _196[23]; // inbounds 
+  *_1052 = 0.000000; // align 4 
+   float* _1053 = _196[24]; // inbounds 
+  *_1053 = 0.000000; // align 4 
+   float* _1054 = _196[25]; // inbounds 
+  *_1054 = 0.000000; // align 4 
+   float* _1055 = _196[26]; // inbounds 
+  *_1055 = 0.000000; // align 4 
+   float* _1056 = _196[27]; // inbounds 
+  *_1056 = 0.000000; // align 4 
+   float* _1057 = _196[28]; // inbounds 
+  *_1057 = 0.000000; // align 4 
+   float* _1058 = _196[29]; // inbounds 
+  *_1058 = 0.000000; // align 4 
+   float* _1059 = _196[30]; // inbounds 
+  *_1059 = 0.000000; // align 4 
+   float* _1060 = _196[31]; // inbounds 
+  *_1060 = 0.000000; // align 4 
+  int8* _1061 = (int8*)(_197); // bitcast 
+   float* _1062 = _197[0]; // inbounds 
+  *_1062 = 0.000000; // align 4 
+   float* _1063 = _197[1]; // inbounds 
+  *_1063 = 0.000000; // align 4 
+   float* _1064 = _197[2]; // inbounds 
+  *_1064 = 0.000000; // align 4 
+   float* _1065 = _197[3]; // inbounds 
+  *_1065 = 0.000000; // align 4 
+   float* _1066 = _197[4]; // inbounds 
+  *_1066 = 0.000000; // align 4 
+   float* _1067 = _197[5]; // inbounds 
+  *_1067 = 0.000000; // align 4 
+   float* _1068 = _197[6]; // inbounds 
+  *_1068 = 0.000000; // align 4 
+   float* _1069 = _197[7]; // inbounds 
+  *_1069 = 0.000000; // align 4 
+   float* _1070 = _197[8]; // inbounds 
+  *_1070 = 0.000000; // align 4 
+   float* _1071 = _197[9]; // inbounds 
+  *_1071 = 0.000000; // align 4 
+   float* _1072 = _197[10]; // inbounds 
+  *_1072 = 0.000000; // align 4 
+   float* _1073 = _197[11]; // inbounds 
+  *_1073 = 0.000000; // align 4 
+   float* _1074 = _197[12]; // inbounds 
+  *_1074 = 0.000000; // align 4 
+   float* _1075 = _197[13]; // inbounds 
+  *_1075 = 0.000000; // align 4 
+   float* _1076 = _197[14]; // inbounds 
+  *_1076 = 0.000000; // align 4 
+   float* _1077 = _197[15]; // inbounds 
+  *_1077 = 0.000000; // align 4 
+   float* _1078 = _197[16]; // inbounds 
+  *_1078 = 0.000000; // align 4 
+   float* _1079 = _197[17]; // inbounds 
+  *_1079 = 0.000000; // align 4 
+   float* _1080 = _197[18]; // inbounds 
+  *_1080 = 0.000000; // align 4 
+   float* _1081 = _197[19]; // inbounds 
+  *_1081 = 0.000000; // align 4 
+   float* _1082 = _197[20]; // inbounds 
+  *_1082 = 0.000000; // align 4 
+   float* _1083 = _197[21]; // inbounds 
+  *_1083 = 0.000000; // align 4 
+   float* _1084 = _197[22]; // inbounds 
+  *_1084 = 0.000000; // align 4 
+   float* _1085 = _197[23]; // inbounds 
+  *_1085 = 0.000000; // align 4 
+   float* _1086 = _197[24]; // inbounds 
+  *_1086 = 0.000000; // align 4 
+   float* _1087 = _197[25]; // inbounds 
+  *_1087 = 0.000000; // align 4 
+   float* _1088 = _197[26]; // inbounds 
+  *_1088 = 0.000000; // align 4 
+   float* _1089 = _197[27]; // inbounds 
+  *_1089 = 0.000000; // align 4 
+   float* _1090 = _197[28]; // inbounds 
+  *_1090 = 0.000000; // align 4 
+   float* _1091 = _197[29]; // inbounds 
+  *_1091 = 0.000000; // align 4 
+   float* _1092 = _197[30]; // inbounds 
+  *_1092 = 0.000000; // align 4 
+   float* _1093 = _197[31]; // inbounds 
+  *_1093 = 0.000000; // align 4 
+  int8* _1094 = (int8*)(_198); // bitcast 
+   float* _1095 = _198[0]; // inbounds 
+  *_1095 = 0.000000; // align 4 
+   float* _1096 = _198[1]; // inbounds 
+  *_1096 = 0.000000; // align 4 
+   float* _1097 = _198[2]; // inbounds 
+  *_1097 = 0.000000; // align 4 
+  bool _1098 = (_192 < _1021);
+  bool _1099 = (_193 < _1022);
+  bool _1100 = (_194 < _1023);
+  bool _1101 = _1098 | _1099;
+  bool _1102 = _1100 | _1101;
+  if (_1102) goto _label67; else goto _label47;
+
+_label47:                     // preceded by _label46
+  float _1103 = _1025 + _1021;
+  float _1104 = _1026 + _1022;
+  float _1105 = _1027 + _1023;
+  bool _1106 = (_192 > _1103);
+  bool _1107 = (_193 > _1104);
+  bool _1108 = (_194 > _1105);
+  bool _1109 = _1106 | _1107;
+  bool _1110 = _1108 | _1109;
+  if (_1110) goto _label67; else goto _label48;
+
+_label48:                     // preceded by _label47
+  float _1111 = _192 - _1021;
+  float _1112 = _193 - _1022;
+  float _1113 = _194 - _1023;
+  float _1114 = _1111 * 2.00000;
+  float _1115 = _1112 * 2.00000;
+  float _1116 = _1113 * 2.00000;
+  float _1117 = _1114 / _1025;
+  float _1118 = _1115 / _1026;
+  float _1119 = _1116 / _1027;
+  float _1120 = _1117 + -1.00000;
+  float _1121 = _1118 + -1.00000;
+  float _1122 = _1119 + -1.00000;
+   float* _1123 = _195[0]; // inbounds 
+  *_1123 = _1120; // align 4 
+   float* _1124 = _195[1]; // inbounds 
+  *_1124 = _1121; // align 4 
+   float* _1125 = _195[2]; // inbounds 
+  *_1125 = _1122; // align 4 
+   float* _1126 = _195[3]; // inbounds 
+  *_1126 = _415; // align 4 
+   float* _1127 = _195[4]; // inbounds 
+  *_1127 = _416; // align 4 
+   float* _1128 = _195[5]; // inbounds 
+  *_1128 = _417; // align 4 
+  goto _label49;
+
+_label49:                     // preceded by _label53, _label48
+  int _1129 = phi int [ _label48::0, _label48 ], [ _label53::1, _label53 ];
+  int _1130 = phi int [ _label48::-1, _label48 ], [ _label53::_1136, _label53 ];
+  int _1131 = phi int [ _label48::-1, _label48 ], [ _label53::_1135, _label53 ];
+  int _1132 = phi int [ _label48::0, _label48 ], [ _label53::_1137, _label53 ];
+  bool _1133 = (_1130 == 0);
+  int _1134 = (int)(_1133); // zero extend 
+  int _1135 = _1131 - _1134;
+  int _1136 = _1130 + -1;
+  int _1137 = _1132 + _1129;
+  bool _1138 = (_1137 < 32);
+  if (_1138) goto _label50; else goto _label54;
+
+_label50:                     // preceded by _label49
+  int _1139 = _1137 + 192;
+  int _1140 = _1139 << 2;
+  int _1141 = _1140 & 12;
+  int _1142 = _1139 >> 2; // logical 
+  int _1143 = _1142 << 4;
+  int _1144 = _1141 | _1143;
+  _dx.types.Handle __gi_sh_1145 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1146 = __gi_sh_1145.Load(_1144);
+  int _1147 = extractvalue _1146, 0;
+  float _1148 = asfloat(_1147); // bitcast 
+  goto _label51;
+
+_label51:                     // preceded by _label52, _label50
+  int _1149 = phi int [ _label50::0, _label50 ], [ _label52::1, _label52 ];
+  int _1150 = phi int [ _label50::-1, _label50 ], [ _label52::_1156, _label52 ];
+  int _1151 = phi int [ _label50::-1, _label50 ], [ _label52::_1159, _label52 ];
+  int _1152 = phi int [ _label50::0, _label50 ], [ _label52::_1154, _label52 ];
+  float _1153 = phi float [ _label50::_1148, _label50 ], [ _label52::_1175, _label52 ];
+  int _1154 = _1152 + _1149;
+  bool _1155 = (_1154 < 6);
+  if (_1155) goto _label52; else goto _label53;
+
+_label52:                     // preceded by _label51
+  int _1156 = _1150 + -1;
+  bool _1157 = (_1150 == 0);
+  int _1158 = (int)(_1157); // zero extend 
+  int _1159 = _1151 - _1158;
+  int _1160 = _1137 * 6;
+  int _1161 = _1154 + _1160;
+  int _1162 = _1161 << 2;
+  int _1163 = _1162 & 12;
+  int _1164 = _1161 >> 2; // logical 
+  int _1165 = _1164 << 4;
+  int _1166 = _1163 | _1165;
+  _dx.types.Handle __gi_sh_1167 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1168 = __gi_sh_1167.Load(_1166);
+  int _1169 = extractvalue _1168, 0;
+  float _1170 = asfloat(_1169); // bitcast 
+  int _1171 = UMin(_1154, 5);
+   float* _1172 = _195[_1171]; // inbounds 
+  float _1173 = *_1172; // align 4 
+  float _1174 = _1170 * _1173;
+  float _1175 = _1174 + _1153;
+  int _1176 = _1159 | _1156;
+  bool _1177 = (_1176 == 0);
+  if (_1177) goto _label53; else goto _label51;
+
+_label53:                     // preceded by _label52, _label51
+  float _1178 = phi float [ _label52::_1175, _label52 ], [ _label51::_1153, _label51 ];
+  float _1179 = max(_1178, 0.000000);
+  int _1180 = UMin(_1137, 31);
+   float* _1181 = _196[_1180]; // inbounds 
+  *_1181 = _1179; // align 4 
+  int _1182 = _1135 | _1136;
+  bool _1183 = (_1182 == 0);
+  if (_1183) goto _label54; else goto _label49;
+
+_label54:                     // preceded by _label53, _label49
+  goto _label55;
+
+_label55:                     // preceded by _label59, _label54
+  int _1184 = phi int [ _label59::1, _label59 ], [ _label54::0, _label54 ];
+  int _1185 = phi int [ _label59::_1191, _label59 ], [ _label54::-1, _label54 ];
+  int _1186 = phi int [ _label59::_1190, _label59 ], [ _label54::-1, _label54 ];
+  int _1187 = phi int [ _label59::_1192, _label59 ], [ _label54::0, _label54 ];
+  bool _1188 = (_1185 == 0);
+  int _1189 = (int)(_1188); // zero extend 
+  int _1190 = _1186 - _1189;
+  int _1191 = _1185 + -1;
+  int _1192 = _1187 + _1184;
+  bool _1193 = (_1192 < 32);
+  if (_1193) goto _label56; else goto _label60;
+
+_label56:                     // preceded by _label55
+  int _1194 = _1192 + 1248;
+  int _1195 = _1194 << 2;
+  int _1196 = _1195 & 12;
+  int _1197 = _1194 >> 2; // logical 
+  int _1198 = _1197 << 4;
+  int _1199 = _1196 | _1198;
+  _dx.types.Handle __gi_sh_1200 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1201 = __gi_sh_1200.Load(_1199);
+  int _1202 = extractvalue _1201, 0;
+  float _1203 = asfloat(_1202); // bitcast 
+  goto _label57;
+
+_label57:                     // preceded by _label58, _label56
+  int _1204 = phi int [ _label56::0, _label56 ], [ _label58::1, _label58 ];
+  int _1205 = phi int [ _label56::-1, _label56 ], [ _label58::_1211, _label58 ];
+  int _1206 = phi int [ _label56::-1, _label56 ], [ _label58::_1214, _label58 ];
+  int _1207 = phi int [ _label56::0, _label56 ], [ _label58::_1209, _label58 ];
+  float _1208 = phi float [ _label56::_1203, _label56 ], [ _label58::_1231, _label58 ];
+  int _1209 = _1207 + _1204;
+  bool _1210 = (_1209 < 32);
+  if (_1210) goto _label58; else goto _label59;
+
+_label58:                     // preceded by _label57
+  int _1211 = _1205 + -1;
+  bool _1212 = (_1205 == 0);
+  int _1213 = (int)(_1212); // zero extend 
+  int _1214 = _1206 - _1213;
+  int _1215 = _1192 << 5;
+  int _1216 = _1215 + 224;
+  int _1217 = _1216 + _1209;
+  int _1218 = _1217 << 2;
+  int _1219 = _1218 & 12;
+  int _1220 = _1217 >> 2; // logical 
+  int _1221 = _1220 << 4;
+  int _1222 = _1219 | _1221;
+  _dx.types.Handle __gi_sh_1223 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1224 = __gi_sh_1223.Load(_1222);
+  int _1225 = extractvalue _1224, 0;
+  float _1226 = asfloat(_1225); // bitcast 
+  int _1227 = UMin(_1209, 31);
+   float* _1228 = _196[_1227]; // inbounds 
+  float _1229 = *_1228; // align 4 
+  float _1230 = _1226 * _1229;
+  float _1231 = _1230 + _1208;
+  int _1232 = _1214 | _1211;
+  bool _1233 = (_1232 == 0);
+  if (_1233) goto _label59; else goto _label57;
+
+_label59:                     // preceded by _label58, _label57
+  float _1234 = phi float [ _label58::_1231, _label58 ], [ _label57::_1208, _label57 ];
+  float _1235 = max(_1234, 0.000000);
+  int _1236 = UMin(_1192, 31);
+   float* _1237 = _197[_1236]; // inbounds 
+  *_1237 = _1235; // align 4 
+  int _1238 = _1190 | _1191;
+  bool _1239 = (_1238 == 0);
+  if (_1239) goto _label60; else goto _label55;
+
+_label60:                     // preceded by _label59, _label55
+  goto _label61;
+
+_label61:                     // preceded by _label65, _label60
+  int _1240 = phi int [ _label65::1, _label65 ], [ _label60::0, _label60 ];
+  int _1241 = phi int [ _label65::_1247, _label65 ], [ _label60::-1, _label60 ];
+  int _1242 = phi int [ _label65::_1246, _label65 ], [ _label60::-1, _label60 ];
+  int _1243 = phi int [ _label65::_1248, _label65 ], [ _label60::0, _label60 ];
+  bool _1244 = (_1241 == 0);
+  int _1245 = (int)(_1244); // zero extend 
+  int _1246 = _1242 - _1245;
+  int _1247 = _1241 + -1;
+  int _1248 = _1243 + _1240;
+  bool _1249 = (_1248 < 3);
+  if (_1249) goto _label62; else goto _label66;
+
+_label62:                     // preceded by _label61
+  int _1250 = _1248 + 1376;
+  int _1251 = _1250 << 2;
+  int _1252 = _1251 & 12;
+  int _1253 = _1250 >> 2; // logical 
+  int _1254 = _1253 << 4;
+  int _1255 = _1252 | _1254;
+  _dx.types.Handle __gi_sh_1256 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1257 = __gi_sh_1256.Load(_1255);
+  int _1258 = extractvalue _1257, 0;
+  float _1259 = asfloat(_1258); // bitcast 
+  goto _label63;
+
+_label63:                     // preceded by _label64, _label62
+  int _1260 = phi int [ _label62::0, _label62 ], [ _label64::1, _label64 ];
+  int _1261 = phi int [ _label62::-1, _label62 ], [ _label64::_1267, _label64 ];
+  int _1262 = phi int [ _label62::-1, _label62 ], [ _label64::_1270, _label64 ];
+  int _1263 = phi int [ _label62::0, _label62 ], [ _label64::_1265, _label64 ];
+  float _1264 = phi float [ _label62::_1259, _label62 ], [ _label64::_1287, _label64 ];
+  int _1265 = _1263 + _1260;
+  bool _1266 = (_1265 < 32);
+  if (_1266) goto _label64; else goto _label65;
+
+_label64:                     // preceded by _label63
+  int _1267 = _1261 + -1;
+  bool _1268 = (_1261 == 0);
+  int _1269 = (int)(_1268); // zero extend 
+  int _1270 = _1262 - _1269;
+  int _1271 = _1248 << 5;
+  int _1272 = _1271 + 1280;
+  int _1273 = _1272 + _1265;
+  int _1274 = _1273 << 2;
+  int _1275 = _1274 & 12;
+  int _1276 = _1273 >> 2; // logical 
+  int _1277 = _1276 << 4;
+  int _1278 = _1275 | _1277;
+  _dx.types.Handle __gi_sh_1279 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1280 = __gi_sh_1279.Load(_1278);
+  int _1281 = extractvalue _1280, 0;
+  float _1282 = asfloat(_1281); // bitcast 
+  int _1283 = UMin(_1265, 31);
+   float* _1284 = _197[_1283]; // inbounds 
+  float _1285 = *_1284; // align 4 
+  float _1286 = _1282 * _1285;
+  float _1287 = _1286 + _1264;
+  int _1288 = _1270 | _1267;
+  bool _1289 = (_1288 == 0);
+  if (_1289) goto _label65; else goto _label63;
+
+_label65:                     // preceded by _label64, _label63
+  float _1290 = phi float [ _label64::_1287, _label64 ], [ _label63::_1264, _label63 ];
+  float _1291 = max(_1290, 0.000000);
+  int _1292 = UMin(_1248, 2);
+   float* _1293 = _198[_1292];
+  *_1293 = _1291; // align 4 
+  int _1294 = _1246 | _1247;
+  bool _1295 = (_1294 == 0);
+  if (_1295) goto _label66; else goto _label61;
+
+_label66:                     // preceded by _label65, _label61
+  float _1296 = *_1095; // align 4 
+  float _1297 = *_1096; // align 4 
+  float _1298 = *_1097; // align 4 
+  _dx.types.CBufRet.f32 _1299 = {__gi_params_176.gi_params.settings.x, __gi_params_176.gi_params.settings.y, __gi_params_176.gi_params.settings.z, __gi_params_176.gi_params.settings.w}; //  cbuffer = gi_params, byte_offset = 48
+  float _1300 = extractvalue _1299, 0;
+  float _1301 = _1300 * _1296;
+  float _1302 = _1300 * _1297;
+  float _1303 = _1300 * _1298;
+  goto _label67;
+
+_label67:                     // preceded by _label66, _label47, _label46
+  float _1304 = phi float [ _label66::_1301, _label66 ], [ _label47::0.000000, _label47 ], [ _label46::0.000000, _label46 ];
+  float _1305 = phi float [ _label66::_1302, _label66 ], [ _label47::0.000000, _label47 ], [ _label46::0.000000, _label46 ];
+  float _1306 = phi float [ _label66::_1303, _label66 ], [ _label47::0.000000, _label47 ], [ _label46::0.000000, _label46 ];
+  float _1307 = phi float [ _label66::1.00000, _label66 ], [ _label47::0.000000, _label47 ], [ _label46::0.000000, _label46 ];
+  goto _label87;
+
+_label68:                     // preceded by _label45
+  float _1308 = _192 - _1021;
+  float _1309 = _193 - _1022;
+  float _1310 = _194 - _1023;
+  float _1311 = _1308 / _1025;
+  float _1312 = _1309 / _1026;
+  float _1313 = _1310 / _1027;
+  _dx.types.CBufRet.i32 _1314 = {__gi_params_176.gi_params.dimensions.x, __gi_params_176.gi_params.dimensions.y, __gi_params_176.gi_params.dimensions.z, __gi_params_176.gi_params.dimensions.w}; //  cbuffer = gi_params, byte_offset = 32
+  int _1315 = extractvalue _1314, 0;
+  int _1316 = extractvalue _1314, 1;
+  int _1317 = extractvalue _1314, 2;
+  bool _1318 = (_1311 < -0.500000);
+  bool _1319 = (_1312 < -0.500000);
+  bool _1320 = (_1313 < -0.500000);
+  bool _1321 = _1318 | _1319;
+  bool _1322 = _1321 | _1320;
+  if (_1322) goto _label87; else goto _label69;
+
+_label69:                     // preceded by _label68
+  float _1323 = (float)(_1315); // unsigned 
+  float _1324 = (float)(_1316); // unsigned 
+  float _1325 = (float)(_1317); // unsigned 
+  float _1326 = _1323 + -0.500000;
+  float _1327 = _1324 + -0.500000;
+  float _1328 = _1325 + -0.500000;
+  bool _1329 = (_1311 > _1326);
+  bool _1330 = (_1312 > _1327);
+  bool _1331 = (_1313 > _1328);
+  bool _1332 = _1329 | _1330;
+  bool _1333 = _1331 | _1332;
+  if (_1333) goto _label87; else goto _label70;
+
+_label70:                     // preceded by _label69
+  int _1334 = _1315 + -1;
+  int _1335 = _1316 + -1;
+  int _1336 = _1317 + -1;
+  float _1337 = (float)(_1334); // unsigned 
+  float _1338 = (float)(_1335); // unsigned 
+  float _1339 = (float)(_1336); // unsigned 
+  float _1340 = max(_1311, 0.000000);
+  float _1341 = max(_1312, 0.000000);
+  float _1342 = max(_1313, 0.000000);
+  float _1343 = min(_1340, _1337);
+  float _1344 = min(_1341, _1338);
+  float _1345 = min(_1342, _1339);
+  float _1346 = Round_ni(_1343);
+  float _1347 = Round_ni(_1344);
+  float _1348 = Round_ni(_1345);
+  float _1349 = max(_1346, 0.000000);
+  float _1350 = max(_1347, 0.000000);
+  float _1351 = max(_1348, 0.000000);
+  float _1352 = min(_1349, 4.29497e+09);
+  float _1353 = min(_1350, 4.29497e+09);
+  float _1354 = min(_1351, 4.29497e+09);
+  int _1355 = (int)(_1352); // unsigned 
+  int _1356 = (int)(_1353); // unsigned 
+  int _1357 = (int)(_1354); // unsigned 
+  int _1358 = _1355 + 1;
+  int _1359 = _1356 + 1;
+  int _1360 = _1357 + 1;
+  int _1361 = UMin(_1358, _1334);
+  int _1362 = UMin(_1359, _1335);
+  int _1363 = UMin(_1360, _1336);
+  float _1364 = Frc(_1343);
+  float _1365 = Frc(_1344);
+  float _1366 = Frc(_1345);
+  float _1367 = extractvalue _1014, 1;
+  float _1368 = _1367 * _415;
+  float _1369 = _1367 * _416;
+  float _1370 = _1367 * _417;
+  goto _label72;
+
+_label71:                     // preceded by _label75, _label74
+  float _1371 = phi float [ _label74::_1391, _label74 ], [ _label75::_1401, _label75 ];
+  float _1372 = phi float [ _label74::_1392, _label74 ], [ _label75::_1402, _label75 ];
+  float _1373 = phi float [ _label74::_1393, _label74 ], [ _label75::_1403, _label75 ];
+  float _1374 = phi float [ _label74::_1394, _label74 ], [ _label75::_1404, _label75 ];
+  int _1375 = _1387 | _1388;
+  bool _1376 = (_1375 == 0);
+  if (_1376) goto _label86; else goto _label72;
+
+_label72:                     // preceded by _label71, _label70
+  int _1377 = phi int [ _label70::0, _label70 ], [ _label71::1, _label71 ];
+  int _1378 = phi int [ _label70::-1, _label70 ], [ _label71::_1388, _label71 ];
+  int _1379 = phi int [ _label70::-1, _label70 ], [ _label71::_1387, _label71 ];
+  int _1380 = phi int [ _label70::0, _label70 ], [ _label71::_1389, _label71 ];
+  float _1381 = phi float [ _label70::0.000000, _label70 ], [ _label71::_1371, _label71 ];
+  float _1382 = phi float [ _label70::0.000000, _label70 ], [ _label71::_1372, _label71 ];
+  float _1383 = phi float [ _label70::0.000000, _label70 ], [ _label71::_1373, _label71 ];
+  float _1384 = phi float [ _label70::0.000000, _label70 ], [ _label71::_1374, _label71 ];
+  bool _1385 = (_1378 == 0);
+  int _1386 = (int)(_1385); // zero extend 
+  int _1387 = _1379 - _1386;
+  int _1388 = _1378 + -1;
+  int _1389 = _1380 + _1377;
+  bool _1390 = (_1389 < 2);
+  if (_1390) goto _label73; else goto _label86;
+
+_label73:                     // preceded by _label72
+  goto _label75;
+
+_label74:                     // preceded by _label85, _label77
+  float _1391 = phi float [ _label85::_1759, _label85 ], [ _label77::_1415, _label77 ];
+  float _1392 = phi float [ _label85::_1758, _label85 ], [ _label77::_1416, _label77 ];
+  float _1393 = phi float [ _label85::_1757, _label85 ], [ _label77::_1417, _label77 ];
+  float _1394 = phi float [ _label85::_1756, _label85 ], [ _label77::_1418, _label77 ];
+  int _1395 = _1407 | _1408;
+  bool _1396 = (_1395 == 0);
+  if (_1396) goto _label71; else goto _label75;
+
+_label75:                     // preceded by _label74, _label73
+  int _1397 = phi int [ _label74::1, _label74 ], [ _label73::0, _label73 ];
+  int _1398 = phi int [ _label74::_1408, _label74 ], [ _label73::-1, _label73 ];
+  int _1399 = phi int [ _label74::_1407, _label74 ], [ _label73::-1, _label73 ];
+  int _1400 = phi int [ _label74::_1409, _label74 ], [ _label73::0, _label73 ];
+  float _1401 = phi float [ _label74::_1391, _label74 ], [ _label73::_1381, _label73 ];
+  float _1402 = phi float [ _label74::_1392, _label74 ], [ _label73::_1382, _label73 ];
+  float _1403 = phi float [ _label74::_1393, _label74 ], [ _label73::_1383, _label73 ];
+  float _1404 = phi float [ _label74::_1394, _label74 ], [ _label73::_1384, _label73 ];
+  bool _1405 = (_1398 == 0);
+  int _1406 = (int)(_1405); // zero extend 
+  int _1407 = _1399 - _1406;
+  int _1408 = _1398 + -1;
+  int _1409 = _1400 + _1397;
+  bool _1410 = (_1409 < 2);
+  if (_1410) goto _label76; else goto _label71;
+
+_label76:                     // preceded by _label75
+  goto _label77;
+
+_label77:                     // preceded by _label85, _label76
+  int _1411 = phi int [ _label85::1, _label85 ], [ _label76::0, _label76 ];
+  int _1412 = phi int [ _label85::_1422, _label85 ], [ _label76::-1, _label76 ];
+  int _1413 = phi int [ _label85::_1421, _label85 ], [ _label76::-1, _label76 ];
+  int _1414 = phi int [ _label85::_1423, _label85 ], [ _label76::0, _label76 ];
+  float _1415 = phi float [ _label85::_1759, _label85 ], [ _label76::_1401, _label76 ];
+  float _1416 = phi float [ _label85::_1758, _label85 ], [ _label76::_1402, _label76 ];
+  float _1417 = phi float [ _label85::_1757, _label85 ], [ _label76::_1403, _label76 ];
+  float _1418 = phi float [ _label85::_1756, _label85 ], [ _label76::_1404, _label76 ];
+  bool _1419 = (_1412 == 0);
+  int _1420 = (int)(_1419); // zero extend 
+  int _1421 = _1413 - _1420;
+  int _1422 = _1412 + -1;
+  int _1423 = _1414 + _1411;
+  bool _1424 = (_1423 < 2);
+  if (_1424) goto _label78; else goto _label74;
+
+_label78:                     // preceded by _label77
+  bool _1425 = (_1423 != 0);
+  bool _1426 = (_1409 != 0);
+  bool _1427 = (_1389 != 0);
+  int _1428 = _1425 ? _1361 : _1355;
+  int _1429 = _1426 ? _1362 : _1356;
+  int _1430 = _1427 ? _1363 : _1357;
+  float _1431 = 1.00000 - _1364;
+  float _1432 = 1.00000 - _1365;
+  float _1433 = 1.00000 - _1366;
+  float _1434 = _1425 ? _1364 : _1431;
+  float _1435 = _1426 ? _1365 : _1432;
+  float _1436 = _1427 ? _1366 : _1433;
+  float _1437 = _1435 * _1436;
+  float _1438 = _1437 * _1434;
+  bool _1439 = (_1438 > 0.000000); // unordered 
+  if (_1439) goto _label79; else goto _label85;
+
+_label79:                     // preceded by _label78
+  int _1440 = _1430 * _1316;
+  int _1441 = _1429 + _1440;
+  int _1442 = _1441 * _1315;
+  int _1443 = _1428 + _1442;
+  _dx.types.CBufRet.f32 _1444 = {__gi_params_176.gi_params.origin.x, __gi_params_176.gi_params.origin.y, __gi_params_176.gi_params.origin.z, __gi_params_176.gi_params.origin.w}; //  cbuffer = gi_params, byte_offset = 0
+  float _1445 = extractvalue _1444, 0;
+  float _1446 = extractvalue _1444, 1;
+  float _1447 = extractvalue _1444, 2;
+  _dx.types.CBufRet.f32 _1448 = {__gi_params_176.gi_params.spacing.x, __gi_params_176.gi_params.spacing.y, __gi_params_176.gi_params.spacing.z, __gi_params_176.gi_params.spacing.w}; //  cbuffer = gi_params, byte_offset = 16
+  float _1449 = extractvalue _1448, 0;
+  float _1450 = extractvalue _1448, 1;
+  float _1451 = extractvalue _1448, 2;
+  float _1452 = (float)(_1428); // unsigned 
+  float _1453 = (float)(_1429); // unsigned 
+  float _1454 = (float)(_1430); // unsigned 
+  float _1455 = _1449 * _1452;
+  float _1456 = _1450 * _1453;
+  float _1457 = _1451 * _1454;
+  float _1458 = _1368 + _192;
+  float _1459 = _1458 - _1445;
+  float _1460 = _1459 - _1455;
+  float _1461 = _1369 + _193;
+  float _1462 = _1461 - _1446;
+  float _1463 = _1462 - _1456;
+  float _1464 = _1370 + _194;
+  float _1465 = _1464 - _1447;
+  float _1466 = _1465 - _1457;
+  float _1467 = _1460 * _1460;
+  float _1468 = _1463 * _1463;
+  float _1469 = _1467 + _1468;
+  float _1470 = _1466 * _1466;
+  float _1471 = _1469 + _1470;
+  float _1472 = sqrt(_1471);
+  float _1473 = max(_1472, 1.00000e-06);
+  float _1474 = _1460 / _1473;
+  float _1475 = _1463 / _1473;
+  float _1476 = _1466 / _1473;
+  float _1477 = abs(_1474);
+  float _1478 = abs(_1475);
+  float _1479 = _1478 + _1477;
+  float _1480 = abs(_1476);
+  float _1481 = _1479 + _1480;
+  float _1482 = max(_1481, 1.00000e-06);
+  float _1483 = _1474 / _1482;
+  float _1484 = _1475 / _1482;
+  float _1485 = _1476 / _1482;
+  bool _1486 = (_1485 < 0.000000);
+  if (_1486) goto _label80; else goto _label81;
+
+_label80:                     // preceded by _label79
+  float _1487 = abs(_1484);
+  float _1488 = abs(_1483);
+  float _1489 = 1.00000 - _1487;
+  float _1490 = 1.00000 - _1488;
+  bool _1491 = (_1483 >= 0.000000);
+  bool _1492 = (_1484 >= 0.000000);
+  float _1493 = _1491 ? 1.00000 : -1.00000;
+  float _1494 = _1492 ? 1.00000 : -1.00000;
+  float _1495 = _1489 * _1493;
+  float _1496 = _1490 * _1494;
+  goto _label81;
+
+_label81:                     // preceded by _label80, _label79
+  float _1497 = phi float [ _label80::_1495, _label80 ], [ _label79::_1483, _label79 ];
+  float _1498 = phi float [ _label80::_1496, _label80 ], [ _label79::_1484, _label79 ];
+  float _1499 = _1497 * 0.500000;
+  float _1500 = _1498 * 0.500000;
+  float _1501 = _1499 + 0.500000;
+  float _1502 = _1500 + 0.500000;
+  _dx.types.CBufRet.i32 _1503 = {__gi_params_176.gi_params.dimensions.x, __gi_params_176.gi_params.dimensions.y, __gi_params_176.gi_params.dimensions.z, __gi_params_176.gi_params.dimensions.w}; //  cbuffer = gi_params, byte_offset = 32
+  int _1504 = extractvalue _1503, 3;
+  int _1505 = _1504 + -1;
+  float _1506 = (float)(_1505); // unsigned 
+  float _1507 = (float)(_1504); // unsigned 
+  float _1508 = _1507 * _1501;
+  float _1509 = _1507 * _1502;
+  float _1510 = _1508 + -0.500000;
+  float _1511 = _1509 + -0.500000;
+  float _1512 = max(_1510, 0.000000);
+  float _1513 = max(_1511, 0.000000);
+  float _1514 = min(_1512, _1506);
+  float _1515 = min(_1513, _1506);
+  float _1516 = Round_ni(_1514);
+  float _1517 = Round_ni(_1515);
+  float _1518 = max(_1516, 0.000000);
+  float _1519 = max(_1517, 0.000000);
+  float _1520 = min(_1518, 4.29497e+09);
+  float _1521 = min(_1519, 4.29497e+09);
+  int _1522 = (int)(_1520); // unsigned 
+  int _1523 = (int)(_1521); // unsigned 
+  int _1524 = _1522 + 1;
+  int _1525 = _1523 + 1;
+  int _1526 = UMin(_1524, _1505);
+  int _1527 = UMin(_1525, _1505);
+  float _1528 = Frc(_1514);
+  float _1529 = Frc(_1515);
+  int _1530 = _1504 * _1443;
+  int _1531 = _1530 * _1504;
+  int _1532 = _1522 + _1531;
+  int _1533 = _1523 * _1504;
+  int _1534 = _1533 + _1532;
+  int _1535 = _1534 << 3;
+  _dx.types.Handle __gi_distances_1536 = (ByteAddressBuffer)_165;
+  _dx.types.ResRet.i32 _1537 = __gi_distances_1536.Load(_1535);
+  int _1538 = extractvalue _1537, 0;
+  int _1539 = extractvalue _1537, 1;
+  float _1540 = asfloat(_1538); // bitcast 
+  float _1541 = asfloat(_1539); // bitcast 
+  int _1542 = _1526 + _1531;
+  int _1543 = _1542 + _1533;
+  int _1544 = _1543 << 3;
+  _dx.types.ResRet.i32 _1545 = __gi_distances_1536.Load(_1544);
+  int _1546 = extractvalue _1545, 0;
+  int _1547 = extractvalue _1545, 1;
+  float _1548 = asfloat(_1546); // bitcast 
+  float _1549 = asfloat(_1547); // bitcast 
+  int _1550 = _1527 * _1504;
+  int _1551 = _1550 + _1532;
+  int _1552 = _1551 << 3;
+  _dx.types.ResRet.i32 _1553 = __gi_distances_1536.Load(_1552);
+  int _1554 = extractvalue _1553, 0;
+  int _1555 = extractvalue _1553, 1;
+  float _1556 = asfloat(_1554); // bitcast 
+  float _1557 = asfloat(_1555); // bitcast 
+  int _1558 = _1550 + _1542;
+  int _1559 = _1558 << 3;
+  _dx.types.ResRet.i32 _1560 = __gi_distances_1536.Load(_1559);
+  int _1561 = extractvalue _1560, 0;
+  int _1562 = extractvalue _1560, 1;
+  float _1563 = asfloat(_1561); // bitcast 
+  float _1564 = asfloat(_1562); // bitcast 
+  float _1565 = _1563 - _1556;
+  float _1566 = _1564 - _1557;
+  float _1567 = _1565 * _1528;
+  float _1568 = _1566 * _1528;
+  float _1569 = _1548 - _1540;
+  float _1570 = _1549 - _1541;
+  float _1571 = _1569 * _1528;
+  float _1572 = _1570 * _1528;
+  float _1573 = _1571 + _1540;
+  float _1574 = _1572 + _1541;
+  float _1575 = _1556 - _1573;
+  float _1576 = _1575 + _1567;
+  float _1577 = _1557 - _1574;
+  float _1578 = _1577 + _1568;
+  float _1579 = _1576 * _1529;
+  float _1580 = _1578 * _1529;
+  float _1581 = _1579 + _1573;
+  float _1582 = _1580 + _1574;
+  bool _1583 = (_1582 == 0.000000);
+  if (_1583) goto _label85; else goto _label82;
+
+_label82:                     // preceded by _label81
+  bool _1584 = (_1472 > _1581);
+  if (_1584) goto _label83; else goto _label84;
+
+_label83:                     // preceded by _label82
+  float _1585 = _1581 * _1581;
+  float _1586 = _1582 - _1585;
+  float _1587 = max(_1586, 1.00000e-05);
+  float _1588 = _1472 - _1581;
+  float _1589 = _1588 * _1588;
+  float _1590 = _1587 + _1589;
+  float _1591 = _1587 / _1590;
+  float _1592 = _1591 * _1591;
+  float _1593 = _1592 * _1438;
+  float _1594 = _1593 * _1591;
+  goto _label84;
+
+_label84:                     // preceded by _label83, _label82
+  float _1595 = phi float [ _label83::_1594, _label83 ], [ _label82::_1438, _label82 ];
+  float _1596 = -0.000000 - _1474;
+  float _1597 = -0.000000 - _1475;
+  float _1598 = -0.000000 - _1476;
+  float _1599 = dot({_415, _416, _417}, {_1596, _1597, _1598});
+  float _1600 = _1599 * 0.500000;
+  float _1601 = _1600 + 0.500000;
+  float _1602 = max(0.0500000, _1601);
+  float _1603 = _1602 * _1602;
+  float _1604 = _1603 * _1595;
+  int _1605 = _1443 * 144;
+  _dx.types.Handle __gi_sh_1606 = (ByteAddressBuffer)_166;
+  _dx.types.ResRet.i32 _1607 = __gi_sh_1606.Load(_1605);
+  int _1608 = extractvalue _1607, 0;
+  int _1609 = extractvalue _1607, 1;
+  int _1610 = extractvalue _1607, 2;
+  float _1611 = asfloat(_1608); // bitcast 
+  float _1612 = asfloat(_1609); // bitcast 
+  float _1613 = asfloat(_1610); // bitcast 
+  int _1614 = _1605 + 16;
+  _dx.types.ResRet.i32 _1615 = __gi_sh_1606.Load(_1614);
+  int _1616 = extractvalue _1615, 0;
+  int _1617 = extractvalue _1615, 1;
+  int _1618 = extractvalue _1615, 2;
+  float _1619 = asfloat(_1616); // bitcast 
+  float _1620 = asfloat(_1617); // bitcast 
+  float _1621 = asfloat(_1618); // bitcast 
+  int _1622 = _1605 + 32;
+  _dx.types.ResRet.i32 _1623 = __gi_sh_1606.Load(_1622);
+  int _1624 = extractvalue _1623, 0;
+  int _1625 = extractvalue _1623, 1;
+  int _1626 = extractvalue _1623, 2;
+  float _1627 = asfloat(_1624); // bitcast 
+  float _1628 = asfloat(_1625); // bitcast 
+  float _1629 = asfloat(_1626); // bitcast 
+  int _1630 = _1605 + 48;
+  _dx.types.ResRet.i32 _1631 = __gi_sh_1606.Load(_1630);
+  int _1632 = extractvalue _1631, 0;
+  int _1633 = extractvalue _1631, 1;
+  int _1634 = extractvalue _1631, 2;
+  float _1635 = asfloat(_1632); // bitcast 
+  float _1636 = asfloat(_1633); // bitcast 
+  float _1637 = asfloat(_1634); // bitcast 
+  int _1638 = _1605 + 64;
+  _dx.types.ResRet.i32 _1639 = __gi_sh_1606.Load(_1638);
+  int _1640 = extractvalue _1639, 0;
+  int _1641 = extractvalue _1639, 1;
+  int _1642 = extractvalue _1639, 2;
+  float _1643 = asfloat(_1640); // bitcast 
+  float _1644 = asfloat(_1641); // bitcast 
+  float _1645 = asfloat(_1642); // bitcast 
+  int _1646 = _1605 + 80;
+  _dx.types.ResRet.i32 _1647 = __gi_sh_1606.Load(_1646);
+  int _1648 = extractvalue _1647, 0;
+  int _1649 = extractvalue _1647, 1;
+  int _1650 = extractvalue _1647, 2;
+  float _1651 = asfloat(_1648); // bitcast 
+  float _1652 = asfloat(_1649); // bitcast 
+  float _1653 = asfloat(_1650); // bitcast 
+  int _1654 = _1605 + 112;
+  _dx.types.ResRet.i32 _1655 = __gi_sh_1606.Load(_1654);
+  int _1656 = extractvalue _1655, 0;
+  int _1657 = extractvalue _1655, 1;
+  int _1658 = extractvalue _1655, 2;
+  float _1659 = asfloat(_1656); // bitcast 
+  float _1660 = asfloat(_1657); // bitcast 
+  float _1661 = asfloat(_1658); // bitcast 
+  int _1662 = _1605 + 96;
+  _dx.types.ResRet.i32 _1663 = __gi_sh_1606.Load(_1662);
+  int _1664 = extractvalue _1663, 0;
+  int _1665 = extractvalue _1663, 1;
+  int _1666 = extractvalue _1663, 2;
+  float _1667 = asfloat(_1664); // bitcast 
+  float _1668 = asfloat(_1665); // bitcast 
+  float _1669 = asfloat(_1666); // bitcast 
+  int _1670 = _1605 + 128;
+  _dx.types.ResRet.i32 _1671 = __gi_sh_1606.Load(_1670);
+  int _1672 = extractvalue _1671, 0;
+  int _1673 = extractvalue _1671, 1;
+  int _1674 = extractvalue _1671, 2;
+  float _1675 = asfloat(_1672); // bitcast 
+  float _1676 = asfloat(_1673); // bitcast 
+  float _1677 = asfloat(_1674); // bitcast 
+  float _1678 = _1611 * 0.282095;
+  float _1679 = _1612 * 0.282095;
+  float _1680 = _1613 * 0.282095;
+  float _1681 = _1619 * _416;
+  float _1682 = _1620 * _416;
+  float _1683 = _1621 * _416;
+  float _1684 = _1627 * _417;
+  float _1685 = _1628 * _417;
+  float _1686 = _1629 * _417;
+  float _1687 = _1684 + _1681;
+  float _1688 = _1685 + _1682;
+  float _1689 = _1686 + _1683;
+  float _1690 = _1635 * _415;
+  float _1691 = _1636 * _415;
+  float _1692 = _1637 * _415;
+  float _1693 = _1687 + _1690;
+  float _1694 = _1688 + _1691;
+  float _1695 = _1689 + _1692;
+  float _1696 = _1693 * 0.325735;
+  float _1697 = _1694 * 0.325735;
+  float _1698 = _1695 * 0.325735;
+  float _1699 = _1696 + _1678;
+  float _1700 = _1697 + _1679;
+  float _1701 = _1698 + _1680;
+  float _1702 = _416 * _415;
+  float _1703 = _1643 * _1702;
+  float _1704 = _1644 * _1702;
+  float _1705 = _1645 * _1702;
+  float _1706 = _1651 * _416;
+  float _1707 = _1652 * _416;
+  float _1708 = _1653 * _416;
+  float _1709 = _1659 * _415;
+  float _1710 = _1660 * _415;
+  float _1711 = _1661 * _415;
+  float _1712 = _1709 + _1706;
+  float _1713 = _1712 * _417;
+  float _1714 = _1713 + _1703;
+  float _1715 = _1710 + _1707;
+  float _1716 = _1715 * _417;
+  float _1717 = _1716 + _1704;
+  float _1718 = _1711 + _1708;
+  float _1719 = _1718 * _417;
+  float _1720 = _1719 + _1705;
+  float _1721 = _1714 * 0.273137;
+  float _1722 = _1717 * 0.273137;
+  float _1723 = _1720 * 0.273137;
+  float _1724 = _417 * _417;
+  float _1725 = _1724 * 0.236544;
+  float _1726 = _1725 + -0.0788479;
+  float _1727 = _1667 * _1726;
+  float _1728 = _1668 * _1726;
+  float _1729 = _1669 * _1726;
+  float _1730 = _415 * _415;
+  float _1731 = _416 * _416;
+  float _1732 = _1730 - _1731;
+  float _1733 = _1732 * 0.136569;
+  float _1734 = _1675 * _1733;
+  float _1735 = _1676 * _1733;
+  float _1736 = _1677 * _1733;
+  float _1737 = _1699 + _1727;
+  float _1738 = _1737 + _1734;
+  float _1739 = _1738 + _1721;
+  float _1740 = _1700 + _1728;
+  float _1741 = _1740 + _1735;
+  float _1742 = _1741 + _1722;
+  float _1743 = _1701 + _1729;
+  float _1744 = _1743 + _1736;
+  float _1745 = _1744 + _1723;
+  float _1746 = max(0.000000, _1739);
+  float _1747 = max(0.000000, _1742);
+  float _1748 = max(0.000000, _1745);
+  float _1749 = _1746 * _1604;
+  float _1750 = _1747 * _1604;
+  float _1751 = _1748 * _1604;
+  float _1752 = _1749 + _1418;
+  float _1753 = _1750 + _1417;
+  float _1754 = _1751 + _1416;
+  float _1755 = _1604 + _1415;
+  goto _label85;
+
+_label85:                     // preceded by _label84, _label81, _label78
+  float _1756 = phi float [ _label84::_1752, _label84 ], [ _label78::_1418, _label78 ], [ _label81::_1418, _label81 ];
+  float _1757 = phi float [ _label84::_1753, _label84 ], [ _label78::_1417, _label78 ], [ _label81::_1417, _label81 ];
+  float _1758 = phi float [ _label84::_1754, _label84 ], [ _label78::_1416, _label78 ], [ _label81::_1416, _label81 ];
+  float _1759 = phi float [ _label84::_1755, _label84 ], [ _label78::_1415, _label78 ], [ _label81::_1415, _label81 ];
+  int _1760 = _1421 | _1422;
+  bool _1761 = (_1760 == 0);
+  if (_1761) goto _label74; else goto _label77;
+
+_label86:                     // preceded by _label72, _label71
+  float _1762 = phi float [ _label72::_1381, _label72 ], [ _label71::_1371, _label71 ];
+  float _1763 = phi float [ _label72::_1382, _label72 ], [ _label71::_1372, _label71 ];
+  float _1764 = phi float [ _label72::_1383, _label72 ], [ _label71::_1373, _label71 ];
+  float _1765 = phi float [ _label72::_1384, _label72 ], [ _label71::_1374, _label71 ];
+  float _1766 = max(_1762, 1.00000e-06);
+  float _1767 = _1765 / _1766;
+  float _1768 = _1764 / _1766;
+  float _1769 = _1763 / _1766;
+  float _1770 = _1767 * _1017;
+  float _1771 = _1768 * _1017;
+  float _1772 = _1769 * _1017;
+  goto _label87;
+
+_label87:                     // preceded by _label86, _label69, _label68, _label67, _label44, _label43
+  float _1773 = phi float [ _label44::0.000000, _label44 ], [ _label67::_1304, _label67 ], [ _label86::_1770, _label86 ], [ _label69::0.000000, _label69 ], [ _label43::0.000000, _label43 ], [ _label68::0.000000, _label68 ];
+  float _1774 = phi float [ _label44::0.000000, _label44 ], [ _label67::_1305, _label67 ], [ _label86::_1771, _label86 ], [ _label69::0.000000, _label69 ], [ _label43::0.000000, _label43 ], [ _label68::0.000000, _label68 ];
+  float _1775 = phi float [ _label44::0.000000, _label44 ], [ _label67::_1306, _label67 ], [ _label86::_1772, _label86 ], [ _label69::0.000000, _label69 ], [ _label43::0.000000, _label43 ], [ _label68::0.000000, _label68 ];
+  float _1776 = phi float [ _label44::0.000000, _label44 ], [ _label67::_1307, _label67 ], [ _label86::1.00000, _label86 ], [ _label69::0.000000, _label69 ], [ _label43::0.000000, _label43 ], [ _label68::0.000000, _label68 ];
+  _dx.types.CBufRet.f32 _1777 = {__sh_174.sh[8].x}; //  cbuffer = sh, byte_offset = 128
+  float _1778 = extractvalue _1777, 0;
+  float _1779 = extractvalue _1777, 1;
+  float _1780 = extractvalue _1777, 2;
+  _dx.types.CBufRet.f32 _1781 = {__sh_174.sh[6].x}; //  cbuffer = sh, byte_offset = 96
+  float _1782 = extractvalue _1781, 0;
+  float _1783 = extractvalue _1781, 1;
+  float _1784 = extractvalue _1781, 2;
+  _dx.types.CBufRet.f32 _1785 = {__sh_174.sh[0].x}; //  cbuffer = sh, byte_offset = 0
+  float _1786 = extractvalue _1785, 0;
+  float _1787 = extractvalue _1785, 1;
+  float _1788 = extractvalue _1785, 2;
+  _dx.types.CBufRet.f32 _1789 = {__sh_174.sh[4].x}; //  cbuffer = sh, byte_offset = 64
+  float _1790 = extractvalue _1789, 0;
+  float _1791 = extractvalue _1789, 1;
+  float _1792 = extractvalue _1789, 2;
+  _dx.types.CBufRet.f32 _1793 = {__sh_174.sh[7].x}; //  cbuffer = sh, byte_offset = 112
+  float _1794 = extractvalue _1793, 0;
+  float _1795 = extractvalue _1793, 1;
+  float _1796 = extractvalue _1793, 2;
+  _dx.types.CBufRet.f32 _1797 = {__sh_174.sh[5].x}; //  cbuffer = sh, byte_offset = 80
+  float _1798 = extractvalue _1797, 0;
+  float _1799 = extractvalue _1797, 1;
+  float _1800 = extractvalue _1797, 2;
+  _dx.types.CBufRet.f32 _1801 = {__sh_174.sh[3].x}; //  cbuffer = sh, byte_offset = 48
+  float _1802 = extractvalue _1801, 0;
+  float _1803 = extractvalue _1801, 1;
+  float _1804 = extractvalue _1801, 2;
+  _dx.types.CBufRet.f32 _1805 = {__sh_174.sh[1].x}; //  cbuffer = sh, byte_offset = 16
+  float _1806 = extractvalue _1805, 0;
+  float _1807 = extractvalue _1805, 1;
+  float _1808 = extractvalue _1805, 2;
+  _dx.types.CBufRet.f32 _1809 = {__sh_174.sh[2].x, __sh_174.sh.y}; //  cbuffer = sh, byte_offset = 32
+  float _1810 = extractvalue _1809, 0;
+  float _1811 = extractvalue _1809, 1;
+  float _1812 = extractvalue _1809, 2;
+  float _1813 = _415 * _415;
+  float _1814 = _416 * _416;
+  float _1815 = _1813 - _1814;
+  float _1816 = _1815 * 0.429043;
+  float _1817 = _1778 * _1816;
+  float _1818 = _1779 * _1816;
+  float _1819 = _1780 * _1816;
+  float _1820 = _417 * _417;
+  float _1821 = _1820 * 0.743125;
+  float _1822 = _1782 * _1821;
+  float _1823 = _1783 * _1821;
+  float _1824 = _1784 * _1821;
+  float _1825 = _1822 + _1817;
+  float _1826 = _1823 + _1818;
+  float _1827 = _1824 + _1819;
+  float _1828 = _1786 * 0.886227;
+  float _1829 = _1787 * 0.886227;
+  float _1830 = _1788 * 0.886227;
+  float _1831 = _1782 * 0.247708;
+  float _1832 = _1783 * 0.247708;
+  float _1833 = _1784 * 0.247708;
+  float _1834 = _416 * _415;
+  float _1835 = _1790 * _1834;
+  float _1836 = _1791 * _1834;
+  float _1837 = _1792 * _1834;
+  float _1838 = _1794 * _415;
+  float _1839 = _1795 * _415;
+  float _1840 = _1796 * _415;
+  float _1841 = _1798 * _416;
+  float _1842 = _1799 * _416;
+  float _1843 = _1800 * _416;
+  float _1844 = _1841 + _1838;
+  float _1845 = _1844 * _417;
+  float _1846 = _1845 + _1835;
+  float _1847 = _1842 + _1839;
+  float _1848 = _1847 * _417;
+  float _1849 = _1848 + _1836;
+  float _1850 = _1843 + _1840;
+  float _1851 = _1850 * _417;
+  float _1852 = _1851 + _1837;
+  float _1853 = _1846 * 0.858086;
+  float _1854 = _1849 * 0.858086;
+  float _1855 = _1852 * 0.858086;
+  float _1856 = _1802 * _415;
+  float _1857 = _1803 * _415;
+  float _1858 = _1804 * _415;
+  float _1859 = _1806 * _416;
+  float _1860 = _1807 * _416;
+  float _1861 = _1808 * _416;
+  float _1862 = _1859 + _1856;
+  float _1863 = _1860 + _1857;
+  float _1864 = _1861 + _1858;
+  float _1865 = _1810 * _417;
+  float _1866 = _1811 * _417;
+  float _1867 = _1812 * _417;
+  float _1868 = _1862 + _1865;
+  float _1869 = _1863 + _1866;
+  float _1870 = _1864 + _1867;
+  float _1871 = _1868 * 1.02333;
+  float _1872 = _1869 * 1.02333;
+  float _1873 = _1870 * 1.02333;
+  float _1874 = _1825 - _1831;
+  float _1875 = _1874 + _1828;
+  float _1876 = _1875 + _1853;
+  float _1877 = _1876 + _1871;
+  float _1878 = _1826 - _1832;
+  float _1879 = _1878 + _1829;
+  float _1880 = _1879 + _1854;
+  float _1881 = _1880 + _1872;
+  float _1882 = _1827 - _1833;
+  float _1883 = _1882 + _1830;
+  float _1884 = _1883 + _1855;
+  float _1885 = _1884 + _1873;
+  float _1886 = max(0.000000, _1877);
+  float _1887 = max(0.000000, _1881);
+  float _1888 = max(0.000000, _1885);
+  bool _1889 = (_1776 > 0.000000);
+  float _1890 = _965 * 0.318310;
+  float _1891 = _1886 * _1890;
+  float _1892 = _1887 * _1890;
+  float _1893 = _1888 * _1890;
+  float _1894 = _1889 ? _1773 : _1891;
+  float _1895 = _1889 ? _1774 : _1892;
+  float _1896 = _1889 ? _1775 : _1893;
+  float _1897 = _1894 * _480;
+  float _1898 = _1895 * _481;
+  float _1899 = _1896 * _482;
+  float _1900 = _1013 * _1013;
+  float _1901 = _1900 * _965;
+  float _1902 = _1901 * _985;
+  float _1903 = _1902 * _1007;
+  float _1904 = _1901 * _986;
+  float _1905 = _1904 * _1008;
+  float _1906 = _1901 * _987;
+  float _1907 = _1906 * _1009;
+  float _1908 = _1897 + _1903;
+  float _1909 = _1898 + _1905;
+  float _1910 = _1899 + _1907;
+  float _1911 = _963 + _429;
+  float _1912 = _1911 + _1908;
+  float _1913 = _962 + _430;
+  float _1914 = _1913 + _1909;
+  float _1915 = _961 + _431;
+  float _1916 = _1915 + _1910;
+  _dx.types.CBufRet.f32 _1917 = {__view_175.view.fog.x, __view_175.view.fog.y, __view_175.view.fog.z, __view_175.view.fog.w}; //  cbuffer = view, byte_offset = 320
+  float _1918 = extractvalue _1917, 3;
+  bool _1919 = (_1918 > 0.000000); // unordered 
+  if (_1919) goto _label88; else goto _label89;
+
+_label88:                     // preceded by _label87
+  _dx.types.CBufRet.f32 _1920 = {__view_175.view.camera_pos.x, __view_175.view.camera_pos.y, __view_175.view.camera_pos.z, __view_175.view.camera_pos.w}; //  cbuffer = view, byte_offset = 256
+  float _1921 = extractvalue _1920, 0;
+  float _1922 = extractvalue _1920, 1;
+  float _1923 = extractvalue _1920, 2;
+  float _1924 = _192 - _1921;
+  float _1925 = _193 - _1922;
+  float _1926 = _194 - _1923;
+  float _1927 = _1924 * _1924;
+  float _1928 = _1925 * _1925;
+  float _1929 = _1927 + _1928;
+  float _1930 = _1926 * _1926;
+  float _1931 = _1929 + _1930;
+  float _1932 = sqrt(_1931);
+  float _1933 = max(_193, 0.000000);
+  float _1934 = _1933 * -0.0288539;
+  float _1935 = exp2(_1934);
+  float _1936 = _1918 * -1.44270;
+  float _1937 = _1936 * _1932;
+  float _1938 = _1937 * _1935;
+  float _1939 = exp2(_1938);
+  float _1940 = 1.00000 - _1939;
+  float _1941 = max(_1940, 0.000000);
+  float _1942 = min(_1941, 1.00000);
+  goto _label89;
+
+_label89:                     // preceded by _label88, _label87
+  float _1943 = phi float [ _label88::_1942, _label88 ], [ _label87::0.000000, _label87 ];
+  float _1944 = extractvalue _1917, 0;
+  float _1945 = extractvalue _1917, 1;
+  float _1946 = extractvalue _1917, 2;
+  _dx.types.CBufRet.f32 _1947 = {__view_175.view.sun_color.x, __view_175.view.sun_color.y, __view_175.view.sun_color.z, __view_175.view.sun_color.w}; //  cbuffer = view, byte_offset = 304
+  float _1948 = extractvalue _1947, 3;
+  float _1949 = _1948 * _1944;
+  float _1950 = _1948 * _1945;
+  float _1951 = _1948 * _1946;
+  float _1952 = _1949 - _1912;
+  float _1953 = _1950 - _1914;
+  float _1954 = _1951 - _1916;
+  float _1955 = _1952 * _1943;
+  float _1956 = _1953 * _1943;
+  float _1957 = _1954 * _1943;
+  float _1958 = _1955 + _1912;
+  float _1959 = _1956 + _1914;
+  float _1960 = _1957 + _1916;
+  float _1961 = 1.00000 - _1943;
+  float _1962 = _1961 * _1908;
+  float _1963 = _1961 * _1909;
+  float _1964 = _1961 * _1910;
+  float _1965 = max(_1958, 1.00000e-06);
+  float _1966 = max(_1959, 1.00000e-06);
+  float _1967 = max(_1960, 1.00000e-06);
+  float _1968 = _1962 / _1965;
+  float _1969 = _1963 / _1966;
+  float _1970 = _1964 / _1967;
+  float _1971 = max(_1968, 0.000000);
+  float _1972 = max(_1969, 0.000000);
+  float _1973 = max(_1970, 0.000000);
+  float _1974 = min(_1971, 1.00000);
+  float _1975 = min(_1972, 1.00000);
+  float _1976 = min(_1973, 1.00000);
+  goto _label90;
+
+_label90:                     // preceded by _label89, _label18
+  float _1977 = phi float [ _label18::0.000000, _label18 ], [ _label89::_1974, _label89 ];
+  float _1978 = phi float [ _label18::0.000000, _label18 ], [ _label89::_1975, _label89 ];
+  float _1979 = phi float [ _label18::0.000000, _label18 ], [ _label89::_1976, _label89 ];
+  float _1980 = phi float [ _label18::_464, _label18 ], [ _label89::_1958, _label89 ];
+  float _1981 = phi float [ _label18::_465, _label18 ], [ _label89::_1959, _label89 ];
+  float _1982 = phi float [ _label18::_466, _label18 ], [ _label89::_1960, _label89 ];
+  _OUT.SV_Target0.x = _1980;
+  _OUT.SV_Target0.y = _1981;
+  _OUT.SV_Target0.z = _1982;
+  _OUT.SV_Target0.w = 1.00000;
+  _OUT.SV_Target1.x = _1977;
+  _OUT.SV_Target1.y = _1978;
+  _OUT.SV_Target1.z = _1979;
+  _OUT.SV_Target1.w = 1.00000;
+  _OUT.SV_Target2.x = 0.000000;
+  _OUT.SV_Target2.y = 0.000000;
+  _OUT.SV_Target2.z = 0.000000;
+  _OUT.SV_Target2.w = 0.000000;
+  _OUT.SV_Target3.x = 0.000000;
+  _OUT.SV_Target3.y = 0.000000;
+  _OUT.SV_Target3.z = 0.000000;
+  _OUT.SV_Target3.w = 0.000000;
+  return;
+}
+
+
+

@@ -1,0 +1,389 @@
+{
+ "capture": "out/profiler/rdc/dense-window-vulkan.rdc",
+ "api": "GraphicsAPI.Vulkan",
+ "vendor": "GPUVendor.nVidia",
+ "actions": 228,
+ "draws": 125,
+ "largest_draw": {
+  "eid": 49,
+  "name": "Indirect sub-command[0](<36, 481933>)",
+  "marker": "vkCmdDrawIndexedIndirect(28)",
+  "gpu_ms": 14.5876,
+  "indices": 36,
+  "instances": 481933,
+  "draw": true,
+  "dispatch": false
+ },
+ "shaders": {
+  "vertex": {
+   "entry": "vs",
+   "encoding": "ShaderEncoding.SPIRV",
+   "inputs": [
+    {
+     "name": "_VertexIndex",
+     "semantic": "0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.VertexIndex"
+    },
+    {
+     "name": "_InstanceIndex",
+     "semantic": "0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.InstanceIndex"
+    },
+    {
+     "name": "_input0",
+     "semantic": "0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input1",
+     "semantic": "0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input2",
+     "semantic": "0",
+     "components": 2,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input3",
+     "semantic": "0",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    }
+   ],
+   "outputs": 8,
+   "constant_blocks": [
+    "uniforms32",
+    "uniforms47"
+   ],
+   "read_only": [],
+   "read_write": [
+    "ssbo35",
+    "ssbo38",
+    "ssbo41",
+    "ssbo44"
+   ],
+   "samplers": [],
+   "disassembly": {
+    "SPIR-V (RenderDoc)": "out/profiler/rdc/dense-window-vulkan-vs-spir-v--renderdoc.txt",
+    "KHR_pipeline_executable_properties": "out/profiler/rdc/dense-window-vulkan-vs-khr-pipeline-executable-properties.txt"
+   },
+   "raw": "out/profiler/rdc/dense-window-vulkan-vs.spv",
+   "raw_bytes": 8164
+  },
+  "fragment": {
+   "entry": "fs",
+   "encoding": "ShaderEncoding.SPIRV",
+   "inputs": [
+    {
+     "name": "_FragCoord",
+     "semantic": "0",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Position"
+    },
+    {
+     "name": "_FrontFacing",
+     "semantic": "0",
+     "components": 1,
+     "type": "VarType.Bool",
+     "system": "ShaderBuiltin.IsFrontFace"
+    },
+    {
+     "name": "_input0",
+     "semantic": "0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input1",
+     "semantic": "0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input2",
+     "semantic": "0",
+     "components": 2,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input3",
+     "semantic": "0",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input4",
+     "semantic": "0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "_input5",
+     "semantic": "0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    }
+   ],
+   "outputs": 4,
+   "constant_blocks": [
+    "uniforms57",
+    "uniforms70",
+    "uniforms76",
+    "uniforms48"
+   ],
+   "read_only": [
+    "res63",
+    "res67",
+    "res82",
+    "res84"
+   ],
+   "read_write": [
+    "ssbo60",
+    "ssbo73",
+    "ssbo79",
+    "ssbo51",
+    "ssbo54"
+   ],
+   "samplers": [
+    "res65",
+    "res69",
+    "res85"
+   ],
+   "disassembly": {
+    "SPIR-V (RenderDoc)": "out/profiler/rdc/dense-window-vulkan-ps-spir-v--renderdoc.txt",
+    "KHR_pipeline_executable_properties": "out/profiler/rdc/dense-window-vulkan-ps-khr-pipeline-executable-properties.txt"
+   },
+   "raw": "out/profiler/rdc/dense-window-vulkan-ps.spv",
+   "raw_bytes": 43208
+  }
+ },
+ "disassembly": {
+  "vertex: SPIR-V (RenderDoc)": "out/profiler/rdc/dense-window-vulkan-vs-spir-v--renderdoc.txt",
+  "vertex: KHR_pipeline_executable_properties": "out/profiler/rdc/dense-window-vulkan-vs-khr-pipeline-executable-properties.txt",
+  "fragment: SPIR-V (RenderDoc)": "out/profiler/rdc/dense-window-vulkan-ps-spir-v--renderdoc.txt",
+  "fragment: KHR_pipeline_executable_properties": "out/profiler/rdc/dense-window-vulkan-ps-khr-pipeline-executable-properties.txt"
+ },
+ "gpu_counter": "EventGPUDuration: 129 events",
+ "gpu_total_ms": 15.3918,
+ "by_marker": {
+  "": 0.6295,
+  "vkCmdDrawIndexedIndirect(28)": 14.7608
+ },
+ "top": [
+  {
+   "eid": 49,
+   "name": "Indirect sub-command[0](<36, 481933>)",
+   "marker": "vkCmdDrawIndexedIndirect(28)",
+   "gpu_ms": 14.5876,
+   "indices": 36,
+   "instances": 481933,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 19,
+   "name": "vkCmdDispatch()",
+   "marker": "",
+   "gpu_ms": 0.5191,
+   "indices": 0,
+   "instances": 0,
+   "draw": false,
+   "dispatch": true
+  },
+  {
+   "eid": 321,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0358,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 189,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0269,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 309,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0131,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 201,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0064,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 297,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0041,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 29,
+   "name": "vkCmdDispatch()",
+   "marker": "",
+   "gpu_ms": 0.0036,
+   "indices": 0,
+   "instances": 0,
+   "draw": false,
+   "dispatch": true
+  },
+  {
+   "eid": 213,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0031,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 176,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0029,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 9,
+   "name": "vkCmdCopyBuffer()",
+   "marker": "",
+   "gpu_ms": 0.0024,
+   "indices": 0,
+   "instances": 0,
+   "draw": false,
+   "dispatch": false
+  },
+  {
+   "eid": 50,
+   "name": "Indirect sub-command[1](<2880, 0>)",
+   "marker": "vkCmdDrawIndexedIndirect(28)",
+   "gpu_ms": 0.0023,
+   "indices": 2880,
+   "instances": 0,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 327,
+   "name": "vkCmdCopyBuffer()",
+   "marker": "",
+   "gpu_ms": 0.0022,
+   "indices": 0,
+   "instances": 0,
+   "draw": false,
+   "dispatch": false
+  },
+  {
+   "eid": 285,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0021,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 225,
+   "name": "vkCmdDraw()",
+   "marker": "",
+   "gpu_ms": 0.0018,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  }
+ ],
+ "shader_stats": {
+  "vertex": {
+   "lines": 491,
+   "instructions": 216,
+   "conditional_branches": 8,
+   "loops": 0,
+   "selections": 8,
+   "phis": 0,
+   "samples": 0,
+   "derivatives": 0,
+   "loads": 24,
+   "stores": 24,
+   "kills": 0,
+   "local_arrays": 0,
+   "local_array_bytes": 0,
+   "driver subgroup size": 32,
+   "driver register count": 34,
+   "driver binary size": 3072,
+   "driver stack size": 0,
+   "driver local memory size": 0,
+   "driver input count": 13,
+   "driver output count": 0
+  },
+  "fragment": {
+   "lines": 2586,
+   "instructions": 1749,
+   "conditional_branches": 66,
+   "loops": 13,
+   "selections": 66,
+   "phis": 0,
+   "samples": 6,
+   "derivatives": 5,
+   "loads": 238,
+   "stores": 103,
+   "kills": 0,
+   "local_arrays": 3,
+   "local_array_bytes": 280,
+   "driver subgroup size": 32,
+   "driver register count": 64,
+   "driver binary size": 30080,
+   "driver stack size": 0,
+   "driver local memory size": 304,
+   "driver input count": 18,
+   "driver output colors": 1
+  }
+ }
+}

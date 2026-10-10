@@ -1,0 +1,38 @@
+built 1600000 cubes in 215 ms
+[INFO] Direct3D 12 shader compiler: DXC 1.8.2502.11 <local-path> (Windows SDK 10.0.26100.0)
+[INFO] adapters: 0: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12), 1: AMD Radeon 780M Graphics (Dx12), 2: Microsoft Basic Render Driver (Dx12)
+[INFO] limits: buffer 2047 MB, storage binding 2047 MB, storage buffers/stage 262144, texture 2D 16384
+[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+[INFO] surface Bgra8UnormSrgb, present modes [Mailbox, Fifo, Immediate], chosen AutoNoVsync
+trace: 300 frames written to out/profiler/verify/win-sphere-dx12.trace.json (93.7 ms on the render thread)
+BenchReport {
+    backend: "Direct3D 12",
+    adapter: "NVIDIA GeForce RTX 5060 Laptop GPU",
+    width: 1600,
+    height: 900,
+    frames: 300,
+    frame_ms_mean: 4.548595663703357,
+    frame_ms_p50: 3.3297999761998653,
+    frame_ms_p95: 10.133099742233753,
+    gpu_ms_mean: 2.9860130286216737,
+    cpu_ms_mean: 1.266044997572899,
+    passes: [
+        (
+            "cull",
+            0.5398719906806946,
+        ),
+        (
+            "lights",
+            6.399999983841553e-5,
+        ),
+        (
+            "opaque+sky",
+            2.223520040512085,
+        ),
+        (
+            "post",
+            0.12399999797344208,
+        ),
+    ],
+    instances: 1600001,
+}

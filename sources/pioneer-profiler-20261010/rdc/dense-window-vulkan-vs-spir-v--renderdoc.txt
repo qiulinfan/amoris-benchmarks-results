@@ -1,0 +1,375 @@
+SPIR-V 1.6 module, <id> bound of 316
+
+Generator: rdcspv::Generator(0)
+Generator Version: 28
+
+Capability(Shader);
+
+
+
+MemoryModel(Logical, GLSL450);
+
+EntryPoint(Vertex, _193, "vs", {
+    _163, 
+    _166, 
+    _168, 
+    _171, 
+    _174, 
+    _177, 
+    _179, 
+    _181, 
+    _183, 
+    _184, 
+    _186, 
+    _187, 
+    _189, 
+    _190, 
+    _32, 
+    _35, 
+    _38, 
+    _41, 
+    _44, 
+    _47
+  });
+
+
+
+
+
+
+struct _10 {
+  float4x4 _child0 : [[ColMajor, MatrixStride(16), Offset(0)]];
+  float4x4 _child1 : [[ColMajor, MatrixStride(16), Offset(64)]];
+  float4x4 _child2 : [[ColMajor, MatrixStride(16), Offset(128)]];
+  float4x4 _child3 : [[ColMajor, MatrixStride(16), Offset(192)]];
+  float4 _child4 : [[Offset(256)]];
+  float4 _child5 : [[Offset(272)]];
+  float4 _child6 : [[Offset(288)]];
+  float4 _child7 : [[Offset(304)]];
+  float4 _child8 : [[Offset(320)]];
+  float4 _child9 : [[Offset(336)]];
+  float4 _child10 : [[Offset(352)]];
+  float4 _child11 : [[Offset(368)]];
+  float4x4[4] _child12 : [[ColMajor, MatrixStride(16), Offset(384)]] : [[ArrayStride(64)]];
+  uint4 _child13 : [[Offset(640)]];
+  float4x4 _child14 : [[ColMajor, MatrixStride(16), Offset(656)]];
+  float4 _child15 : [[Offset(720)]];
+}
+struct _12 {
+  float3 _child0 : [[Offset(0)]];
+  uint _child1 : [[Offset(12)]];
+  float4 _child2 : [[Offset(16)]];
+  float3 _child3 : [[Offset(32)]];
+  uint _child4 : [[Offset(44)]];
+  float3 _child5 : [[Offset(48)]];
+  uint _child6 : [[Offset(60)]];
+  float4 _child7 : [[Offset(64)]];
+}
+struct _13 {
+  float3 _child0 : [[Offset(0)]];
+  uint _child1 : [[Offset(12)]];
+  float4 _child2 : [[Offset(16)]];
+  float3 _child3 : [[Offset(32)]];
+  uint _child4 : [[Offset(44)]];
+}
+struct _14 {
+  float3 _child0 : [[Offset(0)]];
+  float4 _child1 : [[Offset(16)]];
+}
+struct _20 {
+  float3 _child0 : [[Offset(0)]];
+  float3 _child1 : [[Offset(16)]];
+  float2 _child2 : [[Offset(32)]];
+  float4 _child3 : [[Offset(48)]];
+}
+struct _21 {
+  float4 _child0 : [[Offset(0)]];
+  float3 _child1 : [[Offset(16)]];
+  float3 _child2 : [[Offset(32)]];
+  float2 _child3 : [[Offset(48)]];
+  float4 _child4 : [[Offset(64)]];
+  uint _child5 : [[Offset(80)]];
+  float3 _child6 : [[Offset(96)]];
+}
+struct _33 : [[Block]] {
+  struct10 _child0 : [[Offset(0)]];
+}
+Uniform struct33* _32 : [[DescriptorSet(0), Binding(0)]];
+struct _36 : [[Block]] {
+  struct12[] _child0 : [[Offset(0)]] : [[ArrayStride(80)]];
+}
+StorageBuffer struct36* _35 : [[DescriptorSet(0), Binding(1), NonWritable]];
+struct _39 : [[Block]] {
+  struct13[] _child0 : [[Offset(0)]] : [[ArrayStride(48)]];
+}
+StorageBuffer struct39* _38 : [[DescriptorSet(0), Binding(4), NonWritable]];
+struct _42 : [[Block]] {
+  uint[] _child0 : [[Offset(0)]] : [[ArrayStride(4)]];
+}
+StorageBuffer struct42* _41 : [[DescriptorSet(0), Binding(5), NonWritable]];
+struct _45 : [[Block]] {
+  uint[] _child0 : [[Offset(0)]] : [[ArrayStride(4)]];
+}
+StorageBuffer struct45* _44 : [[DescriptorSet(0), Binding(6), NonWritable]];
+struct _48 : [[Block]] {
+  uint4 _child0 : [[Offset(0)]];
+}
+Uniform struct48* _47 : [[DescriptorSet(3), Binding(0)]];
+Input float3* _163 : [[Location(0)]];
+Input float3* _166 : [[Location(1)]];
+Input float2* _168 : [[Location(2)]];
+Input float4* _171 : [[Location(3)]];
+Input uint* _174 : [[BuiltIn(InstanceIndex)]];
+Input uint* _177 : [[BuiltIn(VertexIndex)]];
+Output float4* _179 : [[BuiltIn(Position)]];
+Output float3* _181 : [[Location(0)]];
+Output float3* _183 : [[Location(1)]];
+Output float2* _184 : [[Location(2)]];
+Output float4* _186 : [[Location(3)]];
+Output uint* _187 : [[Location(4), Flat]];
+Output float3* _189 : [[Location(5)]];
+Output float* _190 : [[BuiltIn(PointSize)]];
+
+float3 _53(float4 _51, float3 _52) {
+  float3 _57 = _51.xyz;
+  float3 _58 = GLSL.std.450::Cross(_57, _52);
+  float3 _59 = _58 * 2.0000;
+  float _60 = _51.w;
+  float3 _61 = _59 * _60;
+  float3 _62 = _52 + _61;
+  float3 _63 = _51.xyz;
+  float3 _64 = GLSL.std.450::Cross(_63, _59);
+  float3 _65 = _62 + _64;
+  return _65;
+}
+
+float4 _70(float4 _67, float4 _68, float _69) {
+  float4 _74 = -_68;
+  float _75 = Dot(_67, _68);
+  bool _76 = _75 < 0.0000;
+  bool _79 = CompositeConstruct({_76, _76, _76, _76});
+  float4 _77 = Select(_79, _74, _68);
+  float4 _81 = CompositeConstruct({_69, _69, _69, _69});
+  float4 _80 = GLSL.std.450::FMix(_67, _77, _81);
+  float4 _82 = GLSL.std.450::Normalize(_80);
+  return _82;
+}
+
+struct14 _86(struct12 _84, float _85) {
+  struct14* _88 = struct14(Null);
+  float3 _93 = _84._child5;
+  float3 _94 = _84._child0;
+  float3 _96 = CompositeConstruct({_85, _85, _85});
+  float3 _95 = GLSL.std.450::FMix(_93, _94, _96);
+  float3* _98 = &_88._child0;
+  *_98 = _95;
+  float4 _100 = _84._child7;
+  float4 _101 = _84._child2;
+  float4 _102 = _70(_100, _101, _85);
+  float4* _103 = &_88._child1;
+  *_103 = _102;
+  struct14 _104 = *_88;
+  return _104;
+}
+
+float3 _109(float3 _106, uint _107, uint _108) {
+  bool* _114 = bool(Null);
+  uint[]* _112 = &_41._child0;
+  uint* _119 = &_112[0];
+  uint _120 = *_119;
+  bool _121 = _108 >= _120;
+  
+  if(_121) {
+    return _106;
+  }
+
+  uint _124 = _108 * 2;
+  uint _125 = 1 + _124;
+  uint* _126 = &_112[_125];
+  uint _127 = *_126;
+  bool _128 = _127 == 4294967295;
+  bool _129 = !_128;
+  
+  if(_129) {
+    bool _133 = _107 < _127;
+    *_114 = _133;
+  } else {
+    *_114 = true;
+  }
+
+  bool _134 = *_114;
+  
+  if(_134) {
+    return _106;
+  }
+
+  uint _137 = _108 * 2;
+  uint _138 = 2 + _137;
+  uint* _139 = &_112[_138];
+  uint _140 = *_139;
+  uint _141 = _107 - _127;
+  uint _142 = _141 * 12;
+  uint _143 = _140 + _142;
+  uint _144 = _143 + 2;
+  uint _145 = ArrayLength(_41, 0);
+  bool _146 = _144 >= _145;
+  
+  if(_146) {
+    return _106;
+  }
+
+  uint* _149 = &_112[_143];
+  uint _150 = *_149;
+  float _151 = Bitcast(_150);
+  uint _152 = _143 + 1;
+  uint* _153 = &_112[_152];
+  uint _154 = *_153;
+  float _155 = Bitcast(_154);
+  uint _156 = _143 + 2;
+  uint* _157 = &_112[_156];
+  uint _158 = *_157;
+  float _159 = Bitcast(_158);
+  float3 _160 = CompositeConstruct({_151, _155, _159});
+  return _160;
+}
+
+void _193() {
+  struct21* _207 = struct21(Null);
+  bool* _210 = bool(Null);
+  bool* _212 = bool(Null);
+  float3 _165 = *_163;
+  float3 _167 = *_166;
+  float2 _170 = *_168;
+  float4 _173 = *_171;
+  struct20 _162 = CompositeConstruct({_165, _167, _170, _173});
+  uint _176 = *_174;
+  uint _178 = *_177;
+  *_190 = 1.0000;
+  struct10* _196 = &_32._child0;
+  struct12[]* _198 = &_35._child0;
+  struct13[]* _200 = &_38._child0;
+  uint[]* _201 = &_41._child0;
+  uint[]* _202 = &_44._child0;
+  uint4* _204 = &_47._child0;
+  uint* _216 = &_204.x;
+  uint _217 = *_216;
+  uint _218 = _176 + _217;
+  struct13* _220 = &_200[_218];
+  struct13 _221 = *_220;
+  float3 _222 = _221._child0;
+  float4 _223 = _221._child2;
+  float3 _224 = _162._child0;
+  float3 _225 = _221._child3;
+  float3 _226 = _224 * _225;
+  float3 _227 = _53(_223, _226);
+  float3 _228 = _222 + _227;
+  float4 _229 = _221._child2;
+  float3 _230 = _162._child1;
+  float3 _231 = _221._child3;
+  float3 _232 = _230 / _231;
+  float3 _233 = _53(_229, _232);
+  float3 _234 = GLSL.std.450::Normalize(_233);
+  float4 _235 = _221._child2;
+  float4 _236 = _162._child3;
+  float3 _237 = _236.xyz;
+  float3 _238 = _221._child3;
+  float3 _239 = _237 * _238;
+  float3 _240 = _53(_235, _239);
+  float3 _241 = GLSL.std.450::Normalize(_240);
+  float4x4* _243 = &_196._child0;
+  float4x4 _244 = *_243;
+  float4 _245 = CompositeConstruct({_228, 1.0000});
+  float4 _246 = _244 * _245;
+  float4* _247 = &_207._child0;
+  *_247 = _246;
+  float3* _248 = &_207._child1;
+  *_248 = _228;
+  float3* _249 = &_207._child2;
+  *_249 = _234;
+  float2 _251 = _162._child2;
+  float2* _252 = &_207._child3;
+  *_252 = _251;
+  float4 _253 = _162._child3;
+  float _254 = _253.w;
+  float4 _255 = CompositeConstruct({_241, _254});
+  float4* _256 = &_207._child4;
+  *_256 = _255;
+  uint _258 = _221._child1;
+  uint* _259 = &_207._child5;
+  *_259 = _258;
+  float3* _261 = &_207._child6;
+  *_261 = _228;
+  
+  if(false) {
+    uint _264 = _221._child4;
+    uint _265 = _264 >> 5;
+    uint _266 = ArrayLength(_44, 0);
+    bool _267 = _265 < _266;
+    
+    if(_267) {
+      uint* _271 = &_202[_265];
+      uint _272 = *_271;
+      uint _273 = _221._child4;
+      uint _274 = _273 & 31;
+      uint _275 = _272 >> _274;
+      uint _276 = _275 & 1;
+      bool _277 = _276 != 0;
+      *_210 = _277;
+    } else {
+      *_210 = false;
+    }
+
+    bool _278 = *_210;
+    float* _282 = &_196._child15.y;
+    float _283 = *_282;
+    bool _284 = _283 > 0.5000;
+    
+    if(_284) {
+      *_212 = _278;
+    } else {
+      *_212 = false;
+    }
+
+    bool _288 = *_212;
+    
+    if(_288) {
+      uint _291 = _221._child4;
+      struct12* _293 = &_198[_291];
+      struct12 _294 = *_293;
+      float* _295 = &_196._child15.x;
+      float _296 = *_295;
+      struct14 _297 = _86(_294, _296);
+      float3 _298 = _297._child0;
+      float4 _299 = _297._child1;
+      float3 _300 = _162._child0;
+      uint _301 = _294._child1;
+      float3 _302 = _109(_300, _178, _301);
+      float3 _303 = _221._child3;
+      float3 _304 = _302 * _303;
+      float3 _305 = _53(_299, _304);
+      float3 _306 = _298 + _305;
+      float3* _307 = &_207._child6;
+      *_307 = _306;
+    }
+
+  }
+
+  struct21 _308 = *_207;
+  float4 _309 = _308._child0;
+  *_179 = _309;
+  float3 _310 = _308._child1;
+  *_181 = _310;
+  float3 _311 = _308._child2;
+  *_183 = _311;
+  float2 _312 = _308._child3;
+  *_184 = _312;
+  float4 _313 = _308._child4;
+  *_186 = _313;
+  uint _314 = _308._child5;
+  *_187 = _314;
+  float3 _315 = _308._child6;
+  *_189 = _315;
+  return;
+}
+
+

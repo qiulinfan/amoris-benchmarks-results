@@ -1,0 +1,284 @@
+; shader hash: 963b603ed37eebaa3918de76018d8b94
+
+; Vertex Shader, compiled under SM6.8
+
+_dx.types.Handle = type { int8* }
+_dx.types.ResBind = type { int, int, int, int8 }
+_dx.types.ResourceProperties = type { int, int }
+_dx.types.CBufRet.i32 = type { int, int, int, int }
+_dx.types.ResRet.i32 = type { int, int, int, int, int }
+_dx.types.CBufRet.f32 = type { float, float, float, float }
+_struct.ByteAddressBuffer = type { int }
+__NagaConstants = type { _struct.NagaConstants }
+_struct.NagaConstants = type { int, int, int }
+_view = type { _struct.View }
+_struct.View = type { _class.matrix.float.4.4, _class.matrix.float.4.4, _class.matrix.float.4.4, _class.matrix.float.4.4, float4, float4, float4, float4, float4, float4, float4, float4, _class.matrix.float.4.4[4], int4, _class.matrix.float.4.4, float4 }
+_class.matrix.float.4.4 = type { float4[4] }
+_batch = type { int4 }
+
+Inputs
+  float3 LOC0; // Rows:1 StartRow:0 Cols:3 StartCol:0
+  float3 LOC1; // Rows:1 StartRow:1 Cols:3 StartCol:0
+  float2 LOC2; // Rows:1 StartRow:2 Cols:2 StartCol:0
+  float4 LOC3; // Rows:1 StartRow:3 Cols:4 StartCol:0
+  uint SV_InstanceID; // Rows:1 StartRow:4 Cols:1 StartCol:0
+  uint SV_VertexID; // Rows:1 StartRow:5 Cols:1 StartCol:0
+
+Outputs
+  float3 LOC0; // Rows:1 StartRow:0 Cols:3 StartCol:0
+  float3 LOC1; // Rows:1 StartRow:1 Cols:3 StartCol:0
+  float2 LOC2; // Rows:1 StartRow:2 Cols:2 StartCol:0
+  float4 LOC3; // Rows:1 StartRow:3 Cols:4 StartCol:0
+  nointerpolation uint LOC4; // Rows:1 StartRow:4 Cols:1 StartCol:0
+  float3 LOC5; // Rows:1 StartRow:5 Cols:3 StartCol:0
+  linear noperspective float4 SV_Position; // Rows:1 StartRow:6 Cols:4 StartCol:0
+
+ByteAddressBuffer<int> drawn : register(t3, space0);
+
+cbuffer _NagaConstants : register(b7, space0)
+{
+  NagaConstants _NagaConstants: packoffset(0); 
+};
+
+cbuffer view : register(b0, space0)
+{
+  View view: packoffset(0); 
+};
+
+cbuffer batch : register(b6, space0)
+{
+  int4 batch: packoffset(0); 
+};
+
+void vs()
+{
+_label0: 
+  _dx.types.Handle _36 = InitialiseHandle(drawn); //  index = 3
+  _dx.types.Handle _37 = InitialiseHandle(batch); //  index = 6
+  _dx.types.Handle _38 = InitialiseHandle(view); //  index = 0
+  _dx.types.Handle _39 = InitialiseHandle(_NagaConstants); //  index = 7
+  _dx.types.Handle __batch_40 = (CBuffer)_37;
+  _dx.types.Handle __view_41 = (CBuffer)_38;
+  _dx.types.Handle ___NagaConstants_42 = (CBuffer)_39;
+  int _43 = _IN.SV_InstanceID.x;
+  float _44 = _IN.LOC3.x;
+  float _45 = _IN.LOC3.y;
+  float _46 = _IN.LOC3.z;
+  float _47 = _IN.LOC3.w;
+  float _48 = _IN.LOC2.x;
+  float _49 = _IN.LOC2.y;
+  float _50 = _IN.LOC1.x;
+  float _51 = _IN.LOC1.y;
+  float _52 = _IN.LOC1.z;
+  float _53 = _IN.LOC0.x;
+  float _54 = _IN.LOC0.y;
+  float _55 = _IN.LOC0.z;
+  _dx.types.CBufRet.i32 _56 = {__batch_40.batch.x, __batch_40.batch.y, __batch_40.batch.z, __batch_40.batch.w}; //  cbuffer = batch, byte_offset = 0
+  int _57 = extractvalue _56, 0;
+  _dx.types.CBufRet.i32 _58 = {___NagaConstants_42._NagaConstants.first_vertex, ___NagaConstants_42._NagaConstants.first_instance, ___NagaConstants_42._NagaConstants.other, <padding>}; //  cbuffer = _NagaConstants, byte_offset = 0
+  int _59 = extractvalue _58, 1;
+  int _60 = _57 + _43;
+  int _61 = _60 + _59;
+  int _62 = _61 * 48;
+  int _63 = _62 + 32;
+  _dx.types.Handle __drawn_64 = (ByteAddressBuffer)_36;
+  _dx.types.ResRet.i32 _65 = __drawn_64.Load(_63);
+  int _66 = extractvalue _65, 0;
+  int _67 = extractvalue _65, 1;
+  int _68 = extractvalue _65, 2;
+  float _69 = asfloat(_66); // bitcast 
+  float _70 = asfloat(_67); // bitcast 
+  float _71 = asfloat(_68); // bitcast 
+  int _72 = _62 + 16;
+  _dx.types.ResRet.i32 _73 = __drawn_64.Load(_72);
+  int _74 = extractvalue _73, 0;
+  int _75 = extractvalue _73, 1;
+  int _76 = extractvalue _73, 2;
+  int _77 = extractvalue _73, 3;
+  float _78 = asfloat(_74); // bitcast 
+  float _79 = asfloat(_75); // bitcast 
+  float _80 = asfloat(_76); // bitcast 
+  float _81 = asfloat(_77); // bitcast 
+  int _82 = _62 | 12;
+  _dx.types.ResRet.i32 _83 = __drawn_64.Load(_82);
+  int _84 = extractvalue _83, 0;
+  _dx.types.ResRet.i32 _85 = __drawn_64.Load(_62);
+  int _86 = extractvalue _85, 0;
+  int _87 = extractvalue _85, 1;
+  int _88 = extractvalue _85, 2;
+  float _89 = asfloat(_86); // bitcast 
+  float _90 = asfloat(_87); // bitcast 
+  float _91 = asfloat(_88); // bitcast 
+  float _92 = _69 * _53;
+  float _93 = _70 * _54;
+  float _94 = _71 * _55;
+  float _95 = _79 * _94;
+  float _96 = _80 * _93;
+  float _97 = _95 - _96;
+  float _98 = _80 * _92;
+  float _99 = _78 * _94;
+  float _100 = _98 - _99;
+  float _101 = _78 * _93;
+  float _102 = _79 * _92;
+  float _103 = _101 - _102;
+  float _104 = _97 * 2.00000;
+  float _105 = _100 * 2.00000;
+  float _106 = _103 * 2.00000;
+  float _107 = _104 * _81;
+  float _108 = _105 * _81;
+  float _109 = _106 * _81;
+  float _110 = _106 * _79;
+  float _111 = _105 * _80;
+  float _112 = _104 * _80;
+  float _113 = _106 * _78;
+  float _114 = _105 * _78;
+  float _115 = _104 * _79;
+  float _116 = _89 + _92;
+  float _117 = _116 + _107;
+  float _118 = _117 - _111;
+  float _119 = _118 + _110;
+  float _120 = _90 + _93;
+  float _121 = _120 + _108;
+  float _122 = _121 - _113;
+  float _123 = _122 + _112;
+  float _124 = _91 + _94;
+  float _125 = _124 + _109;
+  float _126 = _125 - _115;
+  float _127 = _126 + _114;
+  float _128 = _50 / _69;
+  float _129 = _51 / _70;
+  float _130 = _52 / _71;
+  float _131 = _130 * _79;
+  float _132 = _129 * _80;
+  float _133 = _131 - _132;
+  float _134 = _128 * _80;
+  float _135 = _130 * _78;
+  float _136 = _134 - _135;
+  float _137 = _129 * _78;
+  float _138 = _128 * _79;
+  float _139 = _137 - _138;
+  float _140 = _133 * 2.00000;
+  float _141 = _136 * 2.00000;
+  float _142 = _139 * 2.00000;
+  float _143 = _140 * _81;
+  float _144 = _141 * _81;
+  float _145 = _142 * _81;
+  float _146 = _143 + _128;
+  float _147 = _144 + _129;
+  float _148 = _145 + _130;
+  float _149 = _142 * _79;
+  float _150 = _141 * _80;
+  float _151 = _149 - _150;
+  float _152 = _140 * _80;
+  float _153 = _142 * _78;
+  float _154 = _152 - _153;
+  float _155 = _141 * _78;
+  float _156 = _140 * _79;
+  float _157 = _155 - _156;
+  float _158 = _146 + _151;
+  float _159 = _147 + _154;
+  float _160 = _148 + _157;
+  float _161 = dot({_158, _159, _160}, {_158, _159, _160});
+  float _162 = rsqrt(_161);
+  float _163 = _158 * _162;
+  float _164 = _159 * _162;
+  float _165 = _160 * _162;
+  float _166 = _69 * _44;
+  float _167 = _70 * _45;
+  float _168 = _71 * _46;
+  float _169 = _79 * _168;
+  float _170 = _80 * _167;
+  float _171 = _169 - _170;
+  float _172 = _80 * _166;
+  float _173 = _78 * _168;
+  float _174 = _172 - _173;
+  float _175 = _78 * _167;
+  float _176 = _79 * _166;
+  float _177 = _175 - _176;
+  float _178 = _171 * 2.00000;
+  float _179 = _174 * 2.00000;
+  float _180 = _177 * 2.00000;
+  float _181 = _178 * _81;
+  float _182 = _179 * _81;
+  float _183 = _180 * _81;
+  float _184 = _181 + _166;
+  float _185 = _182 + _167;
+  float _186 = _183 + _168;
+  float _187 = _180 * _79;
+  float _188 = _179 * _80;
+  float _189 = _187 - _188;
+  float _190 = _178 * _80;
+  float _191 = _180 * _78;
+  float _192 = _190 - _191;
+  float _193 = _179 * _78;
+  float _194 = _178 * _79;
+  float _195 = _193 - _194;
+  float _196 = _184 + _189;
+  float _197 = _185 + _192;
+  float _198 = _186 + _195;
+  float _199 = dot({_196, _197, _198}, {_196, _197, _198});
+  float _200 = rsqrt(_199);
+  float _201 = _200 * _196;
+  float _202 = _200 * _197;
+  float _203 = _200 * _198;
+  _dx.types.CBufRet.f32 _204 = {__view_41.view.view_proj[0]}; //  cbuffer = view, byte_offset = 0
+  float _205 = extractvalue _204, 0;
+  float _206 = extractvalue _204, 1;
+  float _207 = extractvalue _204, 2;
+  float _208 = extractvalue _204, 3;
+  _dx.types.CBufRet.f32 _209 = {__view_41.view.view_proj[1]}; //  cbuffer = view, byte_offset = 16
+  float _210 = extractvalue _209, 0;
+  float _211 = extractvalue _209, 1;
+  float _212 = extractvalue _209, 2;
+  float _213 = extractvalue _209, 3;
+  _dx.types.CBufRet.f32 _214 = {__view_41.view.view_proj[2]}; //  cbuffer = view, byte_offset = 32
+  float _215 = extractvalue _214, 0;
+  float _216 = extractvalue _214, 1;
+  float _217 = extractvalue _214, 2;
+  float _218 = extractvalue _214, 3;
+  _dx.types.CBufRet.f32 _219 = {__view_41.view.view_proj[3]}; //  cbuffer = view, byte_offset = 48
+  float _220 = extractvalue _219, 0;
+  float _221 = extractvalue _219, 1;
+  float _222 = extractvalue _219, 2;
+  float _223 = extractvalue _219, 3;
+  float _224 = _205 * _119;
+  float _225 = mad(_123, _210, _224);
+  float _226 = mad(_127, _215, _225);
+  float _227 = _226 + _220;
+  float _228 = _206 * _119;
+  float _229 = mad(_123, _211, _228);
+  float _230 = mad(_127, _216, _229);
+  float _231 = _230 + _221;
+  float _232 = _207 * _119;
+  float _233 = mad(_123, _212, _232);
+  float _234 = mad(_127, _217, _233);
+  float _235 = _234 + _222;
+  float _236 = _208 * _119;
+  float _237 = mad(_123, _213, _236);
+  float _238 = mad(_127, _218, _237);
+  float _239 = _238 + _223;
+  _OUT.LOC0.x = _119;
+  _OUT.LOC0.y = _123;
+  _OUT.LOC0.z = _127;
+  _OUT.LOC1.x = _163;
+  _OUT.LOC1.y = _164;
+  _OUT.LOC1.z = _165;
+  _OUT.LOC2.x = _48;
+  _OUT.LOC2.y = _49;
+  _OUT.LOC3.x = _201;
+  _OUT.LOC3.y = _202;
+  _OUT.LOC3.z = _203;
+  _OUT.LOC3.w = _47;
+  _OUT.LOC4.x = _84;
+  _OUT.LOC5.x = _119;
+  _OUT.LOC5.y = _123;
+  _OUT.LOC5.z = _127;
+  _OUT.SV_Position.x = _227;
+  _OUT.SV_Position.y = _231;
+  _OUT.SV_Position.z = _235;
+  _OUT.SV_Position.w = _239;
+  return;
+}
+
+
+

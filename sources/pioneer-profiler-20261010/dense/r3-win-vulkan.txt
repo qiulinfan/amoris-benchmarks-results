@@ -1,0 +1,39 @@
+built 1600000 cubes in 120 ms
+BenchReport {
+    backend: "Vulkan",
+    adapter: "NVIDIA GeForce RTX 5060 Laptop GPU",
+    width: 1600,
+    height: 900,
+    frames: 300,
+    frame_ms_mean: 20.685804339979466,
+    frame_ms_p50: 20.803799852728844,
+    frame_ms_p95: 22.68509939312935,
+    gpu_ms_mean: 20.668281599680583,
+    cpu_ms_mean: 0.7154253309965134,
+    passes: [
+        (
+            "cull",
+            0.5794879794120789,
+        ),
+        (
+            "lights",
+            0.003936000168323517,
+        ),
+        (
+            "opaque+sky",
+            19.288192749023438,
+        ),
+        (
+            "post",
+            0.1727679967880249,
+        ),
+    ],
+    instances: 1600000,
+}
+
+--- stderr ---
+[INFO] adapters: 0: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan), 1: AMD Radeon 780M Graphics (Vulkan)
+[INFO] limits: buffer 1048576 MB, storage binding 2047 MB, storage buffers/stage 524288, texture 2D 32768
+[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+[INFO] surface Bgra8UnormSrgb, present modes [Fifo, FifoRelaxed, Mailbox, Immediate], chosen AutoNoVsync
+trace: 300 frames written to <local-path>

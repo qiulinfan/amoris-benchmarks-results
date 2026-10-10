@@ -1,0 +1,385 @@
+  cubes-sphere     vulkan  nvidia   ok
+  cubes-sphere     vulkan  nvidia   ok
+cubes-sphere     {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  cubes-dense      vulkan  nvidia   ok
+  cubes-dense      vulkan  nvidia   ok
+cubes-dense      {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  cubes-shadows    vulkan  nvidia   ok
+  cubes-shadows    vulkan  nvidia   ok
+cubes-shadows    {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  splats           vulkan  nvidia   ok
+  splats           vulkan  nvidia   ok
+splats           {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  gi-room-static   vulkan  nvidia   ok
+  gi-room-static   vulkan  nvidia   ok
+gi-room-static   {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  pt-lab-static    vulkan  nvidia   ok
+  pt-lab-static    vulkan  nvidia   ok
+pt-lab-static    {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  cubes-orbit      vulkan  nvidia   ok
+  cubes-orbit      vulkan  nvidia   ok
+cubes-orbit      {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+mixed            max diff 0, entities 59 / 59, coverage L1 0.0
+cubes            max diff 0, entities 10766 / 10766, coverage L1 0.0
+samples/anim     max diff 0, entities 7 / 7, coverage L1 0.0
+samples/sailing  max diff 0, entities 3 / 3, coverage L1 0.0
+samples/gi-room  max diff 0, entities 8 / 8, coverage L1 0.0
+samples/pt-lab   max diff 0, entities 10 / 10, coverage L1 0.0
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-10 14:22",
+ "backend": "vulkan",
+ "adapter": "nvidia",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 5.9,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-dense": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-dense-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-dense-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-shadows": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-shadows-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 0.8,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-shadows-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 0.9,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "splats": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/splats-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/splats-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "gi-room-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/gi-room-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.9,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-orbit": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-orbit-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "out/prepass/compare/vulkan-nvidia/cubes-orbit-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.9,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": [
+  {
+   "scene": "mixed",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 65,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 59,
+   "entities_visible_on": 59,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "cubes",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 100001,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10766,
+   "entities_visible_on": 10766,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/anim",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 22,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 7,
+   "entities_visible_on": 7,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/sailing",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 5,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 3,
+   "entities_visible_on": 3,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/gi-room",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 8,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 8,
+   "entities_visible_on": 8,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/pt-lab",
+   "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "backend": "Vulkan",
+   "instances": 11,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10,
+   "entities_visible_on": 10,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  }
+ ]
+}

@@ -1,0 +1,393 @@
+{
+ "capture": "out/profiler/rdc/dense-window-dx12.rdc",
+ "api": "GraphicsAPI.D3D12",
+ "vendor": "GPUVendor.nVidia",
+ "actions": 231,
+ "draws": 125,
+ "largest_draw": {
+  "eid": 90,
+  "name": "[0] arg1: IndirectDrawIndexed(<36, 481933>)",
+  "marker": "opaque / ExecuteIndirect(maxCount 28, count <28>)",
+  "gpu_ms": null,
+  "indices": 36,
+  "instances": 481933,
+  "draw": true,
+  "dispatch": false
+ },
+ "shaders": {
+  "vertex": {
+   "entry": "vs",
+   "encoding": "ShaderEncoding.DXIL",
+   "inputs": [
+    {
+     "name": "",
+     "semantic": "LOC0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC1",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC2",
+     "components": 2,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC3",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "SV_InstanceID0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.InstanceIndex"
+    },
+    {
+     "name": "",
+     "semantic": "SV_VertexID0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.VertexIndex"
+    }
+   ],
+   "outputs": 7,
+   "constant_blocks": [
+    "_NagaConstants",
+    "view",
+    "batch"
+   ],
+   "read_only": [
+    "drawn"
+   ],
+   "read_write": [],
+   "samplers": [],
+   "disassembly": {
+    "DXBC/DXIL": "out/profiler/rdc/dense-window-dx12-vs-dxbc-dxil.txt",
+    "DXC DXIL": "out/profiler/rdc/dense-window-dx12-vs-dxc-dxil.txt"
+   },
+   "raw": "out/profiler/rdc/dense-window-dx12-vs.dxil",
+   "raw_bytes": 8016
+  },
+  "fragment": {
+   "entry": "fs",
+   "encoding": "ShaderEncoding.DXIL",
+   "inputs": [
+    {
+     "name": "",
+     "semantic": "LOC0",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC1",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC2",
+     "components": 2,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC3",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "LOC4",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "SV_IsFrontFace0",
+     "components": 1,
+     "type": "VarType.UInt",
+     "system": "ShaderBuiltin.IsFrontFace"
+    },
+    {
+     "name": "",
+     "semantic": "LOC5",
+     "components": 3,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Undefined"
+    },
+    {
+     "name": "",
+     "semantic": "SV_Position0",
+     "components": 4,
+     "type": "VarType.Float",
+     "system": "ShaderBuiltin.Position"
+    }
+   ],
+   "outputs": 4,
+   "constant_blocks": [
+    "gi_params",
+    "view",
+    "sh",
+    "clusters"
+   ],
+   "read_only": [
+    "gi_sh",
+    "gi_distances",
+    "materials",
+    "shadow_map",
+    "nagaGroup1SamplerIndexArray",
+    "env_cube",
+    "lights",
+    "cluster_lights",
+    "tex_srgb",
+    "tex_linear",
+    "nagaGroup2SamplerIndexArray"
+   ],
+   "read_write": [],
+   "samplers": [
+    "nagaSamplerHeap",
+    "nagaComparisonSamplerHeap"
+   ],
+   "disassembly": {
+    "DXBC/DXIL": "out/profiler/rdc/dense-window-dx12-ps-dxbc-dxil.txt",
+    "DXC DXIL": "out/profiler/rdc/dense-window-dx12-ps-dxc-dxil.txt"
+   },
+   "raw": "out/profiler/rdc/dense-window-dx12-ps.dxil",
+   "raw_bytes": 24016
+  }
+ },
+ "disassembly": {
+  "vertex: DXBC/DXIL": "out/profiler/rdc/dense-window-dx12-vs-dxbc-dxil.txt",
+  "vertex: DXC DXIL": "out/profiler/rdc/dense-window-dx12-vs-dxc-dxil.txt",
+  "fragment: DXBC/DXIL": "out/profiler/rdc/dense-window-dx12-ps-dxbc-dxil.txt",
+  "fragment: DXC DXIL": "out/profiler/rdc/dense-window-dx12-ps-dxc-dxil.txt"
+ },
+ "gpu_counter": "skipped: D3D12 counters need Windows Developer Mode (--d3d12-counters once it is on)",
+ "top": [
+  {
+   "eid": 90,
+   "name": "[0] arg1: IndirectDrawIndexed(<36, 481933>)",
+   "marker": "opaque / ExecuteIndirect(maxCount 28, count <28>)",
+   "gpu_ms": null,
+   "indices": 36,
+   "instances": 481933,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 336,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "opaque",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 361,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 382,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 403,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 424,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 445,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 466,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom down",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 486,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom up",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 506,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom up",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 526,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom up",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 546,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom up",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 566,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "bloom up",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 587,
+   "name": "ID3D12GraphicsCommandList::DrawInstanced()",
+   "marker": "display transform",
+   "gpu_ms": null,
+   "indices": 3,
+   "instances": 1,
+   "draw": true,
+   "dispatch": false
+  },
+  {
+   "eid": 5,
+   "name": "=> ExecuteCommandLists(34)[0]: Reset(ResourceId::3919)",
+   "marker": "",
+   "gpu_ms": null,
+   "indices": 0,
+   "instances": 0,
+   "draw": false,
+   "dispatch": false
+  }
+ ],
+ "shader_stats": {
+  "vertex": {
+   "lines": 338,
+   "instructions": 225,
+   "conditional_branches": 0,
+   "phis": 0,
+   "samples": 0,
+   "derivatives": 0,
+   "loads": 10,
+   "stores": 20,
+   "kills": 0,
+   "dx_ops": 63,
+   "loops": 0,
+   "dx_op_kinds": {
+    "storeOutput": 20,
+    "loadInput": 13,
+    "tertiary": 8,
+    "cbufferLoadLegacy": 6,
+    "annotateHandle": 4,
+    "createHandleFromBinding": 4,
+    "rawBufferLoad": 4,
+    "unary": 2,
+    "dot3": 2
+   },
+   "local_arrays": 0,
+   "local_array_bytes": 0
+  },
+  "fragment": {
+   "lines": 2375,
+   "instructions": 2024,
+   "conditional_branches": 57,
+   "phis": 141,
+   "samples": 6,
+   "derivatives": 16,
+   "loads": 77,
+   "stores": 16,
+   "kills": 0,
+   "dx_ops": 354,
+   "loops": 13,
+   "dx_op_kinds": {
+    "binary": 91,
+    "unary": 62,
+    "rawBufferLoad": 40,
+    "cbufferLoadLegacy": 37,
+    "annotateHandle": 32,
+    "dot3": 27,
+    "createHandleFromBinding": 18,
+    "loadInput": 17,
+    "storeOutput": 16,
+    "tertiary": 6,
+    "sampleGrad": 4,
+    "getDimensions": 2
+   },
+   "local_arrays": 6,
+   "local_array_bytes": 324
+  }
+ }
+}

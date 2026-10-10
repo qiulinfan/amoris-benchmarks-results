@@ -9,6 +9,8 @@ results keep their original workload, platform, and date; a source snapshot is n
 | `sources/pioneer-20261010/docs/evidence/` | Amoris Pioneer snapshot `9a3e4b0814959629202629845b85205c42086505`, including earlier inherited Amoris results. |
 | `sources/amoris-local-backup-20261010/` | Local artifacts archived from Amoris on 2026-10-10: physics, showcase, lighting, and agent evaluations. Identical Pioneer artifacts are stored once. |
 | `sources/amoris-20261010/` | macOS integration and source-output cleanup validation runs. |
+| `sources/pioneer-prepass-20261010/` | Amoris Pioneer `explore/prepass` at `8cde3bdf501696ccd50173ba750d4aafa5d8f952` (Pioneer's `out/prepass/`): depth prepass benchmarks on the RTX 5060 and Radeon 780M, headless and windowed, with Direct3D 12 and Vulkan; the auto mode's probe A/B; image comparisons with the prepass off and on, difference strips and heat maps; run logs. Full frame pairs stay local. |
+| `sources/pioneer-profiler-20261010/` | Amoris Pioneer `explore/profiler` at `53ad87d587dd083d7902bbe290377c03d0005fbe` (Pioneer's `out/profiler/`): per-frame Chrome Trace Event JSON of the dense many_cubes grid with Direct3D 12 and Vulkan, review re-measurements, nvidia-smi samples, and RenderDoc analyses with the forward shader's DXIL and SPIR-V disassembly. RenderDoc captures (`.rdc`) and shader binaries stay local. |
 
 Source references: Amoris base `04c43b61c7263f8eb378fb664d389ea00a9ec039`, local pre-rewrite
 snapshot `7bb578df551901812ef10bb73a61a59842f2b489`, and reconstructed engine reference

@@ -1,0 +1,81 @@
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.38s
+     Running tests\draw_paths.rs (target\release\deps\draw_paths-a6eb7500bf6fa28e.exe)
+
+running 1 test
+test every_draw_path_draws_the_same_frame ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.42s
+
+     Running tests\forward_variants.rs (target\release\deps\forward_variants-337bf814ed2a5233.exe)
+
+running 1 test
+test every_forward_variant_draws_its_material ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+     Running tests\hiz.rs (target\release\deps\hiz-9e5ec46df7aa9b9b.exe)
+
+running 2 tests
+test occlusion_test_never_hides_a_box_in_front_of_the_depth ... ok
+test pyramid_is_the_minimum_over_every_sample ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+     Running tests\lod.rs (target\release\deps\lod-3cfbedb764000742.exe)
+
+running 6 tests
+test levels_cut_triangles_and_stay_within_a_pixel ... ok
+test cascades_pick_levels_by_their_texels ... ok
+test hysteresis_holds_a_level_until_the_margin ... ok
+test skinned_levels_follow_the_pose ... ok
+test every_draw_path_and_occlusion_draw_the_same_levels ... ok
+test levels_give_way_at_the_binding_limit ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.30s
+
+     Running tests\neural_material.rs (target\release\deps\neural_material-4fc84f3e7ad8ebc6.exe)
+
+running 8 tests
+test material_names_that_are_not_ascii_do_not_crash_the_renderer ... ok
+test a_loaded_neural_texture_leaves_other_materials_alone ... ok
+test a_grown_latent_table_keeps_the_textures_it_holds ... ok
+test textures_with_other_channel_sets_share_the_pipelines ... ok
+test a_neural_material_draws_under_taa_with_splats ... ok
+test a_constant_neural_material_draws_on_the_webgpu_baseline ... ok
+test the_level_of_detail_selects_and_blends_mips_like_the_reference ... ok
+test a_constant_neural_material_draws_like_the_inline_one ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.54s
+
+     Running tests\occlusion.rs (target\release\deps\occlusion-775f331e5b784f96.exe)
+
+running 1 test
+test occlusion_culling_never_drops_a_visible_instance ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.06s
+
+     Running tests\prepass.rs (target\release\deps\prepass-312af4a8f8ba9b61.exe)
+
+running 1 test
+test the_depth_prepass_leaves_the_image_alone ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.47s
+
+     Running tests\taa.rs (target\release\deps\taa-4b73b5adcb6c64a8.exe)
+
+running 11 tests
+test gtao_normals_from_the_target_match_the_depth ... ok
+test splats_behind_meshes_are_stable_under_taa ... ok
+test gtao_darkens_only_indirect_light ... ok
+test camera_cuts_and_resizes_drop_the_history ... ok
+test the_entity_id_pass_is_not_jittered ... ok
+test the_sea_hides_what_lies_under_it ... ok
+test a_still_capture_settles_taa ... ok
+test skinned_motion_reprojects_a_sliding_board_exactly ... ok
+test msaa_with_taa_converges_beyond_msaa ... ok
+test object_motion_reprojects_a_moving_board_exactly ... ok
+test taa_reprojects_a_whole_pixel_pan_exactly ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.74s
+
+exit 0

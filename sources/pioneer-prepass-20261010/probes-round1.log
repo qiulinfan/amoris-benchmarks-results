@@ -1,0 +1,26 @@
+round 1: lock taken 16:43:19
+2026-10-10 16:43:19 probes round 1 start: AC True, CPU 23.7%, RTX 70 C 945/3090 MHz 11.37 W P5 util 16% reasons 0x0000000000000400; GPU users: System, claude, dwm
+r1 prefix dense-window     vulkan nvidia  prepass auto occlusion off  frame p50   11.51 ms GPU   11.71 ms 195.0  70 C
+r1 this  dense-window     vulkan nvidia  prepass auto occlusion off  frame p50   13.70 ms GPU   13.82 ms 199.0  73 C
+r1 prefix dense-window     dx12   nvidia  prepass auto occlusion off  frame p50   11.31 ms GPU   11.62 ms 195.0  75 C
+r1 this  dense-window     dx12   nvidia  prepass auto occlusion off  frame p50   12.01 ms GPU   11.94 ms 199.0  75 C
+r1 prefix dense-headless   vulkan nvidia  prepass auto occlusion off  frame p50   19.22 ms GPU   18.54 ms {'auto-off': 5, 'auto-on': 195}  77 C
+r1 this  dense-headless   vulkan nvidia  prepass auto occlusion off  frame p50   21.21 ms GPU   19.80 ms {'auto-off': 1, 'auto-on': 199}  76 C
+r1 prefix dense-headless   dx12   nvidia  prepass auto occlusion off  frame p50   19.48 ms GPU   18.48 ms {'auto-off': 5, 'auto-on': 195}  76 C
+r1 this  dense-headless   dx12   nvidia  prepass auto occlusion off  frame p50   19.29 ms GPU   17.48 ms {'auto-off': 1, 'auto-on': 199}  75 C
+r1 this  dense-window     vulkan nvidia  prepass on   occlusion off  frame p50   11.76 ms GPU   11.50 ms 200.0  75 C
+r1 this  dense-window     dx12   nvidia  prepass on   occlusion off  frame p50   11.33 ms GPU   11.17 ms 200.0  75 C
+r1 this  dense-headless   vulkan nvidia  prepass on   occlusion off  frame p50   19.33 ms GPU   17.75 ms {'on': 200}  76 C
+r1 this  dense-headless   dx12   nvidia  prepass on   occlusion off  frame p50   19.30 ms GPU   17.29 ms {'on': 200}  76 C
+r1 prefix sphere-headless  vulkan nvidia  prepass auto occlusion off  frame p50    4.53 ms GPU    3.82 ms {'auto-off': 195, 'auto-on': 5}  74 C
+r1 this  sphere-headless  vulkan nvidia  prepass auto occlusion off  frame p50    4.33 ms GPU    3.70 ms {'auto-off': 196, 'auto-on': 4}  72 C
+r1 prefix sphere-headless  dx12   nvidia  prepass auto occlusion off  frame p50    4.67 ms GPU    3.62 ms {'auto-off': 195, 'auto-on': 5}  70 C
+r1 this  sphere-headless  dx12   nvidia  prepass auto occlusion off  frame p50    4.79 ms GPU    3.67 ms {'auto-off': 197, 'auto-on': 3}  70 C
+r1 this  sphere-headless  vulkan nvidia  prepass off  occlusion off  frame p50    4.45 ms GPU    3.67 ms {'off': 200}  69 C
+r1 this  sphere-headless  dx12   nvidia  prepass off  occlusion off  frame p50    4.82 ms GPU    3.77 ms {'off': 200}  69 C
+r1 prefix dense-headless   dx12   780m    prepass auto occlusion off  frame p50   92.15 ms GPU   90.92 ms {'auto-off': 5, 'auto-on': 195}  69 C
+r1 this  dense-headless   dx12   780m    prepass auto occlusion off  frame p50   91.76 ms GPU   87.36 ms {'auto-off': 1, 'auto-on': 199}  71 C
+r1 this  dense-headless   dx12   780m    prepass on   occlusion off  frame p50   92.64 ms GPU   87.41 ms {'on': 200}  71 C
+2026-10-10 16:48:17 probes round 1 end: AC True, CPU 7.1%, RTX 71 C 997/3090 MHz 12.64 W P5 util 20% reasons 0x0000000000000400; GPU users: System, claude, dwm
+round 1: lock released 16:48:25
+exit 0

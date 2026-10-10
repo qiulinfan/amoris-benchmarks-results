@@ -1,0 +1,358 @@
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-10 14:23",
+ "backend": "dx12",
+ "adapter": "780m",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.9,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.4,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.001,
+    "psnr_db": 111.48,
+    "max_diff_8bit": 1,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-dense": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-dense-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.6,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-dense-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.4,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-shadows": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-shadows-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.4,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-shadows-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.9,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "splats": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/splats-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/splats-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "gi-room-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/gi-room-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.8,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.3,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-orbit": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-orbit-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "out/prepass/compare/dx12-780m/cubes-orbit-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.6,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": [
+  {
+   "scene": "mixed",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 65,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 59,
+   "entities_visible_on": 59,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "cubes",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 100001,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10766,
+   "entities_visible_on": 10766,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/anim",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 22,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 7,
+   "entities_visible_on": 7,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/sailing",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 5,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 3,
+   "entities_visible_on": 3,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/gi-room",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 8,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 8,
+   "entities_visible_on": 8,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  },
+  {
+   "scene": "samples/pt-lab",
+   "adapter": "AMD Radeon 780M Graphics",
+   "backend": "Direct3D 12",
+   "instances": 11,
+   "draw_path": "multi-draw",
+   "coverage_l1": 0.0,
+   "entities_only_off": 0,
+   "entities_only_on": 0,
+   "entities_visible_off": 10,
+   "entities_visible_on": 10,
+   "max_abs_diff": 0,
+   "mean_abs_diff": 0.0,
+   "pixels_differing_gt8": 0,
+   "pixels_differing_share": 0.0
+  }
+ ]
+}
