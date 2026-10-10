@@ -1,0 +1,23 @@
+   Compiling pocket-render v0.1.0 (<local-path>
+    Finished `release` profile [optimized + debuginfo] target(s) in 5.42s
+     Running tests/taa.rs (target/release/deps/taa-b7aba75db9bf6ce3)
+
+running 1 test
+Quads Msaa: 2012 pixels of splats, 0 flickering
+Quads Taa: 1955 pixels of splats, 572 flickering
+
+thread 'splats_behind_meshes_are_stable_under_taa' (19806080) panicked at crates/pocket-render/tests/taa.rs:681:13:
+assertion `left == right` failed: Quads Taa: splats flickered on 572 pixels of a still frame
+  left: 572
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test splats_behind_meshes_are_stable_under_taa ... FAILED
+
+failures:
+
+failures:
+    splats_behind_meshes_are_stable_under_taa
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 10 filtered out; finished in 0.44s
+
+error: test failed, to rerun pass `-p pocket-render --test taa`

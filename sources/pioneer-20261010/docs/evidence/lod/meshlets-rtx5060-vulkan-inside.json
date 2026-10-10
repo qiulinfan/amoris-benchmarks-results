@@ -1,0 +1,62 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "backend": "Vulkan",
+  "big": 2.5,
+  "frames": 30,
+  "inside": true,
+  "instances": 576,
+  "mat_identity_check": true,
+  "max_triangles": 124,
+  "max_vertices": 64,
+  "mesh_triangles": 81920,
+  "meshlet_build_ms": 77.735,
+  "meshlets": 843,
+  "pixels_differ_culled_vs_indexed": 0,
+  "pixels_differ_direct_vs_indexed": 0,
+  "pixels_differ_meshlets_vs_indexed": 0,
+  "shader_compile_ms": 1.006,
+  "size": [
+    1280,
+    720
+  ],
+  "spike": "meshlets",
+  "unchecked": false,
+  "ways": [
+    {
+      "gpu_ms_min": 1.571,
+      "gpu_ms_p50": 1.651,
+      "instances_drawn": 177,
+      "meshlets_kept": null,
+      "triangles_submitted": 14499840,
+      "wall_ms_p50": 1.86,
+      "way": "indexed"
+    },
+    {
+      "gpu_ms_min": 8.648,
+      "gpu_ms_p50": 9.288,
+      "instances_drawn": 576,
+      "meshlets_kept": 485568,
+      "triangles_submitted": 47185920,
+      "wall_ms_p50": 9.758,
+      "way": "meshlets"
+    },
+    {
+      "gpu_ms_min": 1.491,
+      "gpu_ms_p50": 1.518,
+      "instances_drawn": 576,
+      "meshlets_kept": 76794,
+      "triangles_submitted": 7463940,
+      "wall_ms_p50": 1.731,
+      "way": "meshlets culled"
+    },
+    {
+      "gpu_ms_min": 7.13,
+      "gpu_ms_p50": 7.209,
+      "instances_drawn": 576,
+      "meshlets_kept": 485568,
+      "triangles_submitted": 47185920,
+      "wall_ms_p50": 7.552,
+      "way": "meshlets without a task shader"
+    }
+  ]
+}

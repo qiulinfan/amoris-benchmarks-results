@@ -1,0 +1,1111 @@
+{
+  "format": 1,
+  "command": "cargo xtask check --record --json",
+  "commit": "7bb578df5519+dirty",
+  "machine": {
+    "id": "other",
+    "cpu": "Apple M5",
+    "logical_cores": 10,
+    "gpus": [],
+    "os": "macos aarch64",
+    "on_ac_power": null,
+    "power_plan": null,
+    "chrome": null,
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "started_utc": "2026-10-10T15:24:34Z",
+  "duration_ms": 353341,
+  "verdict": "Fail",
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 524,
+      "summary": "19 workspace crates, 386 external packages, 2 targets",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [
+        {
+          "code": "deps.vendor_unchecked",
+          "message": "the pinned rquickjs-sys crate is not in cargo's cache, so the vendored QuickJS-ng is not compared; run python third_party/vendor.py --check once",
+          "detail": {
+            "tail": "not cached: rquickjs-sys-0.14.0.crate is not in <local-path>"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "name": "deps.crates",
+          "value": 19.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "deps.external",
+          "value": 386.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/deps.log"
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 842,
+      "summary": "formatted",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/fmt.log"
+    },
+    {
+      "name": "docs",
+      "verdict": "Fail",
+      "duration_ms": 119,
+      "summary": "70 Markdown files under docs/ (not docs/evidence/), 21 need wrapping",
+      "errors": [
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/agent-debug.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/agent-debug.md",
+          "detail": {
+            "path": "docs/bench/agent-debug.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/debug-eval.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/debug-eval.md",
+          "detail": {
+            "path": "docs/bench/debug-eval.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/dx12.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/dx12.md",
+          "detail": {
+            "path": "docs/bench/dx12.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/lod.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/lod.md",
+          "detail": {
+            "path": "docs/bench/lod.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/neural-textures.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/neural-textures.md",
+          "detail": {
+            "path": "docs/bench/neural-textures.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/occlusion.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/occlusion.md",
+          "detail": {
+            "path": "docs/bench/occlusion.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/path-tracing-nrc.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/path-tracing-nrc.md",
+          "detail": {
+            "path": "docs/bench/path-tracing-nrc.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/physics.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/physics.md",
+          "detail": {
+            "path": "docs/bench/physics.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/player.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/player.md",
+          "detail": {
+            "path": "docs/bench/player.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/polish.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/polish.md",
+          "detail": {
+            "path": "docs/bench/polish.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/quiet-2026-10-09.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/quiet-2026-10-09.md",
+          "detail": {
+            "path": "docs/bench/quiet-2026-10-09.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/rt-shadows.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/rt-shadows.md",
+          "detail": {
+            "path": "docs/bench/rt-shadows.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/splats.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/splats.md",
+          "detail": {
+            "path": "docs/bench/splats.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/taa-gtao.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/taa-gtao.md",
+          "detail": {
+            "path": "docs/bench/taa-gtao.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/web.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/web.md",
+          "detail": {
+            "path": "docs/bench/web.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/README.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/README.md",
+          "detail": {
+            "path": "docs/spec/README.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/debugger.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/debugger.md",
+          "detail": {
+            "path": "docs/spec/debugger.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/desktop.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/desktop.md",
+          "detail": {
+            "path": "docs/spec/desktop.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/player.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/player.md",
+          "detail": {
+            "path": "docs/spec/player.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/server.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/server.md",
+          "detail": {
+            "path": "docs/spec/server.md"
+          }
+        }
+      ],
+      "more_errors": 1,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "docs.files",
+          "value": 70.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/docs.log"
+    },
+    {
+      "name": "clippy",
+      "verdict": "Pass",
+      "duration_ms": 20800,
+      "summary": "diagnostics: 0 on aarch64-apple-darwin, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "clippy.fixture_reported",
+          "value": 82.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/clippy.log"
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 45083,
+      "summary": "native release build",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/build.log"
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 59,
+      "summary": "8 clippy.toml copies, 13 @generated files; the engine's generators (pocket gen) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "gen.outputs",
+          "value": 8.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "test",
+      "verdict": "Pass",
+      "duration_ms": 168030,
+      "summary": "685 passed, 0 failed, 0 ignored in 114 suites, ignored tests included",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "test.passed",
+          "value": 685.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.failed",
+          "value": 0.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.ignored",
+          "value": 0.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/test.log"
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 7746,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/wasm.log"
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 68,
+      "summary": "3 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/tsc",
+          "value": 23.3,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/tsc",
+          "value": 21.0,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state-lint/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 9861,
+      "summary": "2 projects; cross build against a debug pocket",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/ticks_compared",
+          "value": 3600.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/ticks_compared",
+          "value": 1800.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "cross_build_ticks_compared",
+          "value": 601.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/determinism-cross-build.log"
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 1303,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 1474,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/seed1.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 881,
+      "summary": "4 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/closure-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "log": null
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 96442,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "web.size.wasm",
+          "value": 11975.1904296875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz",
+          "value": 3590.671875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.glue",
+          "value": 15.857421875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.O3",
+          "value": 9512.033203125,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz.O3",
+          "value": 3332.1630859375,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.page",
+          "value": 12017.4677734375,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile",
+          "value": 14.725,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page",
+          "value": 0.985,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready",
+          "value": 45.96,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created",
+          "value": 48.465,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready",
+          "value": 129.855,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot",
+          "value": 133.495,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate",
+          "value": 0.365,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build",
+          "value": 70.13,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.195,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.085,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 12,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.145,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 12,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.04,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1188,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.115,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1188,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.125,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 0.15,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 8.125,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile.O3",
+          "value": 12.24,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page.O3",
+          "value": 0.4,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready.O3",
+          "value": 55.55,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created.O3",
+          "value": 58.245,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready.O3",
+          "value": 141.9,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot.O3",
+          "value": 145.185,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate.O3",
+          "value": 0.72,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build.O3",
+          "value": 67.07,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.2,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.115,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 12,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.16,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 12,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.035,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1188,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.12,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1188,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.07,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.105,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 0.155,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 8.05,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 35,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/web.log"
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "log": null
+    }
+  ]
+}

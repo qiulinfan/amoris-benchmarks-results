@@ -1,0 +1,36 @@
+Start-up measurements, RTX 5060 unless said, 2026-10-09, single-agent, AC power.
+many_cubes --headless-bench 10, POCKET_AA=msaa POCKET_GTAO=off POCKET_OCCLUSION=off; ms.
+
+1. Where Renderer::new's time went (master, one thread; a temporary timer around every
+   create_render_pipeline / create_compute_pipeline, not committed): see
+   pipelines-serial-dx12-rtx5060.txt and pipelines-serial-vulkan-rtx5060.txt.
+   Direct3D 12: 59 pipelines, 952 ms of Renderer::new's 1,027 ms. Vulkan: 59 pipelines, 40 ms of
+   99 ms. The largest on Direct3D 12: forward 117.5, forward (masked) 100.4, splat preprocess
+   41.8, ocean 35.7, cull 35.2, TAA resolve_copy 34.5 and resolve_history 32.6, GTAO fs_main 32.5,
+   occlusion late 32.2; the double-sided forward variants 1.4 to 1.6 (their shaders are the
+   back-face culled ones', which wgpu-hal keeps in its per-device cache keyed by the HLSL).
+
+2. Concurrent creation, how many tasks run at once (par.rs slots; a temporary environment
+   override of the limit). Renderer::new on Direct3D 12, min / median:
+     3 rounds:  limit 6: 221.2 / 226.6   8: 172.1 / 188.7   12: 178.6 / 181.9   16: 186.0 / 192.4
+                64 (no limit in practice): 193.8 / 204.1
+     2 rounds:  limit 1: 959.0 / 964.4   2: 520.8 / 524.2   4: 291.0 / 296.1
+     5 rounds:  limit 8: 191.0 / 193.0   12: 184.5 / 187.6   16: 190.2 / 191.4
+   Vulkan, 5 rounds: limit 1: 114.9 / 117.1   8: 38.9 / 58.7   16: 41.9 / 60.8
+   The forward fragment shader alone takes 104-117 ms with nothing else compiling, 116-128 ms
+   with 4 tasks at a time and 165-175 ms with 12 to 16 (hyper-threads and all-core clocks), so the
+   critical path stays that compilation. Chosen: the hardware threads (16 here), the simplest;
+   8 to 16 are within 3%.
+   Timeline of one concurrent start (limit 12): pipelines-concurrent-dx12-rtx5060.txt (end = ms
+   since Renderer::new began; the forward pair ends last, at 171 and 176 ms).
+
+3. Device creation (a temporary timer in Gpu::create, not committed), two runs each:
+     Direct3D 12: instance 28-30 | request_adapter 1,069-1,106 (2,752-2,916 in the first run
+                  after the laptop's NVIDIA GPU had idled) | request_device 80-115
+     Vulkan:      instance 310-332 | request_adapter 7 | request_device 40
+   D3D12CreateDevice per adapter, each in a fresh process (Python ctypes, 3 rounds):
+     AMD Radeon 780M         341 / 216 / 184
+     NVIDIA RTX 5060 Laptop  2,676 / 884 / 878   (the first: the GPU woke up)
+     Microsoft Basic Render  23 / 27 / 22
+   wgpu-hal's Direct3D 12 enumerate_adapters creates a device on every adapter to read its
+   capabilities, so every start pays for all three, whichever is used.

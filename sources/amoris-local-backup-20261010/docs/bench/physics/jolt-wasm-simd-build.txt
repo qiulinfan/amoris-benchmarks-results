@@ -1,0 +1,6 @@
+# Jolt v5.6.0 with wasm SIMD (USE_WASM_SIMD: -msimd128 -msse4.2) outside Emscripten: Homebrew clang 23, wasi-sysroot, 2026-10-04
+# clang++ --target=wasm32-wasip1 ... -D__EMSCRIPTEN__ -msimd128 -msse4.2 -c (a file including <Jolt/Jolt.h>); first errors:
+<local-path> error: "This header is only meant to be used on x86 and x64 architecture"
+   14 | #error "This header is only meant to be used on x86 and x64 architecture"
+<local-path> error: invalid input constraint 'a' in asm
+<local-path> error: use of undeclared identifier '__builtin_ia32_crc32qi'

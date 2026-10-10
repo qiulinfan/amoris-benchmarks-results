@@ -1,0 +1,45 @@
+Dense grid (many_cubes --dense --headless-bench, 1.6M cubes, 1280x720 unless said), RTX 5060,
+2026-10-09, single-agent, AC power. POCKET_GTAO=off POCKET_OCCLUSION=off. GPU = mean of the
+timestamped passes; "opaque" = the opaque+sky pass. ms. Temporary experiments, not committed: the
+forward shader read from a file instead of the build (each variant below removes or replaces one
+part of master's forward.wgsl), and a flat fragment shader (color from the normal only).
+
+Which pass, which path (MSAA, 150 frames, 2 rounds, medians)
+  vulkan                                  GPU 14.52  cull 0.404  opaque 14.11
+  dx12                                    GPU 18.07  cull 0.444  opaque 17.63
+  dx12, WGPU_VALIDATION_INDIRECT_CALL=0   GPU 18.17  cull 0.445  opaque 17.73   (baseline draw path, no validation pass)
+  vulkan, POCKET_AA=off                   GPU 11.32  cull 0.552  opaque 10.76
+  dx12, POCKET_AA=off                     GPU 14.32  cull 0.583  opaque 13.74
+
+The gap grows with the pixels (POCKET_AA=off, 100 frames, opaque)
+  320x180     vulkan 3.93   dx12 4.65   (+18%)
+  1280x720    vulkan 10.73  dx12 13.80  (+29%)
+  2560x1440   vulkan 32.94  dx12 43.68  (+33%)
+
+Fragment shader (POCKET_AA=off, opaque)
+  master's forward      vulkan 10.73  dx12 13.80
+  flat fragment shader  vulkan 4.31   dx12 4.69
+
+Variants of master's forward.wgsl (POCKET_AA=off, one round each, opaque; vulkan / dx12)
+  as built (from the file)                 10.36 / 13.70
+  no neural GI branch                      11.33 / 13.67
+  no baked GI at all                        9.59 / 12.83
+  scene_out writes the color only (e3)     11.00 / 12.56
+  textureNumLevels replaced by 5            10.87 / 13.59
+  no IBL sample                            10.58 / 13.49
+  no punctual-light loop                   12.67 / 12.78
+  no material read                          7.91 / 10.54
+  no shading normal (interpolated only)     9.03 / 12.27
+  no sun                                   12.97 / 13.09
+  no fog                                   10.28 / 13.51
+  (Vulkan's own time moves by up to 2.6 ms either way when code is removed, so single removals
+  say little; the variants were run back to back, not interleaved with the original.)
+
+The extra outputs (MSAA, 3 rounds interleaved, opaque; vulkan / dx12)
+  as built                     13.99 / 17.65
+  color only (e3)              14.40 / 15.83
+  no object motion (e3a)       14.35 / 16.50
+  no indirect share (e3b)      14.46 / 17.30
+  no view normal (e3c)         14.26 / 17.39
+  Vulkan alone, 4 rounds interleaved: as built 14.26, color only 14.36, no share 14.25 (the
+  first Vulkan figures drifted between batches; interleaved, Vulkan does not change).

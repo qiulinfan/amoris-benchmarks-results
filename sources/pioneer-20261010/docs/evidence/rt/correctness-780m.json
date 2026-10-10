@@ -1,0 +1,1333 @@
+{
+  "suite": "correctness",
+  "adapter_filter": "780m",
+  "configurations": {
+    "pt-reference": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--samples",
+        "4",
+        "--frames",
+        "512"
+      ],
+      "metal_report": "docs/evidence/pt/reference.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.41364797878674153,
+            0.3786858875899384,
+            0.2639377097529234
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 444,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            0.413647638394707,
+            0.3786852166397807,
+            0.2639367404537438
+          ],
+          "mean_relative_difference_vs_metal": [
+            8.229033674168817e-07,
+            1.7717886206616896e-06,
+            3.6724677963400033e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04643894401074742,
+            "maximum_8bit": 5,
+            "identical_pixels": 0.9971923828125,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03262393895939181,
+            "relative_rmse": 0.028230428144296993,
+            "rmse_reinhard": 0.0009525459259586937,
+            "maximum_absolute_error": 0.3730023173810686,
+            "reference_mean_rgb": [
+              0.4144569284808136,
+              0.3813391474606942,
+              0.2664780190687406
+            ],
+            "candidate_mean_rgb": [
+              0.41364797878674153,
+              0.3786858875899384,
+              0.2639377097529234
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4136479375419526,
+            0.37868586891659106,
+            0.26393763736643905
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 445,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            0.413647638394707,
+            0.3786852166397807,
+            0.2639367404537438
+          ],
+          "mean_relative_difference_vs_metal": [
+            7.231934087728485e-07,
+            1.7224776190900795e-06,
+            3.398210850385079e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04577707247720559,
+            "maximum_8bit": 5,
+            "identical_pixels": 0.99737548828125,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03262381392145553,
+            "relative_rmse": 0.028230319945391897,
+            "rmse_reinhard": 0.0009524971284311425,
+            "maximum_absolute_error": 0.37276389880196703,
+            "reference_mean_rgb": [
+              0.4144569284808136,
+              0.3813391474606942,
+              0.2664780190687406
+            ],
+            "candidate_mean_rgb": [
+              0.4136479375419526,
+              0.37868586891659106,
+              0.26393763736643905
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 2.0928242551199547e-05,
+        "relative_rmse": 1.832031231570489e-05,
+        "rmse_reinhard": 1.2241205435638807e-05,
+        "maximum_absolute_error": 0.0006112754344940186,
+        "reference_mean_rgb": [
+          0.41364797878674153,
+          0.3786858875899384,
+          0.2639377097529234
+        ],
+        "candidate_mean_rgb": [
+          0.4136479375419526,
+          0.37868586891659106,
+          0.26393763736643905
+        ]
+      }
+    },
+    "pt128": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/pt/pt128.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.05870067327268561,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.41321048109116987,
+            0.37849266675473814,
+            0.26372020432874876
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 126,
+            "maximum_relative_counter_difference": 0.00013599891200870393
+          },
+          "metal_mean_rgb": [
+            0.41321174087829604,
+            0.3784936705919222,
+            0.26372042841106236
+          ],
+          "mean_relative_difference_vs_metal": [
+            -3.0487689519555494e-06,
+            -2.6521901475230536e-06,
+            -8.496964567501029e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.03522851369392886,
+            "maximum_8bit": 4,
+            "identical_pixels": 0.99853515625,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.031353845559240506,
+            "relative_rmse": 0.02716126667451942,
+            "rmse_reinhard": 0.00093936558133355,
+            "maximum_absolute_error": 0.37252166552559984,
+            "reference_mean_rgb": [
+              0.41277733765655167,
+              0.38135659468414224,
+              0.2659828797997343
+            ],
+            "candidate_mean_rgb": [
+              0.41321048109116987,
+              0.37849266675473814,
+              0.26372020432874876
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.058700470214816884,
+            "relative_rmse": 0.05138563091397937,
+            "rmse_reinhard": 0.023344371972365455,
+            "maximum_absolute_error": 2.129359245300293,
+            "reference_mean_rgb": [
+              0.41364797878674153,
+              0.3786858875899384,
+              0.2639377097529234
+            ],
+            "candidate_mean_rgb": [
+              0.41321048109116987,
+              0.37849266675473814,
+              0.26372020432874876
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4132120480288961,
+            0.3784941811828162,
+            0.2637212366725805
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 126,
+            "maximum_relative_counter_difference": 0.00013599891200870393
+          },
+          "metal_mean_rgb": [
+            0.41321174087829604,
+            0.3784936705919222,
+            0.26372042841106236
+          ],
+          "mean_relative_difference_vs_metal": [
+            7.433249583186652e-07,
+            1.3490077475034204e-06,
+            3.0648422764558413e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.02255274489021976,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.99884033203125,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03135375089961487,
+            "relative_rmse": 0.0271611846726058,
+            "rmse_reinhard": 0.0009383738351822579,
+            "maximum_absolute_error": 0.37252166552559984,
+            "reference_mean_rgb": [
+              0.41277733765655167,
+              0.38135659468414224,
+              0.2659828797997343
+            ],
+            "candidate_mean_rgb": [
+              0.4132120480288961,
+              0.3784941811828162,
+              0.2637212366725805
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.05870154827435228,
+            "relative_rmse": 0.05138656460323662,
+            "rmse_reinhard": 0.023344646941983023,
+            "maximum_absolute_error": 2.129359722137451,
+            "reference_mean_rgb": [
+              0.4136479375419526,
+              0.37868586891659106,
+              0.26393763736643905
+            ],
+            "candidate_mean_rgb": [
+              0.4132120480288961,
+              0.3784941811828162,
+              0.2637212366725805
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 9.604852284480245e-05,
+        "relative_rmse": 8.394420303687313e-05,
+        "rmse_reinhard": 5.6316814325337306e-05,
+        "maximum_absolute_error": 0.004910171031951904,
+        "reference_mean_rgb": [
+          0.41321048109116987,
+          0.37849266675473814,
+          0.26372020432874876
+        ],
+        "candidate_mean_rgb": [
+          0.4132120480288961,
+          0.3784941811828162,
+          0.2637212366725805
+        ]
+      }
+    },
+    "materials": {
+      "tool": "path_trace",
+      "project": "samples/pt-lab",
+      "arguments": [
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--samples",
+        "4",
+        "--frames",
+        "256"
+      ],
+      "metal_report": "docs/evidence/pt/materials.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.2783339905329679,
+            0.2135378355586181,
+            0.20024923420104035
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 256,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.04249819046634267
+          },
+          "metal_mean_rgb": [
+            0.2781968301926183,
+            0.2135191878234804,
+            0.2002383174015515
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.0004930334405846379,
+            8.733517267369713e-05,
+            5.451903327245678e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.3986903473318053,
+            "maximum_8bit": 88,
+            "identical_pixels": 0.9286979166666667,
+            "pixels_over_2": 0.0018619791666666667,
+            "pixels_over_8": 0.00010416666666666667
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.02447710660665499,
+            "relative_rmse": 0.03409659717493459,
+            "rmse_reinhard": 0.0018187952742807886,
+            "maximum_absolute_error": 9.132185623147269,
+            "reference_mean_rgb": [
+              0.27658230592631866,
+              0.2106725021199589,
+              0.196552777937565
+            ],
+            "candidate_mean_rgb": [
+              0.27586496555554135,
+              0.21071129748332026,
+              0.19726332337212474
+            ],
+            "pixels_left_out": 7.812500000003997e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.27832904660606195,
+            0.21353715712583532,
+            0.20024871734567265
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 256,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.04249819046634267
+          },
+          "metal_mean_rgb": [
+            0.2781968301926183,
+            0.2135191878234804,
+            0.2002383174015515
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.0004752621133464634,
+            8.415778712019522e-05,
+            5.1937832159670695e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.39802027446964167,
+            "maximum_8bit": 88,
+            "identical_pixels": 0.9285416666666667,
+            "pixels_over_2": 0.0018619791666666667,
+            "pixels_over_8": 0.00010416666666666667
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.023880544990584625,
+            "relative_rmse": 0.033265587144212704,
+            "rmse_reinhard": 0.0018095157073650728,
+            "maximum_absolute_error": 8.765010520913382,
+            "reference_mean_rgb": [
+              0.27658230592631866,
+              0.2106725021199589,
+              0.196552777937565
+            ],
+            "candidate_mean_rgb": [
+              0.27586037867463653,
+              0.21071097265455063,
+              0.19726313494846442
+            ],
+            "pixels_left_out": 7.812500000003997e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.0007777299633693931,
+        "relative_rmse": 0.0009213658418675336,
+        "rmse_reinhard": 3.546159095965844e-05,
+        "maximum_absolute_error": 0.3671751022338867,
+        "reference_mean_rgb": [
+          0.2783339905329679,
+          0.2135378355586181,
+          0.20024923420104035
+        ],
+        "candidate_mean_rgb": [
+          0.27832904660606195,
+          0.21353715712583532,
+          0.20024871734567265
+        ]
+      }
+    },
+    "atmosphere": {
+      "tool": "path_trace",
+      "project": "samples/pt-lab",
+      "arguments": [
+        "--scene",
+        "scene-atmosphere.json",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/pt/atmosphere.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.23480770222606226,
+            0.16421274880303222,
+            0.12654337977302021
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.05862646566164154
+          },
+          "metal_mean_rgb": [
+            0.23478184112681513,
+            0.16418965322335952,
+            0.12652589280133542
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.00011014948653187282,
+            0.00014066403831964266,
+            0.00013820864091634066
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.6737900678665095,
+            "maximum_8bit": 42,
+            "identical_pixels": 0.97875,
+            "pixels_over_2": 0.0049479166666666664,
+            "pixels_over_8": 0.0013020833333333333
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.01570011160825816,
+            "relative_rmse": 0.022829069724396134,
+            "rmse_reinhard": 0.0014530879970065462,
+            "maximum_absolute_error": 0.37073447985665453,
+            "reference_mean_rgb": [
+              0.2340272772077624,
+              0.16336326191116782,
+              0.12582630880190998
+            ],
+            "candidate_mean_rgb": [
+              0.23359542662950686,
+              0.1630538260080077,
+              0.12594974849968513
+            ],
+            "pixels_left_out": 5.2083333333285964e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.23480725995129736,
+            0.16421232450567913,
+            0.12654308116884144
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.05862646566164154
+          },
+          "metal_mean_rgb": [
+            0.23478184112681513,
+            0.16418965322335952,
+            0.12652589280133542
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.00010826571748580006,
+            0.0001380798477524803,
+            0.0001358486166386135
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.6737385331945258,
+            "maximum_8bit": 42,
+            "identical_pixels": 0.9786979166666666,
+            "pixels_over_2": 0.0049479166666666664,
+            "pixels_over_8": 0.0013020833333333333
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.015699974696967624,
+            "relative_rmse": 0.02282887064572232,
+            "rmse_reinhard": 0.0014528154020470084,
+            "maximum_absolute_error": 0.37073447985665453,
+            "reference_mean_rgb": [
+              0.2340272772077624,
+              0.16336326191116782,
+              0.12582630880190998
+            ],
+            "candidate_mean_rgb": [
+              0.23359498592124558,
+              0.1630534031787484,
+              0.12594945067472324
+            ],
+            "pixels_left_out": 5.2083333333285964e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 6.767461591922157e-05,
+        "relative_rmse": 9.671646158383787e-05,
+        "rmse_reinhard": 3.253824920037695e-05,
+        "maximum_absolute_error": 0.010634660720825195,
+        "reference_mean_rgb": [
+          0.23480770222606226,
+          0.16421274880303222,
+          0.12654337977302021
+        ],
+        "candidate_mean_rgb": [
+          0.23480725995129736,
+          0.16421232450567913,
+          0.12654308116884144
+        ]
+      }
+    },
+    "nrc": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "512",
+        "--nrc",
+        "true",
+        "--nrc-warmup",
+        "64"
+      ],
+      "metal_report": "docs/evidence/pt/nrc.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.09195127598115473,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.388706872005514,
+            0.35754729136539254,
+            0.25438711428796523
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 504,
+            "maximum_relative_counter_difference": 0.008
+          },
+          "metal_mean_rgb": [
+            0.3886955072325122,
+            0.3575478757886117,
+            0.2543863362764398
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.9238241220496408e-05,
+            -1.6345313697167838e-06,
+            3.0583856696645725e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.09830513587592123,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.9716796875,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.0319004139063032,
+            "relative_rmse": 0.02842958384195179,
+            "rmse_reinhard": 0.0009276659614687643,
+            "maximum_absolute_error": 0.37313297076241625,
+            "reference_mean_rgb": [
+              0.3856836349683442,
+              0.3608137931704976,
+              0.25665097521528146
+            ],
+            "candidate_mean_rgb": [
+              0.388706872005514,
+              0.35754729136539254,
+              0.25438711428796523
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.09194016569160376,
+            "relative_rmse": 0.08048322957396599,
+            "rmse_reinhard": 0.014280476817828397,
+            "maximum_absolute_error": 2.6708011627197266,
+            "reference_mean_rgb": [
+              0.41364797878674153,
+              0.3786858875899384,
+              0.2639377097529234
+            ],
+            "candidate_mean_rgb": [
+              0.388706872005514,
+              0.35754729136539254,
+              0.25438711428796523
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.38870844909246216,
+            0.3575493512200296,
+            0.2543903218567891
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 504,
+            "maximum_relative_counter_difference": 0.008
+          },
+          "metal_mean_rgb": [
+            0.3886955072325122,
+            0.3575478757886117,
+            0.2543863362764398
+          ],
+          "mean_relative_difference_vs_metal": [
+            3.3295625262247996e-05,
+            4.126528271705465e-06,
+            1.5667430914910428e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.10025196122354249,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.97027587890625,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.031899896875001596,
+            "relative_rmse": 0.028429123064709808,
+            "rmse_reinhard": 0.0009276203840118148,
+            "maximum_absolute_error": 0.3731825618268694,
+            "reference_mean_rgb": [
+              0.3856836349683442,
+              0.3608137931704976,
+              0.25665097521528146
+            ],
+            "candidate_mean_rgb": [
+              0.38870844909246216,
+              0.3575493512200296,
+              0.2543903218567891
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.09193913390232726,
+            "relative_rmse": 0.08048231064974737,
+            "rmse_reinhard": 0.014279497905535433,
+            "maximum_absolute_error": 2.670771837234497,
+            "reference_mean_rgb": [
+              0.4136479375419526,
+              0.37868586891659106,
+              0.26393763736643905
+            ],
+            "candidate_mean_rgb": [
+              0.38870844909246216,
+              0.3575493512200296,
+              0.2543903218567891
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 4.074796525670173e-05,
+        "relative_rmse": 3.64772826267788e-05,
+        "rmse_reinhard": 2.5783119174450382e-05,
+        "maximum_absolute_error": 0.0012758076190948486,
+        "reference_mean_rgb": [
+          0.388706872005514,
+          0.35754729136539254,
+          0.25438711428796523
+        ],
+        "candidate_mean_rgb": [
+          0.38870844909246216,
+          0.3575493512200296,
+          0.2543903218567891
+        ]
+      }
+    },
+    "sharc-reference": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--samples",
+        "16",
+        "--frames",
+        "64"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/reference-final-320.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.302147893006987,
+            0.27632956194869596,
+            0.19230852792582173
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 64,
+            "identical_frames": 5,
+            "maximum_relative_counter_difference": 1.1580925806458205e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.026434536542603165,
+            "maximum_8bit": 2,
+            "identical_pixels": 0.9982291666666666,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028191501019724993,
+            "relative_rmse": 0.028287917899158865,
+            "rmse_reinhard": 0.0008064530516045689,
+            "maximum_absolute_error": 0.5596322268980689,
+            "reference_mean_rgb": [
+              0.30108255400251277,
+              0.2786510157840255,
+              0.19405109601886256
+            ],
+            "candidate_mean_rgb": [
+              0.3016635347998837,
+              0.27629879766990245,
+              0.19229369072536695
+            ],
+            "pixels_left_out": 1.3020833333321491e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3021476268268947,
+            0.2763293930799282,
+            0.19230830940406607
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 64,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 1.7943667473837544e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.03152655406337824,
+            "maximum_8bit": 3,
+            "identical_pixels": 0.9976432291666667,
+            "pixels_over_2": 1.3020833333333334e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.02819183189159736,
+            "relative_rmse": 0.02828824990263587,
+            "rmse_reinhard": 0.0008067978687060951,
+            "maximum_absolute_error": 0.5594395846861548,
+            "reference_mean_rgb": [
+              0.30108255400251277,
+              0.2786510157840255,
+              0.19405109601886256
+            ],
+            "candidate_mean_rgb": [
+              0.3016632687156679,
+              0.27629862880204026,
+              0.19229347220231813
+            ],
+            "pixels_left_out": 1.3020833333321491e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 5.361552176156041e-05,
+        "relative_rmse": 5.4108978149425156e-05,
+        "rmse_reinhard": 3.212060608232211e-05,
+        "maximum_absolute_error": 0.006601646542549133,
+        "reference_mean_rgb": [
+          0.302147893006987,
+          0.27632956194869596,
+          0.19230852792582173
+        ],
+        "candidate_mean_rgb": [
+          0.3021476268268947,
+          0.2763293930799282,
+          0.19230830940406607
+        ]
+      }
+    },
+    "sharc-raw": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/raw-final-320.json",
+      "reference": "sharc-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.2964496813758377,
+        "rmse_reinhard": 0.016918675248426586
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30224701502034507,
+            0.27854275868694517,
+            0.19290145588376625
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 110,
+            "maximum_relative_counter_difference": 2.1812867410485447e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05464532103585001,
+            "maximum_8bit": 17,
+            "identical_pixels": 0.9988151041666666,
+            "pixels_over_2": 3.90625e-05,
+            "pixels_over_8": 2.604166666666667e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.027715256023256203,
+            "relative_rmse": 0.027781090911470775,
+            "rmse_reinhard": 0.0008169596807037355,
+            "maximum_absolute_error": 0.4372981245483132,
+            "reference_mean_rgb": [
+              0.30128493302677417,
+              0.2785203453158557,
+              0.19410783096505374
+            ],
+            "candidate_mean_rgb": [
+              0.3016973777224146,
+              0.2762166050498311,
+              0.19238311260517502
+            ],
+            "pixels_left_out": 3.906249999996447e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.29639799629719565,
+            "relative_rmse": 0.29912592805683813,
+            "rmse_reinhard": 0.01691947924698049,
+            "maximum_absolute_error": 125.30048307776451,
+            "reference_mean_rgb": [
+              0.302147893006987,
+              0.27632956194869596,
+              0.19230852792582173
+            ],
+            "candidate_mean_rgb": [
+              0.30224701502034507,
+              0.27854275868694517,
+              0.19290145588376625
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.30224705569466037,
+            0.27854233308344084,
+            0.1929012942076586
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 92,
+            "maximum_relative_counter_difference": 4.357156084223827e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05851904960495058,
+            "maximum_8bit": 17,
+            "identical_pixels": 0.9988802083333334,
+            "pixels_over_2": 3.90625e-05,
+            "pixels_over_8": 2.604166666666667e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.02771534553304227,
+            "relative_rmse": 0.02778118063387861,
+            "rmse_reinhard": 0.0008168612849315037,
+            "maximum_absolute_error": 0.4372981245483132,
+            "reference_mean_rgb": [
+              0.30128493302677417,
+              0.2785203453158557,
+              0.19410783096505374
+            ],
+            "candidate_mean_rgb": [
+              0.30169742076397055,
+              0.27621615961038243,
+              0.19238295192861934
+            ],
+            "pixels_left_out": 3.906249999996447e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.296400872041912,
+            "relative_rmse": 0.29912902143046216,
+            "rmse_reinhard": 0.016919212522524475,
+            "maximum_absolute_error": 125.30213862657547,
+            "reference_mean_rgb": [
+              0.3021476268268947,
+              0.2763293930799282,
+              0.19230830940406607
+            ],
+            "candidate_mean_rgb": [
+              0.30224705569466037,
+              0.27854233308344084,
+              0.1929012942076586
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 7.531911816037282e-05,
+        "relative_rmse": 7.315582785602257e-05,
+        "rmse_reinhard": 4.835225788694978e-05,
+        "maximum_absolute_error": 0.007328353822231293,
+        "reference_mean_rgb": [
+          0.30224701502034507,
+          0.27854275868694517,
+          0.19290145588376625
+        ],
+        "candidate_mean_rgb": [
+          0.30224705569466037,
+          0.27854233308344084,
+          0.1929012942076586
+        ]
+      }
+    },
+    "sharc": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "sharc",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/sharc-final-320.json",
+      "reference": "sharc-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.2909096907835238,
+        "rmse_reinhard": 0.01349765907095808
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.3011698760460489,
+            0.275573336789288,
+            0.1919597404329723
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 3.2
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 1.2325606391438382,
+            "maximum_8bit": 135,
+            "identical_pixels": 0.4203125,
+            "pixels_over_2": 0.059375,
+            "pixels_over_8": 0.0034375
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028608146909887125,
+            "relative_rmse": 0.028702820973626628,
+            "rmse_reinhard": 0.0032540168669493376,
+            "maximum_absolute_error": 0.43198520493161396,
+            "reference_mean_rgb": [
+              0.30038232286871813,
+              0.2776810600406756,
+              0.19341217038568562
+            ],
+            "candidate_mean_rgb": [
+              0.30077348454147623,
+              0.27520213742063854,
+              0.19163817562210372
+            ],
+            "pixels_left_out": 2.6041666666642982e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.12389600452711019,
+            "relative_rmse": 0.12503629511565864,
+            "rmse_reinhard": 0.01322634195503592,
+            "maximum_absolute_error": 37.080787777900696,
+            "reference_mean_rgb": [
+              0.302147893006987,
+              0.27632956194869596,
+              0.19230852792582173
+            ],
+            "candidate_mean_rgb": [
+              0.3011698760460489,
+              0.275573336789288,
+              0.1919597404329723
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3011996987326615,
+            0.27558369602016913,
+            0.1919564680852531
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 6.0
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 1.240379646183646,
+            "maximum_8bit": 135,
+            "identical_pixels": 0.42337239583333336,
+            "pixels_over_2": 0.05903645833333333,
+            "pixels_over_8": 0.0036979166666666666
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028605815489374332,
+            "relative_rmse": 0.028700481837652402,
+            "rmse_reinhard": 0.003283829561691323,
+            "maximum_absolute_error": 0.434187238928196,
+            "reference_mean_rgb": [
+              0.30038232286871813,
+              0.2776810600406756,
+              0.19341217038568562
+            ],
+            "candidate_mean_rgb": [
+              0.3008032491956222,
+              0.2752125124258946,
+              0.19163491012789283
+            ],
+            "pixels_left_out": 2.6041666666642982e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.12389050467334033,
+            "relative_rmse": 0.12503082454569195,
+            "rmse_reinhard": 0.013217445730901741,
+            "maximum_absolute_error": 37.078185468912125,
+            "reference_mean_rgb": [
+              0.3021476268268947,
+              0.2763293930799282,
+              0.19230830940406607
+            ],
+            "candidate_mean_rgb": [
+              0.3011996987326615,
+              0.27558369602016913,
+              0.1919564680852531
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.003059088340742149,
+        "relative_rmse": 0.0030813904439483657,
+        "rmse_reinhard": 0.0018384209396908574,
+        "maximum_absolute_error": 0.3143305480480194,
+        "reference_mean_rgb": [
+          0.3011698760460489,
+          0.275573336789288,
+          0.1919597404329723
+        ],
+        "candidate_mean_rgb": [
+          0.3011996987326615,
+          0.27558369602016913,
+          0.1919564680852531
+        ]
+      }
+    },
+    "restir-reference": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--samples",
+        "64",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30204893359210244,
+            0.276697437046883,
+            0.1926029817394965
+          ],
+          "gpu_errors": []
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.30204507938895886,
+            0.27669503424340514,
+            0.1926009439451549
+          ],
+          "gpu_errors": []
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.0002928718457492866,
+        "relative_rmse": 0.000301191691982964,
+        "rmse_reinhard": 5.677661012600011e-05,
+        "maximum_absolute_error": 0.04094123840332031,
+        "reference_mean_rgb": [
+          0.30204893359210244,
+          0.276697437046883,
+          0.1926029817394965
+        ],
+        "candidate_mean_rgb": [
+          0.30204507938895886,
+          0.27669503424340514,
+          0.1926009439451549
+        ]
+      }
+    },
+    "restir-none": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "restir",
+        "--reuse",
+        "none",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.10540484570893795,
+        "rmse_reinhard": 0.0309128259454413
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30127535060063415,
+            0.27674602329662035,
+            0.19234177353726295
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09734441135628837,
+            "relative_rmse": 0.10010975239519952,
+            "rmse_reinhard": 0.030499294173964252,
+            "maximum_absolute_error": 8.844444274902344,
+            "reference_mean_rgb": [
+              0.30204893359210244,
+              0.276697437046883,
+              0.1926029817394965
+            ],
+            "candidate_mean_rgb": [
+              0.30127535060063415,
+              0.27674602329662035,
+              0.19234177353726295
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "AMD Radeon 780M Graphics",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3012764479279341,
+            0.2767460787146462,
+            0.1923418157776938
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09735132328980176,
+            "relative_rmse": 0.10011772113650831,
+            "rmse_reinhard": 0.03050073160511333,
+            "maximum_absolute_error": 8.84578788280487,
+            "reference_mean_rgb": [
+              0.30204507938895886,
+              0.27669503424340514,
+              0.1926009439451549
+            ],
+            "candidate_mean_rgb": [
+              0.3012764479279341,
+              0.2767460787146462,
+              0.1923418157776938
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 7.139615309752453e-05,
+        "relative_rmse": 7.319428521714364e-05,
+        "rmse_reinhard": 4.2332294992704025e-05,
+        "maximum_absolute_error": 0.012273073196411133,
+        "reference_mean_rgb": [
+          0.30127535060063415,
+          0.27674602329662035,
+          0.19234177353726295
+        ],
+        "candidate_mean_rgb": [
+          0.3012764479279341,
+          0.2767460787146462,
+          0.1923418157776938
+        ]
+      }
+    }
+  }
+}

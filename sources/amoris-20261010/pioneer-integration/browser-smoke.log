@@ -1,0 +1,26 @@
+<local-host> - - [10/Oct/2026 09:57:18] "GET /viewport/?demo=lod&n=10&detail=5&t=0.45&aa=off HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:18] "GET /viewport/viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:18] "GET /viewport/pkg/pocket_viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:18] "GET /viewport/pkg/pocket_viewport_bg.wasm HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:19] code 404, message File not found
+<local-host> - - [10/Oct/2026 09:57:19] "GET /favicon.ico HTTP/1.1" 404 -
+<local-host> - - [10/Oct/2026 09:57:26] "GET /viewport/?demo=lod&n=10&detail=5&t=0.45&aa=off&gpu_minimal=first-instance HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:26] "GET /viewport/viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:26] "GET /viewport/pkg/pocket_viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:26] "GET /viewport/pkg/pocket_viewport_bg.wasm HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:26] code 404, message File not found
+<local-host> - - [10/Oct/2026 09:57:26] "GET /favicon.ico HTTP/1.1" 404 -
+{"name": "lod-paths", "compare": ["first-instance", "baseline"], "paths": ["first-instance", "baseline"], "occlusion": ["auto-on", "auto-off"], "adapter": "apple metal-3", "entities": [52, 52], "id_readback_ms": [252, 264], "coverage_l1": 0.0, "only_first_instance": [], "only_baseline": [], "pixels": {"pixels": 138880, "differing_gt8": 1, "max_abs_diff": 30}}
+<local-host> - - [10/Oct/2026 09:57:34] "GET /viewport/?demo=lod&n=10&detail=5&t=0.45&aa=off&occlusion=off HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:34] "GET /viewport/viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:34] "GET /viewport/pkg/pocket_viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:34] "GET /viewport/pkg/pocket_viewport_bg.wasm HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:34] code 404, message File not found
+<local-host> - - [10/Oct/2026 09:57:34] "GET /favicon.ico HTTP/1.1" 404 -
+<local-host> - - [10/Oct/2026 09:57:41] "GET /viewport/?demo=lod&n=10&detail=5&t=0.45&aa=off&occlusion=on HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:41] "GET /viewport/viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:41] "GET /viewport/pkg/pocket_viewport.js HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:41] "GET /viewport/pkg/pocket_viewport_bg.wasm HTTP/1.1" 200 -
+<local-host> - - [10/Oct/2026 09:57:41] code 404, message File not found
+<local-host> - - [10/Oct/2026 09:57:41] "GET /favicon.ico HTTP/1.1" 404 -
+{"name": "lod-occlusion", "compare": ["off", "on"], "paths": ["first-instance", "first-instance"], "occlusion": ["off", "on"], "adapter": "apple metal-3", "entities": [52, 52], "id_readback_ms": [252, 256], "coverage_l1": 0.0, "only_off": [], "only_on": [], "pixels": {"pixels": 138880, "differing_gt8": 0, "max_abs_diff": 1, "kept": "lod-occlusion-off.png"}}

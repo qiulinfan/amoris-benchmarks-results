@@ -1,0 +1,1043 @@
+{
+  "tool": "tools/backend_compare.py",
+  "date": "2026-10-09 05:39",
+  "backends": [
+    "vulkan",
+    "dx12"
+  ],
+  "adapters": [
+    "nvidia",
+    "780m"
+  ],
+  "cases": {
+    "cubes-sphere": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-sphere-nvidia-vulkan.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 6.3
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-sphere-nvidia-dx12.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 5.2
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.252,
+          "psnr_db": 60.12,
+          "max_diff_8bit": 29,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.01,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-sphere-780m-vulkan.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 6.3
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-sphere-780m-dx12.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 6.8
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.25,
+          "psnr_db": 60.16,
+          "max_diff_8bit": 26,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.01,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.446,
+          "psnr_db": 55.15,
+          "max_diff_8bit": 32,
+          "pixels_over_percent": {
+            ">1": 0.04,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.01,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "cubes-dense": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-dense-nvidia-vulkan.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 3.4
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-dense-nvidia-dx12.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 4.4
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.261,
+          "psnr_db": 59.79,
+          "max_diff_8bit": 38,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-dense-780m-vulkan.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 4.6
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-dense-780m-dx12.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 4.9
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.241,
+          "psnr_db": 60.49,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.439,
+          "psnr_db": 55.28,
+          "max_diff_8bit": 38,
+          "pixels_over_percent": {
+            ">1": 0.04,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "cubes-shadows": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-shadows-nvidia-vulkan.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 0.8
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/cubes-shadows-nvidia-dx12.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 2.2
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.247,
+          "psnr_db": 60.27,
+          "max_diff_8bit": 13,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-shadows-780m-vulkan.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 0.9
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/cubes-shadows-780m-dx12.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 2.4
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.245,
+          "psnr_db": 60.36,
+          "max_diff_8bit": 14,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.447,
+          "psnr_db": 55.13,
+          "max_diff_8bit": 21,
+          "pixels_over_percent": {
+            ">1": 0.02,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "splats": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/splats-nvidia-vulkan.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 1.7
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/splats-nvidia-dx12.png",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 3.0
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.274,
+          "psnr_db": 59.36,
+          "max_diff_8bit": 9,
+          "pixels_over_percent": {
+            ">1": 0.02,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/splats-780m-vulkan.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 3.2
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/splats-780m-dx12.png",
+            "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, timestamps: true, shader_f16: true, float32_filterable: true }",
+            "ok": true,
+            "seconds": 3.7
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.234,
+          "psnr_db": 60.73,
+          "max_diff_8bit": 5,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.006,
+          "psnr_db": 93.18,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.472,
+          "psnr_db": 54.66,
+          "max_diff_8bit": 103,
+          "pixels_over_percent": {
+            ">1": 0.15,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "gi-room-static": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/gi-room-static-nvidia-vulkan.png",
+            "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+            "ok": true,
+            "seconds": 0.8
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/gi-room-static-nvidia-dx12.png",
+            "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+            "ok": true,
+            "seconds": 1.4
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.252,
+          "psnr_db": 60.09,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/gi-room-static-780m-vulkan.png",
+            "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+            "ok": true,
+            "seconds": 1.8
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/gi-room-static-780m-dx12.png",
+            "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+            "ok": true,
+            "seconds": 2.9
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.231,
+          "psnr_db": 60.84,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.446,
+          "psnr_db": 55.14,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "pt-lab-static": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/pt-lab-static-nvidia-vulkan.png",
+            "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+            "ok": true,
+            "seconds": 0.6
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/pt-lab-static-nvidia-dx12.png",
+            "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+            "ok": true,
+            "seconds": 2.0
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.266,
+          "psnr_db": 59.63,
+          "max_diff_8bit": 43,
+          "pixels_over_percent": {
+            ">1": 0.03,
+            ">16": 0.0,
+            ">2": 0.02,
+            ">32": 0.0,
+            ">4": 0.01,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/pt-lab-static-780m-vulkan.png",
+            "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+            "ok": true,
+            "seconds": 1.6
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/pt-lab-static-780m-dx12.png",
+            "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+            "ok": true,
+            "seconds": 1.6
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.249,
+          "psnr_db": 60.22,
+          "max_diff_8bit": 5,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.445,
+          "psnr_db": 55.15,
+          "max_diff_8bit": 38,
+          "pixels_over_percent": {
+            ">1": 0.04,
+            ">16": 0.0,
+            ">2": 0.02,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "sailing": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/sailing-nvidia-vulkan.png",
+            "capture": {
+              "world_tick": 120,
+              "tick": 0,
+              "instances": 5
+            },
+            "ok": true,
+            "seconds": 1.4
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/sailing-nvidia-dx12.png",
+            "capture": {
+              "world_tick": 120,
+              "tick": 0,
+              "instances": 5
+            },
+            "ok": true,
+            "seconds": 2.3
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.255,
+          "psnr_db": 59.99,
+          "max_diff_8bit": 9,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/sailing-780m-vulkan.png",
+            "capture": {
+              "world_tick": 120,
+              "tick": 0,
+              "instances": 5
+            },
+            "ok": true,
+            "seconds": 2.9
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/sailing-780m-dx12.png",
+            "capture": {
+              "world_tick": 120,
+              "tick": 0,
+              "instances": 5
+            },
+            "ok": true,
+            "seconds": 4.2
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 18.091,
+          "psnr_db": 22.98,
+          "max_diff_8bit": 215,
+          "pixels_over_percent": {
+            ">1": 55.7,
+            ">16": 24.2,
+            ">2": 50.49,
+            ">32": 12.54,
+            ">4": 43.62,
+            ">64": 1.87,
+            ">8": 34.84
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 19.043,
+          "psnr_db": 22.54,
+          "max_diff_8bit": 215,
+          "pixels_over_percent": {
+            ">1": 58.82,
+            ">16": 26.68,
+            ">2": 53.56,
+            ">32": 13.83,
+            ">4": 46.78,
+            ">64": 2.28,
+            ">8": 37.9
+          }
+        }
+      }
+    },
+    "anim": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/anim-nvidia-vulkan.png",
+            "capture": {
+              "world_tick": 90,
+              "tick": 0,
+              "instances": 22
+            },
+            "ok": true,
+            "seconds": 0.7
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/anim-nvidia-dx12.png",
+            "capture": {
+              "world_tick": 90,
+              "tick": 0,
+              "instances": 22
+            },
+            "ok": true,
+            "seconds": 1.7
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.242,
+          "psnr_db": 60.45,
+          "max_diff_8bit": 3,
+          "pixels_over_percent": {
+            ">1": 0.02,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/anim-780m-vulkan.png",
+            "capture": {
+              "world_tick": 90,
+              "tick": 0,
+              "instances": 22
+            },
+            "ok": true,
+            "seconds": 1.6
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/anim-780m-dx12.png",
+            "capture": {
+              "world_tick": 90,
+              "tick": 0,
+              "instances": 22
+            },
+            "ok": true,
+            "seconds": 2.9
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.244,
+          "psnr_db": 60.39,
+          "max_diff_8bit": 3,
+          "pixels_over_percent": {
+            ">1": 0.03,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.335,
+          "psnr_db": 57.62,
+          "max_diff_8bit": 21,
+          "pixels_over_percent": {
+            ">1": 0.58,
+            ">16": 0.01,
+            ">2": 0.45,
+            ">32": 0.0,
+            ">4": 0.29,
+            ">64": 0.0,
+            ">8": 0.1
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.458,
+          "psnr_db": 54.92,
+          "max_diff_8bit": 35,
+          "pixels_over_percent": {
+            ">1": 0.37,
+            ">16": 0.0,
+            ">2": 0.18,
+            ">32": 0.0,
+            ">4": 0.05,
+            ">64": 0.0,
+            ">8": 0.02
+          }
+        }
+      }
+    },
+    "gi-room": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/gi-room-nvidia-vulkan.png",
+            "capture": {
+              "world_tick": 60,
+              "tick": 0,
+              "instances": 8
+            },
+            "ok": true,
+            "seconds": 0.8
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "target/backend-compare/gi-room-nvidia-dx12.png",
+            "capture": {
+              "world_tick": 60,
+              "tick": 0,
+              "instances": 8
+            },
+            "ok": true,
+            "seconds": 1.4
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.252,
+          "psnr_db": 60.09,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "780m": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "780m",
+            "png": "target/backend-compare/gi-room-780m-vulkan.png",
+            "capture": {
+              "world_tick": 60,
+              "tick": 0,
+              "instances": 8
+            },
+            "ok": true,
+            "seconds": 0.6
+          },
+          {
+            "backend": "dx12",
+            "adapter": "780m",
+            "png": "target/backend-compare/gi-room-780m-dx12.png",
+            "capture": {
+              "world_tick": 60,
+              "tick": 0,
+              "instances": 8
+            },
+            "ok": true,
+            "seconds": 2.7
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.231,
+          "psnr_db": 60.84,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "noise": {
+        "backend": "vulkan",
+        "adapter": "nvidia",
+        "repeat_vs_first": {
+          "rmse_8bit": 0.0,
+          "psnr_db": null,
+          "max_diff_8bit": 0,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      },
+      "cross_adapter": {
+        "backend": "vulkan",
+        "adapters": [
+          "nvidia",
+          "780m"
+        ],
+        "second_vs_first": {
+          "rmse_8bit": 0.446,
+          "psnr_db": 55.14,
+          "max_diff_8bit": 2,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    }
+  }
+}

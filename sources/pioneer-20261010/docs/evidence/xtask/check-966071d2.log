@@ -1,0 +1,113 @@
+[1/16] deps
+       PASS in 5.7s
+[2/16] fmt
+       PASS in 1.7s
+[3/16] docs
+       PASS in 0.3s
+[4/16] clippy
+  clippy for x86_64-pc-windows-msvc
+  clippy for wasm32-unknown-unknown
+  clippy over the lint fixture
+       FAIL in 44.6s
+[5/16] build
+       PASS in 1m 21s
+[6/16] gen
+       PASS in 0.8s
+[7/16] test
+       FAIL in 3m 2s
+[8/16] wasm
+  wasm check of game crates
+  wasm check of pocket-web
+       PASS in 23.8s
+[9/16] types
+       PASS in 0.5s
+[10/16] determinism
+  determinism: building the debug pocket for the cross-build variant
+  determinism: the sailing chain of seed 1, release and debug
+       PASS in 1m 8s
+[11/16] fork
+       PASS in 1.5s
+[12/16] replay
+       PASS in 1.8s
+[13/16] reload
+       PASS in 1.6s
+[14/16] contract
+       SKIP in 0.0s
+[15/16] web
+  loading the check page (isolated)
+    DONE {"ok":true,"cross_origin_isolated":true,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":319.395,"skipped_publications":583,"max_unacked":1,"snapshots":50},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":225.74,"skipped_publications":599,"max_unacked":2,"snapshots":15},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":227.005,"skipped_publications":587,"max_unacked":1,"snapshots":40},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1261.84,"skipped_publications":230,"max_unacked":1,"snapshots":550}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":50.295,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":1.36,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":226.02,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":235.04,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":413.325,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":422.06,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":1.28,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":128.705,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.215,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.405,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.22,"unit":"ms","stat":"median","samples":30},{"name":"web.publish.sail","value":0.39,"unit":"ms","stat":"p95","samples":30},{"name":"web.hash.sail","value":0.125,"unit":"ms","stat":"median","samples":1170},{"name":"web.hash.sail","value":0.225,"unit":"ms","stat":"p95","samples":1170},{"name":"web.snapshot.rebuild","value":0.17,"unit":"ms","stat":"median","samples":90},{"name":"web.snapshot.rebuild","value":0.39,"unit":"ms","stat":"p95","samples":90},{"name":"web.snapshot.transfer","value":0.275,"unit":"ms","stat":"median","samples":90},{"name":"web.snapshot.transfer","value":8.275,"unit":"ms","stat":"p95","samples":90}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+  loading the check page (not isolated)
+    DONE {"ok":true,"cross_origin_isolated":false,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":320.5,"skipped_publications":582,"max_unacked":1,"snapshots":51},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":220.2,"skipped_publications":599,"max_unacked":2,"snapshots":15},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":221.7,"skipped_publications":587,"max_unacked":1,"snapshots":40},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1257.6,"skipped_publications":227,"max_unacked":1,"snapshots":550}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":66.6,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":1.4,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":122.9,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":131.2,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":279.9,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":288.4,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":1.2,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":130.9,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.2,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.4,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.2,"unit":"ms","stat":"median","samples":31},{"name":"web.publish.sail","value":0.4,"unit":"ms","stat":"p95","samples":31},{"name":"web.hash.sail","value":0.1,"unit":"ms","stat":"median","samples":1169},{"name":"web.hash.sail","value":0.2,"unit":"ms","stat":"p95","samples":1169},{"name":"web.snapshot.rebuild","value":0.2,"unit":"ms","stat":"median","samples":91},{"name":"web.snapshot.rebuild","value":0.3,"unit":"ms","stat":"p95","samples":91},{"name":"web.snapshot.transfer","value":0.3,"unit":"ms","stat":"median","samples":91},{"name":"web.snapshot.transfer","value":8.1,"unit":"ms","stat":"p95","samples":91}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+  loading the check page (isolated, wasm-opt -O3)
+    DONE {"ok":true,"cross_origin_isolated":true,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":382.85,"skipped_publications":582,"max_unacked":1,"snapshots":53},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":247.05,"skipped_publications":599,"max_unacked":2,"snapshots":17},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":161.58,"skipped_publications":590,"max_unacked":1,"snapshots":30},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1255.725,"skipped_publications":215,"max_unacked":1,"snapshots":565}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":63.64,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":1.38,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":210.295,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":229.11,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":370.07,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":377.84,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":1.695,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":123.375,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.19,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.395,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.19,"unit":"ms","stat":"median","samples":28},{"name":"web.publish.sail","value":0.69,"unit":"ms","stat":"p95","samples":28},{"name":"web.hash.sail","value":0.11,"unit":"ms","stat":"median","samples":1172},{"name":"web.hash.sail","value":0.2,"unit":"ms","stat":"p95","samples":1172},{"name":"web.snapshot.rebuild","value":0.145,"unit":"ms","stat":"median","samples":83},{"name":"web.snapshot.rebuild","value":0.27,"unit":"ms","stat":"p95","samples":83},{"name":"web.snapshot.transfer","value":0.28,"unit":"ms","stat":"median","samples":83},{"name":"web.snapshot.transfer","value":8.155,"unit":"ms","stat":"p95","samples":83}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+       PASS in 7m 51s
+[16/16] perf
+       SKIP in 0.0s
+PASS  deps            5.7s  19 workspace crates, 369 external packages, 2 targets; QuickJS-ng as its pins and patches give it
+PASS  fmt             1.7s  formatted
+PASS  docs            0.3s  52 Markdown files under docs/ (not docs/evidence/), 0 need wrapping
+FAIL  clippy         44.6s  diagnostics: 28 on x86_64-pc-windows-msvc, 3 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported
+PASS  build         1m 21s  native release build
+PASS  gen             0.8s  8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet
+FAIL  test           3m 2s  487 passed, 1 failed, 0 ignored in 82 suites, ignored tests included
+PASS  wasm           23.8s  checked for wasm32-unknown-unknown: game crates, pocket-web
+PASS  types           0.5s  2 projects
+PASS  determinism    1m 8s  1 projects; cross build against a debug pocket
+PASS  fork            1.5s  1 projects
+PASS  replay          1.8s  1 projects
+PASS  reload          1.6s  3 projects
+SKIP  contract        0.0s  skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet
+PASS  web           7m 51s  samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]
+SKIP  perf            0.0s  skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)
+
+clippy:
+  clippy.warning: crates/pocket-render/src/gi/bake.rs:597: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":597,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/bake.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:438: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":438,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1450: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1450,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1475: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1475,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1486: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1486,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1507: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1507,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1542: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1542,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1553: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1553,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/rt.rs:1189: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1189,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/rt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/rt.rs:1214: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1214,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/rt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/rt.rs:1225: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1225,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/rt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/rt.rs:1236: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1236,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/gi/rt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/renderer.rs:1845: using `chunks_exact` with a constant chunk size
+    {"crate":"pocket-render","line":1845,"lint":"clippy::chunks_exact_to_as_chunks","message":"using `chunks_exact` with a constant chunk size","path":"crates/pocket-render/src/renderer.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/bake.rs:303: this `if` statement can be collapsed
+    {"crate":"pocket-render","line":303,"lint":"clippy::collapsible_if","message":"this `if` statement can be collapsed","path":"crates/pocket-render/src/gi/bake.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1312: this `if` statement can be collapsed
+    {"crate":"pocket-render","line":1312,"lint":"clippy::collapsible_if","message":"this `if` statement can be collapsed","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/sky_radiance.rs:63: this `if` statement can be collapsed
+    {"crate":"pocket-render","line":63,"lint":"clippy::collapsible_if","message":"this `if` statement can be collapsed","path":"crates/pocket-render/src/gi/sky_radiance.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/renderer.rs:1690: this `if` statement can be collapsed
+    {"crate":"pocket-render","line":1690,"lint":"clippy::collapsible_if","message":"this `if` statement can be collapsed","path":"crates/pocket-render/src/renderer.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/renderer.rs:1836: this `if` statement can be collapsed
+    {"crate":"pocket-render","line":1836,"lint":"clippy::collapsible_if","message":"this `if` statement can be collapsed","path":"crates/pocket-render/src/renderer.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1686: field assignment outside of initializer for an instance created with Default::default()
+    {"crate":"pocket-render","line":1686,"lint":"clippy::field_reassign_with_default","message":"field assignment outside of initializer for an instance created with Default::default()","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  clippy.warning: crates/pocket-render/src/gi/pt.rs:1710: field assignment outside of initializer for an instance created with Default::default()
+    {"crate":"pocket-render","line":1710,"lint":"clippy::field_reassign_with_default","message":"field assignment outside of initializer for an instance created with Default::default()","path":"crates/pocket-render/src/gi/pt.rs","target":"x86_64-pc-windows-msvc"}
+  ... and 11 more
+  log: out/check/clippy.log
+
+test:
+  test.failed: pocket_render gi::pt::tests::metal_pt_transport_training_and_accumulation failed
+    {"crate":"pocket_render","message":"thread 'gi::pt::tests::metal_pt_transport_training_and_accumulation' (9184) panicked at crates\\pocket-render\\src\\gi\\pt.rs:1741:62:\ncalled `Result::unwrap()` on an `Err` value: GpuError(\"no GPU adapter: No suitable graphics adapter found; noop not requested, vulkan not requested, metal support not compiled in, dx12 not requested, gl not requested, webgpu not requested\")\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace","test":"gi::pt::tests::metal_pt_transport_training_and_accumulation"}
+  log: out/check/test.log
+
+FAIL  (2 failed, 0 inconclusive, 12 passed, 2 skipped) in 14m 46s; report: out/check/report.json
+Checked: fail full; deps ok; perf skip

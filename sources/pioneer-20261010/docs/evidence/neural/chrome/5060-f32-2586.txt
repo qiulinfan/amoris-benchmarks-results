@@ -1,0 +1,38 @@
+{
+  "url": "<local-endpoint>",
+  "frames": 300,
+  "frame_ms_mean": 6.574719444444445,
+  "frame_ms_p50": 6.555000000000003,
+  "frame_ms_p95": 6.7,
+  "gpu_ms_mean": 6.322053333333359,
+  "render_ms_mean": 4.2463333344459535,
+  "backend": "WebGPU",
+  "passes": [
+    {
+      "pass": "cull",
+      "ms": 0.006
+    },
+    {
+      "pass": "lights",
+      "ms": 0.003
+    },
+    {
+      "pass": "opaque+sky",
+      "ms": 5.543
+    }
+  ],
+  "draw_path": "first-instance",
+  "draw_calls": 1,
+  "instances": 1,
+  "occlusion": "off",
+  "occluded": 0,
+  "canvas": [
+    2560,
+    1440
+  ],
+  "gpu": "yes"
+}
+eval: {"opaque_p50":5.811,"opaque_p10":5.543,"opaque_p90":6.355,"readings":5,"canvas":[2560,1440]}
+[log] [pocket INFO] limits: buffer 2048 MB, storage binding 2047 MB, storage buffers/stage 16, texture 2D 16384
+[log] [pocket INFO] GPU:  (BrowserWebGpu, Other); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: false, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+[log] [pocket INFO] neural texture bricks.ntex: 1024x1024, 9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9 (single precision)

@@ -1,0 +1,64 @@
+[1/16] deps
+       PASS in 6.5s
+[2/16] fmt
+       PASS in 1.6s
+[3/16] docs
+       PASS in 1.0s
+[4/16] clippy
+  clippy for x86_64-pc-windows-msvc
+  clippy for wasm32-unknown-unknown
+  clippy over the lint fixture
+       PASS in 21.9s
+[5/16] build
+       PASS in 1m 9s
+[6/16] gen
+       PASS in 8.4s
+[7/16] test
+       PASS in 2m 45s
+[8/16] wasm
+  wasm check of game crates
+  wasm check of pocket-web
+       PASS in 4.5s
+[9/16] types
+       PASS in 0.5s
+[10/16] determinism
+  determinism: building the debug pocket for the cross-build variant
+  determinism: the sailing chain of seed 1, release and debug
+       PASS in 52.1s
+[11/16] fork
+       PASS in 0.9s
+[12/16] replay
+       PASS in 1.3s
+[13/16] reload
+       PASS in 0.7s
+[14/16] contract
+       SKIP in 0.0s
+[15/16] web
+  loading the check page (isolated)
+    DONE {"ok":true,"cross_origin_isolated":true,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":230.64,"skipped_publications":587,"max_unacked":1,"snapshots":37},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":150.1,"skipped_publications":599,"max_unacked":2,"snapshots":11},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":212.76,"skipped_publications":587,"max_unacked":1,"snapshots":39},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1256.91,"skipped_publications":211,"max_unacked":1,"snapshots":573}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":53.295,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":1.36,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":214.105,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":221.84,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":378.735,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":384.385,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":1.01,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":109.775,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.19,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.31,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.155,"unit":"ms","stat":"median","samples":26},{"name":"web.publish.sail","value":0.335,"unit":"ms","stat":"p95","samples":26},{"name":"web.hash.sail","value":0.115,"unit":"ms","stat":"median","samples":1174},{"name":"web.hash.sail","value":0.18,"unit":"ms","stat":"p95","samples":1174},{"name":"web.snapshot.rebuild","value":0.15,"unit":"ms","stat":"median","samples":76},{"name":"web.snapshot.rebuild","value":0.245,"unit":"ms","stat":"p95","samples":76},{"name":"web.snapshot.transfer","value":0.255,"unit":"ms","stat":"median","samples":76},{"name":"web.snapshot.transfer","value":8.3,"unit":"ms","stat":"p95","samples":76}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+  loading the check page (not isolated)
+    DONE {"ok":true,"cross_origin_isolated":false,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":260.2,"skipped_publications":585,"max_unacked":1,"snapshots":43},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":141.3,"skipped_publications":599,"max_unacked":2,"snapshots":10},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":144.1,"skipped_publications":591,"max_unacked":1,"snapshots":27},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1256.1,"skipped_publications":203,"max_unacked":1,"snapshots":577}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":50.8,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":1.2,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":102.4,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":108.9,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":225.5,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":230.7,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":0.7,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":103.4,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.2,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.3,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.2,"unit":"ms","stat":"median","samples":24},{"name":"web.publish.sail","value":0.4,"unit":"ms","stat":"p95","samples":24},{"name":"web.hash.sail","value":0.1,"unit":"ms","stat":"median","samples":1176},{"name":"web.hash.sail","value":0.2,"unit":"ms","stat":"p95","samples":1176},{"name":"web.snapshot.rebuild","value":0.1,"unit":"ms","stat":"median","samples":70},{"name":"web.snapshot.rebuild","value":0.4,"unit":"ms","stat":"p95","samples":70},{"name":"web.snapshot.transfer","value":0.2,"unit":"ms","stat":"median","samples":70},{"name":"web.snapshot.transfer","value":8.1,"unit":"ms","stat":"p95","samples":70}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+  loading the check page (isolated, wasm-opt -O3)
+    DONE {"ok":true,"cross_origin_isolated":true,"runs":[{"variant":"stepped","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":369.19,"skipped_publications":580,"max_unacked":1,"snapshots":54},{"variant":"stepped, late acks","seed":2,"ticks":600,"identical":true,"final_hash":"f841c2c9cb82af309334aaed53b6746c","run_ms":210.16,"skipped_publications":599,"max_unacked":2,"snapshots":15},{"variant":"stepped","seed":3,"ticks":600,"identical":true,"final_hash":"0ac570f16b6928c901de74062fd80011","run_ms":145.005,"skipped_publications":591,"max_unacked":1,"snapshots":27},{"variant":"real time x8","seed":1,"ticks":600,"identical":true,"final_hash":"556e154d2907bb32d3f947449c925a66","run_ms":1266.74,"skipped_publications":207,"max_unacked":1,"snapshots":573}],"ordering":{"orders":6,"identical":true,"world_hash":"0a4e77e1da5cb0760aa6c3aaadec169b"},"controls":[],"replays":[{"replay":"projects/samples-sailing/samples-sailing-1.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-2.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null},{"replay":"projects/samples-sailing/samples-sailing-3.p3dreplay","ticks_run":600,"identical":true,"divergence":null,"stopped":null}],"errors":[],"warnings":[],"measurements":[{"name":"web.start.compile","value":38.79,"unit":"ms","stat":"value","samples":1},{"name":"web.start.instantiate_page","value":0.97,"unit":"ms","stat":"value","samples":1},{"name":"web.start.module_ready","value":173.28,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_created","value":192.02,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_ready","value":295.325,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.first_snapshot","value":302.135,"unit":"ms","stat":"since navigation","samples":1},{"name":"web.start.worker_instantiate","value":0.755,"unit":"ms","stat":"value","samples":1},{"name":"web.start.game_build","value":90.435,"unit":"ms","stat":"value","samples":1},{"name":"web.tick.sail","value":0.17,"unit":"ms","stat":"median","samples":1200},{"name":"web.tick.sail","value":0.38,"unit":"ms","stat":"p95","samples":1200},{"name":"web.publish.sail","value":0.185,"unit":"ms","stat":"median","samples":29},{"name":"web.publish.sail","value":0.555,"unit":"ms","stat":"p95","samples":29},{"name":"web.hash.sail","value":0.095,"unit":"ms","stat":"median","samples":1171},{"name":"web.hash.sail","value":0.2,"unit":"ms","stat":"p95","samples":1171},{"name":"web.snapshot.rebuild","value":0.16,"unit":"ms","stat":"median","samples":81},{"name":"web.snapshot.rebuild","value":0.235,"unit":"ms","stat":"p95","samples":81},{"name":"web.snapshot.transfer","value":0.285,"unit":"ms","stat":"median","samples":81},{"name":"web.snapshot.transfer","value":8.21,"unit":"ms","stat":"p95","samples":81}],"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"}
+       PASS in 1m 41s
+[16/16] perf
+       SKIP in 0.0s
+PASS  deps            6.5s  19 workspace crates, 369 external packages, 2 targets; QuickJS-ng as its pins and patches give it
+PASS  fmt             1.6s  formatted
+PASS  docs            1.0s  52 Markdown files under docs/ (not docs/evidence/), 0 need wrapping
+PASS  clippy         21.9s  diagnostics: 0 on x86_64-pc-windows-msvc, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported
+PASS  build          1m 9s  native release build
+PASS  gen             8.4s  8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet
+PASS  test          2m 45s  487 passed, 0 failed, 0 ignored in 82 suites, ignored tests included
+PASS  wasm            4.5s  checked for wasm32-unknown-unknown: game crates, pocket-web
+PASS  types           0.5s  2 projects
+PASS  determinism    52.1s  1 projects; cross build against a debug pocket
+PASS  fork            0.9s  1 projects
+PASS  replay          1.3s  1 projects
+PASS  reload          0.7s  3 projects
+SKIP  contract        0.0s  skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet
+PASS  web           1m 41s  samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]
+SKIP  perf            0.0s  skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)
+
+PASS  (0 failed, 0 inconclusive, 14 passed, 2 skipped) in 7m 15s; report: out/check/report.json
+Checked: pass full; deps ok; perf skip

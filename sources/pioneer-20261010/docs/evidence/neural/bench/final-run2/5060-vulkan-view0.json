@@ -1,0 +1,145 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "backend": "Vulkan",
+  "bench": "neural texture decode",
+  "driver": "NVIDIA 617.14",
+  "frames": 150,
+  "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+  "ntex": "out/neural/final/default/bricks.ntex",
+  "results": [
+    {
+      "size": [
+        1920,
+        1080
+      ],
+      "variants": {
+        "inline": {
+          "gpu_ms": {
+            "mean": 0.279,
+            "p10": 0.277,
+            "p50": 0.279,
+            "p90": 0.282
+          },
+          "opaque_ms": {
+            "mean": 0.271,
+            "p10": 0.269,
+            "p50": 0.27,
+            "p90": 0.272
+          }
+        },
+        "neural_f16": {
+          "gpu_ms": {
+            "mean": 1.965,
+            "p10": 1.952,
+            "p50": 1.966,
+            "p90": 1.976
+          },
+          "opaque_ms": {
+            "mean": 1.957,
+            "p10": 1.945,
+            "p50": 1.957,
+            "p90": 1.967
+          }
+        },
+        "neural_f32": {
+          "gpu_ms": {
+            "mean": 2.537,
+            "p10": 2.481,
+            "p50": 2.543,
+            "p90": 2.592
+          },
+          "opaque_ms": {
+            "mean": 2.528,
+            "p10": 2.472,
+            "p50": 2.534,
+            "p90": 2.582
+          }
+        },
+        "textured": {
+          "gpu_ms": {
+            "mean": 0.303,
+            "p10": 0.296,
+            "p50": 0.304,
+            "p90": 0.305
+          },
+          "opaque_ms": {
+            "mean": 0.295,
+            "p10": 0.288,
+            "p50": 0.296,
+            "p90": 0.297
+          }
+        }
+      }
+    },
+    {
+      "size": [
+        2560,
+        1440
+      ],
+      "variants": {
+        "inline": {
+          "gpu_ms": {
+            "mean": 0.511,
+            "p10": 0.508,
+            "p50": 0.511,
+            "p90": 0.513
+          },
+          "opaque_ms": {
+            "mean": 0.501,
+            "p10": 0.498,
+            "p50": 0.5,
+            "p90": 0.503
+          }
+        },
+        "neural_f16": {
+          "gpu_ms": {
+            "mean": 3.899,
+            "p10": 3.54,
+            "p50": 3.58,
+            "p90": 4.647
+          },
+          "opaque_ms": {
+            "mean": 3.89,
+            "p10": 3.53,
+            "p50": 3.571,
+            "p90": 4.637
+          }
+        },
+        "neural_f32": {
+          "gpu_ms": {
+            "mean": 5.314,
+            "p10": 4.837,
+            "p50": 4.954,
+            "p90": 6.406
+          },
+          "opaque_ms": {
+            "mean": 5.305,
+            "p10": 4.828,
+            "p50": 4.944,
+            "p90": 6.396
+          }
+        },
+        "textured": {
+          "gpu_ms": {
+            "mean": 0.526,
+            "p10": 0.522,
+            "p50": 0.526,
+            "p90": 0.529
+          },
+          "opaque_ms": {
+            "mean": 0.517,
+            "p10": 0.513,
+            "p50": 0.517,
+            "p90": 0.52
+          }
+        }
+      }
+    }
+  ],
+  "source": "procedural:bricks",
+  "texture": [
+    1024,
+    1024
+  ],
+  "view": 0
+}

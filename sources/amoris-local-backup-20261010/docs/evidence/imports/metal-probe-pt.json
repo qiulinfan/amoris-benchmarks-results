@@ -1,0 +1,145 @@
+{
+  "recorded_at_utc": "2026-10-10T13:38:36.669712+00:00",
+  "source_repository": "qiulinfan/amoris-pioneer",
+  "source_commit": "9a3e4b0814959629202629845b85205c42086505",
+  "repair": "Complete immutable BLAS builds before encoding dependent TLAS builds on Metal only",
+  "scope": [
+    "crates/pocket-render/examples/ray_query_probe.rs",
+    "crates/pocket-render/src/gi/pt.rs"
+  ],
+  "validation": {
+    "cpu_compile": "release locked libtest and ray_query_probe example compile passed",
+    "format": "cargo fmt --all -- --check and scoped git diff --check passed",
+    "gpu_probe": [
+      {
+        "repeat": 1,
+        "passed": true,
+        "supported": true,
+        "case_count": 7,
+        "gpu_errors": [],
+        "adapter": {
+          "backend": "Metal",
+          "name": "Apple M5"
+        }
+      },
+      {
+        "repeat": 2,
+        "passed": true,
+        "supported": true,
+        "case_count": 7,
+        "gpu_errors": [],
+        "adapter": {
+          "backend": "Metal",
+          "name": "Apple M5"
+        }
+      },
+      {
+        "repeat": 3,
+        "passed": true,
+        "supported": true,
+        "case_count": 7,
+        "gpu_errors": [],
+        "adapter": {
+          "backend": "Metal",
+          "name": "Apple M5"
+        }
+      }
+    ],
+    "gpu_pt": {
+      "test": "gi::pt::tests::ray_query_pt_transport_training_and_accumulation",
+      "fresh_process_repeats": 3,
+      "passed": 3,
+      "first_module_run": {
+        "passed": 5,
+        "gpu_tests": 1,
+        "cpu_tests": 4
+      },
+      "failed": 0,
+      "ignored": 0,
+      "adapter": {
+        "backend": "Metal",
+        "name": "Apple M5"
+      }
+    },
+    "receipts": [
+      {
+        "run": "probe-1",
+        "command": [
+          "target/release/examples/ray_query_probe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "run": "pt-1",
+        "command": [
+          "<review-workspace>/metal-splat-fix/target/release/deps/pocket_render-be25e615e070b172",
+          "gi::pt::tests",
+          "--test-threads=1",
+          "--nocapture"
+        ],
+        "exit_code": 0
+      },
+      {
+        "run": "probe-2",
+        "command": [
+          "target/release/examples/ray_query_probe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "run": "pt-2",
+        "command": [
+          "<review-workspace>/metal-splat-fix/target/release/deps/pocket_render-be25e615e070b172",
+          "gi::pt::tests::ray_query_pt_transport_training_and_accumulation",
+          "--exact",
+          "--test-threads=1",
+          "--nocapture"
+        ],
+        "exit_code": 0
+      },
+      {
+        "run": "probe-3",
+        "command": [
+          "target/release/examples/ray_query_probe"
+        ],
+        "exit_code": 0
+      },
+      {
+        "run": "pt-3",
+        "command": [
+          "<review-workspace>/metal-splat-fix/target/release/deps/pocket_render-be25e615e070b172",
+          "gi::pt::tests::ray_query_pt_transport_training_and_accumulation",
+          "--exact",
+          "--test-threads=1",
+          "--nocapture"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "no_shader_test_assertion_threshold_changes": true,
+    "no_registry_changes": true,
+    "no_bless": true,
+    "not_a_performance_benchmark": true,
+    "non_metal_runtime_not_tested": "Original combined-build branch preserved; compile checked only",
+    "full_integrated_workspace_gate": "Parent runs after applying this patch"
+  },
+  "bounded_wait_seconds": {
+    "probe": 30,
+    "pt_existing_helper": 120
+  },
+  "as_scope_audit": {
+    "searched": "rg build_acceleration_structures across crates/**/*.rs in parent integration tree",
+    "actual_call_sites": [
+      "rt_shadows.rs static/masked and skinned",
+      "gi/rt.rs",
+      "gi/pt.rs",
+      "examples/ray_query_probe.rs"
+    ],
+    "status": "After this patch, all four producers have a Metal completion boundary before a dependent TLAS build. rt_shadows already repaired by sibling; gi/rt already repaired and applied."
+  },
+  "upstream_sources": [
+    "https://github.com/gfx-rs/wgpu/issues/9215",
+    "https://github.com/gfx-rs/wgpu/pull/9645",
+    "https://github.com/gfx-rs/wgpu/pull/10292"
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "tool": "tools/occlusion_bench.py",
+  "date": "2026-10-09 09:30",
+  "frames": 400,
+  "size": "1280x720",
+  "provisional": true,
+  "runs": [
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.411,
+        "p50": 0.388,
+        "p95": 0.613
+      },
+      "device_ms": 2699.3,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1340.6,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 2.337,
+        "p50": 2.221,
+        "p95": 2.714
+      },
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 396,
+        "auto-on": 4
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187515,
+        "frustum_triangles": 2250180,
+        "late": 463,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.168,
+        "hi-z": 0.07,
+        "lights": 0.003,
+        "opaque early": 1.529,
+        "opaque+sky": 1.929
+      },
+      "renderer_new_ms": 100.9,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 3.011,
+        "p50": 2.948,
+        "p95": 3.355
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "bench": "many_cubes dense",
+      "cpu_encode_ms": {
+        "mean": 0.424,
+        "p50": 0.406,
+        "p95": 0.613
+      },
+      "device_ms": 402.6,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1408.5,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 0.874,
+        "p50": 0.87,
+        "p95": 0.924
+      },
+      "instances": 1600000,
+      "occluded_triangle_share": {
+        "mean": 0.999,
+        "p50": 0.999,
+        "p95": 0.999
+      },
+      "occlusion_frames": {
+        "auto-on": 400
+      },
+      "occlusion_last": {
+        "early": 443,
+        "frustum": 481933,
+        "frustum_triangles": 5783196,
+        "late": 0,
+        "occluded": 481490,
+        "occluded_triangles": 5777880
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.335,
+        "cull late": 0.162,
+        "hi-z": 0.063,
+        "lights": 0.003,
+        "opaque early": 0.282,
+        "opaque+sky": 0.029
+      },
+      "renderer_new_ms": 91.3,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 1.561,
+        "p50": 1.537,
+        "p95": 1.773
+      },
+      "layout": "dense",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "bench": "many_cubes orbit",
+      "cpu_encode_ms": {
+        "mean": 0.459,
+        "p50": 0.449,
+        "p95": 0.581
+      },
+      "device_ms": 408.3,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1401.9,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 2.52,
+        "p50": 2.434,
+        "p95": 3.486
+      },
+      "instances": 1600000,
+      "occluded_triangle_share": {
+        "mean": 0.92,
+        "p50": 0.936,
+        "p95": 0.939
+      },
+      "occlusion_frames": {
+        "auto-on": 400
+      },
+      "occlusion_last": {
+        "early": 102155,
+        "frustum": 1600000,
+        "frustum_triangles": 19200000,
+        "late": 7456,
+        "occluded": 1497973,
+        "occluded_triangles": 17975676
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.373,
+        "cull late": 0.371,
+        "hi-z": 0.067,
+        "lights": 0.003,
+        "opaque early": 1.446,
+        "opaque+sky": 0.261
+      },
+      "renderer_new_ms": 104.0,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 3.259,
+        "p50": 3.214,
+        "p95": 4.238
+      },
+      "layout": "orbit",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.728,
+        "p50": 0.658,
+        "p95": 1.085
+      },
+      "device_ms": 395.7,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1620.9,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 7.8,
+        "p50": 7.723,
+        "p95": 8.265
+      },
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 396,
+        "auto-on": 4
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187515,
+        "frustum_triangles": 2250180,
+        "late": 463,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.495,
+        "cull late": 0.625,
+        "hi-z": 0.515,
+        "lights": 0.004,
+        "opaque early": 4.802,
+        "opaque+sky": 6.241
+      },
+      "renderer_new_ms": 106.7,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 9.412,
+        "p50": 9.397,
+        "p95": 10.097
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "bench": "many_cubes dense",
+      "cpu_encode_ms": {
+        "mean": 0.681,
+        "p50": 0.659,
+        "p95": 0.954
+      },
+      "device_ms": 396.2,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1544.2,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 4.993,
+        "p50": 4.795,
+        "p95": 5.561
+      },
+      "instances": 1600000,
+      "occluded_triangle_share": {
+        "mean": 0.999,
+        "p50": 0.999,
+        "p95": 0.999
+      },
+      "occlusion_frames": {
+        "auto-on": 400
+      },
+      "occlusion_last": {
+        "early": 443,
+        "frustum": 481933,
+        "frustum_triangles": 5783196,
+        "late": 0,
+        "occluded": 481490,
+        "occluded_triangles": 5777880
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.615,
+        "cull late": 0.647,
+        "hi-z": 0.323,
+        "lights": 0.005,
+        "opaque early": 1.525,
+        "opaque+sky": 0.878
+      },
+      "renderer_new_ms": 104.5,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 6.28,
+        "p50": 6.196,
+        "p95": 7.237
+      },
+      "layout": "dense",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "bench": "many_cubes orbit",
+      "cpu_encode_ms": {
+        "mean": 0.743,
+        "p50": 0.725,
+        "p95": 0.977
+      },
+      "device_ms": 422.9,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1630.6,
+      "frames": 400,
+      "gpu_ms": {
+        "mean": 7.957,
+        "p50": 7.704,
+        "p95": 9.38
+      },
+      "instances": 1600000,
+      "occluded_triangle_share": {
+        "mean": 0.92,
+        "p50": 0.936,
+        "p95": 0.939
+      },
+      "occlusion_frames": {
+        "auto-on": 400
+      },
+      "occlusion_last": {
+        "early": 102155,
+        "frustum": 1600000,
+        "frustum_triangles": 19200000,
+        "late": 7456,
+        "occluded": 1497974,
+        "occluded_triangles": 17975688
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.654,
+        "cull late": 1.53,
+        "hi-z": 0.417,
+        "lights": 0.006,
+        "opaque early": 3.104,
+        "opaque+sky": 1.246
+      },
+      "renderer_new_ms": 107.3,
+      "size": [
+        1280,
+        720
+      ],
+      "submit_to_idle_ms": {
+        "mean": 9.516,
+        "p50": 9.373,
+        "p95": 11.028
+      },
+      "layout": "orbit",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    }
+  ]
+}

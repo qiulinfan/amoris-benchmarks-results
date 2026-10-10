@@ -1,0 +1,386 @@
+{
+  "tool": "tools/backend_bench.py",
+  "date": "2026-10-09 22:11",
+  "provisional": "single-agent: no other agent; AC power; Balanced plan; windowed 2560x1440 physical; conditions-04-before-window-rtx5060.json",
+  "builds": {
+    "master": "$EXPERIMENT_ROOT/master-src",
+    "branch": "."
+  },
+  "settle_s": 0.0,
+  "frames": 300,
+  "splat_frames": 100,
+  "runs": [
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 19.6,
+      "build": "master",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 43.2660434251496,
+        "frame_ms_p50": 43.734800070524216,
+        "frame_ms_p95": 45.22579908370972,
+        "gpu_ms_mean": 42.52900793711344,
+        "cpu_ms_mean": 0.975854331056277,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.7705919742584229,
+          "lights": 0.02828799933195114,
+          "opaque+sky": 42.77062225341797
+        }
+      },
+      "headline": [
+        43.734800070524216,
+        42.52900793711344,
+        0.975854331056277
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 18.3,
+      "build": "branch",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 39.06427536159754,
+        "frame_ms_p50": 37.19570115208626,
+        "frame_ms_p95": 45.134998857975006,
+        "gpu_ms_mean": 38.22964525858561,
+        "cpu_ms_mean": 0.7406283348798752,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.8861119747161865,
+          "lights": 0.028255999088287354,
+          "opaque+sky": 41.57942581176758
+        }
+      },
+      "headline": [
+        37.19570115208626,
+        38.22964525858561,
+        0.7406283348798752
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 23.0,
+      "build": "master",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.063932025184236,
+        "frame_ms_p50": 51.086101680994034,
+        "frame_ms_p95": 52.87159979343414,
+        "gpu_ms_mean": 50.518720156351726,
+        "cpu_ms_mean": 1.3592603313922882,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.4108799993991852,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 49.73225784301758
+        }
+      },
+      "headline": [
+        51.086101680994034,
+        50.518720156351726,
+        1.3592603313922882
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 22.1,
+      "build": "branch",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.29644550383091,
+        "frame_ms_p50": 51.24950036406517,
+        "frame_ms_p95": 53.43009904026985,
+        "gpu_ms_mean": 50.78083119710286,
+        "cpu_ms_mean": 0.9454523346821467,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.41123199462890625,
+          "lights": 6.399999983841553e-05,
+          "opaque+sky": 50.579681396484375
+        }
+      },
+      "headline": [
+        51.24950036406517,
+        50.78083119710286,
+        0.9454523346821467
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 18.2,
+      "build": "master",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 41.22393138706684,
+        "frame_ms_p50": 42.974699288606644,
+        "frame_ms_p95": 45.72390019893646,
+        "gpu_ms_mean": 40.35542308807373,
+        "cpu_ms_mean": 1.0118659993012746,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.7251520156860352,
+          "lights": 0.028416000306606293,
+          "opaque+sky": 32.64060974121094
+        }
+      },
+      "headline": [
+        42.974699288606644,
+        40.35542308807373,
+        1.0118659993012746
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 17.6,
+      "build": "branch",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 39.11744236946106,
+        "frame_ms_p50": 37.12119907140732,
+        "frame_ms_p95": 45.283399522304535,
+        "gpu_ms_mean": 38.30432181040446,
+        "cpu_ms_mean": 0.7463820010423661,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.9098560214042664,
+          "lights": 0.023520000278949738,
+          "opaque+sky": 41.70787048339844
+        }
+      },
+      "headline": [
+        37.12119907140732,
+        38.30432181040446,
+        0.7463820010423661
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 23.0,
+      "build": "master",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.19975299884876,
+        "frame_ms_p50": 51.13619938492775,
+        "frame_ms_p95": 53.07469889521599,
+        "gpu_ms_mean": 50.65687338511149,
+        "cpu_ms_mean": 1.4663366667429607,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.41171199083328247,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 50.62905502319336
+        }
+      },
+      "headline": [
+        51.13619938492775,
+        50.65687338511149,
+        1.4663366667429607
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 22.3,
+      "build": "branch",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.30866835514704,
+        "frame_ms_p50": 51.34990066289902,
+        "frame_ms_p95": 53.290098905563354,
+        "gpu_ms_mean": 50.78702134450277,
+        "cpu_ms_mean": 0.9683936629692713,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.41251200437545776,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 49.77967834472656
+        }
+      },
+      "headline": [
+        51.34990066289902,
+        50.78702134450277,
+        0.9683936629692713
+      ]
+    },
+    {
+      "round": 2,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 18.2,
+      "build": "master",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 41.141147737701736,
+        "frame_ms_p50": 43.06560009717941,
+        "frame_ms_p95": 45.600298792123795,
+        "gpu_ms_mean": 40.39869716644287,
+        "cpu_ms_mean": 0.975536333322525,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.727840006351471,
+          "lights": 0.027615999802947044,
+          "opaque+sky": 33.54636764526367
+        }
+      },
+      "headline": [
+        43.06560009717941,
+        40.39869716644287,
+        0.975536333322525
+      ]
+    },
+    {
+      "round": 2,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 16.8,
+      "build": "branch",
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 36.962814033031464,
+        "frame_ms_p50": 35.833798348903656,
+        "frame_ms_p95": 45.46720162034035,
+        "gpu_ms_mean": 35.84941023508708,
+        "cpu_ms_mean": 0.854655334353447,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.49983999133110046,
+          "lights": 0.004608000162988901,
+          "opaque+sky": 35.152286529541016
+        }
+      },
+      "headline": [
+        35.833798348903656,
+        35.84941023508708,
+        0.854655334353447
+      ]
+    },
+    {
+      "round": 2,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 23.0,
+      "build": "master",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.210175243516765,
+        "frame_ms_p50": 51.152098923921585,
+        "frame_ms_p95": 53.21099981665611,
+        "gpu_ms_mean": 50.662626571655274,
+        "cpu_ms_mean": 1.348018665711085,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.4115520119667053,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 50.538047790527344
+        }
+      },
+      "headline": [
+        51.152098923921585,
+        50.662626571655274,
+        1.348018665711085
+      ]
+    },
+    {
+      "round": 2,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 22.3,
+      "build": "branch",
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.37510625024637,
+        "frame_ms_p50": 51.332999020814896,
+        "frame_ms_p95": 53.499698638916016,
+        "gpu_ms_mean": 50.85880048116048,
+        "cpu_ms_mean": 0.937497666478157,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.4103359878063202,
+          "lights": 6.399999983841553e-05,
+          "opaque+sky": 50.065086364746094
+        }
+      },
+      "headline": [
+        51.332999020814896,
+        50.85880048116048,
+        0.937497666478157
+      ]
+    }
+  ]
+}

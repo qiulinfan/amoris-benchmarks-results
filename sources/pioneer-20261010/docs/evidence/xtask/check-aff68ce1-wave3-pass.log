@@ -1,0 +1,18 @@
+PASS  deps            4.5s  19 workspace crates, 376 external packages, 2 targets; QuickJS-ng as its pins and patches give it
+PASS  fmt             1.7s  formatted
+PASS  docs            0.8s  69 Markdown files under docs/ (not docs/evidence/), 0 need wrapping
+PASS  clippy         51.6s  diagnostics: 0 on x86_64-pc-windows-msvc, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported
+PASS  build          50.0s  native release build
+PASS  gen             6.3s  8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet
+PASS  test          4m 42s  680 passed, 0 failed, 0 ignored in 112 suites, ignored tests included
+PASS  wasm           22.3s  checked for wasm32-unknown-unknown: game crates, pocket-web
+PASS  types           0.3s  3 projects
+PASS  determinism    54.0s  2 projects; cross build against a debug pocket
+PASS  fork            2.7s  2 projects
+PASS  replay          3.1s  2 projects
+PASS  reload          1.7s  4 projects
+SKIP  contract        0.0s  skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet
+PASS  web           3m 34s  samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]
+SKIP  perf            0.0s  skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)
+PASS  (0 failed, 0 inconclusive, 14 passed, 2 skipped) in 11m 36s; report: out/check/report.json
+Checked: pass full; deps ok; perf skip

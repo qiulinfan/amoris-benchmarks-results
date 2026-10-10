@@ -1,0 +1,2592 @@
+{
+  "suite": "correctness",
+  "adapter_filter": "5060",
+  "configurations": {
+    "pt-reference": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--samples",
+        "4",
+        "--frames",
+        "512"
+      ],
+      "metal_report": "docs/evidence/pt/reference.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.4136488113464907,
+            0.37868634916640076,
+            0.26393756617741815
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 449,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            0.413647638394707,
+            0.3786852166397807,
+            0.2639367404537438
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.835630316307751e-06,
+            2.9906808353637257e-06,
+            3.128490838013797e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04419417382415922,
+            "maximum_8bit": 5,
+            "identical_pixels": 0.99786376953125,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03262340281856692,
+            "relative_rmse": 0.02822996420629579,
+            "rmse_reinhard": 0.0009524026496614313,
+            "maximum_absolute_error": 0.3732159404279436,
+            "reference_mean_rgb": [
+              0.4144569284808136,
+              0.3813391474606942,
+              0.2664780190687406
+            ],
+            "candidate_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4136486248203255,
+            0.3786861208629375,
+            0.26393744150402654
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 448,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            0.413647638394707,
+            0.3786852166397807,
+            0.2639367404537438
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.384700230247096e-06,
+            2.387796293761171e-06,
+            2.6561299556441997e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04373139485350694,
+            "maximum_8bit": 5,
+            "identical_pixels": 0.99786376953125,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03262358958538424,
+            "relative_rmse": 0.02823012582096846,
+            "rmse_reinhard": 0.0009523531264873271,
+            "maximum_absolute_error": 0.3732159404279436,
+            "reference_mean_rgb": [
+              0.4144569284808136,
+              0.3813391474606942,
+              0.2664780190687406
+            ],
+            "candidate_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 1.969235990466486e-05,
+        "relative_rmse": 1.7238408551947525e-05,
+        "rmse_reinhard": 1.1265403455171574e-05,
+        "maximum_absolute_error": 0.000612407922744751,
+        "reference_mean_rgb": [
+          0.4136488113464907,
+          0.37868634916640076,
+          0.26393756617741815
+        ],
+        "candidate_mean_rgb": [
+          0.4136486248203255,
+          0.3786861208629375,
+          0.26393744150402654
+        ]
+      }
+    },
+    "pt128": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/pt/pt128.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.05870067327268561,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.4132117588016797,
+            0.37849421345254086,
+            0.263720665608119
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 127,
+            "maximum_relative_counter_difference": 0.00010165184243964421
+          },
+          "metal_mean_rgb": [
+            0.41321174087829604,
+            0.3784936705919222,
+            0.26372042841106236
+          ],
+          "mean_relative_difference_vs_metal": [
+            4.3375785083049395e-08,
+            1.434266041571377e-06,
+            8.994261767734111e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.019661027175184243,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.9990234375,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03135386656443909,
+            "relative_rmse": 0.027161284870941264,
+            "rmse_reinhard": 0.0009383123146228769,
+            "maximum_absolute_error": 0.37252166552559984,
+            "reference_mean_rgb": [
+              0.41277733765655167,
+              0.38135659468414224,
+              0.2659828797997343
+            ],
+            "candidate_mean_rgb": [
+              0.4132117588016797,
+              0.37849421345254086,
+              0.263720665608119
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.05870058879148536,
+            "relative_rmse": 0.05138565091874993,
+            "rmse_reinhard": 0.023344401771071253,
+            "maximum_absolute_error": 2.1293582916259766,
+            "reference_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "candidate_mean_rgb": [
+              0.4132117588016797,
+              0.37849421345254086,
+              0.263720665608119
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4132109009806868,
+            0.3784934214749569,
+            0.2637203643549242
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 127,
+            "maximum_relative_counter_difference": 0.00010165184243964421
+          },
+          "metal_mean_rgb": [
+            0.41321174087829604,
+            0.3784936705919222,
+            0.26372042841106236
+          ],
+          "mean_relative_difference_vs_metal": [
+            -2.0326082880757047e-06,
+            -6.581800030867785e-07,
+            -2.4289410781505395e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.021631832976349154,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.99884033203125,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03135390580836151,
+            "relative_rmse": 0.027161318867238157,
+            "rmse_reinhard": 0.0009386738819818546,
+            "maximum_absolute_error": 0.37252166552559984,
+            "reference_mean_rgb": [
+              0.41277733765655167,
+              0.38135659468414224,
+              0.2659828797997343
+            ],
+            "candidate_mean_rgb": [
+              0.4132109009806868,
+              0.3784934214749569,
+              0.2637203643549242
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.05870056722785775,
+            "relative_rmse": 0.051385638844796355,
+            "rmse_reinhard": 0.02334440363255388,
+            "maximum_absolute_error": 2.1293587684631348,
+            "reference_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "candidate_mean_rgb": [
+              0.4132109009806868,
+              0.3784934214749569,
+              0.2637203643549242
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 5.148050034442486e-05,
+        "relative_rmse": 4.49927618118984e-05,
+        "rmse_reinhard": 3.0962906639369306e-05,
+        "maximum_absolute_error": 0.00490221381187439,
+        "reference_mean_rgb": [
+          0.4132117588016797,
+          0.37849421345254086,
+          0.263720665608119
+        ],
+        "candidate_mean_rgb": [
+          0.4132109009806868,
+          0.3784934214749569,
+          0.2637203643549242
+        ]
+      }
+    },
+    "pt512": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "512"
+      ],
+      "metal_report": "docs/evidence/pt/pt512.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.025447816799409738,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.41361574748526664,
+            0.3787597646735321,
+            0.26396288082011665
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 499,
+            "maximum_relative_counter_difference": 0.0008305647840531562
+          },
+          "metal_mean_rgb": [
+            0.41361449907270753,
+            0.37875892117983767,
+            0.263962513359985
+          ],
+          "mean_relative_difference_vs_metal": [
+            3.0182997982567915e-06,
+            2.226993602736314e-06,
+            1.392092107999382e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.020669932117692115,
+            "maximum_8bit": 2,
+            "identical_pixels": 0.99896240234375,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03226559945709018,
+            "relative_rmse": 0.027927094041513792,
+            "rmse_reinhard": 0.0009458628179195368,
+            "maximum_absolute_error": 0.3733055858136858,
+            "reference_mean_rgb": [
+              0.41410818578055486,
+              0.3816267299035148,
+              0.26626856732306947
+            ],
+            "candidate_mean_rgb": [
+              0.41361574748526664,
+              0.3787597646735321,
+              0.26396288082011665
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.02544842048229261,
+            "relative_rmse": 0.022277181170733604,
+            "rmse_reinhard": 0.011058488598144218,
+            "maximum_absolute_error": 0.733924388885498,
+            "reference_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "candidate_mean_rgb": [
+              0.41361574748526664,
+              0.3787597646735321,
+              0.26396288082011665
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4136150260246154,
+            0.37875886262719405,
+            0.2639623759454537
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 500,
+            "maximum_relative_counter_difference": 0.0008305647840531562
+          },
+          "metal_mean_rgb": [
+            0.41361449907270753,
+            0.37875892117983767,
+            0.263962513359985
+          ],
+          "mean_relative_difference_vs_metal": [
+            1.2740170111732733e-06,
+            -1.5459079733393897e-07,
+            -5.205835084693635e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.021631832976349154,
+            "maximum_8bit": 2,
+            "identical_pixels": 0.99884033203125,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.032265594991285514,
+            "relative_rmse": 0.027927090176191317,
+            "rmse_reinhard": 0.0009458473602661832,
+            "maximum_absolute_error": 0.3733055858136858,
+            "reference_mean_rgb": [
+              0.41410818578055486,
+              0.3816267299035148,
+              0.26626856732306947
+            ],
+            "candidate_mean_rgb": [
+              0.4136150260246154,
+              0.37875886262719405,
+              0.2639623759454537
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.02544858642917724,
+            "relative_rmse": 0.022277329387367338,
+            "rmse_reinhard": 0.011058626188197314,
+            "maximum_absolute_error": 0.733924388885498,
+            "reference_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "candidate_mean_rgb": [
+              0.4136150260246154,
+              0.37875886262719405,
+              0.2639623759454537
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 3.459073240110779e-05,
+        "relative_rmse": 3.0268577771201165e-05,
+        "rmse_reinhard": 1.919860833023769e-05,
+        "maximum_absolute_error": 0.0012308955192565918,
+        "reference_mean_rgb": [
+          0.41361574748526664,
+          0.3787597646735321,
+          0.26396288082011665
+        ],
+        "candidate_mean_rgb": [
+          0.4136150260246154,
+          0.37875886262719405,
+          0.2639623759454537
+        ]
+      }
+    },
+    "bsdf-only": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "128",
+        "--nee",
+        "false"
+      ],
+      "metal_report": "docs/evidence/pt/bsdf-only.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.10355334094533515,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.4155267446347968,
+            0.37958149110207007,
+            0.26440239691429546
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 124,
+            "maximum_relative_counter_difference": 0.001644736842105263
+          },
+          "metal_mean_rgb": [
+            0.41552681924107215,
+            0.3795886429893076,
+            0.26440252013563514
+          ],
+          "mean_relative_difference_vs_metal": [
+            -1.7954623366084953e-07,
+            -1.8841151782683042e-05,
+            -4.6603693347601044e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05863713671457137,
+            "maximum_8bit": 13,
+            "identical_pixels": 0.99993896484375,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 6.103515625e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.0295334971245134,
+            "relative_rmse": 0.025542831330470715,
+            "rmse_reinhard": 0.0009703758971141352,
+            "maximum_absolute_error": 0.42091781448971943,
+            "reference_mean_rgb": [
+              0.415887113874855,
+              0.3816527809431838,
+              0.2661966822565567
+            ],
+            "candidate_mean_rgb": [
+              0.4155267446347968,
+              0.37958149110207007,
+              0.26440239691429546
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.1035486740827206,
+            "relative_rmse": 0.0906450195655601,
+            "rmse_reinhard": 0.05593280232781424,
+            "maximum_absolute_error": 2.310927391052246,
+            "reference_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "candidate_mean_rgb": [
+              0.4155267446347968,
+              0.37958149110207007,
+              0.26440239691429546
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4155267451963054,
+            0.37958149149848275,
+            0.26440239747624283
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 124,
+            "maximum_relative_counter_difference": 0.001644736842105263
+          },
+          "metal_mean_rgb": [
+            0.41552681924107215,
+            0.3795886429893076,
+            0.26440252013563514
+          ],
+          "mean_relative_difference_vs_metal": [
+            -1.7819491626957737e-07,
+            -1.88401074609211e-05,
+            -4.639115854376047e-07
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05863713671457137,
+            "maximum_8bit": 13,
+            "identical_pixels": 0.99993896484375,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 6.103515625e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.0295334970891318,
+            "relative_rmse": 0.02554283129987,
+            "rmse_reinhard": 0.0009703759636436999,
+            "maximum_absolute_error": 0.42091781448971943,
+            "reference_mean_rgb": [
+              0.415887113874855,
+              0.3816527809431838,
+              0.2661966822565567
+            ],
+            "candidate_mean_rgb": [
+              0.4155267451963054,
+              0.37958149149848275,
+              0.26440239747624283
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.10354857026830915,
+            "relative_rmse": 0.09064494068768023,
+            "rmse_reinhard": 0.05593273994423072,
+            "maximum_absolute_error": 2.310926914215088,
+            "reference_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "candidate_mean_rgb": [
+              0.4155267451963054,
+              0.37958149149848275,
+              0.26440239747624283
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 2.8494353923828875e-08,
+        "relative_rmse": 2.4843775346590386e-08,
+        "rmse_reinhard": 1.0200932875984917e-08,
+        "maximum_absolute_error": 9.5367431640625e-07,
+        "reference_mean_rgb": [
+          0.4155267446347968,
+          0.37958149110207007,
+          0.26440239691429546
+        ],
+        "candidate_mean_rgb": [
+          0.4155267451963054,
+          0.37958149149848275,
+          0.26440239747624283
+        ]
+      }
+    },
+    "no-rr": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "128",
+        "--rr",
+        "false"
+      ],
+      "metal_report": "docs/evidence/pt/no-rr.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.048721164077214024,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.4128946984621962,
+            0.3783364933204041,
+            0.2634967009079219
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 111,
+            "maximum_relative_counter_difference": 0.0004830917874396135
+          },
+          "metal_mean_rgb": [
+            0.4128930351230906,
+            0.37833750368795904,
+            0.26349643482043916
+          ],
+          "mean_relative_difference_vs_metal": [
+            4.0284988218950575e-06,
+            -2.6705455977944693e-06,
+            1.0098333318840154e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05279462222060753,
+            "maximum_8bit": 10,
+            "identical_pixels": 0.9991455078125,
+            "pixels_over_2": 0.0001220703125,
+            "pixels_over_8": 6.103515625e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03153570525274776,
+            "relative_rmse": 0.027338015777430294,
+            "rmse_reinhard": 0.0009522016991474894,
+            "maximum_absolute_error": 0.37235191149727953,
+            "reference_mean_rgb": [
+              0.4129306631237307,
+              0.381139611208647,
+              0.265777521932013
+            ],
+            "candidate_mean_rgb": [
+              0.4128946984621962,
+              0.3783364933204041,
+              0.2634967009079219
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.04872054397862167,
+            "relative_rmse": 0.042649263269744234,
+            "rmse_reinhard": 0.01976655098288803,
+            "maximum_absolute_error": 1.8258843421936035,
+            "reference_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "candidate_mean_rgb": [
+              0.4128946984621962,
+              0.3783364933204041,
+              0.2634967009079219
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.4128942635744579,
+            0.3783361628416628,
+            0.26349645303201896
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 110,
+            "maximum_relative_counter_difference": 0.0004830917874396135
+          },
+          "metal_mean_rgb": [
+            0.4128930351230906,
+            0.37833750368795904,
+            0.26349643482043916
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.9752290854953125e-06,
+            -3.5440480606490493e-06,
+            6.911508997138548e-08
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.054314202121391174,
+            "maximum_8bit": 10,
+            "identical_pixels": 0.99896240234375,
+            "pixels_over_2": 0.0001220703125,
+            "pixels_over_8": 6.103515625e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.031537428216048116,
+            "relative_rmse": 0.027339509398629235,
+            "rmse_reinhard": 0.0009525072216306061,
+            "maximum_absolute_error": 0.37235191149727953,
+            "reference_mean_rgb": [
+              0.4129306631237307,
+              0.381139611208647,
+              0.265777521932013
+            ],
+            "candidate_mean_rgb": [
+              0.4128942635744579,
+              0.3783361628416628,
+              0.26349645303201896
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.04872038708191531,
+            "relative_rmse": 0.042649131570603856,
+            "rmse_reinhard": 0.019766538308383246,
+            "maximum_absolute_error": 1.8258838653564453,
+            "reference_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "candidate_mean_rgb": [
+              0.4128942635744579,
+              0.3783361628416628,
+              0.26349645303201896
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 6.387135026888884e-05,
+        "relative_rmse": 5.591410346517713e-05,
+        "rmse_reinhard": 2.8081867472806628e-05,
+        "maximum_absolute_error": 0.0092315673828125,
+        "reference_mean_rgb": [
+          0.4128946984621962,
+          0.3783364933204041,
+          0.2634967009079219
+        ],
+        "candidate_mean_rgb": [
+          0.4128942635744579,
+          0.3783361628416628,
+          0.26349645303201896
+        ]
+      }
+    },
+    "changed-reference": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--samples",
+        "4",
+        "--frames",
+        "512",
+        "--emission-scale",
+        "2.5"
+      ],
+      "metal_report": "docs/evidence/pt/changed-reference.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            1.0341220468410484,
+            0.9467158858723224,
+            0.6598439210843026
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 449,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            1.0341191119189261,
+            0.9467130520458795,
+            0.6598418544302831
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.8380890444774996e-06,
+            2.993331967605681e-06,
+            3.1320444521617364e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.046875,
+            "maximum_8bit": 7,
+            "identical_pixels": 0.9984130859375,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.031052573650427552,
+            "relative_rmse": 0.03149491240450606,
+            "rmse_reinhard": 0.0012548349140933696,
+            "maximum_absolute_error": 1.490253379295634,
+            "reference_mean_rgb": [
+              0.6355533262455111,
+              0.5724699179669871,
+              0.33578705520336005
+            ],
+            "candidate_mean_rgb": [
+              0.635148392282983,
+              0.5725749063136225,
+              0.3356700430525604
+            ],
+            "pixels_left_out": 0.019775390625,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            1.0341215803922523,
+            0.9467153145213842,
+            0.659843609409279
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 448,
+            "maximum_relative_counter_difference": 0.0006199628022318661
+          },
+          "metal_mean_rgb": [
+            1.0341191119189261,
+            0.9467130520458795,
+            0.6598418544302831
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.3870299830439595e-06,
+            2.3898218154196972e-06,
+            2.6596963865229424e-06
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.048159484398195125,
+            "maximum_8bit": 7,
+            "identical_pixels": 0.99810791015625,
+            "pixels_over_2": 6.103515625e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.031051875528572807,
+            "relative_rmse": 0.03149420433802145,
+            "rmse_reinhard": 0.0012549632020858305,
+            "maximum_absolute_error": 1.490253379295634,
+            "reference_mean_rgb": [
+              0.6355533262455111,
+              0.5724699179669871,
+              0.33578705520336005
+            ],
+            "candidate_mean_rgb": [
+              0.6351478936212139,
+              0.5725743571650075,
+              0.3356697291276704
+            ],
+            "pixels_left_out": 0.019775390625,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 4.9230957975646734e-05,
+        "relative_rmse": 1.7238428484006716e-05,
+        "rmse_reinhard": 1.6676086423866437e-05,
+        "maximum_absolute_error": 0.001531064510345459,
+        "reference_mean_rgb": [
+          1.0341220468410484,
+          0.9467158858723224,
+          0.6598439210843026
+        ],
+        "candidate_mean_rgb": [
+          1.0341215803922523,
+          0.9467153145213842,
+          0.659843609409279
+        ]
+      }
+    },
+    "nrc": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "512",
+        "--nrc",
+        "true",
+        "--nrc-warmup",
+        "64"
+      ],
+      "metal_report": "docs/evidence/pt/nrc.json",
+      "reference": "pt-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.09195127598115473,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.38869518163267003,
+            0.3575555959829444,
+            0.254395916106688
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 507,
+            "maximum_relative_counter_difference": 0.001321003963011889
+          },
+          "metal_mean_rgb": [
+            0.3886955072325122,
+            0.3575478757886117,
+            0.2543863362764398
+          ],
+          "mean_relative_difference_vs_metal": [
+            -8.37673284462185e-07,
+            2.15920576109638e-05,
+            3.765858806887719e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.09912951203476188,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.97076416015625,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03189894924809587,
+            "relative_rmse": 0.02842827854154323,
+            "rmse_reinhard": 0.0009277827365493531,
+            "maximum_absolute_error": 0.37317683978097094,
+            "reference_mean_rgb": [
+              0.3856836349683442,
+              0.3608137931704976,
+              0.25665097521528146
+            ],
+            "candidate_mean_rgb": [
+              0.38869518163267003,
+              0.3575555959829444,
+              0.254395916106688
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.09194458074348706,
+            "relative_rmse": 0.08048696320131223,
+            "rmse_reinhard": 0.014281049652382331,
+            "maximum_absolute_error": 2.67071795463562,
+            "reference_mean_rgb": [
+              0.4136488113464907,
+              0.37868634916640076,
+              0.26393756617741815
+            ],
+            "candidate_mean_rgb": [
+              0.38869518163267003,
+              0.3575555959829444,
+              0.254395916106688
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.38869630936449084,
+            0.3575530354120815,
+            0.254389694767184
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 507,
+            "maximum_relative_counter_difference": 0.001321003963011889
+          },
+          "metal_mean_rgb": [
+            0.3886955072325122,
+            0.3575478757886117,
+            0.2543863362764398
+          ],
+          "mean_relative_difference_vs_metal": [
+            2.0636512737896075e-06,
+            1.4430580683574232e-05,
+            1.3202323652032675e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.11020887484113973,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.96435546875,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.03189913917556215,
+            "relative_rmse": 0.028428447804513996,
+            "rmse_reinhard": 0.0009282242810343966,
+            "maximum_absolute_error": 0.3730986384870256,
+            "reference_mean_rgb": [
+              0.3856836349683442,
+              0.3608137931704976,
+              0.25665097521528146
+            ],
+            "candidate_mean_rgb": [
+              0.38869630936449084,
+              0.3575530354120815,
+              0.254389694767184
+            ],
+            "pixels_left_out": 0.0,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.09194659188792864,
+            "relative_rmse": 0.08048873438348562,
+            "rmse_reinhard": 0.014283675176415935,
+            "maximum_absolute_error": 2.670816421508789,
+            "reference_mean_rgb": [
+              0.4136486248203255,
+              0.3786861208629375,
+              0.26393744150402654
+            ],
+            "candidate_mean_rgb": [
+              0.38869630936449084,
+              0.3575530354120815,
+              0.254389694767184
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 5.719859708132941e-05,
+        "relative_rmse": 5.120373071917269e-05,
+        "rmse_reinhard": 3.603550252737481e-05,
+        "maximum_absolute_error": 0.001293480396270752,
+        "reference_mean_rgb": [
+          0.38869518163267003,
+          0.3575555959829444,
+          0.254395916106688
+        ],
+        "candidate_mean_rgb": [
+          0.38869630936449084,
+          0.3575530354120815,
+          0.254389694767184
+        ]
+      }
+    },
+    "nrc-change": {
+      "tool": "path_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--width",
+        "128",
+        "--height",
+        "128",
+        "--frames",
+        "512",
+        "--nrc",
+        "true",
+        "--nrc-warmup",
+        "64",
+        "--light-change-frame",
+        "256",
+        "--light-change-factor",
+        "2.5"
+      ],
+      "metal_report": "docs/evidence/pt/nrc-change.json",
+      "reference": "changed-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.2706815060799004,
+        "rmse_reinhard": null
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.9435599015812386,
+            0.8692212458588529,
+            0.6266758001326309
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 507,
+            "maximum_relative_counter_difference": 0.001321003963011889
+          },
+          "metal_mean_rgb": [
+            0.9435915544985392,
+            0.8692092437390784,
+            0.626669131258268
+          ],
+          "mean_relative_difference_vs_metal": [
+            -3.354514689078957e-05,
+            1.3808090354457734e-05,
+            1.0641778939339437e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.125,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.954345703125,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.018292597904409992,
+            "relative_rmse": 0.02354556691765595,
+            "rmse_reinhard": 0.001191847040501437,
+            "maximum_absolute_error": 1.3151149057848919,
+            "reference_mean_rgb": [
+              0.5447149599221889,
+              0.49534734623494003,
+              0.3022487361446711
+            ],
+            "candidate_mean_rgb": [
+              0.5447565717151148,
+              0.4952130955673239,
+              0.3022918207117109
+            ],
+            "pixels_left_out": 0.01983642578125,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.2706891420271433,
+            "relative_rmse": 0.09478294975572729,
+            "rmse_reinhard": 0.030665005040556567,
+            "maximum_absolute_error": 7.282834529876709,
+            "reference_mean_rgb": [
+              1.0341220468410484,
+              0.9467158858723224,
+              0.6598439210843026
+            ],
+            "candidate_mean_rgb": [
+              0.9435599015812386,
+              0.8692212458588529,
+              0.6266758001326309
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.9436019143061003,
+            0.8692058303046224,
+            0.6266895945741737
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 512,
+            "identical_frames": 507,
+            "maximum_relative_counter_difference": 0.001321003963011889
+          },
+          "metal_mean_rgb": [
+            0.9435915544985392,
+            0.8692092437390784,
+            0.626669131258268
+          ],
+          "mean_relative_difference_vs_metal": [
+            1.0979122811935305e-05,
+            -3.927057242621217e-06,
+            3.265409908524535e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.12094665124722001,
+            "maximum_8bit": 1,
+            "identical_pixels": 0.95721435546875,
+            "pixels_over_2": 0.0,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.018290562670406112,
+            "relative_rmse": 0.023542947238445713,
+            "rmse_reinhard": 0.0011918208061473775,
+            "maximum_absolute_error": 1.3152598642809856,
+            "reference_mean_rgb": [
+              0.5447149599221889,
+              0.49534734623494003,
+              0.3022487361446711
+            ],
+            "candidate_mean_rgb": [
+              0.544793375331712,
+              0.49519716398593877,
+              0.30230371724510635
+            ],
+            "pixels_left_out": 0.01983642578125,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.27066809581005097,
+            "relative_rmse": 0.09477559297702118,
+            "rmse_reinhard": 0.030665997223868355,
+            "maximum_absolute_error": 7.282083511352539,
+            "reference_mean_rgb": [
+              1.0341215803922523,
+              0.9467153145213842,
+              0.659843609409279
+            ],
+            "candidate_mean_rgb": [
+              0.9436019143061003,
+              0.8692058303046224,
+              0.6266895945741737
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.00027486002894399253,
+        "relative_rmse": 9.890867987163915e-05,
+        "rmse_reinhard": 0.00012014281619304195,
+        "maximum_absolute_error": 0.006551623344421387,
+        "reference_mean_rgb": [
+          0.9435599015812386,
+          0.8692212458588529,
+          0.6266758001326309
+        ],
+        "candidate_mean_rgb": [
+          0.9436019143061003,
+          0.8692058303046224,
+          0.6266895945741737
+        ]
+      }
+    },
+    "materials": {
+      "tool": "path_trace",
+      "project": "samples/pt-lab",
+      "arguments": [
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--samples",
+        "4",
+        "--frames",
+        "256"
+      ],
+      "metal_report": "docs/evidence/pt/materials.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.27832744716865515,
+            0.2135353464094563,
+            0.20024660508334516
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 256,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.04260159238961845
+          },
+          "metal_mean_rgb": [
+            0.2781968301926183,
+            0.2135191878234804,
+            0.2002383174015515
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.0004695128120129837,
+            7.567744211004393e-05,
+            4.138909026600128e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.4011593442068182,
+            "maximum_8bit": 88,
+            "identical_pixels": 0.9262760416666667,
+            "pixels_over_2": 0.0020442708333333333,
+            "pixels_over_8": 0.00010416666666666667
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.024175353923960512,
+            "relative_rmse": 0.03367625583992189,
+            "rmse_reinhard": 0.0018175995849943653,
+            "maximum_absolute_error": 8.949629470803519,
+            "reference_mean_rgb": [
+              0.27658230592631866,
+              0.2106725021199589,
+              0.196552777937565
+            ],
+            "candidate_mean_rgb": [
+              0.2758570572727456,
+              0.21070767623354986,
+              0.1972600599550663
+            ],
+            "pixels_left_out": 7.812500000003997e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.2783267939221211,
+            0.21353664960314442,
+            0.2002480754474982
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 256,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.04260159238961845
+          },
+          "metal_mean_rgb": [
+            0.2781968301926183,
+            0.2135191878234804,
+            0.2002383174015515
+          ],
+          "mean_relative_difference_vs_metal": [
+            0.0004671646668756712,
+            8.178084528150277e-05,
+            4.873216112339291e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.401283747282809,
+            "maximum_8bit": 88,
+            "identical_pixels": 0.9263802083333333,
+            "pixels_over_2": 0.00203125,
+            "pixels_over_8": 0.00010416666666666667
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.023951655062554,
+            "relative_rmse": 0.033364643438650754,
+            "rmse_reinhard": 0.0018139952895638264,
+            "maximum_absolute_error": 8.809817954995413,
+            "reference_mean_rgb": [
+              0.27658230592631866,
+              0.2106725021199589,
+              0.196552777937565
+            ],
+            "candidate_mean_rgb": [
+              0.2758552776574161,
+              0.21070783572590615,
+              0.19726040807787873
+            ],
+            "pixels_left_out": 7.812500000003997e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.000414404818629304,
+        "relative_rmse": 0.000490968488088683,
+        "rmse_reinhard": 2.8296891153274744e-05,
+        "maximum_absolute_error": 0.13981151580810547,
+        "reference_mean_rgb": [
+          0.27832744716865515,
+          0.2135353464094563,
+          0.20024660508334516
+        ],
+        "candidate_mean_rgb": [
+          0.2783267939221211,
+          0.21353664960314442,
+          0.2002480754474982
+        ]
+      }
+    },
+    "atmosphere": {
+      "tool": "path_trace",
+      "project": "samples/pt-lab",
+      "arguments": [
+        "--scene",
+        "scene-atmosphere.json",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/pt/atmosphere.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.2347946732478825,
+            0.16420591271473314,
+            0.12653788444727676
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.05862646566164154
+          },
+          "metal_mean_rgb": [
+            0.23478184112681513,
+            0.16418965322335952,
+            0.12652589280133542
+          ],
+          "mean_relative_difference_vs_metal": [
+            5.465550915599817e-05,
+            9.902872108212516e-05,
+            9.477622070743749e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.6822908715008089,
+            "maximum_8bit": 42,
+            "identical_pixels": 0.9771354166666667,
+            "pixels_over_2": 0.0053125,
+            "pixels_over_8": 0.0013020833333333333
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.015701960745244443,
+            "relative_rmse": 0.022831758500007616,
+            "rmse_reinhard": 0.0014660496954174626,
+            "maximum_absolute_error": 0.37073447985665453,
+            "reference_mean_rgb": [
+              0.2340272772077624,
+              0.16336326191116782,
+              0.12582630880190998
+            ],
+            "candidate_mean_rgb": [
+              0.23358239925766286,
+              0.16304699184860755,
+              0.12594425398052064
+            ],
+            "pixels_left_out": 5.2083333333285964e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.23479454482175546,
+            0.164206339432864,
+            0.12653823989983418
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": true,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 0.05862646566164154
+          },
+          "metal_mean_rgb": [
+            0.23478184112681513,
+            0.16418965322335952,
+            0.12652589280133542
+          ],
+          "mean_relative_difference_vs_metal": [
+            5.410850719697919e-05,
+            0.00010162765543932034,
+            9.75855473167645e-05
+          ],
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.6820745519695368,
+            "maximum_8bit": 42,
+            "identical_pixels": 0.97703125,
+            "pixels_over_2": 0.005364583333333333,
+            "pixels_over_8": 0.0013020833333333333
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.015702039435944705,
+            "relative_rmse": 0.02283187292183644,
+            "rmse_reinhard": 0.0014661372026480378,
+            "maximum_absolute_error": 0.37073447985665453,
+            "reference_mean_rgb": [
+              0.2340272772077624,
+              0.16336326191116782,
+              0.12582630880190998
+            ],
+            "candidate_mean_rgb": [
+              0.2335822679438054,
+              0.16304741570792325,
+              0.12594460806074467
+            ],
+            "pixels_left_out": 5.2083333333285964e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 7.630493120939779e-05,
+        "relative_rmse": 0.00010905067660483243,
+        "rmse_reinhard": 5.734131189225862e-05,
+        "maximum_absolute_error": 0.010608762502670288,
+        "reference_mean_rgb": [
+          0.2347946732478825,
+          0.16420591271473314,
+          0.12653788444727676
+        ],
+        "candidate_mean_rgb": [
+          0.23479454482175546,
+          0.164206339432864,
+          0.12653823989983418
+        ]
+      }
+    },
+    "sharc-reference": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--samples",
+        "16",
+        "--frames",
+        "64"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/reference-final-320.json",
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.3021474939777093,
+            0.2763296032306352,
+            0.1923082009132066
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 64,
+            "identical_frames": 3,
+            "maximum_relative_counter_difference": 1.2943387666041524e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.026104091846128476,
+            "maximum_8bit": 3,
+            "identical_pixels": 0.9983072916666667,
+            "pixels_over_2": 1.3020833333333334e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028191128607355686,
+            "relative_rmse": 0.028287544213113545,
+            "rmse_reinhard": 0.0008063885136108462,
+            "maximum_absolute_error": 0.5592354983824439,
+            "reference_mean_rgb": [
+              0.30108255400251277,
+              0.2786510157840255,
+              0.19405109601886256
+            ],
+            "candidate_mean_rgb": [
+              0.3016631358150814,
+              0.2762988389523793,
+              0.1922933637084938
+            ],
+            "pixels_left_out": 1.3020833333321491e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.302146925074617,
+            0.2763294819669522,
+            0.1923079987695095
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 64,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 1.700831842837695e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.03131936745494356,
+            "maximum_8bit": 4,
+            "identical_pixels": 0.9979036458333334,
+            "pixels_over_2": 2.604166666666667e-05,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028191812682863374,
+            "relative_rmse": 0.02828823062820669,
+            "rmse_reinhard": 0.0008068439267027997,
+            "maximum_absolute_error": 0.5587653369444556,
+            "reference_mean_rgb": [
+              0.30108255400251277,
+              0.2786510157840255,
+              0.19405109601886256
+            ],
+            "candidate_mean_rgb": [
+              0.3016625817065943,
+              0.2762987187271076,
+              0.19229316208836866
+            ],
+            "pixels_left_out": 1.3020833333321491e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 5.899613652147314e-05,
+        "relative_rmse": 5.9539065137757825e-05,
+        "rmse_reinhard": 3.194831601295068e-05,
+        "maximum_absolute_error": 0.008314311504364014,
+        "reference_mean_rgb": [
+          0.3021474939777093,
+          0.2763296032306352,
+          0.1923082009132066
+        ],
+        "candidate_mean_rgb": [
+          0.302146925074617,
+          0.2763294819669522,
+          0.1923079987695095
+        ]
+      }
+    },
+    "sharc-raw": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/raw-final-320.json",
+      "reference": "sharc-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.2964496813758377,
+        "rmse_reinhard": 0.016918675248426586
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30224848618213956,
+            0.27854489908642566,
+            0.1929021662541418
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 109,
+            "maximum_relative_counter_difference": 4.3713458280968255e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.05286907308520633,
+            "maximum_8bit": 17,
+            "identical_pixels": 0.9990885416666667,
+            "pixels_over_2": 2.604166666666667e-05,
+            "pixels_over_8": 2.604166666666667e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.027714247183408803,
+            "relative_rmse": 0.027780079675222686,
+            "rmse_reinhard": 0.0008164021740287044,
+            "maximum_absolute_error": 0.4372981245483132,
+            "reference_mean_rgb": [
+              0.30128493302677417,
+              0.2785203453158557,
+              0.19410783096505374
+            ],
+            "candidate_mean_rgb": [
+              0.3016984014361184,
+              0.27621715685807174,
+              0.19238341262791742
+            ],
+            "pixels_left_out": 3.906249999996447e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.29658909315295856,
+            "relative_rmse": 0.29931853808690023,
+            "rmse_reinhard": 0.016919679949033564,
+            "maximum_absolute_error": 125.38858732581139,
+            "reference_mean_rgb": [
+              0.3021474939777093,
+              0.2763296032306352,
+              0.1923082009132066
+            ],
+            "candidate_mean_rgb": [
+              0.30224848618213956,
+              0.27854489908642566,
+              0.1929021662541418
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.30224678839471525,
+            0.2785437987837809,
+            0.1929012601653402
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 92,
+            "maximum_relative_counter_difference": 4.357156084223827e-05
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04578596036632481,
+            "maximum_8bit": 10,
+            "identical_pixels": 0.9990234375,
+            "pixels_over_2": 2.604166666666667e-05,
+            "pixels_over_8": 1.3020833333333334e-05
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.027715009214574714,
+            "relative_rmse": 0.02778084351651933,
+            "rmse_reinhard": 0.0008156332944023608,
+            "maximum_absolute_error": 0.4372981245483132,
+            "reference_mean_rgb": [
+              0.30128493302677417,
+              0.2785203453158557,
+              0.19410783096505374
+            ],
+            "candidate_mean_rgb": [
+              0.3016967037313892,
+              0.2762160602627168,
+              0.19238250677691895
+            ],
+            "pixels_left_out": 3.906249999996447e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.29658773456936255,
+            "relative_rmse": 0.29931750530075607,
+            "rmse_reinhard": 0.016919501670603486,
+            "maximum_absolute_error": 125.38819822669029,
+            "reference_mean_rgb": [
+              0.302146925074617,
+              0.2763294819669522,
+              0.1923079987695095
+            ],
+            "candidate_mean_rgb": [
+              0.30224678839471525,
+              0.2785437987837809,
+              0.1929012601653402
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.00023140030321212383,
+        "relative_rmse": 0.0002247406444360773,
+        "rmse_reinhard": 7.128222171071095e-05,
+        "maximum_absolute_error": 0.06252479553222656,
+        "reference_mean_rgb": [
+          0.30224848618213956,
+          0.27854489908642566,
+          0.1929021662541418
+        ],
+        "candidate_mean_rgb": [
+          0.30224678839471525,
+          0.2785437987837809,
+          0.1929012601653402
+        ]
+      }
+    },
+    "sharc": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "sharc",
+        "--width",
+        "320",
+        "--height",
+        "240",
+        "--frames",
+        "128"
+      ],
+      "metal_report": "docs/evidence/gi/sharc/sharc-final-320.json",
+      "reference": "sharc-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.2909096907835238,
+        "rmse_reinhard": 0.01349765907095808
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30064263164540017,
+            0.2752407944715166,
+            0.19160876233939714
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 3.0
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 1.2854943250447364,
+            "maximum_8bit": 150,
+            "identical_pixels": 0.44071614583333335,
+            "pixels_over_2": 0.050208333333333334,
+            "pixels_over_8": 0.0032291666666666666
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028558810656827652,
+            "relative_rmse": 0.02865332145016794,
+            "rmse_reinhard": 0.0031323898431758505,
+            "maximum_absolute_error": 0.4321015531982155,
+            "reference_mean_rgb": [
+              0.30038232286871813,
+              0.2776810600406756,
+              0.19341217038568562
+            ],
+            "candidate_mean_rgb": [
+              0.30064265935354256,
+              0.2752412489367707,
+              0.19160929666912788
+            ],
+            "pixels_left_out": 2.6041666666642982e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.08768756679545667,
+            "relative_rmse": 0.088494536405887,
+            "rmse_reinhard": 0.013358832519225684,
+            "maximum_absolute_error": 37.07484385371208,
+            "reference_mean_rgb": [
+              0.3021474939777093,
+              0.2763296032306352,
+              0.1923082009132066
+            ],
+            "candidate_mean_rgb": [
+              0.30064263164540017,
+              0.2752407944715166,
+              0.19160876233939714
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3010970206157735,
+            0.27557013781934303,
+            0.19189795759459052
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 128,
+            "identical_frames": 0,
+            "maximum_relative_counter_difference": 3.0
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 1.1696223719883079,
+            "maximum_8bit": 135,
+            "identical_pixels": 0.4423828125,
+            "pixels_over_2": 0.048190104166666664,
+            "pixels_over_8": 0.002955729166666667
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.028524569020566,
+            "relative_rmse": 0.028618966496715064,
+            "rmse_reinhard": 0.0030466782345400303,
+            "maximum_absolute_error": 0.43695670914303975,
+            "reference_mean_rgb": [
+              0.30038232286871813,
+              0.2776810600406756,
+              0.19341217038568562
+            ],
+            "candidate_mean_rgb": [
+              0.30070024630660386,
+              0.27519864622328777,
+              0.19157610637432468
+            ],
+            "pixels_left_out": 2.6041666666642982e-05,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 0.12393193523975717,
+            "relative_rmse": 0.12507259525387965,
+            "rmse_reinhard": 0.013188590968326083,
+            "maximum_absolute_error": 37.07485285401344,
+            "reference_mean_rgb": [
+              0.302146925074617,
+              0.2763294819669522,
+              0.1923079987695095
+            ],
+            "candidate_mean_rgb": [
+              0.3010970206157735,
+              0.27557013781934303,
+              0.19189795759459052
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.10121196471896872,
+        "relative_rmse": 0.1024962553623732,
+        "rmse_reinhard": 0.0034784126007802157,
+        "maximum_absolute_error": 30.472492396831512,
+        "reference_mean_rgb": [
+          0.30064263164540017,
+          0.2752407944715166,
+          0.19160876233939714
+        ],
+        "candidate_mean_rgb": [
+          0.3010970206157735,
+          0.27557013781934303,
+          0.19189795759459052
+        ]
+      }
+    },
+    "restir-reference": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--samples",
+        "64",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": null,
+      "metal_rmse_vs_reference": null,
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30204828391995076,
+            0.2766965425551202,
+            0.19260210253738572
+          ],
+          "gpu_errors": []
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3020478668215121,
+            0.2766959823629082,
+            0.19260164109243594
+          ],
+          "gpu_errors": []
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 4.112353254785938e-05,
+        "relative_rmse": 4.229180420849016e-05,
+        "rmse_reinhard": 2.6319778798552635e-05,
+        "maximum_absolute_error": 0.002471327781677246,
+        "reference_mean_rgb": [
+          0.30204828391995076,
+          0.2766965425551202,
+          0.19260210253738572
+        ],
+        "candidate_mean_rgb": [
+          0.3020478668215121,
+          0.2766959823629082,
+          0.19260164109243594
+        ]
+      }
+    },
+    "restir-raw": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "raw",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.1054051574518718,
+        "rmse_reinhard": 0.03091299281342884
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.3012794969469079,
+            0.27674682275574697,
+            0.19234248161498252
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09734280712488172,
+            "relative_rmse": 0.10010820289427232,
+            "rmse_reinhard": 0.030499342502668805,
+            "maximum_absolute_error": 8.84358137845993,
+            "reference_mean_rgb": [
+              0.30204828391995076,
+              0.2766965425551202,
+              0.19260210253738572
+            ],
+            "candidate_mean_rgb": [
+              0.3012794969469079,
+              0.27674682275574697,
+              0.19234248161498252
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.30127996173065336,
+            0.276748205304717,
+            0.19234334932587602
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09734298554919865,
+            "relative_rmse": 0.10010840316521452,
+            "rmse_reinhard": 0.03049886492685539,
+            "maximum_absolute_error": 8.843795955181122,
+            "reference_mean_rgb": [
+              0.3020478668215121,
+              0.2766959823629082,
+              0.19260164109243594
+            ],
+            "candidate_mean_rgb": [
+              0.30127996173065336,
+              0.276748205304717,
+              0.19234334932587602
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.00014847722973029,
+        "relative_rmse": 0.00015221657814549285,
+        "rmse_reinhard": 7.949963051785477e-05,
+        "maximum_absolute_error": 0.019886881113052368,
+        "reference_mean_rgb": [
+          0.3012794969469079,
+          0.27674682275574697,
+          0.19234248161498252
+        ],
+        "candidate_mean_rgb": [
+          0.30127996173065336,
+          0.276748205304717,
+          0.19234334932587602
+        ]
+      }
+    },
+    "restir-none": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "restir",
+        "--reuse",
+        "none",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.10540484570893795,
+        "rmse_reinhard": 0.0309128259454413
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30127630230676306,
+            0.27674481037494447,
+            0.1923416875299154
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09734236673231669,
+            "relative_rmse": 0.10010774999066747,
+            "rmse_reinhard": 0.030499079427823938,
+            "maximum_absolute_error": 8.843581318855286,
+            "reference_mean_rgb": [
+              0.30204828391995076,
+              0.2766965425551202,
+              0.19260210253738572
+            ],
+            "candidate_mean_rgb": [
+              0.30127630230676306,
+              0.27674481037494447,
+              0.1923416875299154
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.30127676685181237,
+            0.27674619297173936,
+            0.19234255538419068
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.09734254531241039,
+            "relative_rmse": 0.100107950421736,
+            "rmse_reinhard": 0.030498601787282954,
+            "maximum_absolute_error": 8.843795895576477,
+            "reference_mean_rgb": [
+              0.3020478668215121,
+              0.2766959823629082,
+              0.19260164109243594
+            ],
+            "candidate_mean_rgb": [
+              0.30127676685181237,
+              0.27674619297173936,
+              0.19234255538419068
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.00014847713153907487,
+        "relative_rmse": 0.0001522165731134007,
+        "rmse_reinhard": 7.949957619892815e-05,
+        "maximum_absolute_error": 0.019886821508407593,
+        "reference_mean_rgb": [
+          0.30127630230676306,
+          0.27674481037494447,
+          0.1923416875299154
+        ],
+        "candidate_mean_rgb": [
+          0.30127676685181237,
+          0.27674619297173936,
+          0.19234255538419068
+        ]
+      }
+    },
+    "restir-temporal": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "restir",
+        "--reuse",
+        "temporal",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.14712856894152482,
+        "rmse_reinhard": 0.0414917119965338
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.3005422387883164,
+            0.2767049577308616,
+            0.19214536322763712
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.1407195064274917,
+            "relative_rmse": 0.1447171837006166,
+            "rmse_reinhard": 0.04115762914525558,
+            "maximum_absolute_error": 10.908708095550537,
+            "reference_mean_rgb": [
+              0.30204828391995076,
+              0.2766965425551202,
+              0.19260210253738572
+            ],
+            "candidate_mean_rgb": [
+              0.3005422387883164,
+              0.2767049577308616,
+              0.19214536322763712
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.300543204127495,
+            0.27670602670665007,
+            0.19214624347446285
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.14072123314724094,
+            "relative_rmse": 0.1447189837288293,
+            "rmse_reinhard": 0.04115732024430706,
+            "maximum_absolute_error": 10.90911865234375,
+            "reference_mean_rgb": [
+              0.3020478668215121,
+              0.2766959823629082,
+              0.19260164109243594
+            ],
+            "candidate_mean_rgb": [
+              0.300543204127495,
+              0.27670602670665007,
+              0.19214624347446285
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.0001466062247023662,
+        "relative_rmse": 0.00014950851391330576,
+        "rmse_reinhard": 7.965895861857955e-05,
+        "maximum_absolute_error": 0.01988685131072998,
+        "reference_mean_rgb": [
+          0.3005422387883164,
+          0.2767049577308616,
+          0.19214536322763712
+        ],
+        "candidate_mean_rgb": [
+          0.300543204127495,
+          0.27670602670665007,
+          0.19214624347446285
+        ]
+      }
+    },
+    "restir-spatial": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "restir",
+        "--reuse",
+        "spatial",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": null,
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 0.5643327500893608,
+        "rmse_reinhard": 0.024225389049634928
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.30430309739719935,
+            0.27961004426462827,
+            0.19497159281037163
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.5616928000220884,
+            "relative_rmse": 0.5776498382332991,
+            "rmse_reinhard": 0.02367962081526491,
+            "maximum_absolute_error": 83.01746606826782,
+            "reference_mean_rgb": [
+              0.30204828391995076,
+              0.2766965425551202,
+              0.19260210253738572
+            ],
+            "candidate_mean_rgb": [
+              0.30430309739719935,
+              0.27961004426462827,
+              0.19497159281037163
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.3043034466192459,
+            0.2796114595161907,
+            0.1949722076494168
+          ],
+          "gpu_errors": [],
+          "hdr_vs_reference": {
+            "rmse": 0.5616873398063588,
+            "relative_rmse": 0.5776443197102527,
+            "rmse_reinhard": 0.023680017615776476,
+            "maximum_absolute_error": 83.01653528213501,
+            "reference_mean_rgb": [
+              0.3020478668215121,
+              0.2766959823629082,
+              0.19260164109243594
+            ],
+            "candidate_mean_rgb": [
+              0.3043034466192459,
+              0.2796114595161907,
+              0.1949722076494168
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.0001686237928489463,
+        "relative_rmse": 0.00014873458269836477,
+        "rmse_reinhard": 8.124395875709537e-05,
+        "maximum_absolute_error": 0.01988697052001953,
+        "reference_mean_rgb": [
+          0.30430309739719935,
+          0.27961004426462827,
+          0.19497159281037163
+        ],
+        "candidate_mean_rgb": [
+          0.3043034466192459,
+          0.2796114595161907,
+          0.1949722076494168
+        ]
+      }
+    },
+    "restir-both": {
+      "tool": "gi_trace",
+      "project": "samples/gi-room",
+      "arguments": [
+        "--mode",
+        "restir",
+        "--reuse",
+        "both",
+        "--width",
+        "160",
+        "--height",
+        "120",
+        "--frames",
+        "32"
+      ],
+      "metal_report": "docs/evidence/gi/restir/reuse-both.json",
+      "reference": "restir-reference",
+      "metal_rmse_vs_reference": {
+        "rmse": 1.529066496358097,
+        "rmse_reinhard": 0.03446505652966627
+      },
+      "runs": {
+        "vulkan": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Vulkan",
+          "mean_rgb": [
+            0.32018025241126225,
+            0.29132003344206264,
+            0.20355578263965107
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 32,
+            "identical_frames": 14,
+            "maximum_relative_counter_difference": 0.00041356492969396195
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04677071733467427,
+            "maximum_8bit": 3,
+            "identical_pixels": 0.9986979166666666,
+            "pixels_over_2": 0.00015625,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.0260162601484456,
+            "relative_rmse": 0.02624422538820755,
+            "rmse_reinhard": 0.0008135617323566754,
+            "maximum_absolute_error": 0.7240990848082252,
+            "reference_mean_rgb": [
+              0.3047557566527597,
+              0.2795709814959019,
+              0.19351977577796273
+            ],
+            "candidate_mean_rgb": [
+              0.30546603208114864,
+              0.277524747798917,
+              0.19159483490211646
+            ],
+            "pixels_left_out": 0.00010416666666668295,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 1.5291958572398974,
+            "relative_rmse": 1.5726385303976136,
+            "rmse_reinhard": 0.034070509910875985,
+            "maximum_absolute_error": 222.8000044822693,
+            "reference_mean_rgb": [
+              0.30204828391995076,
+              0.2766965425551202,
+              0.19260210253738572
+            ],
+            "candidate_mean_rgb": [
+              0.32018025241126225,
+              0.29132003344206264,
+              0.20355578263965107
+            ]
+          }
+        },
+        "dx12": {
+          "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "backend": "Direct3D 12",
+          "mean_rgb": [
+            0.32018220408943193,
+            0.29132070363513113,
+            0.20355738745923604
+          ],
+          "gpu_errors": [],
+          "scene_signature_matches_metal": false,
+          "counters_vs_metal": {
+            "frames": 32,
+            "identical_frames": 18,
+            "maximum_relative_counter_difference": 0.010948905109489052
+          },
+          "preview_vs_metal_png": {
+            "rmse_8bit": 0.04506939094329987,
+            "maximum_8bit": 3,
+            "identical_pixels": 0.9984895833333334,
+            "pixels_over_2": 0.00010416666666666667,
+            "pixels_over_8": 0.0
+          },
+          "hdr_vs_metal_preview_inverse": {
+            "rmse": 0.026015956240288088,
+            "relative_rmse": 0.02624391881708097,
+            "rmse_reinhard": 0.0008113592104241589,
+            "maximum_absolute_error": 0.724100992156858,
+            "reference_mean_rgb": [
+              0.3047557566527597,
+              0.2795709814959019,
+              0.19351977577796273
+            ],
+            "candidate_mean_rgb": [
+              0.3054688785228586,
+              0.2775262551969009,
+              0.19159716753871497
+            ],
+            "pixels_left_out": 0.00010416666666668295,
+            "note": "M5 radiance reconstructed from its 8-bit Reinhard/sRGB preview; the quantization of that preview dominates, so this bounds rather than measures the difference"
+          },
+          "hdr_vs_reference": {
+            "rmse": 1.5290944689789432,
+            "relative_rmse": 1.5725345253652312,
+            "rmse_reinhard": 0.03407130247015776,
+            "maximum_absolute_error": 222.78460836410522,
+            "reference_mean_rgb": [
+              0.3020478668215121,
+              0.2766959823629082,
+              0.19260164109243594
+            ],
+            "candidate_mean_rgb": [
+              0.32018220408943193,
+              0.29132070363513113,
+              0.20355738745923604
+            ]
+          }
+        }
+      },
+      "hdr_vulkan_vs_dx12": {
+        "rmse": 0.00020321701103885053,
+        "relative_rmse": 0.00011045470667926771,
+        "rmse_reinhard": 0.00010008638691409777,
+        "maximum_absolute_error": 0.01988685131072998,
+        "reference_mean_rgb": [
+          0.32018025241126225,
+          0.29132003344206264,
+          0.20355578263965107
+        ],
+        "candidate_mean_rgb": [
+          0.32018220408943193,
+          0.29132070363513113,
+          0.20355738745923604
+        ]
+      }
+    }
+  }
+}

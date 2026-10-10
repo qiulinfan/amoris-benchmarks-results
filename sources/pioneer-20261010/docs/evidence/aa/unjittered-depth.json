@@ -1,0 +1,292 @@
+{
+  "what": "The unjittered depth splats test against with TAA (docs/spec/taa-gtao.md 1), against the depth copy it replaces; many_cubes 1.6M sphere + a 200k-splat shell (--headless-bench 100 --occlusion off --splats N) and the splats example garden (21 meshes, ~1.07M splats).",
+  "provisional": "other agents shared the GPU; timings are provisional",
+  "many_cubes": [
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 2.316,
+      "passes_ms": {
+        "cull": 0.393,
+        "lights": 0.003,
+        "opaque+sky": 1.764,
+        "taa": 0.158
+      }
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 3.307,
+      "passes_ms": {
+        "cull": 0.394,
+        "lights": 0.003,
+        "opaque+sky": 1.738,
+        "splat compact": 0.009,
+        "splat draw": 0.124,
+        "splat preprocess": 0.025,
+        "splat sort": 0.068,
+        "taa": 0.17,
+        "unjittered depth": 0.783
+      }
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 2.625,
+      "passes_ms": {
+        "cull": 0.475,
+        "lights": 0.003,
+        "opaque+sky": 2.136
+      }
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 2.805,
+      "passes_ms": {
+        "cull": 0.412,
+        "lights": 0.003,
+        "opaque+sky": 2.087,
+        "splat compact": 0.009,
+        "splat depth": 0.07,
+        "splat draw": 0.129,
+        "splat preprocess": 0.027,
+        "splat sort": 0.068
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 5.406,
+      "passes_ms": {
+        "cull": 1.58,
+        "lights": 0.004,
+        "opaque+sky": 3.337,
+        "taa": 0.666
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 7.129,
+      "passes_ms": {
+        "cull": 1.392,
+        "lights": 0.004,
+        "opaque+sky": 3.285,
+        "splat compact": 0.015,
+        "splat draw": 0.572,
+        "splat preprocess": 0.13,
+        "splat sort": 0.086,
+        "taa": 0.804,
+        "unjittered depth": 0.893
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 11.111,
+      "passes_ms": {
+        "cull": 1.892,
+        "lights": 0.004,
+        "opaque+sky": 9.837
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Vulkan",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 12.19,
+      "passes_ms": {
+        "cull": 1.836,
+        "lights": 0.005,
+        "opaque+sky": 9.84,
+        "splat compact": 0.013,
+        "splat depth": 0.306,
+        "splat draw": 0.581,
+        "splat preprocess": 0.131,
+        "splat sort": 0.086
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Direct3D 12",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 6.199,
+      "passes_ms": {
+        "cull": 1.486,
+        "lights": 0.006,
+        "opaque+sky": 4.019,
+        "taa": 0.72
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Direct3D 12",
+      "antialiasing": "taa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 8.313,
+      "passes_ms": {
+        "cull": 1.53,
+        "lights": 0.006,
+        "opaque+sky": 4.213,
+        "splat compact": 0.022,
+        "splat draw": 0.643,
+        "splat preprocess": 0.15,
+        "splat sort": 0.109,
+        "taa": 0.84,
+        "unjittered depth": 0.806
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Direct3D 12",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 0,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 8.949,
+      "passes_ms": {
+        "cull": 1.495,
+        "lights": 0.006,
+        "opaque+sky": 7.468
+      }
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "backend": "Direct3D 12",
+      "antialiasing": "msaa",
+      "gtao": "off",
+      "splats": 200000,
+      "size": [
+        1600,
+        900
+      ],
+      "frames": 100,
+      "occlusion_mode": "off",
+      "gpu_ms_p50": 10.309,
+      "passes_ms": {
+        "cull": 1.52,
+        "lights": 0.006,
+        "opaque+sky": 7.607,
+        "splat compact": 0.021,
+        "splat depth": 0.328,
+        "splat draw": 0.633,
+        "splat preprocess": 0.149,
+        "splat sort": 0.105
+      }
+    }
+  ],
+  "garden_1600x900_passes_ms": {
+    "RTX 5060 Vulkan": {
+      "taa": {
+        "unjittered depth": 0.005,
+        "opaque+sky": 0.04
+      },
+      "msaa": {
+        "splat depth": 0.031,
+        "opaque+sky": 0.097
+      }
+    },
+    "Radeon 780M Vulkan": {
+      "taa": {
+        "unjittered depth": 0.015,
+        "opaque+sky": 0.291
+      },
+      "msaa": {
+        "splat depth": 0.141,
+        "opaque+sky": 2.235
+      }
+    }
+  }
+}

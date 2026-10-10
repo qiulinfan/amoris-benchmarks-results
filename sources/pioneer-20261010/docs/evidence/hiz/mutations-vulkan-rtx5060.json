@@ -1,0 +1,80 @@
+{
+  "commit": "18c6c9ef",
+  "env": {},
+  "mutations": {
+    "hiz: a level's last texel ignores the odd remainder": {
+      "tests": {
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "FAILED",
+        "pyramid_is_the_minimum_over_every_sample": "FAILED",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "78 boxes hidden wrongly, e.g. (box, why, nearest corner depth, farthest sample) [(187, \"in front of a sample it covers\", 0.0033677365, 0.0), (219, \"in front of a sample it covers\", 0.0039672344, 0.0), (711, \"in front of a sample it covers\", 0.0047441656, 0.0), (908, \"in front of a sample it covers\",",
+        "481x271, level 0 (240x135): 121 texels differ from the minimum over their samples, e.g. (x, y, pyramid, minimum) [(239, 2, 0.056251764, 0.007815897), (239, 5, 0.031956255, 0.0029384494), (239, 12, 0.081664205, 0.057035565), (239, 17, 0.10139632, 0.048481286)]"
+      ]
+    },
+    "hiz: level 0 reads sample 0 only": {
+      "tests": {
+        "pyramid_is_the_minimum_over_every_sample": "FAILED",
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "FAILED",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "481x271, level 0 (240x135): 24333 texels differ from the minimum over their samples, e.g. (x, y, pyramid, minimum) [(0, 0, 0.09283775, 0.048314333), (1, 0, 0.052136183, 0.013707757), (3, 0, 0.3691228, 0.027244508), (4, 0, 0.41302818, 0.045996904)]",
+        "9 boxes hidden wrongly, e.g. (box, why, nearest corner depth, farthest sample) [(898, \"in front of a sample it covers\", 0.0055652186, 0.0), (924, \"in front of a sample it covers\", 0.0051178862, 0.0), (6531, \"in front of a sample it covers\", 0.0029489568, 0.0), (8083, \"in front of a sample it covers\""
+      ]
+    },
+    "cull: one of the 2x2 texels read": {
+      "tests": {
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "FAILED",
+        "pyramid_is_the_minimum_over_every_sample": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "124 boxes hidden wrongly, e.g. (box, why, nearest corner depth, farthest sample) [(56, \"in front of a sample it covers\", 0.0037492777, 0.0), (86, \"in front of a sample it covers\", 0.0035891947, 0.0), (421, \"in front of a sample it covers\", 0.0077438867, 0.004), (437, \"in front of a sample it covers\"",
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), sweep 4: entity 1 covers 0.37007716 of the view without occlusion culling and 0.37019292 with it (Some(OcclusionStats { frame: 10, frustum: 184, occluded: 49, early: 124, late: 12, frustum_triangles: 83730, occluded_triangles: 21900 }))"
+      ]
+    },
+    "cull: a level one too fine": {
+      "tests": {
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "FAILED",
+        "pyramid_is_the_minimum_over_every_sample": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "13 boxes hidden wrongly, e.g. (box, why, nearest corner depth, farthest sample) [(163, \"in front of a sample it covers\", 0.0039656004, 0.0), (6252, \"in front of a sample it covers\", 0.0033151228, 0.0), (9110, \"in front of a sample it covers\", 0.004681948, 0.0), (9373, \"in front of a sample it covers"
+      ]
+    },
+    "cull: the farthest corner's depth for the nearest": {
+      "tests": {
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "FAILED",
+        "pyramid_is_the_minimum_over_every_sample": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "29 boxes hidden wrongly, e.g. (box, why, nearest corner depth, farthest sample) [(552, \"in front of a sample it covers\", 0.0062815947, 0.00625), (950, \"in front of a sample it covers\", 0.010832304, 0.010000001), (1105, \"in front of a sample it covers\", 0.006451532, 0.00625), (1777, \"in front of a sa",
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), warm: entity 3 covers 0.1115355 of the view without occlusion culling and 0.11175926 with it (Some(OcclusionStats { frame: 5, frustum: 184, occluded: 40, early: 144, late: 0, frustum_triangles: 83730, occluded_triangles: 15864 }))"
+      ]
+    },
+    "cull: the late pass tests and draws at alpha 1": {
+      "tests": {
+        "pyramid_is_the_minimum_over_every_sample": "ok",
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), rising: entity 162 covers 0.0005169753 of the view without occlusion culling and 0.00087962963 with it (Some(OcclusionStats { frame: 19, frustum: 184, occluded: 18, early: 165, late: 1, frustum_triangles: 83730, occluded_triangles: 6856 })"
+      ]
+    },
+    "renderer: the late id-pass draws skipped": {
+      "tests": {
+        "occlusion_test_never_hides_a_box_in_front_of_the_depth": "ok",
+        "pyramid_is_the_minimum_over_every_sample": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), cold: entity 1 covers 0.37291667 of the view without occlusion culling and 0 with it (None)"
+      ]
+    }
+  }
+}

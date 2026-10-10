@@ -1,0 +1,631 @@
+{
+  "note": "cargo xtask check on the committed tree of explore/xtask at 966071d2, before the pocket-viewport lint fix (provisional timings: other agents built and used the GPU)",
+  "command": "cargo xtask check --record",
+  "commit": "966071d209a8",
+  "started_utc": "2026-10-09T12:50:13Z",
+  "duration_ms": 886313,
+  "verdict": "Fail",
+  "machine": {
+    "cpu": "AMD Ryzen 9 270 w/ Radeon 780M Graphics",
+    "logical_cores": 16,
+    "os": "windows x86_64",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "chrome": "Google Chrome 155.0.8059.39",
+    "on_ac_power": true,
+    "power_plan": "Balanced"
+  },
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 5678,
+      "summary": "19 workspace crates, 369 external packages, 2 targets; QuickJS-ng as its pins and patches give it",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "deps.crates": [
+          19.0,
+          "count"
+        ],
+        "deps.external": [
+          369.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 1703,
+      "summary": "formatted",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "docs",
+      "verdict": "Pass",
+      "duration_ms": 295,
+      "summary": "52 Markdown files under docs/ (not docs/evidence/), 0 need wrapping",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "docs.files": [
+          52.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "clippy",
+      "verdict": "Fail",
+      "duration_ms": 44572,
+      "summary": "diagnostics: 28 on x86_64-pc-windows-msvc, 3 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported",
+      "errors": [
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/bake.rs:597",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/bake.rs:597: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:438",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:438: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1450",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1450: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1475",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1475: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1486",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1486: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1507",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1507: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1542",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1542: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1553",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1553: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/rt.rs:1189",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/rt.rs:1189: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/rt.rs:1214",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/rt.rs:1214: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/rt.rs:1225",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/rt.rs:1225: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/rt.rs:1236",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/rt.rs:1236: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/renderer.rs:1845",
+          "lint": "clippy::chunks_exact_to_as_chunks",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/renderer.rs:1845: using `chunks_exact` with a constant chunk size"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/bake.rs:303",
+          "lint": "clippy::collapsible_if",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/bake.rs:303: this `if` statement can be collapsed"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1312",
+          "lint": "clippy::collapsible_if",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1312: this `if` statement can be collapsed"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/sky_radiance.rs:63",
+          "lint": "clippy::collapsible_if",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/sky_radiance.rs:63: this `if` statement can be collapsed"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/renderer.rs:1690",
+          "lint": "clippy::collapsible_if",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/renderer.rs:1690: this `if` statement can be collapsed"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/renderer.rs:1836",
+          "lint": "clippy::collapsible_if",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/renderer.rs:1836: this `if` statement can be collapsed"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1686",
+          "lint": "clippy::field_reassign_with_default",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1686: field assignment outside of initializer for an instance created with Default::default()"
+        },
+        {
+          "code": "clippy.warning",
+          "where": "crates/pocket-render/src/gi/pt.rs:1710",
+          "lint": "clippy::field_reassign_with_default",
+          "target": "x86_64-pc-windows-msvc",
+          "message": "crates/pocket-render/src/gi/pt.rs:1710: field assignment outside of initializer for an instance created with Default::default()"
+        }
+      ],
+      "more_errors": 11,
+      "warnings": [],
+      "measurements": {
+        "clippy.fixture_reported": [
+          82.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 81237,
+      "summary": "native release build",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 832,
+      "summary": "8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "gen.outputs": [
+          8.0,
+          "count"
+        ],
+        "gen.shared_files": [
+          24.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "test",
+      "verdict": "Fail",
+      "duration_ms": 182116,
+      "summary": "487 passed, 1 failed, 0 ignored in 82 suites, ignored tests included",
+      "errors": [
+        {
+          "code": "test.failed",
+          "where": "pocket_render",
+          "lint": null,
+          "target": null,
+          "message": "pocket_render gi::pt::tests::metal_pt_transport_training_and_accumulation failed"
+        }
+      ],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "test.passed": [
+          487.0,
+          "count"
+        ],
+        "test.failed": [
+          1.0,
+          "count"
+        ],
+        "test.ignored": [
+          0.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 23752,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 482,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/modules": [
+          3.0,
+          "count"
+        ],
+        "samples/sailing/tsc": [
+          212.1,
+          "ms"
+        ],
+        "tests/fixtures/controls/module-state-lint/control_caught": [
+          1.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 68852,
+      "summary": "1 projects; cross build against a debug pocket",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/ticks_compared": [
+          1800.0,
+          "count"
+        ],
+        "cross_build_ticks_compared": [
+          601.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 1524,
+      "summary": "1 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/forks": [
+          6.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 1831,
+      "summary": "1 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/seed1.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed1.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed1.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed2.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed2.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed2.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed3.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed3.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed3.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 1643,
+      "summary": "3 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/reloads": [
+          6.0,
+          "count"
+        ],
+        "tests/fixtures/controls/closure-state/control_caught": [
+          1.0,
+          "count"
+        ],
+        "tests/fixtures/controls/module-state/control_caught": [
+          1.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": "contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet"
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 471231,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "web.size.wasm": [
+          9289.566,
+          "KiB"
+        ],
+        "web.size.wasm.gz": [
+          2870.043,
+          "KiB"
+        ],
+        "web.size.glue": [
+          15.857,
+          "KiB"
+        ],
+        "web.size.wasm.O3": [
+          7382.045,
+          "KiB"
+        ],
+        "web.size.wasm.gz.O3": [
+          2651.02,
+          "KiB"
+        ],
+        "web.size.page": [
+          9331.43,
+          "KiB"
+        ],
+        "web.start.compile": [
+          50.295,
+          "ms"
+        ],
+        "web.start.instantiate_page": [
+          1.36,
+          "ms"
+        ],
+        "web.start.module_ready [since navigation]": [
+          226.02,
+          "ms"
+        ],
+        "web.start.worker_created [since navigation]": [
+          235.04,
+          "ms"
+        ],
+        "web.start.worker_ready [since navigation]": [
+          413.325,
+          "ms"
+        ],
+        "web.start.first_snapshot [since navigation]": [
+          422.06,
+          "ms"
+        ],
+        "web.start.worker_instantiate": [
+          1.28,
+          "ms"
+        ],
+        "web.start.game_build": [
+          128.705,
+          "ms"
+        ],
+        "web.tick.sail [median]": [
+          0.215,
+          "ms"
+        ],
+        "web.tick.sail [p95]": [
+          0.405,
+          "ms"
+        ],
+        "web.publish.sail [median]": [
+          0.22,
+          "ms"
+        ],
+        "web.publish.sail [p95]": [
+          0.39,
+          "ms"
+        ],
+        "web.hash.sail [median]": [
+          0.125,
+          "ms"
+        ],
+        "web.hash.sail [p95]": [
+          0.225,
+          "ms"
+        ],
+        "web.snapshot.rebuild [median]": [
+          0.17,
+          "ms"
+        ],
+        "web.snapshot.rebuild [p95]": [
+          0.39,
+          "ms"
+        ],
+        "web.snapshot.transfer [median]": [
+          0.275,
+          "ms"
+        ],
+        "web.snapshot.transfer [p95]": [
+          8.275,
+          "ms"
+        ],
+        "web.start.compile.O3": [
+          63.64,
+          "ms"
+        ],
+        "web.start.instantiate_page.O3": [
+          1.38,
+          "ms"
+        ],
+        "web.start.module_ready.O3 [since navigation]": [
+          210.295,
+          "ms"
+        ],
+        "web.start.worker_created.O3 [since navigation]": [
+          229.11,
+          "ms"
+        ],
+        "web.start.worker_ready.O3 [since navigation]": [
+          370.07,
+          "ms"
+        ],
+        "web.start.first_snapshot.O3 [since navigation]": [
+          377.84,
+          "ms"
+        ],
+        "web.start.worker_instantiate.O3": [
+          1.695,
+          "ms"
+        ],
+        "web.start.game_build.O3": [
+          123.375,
+          "ms"
+        ],
+        "web.tick.sail.O3 [median]": [
+          0.19,
+          "ms"
+        ],
+        "web.tick.sail.O3 [p95]": [
+          0.395,
+          "ms"
+        ],
+        "web.publish.sail.O3 [median]": [
+          0.19,
+          "ms"
+        ],
+        "web.publish.sail.O3 [p95]": [
+          0.69,
+          "ms"
+        ],
+        "web.hash.sail.O3 [median]": [
+          0.11,
+          "ms"
+        ],
+        "web.hash.sail.O3 [p95]": [
+          0.2,
+          "ms"
+        ],
+        "web.snapshot.rebuild.O3 [median]": [
+          0.145,
+          "ms"
+        ],
+        "web.snapshot.rebuild.O3 [p95]": [
+          0.27,
+          "ms"
+        ],
+        "web.snapshot.transfer.O3 [median]": [
+          0.28,
+          "ms"
+        ],
+        "web.snapshot.transfer.O3 [p95]": [
+          8.155,
+          "ms"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": "xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)"
+    }
+  ]
+}

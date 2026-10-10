@@ -1,0 +1,64 @@
+{
+  "url": "<local-endpoint>",
+  "stats": {
+    "url": "<local-endpoint>",
+    "frames": 300,
+    "frame_ms_mean": 2.8264777777777796,
+    "frame_ms_p50": 2.4599999999999986,
+    "frame_ms_p95": 4.443333333333332,
+    "gpu_ms_mean": 0.12001333333333335,
+    "render_ms_mean": 1.1226666655143103,
+    "backend": "WebGPU",
+    "passes": [
+      {
+        "pass": "cull",
+        "ms": 0.011
+      },
+      {
+        "pass": "lights",
+        "ms": 0.002
+      },
+      {
+        "pass": "shadows",
+        "ms": 0.019
+      },
+      {
+        "pass": "opaque+sky",
+        "ms": 0.091
+      }
+    ],
+    "draw_path": "baseline",
+    "draw_calls": 10,
+    "instances": 5,
+    "canvas": [
+      934,
+      384
+    ],
+    "gpu": "yes"
+  },
+  "id_pass": {
+    "adapter": "nvidia blackwell",
+    "draw_path": "baseline",
+    "draw_calls": 10,
+    "readback_ms": 983,
+    "entities": 3,
+    "coverage": [
+      [
+        3,
+        0.00392
+      ],
+      [
+        4,
+        0.00132
+      ],
+      [
+        5,
+        0.00179
+      ]
+    ]
+  },
+  "logs": [
+    "[log] [pocket INFO] limits: buffer 2048 MB, storage binding 2047 MB, storage buffers/stage 16, texture 2D 16384",
+    "[log] [pocket INFO] GPU:  (BrowserWebGpu, Other); features Capabilities { indirect_first_instance: false, multi_draw_indirect: false, timestamps: true, shader_f16: true, float32_filterable: true }"
+  ]
+}

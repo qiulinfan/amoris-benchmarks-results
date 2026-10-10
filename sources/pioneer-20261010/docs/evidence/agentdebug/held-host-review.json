@@ -1,0 +1,106 @@
+{
+  "stop_after_continue": [
+    {
+      "gauges": 1,
+      "play_stop": "edit",
+      "ms": 9.3,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    },
+    {
+      "gauges": 1,
+      "play_stop": "edit",
+      "ms": 5.7,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    },
+    {
+      "gauges": 1,
+      "play_stop": "edit",
+      "ms": 1.6,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    },
+    {
+      "gauges": 3,
+      "play_stop": "edit",
+      "ms": 3.6,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    },
+    {
+      "gauges": 3,
+      "play_stop": "edit",
+      "ms": 5.5,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    },
+    {
+      "gauges": 3,
+      "play_stop": "edit",
+      "ms": 9.8,
+      "status": {
+        "mode": "edit",
+        "state": "not held"
+      }
+    }
+  ],
+  "continue_then_world_edit_x60": {
+    "kept_alive": {
+      "ok": 60
+    },
+    "new_connection": {
+      "ok": 15,
+      "debug.paused queued=False": 39,
+      "debug.paused queued=True": 6
+    }
+  },
+  "queued_pause": {
+    "time_control": "debug.paused queued=True",
+    "held_tick": 121,
+    "after_continue": {
+      "tick": 121,
+      "paused": true,
+      "state": "not held"
+    },
+    "world_edit": "ok",
+    "time_step_3": {
+      "paused": true,
+      "tick": 122,
+      "ms": 0.7
+    },
+    "play_stop": {
+      "mode": "edit",
+      "ms": 12.0
+    }
+  },
+  "two_steps_at_a_stop": {
+    "A_ticks_4000": {
+      "paused": true,
+      "tick": 3000,
+      "stopped_by": "breakpoint"
+    },
+    "B_ticks_50": "debug.paused queued=True",
+    "held_status_tick": 2999,
+    "after_continue": {
+      "tick": 3050,
+      "steps_due": 0
+    }
+  },
+  "held_ms_median_keepalive": {
+    "time_step_to_breakpoint": 0.39,
+    "status_held": 0.16,
+    "world_get_held": 0.17,
+    "apply_refused": 0.13
+  }
+}

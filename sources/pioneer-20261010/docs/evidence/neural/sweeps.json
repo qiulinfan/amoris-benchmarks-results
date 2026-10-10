@@ -1,0 +1,1857 @@
+{
+  "note": "PSNR dB at mip 0 and mip 2 per channel group (neural f32 decode); bits per texel; training ms per step. Provisional: other agents shared the machine.",
+  "configs": {
+    "m1/base": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.03,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.99,
+            "mip2": 36.51
+          },
+          "normal": {
+            "mip0": 37.76,
+            "mip2": 34.26
+          },
+          "orm": {
+            "mip0": 41.8,
+            "mip2": 36.86
+          },
+          "height": {
+            "mip0": 39.56,
+            "mip2": 36.03
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.06,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.64,
+            "mip2": 28.04
+          },
+          "normal": {
+            "mip0": 31.82,
+            "mip2": 28.29
+          },
+          "orm": {
+            "mip0": 32.39,
+            "mip2": 24.34
+          },
+          "emissive": {
+            "mip0": 42.76,
+            "mip2": 31.54
+          },
+          "height": {
+            "mip0": 38.15,
+            "mip2": 27.55
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.55,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.58,
+            "mip2": 37.74
+          },
+          "normal": {
+            "mip0": 36.43,
+            "mip2": 29.61
+          },
+          "orm": {
+            "mip0": 38.11,
+            "mip2": 32.91
+          },
+          "emissive": {
+            "mip0": 47.64,
+            "mip2": 35.46
+          },
+          "height": {
+            "mip0": 39.24,
+            "mip2": 31.29
+          }
+        }
+      }
+    },
+    "m1/taps4": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, 4 taps, pe 2, mlp 50-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.382,
+        "train_ms_per_step": 4.29,
+        "psnr": {
+          "base_color": {
+            "mip0": 41.93,
+            "mip2": 37.07
+          },
+          "normal": {
+            "mip0": 36.66,
+            "mip2": 34.54
+          },
+          "orm": {
+            "mip0": 37.44,
+            "mip2": 37.81
+          },
+          "height": {
+            "mip0": 37.76,
+            "mip2": 36.04
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, 4 taps, pe 2, mlp 50-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.382,
+        "train_ms_per_step": 4.25,
+        "psnr": {
+          "base_color": {
+            "mip0": 37.23,
+            "mip2": 26.66
+          },
+          "normal": {
+            "mip0": 31.39,
+            "mip2": 28.64
+          },
+          "orm": {
+            "mip0": 32.76,
+            "mip2": 24.27
+          },
+          "emissive": {
+            "mip0": 36.9,
+            "mip2": 30.06
+          },
+          "height": {
+            "mip0": 37.17,
+            "mip2": 27.18
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, 4 taps, pe 2, mlp 50-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.382,
+        "train_ms_per_step": 4.38,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.68,
+            "mip2": 37.8
+          },
+          "normal": {
+            "mip0": 35.11,
+            "mip2": 30.73
+          },
+          "orm": {
+            "mip0": 38.88,
+            "mip2": 33.32
+          },
+          "emissive": {
+            "mip0": 43.27,
+            "mip2": 30.71
+          },
+          "height": {
+            "mip0": 39.76,
+            "mip2": 33.68
+          }
+        }
+      }
+    },
+    "m1/g16x4": {
+      "bricks": {
+        "layout": "9ch 16x4b/16x4b grids, 1/4 res, bilinear, pe 2, mlp 42-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.378,
+        "train_ms_per_step": 4.33,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.31,
+            "mip2": 36.54
+          },
+          "normal": {
+            "mip0": 37.98,
+            "mip2": 33.74
+          },
+          "orm": {
+            "mip0": 40.0,
+            "mip2": 35.53
+          },
+          "height": {
+            "mip0": 39.02,
+            "mip2": 34.46
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 16x4b/16x4b grids, 1/4 res, bilinear, pe 2, mlp 42-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.378,
+        "train_ms_per_step": 4.1,
+        "psnr": {
+          "base_color": {
+            "mip0": 38.68,
+            "mip2": 28.13
+          },
+          "normal": {
+            "mip0": 33.9,
+            "mip2": 30.06
+          },
+          "orm": {
+            "mip0": 33.67,
+            "mip2": 25.03
+          },
+          "emissive": {
+            "mip0": 43.1,
+            "mip2": 32.74
+          },
+          "height": {
+            "mip0": 38.81,
+            "mip2": 28.66
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 16x4b/16x4b grids, 1/4 res, bilinear, pe 2, mlp 42-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.378,
+        "train_ms_per_step": 4.41,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.08,
+            "mip2": 38.27
+          },
+          "normal": {
+            "mip0": 38.33,
+            "mip2": 30.77
+          },
+          "orm": {
+            "mip0": 39.28,
+            "mip2": 33.13
+          },
+          "emissive": {
+            "mip0": 45.48,
+            "mip2": 33.85
+          },
+          "height": {
+            "mip0": 40.18,
+            "mip2": 31.08
+          }
+        }
+      }
+    },
+    "m1/h64": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-64-64-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.437,
+        "train_ms_per_step": 9.61,
+        "psnr": {
+          "base_color": {
+            "mip0": 47.29,
+            "mip2": 37.69
+          },
+          "normal": {
+            "mip0": 41.25,
+            "mip2": 36.99
+          },
+          "orm": {
+            "mip0": 44.81,
+            "mip2": 38.56
+          },
+          "height": {
+            "mip0": 43.68,
+            "mip2": 37.56
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-64-64-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.437,
+        "train_ms_per_step": 9.92,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.43,
+            "mip2": 27.97
+          },
+          "normal": {
+            "mip0": 32.3,
+            "mip2": 28.43
+          },
+          "orm": {
+            "mip0": 33.98,
+            "mip2": 25.24
+          },
+          "emissive": {
+            "mip0": 42.56,
+            "mip2": 31.49
+          },
+          "height": {
+            "mip0": 38.68,
+            "mip2": 27.52
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-64-64-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.437,
+        "train_ms_per_step": 9.77,
+        "psnr": {
+          "base_color": {
+            "mip0": 47.34,
+            "mip2": 38.66
+          },
+          "normal": {
+            "mip0": 38.74,
+            "mip2": 31.42
+          },
+          "orm": {
+            "mip0": 41.53,
+            "mip2": 35.11
+          },
+          "emissive": {
+            "mip0": 50.85,
+            "mip2": 38.66
+          },
+          "height": {
+            "mip0": 42.76,
+            "mip2": 34.24
+          }
+        }
+      }
+    },
+    "m1/h16": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-16-16-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.348,
+        "train_ms_per_step": 1.69,
+        "psnr": {
+          "base_color": {
+            "mip0": 40.57,
+            "mip2": 34.88
+          },
+          "normal": {
+            "mip0": 33.31,
+            "mip2": 29.46
+          },
+          "orm": {
+            "mip0": 35.02,
+            "mip2": 33.49
+          },
+          "height": {
+            "mip0": 33.87,
+            "mip2": 30.23
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-16-16-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.348,
+        "train_ms_per_step": 1.71,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.46,
+            "mip2": 28.09
+          },
+          "normal": {
+            "mip0": 28.75,
+            "mip2": 27.28
+          },
+          "orm": {
+            "mip0": 31.4,
+            "mip2": 22.51
+          },
+          "emissive": {
+            "mip0": 32.35,
+            "mip2": 29.82
+          },
+          "height": {
+            "mip0": 36.93,
+            "mip2": 27.49
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-16-16-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.348,
+        "train_ms_per_step": 1.7,
+        "psnr": {
+          "base_color": {
+            "mip0": 41.94,
+            "mip2": 33.94
+          },
+          "normal": {
+            "mip0": 35.76,
+            "mip2": 27.35
+          },
+          "orm": {
+            "mip0": 36.95,
+            "mip2": 31.5
+          },
+          "emissive": {
+            "mip0": 45.81,
+            "mip2": 32.14
+          },
+          "height": {
+            "mip0": 36.94,
+            "mip2": 29.54
+          }
+        }
+      }
+    },
+    "m1/pe0": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 0, mlp 18-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.366,
+        "train_ms_per_step": 3.17,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.62,
+            "mip2": 35.19
+          },
+          "normal": {
+            "mip0": 36.62,
+            "mip2": 28.1
+          },
+          "orm": {
+            "mip0": 41.8,
+            "mip2": 32.86
+          },
+          "height": {
+            "mip0": 38.56,
+            "mip2": 30.43
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 0, mlp 18-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.366,
+        "train_ms_per_step": 3.15,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.24,
+            "mip2": 27.88
+          },
+          "normal": {
+            "mip0": 31.61,
+            "mip2": 28.23
+          },
+          "orm": {
+            "mip0": 33.44,
+            "mip2": 24.18
+          },
+          "emissive": {
+            "mip0": 41.08,
+            "mip2": 30.71
+          },
+          "height": {
+            "mip0": 38.4,
+            "mip2": 27.28
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 0, mlp 18-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.366,
+        "train_ms_per_step": 3.39,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.06,
+            "mip2": 37.36
+          },
+          "normal": {
+            "mip0": 36.74,
+            "mip2": 28.5
+          },
+          "orm": {
+            "mip0": 40.06,
+            "mip2": 33.42
+          },
+          "emissive": {
+            "mip0": 45.43,
+            "mip2": 31.28
+          },
+          "height": {
+            "mip0": 40.86,
+            "mip2": 31.83
+          }
+        }
+      }
+    },
+    "m1/pe3": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 3, mlp 30-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.372,
+        "train_ms_per_step": 3.79,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.86,
+            "mip2": 36.75
+          },
+          "normal": {
+            "mip0": 38.31,
+            "mip2": 34.7
+          },
+          "orm": {
+            "mip0": 42.21,
+            "mip2": 37.41
+          },
+          "height": {
+            "mip0": 39.63,
+            "mip2": 36.22
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 3, mlp 30-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.372,
+        "train_ms_per_step": 3.51,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.41,
+            "mip2": 27.87
+          },
+          "normal": {
+            "mip0": 31.58,
+            "mip2": 28.38
+          },
+          "orm": {
+            "mip0": 33.27,
+            "mip2": 23.77
+          },
+          "emissive": {
+            "mip0": 42.62,
+            "mip2": 31.35
+          },
+          "height": {
+            "mip0": 39.04,
+            "mip2": 27.76
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 3, mlp 30-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.372,
+        "train_ms_per_step": 3.67,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.97,
+            "mip2": 35.94
+          },
+          "normal": {
+            "mip0": 36.08,
+            "mip2": 27.91
+          },
+          "orm": {
+            "mip0": 38.32,
+            "mip2": 32.48
+          },
+          "emissive": {
+            "mip0": 47.26,
+            "mip2": 34.95
+          },
+          "height": {
+            "mip0": 39.6,
+            "mip2": 30.58
+          }
+        }
+      }
+    },
+    "m1/lrlat02": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.32,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.03,
+            "mip2": 36.96
+          },
+          "normal": {
+            "mip0": 39.92,
+            "mip2": 35.39
+          },
+          "orm": {
+            "mip0": 43.59,
+            "mip2": 37.42
+          },
+          "height": {
+            "mip0": 40.73,
+            "mip2": 36.66
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.18,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.4,
+            "mip2": 27.9
+          },
+          "normal": {
+            "mip0": 31.62,
+            "mip2": 28.34
+          },
+          "orm": {
+            "mip0": 32.87,
+            "mip2": 23.62
+          },
+          "emissive": {
+            "mip0": 42.69,
+            "mip2": 31.48
+          },
+          "height": {
+            "mip0": 38.25,
+            "mip2": 27.3
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.2,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.22,
+            "mip2": 36.89
+          },
+          "normal": {
+            "mip0": 38.67,
+            "mip2": 30.41
+          },
+          "orm": {
+            "mip0": 40.31,
+            "mip2": 34.42
+          },
+          "emissive": {
+            "mip0": 49.55,
+            "mip2": 37.16
+          },
+          "height": {
+            "mip0": 40.5,
+            "mip2": 32.9
+          }
+        }
+      }
+    },
+    "m1/lrlat005": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.004999999888241291,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.27,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.57,
+            "mip2": 36.48
+          },
+          "normal": {
+            "mip0": 37.78,
+            "mip2": 34.11
+          },
+          "orm": {
+            "mip0": 41.72,
+            "mip2": 35.88
+          },
+          "height": {
+            "mip0": 39.56,
+            "mip2": 34.52
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.004999999888241291,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.23,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.56,
+            "mip2": 28.02
+          },
+          "normal": {
+            "mip0": 31.19,
+            "mip2": 28.19
+          },
+          "orm": {
+            "mip0": 32.03,
+            "mip2": 23.08
+          },
+          "emissive": {
+            "mip0": 40.3,
+            "mip2": 30.94
+          },
+          "height": {
+            "mip0": 38.86,
+            "mip2": 27.72
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.004999999888241291,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.88,
+        "psnr": {
+          "base_color": {
+            "mip0": 43.29,
+            "mip2": 36.52
+          },
+          "normal": {
+            "mip0": 33.71,
+            "mip2": 28.21
+          },
+          "orm": {
+            "mip0": 36.7,
+            "mip2": 30.77
+          },
+          "emissive": {
+            "mip0": 46.14,
+            "mip2": 31.96
+          },
+          "height": {
+            "mip0": 38.03,
+            "mip2": 29.75
+          }
+        }
+      }
+    },
+    "m1/lrmlp01": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.37,
+        "psnr": {
+          "base_color": {
+            "mip0": 43.23,
+            "mip2": 36.27
+          },
+          "normal": {
+            "mip0": 36.88,
+            "mip2": 35.03
+          },
+          "orm": {
+            "mip0": 41.18,
+            "mip2": 36.61
+          },
+          "height": {
+            "mip0": 37.39,
+            "mip2": 35.37
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.26,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.41,
+            "mip2": 28.04
+          },
+          "normal": {
+            "mip0": 31.27,
+            "mip2": 28.26
+          },
+          "orm": {
+            "mip0": 32.72,
+            "mip2": 23.13
+          },
+          "emissive": {
+            "mip0": 41.28,
+            "mip2": 31.15
+          },
+          "height": {
+            "mip0": 37.74,
+            "mip2": 27.31
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.91,
+        "psnr": {
+          "base_color": {
+            "mip0": 43.16,
+            "mip2": 36.64
+          },
+          "normal": {
+            "mip0": 35.43,
+            "mip2": 28.35
+          },
+          "orm": {
+            "mip0": 37.88,
+            "mip2": 31.84
+          },
+          "emissive": {
+            "mip0": 45.22,
+            "mip2": 31.33
+          },
+          "height": {
+            "mip0": 37.28,
+            "mip2": 29.51
+          }
+        }
+      }
+    },
+    "m1/lrmlp002": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.27,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.14,
+            "mip2": 36.77
+          },
+          "normal": {
+            "mip0": 37.43,
+            "mip2": 34.07
+          },
+          "orm": {
+            "mip0": 41.78,
+            "mip2": 36.67
+          },
+          "height": {
+            "mip0": 39.34,
+            "mip2": 35.13
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.29,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.33,
+            "mip2": 27.92
+          },
+          "normal": {
+            "mip0": 31.68,
+            "mip2": 28.33
+          },
+          "orm": {
+            "mip0": 32.24,
+            "mip2": 22.98
+          },
+          "emissive": {
+            "mip0": 41.85,
+            "mip2": 31.06
+          },
+          "height": {
+            "mip0": 38.64,
+            "mip2": 27.26
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.44,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.21,
+            "mip2": 37.07
+          },
+          "normal": {
+            "mip0": 36.45,
+            "mip2": 28.63
+          },
+          "orm": {
+            "mip0": 38.75,
+            "mip2": 33.0
+          },
+          "emissive": {
+            "mip0": 49.17,
+            "mip2": 37.64
+          },
+          "height": {
+            "mip0": 40.49,
+            "mip2": 31.54
+          }
+        }
+      }
+    },
+    "m1/steps12k": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 12000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.34,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.18,
+            "mip2": 37.06
+          },
+          "normal": {
+            "mip0": 39.78,
+            "mip2": 36.32
+          },
+          "orm": {
+            "mip0": 43.42,
+            "mip2": 37.62
+          },
+          "height": {
+            "mip0": 41.08,
+            "mip2": 36.78
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 12000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.28,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.6,
+            "mip2": 27.97
+          },
+          "normal": {
+            "mip0": 32.32,
+            "mip2": 28.35
+          },
+          "orm": {
+            "mip0": 33.41,
+            "mip2": 24.79
+          },
+          "emissive": {
+            "mip0": 42.78,
+            "mip2": 31.56
+          },
+          "height": {
+            "mip0": 38.01,
+            "mip2": 27.73
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 12000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.33,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.14,
+            "mip2": 38.98
+          },
+          "normal": {
+            "mip0": 36.85,
+            "mip2": 30.63
+          },
+          "orm": {
+            "mip0": 39.39,
+            "mip2": 33.76
+          },
+          "emissive": {
+            "mip0": 47.76,
+            "mip2": 35.96
+          },
+          "height": {
+            "mip0": 40.32,
+            "mip2": 32.09
+          }
+        }
+      }
+    },
+    "m1/taps4g16": {
+      "bricks": {
+        "layout": "9ch 16x4b/16x4b grids, 1/4 res, 4 taps, pe 2, mlp 90-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.401,
+        "train_ms_per_step": 6.92,
+        "psnr": {
+          "base_color": {
+            "mip0": 40.81,
+            "mip2": 36.27
+          },
+          "normal": {
+            "mip0": 34.03,
+            "mip2": 29.1
+          },
+          "orm": {
+            "mip0": 35.16,
+            "mip2": 34.7
+          },
+          "height": {
+            "mip0": 34.67,
+            "mip2": 32.01
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 16x4b/16x4b grids, 1/4 res, 4 taps, pe 2, mlp 90-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.401,
+        "train_ms_per_step": 6.66,
+        "psnr": {
+          "base_color": {
+            "mip0": 37.5,
+            "mip2": 26.96
+          },
+          "normal": {
+            "mip0": 31.61,
+            "mip2": 28.79
+          },
+          "orm": {
+            "mip0": 31.42,
+            "mip2": 22.61
+          },
+          "emissive": {
+            "mip0": 39.02,
+            "mip2": 31.32
+          },
+          "height": {
+            "mip0": 37.86,
+            "mip2": 27.11
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 16x4b/16x4b grids, 1/4 res, 4 taps, pe 2, mlp 90-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.401,
+        "train_ms_per_step": 6.73,
+        "psnr": {
+          "base_color": {
+            "mip0": 43.33,
+            "mip2": 38.77
+          },
+          "normal": {
+            "mip0": 33.86,
+            "mip2": 29.74
+          },
+          "orm": {
+            "mip0": 36.67,
+            "mip2": 33.78
+          },
+          "emissive": {
+            "mip0": 43.77,
+            "mip2": 29.72
+          },
+          "height": {
+            "mip0": 38.12,
+            "mip2": 33.83
+          }
+        }
+      }
+    },
+    "m1/shift3": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/8 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 1.37,
+        "train_ms_per_step": 3.16,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.15,
+            "mip2": 34.12
+          },
+          "normal": {
+            "mip0": 33.92,
+            "mip2": 33.26
+          },
+          "orm": {
+            "mip0": 34.95,
+            "mip2": 34.19
+          },
+          "height": {
+            "mip0": 34.77,
+            "mip2": 31.14
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/8 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 1.37,
+        "train_ms_per_step": 3.11,
+        "psnr": {
+          "base_color": {
+            "mip0": 33.14,
+            "mip2": 21.74
+          },
+          "normal": {
+            "mip0": 28.09,
+            "mip2": 26.83
+          },
+          "orm": {
+            "mip0": 27.95,
+            "mip2": 19.71
+          },
+          "emissive": {
+            "mip0": 34.35,
+            "mip2": 26.43
+          },
+          "height": {
+            "mip0": 31.75,
+            "mip2": 20.91
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/8 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.009999999776482582,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 1.37,
+        "train_ms_per_step": 3.21,
+        "psnr": {
+          "base_color": {
+            "mip0": 41.77,
+            "mip2": 33.35
+          },
+          "normal": {
+            "mip0": 33.34,
+            "mip2": 25.12
+          },
+          "orm": {
+            "mip0": 36.01,
+            "mip2": 28.26
+          },
+          "emissive": {
+            "mip0": 41.98,
+            "mip2": 30.53
+          },
+          "height": {
+            "mip0": 37.08,
+            "mip2": 27.33
+          }
+        }
+      }
+    },
+    "m2/lat04": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.03999999910593033,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.12,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.06,
+            "mip2": 37.18
+          },
+          "normal": {
+            "mip0": 39.68,
+            "mip2": 36.77
+          },
+          "orm": {
+            "mip0": 43.36,
+            "mip2": 37.74
+          },
+          "height": {
+            "mip0": 41.04,
+            "mip2": 36.94
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.03999999910593033,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.2,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.19,
+            "mip2": 37.45
+          },
+          "normal": {
+            "mip0": 39.17,
+            "mip2": 30.16
+          },
+          "orm": {
+            "mip0": 41.25,
+            "mip2": 34.39
+          },
+          "emissive": {
+            "mip0": 48.79,
+            "mip2": 37.47
+          },
+          "height": {
+            "mip0": 41.82,
+            "mip2": 32.12
+          }
+        }
+      }
+    },
+    "m2/lat02_decay07": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.699999988079071,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.19,
+        "psnr": {
+          "base_color": {
+            "mip0": 44.34,
+            "mip2": 36.91
+          },
+          "normal": {
+            "mip0": 38.03,
+            "mip2": 35.4
+          },
+          "orm": {
+            "mip0": 41.57,
+            "mip2": 37.75
+          },
+          "height": {
+            "mip0": 38.35,
+            "mip2": 36.77
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.699999988079071,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.23,
+        "psnr": {
+          "base_color": {
+            "mip0": 42.75,
+            "mip2": 35.84
+          },
+          "normal": {
+            "mip0": 36.8,
+            "mip2": 30.33
+          },
+          "orm": {
+            "mip0": 38.44,
+            "mip2": 33.22
+          },
+          "emissive": {
+            "mip0": 46.52,
+            "mip2": 36.36
+          },
+          "height": {
+            "mip0": 38.88,
+            "mip2": 31.58
+          }
+        }
+      }
+    },
+    "m2/lat02_center1": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 1.0,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.24,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.55,
+            "mip2": 37.49
+          },
+          "normal": {
+            "mip0": 42.25,
+            "mip2": 35.39
+          },
+          "orm": {
+            "mip0": 44.74,
+            "mip2": 38.05
+          },
+          "height": {
+            "mip0": 42.16,
+            "mip2": 36.9
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 6000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 1.0,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.24,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.86,
+            "mip2": 37.21
+          },
+          "normal": {
+            "mip0": 39.32,
+            "mip2": 31.95
+          },
+          "orm": {
+            "mip0": 41.73,
+            "mip2": 35.97
+          },
+          "emissive": {
+            "mip0": 49.58,
+            "mip2": 39.32
+          },
+          "height": {
+            "mip0": 41.76,
+            "mip2": 34.41
+          }
+        }
+      }
+    },
+    "m2/lat02_12k": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 12000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.26,
+        "psnr": {
+          "base_color": {
+            "mip0": 47.53,
+            "mip2": 37.33
+          },
+          "normal": {
+            "mip0": 41.94,
+            "mip2": 38.06
+          },
+          "orm": {
+            "mip0": 45.23,
+            "mip2": 38.55
+          },
+          "height": {
+            "mip0": 43.27,
+            "mip2": 37.68
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 12000,
+        "lr_latent": 0.019999999552965164,
+        "center_fraction": 0.5,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.28,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.83,
+            "mip2": 38.49
+          },
+          "normal": {
+            "mip0": 39.96,
+            "mip2": 31.88
+          },
+          "orm": {
+            "mip0": 41.79,
+            "mip2": 35.78
+          },
+          "emissive": {
+            "mip0": 49.53,
+            "mip2": 36.9
+          },
+          "height": {
+            "mip0": 42.25,
+            "mip2": 34.53
+          }
+        }
+      }
+    },
+    "final/default": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.18,
+        "psnr": {
+          "base_color": {
+            "mip0": 47.45,
+            "mip2": 38.0
+          },
+          "normal": {
+            "mip0": 41.91,
+            "mip2": 38.21
+          },
+          "orm": {
+            "mip0": 45.9,
+            "mip2": 38.67
+          },
+          "height": {
+            "mip0": 43.02,
+            "mip2": 37.96
+          }
+        }
+      },
+      "CheckerPBR": {
+        "layout": "7ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-7",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 40.562,
+        "train_ms_per_step": 3.31,
+        "psnr": {
+          "base_color": {
+            "mip0": 50.1,
+            "mip2": 52.72
+          },
+          "normal": {
+            "mip0": 43.72,
+            "mip2": 43.74
+          },
+          "orm": {
+            "mip0": 46.85,
+            "mip2": 43.25
+          }
+        }
+      },
+      "detail-poster": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.52,
+        "psnr": {
+          "base_color": {
+            "mip0": 43.8,
+            "mip2": 38.73
+          },
+          "normal": {
+            "mip0": 38.64,
+            "mip2": 37.55
+          },
+          "orm": {
+            "mip0": 41.64,
+            "mip2": 42.51
+          },
+          "height": {
+            "mip0": 45.04,
+            "mip2": 39.6
+          }
+        }
+      },
+      "metal": {
+        "layout": "8ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-8",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.368,
+        "train_ms_per_step": 3.37,
+        "psnr": {
+          "base_color": {
+            "mip0": 47.58,
+            "mip2": 40.78
+          },
+          "normal": {
+            "mip0": 39.79,
+            "mip2": 31.66
+          },
+          "orm": {
+            "mip0": 41.54,
+            "mip2": 35.7
+          }
+        }
+      },
+      "noise": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.59,
+        "psnr": {
+          "base_color": {
+            "mip0": 39.27,
+            "mip2": 27.9
+          },
+          "normal": {
+            "mip0": 31.7,
+            "mip2": 28.36
+          },
+          "orm": {
+            "mip0": 33.84,
+            "mip2": 24.69
+          },
+          "emissive": {
+            "mip0": 41.43,
+            "mip2": 30.71
+          },
+          "height": {
+            "mip0": 38.62,
+            "mip2": 27.41
+          }
+        }
+      },
+      "scene-poster": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.72,
+        "psnr": {
+          "base_color": {
+            "mip0": 35.28,
+            "mip2": 30.17
+          },
+          "normal": {
+            "mip0": 30.52,
+            "mip2": 28.6
+          },
+          "orm": {
+            "mip0": 33.48,
+            "mip2": 34.2
+          },
+          "height": {
+            "mip0": 36.65,
+            "mip2": 30.86
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.3,
+        "psnr": {
+          "base_color": {
+            "mip0": 46.61,
+            "mip2": 38.48
+          },
+          "normal": {
+            "mip0": 40.92,
+            "mip2": 33.22
+          },
+          "orm": {
+            "mip0": 42.07,
+            "mip2": 36.73
+          },
+          "emissive": {
+            "mip0": 49.79,
+            "mip2": 38.34
+          },
+          "height": {
+            "mip0": 42.01,
+            "mip2": 35.82
+          }
+        }
+      },
+      "wood": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.37,
+        "train_ms_per_step": 3.16,
+        "psnr": {
+          "base_color": {
+            "mip0": 52.16,
+            "mip2": 41.99
+          },
+          "normal": {
+            "mip0": 48.14,
+            "mip2": 36.8
+          },
+          "orm": {
+            "mip0": 48.05,
+            "mip2": 38.41
+          },
+          "height": {
+            "mip0": 51.17,
+            "mip2": 43.44
+          }
+        }
+      }
+    },
+    "final/shift3": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/8 res, bilinear, pe 2, mlp 26-32-32-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 1.37,
+        "train_ms_per_step": 3.32,
+        "psnr": {
+          "base_color": {
+            "mip0": 40.55,
+            "mip2": 34.76
+          },
+          "normal": {
+            "mip0": 37.01,
+            "mip2": 32.3
+          },
+          "orm": {
+            "mip0": 37.67,
+            "mip2": 35.15
+          },
+          "height": {
+            "mip0": 36.72,
+            "mip2": 33.21
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/8 res, bilinear, pe 2, mlp 26-32-32-12",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 1.37,
+        "train_ms_per_step": 3.3,
+        "psnr": {
+          "base_color": {
+            "mip0": 45.21,
+            "mip2": 36.03
+          },
+          "normal": {
+            "mip0": 36.4,
+            "mip2": 31.36
+          },
+          "orm": {
+            "mip0": 39.69,
+            "mip2": 34.97
+          },
+          "emissive": {
+            "mip0": 45.06,
+            "mip2": 36.25
+          },
+          "height": {
+            "mip0": 40.75,
+            "mip2": 33.75
+          }
+        }
+      }
+    },
+    "final/h64": {
+      "bricks": {
+        "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-64-64-9",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.437,
+        "train_ms_per_step": 11.21,
+        "psnr": {
+          "base_color": {
+            "mip0": 49.13,
+            "mip2": 40.03
+          },
+          "normal": {
+            "mip0": 43.58,
+            "mip2": 39.06
+          },
+          "orm": {
+            "mip0": 46.89,
+            "mip2": 40.04
+          },
+          "height": {
+            "mip0": 46.35,
+            "mip2": 39.03
+          }
+        }
+      },
+      "tiles": {
+        "layout": "12ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-64-64-12",
+        "steps": 10000,
+        "lr_latent": 0.029999999329447746,
+        "center_fraction": 0.75,
+        "mip_decay": 0.5,
+        "bits_per_texel": 5.437,
+        "train_ms_per_step": 17.39,
+        "psnr": {
+          "base_color": {
+            "mip0": 49.19,
+            "mip2": 40.42
+          },
+          "normal": {
+            "mip0": 43.51,
+            "mip2": 34.26
+          },
+          "orm": {
+            "mip0": 44.55,
+            "mip2": 37.83
+          },
+          "emissive": {
+            "mip0": 51.39,
+            "mip2": 42.34
+          },
+          "height": {
+            "mip0": 45.22,
+            "mip2": 38.5
+          }
+        }
+      }
+    }
+  }
+}

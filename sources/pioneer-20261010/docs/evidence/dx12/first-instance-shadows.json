@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-09",
+  "case": "many_cubes --count 200000 --shadows --capture (1600x900), RTX 5060, docs/bench/dx12.md 2.1",
+  "captures": {
+    "vulkan": "POCKET_BACKEND=vulkan",
+    "dx12": "POCKET_BACKEND=dx12 (indirect validation on, the fix)",
+    "dx12_no_validation": "POCKET_BACKEND=dx12 WGPU_VALIDATION_INDIRECT_CALL=0 (the bug)"
+  },
+  "vulkan_vs_dx12": {
+    "rmse_8bit": 0.033,
+    "max_diff_8bit": 21,
+    "psnr_db": 77.72,
+    "pixels_over_percent": {
+      ">1": 0.0,
+      ">16": 0.0,
+      ">2": 0.0,
+      ">32": 0.0,
+      ">4": 0.0,
+      ">64": 0.0,
+      ">8": 0.0
+    }
+  },
+  "vulkan_vs_dx12_no_validation": {
+    "rmse_8bit": 0.033,
+    "max_diff_8bit": 21,
+    "psnr_db": 77.72,
+    "pixels_over_percent": {
+      ">1": 0.0,
+      ">16": 0.0,
+      ">2": 0.0,
+      ">32": 0.0,
+      ">4": 0.0,
+      ">64": 0.0,
+      ">8": 0.0
+    }
+  },
+  "dx12_vs_dx12_no_validation": {
+    "rmse_8bit": 0.0,
+    "max_diff_8bit": 0,
+    "psnr_db": null,
+    "pixels_over_percent": {
+      ">1": 0.0,
+      ">16": 0.0,
+      ">2": 0.0,
+      ">32": 0.0,
+      ">4": 0.0,
+      ">64": 0.0,
+      ">8": 0.0
+    }
+  },
+  "reading": "the frame does not reveal a lost first instance; gpu::tests::indirect_draws_keep_their_first_instance does"
+}

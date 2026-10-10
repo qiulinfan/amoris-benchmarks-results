@@ -1,0 +1,381 @@
+{
+  "adapter": {
+    "backend": "Vulkan",
+    "device_type": "IntegratedGpu",
+    "driver": "AMD proprietary driver",
+    "driver_info": "24.30.62.03 (LLPC)",
+    "features": "Features { features_wgpu: FeaturesWGPU(SHADER_FLOAT32_ATOMIC | TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | PIPELINE_STATISTICS_QUERY | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | POLYGON_MODE_POINT | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | MULTIVIEW | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXPERIMENTAL_RAY_QUERY | SHADER_F64 | SHADER_I16 | SHADER_EARLY_DEPTH_TEST | SHADER_INT64 | SUBGROUP | SUBGROUP_VERTEX | SUBGROUP_BARRIER | PIPELINE_CACHE | SHADER_INT64_ATOMIC_MIN_MAX | SHADER_INT64_ATOMIC_ALL_OPS | VULKAN_EXTERNAL_MEMORY_WIN32 | TEXTURE_INT64_ATOMIC | EXPERIMENTAL_MESH_SHADER | EXPERIMENTAL_RAY_HIT_VERTEX_RETURN | EXPERIMENTAL_MESH_SHADER_MULTIVIEW | EXTENDED_ACCELERATION_STRUCTURE_VERTEX_FORMATS | PASSTHROUGH_SHADERS | SHADER_BARYCENTRICS | SELECTIVE_MULTIVIEW | EXPERIMENTAL_MESH_SHADER_POINTS | MULTISAMPLE_ARRAY | EXPERIMENTAL_COOPERATIVE_MATRIX | SHADER_PER_VERTEX | SHADER_DRAW_INDEX | ACCELERATION_STRUCTURE_BINDING_ARRAY | MEMORY_DECORATION_COHERENT | MEMORY_DECORATION_VOLATILE | EXPERIMENTAL_RAY_TRACING_PIPELINES), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | SHADER_F16 | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES | IMMEDIATES | PRIMITIVE_INDEX) }",
+    "name": "AMD Radeon 780M Graphics"
+  },
+  "backend": "Vulkan",
+  "cases": [
+    {
+      "expected_hit_t_custom_instance_primitive_front": [
+        1.0,
+        17,
+        0,
+        0,
+        false
+      ],
+      "name": "hit",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 0.9999999403953552
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 1,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 0.9999999403953552
+      },
+      "opaque": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 0.9999999403953552
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": null,
+      "name": "miss",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "opaque": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": [
+        3.0,
+        29,
+        1,
+        0,
+        false
+      ],
+      "name": "transformed_instance",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 29,
+        "instance_index": 1,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 3.0
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 1,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 29,
+        "instance_index": 1,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 3.0
+      },
+      "opaque": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 29,
+        "instance_index": 1,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 3.0
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": [
+        1.0,
+        17,
+        0,
+        1,
+        false
+      ],
+      "name": "second_primitive",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 1,
+        "t": 0.9999999403953552
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 1,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 1,
+        "t": 0.9999999403953552
+      },
+      "opaque": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 1,
+        "t": 0.9999999403953552
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": null,
+      "name": "clipped_by_t_max",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "opaque": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": null,
+      "name": "excluded_by_mask",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "opaque": {
+        "barycentrics": [
+          0.0,
+          0.0
+        ],
+        "candidates": 0,
+        "front_face": 0,
+        "geometry_index": 0,
+        "instance_custom_data": 0,
+        "instance_index": 0,
+        "kind": 0,
+        "primitive_index": 0,
+        "t": -1.0
+      },
+      "passed": true
+    },
+    {
+      "expected_hit_t_custom_instance_primitive_front": [
+        1.0,
+        17,
+        0,
+        0,
+        true
+      ],
+      "name": "front_face_from_counterclockwise_side",
+      "nonopaque_committed": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 1,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 1.0
+      },
+      "nonopaque_first_candidate": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 1,
+        "front_face": 1,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 1.0
+      },
+      "opaque": {
+        "barycentrics": [
+          0.25,
+          0.5
+        ],
+        "candidates": 0,
+        "front_face": 1,
+        "geometry_index": 0,
+        "instance_custom_data": 17,
+        "instance_index": 0,
+        "kind": 1,
+        "primitive_index": 0,
+        "t": 1.0
+      },
+      "passed": true
+    }
+  ],
+  "device_features": "Features { features_wgpu: FeaturesWGPU(EXPERIMENTAL_RAY_QUERY), features_webgpu: FeaturesWebGPU(0x0) }",
+  "gpu_errors": [],
+  "instance_count": 2,
+  "passed": true,
+  "ray_count": 7,
+  "supported": true,
+  "timing_note": "Single capability probe; includes CPU/driver/readback costs, not a GI benchmark",
+  "timings_wall_ms": {
+    "build_trace_readback": 6.264600000000001,
+    "device_request": 539.3016,
+    "resource_setup": 22.115,
+    "total": 567.8322999999999
+  },
+  "triangle_count": 2,
+  "wgpu_version": "30.0.1"
+}

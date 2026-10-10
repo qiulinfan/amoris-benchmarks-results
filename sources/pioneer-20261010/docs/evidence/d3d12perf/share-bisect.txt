@@ -1,0 +1,49 @@
+Which SCENE_* constant changes the color on the RTX 5060 with Direct3D 12 (review follow-up,
+2026-10-09, single-agent).
+
+Builds: master (bda1fd7a) and this branch at 353eb3f8 plus a temporary switch (not committed) that
+forced named constants of post.rs `SceneFormat::constants` on. Each branch capture is compared with
+master's capture of the same case (tools/build_compare.py's cases; image_diff, 8-bit units).
+POCKET_BACKEND=dx12 POCKET_ADAPTER=nvidia POCKET_OCCLUSION=off; msaa = POCKET_AA=msaa
+POCKET_GTAO=off (share, motion and normals off), taa = POCKET_AA=taa POCKET_GTAO=off (motion on).
+
+mode  case           forced on        RMSE   max
+msaa  cubes-shadows  (none)           0.001  1
+msaa  cubes-shadows  share            0      0
+msaa  cubes-shadows  share,normals    0      0
+msaa  cubes-shadows  normals          0.001  1
+msaa  cubes-dense    (none)           0.001  1
+msaa  cubes-dense    share            0      0
+msaa  cubes-dense    share,normals    0      0
+msaa  cubes-dense    normals          0.001  1
+msaa  splats         (none)           0      0
+msaa  splats         share            0      0
+msaa  splats         share,normals    0      0
+msaa  splats         normals          0      0
+msaa  crowd          (none)           0.001  1
+msaa  crowd          share            0      0
+msaa  crowd          share,normals    0      0
+msaa  crowd          normals          0.001  1
+taa   cubes-shadows  (none)           0.033  11
+taa   cubes-shadows  share            0      0
+taa   cubes-shadows  share,normals    0      0
+taa   cubes-shadows  normals          0.033  11
+taa   cubes-dense    (none)           0.003  1
+taa   cubes-dense    share            0      0
+taa   cubes-dense    share,normals    0      0
+taa   cubes-dense    normals          0.003  1
+taa   splats         (none)           0      1
+taa   splats         share            0      0
+taa   splats         share,normals    0      0
+taa   splats         normals          0      1
+taa   crowd          (none)           0.006  2
+taa   crowd          share            0      0
+taa   crowd          share,normals    0      0
+taa   crowd          normals          0.006  2
+
+The indirect share alone decides it: with it computed, every frame equals master's, with the motion
+off (msaa) and the view normal off (both modes). The normal and the motion change nothing. The
+earlier build_compare run (old-vs-new.json at 353eb3f8) already had MSAA with GTAO (share on,
+motion and normals off) identical.
+
+Cost of computing the share without its target: share-cost-rtx5060.json, share-cost-780m.json.

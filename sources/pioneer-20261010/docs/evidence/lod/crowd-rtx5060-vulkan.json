@@ -1,0 +1,285 @@
+{
+  "what": "lod_field --n 48 --detail 6 --occlusion off --frames 60 --warm 10, with and without --crowd 200 (skinned columns, demo::bent_columns), levels off and on, multi-draw and baseline paths; provisional timings (other agents on the machine)",
+  "runs": [
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "multi-draw",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 0,
+      "lod": "off",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 20,
+      "cpu_ms": {
+        "mean": 0.796,
+        "p50": 0.795,
+        "p95": 1.028
+      },
+      "gpu_ms": {
+        "mean": 74.195,
+        "p50": 72.988,
+        "p95": 87.794
+      },
+      "wall_ms": {
+        "mean": 75.31,
+        "p50": 74.239,
+        "p95": 89.08
+      },
+      "list_bytes": 156740,
+      "camera_triangles": 169869314,
+      "shadow_triangles": 176734216,
+      "POCKET_GPU_MINIMAL": ""
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "multi-draw",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 0,
+      "lod": "on",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 20,
+      "cpu_ms": {
+        "mean": 0.696,
+        "p50": 0.711,
+        "p95": 0.925
+      },
+      "gpu_ms": {
+        "mean": 0.781,
+        "p50": 0.781,
+        "p95": 0.783
+      },
+      "wall_ms": {
+        "mean": 1.824,
+        "p50": 1.831,
+        "p95": 2.122
+      },
+      "list_bytes": 1253444,
+      "camera_triangles": 1380226,
+      "shadow_triangles": 1430920,
+      "POCKET_GPU_MINIMAL": ""
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "multi-draw",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 200,
+      "lod": "off",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 20,
+      "cpu_ms": {
+        "mean": 2.074,
+        "p50": 1.983,
+        "p95": 2.796
+      },
+      "gpu_ms": {
+        "mean": 75.585,
+        "p50": 74.952,
+        "p95": 82.599
+      },
+      "wall_ms": {
+        "mean": 79.199,
+        "p50": 78.617,
+        "p95": 85.775
+      },
+      "list_bytes": 170340,
+      "camera_triangles": 170893314,
+      "shadow_triangles": 178387976,
+      "POCKET_GPU_MINIMAL": ""
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "multi-draw",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 200,
+      "lod": "on",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 20,
+      "cpu_ms": {
+        "mean": 2.051,
+        "p50": 2.031,
+        "p95": 2.588
+      },
+      "gpu_ms": {
+        "mean": 0.835,
+        "p50": 0.836,
+        "p95": 0.839
+      },
+      "wall_ms": {
+        "mean": 4.365,
+        "p50": 4.345,
+        "p95": 4.995
+      },
+      "list_bytes": 1362244,
+      "camera_triangles": 1398826,
+      "shadow_triangles": 1471080,
+      "POCKET_GPU_MINIMAL": ""
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "baseline",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 0,
+      "lod": "off",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 25,
+      "cpu_ms": {
+        "mean": 1.382,
+        "p50": 1.207,
+        "p95": 2.946
+      },
+      "gpu_ms": {
+        "mean": 71.082,
+        "p50": 70.615,
+        "p95": 80.282
+      },
+      "wall_ms": {
+        "mean": 86.133,
+        "p50": 83.587,
+        "p95": 105.944
+      },
+      "list_bytes": 156740,
+      "camera_triangles": 169869314,
+      "shadow_triangles": 176734216,
+      "POCKET_GPU_MINIMAL": "first-instance"
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "baseline",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 0,
+      "lod": "on",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 165,
+      "cpu_ms": {
+        "mean": 2.95,
+        "p50": 1.174,
+        "p95": 19.622
+      },
+      "gpu_ms": {
+        "mean": 0.722,
+        "p50": 0.722,
+        "p95": 0.724
+      },
+      "wall_ms": {
+        "mean": 28.293,
+        "p50": 24.392,
+        "p95": 56.74
+      },
+      "list_bytes": 1253444,
+      "camera_triangles": 1380226,
+      "shadow_triangles": 1430920,
+      "POCKET_GPU_MINIMAL": "first-instance"
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "baseline",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 200,
+      "lod": "off",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 1025,
+      "cpu_ms": {
+        "mean": 3.721,
+        "p50": 3.278,
+        "p95": 7.315
+      },
+      "gpu_ms": {
+        "mean": 74.042,
+        "p50": 74.397,
+        "p95": 77.054
+      },
+      "wall_ms": {
+        "mean": 82.503,
+        "p50": 80.513,
+        "p95": 96.04
+      },
+      "list_bytes": 170340,
+      "camera_triangles": 170893314,
+      "shadow_triangles": 178387976,
+      "POCKET_GPU_MINIMAL": "first-instance"
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "backend": "Vulkan",
+      "draw_path": "baseline",
+      "size": [
+        1280,
+        720
+      ],
+      "n": 48,
+      "detail": 6,
+      "crowd": 200,
+      "lod": "on",
+      "occlusion": "off",
+      "frames": 60,
+      "draw_calls": 8165,
+      "cpu_ms": {
+        "mean": 6.564,
+        "p50": 6.713,
+        "p95": 7.962
+      },
+      "gpu_ms": {
+        "mean": 0.838,
+        "p50": 0.862,
+        "p95": 0.868
+      },
+      "wall_ms": {
+        "mean": 8.703,
+        "p50": 8.835,
+        "p95": 10.181
+      },
+      "list_bytes": 1362244,
+      "camera_triangles": 1398826,
+      "shadow_triangles": 1471080,
+      "POCKET_GPU_MINIMAL": "first-instance"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-09",
+  "what": "tools/splats/web_harness: pocket-render built for wasm32 drawing 200,000 random splats (a dome over a disc, opacities 0.3-1) on a 1280x720 canvas in headless Chrome 155 WebGPU, 90 frames of quads then 90 of tiles; screenshots compared",
+  "adapter": "Chrome's choice; its WebGPU reported AMD RDNA 3 (the Radeon 780M iGPU) in the WGSL check, and wgpu on the web reports no adapter name",
+  "limits": "buffer 2048 MB, storage binding 2047 MB, storage buffers per stage 16 (Gpu::new asks for the adapter's limits)",
+  "image_quads_vs_tiles": {
+    "mean_abs_diff_of_255": 0.1854,
+    "max": 3,
+    "psnr_db": 55.41,
+    "pixels_over_2_pct": 0.0026
+  },
+  "pass_ms_last_frame_quads": {
+    "lights": 0.00676,
+    "splat preprocess": 0.14692,
+    "splat compact": 0.0704,
+    "splat sort": 0.79924,
+    "opaque+sky": 0.17656,
+    "splat depth": 0.08964,
+    "splat draw": 3.38424
+  },
+  "pass_ms_last_frame_tiles": {
+    "lights": 0.00348,
+    "splat preprocess": 0.14048,
+    "splat compact": 0.07056,
+    "splat sort": 0.83616,
+    "splat tile count": 0.52584,
+    "splat tile scan": 0.00308,
+    "splat tile emit": 0.31388,
+    "splat tile sort": 2.77248,
+    "opaque+sky": 0.17468,
+    "splat raster": 3.33988,
+    "splat composite": 0.12588
+  },
+  "visible": 197560,
+  "quad_pixels": 103817616,
+  "tile_pairs": 1193471,
+  "tile_dropped": 0,
+  "note": "one frame of timings each, provisional; Chrome quantizes timestamps; rerun after restoring sub-tile culling (screenshots unchanged: 55.41 dB, at most 3 of 255)",
+  "tile_drop_frames": 1,
+  "tile_drop_frames_note": "200k splats want 1,193,471 pairs against the 1,048,576-pair start: the first frames dropped pairs until the readback grew the buffers (reported since the fix of SplatStats::tile_dropped)",
+  "superseded_raster_ms": {
+    "splat raster": 5.86396,
+    "splat tile sort": 2.83372,
+    "note": "first run, built from 2e90b3c8 with sub-tile culling disabled by a leftover if (true); the image was the same"
+  }
+}

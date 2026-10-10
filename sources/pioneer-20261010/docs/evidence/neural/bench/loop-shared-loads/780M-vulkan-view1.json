@@ -1,0 +1,145 @@
+{
+  "adapter": "AMD Radeon 780M Graphics",
+  "backend": "Vulkan",
+  "bench": "neural texture decode",
+  "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+  "frames": 150,
+  "layout": "9ch 8x8b/8x8b grids, 1/4 res, bilinear, pe 2, mlp 26-32-32-9",
+  "ntex": "out/neural/final/default/bricks.ntex",
+  "results": [
+    {
+      "size": [
+        1920,
+        1080
+      ],
+      "variants": {
+        "inline": {
+          "gpu_ms": {
+            "mean": 4.266,
+            "p10": 3.931,
+            "p50": 4.245,
+            "p90": 4.569
+          },
+          "opaque_ms": {
+            "mean": 4.244,
+            "p10": 3.91,
+            "p50": 4.224,
+            "p90": 4.546
+          }
+        },
+        "neural_f16": {
+          "gpu_ms": {
+            "mean": 17.508,
+            "p10": 15.48,
+            "p50": 16.452,
+            "p90": 18.97
+          },
+          "opaque_ms": {
+            "mean": 16.894,
+            "p10": 15.469,
+            "p50": 16.28,
+            "p90": 18.716
+          }
+        },
+        "neural_f32": {
+          "gpu_ms": {
+            "mean": 16.43,
+            "p10": 13.418,
+            "p50": 15.703,
+            "p90": 18.382
+          },
+          "opaque_ms": {
+            "mean": 15.6,
+            "p10": 13.405,
+            "p50": 15.554,
+            "p90": 17.792
+          }
+        },
+        "textured": {
+          "gpu_ms": {
+            "mean": 4.652,
+            "p10": 4.406,
+            "p50": 4.636,
+            "p90": 4.94
+          },
+          "opaque_ms": {
+            "mean": 4.633,
+            "p10": 4.387,
+            "p50": 4.617,
+            "p90": 4.921
+          }
+        }
+      }
+    },
+    {
+      "size": [
+        2560,
+        1440
+      ],
+      "variants": {
+        "inline": {
+          "gpu_ms": {
+            "mean": 6.372,
+            "p10": 5.823,
+            "p50": 6.184,
+            "p90": 7.121
+          },
+          "opaque_ms": {
+            "mean": 6.305,
+            "p10": 5.813,
+            "p50": 6.172,
+            "p90": 7.102
+          }
+        },
+        "neural_f16": {
+          "gpu_ms": {
+            "mean": 34.648,
+            "p10": 28.703,
+            "p50": 29.692,
+            "p90": 60.525
+          },
+          "opaque_ms": {
+            "mean": 30.395,
+            "p10": 28.59,
+            "p50": 29.401,
+            "p90": 35.546
+          }
+        },
+        "neural_f32": {
+          "gpu_ms": {
+            "mean": 21.282,
+            "p10": 18.789,
+            "p50": 20.301,
+            "p90": 22.966
+          },
+          "opaque_ms": {
+            "mean": 20.636,
+            "p10": 18.78,
+            "p50": 20.262,
+            "p90": 22.778
+          }
+        },
+        "textured": {
+          "gpu_ms": {
+            "mean": 7.146,
+            "p10": 6.692,
+            "p50": 6.886,
+            "p90": 7.515
+          },
+          "opaque_ms": {
+            "mean": 7.005,
+            "p10": 6.682,
+            "p50": 6.876,
+            "p90": 7.449
+          }
+        }
+      }
+    }
+  ],
+  "source": "procedural:bricks",
+  "texture": [
+    1024,
+    1024
+  ],
+  "view": 1
+}

@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "command": "cargo xtask check --only docs --json",
+  "commit": "7bb578df5519+dirty",
+  "machine": {
+    "id": "other",
+    "cpu": "Apple M5",
+    "logical_cores": 10,
+    "gpus": [],
+    "os": "macos aarch64",
+    "on_ac_power": null,
+    "power_plan": null,
+    "chrome": null,
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "started_utc": "2026-10-10T15:25:03Z",
+  "duration_ms": 411,
+  "verdict": "Fail",
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "fmt",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "docs",
+      "verdict": "Fail",
+      "duration_ms": 160,
+      "summary": "70 Markdown files under docs/ (not docs/evidence/), 21 need wrapping",
+      "errors": [
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/agent-debug.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/agent-debug.md",
+          "detail": {
+            "path": "docs/bench/agent-debug.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/debug-eval.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/debug-eval.md",
+          "detail": {
+            "path": "docs/bench/debug-eval.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/dx12.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/dx12.md",
+          "detail": {
+            "path": "docs/bench/dx12.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/lod.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/lod.md",
+          "detail": {
+            "path": "docs/bench/lod.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/neural-textures.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/neural-textures.md",
+          "detail": {
+            "path": "docs/bench/neural-textures.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/occlusion.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/occlusion.md",
+          "detail": {
+            "path": "docs/bench/occlusion.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/path-tracing-nrc.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/path-tracing-nrc.md",
+          "detail": {
+            "path": "docs/bench/path-tracing-nrc.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/physics.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/physics.md",
+          "detail": {
+            "path": "docs/bench/physics.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/player.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/player.md",
+          "detail": {
+            "path": "docs/bench/player.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/polish.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/polish.md",
+          "detail": {
+            "path": "docs/bench/polish.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/quiet-2026-10-09.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/quiet-2026-10-09.md",
+          "detail": {
+            "path": "docs/bench/quiet-2026-10-09.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/rt-shadows.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/rt-shadows.md",
+          "detail": {
+            "path": "docs/bench/rt-shadows.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/splats.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/splats.md",
+          "detail": {
+            "path": "docs/bench/splats.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/taa-gtao.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/taa-gtao.md",
+          "detail": {
+            "path": "docs/bench/taa-gtao.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/bench/web.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/bench/web.md",
+          "detail": {
+            "path": "docs/bench/web.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/README.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/README.md",
+          "detail": {
+            "path": "docs/spec/README.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/debugger.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/debugger.md",
+          "detail": {
+            "path": "docs/spec/debugger.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/desktop.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/desktop.md",
+          "detail": {
+            "path": "docs/spec/desktop.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/player.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/player.md",
+          "detail": {
+            "path": "docs/spec/player.md"
+          }
+        },
+        {
+          "code": "docs.unwrapped",
+          "message": "docs/spec/server.md has prose wider than 100 columns; run python tools/wrap_docs.py docs/spec/server.md",
+          "detail": {
+            "path": "docs/spec/server.md"
+          }
+        }
+      ],
+      "more_errors": 1,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "docs.files",
+          "value": 70.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/docs.log"
+    },
+    {
+      "name": "clippy",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "build",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "gen",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "test",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "wasm",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "types",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "fork",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "web",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: not in --only",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "not in --only",
+      "log": null
+    }
+  ]
+}

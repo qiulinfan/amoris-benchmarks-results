@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-09",
+  "provisional": true,
+  "setup": "RTX 5060 (--force_high_performance_gpu), Chrome 155 headless 1280x720, the final explore/polish viewport build, viewport/?demo=cubes&dense&count=100000, tools/web_readback.mjs 8",
+  "rows": [
+    {
+      "config": "uncapped, no limit (default)",
+      "frame_ms_mean": 1.35,
+      "visible_ms_p50": 477.7,
+      "visible_frames_p50": 356,
+      "pick_ms_p50": 484.9,
+      "pick_frames_p50": 358
+    },
+    {
+      "config": "uncapped, ?in_flight=3",
+      "frame_ms_mean": 7.33,
+      "visible_ms_p50": 31.2,
+      "visible_frames_p50": 5,
+      "pick_ms_p50": 23.1,
+      "pick_frames_p50": 5
+    },
+    {
+      "config": "VSYNC=1, no limit (default)",
+      "frame_ms_mean": 29.48,
+      "visible_ms_p50": 53.7,
+      "visible_frames_p50": 6,
+      "pick_ms_p50": 50.3,
+      "pick_frames_p50": 6
+    }
+  ],
+  "earlier": {
+    "config": "VSYNC=1, master's package, Radeon 780M (default adapter)",
+    "visible_ms_p50": 30.3,
+    "visible_frames_p50": 3,
+    "pick_ms_p50": 16.6,
+    "pick_frames_p50": 2
+  },
+  "idle_page_microbenchmark": {
+    "what": "a page with no frame loop: submit an empty command buffer then await onSubmittedWorkDone; clearBuffer then await mapAsync (8 each, uncapped flags, default adapter)",
+    "onSubmittedWorkDone_ms": [
+      1.8,
+      0.2,
+      0.3,
+      0.2,
+      0.2,
+      0.2,
+      0.3,
+      0.2
+    ],
+    "mapAsync_ms": [
+      4.3,
+      2.8,
+      2.4,
+      2.7,
+      2.9,
+      4.6,
+      2.9,
+      3.6
+    ]
+  }
+}

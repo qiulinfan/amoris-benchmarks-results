@@ -1,0 +1,80 @@
+{
+  "sample": "samples\\sailing",
+  "platform": "win32-x64",
+  "steps": [
+    {
+      "name": "editor page loaded from the host",
+      "ok": true,
+      "url": "<local-endpoint>"
+    },
+    {
+      "name": "host.json names the project as fs.realpath does",
+      "ok": true,
+      "project": "<local-path>"
+    },
+    {
+      "name": "viewport is the WebAssembly/WebGPU one",
+      "ok": true
+    },
+    {
+      "name": "a canvas draws",
+      "ok": true,
+      "canvas": {
+        "w": 1608,
+        "h": 872
+      },
+      "adapter": {
+        "vendor": "amd",
+        "architecture": "rdna-3",
+        "description": ""
+      }
+    },
+    {
+      "name": "the host starts in the edit world",
+      "ok": true,
+      "tick": 0
+    },
+    {
+      "name": "Play clicked",
+      "ok": true
+    },
+    {
+      "name": "Play forks the world and runs ticks",
+      "ok": true,
+      "from": 0,
+      "to": 45
+    },
+    {
+      "name": "the editor shows PLAY",
+      "ok": true,
+      "badge": "PLAY"
+    },
+    {
+      "name": "Stop clicked",
+      "ok": true
+    },
+    {
+      "name": "Stop returns to the edit world",
+      "ok": true,
+      "edit_hash": "6673c43227e465a437438eae32740d01",
+      "after": "6673c43227e465a437438eae32740d01"
+    },
+    {
+      "name": "the app exits on close",
+      "ok": true,
+      "exit": {
+        "code": 0,
+        "signal": null
+      }
+    },
+    {
+      "name": "the host process exited",
+      "ok": true
+    },
+    {
+      "name": "host.json was removed",
+      "ok": true
+    }
+  ],
+  "ok": true
+}

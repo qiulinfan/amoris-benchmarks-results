@@ -1,0 +1,2540 @@
+{
+  "tool": "tools/web_paths_bench.py",
+  "date": "2026-10-10 04:26",
+  "chrome": "155.0.8059.39",
+  "note": "quiet machine 2026-10-10 (no other agent; conditions in docs/evidence/quiet/conditions-1*.json), build 0871920d + explore/quiet2",
+  "seconds": 10,
+  "size": "1280x720",
+  "switches": [
+    "--headless=new",
+    "--enable-unsafe-webgpu",
+    "--disable-frame-rate-limit",
+    "--disable-gpu-vsync",
+    "--window-size=1280,720",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "(+ chrome_flags per run)"
+  ],
+  "runs": [
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.4278944444444442,
+      "frame_ms_p50": 0.40166666666665757,
+      "frame_ms_p95": 0.5608333333333273,
+      "gpu_ms_mean": 0.2754333333333337,
+      "gpu_ms_timed_mean": 0.2754333333333337,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10933333237965902,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.028
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.248
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.6
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.5547333333333335,
+      "frame_ms_p50": 0.5466666666666697,
+      "frame_ms_p95": 0.6083333333333333,
+      "gpu_ms_mean": 0.25740000000000024,
+      "gpu_ms_timed_mean": 0.25740000000000024,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.11099999944368998,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.024
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.224
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9332194444444444,
+      "frame_ms_p50": 0.9241666666666788,
+      "frame_ms_p95": 1.047500000000006,
+      "gpu_ms_mean": 0.7578000000000003,
+      "gpu_ms_timed_mean": 0.7578000000000003,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.3423333338896434,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.14
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.626
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9223333333333331,
+      "frame_ms_p50": 0.9149999999999939,
+      "frame_ms_p95": 1.017500000000003,
+      "gpu_ms_mean": 0.7576333333333373,
+      "gpu_ms_timed_mean": 0.7576333333333373,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.3186666663487752,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.141
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.62
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.8135638888888943,
+      "frame_ms_p50": 2.8058333333333394,
+      "frame_ms_p95": 2.8716666666666697,
+      "gpu_ms_mean": 2.631366666666651,
+      "gpu_ms_timed_mean": 2.631366666666651,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5430000003178914,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.533
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.093
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.7977388888888934,
+      "frame_ms_p50": 2.7916666666666665,
+      "frame_ms_p95": 2.847500000000006,
+      "gpu_ms_mean": 2.6282999999999874,
+      "gpu_ms_timed_mean": 2.6282999999999874,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.56999999721845,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.534
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.087
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 0,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.512186111111111,
+      "frame_ms_p50": 2.480833333333339,
+      "frame_ms_p95": 2.6799999999999877,
+      "gpu_ms_mean": 1.3100000000000018,
+      "gpu_ms_timed_mean": 1.3100000000000018,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.1563333336512247,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.143
+        },
+        {
+          "pass": "lights",
+          "ms": 0.007
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.16
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.170400000000001,
+      "frame_ms_p50": 2.1591666666666547,
+      "frame_ms_p95": 2.239999999999994,
+      "gpu_ms_mean": 1.0568366666666633,
+      "gpu_ms_timed_mean": 1.0568366666666633,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5579999955495198,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.112
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.941
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.933966666666663,
+      "frame_ms_p50": 3.92833333333333,
+      "frame_ms_p95": 4.220833333333333,
+      "gpu_ms_mean": 2.4434799999999983,
+      "gpu_ms_timed_mean": 2.4434799999999983,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7360000014305115,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.42
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.34
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.6753444444444403,
+      "frame_ms_p50": 3.6591666666666547,
+      "frame_ms_p95": 3.822500000000006,
+      "gpu_ms_mean": 2.5326733333333453,
+      "gpu_ms_timed_mean": 2.5326733333333453,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7396666705608368,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.386
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.008
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.691130555555558,
+      "frame_ms_p50": 7.7241666666666635,
+      "frame_ms_p95": 7.9116666666666635,
+      "gpu_ms_mean": 6.128650000000041,
+      "gpu_ms_timed_mean": 6.128650000000041,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.8556666652361552,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.679
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 3.871
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.514216666666662,
+      "frame_ms_p50": 7.523333333333327,
+      "frame_ms_p95": 8.02166666666667,
+      "gpu_ms_mean": 5.542843333333303,
+      "gpu_ms_timed_mean": 5.542843333333303,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.8470000044504802,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.544
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 3.784
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 0,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.4842083333333338,
+      "frame_ms_p50": 0.46083333333332727,
+      "frame_ms_p95": 0.542500000000003,
+      "gpu_ms_mean": 0.28882000000000113,
+      "gpu_ms_timed_mean": 0.28882000000000113,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10833332856496175,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.028
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.251
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.506605555555557,
+      "frame_ms_p50": 0.5083333333333333,
+      "frame_ms_p95": 0.525,
+      "gpu_ms_mean": 0.2717666666666667,
+      "gpu_ms_timed_mean": 0.2717666666666667,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.09933334271113078,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.028
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.244
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9143805555555553,
+      "frame_ms_p50": 0.9183333333333242,
+      "frame_ms_p95": 1.047500000000006,
+      "gpu_ms_mean": 0.7378400000000025,
+      "gpu_ms_timed_mean": 0.7378400000000025,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.2650000035762787,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.142
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.589
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9123361111111123,
+      "frame_ms_p50": 0.8933333333333394,
+      "frame_ms_p95": 1.0983333333333272,
+      "gpu_ms_mean": 0.7351600000000051,
+      "gpu_ms_timed_mean": 0.7351600000000051,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.3126666573683421,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.14
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.598
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.782369444444445,
+      "frame_ms_p50": 2.7808333333333395,
+      "frame_ms_p95": 2.8291666666666666,
+      "gpu_ms_mean": 2.644999999999989,
+      "gpu_ms_timed_mean": 2.644999999999989,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5299999984105428,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.533
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.106
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.80179444444445,
+      "frame_ms_p50": 2.7941666666666607,
+      "frame_ms_p95": 2.870833333333333,
+      "gpu_ms_mean": 2.6260233333333187,
+      "gpu_ms_timed_mean": 2.6260233333333187,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5193333323796591,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.532
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.087
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 1,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.466405555555555,
+      "frame_ms_p50": 2.457500000000012,
+      "frame_ms_p95": 2.694999999999997,
+      "gpu_ms_mean": 1.0718666666666623,
+      "gpu_ms_timed_mean": 1.0718666666666623,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.369333333571752,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.11
+        },
+        {
+          "pass": "lights",
+          "ms": 0.022
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.039
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.152630555555552,
+      "frame_ms_p50": 2.132499999999997,
+      "frame_ms_p95": 2.239999999999994,
+      "gpu_ms_mean": 1.0603933333333322,
+      "gpu_ms_timed_mean": 1.0603933333333322,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.6849999988079071,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.109
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.962
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.8409083333333305,
+      "frame_ms_p50": 3.847500000000006,
+      "frame_ms_p95": 3.927499999999994,
+      "gpu_ms_mean": 2.313186666666656,
+      "gpu_ms_timed_mean": 2.313186666666656,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.3963333332538606,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.389
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.066
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.860680555555557,
+      "frame_ms_p50": 3.6950000000000123,
+      "frame_ms_p95": 4.340833333333331,
+      "gpu_ms_mean": 2.482016666666673,
+      "gpu_ms_timed_mean": 2.482016666666673,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.2376666657129924,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.406
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.328
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.430049999999997,
+      "frame_ms_p50": 7.4841666666666695,
+      "frame_ms_p95": 7.9008333333333365,
+      "gpu_ms_mean": 5.391416666666663,
+      "gpu_ms_timed_mean": 5.391416666666663,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.6663333368301392,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.614
+        },
+        {
+          "pass": "lights",
+          "ms": 0.012
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.939
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.216291666666669,
+      "frame_ms_p50": 7.047500000000006,
+      "frame_ms_p95": 7.674166666666671,
+      "gpu_ms_mean": 5.468653333333346,
+      "gpu_ms_timed_mean": 5.468653333333346,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 6.072333334684372,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.705
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 3.725
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 1,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.47423055555555604,
+      "frame_ms_p50": 0.4558333333333394,
+      "frame_ms_p95": 0.557499999999997,
+      "gpu_ms_mean": 0.2891766666666667,
+      "gpu_ms_timed_mean": 0.2891766666666667,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10233332951863607,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.027
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.252
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.49158611111111045,
+      "frame_ms_p50": 0.49499999999999694,
+      "frame_ms_p95": 0.5116666666666636,
+      "gpu_ms_mean": 0.2624133333333342,
+      "gpu_ms_timed_mean": 0.2624133333333342,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10233333627382914,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.025
+        },
+        {
+          "pass": "lights",
+          "ms": 0.002
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.237
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.8859638888888909,
+      "frame_ms_p50": 0.8841666666666697,
+      "frame_ms_p95": 0.9308333333333394,
+      "gpu_ms_mean": 0.7410000000000058,
+      "gpu_ms_timed_mean": 0.7410000000000058,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.30166666547457377,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.139
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.598
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.907336111111112,
+      "frame_ms_p50": 0.9125,
+      "frame_ms_p95": 0.9824999999999969,
+      "gpu_ms_mean": 0.7299999999999965,
+      "gpu_ms_timed_mean": 0.7299999999999965,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.36833333134651186,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.139
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.587
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.7944861111111114,
+      "frame_ms_p50": 2.788333333333336,
+      "frame_ms_p95": 2.8566666666666607,
+      "gpu_ms_mean": 2.6363399999999952,
+      "gpu_ms_timed_mean": 2.6363399999999952,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5496666693687439,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.534
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.096
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.803211111111114,
+      "frame_ms_p50": 2.7966666666666695,
+      "frame_ms_p95": 2.8541666666666665,
+      "gpu_ms_mean": 2.6275099999999876,
+      "gpu_ms_timed_mean": 2.6275099999999876,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5296666685740153,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.532
+        },
+        {
+          "pass": "lights",
+          "ms": 0.007
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.088
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 2,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.322738888888889,
+      "frame_ms_p50": 2.322500000000006,
+      "frame_ms_p95": 2.605000000000003,
+      "gpu_ms_mean": 1.2221233333333215,
+      "gpu_ms_timed_mean": 1.2221233333333215,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.3690000009536742,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.123
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.998
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.103363888888886,
+      "frame_ms_p50": 2.092500000000003,
+      "frame_ms_p95": 2.1891666666666727,
+      "gpu_ms_mean": 1.059543333333333,
+      "gpu_ms_timed_mean": 1.059543333333333,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7089999981721242,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.104
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.952
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.617605555555559,
+      "frame_ms_p50": 3.619999999999997,
+      "frame_ms_p95": 3.6900000000000093,
+      "gpu_ms_mean": 2.338453333333326,
+      "gpu_ms_timed_mean": 2.338453333333326,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.8936666655540466,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.385
+        },
+        {
+          "pass": "lights",
+          "ms": 0.019
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.944
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.6573444444444467,
+      "frame_ms_p50": 3.634999999999991,
+      "frame_ms_p95": 3.779166666666667,
+      "gpu_ms_mean": 2.353526666666652,
+      "gpu_ms_timed_mean": 2.353526666666652,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.6019999996821086,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.423
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.004
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 8.113119444444445,
+      "frame_ms_p50": 8.12083333333334,
+      "frame_ms_p95": 8.238333333333337,
+      "gpu_ms_mean": 6.195999999999972,
+      "gpu_ms_timed_mean": 6.195999999999972,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.8369999992847442,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.636
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.555
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.9331027777777825,
+      "frame_ms_p50": 7.923333333333343,
+      "frame_ms_p95": 8.373333333333335,
+      "gpu_ms_mean": 6.595006666666687,
+      "gpu_ms_timed_mean": 6.595006666666687,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.019333332379659,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.642
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 3.758
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 2,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.47617777777777764,
+      "frame_ms_p50": 0.4733333333333273,
+      "frame_ms_p95": 0.5058333333333394,
+      "gpu_ms_mean": 0.2819999999999978,
+      "gpu_ms_timed_mean": 0.2819999999999978,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.09900000055631002,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.026
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.253
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.4953972222222226,
+      "frame_ms_p50": 0.4966666666666697,
+      "frame_ms_p95": 0.5141666666666576,
+      "gpu_ms_mean": 0.2585966666666668,
+      "gpu_ms_timed_mean": 0.2585966666666668,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10233333309491476,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.024
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.229
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9183194444444441,
+      "frame_ms_p50": 0.877499999999994,
+      "frame_ms_p95": 1.109999999999991,
+      "gpu_ms_mean": 0.7279066666666671,
+      "gpu_ms_timed_mean": 0.7279066666666671,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.4176666684945424,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.14
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.59
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.8936555555555556,
+      "frame_ms_p50": 0.8766666666666727,
+      "frame_ms_p95": 1.0491666666666637,
+      "gpu_ms_mean": 0.7371933333333307,
+      "gpu_ms_timed_mean": 0.7371933333333307,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.29600000301996865,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.138
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.596
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.7981305555555593,
+      "frame_ms_p50": 2.7916666666666665,
+      "frame_ms_p95": 2.860833333333327,
+      "gpu_ms_mean": 2.6235633333333253,
+      "gpu_ms_timed_mean": 2.6235633333333253,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5670000008742014,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.534
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.083
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.7839499999999995,
+      "frame_ms_p50": 2.77833333333333,
+      "frame_ms_p95": 2.8283333333333305,
+      "gpu_ms_mean": 2.628053333333345,
+      "gpu_ms_timed_mean": 2.628053333333345,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5316666706403097,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.531
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.092
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 3,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.247416666666667,
+      "frame_ms_p50": 2.235833333333342,
+      "frame_ms_p95": 2.4875,
+      "gpu_ms_mean": 1.1990000000000074,
+      "gpu_ms_timed_mean": 1.1990000000000074,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7290000009536743,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.121
+        },
+        {
+          "pass": "lights",
+          "ms": 0.007
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.072
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.2886722222222264,
+      "frame_ms_p50": 2.3641666666666725,
+      "frame_ms_p95": 2.5258333333333365,
+      "gpu_ms_mean": 1.023000000000002,
+      "gpu_ms_timed_mean": 1.023000000000002,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.6349999972184499,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.098
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.919
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.988202777777776,
+      "frame_ms_p50": 3.817499999999988,
+      "frame_ms_p95": 4.491666666666666,
+      "gpu_ms_mean": 2.6325200000000057,
+      "gpu_ms_timed_mean": 2.6325200000000057,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.8116666630903879,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.508
+        },
+        {
+          "pass": "lights",
+          "ms": 0.007
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.705
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.729461111111111,
+      "frame_ms_p50": 3.701666666666658,
+      "frame_ms_p95": 3.960833333333327,
+      "gpu_ms_mean": 2.391020000000004,
+      "gpu_ms_timed_mean": 2.391020000000004,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7130000003178915,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.424
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.953
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.105347222222231,
+      "frame_ms_p50": 7.065000000000001,
+      "frame_ms_p95": 7.291666666666667,
+      "gpu_ms_mean": 5.375006666666656,
+      "gpu_ms_timed_mean": 5.375006666666656,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.8983333341280619,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.517
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.486
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 8.021761111111115,
+      "frame_ms_p50": 8.163333333333336,
+      "frame_ms_p95": 8.334166666666663,
+      "gpu_ms_mean": 5.625,
+      "gpu_ms_timed_mean": 5.625,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7989999957879385,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.542
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.078
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 3,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.4597611111111116,
+      "frame_ms_p50": 0.4583333333333333,
+      "frame_ms_p95": 0.48000000000000304,
+      "gpu_ms_mean": 0.2869033333333344,
+      "gpu_ms_timed_mean": 0.2869033333333344,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.09833332816759745,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.028
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.256
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.5305138888888882,
+      "frame_ms_p50": 0.5283333333333303,
+      "frame_ms_p95": 0.6158333333333303,
+      "gpu_ms_mean": 0.26126333333333485,
+      "gpu_ms_timed_mean": 0.26126333333333485,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.10700000405311584,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.024
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.224
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9111305555555541,
+      "frame_ms_p50": 0.9116666666666636,
+      "frame_ms_p95": 1.0291666666666666,
+      "gpu_ms_mean": 0.7458866666666689,
+      "gpu_ms_timed_mean": 0.7458866666666689,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.4503333298365275,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.14
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.627
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.9127916666666662,
+      "frame_ms_p50": 0.8816666666666758,
+      "frame_ms_p95": 1.0258333333333363,
+      "gpu_ms_mean": 0.7367866666666694,
+      "gpu_ms_timed_mean": 0.7367866666666694,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.31066667556762695,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.138
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.592
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.8324888888888853,
+      "frame_ms_p50": 2.8149999999999937,
+      "frame_ms_p95": 2.917500000000003,
+      "gpu_ms_mean": 2.6361033333333133,
+      "gpu_ms_timed_mean": 2.6361033333333133,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.4956666664282481,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.532
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.093
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.798005555555559,
+      "frame_ms_p50": 2.7916666666666665,
+      "frame_ms_p95": 2.845000000000012,
+      "gpu_ms_mean": 2.633973333333341,
+      "gpu_ms_timed_mean": 2.633973333333341,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.5490000033378601,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.536
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.092
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "nvidia",
+      "round": 4,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "--force_high_performance_gpu",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.3127861111111145,
+      "frame_ms_p50": 2.3016666666666725,
+      "frame_ms_p95": 2.442500000000003,
+      "gpu_ms_mean": 1.1319733333333248,
+      "gpu_ms_timed_mean": 1.1319733333333248,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 1.359999994834264,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.114
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 1.047
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-100k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.062483333333329,
+      "frame_ms_p50": 2.067500000000003,
+      "frame_ms_p95": 2.114999999999994,
+      "gpu_ms_mean": 1.0324433333333274,
+      "gpu_ms_timed_mean": 1.0324433333333274,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7286666750907898,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.11
+        },
+        {
+          "pass": "lights",
+          "ms": 0.003
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.926
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-100k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.701105555555553,
+      "frame_ms_p50": 3.6233333333333424,
+      "frame_ms_p95": 3.9208333333333334,
+      "gpu_ms_mean": 2.3882366666666512,
+      "gpu_ms_timed_mean": 2.3882366666666512,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.7673333338896433,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.395
+        },
+        {
+          "pass": "lights",
+          "ms": 0.004
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.128
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-400k",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.700733333333332,
+      "frame_ms_p50": 3.63416666666667,
+      "frame_ms_p95": 4.010833333333327,
+      "gpu_ms_mean": 2.4372366666666787,
+      "gpu_ms_timed_mean": 2.4372366666666787,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.9496666649977367,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.388
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.268
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-400k",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.4
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.397644444444446,
+      "frame_ms_p50": 7.258333333333334,
+      "frame_ms_p95": 8.046666666666662,
+      "gpu_ms_mean": 6.162909999999998,
+      "gpu_ms_timed_mean": 6.162909999999998,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 0.9543333399295807,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.738
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 5.865
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-1.6m",
+      "path": "first-instance",
+      "chrome_flags": "",
+      "seconds": 12.5
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.774008333333336,
+      "frame_ms_p50": 7.8175000000000034,
+      "frame_ms_p95": 8.35916666666667,
+      "gpu_ms_mean": 6.695999999999967,
+      "gpu_ms_timed_mean": 6.695999999999967,
+      "gpu_timed_frames": 300,
+      "antialiasing": "msaa",
+      "render_ms_mean": 6.957333336671193,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 1.743
+        },
+        {
+          "pass": "lights",
+          "ms": 0.009
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.944
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "occlusion": "off",
+      "occluded": 0,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "default",
+      "round": 4,
+      "page": "cubes-1.6m",
+      "path": "baseline",
+      "chrome_flags": "",
+      "seconds": 12.5
+    }
+  ]
+}

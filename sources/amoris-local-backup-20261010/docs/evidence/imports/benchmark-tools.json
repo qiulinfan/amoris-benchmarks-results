@@ -1,0 +1,37 @@
+{
+  "source_base_commit": "9a3e4b0814959629202629845b85205c42086505",
+  "files": [
+    {
+      "file": "tools/machine_conditions.py"
+    },
+    {
+      "file": "tools/splats/ab.py"
+    },
+    {
+      "file": "tools/splats/matrix.py"
+    },
+    {
+      "file": "tools/backend_compare.py"
+    },
+    {
+      "file": "tools/build_compare.py"
+    },
+    {
+      "file": "tools/web_draw_paths.py"
+    },
+    {
+      "file": "tools/tests/test_bench_failures.py"
+    }
+  ],
+  "python_version": "3.13.14",
+  "unit_tests_passed": 19,
+  "python_compile": "passed",
+  "git_diff_check": "passed",
+  "gpu_or_paid_calls": 0,
+  "limitations": [
+    "Chrome-driver finally/CDP timeout lifecycle remains unchanged as scoped.",
+    "Absolute build-path/env serialization in other benchmark outputs still requires the publication sanitizer."
+  ],
+  "occlusion_compare_metal_command": "python tools/occlusion_compare.py --backend metal --out out/metal-occlusion --summary out/metal-occlusion.json",
+  "command_validation": "parameter/source review only; no native GPU benchmark was executed by this worker"
+}

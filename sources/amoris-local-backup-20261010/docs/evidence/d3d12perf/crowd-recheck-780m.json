@@ -1,0 +1,7334 @@
+{
+  "tool": "tools/backend_bench.py",
+  "date": "2026-10-10 00:30",
+  "provisional": "single-agent; AC power; recheck of the 780M crowd",
+  "builds": {
+    "master": "$EXPERIMENT_ROOT/master-src",
+    "branch": "."
+  },
+  "settle_s": 5.0,
+  "frames": 100,
+  "splat_frames": 100,
+  "runs": [
+    {
+      "round": 0,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 11.3,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.513,
+          "p50": 1.501,
+          "p95": 1.882
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 26.5,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.658,
+          "p50": 5.724,
+          "p95": 6.225
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 144.167,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 142.392,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 141.799,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.313,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.15,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.023,
+          "lights": 0.007,
+          "opaque+sky": 2.543,
+          "shadows": 3.085
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.176,
+        "wall_ms": {
+          "mean": 8.373,
+          "p50": 8.391,
+          "p95": 9.191
+        }
+      },
+      "headline": [
+        8.391,
+        5.658,
+        1.501
+      ]
+    },
+    {
+      "round": 0,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.8,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.321,
+          "p50": 1.332,
+          "p95": 1.616
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.405,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.753,
+          "p50": 5.892,
+          "p95": 6.153
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 145.208,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.738,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 155.675,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 71.325,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.022,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.022,
+          "lights": 0.007,
+          "opaque+sky": 2.615,
+          "shadows": 3.11
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.63,
+        "wall_ms": {
+          "mean": 8.124,
+          "p50": 8.351,
+          "p95": 8.876
+        }
+      },
+      "headline": [
+        8.351,
+        5.753,
+        1.332
+      ]
+    },
+    {
+      "round": 0,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.4,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.889,
+          "p50": 0.862,
+          "p95": 1.157
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.324,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.174,
+          "p50": 5.011,
+          "p95": 5.815
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 174.589,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 139.414,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 143.82,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.837,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 37.122,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.004,
+          "opaque+sky": 2.857,
+          "shadows": 2.298
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.266,
+        "wall_ms": {
+          "mean": 7.189,
+          "p50": 6.984,
+          "p95": 8.252
+        }
+      },
+      "headline": [
+        6.984,
+        5.174,
+        0.862
+      ]
+    },
+    {
+      "round": 0,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.656,
+          "p50": 0.646,
+          "p95": 0.87
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.745,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 4.98,
+          "p50": 4.947,
+          "p95": 5.107
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 145.935,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.363,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 145.149,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.723,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 35.419,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.014,
+          "lights": 0.005,
+          "opaque+sky": 2.761,
+          "shadows": 2.2
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 17.247,
+        "wall_ms": {
+          "mean": 6.59,
+          "p50": 6.55,
+          "p95": 7.039
+        }
+      },
+      "headline": [
+        6.55,
+        4.98,
+        0.646
+      ]
+    },
+    {
+      "round": 1,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 9.6,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.535,
+          "p50": 1.555,
+          "p95": 1.85
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.646,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.777,
+          "p50": 5.8,
+          "p95": 6.512
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 145.652,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 143.361,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 143.168,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.355,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.767,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.022,
+          "lights": 0.006,
+          "opaque+sky": 2.573,
+          "shadows": 3.175
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 14.477,
+        "wall_ms": {
+          "mean": 8.457,
+          "p50": 8.423,
+          "p95": 9.4
+        }
+      },
+      "headline": [
+        8.423,
+        5.777,
+        1.555
+      ]
+    },
+    {
+      "round": 1,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.8,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.257,
+          "p50": 1.278,
+          "p95": 1.599
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 23.283,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.714,
+          "p50": 6.003,
+          "p95": 6.154
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 146.15,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 144.353,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 148.758,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 70.133,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.762,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.022,
+          "lights": 0.007,
+          "opaque+sky": 2.576,
+          "shadows": 3.11
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 17.728,
+        "wall_ms": {
+          "mean": 7.964,
+          "p50": 8.07,
+          "p95": 8.855
+        }
+      },
+      "headline": [
+        8.07,
+        5.714,
+        1.278
+      ]
+    },
+    {
+      "round": 1,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.882,
+          "p50": 0.826,
+          "p95": 1.211
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.258,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.149,
+          "p50": 5.03,
+          "p95": 5.768
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 143.966,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 145.138,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.138,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 67.463,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.092,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.004,
+          "opaque+sky": 2.849,
+          "shadows": 2.281
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.751,
+        "wall_ms": {
+          "mean": 7.172,
+          "p50": 6.992,
+          "p95": 8.357
+        }
+      },
+      "headline": [
+        6.992,
+        5.149,
+        0.826
+      ]
+    },
+    {
+      "round": 1,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.679,
+          "p50": 0.677,
+          "p95": 0.929
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.193,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.14,
+          "p50": 4.943,
+          "p95": 5.894
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 143.414,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 148.071,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 145.148,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 72.294,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 31.487,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.005,
+          "opaque+sky": 2.868,
+          "shadows": 2.252
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 18.065,
+        "wall_ms": {
+          "mean": 6.818,
+          "p50": 6.628,
+          "p95": 7.744
+        }
+      },
+      "headline": [
+        6.628,
+        5.14,
+        0.677
+      ]
+    },
+    {
+      "round": 2,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 9.6,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.643,
+          "p50": 1.686,
+          "p95": 1.969
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 24.0,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.502,
+          "p50": 5.413,
+          "p95": 6.126
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 143.839,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 144.289,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 145.455,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 70.121,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 35.162,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.021,
+          "lights": 0.006,
+          "opaque+sky": 2.49,
+          "shadows": 2.985
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 14.987,
+        "wall_ms": {
+          "mean": 8.305,
+          "p50": 8.345,
+          "p95": 9.045
+        }
+      },
+      "headline": [
+        8.345,
+        5.502,
+        1.686
+      ]
+    },
+    {
+      "round": 2,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.7,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.148,
+          "p50": 1.098,
+          "p95": 1.481
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.527,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.496,
+          "p50": 5.532,
+          "p95": 6.025
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 142.023,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 149.172,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 144.675,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.596,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 34.691,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.021,
+          "lights": 0.006,
+          "opaque+sky": 2.535,
+          "shadows": 2.933
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.933,
+        "wall_ms": {
+          "mean": 7.558,
+          "p50": 7.5,
+          "p95": 8.196
+        }
+      },
+      "headline": [
+        7.5,
+        5.496,
+        1.098
+      ]
+    },
+    {
+      "round": 2,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.4,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.893,
+          "p50": 0.848,
+          "p95": 1.252
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.132,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.488,
+          "p50": 5.356,
+          "p95": 5.973
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 143.317,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 143.941,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 142.871,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.518,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 34.097,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.17,
+          "lights": 0.004,
+          "opaque+sky": 2.951,
+          "shadows": 2.363
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.03,
+        "wall_ms": {
+          "mean": 7.438,
+          "p50": 7.396,
+          "p95": 8.514
+        }
+      },
+      "headline": [
+        7.396,
+        5.488,
+        0.848
+      ]
+    },
+    {
+      "round": 2,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.643,
+          "p50": 0.607,
+          "p95": 0.878
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.485,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.145,
+          "p50": 5.024,
+          "p95": 5.555
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 142.86,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.936,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 147.189,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.55,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.305,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.004,
+          "opaque+sky": 2.83,
+          "shadows": 2.296
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.439,
+        "wall_ms": {
+          "mean": 6.818,
+          "p50": 6.786,
+          "p95": 7.936
+        }
+      },
+      "headline": [
+        6.786,
+        5.145,
+        0.607
+      ]
+    },
+    {
+      "round": 3,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 9.6,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.516,
+          "p50": 1.505,
+          "p95": 1.82
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.451,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.709,
+          "p50": 5.698,
+          "p95": 6.387
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 147.473,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 150.42,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 148.573,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.394,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.784,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.021,
+          "lights": 0.007,
+          "opaque+sky": 2.555,
+          "shadows": 3.126
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 14.551,
+        "wall_ms": {
+          "mean": 8.432,
+          "p50": 8.386,
+          "p95": 9.174
+        }
+      },
+      "headline": [
+        8.386,
+        5.709,
+        1.505
+      ]
+    },
+    {
+      "round": 3,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.8,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.32,
+          "p50": 1.339,
+          "p95": 1.558
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.016,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.91,
+          "p50": 6.045,
+          "p95": 6.189
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 150.1,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.15,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 148.579,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.276,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 31.839,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.023,
+          "lights": 0.007,
+          "opaque+sky": 2.666,
+          "shadows": 3.214
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.014,
+        "wall_ms": {
+          "mean": 8.296,
+          "p50": 8.359,
+          "p95": 8.801
+        }
+      },
+      "headline": [
+        8.359,
+        5.91,
+        1.339
+      ]
+    },
+    {
+      "round": 3,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.4,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.869,
+          "p50": 0.831,
+          "p95": 1.138
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.435,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.264,
+          "p50": 5.189,
+          "p95": 5.689
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 148.96,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.422,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 144.316,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.95,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 35.907,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.004,
+          "opaque+sky": 2.922,
+          "shadows": 2.323
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.973,
+        "wall_ms": {
+          "mean": 7.264,
+          "p50": 7.252,
+          "p95": 8.015
+        }
+      },
+      "headline": [
+        7.252,
+        5.264,
+        0.831
+      ]
+    },
+    {
+      "round": 3,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.2,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.627,
+          "p50": 0.588,
+          "p95": 0.898
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 20.563,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.128,
+          "p50": 4.97,
+          "p95": 5.388
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 143.201,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 145.574,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.031,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.9,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.64,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.005,
+          "opaque+sky": 2.9,
+          "shadows": 2.209
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.675,
+        "wall_ms": {
+          "mean": 6.575,
+          "p50": 6.496,
+          "p95": 7.071
+        }
+      },
+      "headline": [
+        6.496,
+        5.128,
+        0.588
+      ]
+    },
+    {
+      "round": 4,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 9.6,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.542,
+          "p50": 1.558,
+          "p95": 1.91
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 23.118,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.642,
+          "p50": 5.613,
+          "p95": 6.127
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 140.002,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 142.014,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.417,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 67.839,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.386,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.021,
+          "lights": 0.007,
+          "opaque+sky": 2.542,
+          "shadows": 3.072
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.33,
+        "wall_ms": {
+          "mean": 8.367,
+          "p50": 8.329,
+          "p95": 9.058
+        }
+      },
+      "headline": [
+        8.329,
+        5.642,
+        1.558
+      ]
+    },
+    {
+      "round": 4,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.8,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.269,
+          "p50": 1.261,
+          "p95": 1.658
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 23.039,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.676,
+          "p50": 5.779,
+          "p95": 6.208
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 142.979,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 147.366,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 150.539,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.585,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.331,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.024,
+          "lights": 0.007,
+          "opaque+sky": 2.533,
+          "shadows": 3.113
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.129,
+        "wall_ms": {
+          "mean": 8.004,
+          "p50": 8.134,
+          "p95": 9.176
+        }
+      },
+      "headline": [
+        8.134,
+        5.676,
+        1.261
+      ]
+    },
+    {
+      "round": 4,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.4,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.894,
+          "p50": 0.834,
+          "p95": 1.207
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 19.26,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.23,
+          "p50": 5.099,
+          "p95": 5.838
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 145.72,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 145.898,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 154.104,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.569,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.556,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.004,
+          "opaque+sky": 2.878,
+          "shadows": 2.333
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.861,
+        "wall_ms": {
+          "mean": 7.309,
+          "p50": 7.031,
+          "p95": 8.565
+        }
+      },
+      "headline": [
+        7.031,
+        5.23,
+        0.834
+      ]
+    },
+    {
+      "round": 4,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.708,
+          "p50": 0.684,
+          "p95": 1.041
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 17.946,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.403,
+          "p50": 5.547,
+          "p95": 5.897
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 146.09,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 144.893,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.451,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.497,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.569,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.015,
+          "lights": 0.005,
+          "opaque+sky": 2.939,
+          "shadows": 2.443
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 17.018,
+        "wall_ms": {
+          "mean": 7.283,
+          "p50": 7.321,
+          "p95": 8.406
+        }
+      },
+      "headline": [
+        7.321,
+        5.403,
+        0.684
+      ]
+    },
+    {
+      "round": 5,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 9.6,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.504,
+          "p50": 1.511,
+          "p95": 1.813
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 23.192,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.647,
+          "p50": 5.689,
+          "p95": 6.221
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 146.172,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 141.614,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 142.721,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 68.861,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 33.461,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.025,
+          "lights": 0.007,
+          "opaque+sky": 2.496,
+          "shadows": 3.12
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.489,
+        "wall_ms": {
+          "mean": 8.37,
+          "p50": 8.421,
+          "p95": 9.059
+        }
+      },
+      "headline": [
+        8.421,
+        5.647,
+        1.511
+      ]
+    },
+    {
+      "round": 5,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.8,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.329,
+          "p50": 1.366,
+          "p95": 1.613
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 22.41,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.874,
+          "p50": 6.015,
+          "p95": 6.648
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 144.184,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 141.738,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 144.801,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.259,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 31.938,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.024,
+          "lights": 0.007,
+          "opaque+sky": 2.658,
+          "shadows": 3.185
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 15.706,
+        "wall_ms": {
+          "mean": 8.277,
+          "p50": 8.404,
+          "p95": 8.993
+        }
+      },
+      "headline": [
+        8.404,
+        5.874,
+        1.366
+      ]
+    },
+    {
+      "round": 5,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.4,
+      "build": "master",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 1.03,
+          "p50": 1.078,
+          "p95": 1.25
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 17.084,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.575,
+          "p50": 5.71,
+          "p95": 6.003
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 146.068,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 143.937,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.573,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 69.65,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.325,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.016,
+          "lights": 0.004,
+          "opaque+sky": 2.982,
+          "shadows": 2.573
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.232,
+        "wall_ms": {
+          "mean": 8.031,
+          "p50": 8.274,
+          "p95": 8.801
+        }
+      },
+      "headline": [
+        8.274,
+        5.575,
+        1.078
+      ]
+    },
+    {
+      "round": 5,
+      "case": "crowd-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "build": "branch",
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "lod_field",
+        "cpu_ms": {
+          "mean": 0.661,
+          "p50": 0.665,
+          "p95": 0.885
+        },
+        "crowd": 40,
+        "detail": 6,
+        "draw_calls": 20,
+        "draw_path": "multi-draw",
+        "first_frame_ms": 18.839,
+        "fly": false,
+        "frames": 100,
+        "gpu_ms": {
+          "mean": 5.038,
+          "p50": 4.987,
+          "p95": 5.515
+        },
+        "instances": 2304,
+        "last_frame": {
+          "camera": {
+            "instances": [
+              1,
+              1,
+              0,
+              9,
+              10,
+              17,
+              18,
+              2289
+            ],
+            "total_triangles": 1391826,
+            "triangles": [
+              2,
+              40960,
+              0,
+              5760,
+              3200,
+              12672,
+              10192,
+              1319040
+            ]
+          },
+          "cascades": [
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                15,
+                2,
+                8,
+                1,
+                0
+              ],
+              "total_triangles": 37506,
+              "triangles": [
+                2,
+                0,
+                0,
+                9600,
+                6144,
+                20480,
+                1280,
+                0
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                33,
+                8,
+                16,
+                18
+              ],
+              "total_triangles": 54338,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                10560,
+                12288,
+                19968,
+                11520
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                40,
+                25,
+                182
+              ],
+              "total_triangles": 135938,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                6400,
+                19200,
+                110336
+              ]
+            },
+            {
+              "instances": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2173
+              ],
+              "total_triangles": 1231298,
+              "triangles": [
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1231296
+              ]
+            }
+          ],
+          "late": {
+            "instances": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "total_triangles": 0,
+            "triangles": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "shadow_triangles": 1459080
+        },
+        "list_bytes": 1275204,
+        "lod": "on",
+        "meshes": [
+          {
+            "errors": [
+              0.0006,
+              0.00116,
+              0.00209,
+              0.00379,
+              0.007,
+              0.01304,
+              0.02481
+            ],
+            "lod_build_ms": 151.773,
+            "name": "rock_a",
+            "radius": 1.3529475927352905,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00047,
+              0.00096,
+              0.00165,
+              0.00303,
+              0.00588,
+              0.01082,
+              0.01953
+            ],
+            "lod_build_ms": 145.618,
+            "name": "rock_b",
+            "radius": 1.2235304117202759,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.0005,
+              0.00095,
+              0.00163,
+              0.00294,
+              0.00575,
+              0.01091,
+              0.019
+            ],
+            "lod_build_ms": 146.237,
+            "name": "rock_c",
+            "radius": 1.3888736963272095,
+            "triangles": [
+              81920,
+              40960,
+              20480,
+              10240,
+              5120,
+              2560,
+              1280,
+              640
+            ],
+            "vertices": 40962
+          },
+          {
+            "errors": [
+              0.00069,
+              0.00164,
+              0.00431,
+              0.00639,
+              0.01313,
+              0.02481,
+              0.04853
+            ],
+            "lod_build_ms": 70.656,
+            "name": "knot",
+            "radius": 1.7702425718307495,
+            "triangles": [
+              49152,
+              24576,
+              12288,
+              6144,
+              3072,
+              1536,
+              768,
+              384
+            ],
+            "vertices": 24576
+          }
+        ],
+        "model_ms": 32.245,
+        "n": 48,
+        "occlusion": "off",
+        "passes_ms": {
+          "cull": 0.014,
+          "lights": 0.005,
+          "opaque+sky": 2.795,
+          "shadows": 2.223
+        },
+        "pixels": 1.0,
+        "size": [
+          1280,
+          720
+        ],
+        "spacing": 6.0,
+        "t": 0.0,
+        "upload_ms": 16.121,
+        "wall_ms": {
+          "mean": 6.722,
+          "p50": 6.626,
+          "p95": 7.503
+        }
+      },
+      "headline": [
+        6.626,
+        5.038,
+        0.665
+      ]
+    }
+  ]
+}

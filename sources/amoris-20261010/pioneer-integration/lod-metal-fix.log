@@ -1,0 +1,178 @@
+   Compiling bitflags v2.13.2
+   Compiling allocator-api2 v0.2.21
+   Compiling hashbrown v0.17.1
+   Compiling num-traits v0.2.19
+   Compiling serde_core v1.0.229
+   Compiling syn v3.0.6
+   Compiling arrayvec v0.7.8
+   Compiling serde v1.0.229
+   Compiling smallvec v1.16.2
+   Compiling memchr v2.8.3
+   Compiling objc2-core-foundation v0.3.2
+   Compiling spirv v0.4.0+sdk-1.4.341.0
+   Compiling hashbrown v0.16.1
+   Compiling parking_lot_core v0.9.12
+   Compiling profiling v1.0.18
+   Compiling indexmap v2.14.2
+   Compiling parking_lot v0.12.5
+   Compiling png v0.18.1
+   Compiling nonmax v0.5.5
+   Compiling bevy_platform v0.19.1
+   Compiling blake3 v1.8.7
+   Compiling objc2-foundation v0.3.2
+   Compiling half v2.7.1
+   Compiling objc2-core-graphics v0.3.2
+   Compiling ordered-float v5.5.0
+   Compiling bevy_utils v0.19.1
+   Compiling moxcms v0.8.1
+   Compiling bevy_tasks v0.19.1
+   Compiling float-cmp v0.10.0
+   Compiling objc2-foundation v0.2.2
+   Compiling tracing-core v0.1.36
+   Compiling hashbrown v0.15.5
+   Compiling serde_derive_internals v0.30.0
+   Compiling tracing v0.1.44
+   Compiling fontdue v0.9.4
+   Compiling thiserror-impl v2.0.21
+   Compiling bytemuck_derive v1.12.1
+   Compiling serde_derive v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling ref-cast-impl v1.0.27
+   Compiling schemars_derive v1.2.2
+   Compiling foreign-types-macros v0.2.4
+   Compiling objc2-metal v0.3.2
+   Compiling ref-cast v1.0.27
+   Compiling foreign-types v0.5.0
+   Compiling bytemuck v1.25.2
+   Compiling thiserror v2.0.21
+   Compiling core-graphics v0.23.2
+   Compiling naga-types v30.0.1
+   Compiling gpu-allocator v0.28.0
+   Compiling wgpu-types v30.0.1
+   Compiling naga v30.0.1
+   Compiling bevy_ecs v0.19.1
+   Compiling glam v0.33.12
+   Compiling image v0.25.10
+   Compiling schemars v1.2.2
+   Compiling serde-reflection v0.6.0
+   Compiling objc2-quartz-core v0.3.2
+   Compiling pocket-contract v0.1.0 (<local-path>
+   Compiling raw-window-metal v1.1.0
+   Compiling gltf-json v1.4.1
+   Compiling bincode v2.0.1
+   Compiling objc2-app-kit v0.2.2
+   Compiling meshopt v0.6.2
+   Compiling gltf v1.4.1
+   Compiling winit v0.30.13
+   Compiling wgpu-naga-bridge v30.0.1
+   Compiling wgpu-hal v30.0.1
+   Compiling wgpu-core-deps-apple v30.0.1
+   Compiling wgpu-core v30.0.1
+   Compiling pocket-sim v0.1.0 (<local-path>
+   Compiling pocket-assets v0.1.0 (<local-path>
+   Compiling wgpu v30.0.1
+   Compiling pocket-render v0.1.0 (<local-path>
+    Finished `release` profile [optimized + debuginfo] target(s) in 1m 10s
+     Running tests/lod.rs (target/release/deps/lod-5d16ed10d092b057)
+
+running 6 tests
+occlusion off, scale 1: at 0.32 m (0.900 of level 1's distance): level 0
+occlusion off, scale 1: at 0.39 m (1.100 of level 1's distance): level 0
+column at 6.2 m (7326 pixels): levels [1, 0, 0, 0, 0, 0, 0, 0] off, [1, 0, 0, 0, 0, 0, 0, 0] on; 0 pixels show another entity, 0 more than 2 pixels from an edge
+
+thread 'skinned_levels_follow_the_pose' (19237137) panicked at crates/pocket-render/tests/lod.rs:513:5:
+assertion `left == right` failed: the copy draws level 2 or coarser
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+occlusion off, scale 1: at 0.49 m (1.405 of level 1's distance): level 0
+
+thread 'hysteresis_holds_a_level_until_the_margin' (19237134) panicked at crates/pocket-render/tests/lod.rs:370:13:
+assertion `left == right` failed: occlusion off, scale 1: past the margin
+  left: 0
+ right: 1
+test skinned_levels_follow_the_pose ... FAILED
+t 0: camera triangles 1843202 full, 58402 with levels (instances per level [2, 0, 1, 3, 7, 16, 21, 51]); shadows 5050376 and 128648
+t 0: 678 pixels show another entity (0.294%), 0 of them more than 1 pixel and 0 more than 2 pixels from an edge of the full meshes' id image; 751 pixels differ by more than 32 (0.326%)
+test hysteresis_holds_a_level_until_the_margin ... FAILED
+t 0.45: camera triangles 1159170 full, 25122 with levels (instances per level [1, 0, 1, 2, 4, 11, 14, 31]); shadows 5730312 and 180040
+t 0.45: 912 pixels show another entity (0.396%), 0 of them more than 1 pixel and 0 more than 2 pixels from an edge of the full meshes' id image; 978 pixels differ by more than 32 (0.424%)
+scale 1, 1 texels, at 5 m: cascade 0 (texel 0.0100 m) draws level 4, the camera Some(4)
+scale 1, 1 texels, at 5 m: cascade 1 (texel 0.0214 m) draws level 5, the camera Some(4)
+scale 1, 1 texels, at 5 m: cascade 2 (texel 0.0494 m) draws level 6, the camera Some(4)
+scale 1, 1 texels, at 5 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(4)
+scale 1, 1 texels, at 10 m: cascade 0 (texel 0.0100 m) draws level 4, the camera Some(5)
+scale 1, 1 texels, at 10 m: cascade 1 (texel 0.0214 m) draws level 5, the camera Some(5)
+scale 1, 1 texels, at 10 m: cascade 2 (texel 0.0494 m) draws level 6, the camera Some(5)
+scale 1, 1 texels, at 10 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(5)
+scale 1, 1 texels, at 16 m: cascade 0 (texel 0.0100 m) draws level 4, the camera Some(6)
+scale 1, 1 texels, at 16 m: cascade 1 (texel 0.0214 m) draws level 5, the camera Some(6)
+scale 1, 1 texels, at 16 m: cascade 2 (texel 0.0494 m) draws level 6, the camera Some(6)
+scale 1, 1 texels, at 16 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(6)
+scale 1, 1 texels, at 30 m: cascade 1 (texel 0.0214 m) draws level 5, the camera Some(7)
+scale 1, 1 texels, at 30 m: cascade 2 (texel 0.0494 m) draws level 6, the camera Some(7)
+scale 1, 1 texels, at 30 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 1, 1 texels, at 70 m: cascade 2 (texel 0.0494 m) draws level 6, the camera Some(7)
+scale 1, 1 texels, at 70 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 1, 1 texels, at 130 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+test levels_cut_triangles_and_stay_within_a_pixel ... ok
+scale 2, 1 texels, at 5 m: cascade 0 (texel 0.0100 m) draws level 3, the camera Some(1)
+scale 2, 1 texels, at 5 m: cascade 1 (texel 0.0214 m) draws level 4, the camera Some(1)
+scale 2, 1 texels, at 5 m: cascade 2 (texel 0.0494 m) draws level 5, the camera Some(1)
+scale 2, 1 texels, at 5 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(1)
+scale 2, 1 texels, at 10 m: cascade 0 (texel 0.0100 m) draws level 3, the camera Some(4)
+scale 2, 1 texels, at 10 m: cascade 1 (texel 0.0214 m) draws level 4, the camera Some(4)
+scale 2, 1 texels, at 10 m: cascade 2 (texel 0.0494 m) draws level 5, the camera Some(4)
+scale 2, 1 texels, at 10 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(4)
+scale 2, 1 texels, at 16 m: cascade 0 (texel 0.0100 m) draws level 3, the camera Some(5)
+scale 2, 1 texels, at 16 m: cascade 1 (texel 0.0214 m) draws level 4, the camera Some(5)
+scale 2, 1 texels, at 16 m: cascade 2 (texel 0.0494 m) draws level 5, the camera Some(5)
+scale 2, 1 texels, at 16 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(5)
+scale 2, 1 texels, at 30 m: cascade 1 (texel 0.0214 m) draws level 4, the camera Some(6)
+scale 2, 1 texels, at 30 m: cascade 2 (texel 0.0494 m) draws level 5, the camera Some(6)
+scale 2, 1 texels, at 30 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(6)
+scale 2, 1 texels, at 70 m: cascade 2 (texel 0.0494 m) draws level 5, the camera Some(7)
+scale 2, 1 texels, at 70 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 2, 1 texels, at 130 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 1, 2 texels, at 5 m: cascade 0 (texel 0.0100 m) draws level 5, the camera Some(4)
+scale 1, 2 texels, at 5 m: cascade 1 (texel 0.0214 m) draws level 6, the camera Some(4)
+scale 1, 2 texels, at 5 m: cascade 2 (texel 0.0494 m) draws level 7, the camera Some(4)
+scale 1, 2 texels, at 5 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(4)
+scale 1, 2 texels, at 10 m: cascade 0 (texel 0.0100 m) draws level 5, the camera Some(5)
+scale 1, 2 texels, at 10 m: cascade 1 (texel 0.0214 m) draws level 6, the camera Some(5)
+scale 1, 2 texels, at 10 m: cascade 2 (texel 0.0494 m) draws level 7, the camera Some(5)
+scale 1, 2 texels, at 10 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(5)
+scale 1, 2 texels, at 16 m: cascade 0 (texel 0.0100 m) draws level 5, the camera Some(6)
+scale 1, 2 texels, at 16 m: cascade 1 (texel 0.0214 m) draws level 6, the camera Some(6)
+scale 1, 2 texels, at 16 m: cascade 2 (texel 0.0494 m) draws level 7, the camera Some(6)
+scale 1, 2 texels, at 16 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(6)
+scale 1, 2 texels, at 30 m: cascade 1 (texel 0.0214 m) draws level 6, the camera Some(7)
+scale 1, 2 texels, at 30 m: cascade 2 (texel 0.0494 m) draws level 7, the camera Some(7)
+scale 1, 2 texels, at 30 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 1, 2 texels, at 70 m: cascade 2 (texel 0.0494 m) draws level 7, the camera Some(7)
+scale 1, 2 texels, at 70 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+scale 1, 2 texels, at 130 m: cascade 3 (texel 0.1804 m) draws level 7, the camera Some(7)
+checks per cascade [9, 12, 15, 18]; 37 unlike the camera's level, 31 unlike a bound four times as loose
+test cascades_pick_levels_by_their_texels ... ok
+cold, multi-draw vs multi-draw (0): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [1, 1, 3, 0, 10, 12, 19, 39]
+warm, multi-draw vs multi-draw (0): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+cold, multi-draw vs first-instance (1): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+warm, multi-draw vs first-instance (1): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+cold, multi-draw vs baseline (2): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+warm, multi-draw vs baseline (2): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+cold, multi-draw vs baseline (3): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [1, 1, 3, 0, 10, 12, 19, 39]
+warm, multi-draw vs baseline (3): 0 pixels of another entity, 0 pixels differ; levels [1, 1, 3, 0, 10, 12, 19, 39] and [1, 1, 3, 0, 10, 12, 19, 39], late [0, 0, 0, 0, 0, 0, 0, 0]
+test every_draw_path_and_occlusion_draw_the_same_levels ... ok
+489334 hidden spheres of 6 levels, limit 134217728 bytes: levels off-limit (33279064 list bytes), camera instances 64 and 64, cascades' triangles 171840 and 171840
+without the hidden ones: levels on, camera instances per level [4, 8, 19, 33, 0, 0, 0, 0]
+test levels_give_way_at_the_binding_limit ... ok
+
+failures:
+
+failures:
+    hysteresis_holds_a_level_until_the_margin
+    skinned_levels_follow_the_pose
+
+test result: FAILED. 4 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.72s
+
+error: test failed, to rerun pass `-p pocket-render --test lod`

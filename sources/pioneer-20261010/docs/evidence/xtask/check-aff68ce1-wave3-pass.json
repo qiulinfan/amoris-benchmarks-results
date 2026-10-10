@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "command": "cargo xtask check --record",
+  "commit": "aff68ce18cb2",
+  "machine": {
+    "id": "r1",
+    "cpu": "AMD Ryzen 9 270 w/ Radeon 780M Graphics",
+    "logical_cores": 16,
+    "gpus": [
+      {
+        "name": "AMD Radeon 780M Graphics",
+        "driver": "32.0.13062.3005",
+        "backend": null
+      },
+      {
+        "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "driver": "32.0.16.1714",
+        "backend": null
+      }
+    ],
+    "os": "windows x86_64",
+    "on_ac_power": true,
+    "power_plan": "Balanced",
+    "chrome": "Google Chrome 155.0.8059.39",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "started_utc": "2026-10-09T21:26:27Z",
+  "duration_ms": 696232,
+  "verdict": "Pass",
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 4545,
+      "summary": "19 workspace crates, 376 external packages, 2 targets; QuickJS-ng as its pins and patches give it"
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 1731,
+      "summary": "formatted"
+    },
+    {
+      "name": "docs",
+      "verdict": "Pass",
+      "duration_ms": 784,
+      "summary": "69 Markdown files under docs/ (not docs/evidence/), 0 need wrapping"
+    },
+    {
+      "name": "clippy",
+      "verdict": "Pass",
+      "duration_ms": 51601,
+      "summary": "diagnostics: 0 on x86_64-pc-windows-msvc, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported"
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 50030,
+      "summary": "native release build"
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 6307,
+      "summary": "8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet"
+    },
+    {
+      "name": "test",
+      "verdict": "Pass",
+      "duration_ms": 282434,
+      "summary": "680 passed, 0 failed, 0 ignored in 112 suites, ignored tests included"
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 22269,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web"
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 266,
+      "summary": "3 projects"
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 53956,
+      "summary": "2 projects; cross build against a debug pocket"
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 2724,
+      "summary": "2 projects"
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 3122,
+      "summary": "2 projects"
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 1741,
+      "summary": "4 projects"
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet"
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 214209,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]"
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)"
+    }
+  ]
+}

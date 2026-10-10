@@ -1,0 +1,40 @@
+Mutations of the per-frame caches and of the forward variants' order against the tests added in
+the review follow-up (2026-10-09, RTX 5060, Direct3D 12, the default backend).
+
+Each mutation was applied alone to the worktree, then
+    cargo test --release -p pocket-render --test scene_changes --test forward_variants -- --test-threads 1
+ran, then the file was restored. Before the follow-up, the first four survived the whole
+pocket-render suite (the review's scratch copy: lib 89 passed, plus taa, draw_paths, occlusion,
+lod, hiz, rt_shadows, neural_*, skinned_bounds).
+
+skingroup   skinning.rs: the bind group is built once, never rebuilt when a buffer it holds is
+            replaced (`if self.group.is_none()`).
+            FAILED skinned_characters_added_later_draw_in_their_own_poses:
+            "six added: character 3 covers 0 of the view, a fresh renderer's 0.005462963"
+jobskip     skinning.rs: the jobs are written once (`if self.jobs_written.is_empty()`).
+            FAILED skinned_characters_added_later_draw_in_their_own_poses:
+            "one replaced: character 2 covers 0 of the view, a fresh renderer's 0.0061959876"
+postparams  post.rs: the bloom chain's and display transform's parameters are written once
+            (`if self.written.is_empty()`).
+            FAILED exposure_and_resizes_reach_the_display_transform:
+            "exposure: 100.000% of the pixels differ"
+postresize  post.rs: the parameters are not written again when their slot count changes (a
+            resize that shortens the bloom chain), only when the same slots change.
+            FAILED exposure_and_resizes_reach_the_display_transform:
+            "resize: 100.000% of the pixels differ" (the exposure check passed)
+fwdorder    renderer.rs `forward_variants`: [a, c, b, d] instead of [a, b, c, d] (alpha-masked
+            pipelines without the alpha test, double-sided ones culled).
+            FAILED every_forward_variant_draws_its_material:
+            "Msaa from start-up: the masked quad seen from the front covers 100.0% of its
+            middle, expected 25 to 75%"
+skin0       skinning.rs: every job at dynamic offset 0 (the suite caught it before too).
+            FAILED skinned_characters_added_later_draw_in_their_own_poses:
+            "one replaced: character 2 is in view" (not even in the fresh renderer)
+poststale   post.rs: the bloom chain's bind groups are never rebuilt (the suite caught it
+            before too).
+            FAILED exposure_and_resizes_reach_the_display_transform:
+            "resize: 100.000% of the pixels differ"
+
+Unmutated, both files pass on Direct3D 12 and Vulkan on both GPUs and with
+POCKET_GPU_MINIMAL=features,limits,timestamps; the frames after each change equal a fresh
+renderer's (0 pixels off by more than 8 levels, the characters' coverage equal).

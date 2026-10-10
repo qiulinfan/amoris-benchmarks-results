@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-09",
+  "machine": "Windows 11, AMD Ryzen 9 270, NVIDIA GeForce RTX 5060 Laptop GPU (driver 32.0.16.1714), Vulkan through wgpu 30.0.1; shared with other agents: every timing is provisional",
+  "branch": "explore/splats",
+  "scene": "crates/pocket-render/examples/splats.rs procedural garden (N garden splats + 2 x 40k SH orb), 1600x900 unless noted, 24-bit keys",
+  "quad_vs_tile_image": {
+    "method": "examples/splats --compare: the same view drawn with both rasterizers, sRGB output compared",
+    "1M garden": {
+      "mean_abs_diff_of_255": 0.1025,
+      "max": 9,
+      "psnr_db": 58.01,
+      "pixels_over_2_pct": 0.004
+    },
+    "3M garden": {
+      "mean_abs_diff_of_255": 0.1289,
+      "max": 8,
+      "psnr_db": 57.01,
+      "pixels_over_2_pct": 0.006
+    },
+    "SH orb close-up (--look 0,1.4,3 --distance 0.12)": {
+      "mean_abs_diff_of_255": 0.0921,
+      "max": 8,
+      "psnr_db": 58.41,
+      "pixels_over_2_pct": 0.014
+    },
+    "1M antialiased": {
+      "mean_abs_diff_of_255": 0.0896,
+      "max": 8,
+      "psnr_db": 58.56
+    },
+    "1M 16-bit keys": {
+      "mean_abs_diff_of_255": 0.1025,
+      "max": 9,
+      "psnr_db": 58.0
+    },
+    "3M at WebGPU default limits (POCKET_GPU_MINIMAL=limits,features)": {
+      "psnr_db": 57.01,
+      "max": 8
+    }
+  },
+  "tile_pairs": {
+    "1M 1600x900": 2029378,
+    "3M 1600x900": 5262813,
+    "1M 2560x1440": 2739278,
+    "3M 2560x1440": 6798554,
+    "orb close-up": 1488780,
+    "per visible splat 1M 900p, bounding box only (first version)": 2.86,
+    "per visible splat 1M 900p, exact quad-tile test": 2.3
+  },
+  "raster_steps_1M_900p_ms": {
+    "note": "tile_raster only, early session (GPU at its default power limit), provisional",
+    "bounding-box binning, every pixel visits every batch splat": 2.02,
+    "exact quad-tile binning + per-pixel 4x4 sub-tile mask test": 2.31,
+    "same, mask test removed": 2.4,
+    "4x4 sub-tile bit lists (pixel visits only overlapping splats)": 1.45,
+    "8x4 sub-tile bit lists mapped onto 32-wide SIMD groups (final)": 1.43,
+    "final, evaluation skipped (load + masks only)": 0.28,
+    "final, no early termination at transmittance 1/255": 1.95,
+    "final, no sub-tile culling": 2.26
+  },
+  "early_session_splat_ms": {
+    "note": "single runs, before the laptop GPU lowered its power limit (48.5 W of 55 W later)",
+    "1M 1600x900": {
+      "quad draw+depth": 1.94,
+      "tile bin+sort+raster+composite": 2.39
+    },
+    "3M 1600x900": {
+      "quad": 5.32,
+      "tile": 5.27
+    },
+    "1M 2560x1440": {
+      "quad": 4.01,
+      "tile": 3.67
+    },
+    "3M 2560x1440": {
+      "quad": 9.4,
+      "tile": 7.39
+    },
+    "orb close-up": {
+      "quad": 2.18,
+      "tile": 1.73
+    }
+  },
+  "antialias_fidelity": {
+    "method": "each mode against the same view rendered at 6400x3600 and box-downsampled in linear light; PSNR over the image and a crop of the garden",
+    "distance 2.5 (crop 300,340-1180,800)": {
+      "off vs ref_off": {
+        "full": {
+          "psnr": 30.4,
+          "mad": 1.704
+        },
+        "crop": {
+          "psnr": 24.98,
+          "mad": 5.205
+        }
+      },
+      "off vs ref_on": {
+        "full": {
+          "psnr": 29.39,
+          "mad": 1.965
+        },
+        "crop": {
+          "psnr": 23.97,
+          "mad": 6.11
+        }
+      },
+      "on vs ref_off": {
+        "full": {
+          "psnr": 38.17,
+          "mad": 0.91
+        },
+        "crop": {
+          "psnr": 32.83,
+          "mad": 2.484
+        }
+      },
+      "on vs ref_on": {
+        "full": {
+          "psnr": 39.63,
+          "mad": 0.749
+        },
+        "crop": {
+          "psnr": 34.3,
+          "mad": 1.925
+        }
+      },
+      "ref_off vs ref_on": {
+        "full": {
+          "psnr": 42.56,
+          "mad": 0.373
+        },
+        "crop": {
+          "psnr": 37.08,
+          "mad": 1.298
+        }
+      }
+    },
+    "distance 1.0 (crop 0,300-1600,900)": {
+      "off vs ref_off": {
+        "full": {
+          "psnr": 28.91,
+          "mad": 3.264
+        },
+        "crop": {
+          "psnr": 27.3,
+          "mad": 4.499
+        }
+      },
+      "off vs ref_on": {
+        "full": {
+          "psnr": 28.09,
+          "mad": 3.607
+        },
+        "crop": {
+          "psnr": 26.49,
+          "mad": 4.981
+        }
+      },
+      "on vs ref_off": {
+        "full": {
+          "psnr": 34.75,
+          "mad": 1.818
+        },
+        "crop": {
+          "psnr": 33.14,
+          "mad": 2.452
+        }
+      },
+      "on vs ref_on": {
+        "full": {
+          "psnr": 35.26,
+          "mad": 1.673
+        },
+        "crop": {
+          "psnr": 33.63,
+          "mad": 2.256
+        }
+      },
+      "ref_off vs ref_on": {
+        "full": {
+          "psnr": 43.0,
+          "mad": 0.451
+        },
+        "crop": {
+          "psnr": 41.4,
+          "mad": 0.638
+        }
+      }
+    }
+  },
+  "ties": {
+    "test": "splat::tile::tests::ties_are_stable (30k splats with one shared depth)",
+    "before (atomic append)": "39626 channel values changed over 4 redraws (quads)",
+    "after (index-ordered compaction)": "0 changed, quads and tiles",
+    "compaction cost ms": {
+      "1M": 0.04,
+      "3M": 0.13
+    }
+  },
+  "picking": {
+    "garden coverage (examples/splats --capture --visible)": [
+      [
+        100,
+        0.634
+      ],
+      [
+        21,
+        0.0038
+      ],
+      [
+        101,
+        0.003
+      ],
+      [
+        10,
+        0.0025
+      ],
+      [
+        12,
+        0.0023
+      ],
+      [
+        102,
+        0.0021
+      ],
+      [
+        1,
+        0.0015
+      ],
+      [
+        2,
+        0.0014
+      ],
+      [
+        20,
+        0.0014
+      ],
+      [
+        11,
+        0.0009
+      ]
+    ],
+    "entities": {
+      "100": "garden splats",
+      "101": "orb splats",
+      "102": "orb splats",
+      "1-21": "meshes"
+    },
+    "entity ids pass ms (median, 1M garden)": {
+      "with meshes": 1.9,
+      "splats only": 2.26
+    }
+  },
+  "browser": "chrome-wgsl-check.json: every splat module and pipeline created in Chrome 155 WebGPU (Tint, D3D12, default limits); browser-harness-2026-10-09.json: both rasterizers run end to end in Chrome, images agree to 55.4 dB"
+}

@@ -1,0 +1,536 @@
+{
+  "tool": "scratch A/B runner (d3d12perf review follow-up)",
+  "adapter": "780m",
+  "conditions": "single-agent, AC power",
+  "what": "As share-cost-rtx5060.json on the Radeon 780M, MSAA without GTAO, three interleaved rounds per case and backend.",
+  "suites": {
+    "sphere vulkan": {
+      "runs": [
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 7.812,
+          "gpu_mean": 8.161,
+          "opaque": 6.276,
+          "cpu": 0.591,
+          "new": 145.9,
+          "smi_before": "59, 0 MHz, 11.86 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 7.39,
+          "gpu_mean": 7.389,
+          "opaque": 5.886,
+          "cpu": 0.478,
+          "new": 73.6,
+          "smi_before": "61, 0 MHz, 10.47 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 7.257,
+          "gpu_mean": 7.322,
+          "opaque": 5.818,
+          "cpu": 0.49,
+          "new": 470.2,
+          "smi_before": "62, 0 MHz, 10.60 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 7.749,
+          "gpu_mean": 7.87,
+          "opaque": 6.266,
+          "cpu": 0.555,
+          "new": 111.3,
+          "smi_before": "62, 0 MHz, 10.60 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 7.272,
+          "gpu_mean": 7.306,
+          "opaque": 5.804,
+          "cpu": 0.479,
+          "new": 72.9,
+          "smi_before": "62, 0 MHz, 10.62 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 7.491,
+          "gpu_mean": 7.513,
+          "opaque": 6.008,
+          "cpu": 0.568,
+          "new": 74.9,
+          "smi_before": "63, 0 MHz, 10.75 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 7.652,
+          "gpu_mean": 7.925,
+          "opaque": 6.242,
+          "cpu": 0.549,
+          "new": 109.9,
+          "smi_before": "63, 0 MHz, 10.71 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 7.256,
+          "gpu_mean": 7.261,
+          "opaque": 5.761,
+          "cpu": 0.547,
+          "new": 73.8,
+          "smi_before": "63, 0 MHz, 10.68 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 7.32,
+          "gpu_mean": 7.361,
+          "opaque": 5.858,
+          "cpu": 0.49,
+          "new": 72.6,
+          "smi_before": "63, 0 MHz, 10.73 W, P0, 0x0000000000000004"
+        }
+      ],
+      "summary": {
+        "msaa master": {
+          "gpu_median": 7.925,
+          "gpu_min": 7.87,
+          "spread": 0.03671924290220814,
+          "opaque_median": 6.266
+        },
+        "msaa branch": {
+          "gpu_median": 7.306,
+          "gpu_min": 7.261,
+          "spread": 0.01751984670134138,
+          "opaque_median": 5.804
+        },
+        "msaa branch+share": {
+          "gpu_median": 7.361,
+          "gpu_min": 7.322,
+          "spread": 0.02594756147262598,
+          "opaque_median": 5.858
+        }
+      }
+    },
+    "dense vulkan": {
+      "runs": [
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 84.774,
+          "gpu_mean": 92.442,
+          "opaque": 82.955,
+          "cpu": 0.642,
+          "new": 109.2,
+          "smi_before": "62, 285 MHz, 9.21 W, P2, 0x0000000000000400"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 82.51,
+          "gpu_mean": 82.613,
+          "opaque": 80.876,
+          "cpu": 0.551,
+          "new": 73.3,
+          "smi_before": "67, 0 MHz, 12.85 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 83.012,
+          "gpu_mean": 83.04,
+          "opaque": 81.305,
+          "cpu": 0.543,
+          "new": 73.6,
+          "smi_before": "69, 0 MHz, 12.95 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 83.48,
+          "gpu_mean": 86.782,
+          "opaque": 81.714,
+          "cpu": 0.643,
+          "new": 107.0,
+          "smi_before": "69, 0 MHz, 12.99 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 82.624,
+          "gpu_mean": 82.645,
+          "opaque": 80.894,
+          "cpu": 0.557,
+          "new": 70.8,
+          "smi_before": "69, 0 MHz, 13.10 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 82.47,
+          "gpu_mean": 82.443,
+          "opaque": 80.709,
+          "cpu": 0.552,
+          "new": 73.8,
+          "smi_before": "70, 0 MHz, 13.12 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 83.792,
+          "gpu_mean": 83.825,
+          "opaque": 82.074,
+          "cpu": 0.646,
+          "new": 105.7,
+          "smi_before": "70, 0 MHz, 13.21 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 82.659,
+          "gpu_mean": 82.845,
+          "opaque": 81.097,
+          "cpu": 0.549,
+          "new": 72.9,
+          "smi_before": "70, 0 MHz, 13.16 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 82.809,
+          "gpu_mean": 82.81,
+          "opaque": 81.074,
+          "cpu": 0.549,
+          "new": 71.6,
+          "smi_before": "69, 0 MHz, 12.98 W, P2, 0x0000000000000004"
+        }
+      ],
+      "summary": {
+        "msaa master": {
+          "gpu_median": 86.782,
+          "gpu_min": 83.825,
+          "spread": 0.09929478463275784,
+          "opaque_median": 82.074
+        },
+        "msaa branch": {
+          "gpu_median": 82.645,
+          "gpu_min": 82.613,
+          "spread": 0.0028071873676568373,
+          "opaque_median": 80.894
+        },
+        "msaa branch+share": {
+          "gpu_median": 82.81,
+          "gpu_min": 82.443,
+          "spread": 0.007209274242241377,
+          "opaque_median": 81.074
+        }
+      }
+    },
+    "sphere dx12": {
+      "runs": [
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 6.499,
+          "gpu_mean": 6.573,
+          "opaque": 5.05,
+          "cpu": 0.933,
+          "new": 966.1,
+          "smi_before": "69, 180 MHz, 9.82 W, P2, 0x0000000000000400"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 6.461,
+          "gpu_mean": 6.479,
+          "opaque": 4.914,
+          "cpu": 0.986,
+          "new": 210.5,
+          "smi_before": "67, 0 MHz, 11.21 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 6.507,
+          "gpu_mean": 6.53,
+          "opaque": 5.004,
+          "cpu": 0.955,
+          "new": 384.4,
+          "smi_before": "66, 0 MHz, 11.06 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 6.581,
+          "gpu_mean": 6.675,
+          "opaque": 5.152,
+          "cpu": 0.874,
+          "new": 943.1,
+          "smi_before": "65, 0 MHz, 10.88 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 6.42,
+          "gpu_mean": 6.433,
+          "opaque": 4.891,
+          "cpu": 1.031,
+          "new": 205.7,
+          "smi_before": "65, 0 MHz, 10.82 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 6.533,
+          "gpu_mean": 6.575,
+          "opaque": 5.052,
+          "cpu": 0.942,
+          "new": 206.2,
+          "smi_before": "64, 0 MHz, 10.88 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 6.579,
+          "gpu_mean": 6.633,
+          "opaque": 5.109,
+          "cpu": 0.876,
+          "new": 933.7,
+          "smi_before": "64, 0 MHz, 10.87 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 6.465,
+          "gpu_mean": 6.505,
+          "opaque": 4.97,
+          "cpu": 0.981,
+          "new": 203.7,
+          "smi_before": "64, 0 MHz, 10.81 W, P0, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 6.567,
+          "gpu_mean": 6.586,
+          "opaque": 5.064,
+          "cpu": 0.907,
+          "new": 204.5,
+          "smi_before": "64, 0 MHz, 10.70 W, P0, 0x0000000000000004"
+        }
+      ],
+      "summary": {
+        "msaa master": {
+          "gpu_median": 6.633,
+          "gpu_min": 6.573,
+          "spread": 0.015377657168701857,
+          "opaque_median": 5.109
+        },
+        "msaa branch": {
+          "gpu_median": 6.479,
+          "gpu_min": 6.433,
+          "spread": 0.011112826053403312,
+          "opaque_median": 4.914
+        },
+        "msaa branch+share": {
+          "gpu_median": 6.575,
+          "gpu_min": 6.53,
+          "spread": 0.008517110266159703,
+          "opaque_median": 5.052
+        }
+      }
+    },
+    "dense dx12": {
+      "runs": [
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 74.142,
+          "gpu_mean": 74.234,
+          "opaque": 72.467,
+          "cpu": 0.903,
+          "new": 944.2,
+          "smi_before": "63, 270 MHz, 9.14 W, P2, 0x0000000000000400"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 73.852,
+          "gpu_mean": 73.998,
+          "opaque": 72.242,
+          "cpu": 0.768,
+          "new": 209.7,
+          "smi_before": "67, 0 MHz, 12.78 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 0,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 74.251,
+          "gpu_mean": 74.315,
+          "opaque": 72.544,
+          "cpu": 0.779,
+          "new": 219.6,
+          "smi_before": "69, 0 MHz, 13.05 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 73.935,
+          "gpu_mean": 74.076,
+          "opaque": 72.293,
+          "cpu": 0.905,
+          "new": 933.2,
+          "smi_before": "69, 0 MHz, 13.14 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 74.077,
+          "gpu_mean": 74.143,
+          "opaque": 72.368,
+          "cpu": 0.776,
+          "new": 205.3,
+          "smi_before": "69, 0 MHz, 13.10 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 1,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 74.216,
+          "gpu_mean": 74.353,
+          "opaque": 72.577,
+          "cpu": 0.769,
+          "new": 211.9,
+          "smi_before": "70, 0 MHz, 13.16 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "master",
+          "force": "",
+          "gpu_p50": 73.697,
+          "gpu_mean": 73.834,
+          "opaque": 72.065,
+          "cpu": 0.909,
+          "new": 959.0,
+          "smi_before": "70, 0 MHz, 13.26 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "",
+          "gpu_p50": 74.114,
+          "gpu_mean": 74.213,
+          "opaque": 72.456,
+          "cpu": 0.766,
+          "new": 211.7,
+          "smi_before": "69, 0 MHz, 13.04 W, P2, 0x0000000000000004"
+        },
+        {
+          "round": 2,
+          "mode": "msaa",
+          "build": "branch",
+          "force": "share",
+          "gpu_p50": 74.489,
+          "gpu_mean": 74.754,
+          "opaque": 72.967,
+          "cpu": 0.78,
+          "new": 213.6,
+          "smi_before": "70, 0 MHz, 13.10 W, P2, 0x0000000000000004"
+        }
+      ],
+      "summary": {
+        "msaa master": {
+          "gpu_median": 74.076,
+          "gpu_min": 73.834,
+          "spread": 0.0053998596036501905,
+          "opaque_median": 72.293
+        },
+        "msaa branch": {
+          "gpu_median": 74.143,
+          "gpu_min": 73.998,
+          "spread": 0.002899801734485915,
+          "opaque_median": 72.368
+        },
+        "msaa branch+share": {
+          "gpu_median": 74.353,
+          "gpu_min": 74.315,
+          "spread": 0.005904267480801141,
+          "opaque_median": 72.577
+        }
+      }
+    }
+  }
+}

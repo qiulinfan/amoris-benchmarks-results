@@ -1,0 +1,35 @@
+{
+  "adapter": "amd rdna-3  ",
+  "modules": {
+    "splat_preprocess": [],
+    "splat_draw": [],
+    "splat_tile": [],
+    "splat_sort": [],
+    "splat_depth": [],
+    "splat_composite": []
+  },
+  "pipelines": {
+    "splat_preprocess:preprocess": "ok",
+    "splat_preprocess:scan": "ok",
+    "splat_preprocess:compact": "ok",
+    "splat_preprocess:finish": "ok",
+    "splat_sort:histogram": "ok",
+    "splat_sort:scan_bins": "ok",
+    "splat_sort:scatter": "ok",
+    "splat_tile:tile_setup": "ok",
+    "splat_tile:tile_count": "ok",
+    "splat_tile:tile_scan": "ok",
+    "splat_tile:tile_emit": "ok",
+    "splat_tile:tile_ranges": "ok",
+    "splat_tile:tile_raster": "ok",
+    "splat_draw:vs_splat/fs_splat": "ok",
+    "splat_draw:vs_splat_id/fs_splat_id": "ok",
+    "splat_depth:vs_full/fs_depth": "ok",
+    "splat_composite:vs_full/fs_composite": "ok"
+  },
+  "errors": [],
+  "limits": {
+    "storageBuffersPerStage": 8,
+    "workgroupStorage": 16384
+  }
+}

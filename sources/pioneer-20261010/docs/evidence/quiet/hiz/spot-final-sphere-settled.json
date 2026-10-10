@@ -1,0 +1,4549 @@
+{
+  "tool": "tools/occlusion_bench.py",
+  "date": "2026-10-10 05:35",
+  "frames": 200,
+  "size": "1280x720",
+  "provisional": "quiet machine 2026-10-10, review follow-up (no other agent; conditions in docs/evidence/quiet/conditions-2[5-9].json), build 0871920d + explore/quiet2; --settle 5",
+  "settle_s": 5.0,
+  "alternate": true,
+  "cooling": [
+    {
+      "temp_c": 62,
+      "waited_s": 0.3,
+      "config": "vulkan:nvidia",
+      "repeat": 0
+    },
+    {
+      "temp_c": 65,
+      "waited_s": 0.1,
+      "config": "vulkan:nvidia",
+      "repeat": 1
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:nvidia",
+      "repeat": 2
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:nvidia",
+      "repeat": 3
+    },
+    {
+      "temp_c": 66,
+      "waited_s": 0.1,
+      "config": "vulkan:nvidia",
+      "repeat": 4
+    },
+    {
+      "temp_c": 68,
+      "waited_s": 0.1,
+      "config": "vulkan:nvidia",
+      "repeat": 5
+    },
+    {
+      "temp_c": 66,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 0
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 1
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 2
+    },
+    {
+      "temp_c": 66,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 3
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 4
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:nvidia",
+      "repeat": 5
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 0
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 1
+    },
+    {
+      "temp_c": 69,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 2
+    },
+    {
+      "temp_c": 68,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 3
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 4
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "vulkan:780m",
+      "repeat": 5
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 0
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 1
+    },
+    {
+      "temp_c": 66,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 2
+    },
+    {
+      "temp_c": 66,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 3
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 4
+    },
+    {
+      "temp_c": 67,
+      "waited_s": 0.1,
+      "config": "dx12:780m",
+      "repeat": 5
+    }
+  ],
+  "runs": [
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.26,
+        "p50": 0.254,
+        "p95": 0.338
+      },
+      "device_ms": 941.4,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1350.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 1.785,
+        "p50": 1.782,
+        "p95": 1.808
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.383,
+        "lights": 0.003,
+        "opaque+sky": 1.399
+      },
+      "renderer_new_ms": 57.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.251,
+        "p50": 2.239,
+        "p95": 2.35
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.384,
+        "p50": 0.369,
+        "p95": 0.511
+      },
+      "device_ms": 1077.1,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1463.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.506,
+        "p50": 2.511,
+        "p95": 2.541
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.478,
+        "cull late": 0.181,
+        "hi-z": 0.078,
+        "lights": 0.003,
+        "opaque early": 1.672,
+        "opaque+sky": 0.095
+      },
+      "renderer_new_ms": 43.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.155,
+        "p50": 3.131,
+        "p95": 3.339
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.282,
+        "p50": 0.268,
+        "p95": 0.395
+      },
+      "device_ms": 396.4,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1538.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.093,
+        "p50": 2.087,
+        "p95": 2.127
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.397,
+        "cull late": 0.167,
+        "hi-z": 0.067,
+        "lights": 0.003,
+        "opaque early": 1.396,
+        "opaque+sky": 1.676
+      },
+      "renderer_new_ms": 44.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.583,
+        "p50": 2.563,
+        "p95": 2.736
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.286,
+        "p50": 0.272,
+        "p95": 0.394
+      },
+      "device_ms": 416.4,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1517.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.252,
+        "p50": 2.248,
+        "p95": 2.282
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.398,
+        "cull late": 0.165,
+        "hi-z": 0.069,
+        "lights": 0.003,
+        "opaque early": 1.532,
+        "opaque+sky": 1.833
+      },
+      "renderer_new_ms": 47.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.752,
+        "p50": 2.738,
+        "p95": 2.889
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.364,
+        "p50": 0.347,
+        "p95": 0.494
+      },
+      "device_ms": 418.6,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1575.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.516,
+        "p50": 2.51,
+        "p95": 2.658
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.388,
+        "cull late": 0.162,
+        "hi-z": 0.072,
+        "lights": 0.003,
+        "opaque early": 1.811,
+        "opaque+sky": 0.08
+      },
+      "renderer_new_ms": 47.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.13,
+        "p50": 3.114,
+        "p95": 3.311
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.271,
+        "p50": 0.266,
+        "p95": 0.338
+      },
+      "device_ms": 1106.6,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1433.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.235,
+        "p50": 2.231,
+        "p95": 2.266
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.003,
+        "opaque+sky": 1.846
+      },
+      "renderer_new_ms": 48.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.719,
+        "p50": 2.711,
+        "p95": 2.825
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.279,
+        "p50": 0.269,
+        "p95": 0.371
+      },
+      "device_ms": 1069.8,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1474.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.229,
+        "p50": 2.223,
+        "p95": 2.261
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.383,
+        "lights": 0.003,
+        "opaque+sky": 1.843
+      },
+      "renderer_new_ms": 48.3,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.721,
+        "p50": 2.705,
+        "p95": 2.819
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.364,
+        "p50": 0.35,
+        "p95": 0.496
+      },
+      "device_ms": 1032.5,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1448.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.493,
+        "p50": 2.494,
+        "p95": 2.512
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.376,
+        "cull late": 0.161,
+        "hi-z": 0.072,
+        "lights": 0.003,
+        "opaque early": 1.802,
+        "opaque+sky": 0.079
+      },
+      "renderer_new_ms": 44.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.105,
+        "p50": 3.089,
+        "p95": 3.25
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.277,
+        "p50": 0.267,
+        "p95": 0.391
+      },
+      "device_ms": 1101.8,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1448.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 1.982,
+        "p50": 1.973,
+        "p95": 2.018
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.386,
+        "cull late": 0.164,
+        "hi-z": 0.069,
+        "lights": 0.003,
+        "opaque early": 1.31,
+        "opaque+sky": 1.577
+      },
+      "renderer_new_ms": 43.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.464,
+        "p50": 2.449,
+        "p95": 2.594
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.297,
+        "p50": 0.282,
+        "p95": 0.43
+      },
+      "device_ms": 380.1,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1495.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.111,
+        "p50": 2.11,
+        "p95": 2.128
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.409,
+        "cull late": 0.165,
+        "hi-z": 0.067,
+        "lights": 0.003,
+        "opaque early": 1.401,
+        "opaque+sky": 1.683
+      },
+      "renderer_new_ms": 44.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.622,
+        "p50": 2.597,
+        "p95": 2.816
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.346,
+        "p50": 0.326,
+        "p95": 0.461
+      },
+      "device_ms": 417.2,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1536.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.222,
+        "p50": 2.222,
+        "p95": 2.262
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.39,
+        "cull late": 0.162,
+        "hi-z": 0.073,
+        "lights": 0.003,
+        "opaque early": 1.514,
+        "opaque+sky": 0.08
+      },
+      "renderer_new_ms": 44.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.814,
+        "p50": 2.797,
+        "p95": 2.969
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.287,
+        "p50": 0.277,
+        "p95": 0.393
+      },
+      "device_ms": 458.5,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1592.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.271,
+        "p50": 2.27,
+        "p95": 2.316
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.393,
+        "lights": 0.003,
+        "opaque+sky": 1.875
+      },
+      "renderer_new_ms": 44.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.779,
+        "p50": 2.765,
+        "p95": 2.913
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.303,
+        "p50": 0.297,
+        "p95": 0.401
+      },
+      "device_ms": 1098.1,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1501.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.256,
+        "p50": 2.25,
+        "p95": 2.286
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.382,
+        "lights": 0.003,
+        "opaque+sky": 1.871
+      },
+      "renderer_new_ms": 42.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.782,
+        "p50": 2.77,
+        "p95": 2.928
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.362,
+        "p50": 0.346,
+        "p95": 0.479
+      },
+      "device_ms": 1078.4,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1429.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.503,
+        "p50": 2.501,
+        "p95": 2.529
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.376,
+        "cull late": 0.16,
+        "hi-z": 0.072,
+        "lights": 0.003,
+        "opaque early": 1.812,
+        "opaque+sky": 0.079
+      },
+      "renderer_new_ms": 44.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.118,
+        "p50": 3.107,
+        "p95": 3.251
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.297,
+        "p50": 0.282,
+        "p95": 0.43
+      },
+      "device_ms": 1017.9,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1451.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.346,
+        "p50": 2.338,
+        "p95": 2.383
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.16,
+        "hi-z": 0.066,
+        "lights": 0.003,
+        "opaque early": 1.606,
+        "opaque+sky": 1.937
+      },
+      "renderer_new_ms": 43.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.857,
+        "p50": 2.836,
+        "p95": 3.022
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.282,
+        "p50": 0.273,
+        "p95": 0.358
+      },
+      "device_ms": 1094.0,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1435.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.295,
+        "p50": 2.287,
+        "p95": 2.332
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.162,
+        "hi-z": 0.067,
+        "lights": 0.003,
+        "opaque early": 1.576,
+        "opaque+sky": 1.887
+      },
+      "renderer_new_ms": 44.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.791,
+        "p50": 2.773,
+        "p95": 2.913
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.373,
+        "p50": 0.368,
+        "p95": 0.486
+      },
+      "device_ms": 1092.0,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1508.8,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.515,
+        "p50": 2.503,
+        "p95": 2.665
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.377,
+        "cull late": 0.161,
+        "hi-z": 0.072,
+        "lights": 0.003,
+        "opaque early": 1.825,
+        "opaque+sky": 0.078
+      },
+      "renderer_new_ms": 43.7,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.156,
+        "p50": 3.144,
+        "p95": 3.308
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.302,
+        "p50": 0.288,
+        "p95": 0.427
+      },
+      "device_ms": 400.1,
+      "driver": "NVIDIA 617.14",
+      "first_frame_ms": 1522.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.242,
+        "p50": 2.241,
+        "p95": 2.275
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.392,
+        "lights": 0.003,
+        "opaque+sky": 1.847
+      },
+      "renderer_new_ms": 43.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.756,
+        "p50": 2.738,
+        "p95": 2.922
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.511,
+        "p50": 0.482,
+        "p95": 0.669
+      },
+      "device_ms": 1240.0,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1463.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.244,
+        "p50": 2.243,
+        "p95": 2.266
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.0,
+        "opaque+sky": 1.858
+      },
+      "renderer_new_ms": 192.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.024,
+        "p50": 2.998,
+        "p95": 3.189
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.665,
+        "p50": 0.646,
+        "p95": 0.845
+      },
+      "device_ms": 1216.6,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1485.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.544,
+        "p50": 2.511,
+        "p95": 2.83
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.37,
+        "cull late": 0.186,
+        "hi-z": 0.065,
+        "lights": 0.0,
+        "opaque early": 1.853,
+        "opaque+sky": 0.07
+      },
+      "renderer_new_ms": 179.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.5,
+        "p50": 3.463,
+        "p95": 3.908
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.558,
+        "p50": 0.54,
+        "p95": 0.763
+      },
+      "device_ms": 1188.8,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1526.8,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.23,
+        "p50": 2.214,
+        "p95": 2.413
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.391,
+        "cull late": 0.181,
+        "hi-z": 0.057,
+        "lights": 0.0,
+        "opaque early": 1.519,
+        "opaque+sky": 1.822
+      },
+      "renderer_new_ms": 178.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.06,
+        "p50": 3.051,
+        "p95": 3.316
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.555,
+        "p50": 0.529,
+        "p95": 0.744
+      },
+      "device_ms": 1202.3,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1478.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.272,
+        "p50": 2.259,
+        "p95": 2.433
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.18,
+        "hi-z": 0.057,
+        "lights": 0.0,
+        "opaque early": 1.553,
+        "opaque+sky": 1.867
+      },
+      "renderer_new_ms": 195.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.088,
+        "p50": 3.075,
+        "p95": 3.312
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.667,
+        "p50": 0.641,
+        "p95": 0.858
+      },
+      "device_ms": 1189.6,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1454.0,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.536,
+        "p50": 2.496,
+        "p95": 2.911
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.37,
+        "cull late": 0.186,
+        "hi-z": 0.06,
+        "lights": 0.0,
+        "opaque early": 1.85,
+        "opaque+sky": 0.071
+      },
+      "renderer_new_ms": 185.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.455,
+        "p50": 3.412,
+        "p95": 3.823
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.518,
+        "p50": 0.494,
+        "p95": 0.696
+      },
+      "device_ms": 1200.3,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1483.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.26,
+        "p50": 2.26,
+        "p95": 2.282
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.0,
+        "opaque+sky": 1.874
+      },
+      "renderer_new_ms": 188.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.005,
+        "p50": 2.984,
+        "p95": 3.192
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.518,
+        "p50": 0.499,
+        "p95": 0.671
+      },
+      "device_ms": 1188.3,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1486.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.261,
+        "p50": 2.262,
+        "p95": 2.285
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.0,
+        "opaque+sky": 1.875
+      },
+      "renderer_new_ms": 177.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.004,
+        "p50": 2.986,
+        "p95": 3.162
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.661,
+        "p50": 0.64,
+        "p95": 0.876
+      },
+      "device_ms": 1206.5,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1497.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.553,
+        "p50": 2.515,
+        "p95": 2.866
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.372,
+        "cull late": 0.186,
+        "hi-z": 0.06,
+        "lights": 0.0,
+        "opaque early": 1.863,
+        "opaque+sky": 0.071
+      },
+      "renderer_new_ms": 186.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.469,
+        "p50": 3.424,
+        "p95": 3.804
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.536,
+        "p50": 0.509,
+        "p95": 0.74
+      },
+      "device_ms": 1195.7,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1493.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.251,
+        "p50": 2.245,
+        "p95": 2.28
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.179,
+        "hi-z": 0.056,
+        "lights": 0.0,
+        "opaque early": 1.542,
+        "opaque+sky": 1.846
+      },
+      "renderer_new_ms": 186.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.05,
+        "p50": 3.031,
+        "p95": 3.26
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.519,
+        "p50": 0.498,
+        "p95": 0.706
+      },
+      "device_ms": 1305.2,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1472.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.262,
+        "p50": 2.261,
+        "p95": 2.285
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.181,
+        "hi-z": 0.061,
+        "lights": 0.0,
+        "opaque early": 1.55,
+        "opaque+sky": 1.857
+      },
+      "renderer_new_ms": 184.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.048,
+        "p50": 3.023,
+        "p95": 3.241
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.671,
+        "p50": 0.646,
+        "p95": 0.934
+      },
+      "device_ms": 1204.0,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1472.8,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.545,
+        "p50": 2.504,
+        "p95": 2.788
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.371,
+        "cull late": 0.186,
+        "hi-z": 0.06,
+        "lights": 0.0,
+        "opaque early": 1.858,
+        "opaque+sky": 0.071
+      },
+      "renderer_new_ms": 191.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.507,
+        "p50": 3.46,
+        "p95": 3.826
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.509,
+        "p50": 0.496,
+        "p95": 0.653
+      },
+      "device_ms": 1198.3,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1479.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.253,
+        "p50": 2.252,
+        "p95": 2.28
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.0,
+        "opaque+sky": 1.867
+      },
+      "renderer_new_ms": 183.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 2.988,
+        "p50": 2.98,
+        "p95": 3.15
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.522,
+        "p50": 0.502,
+        "p95": 0.704
+      },
+      "device_ms": 1197.4,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1500.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.27,
+        "p50": 2.265,
+        "p95": 2.308
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.389,
+        "lights": 0.0,
+        "opaque+sky": 1.88
+      },
+      "renderer_new_ms": 179.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.065,
+        "p50": 3.047,
+        "p95": 3.272
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.669,
+        "p50": 0.646,
+        "p95": 0.844
+      },
+      "device_ms": 1187.1,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1491.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.533,
+        "p50": 2.502,
+        "p95": 2.837
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.37,
+        "cull late": 0.186,
+        "hi-z": 0.059,
+        "lights": 0.0,
+        "opaque early": 1.848,
+        "opaque+sky": 0.07
+      },
+      "renderer_new_ms": 181.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.462,
+        "p50": 3.428,
+        "p95": 3.782
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.525,
+        "p50": 0.506,
+        "p95": 0.672
+      },
+      "device_ms": 1184.4,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1478.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.256,
+        "p50": 2.25,
+        "p95": 2.281
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.18,
+        "hi-z": 0.058,
+        "lights": 0.0,
+        "opaque early": 1.549,
+        "opaque+sky": 1.851
+      },
+      "renderer_new_ms": 183.3,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.038,
+        "p50": 3.017,
+        "p95": 3.243
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.513,
+        "p50": 0.486,
+        "p95": 0.675
+      },
+      "device_ms": 1200.2,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1479.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.256,
+        "p50": 2.251,
+        "p95": 2.276
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 0.387,
+        "cull late": 0.179,
+        "hi-z": 0.059,
+        "lights": 0.0,
+        "opaque early": 1.544,
+        "opaque+sky": 1.851
+      },
+      "renderer_new_ms": 183.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.049,
+        "p50": 3.02,
+        "p95": 3.208
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.688,
+        "p50": 0.674,
+        "p95": 0.858
+      },
+      "device_ms": 1290.1,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1490.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.566,
+        "p50": 2.509,
+        "p95": 2.891
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 0.372,
+        "cull late": 0.187,
+        "hi-z": 0.065,
+        "lights": 0.0,
+        "opaque early": 1.871,
+        "opaque+sky": 0.071
+      },
+      "renderer_new_ms": 183.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.555,
+        "p50": 3.508,
+        "p95": 3.965
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.522,
+        "p50": 0.509,
+        "p95": 0.667
+      },
+      "device_ms": 1192.2,
+      "driver": "32.0.16.1714 ",
+      "first_frame_ms": 1441.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 2.244,
+        "p50": 2.242,
+        "p95": 2.265
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 0.386,
+        "lights": 0.0,
+        "opaque+sky": 1.858
+      },
+      "renderer_new_ms": 193.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 3.036,
+        "p50": 3.025,
+        "p95": 3.184
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:nvidia",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.613,
+        "p50": 0.605,
+        "p95": 0.79
+      },
+      "device_ms": 1107.8,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1400.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.533,
+        "p50": 7.432,
+        "p95": 8.131
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.693,
+        "lights": 0.004,
+        "opaque+sky": 5.836
+      },
+      "renderer_new_ms": 112.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.02,
+        "p50": 8.961,
+        "p95": 9.85
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.701,
+        "p50": 0.696,
+        "p95": 0.847
+      },
+      "device_ms": 1046.5,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1485.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 8.182,
+        "p50": 8.143,
+        "p95": 8.532
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.513,
+        "cull late": 0.557,
+        "hi-z": 0.38,
+        "lights": 0.004,
+        "opaque early": 4.664,
+        "opaque+sky": 1.063
+      },
+      "renderer_new_ms": 74.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.868,
+        "p50": 9.839,
+        "p95": 10.438
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.637,
+        "p50": 0.626,
+        "p95": 0.769
+      },
+      "device_ms": 405.3,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1535.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.64,
+        "p50": 7.602,
+        "p95": 8.065
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.538,
+        "cull late": 0.652,
+        "hi-z": 0.579,
+        "lights": 0.004,
+        "opaque early": 4.9,
+        "opaque+sky": 6.038
+      },
+      "renderer_new_ms": 73.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.174,
+        "p50": 9.127,
+        "p95": 9.83
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.616,
+        "p50": 0.608,
+        "p95": 0.762
+      },
+      "device_ms": 1079.7,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1516.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.577,
+        "p50": 7.576,
+        "p95": 8.058
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.651,
+        "cull late": 0.757,
+        "hi-z": 0.521,
+        "lights": 0.004,
+        "opaque early": 4.674,
+        "opaque+sky": 5.863
+      },
+      "renderer_new_ms": 94.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.053,
+        "p50": 9.039,
+        "p95": 9.681
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.755,
+        "p50": 0.735,
+        "p95": 0.952
+      },
+      "device_ms": 415.5,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1452.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 9.098,
+        "p50": 8.915,
+        "p95": 10.23
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.612,
+        "cull late": 0.595,
+        "hi-z": 0.48,
+        "lights": 0.004,
+        "opaque early": 5.284,
+        "opaque+sky": 1.123
+      },
+      "renderer_new_ms": 75.6,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 10.842,
+        "p50": 10.613,
+        "p95": 12.258
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.663,
+        "p50": 0.652,
+        "p95": 0.806
+      },
+      "device_ms": 1059.2,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1752.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.719,
+        "p50": 7.704,
+        "p95": 8.405
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.582,
+        "lights": 0.005,
+        "opaque+sky": 6.132
+      },
+      "renderer_new_ms": 76.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.352,
+        "p50": 9.343,
+        "p95": 10.172
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.611,
+        "p50": 0.61,
+        "p95": 0.785
+      },
+      "device_ms": 1077.9,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1391.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.413,
+        "p50": 7.402,
+        "p95": 7.908
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.52,
+        "lights": 0.004,
+        "opaque+sky": 5.889
+      },
+      "renderer_new_ms": 70.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.922,
+        "p50": 8.912,
+        "p95": 9.625
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.706,
+        "p50": 0.7,
+        "p95": 0.863
+      },
+      "device_ms": 1053.0,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1393.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 8.342,
+        "p50": 8.328,
+        "p95": 8.696
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.522,
+        "cull late": 0.561,
+        "hi-z": 0.353,
+        "lights": 0.004,
+        "opaque early": 4.829,
+        "opaque+sky": 1.073
+      },
+      "renderer_new_ms": 71.7,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 10.08,
+        "p50": 10.019,
+        "p95": 10.74
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.561,
+        "p50": 0.561,
+        "p95": 0.737
+      },
+      "device_ms": 1053.1,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1395.0,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.167,
+        "p50": 7.098,
+        "p95": 7.635
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.51,
+        "cull late": 0.599,
+        "hi-z": 0.511,
+        "lights": 0.004,
+        "opaque early": 4.524,
+        "opaque+sky": 5.597
+      },
+      "renderer_new_ms": 71.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.555,
+        "p50": 8.49,
+        "p95": 9.364
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.591,
+        "p50": 0.605,
+        "p95": 0.73
+      },
+      "device_ms": 390.0,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1380.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.222,
+        "p50": 7.155,
+        "p95": 7.626
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.503,
+        "cull late": 0.605,
+        "hi-z": 0.53,
+        "lights": 0.003,
+        "opaque early": 4.772,
+        "opaque+sky": 5.657
+      },
+      "renderer_new_ms": 69.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.655,
+        "p50": 8.6,
+        "p95": 9.357
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.699,
+        "p50": 0.702,
+        "p95": 0.836
+      },
+      "device_ms": 415.3,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1512.8,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 8.409,
+        "p50": 8.395,
+        "p95": 8.726
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.515,
+        "cull late": 0.556,
+        "hi-z": 0.391,
+        "lights": 0.004,
+        "opaque early": 4.878,
+        "opaque+sky": 1.064
+      },
+      "renderer_new_ms": 71.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 10.101,
+        "p50": 10.085,
+        "p95": 10.687
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.569,
+        "p50": 0.58,
+        "p95": 0.753
+      },
+      "device_ms": 1070.9,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1358.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.349,
+        "p50": 7.264,
+        "p95": 8.099
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.517,
+        "lights": 0.004,
+        "opaque+sky": 5.827
+      },
+      "renderer_new_ms": 72.3,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.761,
+        "p50": 8.726,
+        "p95": 9.572
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.622,
+        "p50": 0.608,
+        "p95": 0.791
+      },
+      "device_ms": 404.5,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1410.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.373,
+        "p50": 7.333,
+        "p95": 7.764
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.523,
+        "lights": 0.004,
+        "opaque+sky": 5.846
+      },
+      "renderer_new_ms": 69.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.872,
+        "p50": 8.835,
+        "p95": 9.574
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.714,
+        "p50": 0.707,
+        "p95": 0.873
+      },
+      "device_ms": 1037.1,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1462.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 8.186,
+        "p50": 8.174,
+        "p95": 8.517
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.518,
+        "cull late": 0.556,
+        "hi-z": 0.346,
+        "lights": 0.004,
+        "opaque early": 4.698,
+        "opaque+sky": 1.064
+      },
+      "renderer_new_ms": 77.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.918,
+        "p50": 9.893,
+        "p95": 10.756
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.625,
+        "p50": 0.613,
+        "p95": 0.756
+      },
+      "device_ms": 1041.7,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1399.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.302,
+        "p50": 7.265,
+        "p95": 7.808
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.51,
+        "cull late": 0.604,
+        "hi-z": 0.533,
+        "lights": 0.004,
+        "opaque early": 4.615,
+        "opaque+sky": 5.731
+      },
+      "renderer_new_ms": 71.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.827,
+        "p50": 8.748,
+        "p95": 9.52
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.586,
+        "p50": 0.587,
+        "p95": 0.725
+      },
+      "device_ms": 405.8,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1467.2,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.308,
+        "p50": 7.284,
+        "p95": 7.789
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.511,
+        "cull late": 0.61,
+        "hi-z": 0.52,
+        "lights": 0.004,
+        "opaque early": 4.668,
+        "opaque+sky": 5.735
+      },
+      "renderer_new_ms": 69.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.693,
+        "p50": 8.655,
+        "p95": 9.374
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "vulkan:780m",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.692,
+        "p50": 0.689,
+        "p95": 0.838
+      },
+      "device_ms": 1053.7,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1460.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 8.235,
+        "p50": 8.219,
+        "p95": 8.609
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.513,
+        "cull late": 0.556,
+        "hi-z": 0.393,
+        "lights": 0.004,
+        "opaque early": 4.711,
+        "opaque+sky": 1.058
+      },
+      "renderer_new_ms": 71.1,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.905,
+        "p50": 9.865,
+        "p95": 10.481
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "vulkan:780m",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Vulkan",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.585,
+        "p50": 0.595,
+        "p95": 0.785
+      },
+      "device_ms": 402.7,
+      "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+      "first_frame_ms": 1493.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.244,
+        "p50": 7.217,
+        "p95": 7.566
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.509,
+        "lights": 0.005,
+        "opaque+sky": 5.73
+      },
+      "renderer_new_ms": 72.3,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.647,
+        "p50": 8.576,
+        "p95": 9.234
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "vulkan:780m",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.043,
+        "p50": 1.063,
+        "p95": 1.27
+      },
+      "device_ms": 1194.4,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1478.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.399,
+        "p50": 6.366,
+        "p95": 6.686
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.555,
+        "lights": 0.006,
+        "opaque+sky": 4.838
+      },
+      "renderer_new_ms": 223.7,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.361,
+        "p50": 8.338,
+        "p95": 8.912
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.018,
+        "p50": 1.007,
+        "p95": 1.247
+      },
+      "device_ms": 1264.1,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1480.0,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.539,
+        "p50": 7.5,
+        "p95": 7.947
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.523,
+        "cull late": 0.554,
+        "hi-z": 0.379,
+        "lights": 0.008,
+        "opaque early": 4.783,
+        "opaque+sky": 0.291
+      },
+      "renderer_new_ms": 219.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.452,
+        "p50": 9.395,
+        "p95": 10.134
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.966,
+        "p50": 0.967,
+        "p95": 1.266
+      },
+      "device_ms": 1166.5,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1447.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.437,
+        "p50": 6.327,
+        "p95": 7.219
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.57,
+        "cull late": 0.55,
+        "hi-z": 0.343,
+        "lights": 0.006,
+        "opaque early": 3.953,
+        "opaque+sky": 4.813
+      },
+      "renderer_new_ms": 214.7,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.333,
+        "p50": 8.272,
+        "p95": 9.4
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 0,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.963,
+        "p50": 0.957,
+        "p95": 1.234
+      },
+      "device_ms": 1171.7,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1516.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.483,
+        "p50": 6.456,
+        "p95": 6.774
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.535,
+        "cull late": 0.537,
+        "hi-z": 0.388,
+        "lights": 0.006,
+        "opaque early": 4.064,
+        "opaque+sky": 4.892
+      },
+      "renderer_new_ms": 215.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.303,
+        "p50": 8.303,
+        "p95": 8.746
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.017,
+        "p50": 1.005,
+        "p95": 1.259
+      },
+      "device_ms": 1152.1,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1482.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.336,
+        "p50": 7.31,
+        "p95": 7.698
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.528,
+        "cull late": 0.544,
+        "hi-z": 0.455,
+        "lights": 0.006,
+        "opaque early": 4.512,
+        "opaque+sky": 0.291
+      },
+      "renderer_new_ms": 212.3,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.299,
+        "p50": 9.268,
+        "p95": 10.147
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.003,
+        "p50": 1.026,
+        "p95": 1.179
+      },
+      "device_ms": 1178.5,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1473.6,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.464,
+        "p50": 6.429,
+        "p95": 6.788
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.543,
+        "lights": 0.006,
+        "opaque+sky": 4.916
+      },
+      "renderer_new_ms": 210.9,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.37,
+        "p50": 8.347,
+        "p95": 8.9
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 1,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.008,
+        "p50": 1.025,
+        "p95": 1.229
+      },
+      "device_ms": 1265.0,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1455.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.382,
+        "p50": 6.368,
+        "p95": 6.688
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.555,
+        "lights": 0.006,
+        "opaque+sky": 4.821
+      },
+      "renderer_new_ms": 216.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.327,
+        "p50": 8.345,
+        "p95": 8.929
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.985,
+        "p50": 0.97,
+        "p95": 1.209
+      },
+      "device_ms": 1172.7,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1462.0,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.194,
+        "p50": 7.182,
+        "p95": 7.508
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.523,
+        "cull late": 0.544,
+        "hi-z": 0.365,
+        "lights": 0.006,
+        "opaque early": 4.467,
+        "opaque+sky": 0.291
+      },
+      "renderer_new_ms": 206.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.044,
+        "p50": 9.014,
+        "p95": 9.715
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.901,
+        "p50": 0.925,
+        "p95": 1.163
+      },
+      "device_ms": 1153.7,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1462.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.453,
+        "p50": 6.403,
+        "p95": 6.814
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.522,
+        "cull late": 0.537,
+        "hi-z": 0.424,
+        "lights": 0.006,
+        "opaque early": 4.038,
+        "opaque+sky": 4.875
+      },
+      "renderer_new_ms": 207.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.238,
+        "p50": 8.247,
+        "p95": 8.849
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 2,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.871,
+        "p50": 0.865,
+        "p95": 1.093
+      },
+      "device_ms": 1164.3,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1456.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.606,
+        "p50": 6.548,
+        "p95": 6.84
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.525,
+        "cull late": 0.535,
+        "hi-z": 0.395,
+        "lights": 0.006,
+        "opaque early": 4.107,
+        "opaque+sky": 5.024
+      },
+      "renderer_new_ms": 222.8,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.265,
+        "p50": 8.225,
+        "p95": 8.709
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.045,
+        "p50": 1.038,
+        "p95": 1.329
+      },
+      "device_ms": 1156.3,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1538.4,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.488,
+        "p50": 7.47,
+        "p95": 7.873
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.545,
+        "cull late": 0.551,
+        "hi-z": 0.542,
+        "lights": 0.006,
+        "opaque early": 4.549,
+        "opaque+sky": 0.295
+      },
+      "renderer_new_ms": 225.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.426,
+        "p50": 9.354,
+        "p95": 10.138
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.016,
+        "p50": 1.028,
+        "p95": 1.205
+      },
+      "device_ms": 1198.9,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1425.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.458,
+        "p50": 6.405,
+        "p95": 6.836
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.541,
+        "lights": 0.006,
+        "opaque+sky": 4.911
+      },
+      "renderer_new_ms": 216.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.363,
+        "p50": 8.332,
+        "p95": 8.98
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 3,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 0.954,
+        "p50": 0.969,
+        "p95": 1.185
+      },
+      "device_ms": 1180.0,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1449.5,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.461,
+        "p50": 6.434,
+        "p95": 6.933
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.545,
+        "lights": 0.006,
+        "opaque+sky": 4.909
+      },
+      "renderer_new_ms": 210.2,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.28,
+        "p50": 8.298,
+        "p95": 8.865
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.022,
+        "p50": 1.023,
+        "p95": 1.23
+      },
+      "device_ms": 1162.6,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1449.7,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.345,
+        "p50": 7.306,
+        "p95": 7.709
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.543,
+        "cull late": 0.554,
+        "hi-z": 0.514,
+        "lights": 0.006,
+        "opaque early": 4.434,
+        "opaque+sky": 0.294
+      },
+      "renderer_new_ms": 224.0,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.217,
+        "p50": 9.175,
+        "p95": 10.013
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.006,
+        "p50": 1.059,
+        "p95": 1.27
+      },
+      "device_ms": 1206.9,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1445.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.393,
+        "p50": 6.388,
+        "p95": 6.656
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.558,
+        "cull late": 0.533,
+        "hi-z": 0.363,
+        "lights": 0.006,
+        "opaque early": 4.081,
+        "opaque+sky": 4.779
+      },
+      "renderer_new_ms": 224.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.292,
+        "p50": 8.325,
+        "p95": 8.84
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 4,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.043,
+        "p50": 1.098,
+        "p95": 1.263
+      },
+      "device_ms": 1187.1,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1500.1,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.322,
+        "p50": 6.313,
+        "p95": 6.594
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "auto-off": 198,
+        "auto-on": 2
+      },
+      "occlusion_last": {
+        "early": 187052,
+        "frustum": 187501,
+        "frustum_triangles": 2250012,
+        "late": 449,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "auto",
+      "passes_ms": {
+        "cull": 1.539,
+        "cull late": 0.539,
+        "hi-z": 0.344,
+        "lights": 0.007,
+        "opaque early": 4.03,
+        "opaque+sky": 4.727
+      },
+      "renderer_new_ms": 207.7,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.327,
+        "p50": 8.343,
+        "p95": 8.856
+      },
+      "layout": "sphere",
+      "mode": "auto",
+      "config": "dx12:780m",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.014,
+        "p50": 0.998,
+        "p95": 1.301
+      },
+      "device_ms": 1157.7,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1474.3,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 7.265,
+        "p50": 7.223,
+        "p95": 7.663
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "on": 200
+      },
+      "occlusion_last": {
+        "early": 187051,
+        "frustum": 187511,
+        "frustum_triangles": 2250132,
+        "late": 460,
+        "occluded": 0,
+        "occluded_triangles": 0
+      },
+      "occlusion_mode": "on",
+      "passes_ms": {
+        "cull": 1.531,
+        "cull late": 0.545,
+        "hi-z": 0.358,
+        "lights": 0.006,
+        "opaque early": 4.532,
+        "opaque+sky": 0.292
+      },
+      "renderer_new_ms": 215.5,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 9.131,
+        "p50": 9.046,
+        "p95": 9.816
+      },
+      "layout": "sphere",
+      "mode": "on",
+      "config": "dx12:780m",
+      "repeat": 5,
+      "count": 1600000
+    },
+    {
+      "adapter": "AMD Radeon 780M Graphics",
+      "antialiasing": "msaa",
+      "backend": "Direct3D 12",
+      "bench": "many_cubes sphere",
+      "cpu_encode_ms": {
+        "mean": 1.052,
+        "p50": 1.074,
+        "p95": 1.209
+      },
+      "device_ms": 1188.7,
+      "driver": "32.0.13062.3005 ",
+      "first_frame_ms": 1447.9,
+      "frames": 200,
+      "gpu_ms": {
+        "mean": 6.449,
+        "p50": 6.402,
+        "p95": 6.775
+      },
+      "gtao": "off",
+      "instances": 1600001,
+      "occluded_triangle_share": {
+        "mean": -0.0,
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "occlusion_frames": {
+        "off": 200
+      },
+      "occlusion_last": null,
+      "occlusion_mode": "off",
+      "passes_ms": {
+        "cull": 1.544,
+        "lights": 0.006,
+        "opaque+sky": 4.899
+      },
+      "renderer_new_ms": 208.4,
+      "rt_shadows": null,
+      "size": [
+        1280,
+        720
+      ],
+      "splats": 0,
+      "submit_to_idle_ms": {
+        "mean": 8.363,
+        "p50": 8.343,
+        "p95": 8.931
+      },
+      "layout": "sphere",
+      "mode": "off",
+      "config": "dx12:780m",
+      "repeat": 5,
+      "count": 1600000
+    }
+  ]
+}

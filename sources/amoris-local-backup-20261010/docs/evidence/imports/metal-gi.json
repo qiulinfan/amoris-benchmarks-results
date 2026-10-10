@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "recorded_utc": "2026-10-10T13:26:54.665936+00:00",
+  "source_snapshot": "9a3e4b0814959629202629845b85205c42086505",
+  "changed_paths": [
+    "crates/pocket-render/src/gi/rt.rs"
+  ],
+  "adapter": {
+    "name": "Apple M5",
+    "backend": "Metal",
+    "evidence": "unchanged ray_query_gpus helper printed the adapter in every test"
+  },
+  "fresh_processes": 3,
+  "tests_per_process": 2,
+  "total_passed": 6,
+  "total_failed": 0,
+  "tests": [
+    "gi::rt::tests::ray_query_cache_requires_history_and_resets",
+    "gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history"
+  ],
+  "logs": {
+    "gi-tests-1.log": {
+      "bytes": 319,
+      "last_modified_utc": "2026-10-10T13:25:20.267720+00:00"
+    },
+    "gi-tests-2.log": {
+      "bytes": 319,
+      "last_modified_utc": "2026-10-10T13:25:20.352752+00:00"
+    },
+    "gi-tests-3.log": {
+      "bytes": 319,
+      "last_modified_utc": "2026-10-10T13:25:20.438190+00:00"
+    }
+  },
+  "implementation": "Only Metal: BLAS-only submission and existing bounded completion wait, then TLAS-only submission. The original final wait remains. Vulkan and D3D12 keep the original combined build.",
+  "removal_condition": "A pinned wgpu-hal release correctly implements Metal acceleration-structure build ordering, with these strict correctness checks still passing.",
+  "unchanged": [
+    "shaders",
+    "test assertions",
+    "thresholds",
+    "registry",
+    "other backends"
+  ],
+  "gpu_slot_released": true
+}

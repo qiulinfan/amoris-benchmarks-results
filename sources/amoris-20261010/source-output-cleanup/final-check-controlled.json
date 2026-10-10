@@ -1,0 +1,970 @@
+{
+  "format": 1,
+  "command": "cargo xtask check --record --json",
+  "commit": "7bb578df5519+dirty",
+  "machine": {
+    "id": "other",
+    "cpu": "Apple M5",
+    "logical_cores": 10,
+    "gpus": [],
+    "os": "macos aarch64",
+    "on_ac_power": null,
+    "power_plan": null,
+    "chrome": null,
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "started_utc": "2026-10-10T16:08:14Z",
+  "duration_ms": 173153,
+  "verdict": "Pass",
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 465,
+      "summary": "19 workspace crates, 386 external packages, 2 targets",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [
+        {
+          "code": "deps.vendor_unchecked",
+          "message": "the pinned rquickjs-sys crate is not in cargo's cache, so the vendored QuickJS-ng is not compared; run python third_party/vendor.py --check once",
+          "detail": {
+            "tail": "not cached: rquickjs-sys-0.14.0.crate is not in <local-path>"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "name": "deps.crates",
+          "value": 19.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "deps.external",
+          "value": 386.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/deps.log"
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 819,
+      "summary": "formatted",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/fmt.log"
+    },
+    {
+      "name": "docs",
+      "verdict": "Pass",
+      "duration_ms": 100,
+      "summary": "70 Markdown files under docs/ (not docs/evidence/), 0 need wrapping",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "docs.files",
+          "value": 70.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/docs.log"
+    },
+    {
+      "name": "clippy",
+      "verdict": "Pass",
+      "duration_ms": 3945,
+      "summary": "diagnostics: 0 on aarch64-apple-darwin, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "clippy.fixture_reported",
+          "value": 82.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/clippy.log"
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 11303,
+      "summary": "native release build",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/build.log"
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 66,
+      "summary": "8 clippy.toml copies, 13 @generated files; the engine's generators (pocket gen) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "gen.outputs",
+          "value": 8.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "test",
+      "verdict": "Pass",
+      "duration_ms": 109454,
+      "summary": "685 passed, 0 failed, 0 ignored in 114 suites, ignored tests included",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "test.passed",
+          "value": 685.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.failed",
+          "value": 0.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.ignored",
+          "value": 0.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/test.log"
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 1005,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/wasm.log"
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 64,
+      "summary": "3 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/tsc",
+          "value": 21.0,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/tsc",
+          "value": 20.2,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state-lint/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 6335,
+      "summary": "2 projects; cross build against a debug pocket",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/ticks_compared",
+          "value": 3600.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/ticks_compared",
+          "value": 1800.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "cross_build_ticks_compared",
+          "value": 601.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/determinism-cross-build.log"
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 1281,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 1438,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/seed1.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 916,
+      "summary": "4 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/closure-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "log": null
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 35835,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "web.size.wasm",
+          "value": 11975.1904296875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz",
+          "value": 3590.677734375,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.glue",
+          "value": 15.857421875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.O3",
+          "value": 9512.033203125,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz.O3",
+          "value": 3332.1669921875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.page",
+          "value": 12017.4677734375,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile",
+          "value": 17.27,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page",
+          "value": 0.47,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready",
+          "value": 74.06,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created",
+          "value": 76.045,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready",
+          "value": 158.05,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot",
+          "value": 161.29,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate",
+          "value": 0.375,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build",
+          "value": 73.005,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.175,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.065,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.465,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.04,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.115,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 33,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.09,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 33,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 0.095,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 33,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 8.035,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 33,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile.O3",
+          "value": 12.68,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page.O3",
+          "value": 0.4,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready.O3",
+          "value": 49.67,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created.O3",
+          "value": 51.73,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready.O3",
+          "value": 126.76,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot.O3",
+          "value": 129.89,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate.O3",
+          "value": 0.335,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build.O3",
+          "value": 64.335,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.14,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.085,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.4,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.035,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.085,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.095,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 0.145,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 8.05,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/web.log"
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "log": null
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "url": "<local-endpoint>",
+  "stats": {
+    "url": "<local-endpoint>",
+    "frames": 300,
+    "frame_ms_mean": 1.427444444444443,
+    "frame_ms_p50": 1.3091666666666697,
+    "frame_ms_p95": 1.6966666666666697,
+    "gpu_ms_mean": 0.03221000000000002,
+    "render_ms_mean": 0.6456666670242945,
+    "backend": "WebGPU",
+    "passes": [
+      {
+        "pass": "cull",
+        "ms": 0.006
+      },
+      {
+        "pass": "lights",
+        "ms": 0.002
+      },
+      {
+        "pass": "shadows",
+        "ms": 0.01
+      },
+      {
+        "pass": "opaque+sky",
+        "ms": 0.014
+      }
+    ],
+    "draw_path": "baseline",
+    "draw_calls": 55,
+    "instances": 65,
+    "canvas": [
+      934,
+      384
+    ],
+    "gpu": "yes"
+  },
+  "id_pass": {
+    "adapter": "nvidia blackwell",
+    "draw_path": "baseline",
+    "draw_calls": 55,
+    "readback_ms": 572,
+    "entities": 6,
+    "coverage": [
+      [
+        2,
+        0.00042
+      ],
+      [
+        13,
+        0.00046
+      ],
+      [
+        24,
+        0.00057
+      ],
+      [
+        35,
+        0.00089
+      ],
+      [
+        46,
+        0.00107
+      ],
+      [
+        57,
+        0.00143
+      ]
+    ]
+  },
+  "logs": [
+    "[log] [pocket INFO] limits: buffer 2048 MB, storage binding 2047 MB, storage buffers/stage 16, texture 2D 16384",
+    "[log] [pocket INFO] GPU:  (BrowserWebGpu, Other); features Capabilities { indirect_first_instance: false, multi_draw_indirect: false, timestamps: true, shader_f16: true, float32_filterable: true }"
+  ]
+}

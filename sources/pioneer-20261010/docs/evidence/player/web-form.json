@@ -1,0 +1,25 @@
+{
+  "what": "The web form (web/form.js) in headless Chrome 155 (render=2d), driven with tools/web_bench.mjs EVAL: the helm's sliders moved, then the world read as the page's developer and called as the local player. Built with SKIP_VIEWPORT=1 tools/build_web.sh samples/sailing-course (and the pack example for samples/sailing), served with python -m http.server -d web.",
+  "date": "2026-10-09",
+  "samples/sailing-course (declares players)": {
+    "url": "/?package=projects/samples-sailing-course/package.json&render=2d",
+    "player.session as the player": {
+      "role": "player",
+      "seat": "skipper"
+    },
+    "tick when read": 330,
+    "Boat.rudder before / after the rudder slider at 0.6 (sent as player.act set)": [
+      0,
+      0.6
+    ],
+    "Boat.sheet after the sheet slider at 0.3": 0.3,
+    "world_edit as the player": "permission.denied",
+    "world.get Crate4 as the player": "permission.denied"
+  },
+  "samples/sailing (no players)": {
+    "url": "/?package=projects/samples-sailing/package.json&render=2d",
+    "player.session as the player": "player.not_declared",
+    "Boat.rudder after the rudder slider at 0.6 (sent as world_edit)": 0.6,
+    "world.get as the player": "answered"
+  }
+}

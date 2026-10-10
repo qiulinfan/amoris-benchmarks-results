@@ -1,0 +1,2852 @@
+{
+  "suite": "timing",
+  "rounds": 5,
+  "adapter_filter": "5060",
+  "provisional": "quiet machine 2026-10-09 (no other agent; conditions in docs/evidence/quiet/conditions-*.json)",
+  "summary": {
+    "pt-closest-blocking/vulkan": {
+      "gpu_ms_median": 0.31503366666666666,
+      "gpu_ms_min": 0.31372133333333335,
+      "gpu_ms_max": 0.318758,
+      "trace_wall_ms_median": 77.00319999999999,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_trace_ms_median": 0.31503366666666666,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-closest-blocking/dx12": {
+      "gpu_ms_median": 0.37595566666666663,
+      "gpu_ms_min": 0.3724066666666666,
+      "gpu_ms_max": 0.4073056666666666,
+      "trace_wall_ms_median": 96.6627,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_trace_ms_median": 0.37595566666666663,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-closest-queued/vulkan": {
+      "gpu_ms_median": 0.31450633333333333,
+      "gpu_ms_min": 0.31430433333333335,
+      "gpu_ms_max": 0.31915899999999997,
+      "trace_wall_ms_median": 44.4174,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_trace_ms_median": 0.31450633333333333,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-closest-queued/dx12": {
+      "gpu_ms_median": 0.40539499999999995,
+      "gpu_ms_min": 0.38821100000000003,
+      "gpu_ms_max": 0.412199,
+      "trace_wall_ms_median": 56.239900000000006,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_trace_ms_median": 0.40539499999999995,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-any-queued/vulkan": {
+      "gpu_ms_median": 0.30733099999999997,
+      "gpu_ms_min": 0.30676333333333333,
+      "gpu_ms_max": 0.31297366666666665,
+      "trace_wall_ms_median": 43.7772,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_trace_ms_median": 0.30733099999999997,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-any-queued/dx12": {
+      "gpu_ms_median": 0.4020053333333333,
+      "gpu_ms_min": 0.39629200000000003,
+      "gpu_ms_max": 0.40307333333333334,
+      "trace_wall_ms_median": 55.4354,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_trace_ms_median": 0.4020053333333333,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-any-wg128/vulkan": {
+      "gpu_ms_median": 0.324551,
+      "gpu_ms_min": 0.324138,
+      "gpu_ms_max": 0.3298193333333333,
+      "trace_wall_ms_median": 45.7577,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_trace_ms_median": 0.324551,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-any-wg128/dx12": {
+      "gpu_ms_median": 0.4264746666666666,
+      "gpu_ms_min": 0.4006256666666666,
+      "gpu_ms_max": 0.426882,
+      "trace_wall_ms_median": 58.4787,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_trace_ms_median": 0.4264746666666666,
+      "gpu_training_ms_median": 0.0
+    },
+    "sharc-raw/vulkan": {
+      "gpu_ms_median": 0.13235449999999999,
+      "gpu_ms_min": 0.13227049999999999,
+      "gpu_ms_max": 0.1324275,
+      "trace_wall_ms_median": 34.7847,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ]
+    },
+    "sharc-raw/dx12": {
+      "gpu_ms_median": 0.1442695,
+      "gpu_ms_min": 0.134941,
+      "gpu_ms_max": 0.144336,
+      "trace_wall_ms_median": 45.7879,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ]
+    },
+    "sharc-cached/vulkan": {
+      "gpu_ms_median": 0.1391385,
+      "gpu_ms_min": 0.139037,
+      "gpu_ms_max": 0.139345,
+      "trace_wall_ms_median": 42.3233,
+      "mean_rgb": [
+        0.30064957379890167,
+        0.2752443925922627,
+        0.19160725402516646
+      ]
+    },
+    "sharc-cached/dx12": {
+      "gpu_ms_median": 0.15913049999999998,
+      "gpu_ms_min": 0.15897799999999998,
+      "gpu_ms_max": 0.17361,
+      "trace_wall_ms_median": 59.2114,
+      "mean_rgb": [
+        0.3010992678428355,
+        0.27558058196341556,
+        0.191901259779071
+      ]
+    },
+    "nrc-pt/vulkan": {
+      "gpu_ms_median": 0.11735599999999999,
+      "gpu_ms_min": 0.1172295,
+      "gpu_ms_max": 0.11996799999999999,
+      "trace_wall_ms_median": 73.1751,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_trace_ms_median": 0.11735599999999999,
+      "gpu_training_ms_median": 0.0
+    },
+    "nrc-pt/dx12": {
+      "gpu_ms_median": 0.1416555,
+      "gpu_ms_min": 0.12818749999999998,
+      "gpu_ms_max": 0.141751,
+      "trace_wall_ms_median": 84.2371,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_trace_ms_median": 0.1416555,
+      "gpu_training_ms_median": 0.0
+    },
+    "nrc/vulkan": {
+      "gpu_ms_median": 0.36609349999999996,
+      "gpu_ms_min": 0.365042,
+      "gpu_ms_max": 0.39926,
+      "trace_wall_ms_median": 209.7931,
+      "mean_rgb": [
+        0.3886951816898545,
+        0.3575555959020562,
+        0.2543959160410054
+      ],
+      "gpu_trace_ms_median": 0.180969,
+      "gpu_training_ms_median": 0.1852315
+    },
+    "nrc/dx12": {
+      "gpu_ms_median": 0.873836,
+      "gpu_ms_min": 0.8735959999999999,
+      "gpu_ms_max": 0.874039,
+      "trace_wall_ms_median": 440.9299,
+      "mean_rgb": [
+        0.38869630908982344,
+        0.35755303549922246,
+        0.2543896946426685
+      ],
+      "gpu_trace_ms_median": 0.493834,
+      "gpu_training_ms_median": 0.38008349999999996
+    },
+    "pt-closest-queued-lean/vulkan": {
+      "gpu_ms_median": 0.24457700000000002,
+      "gpu_ms_min": 0.24422533333333332,
+      "gpu_ms_max": 0.24760799999999997,
+      "trace_wall_ms_median": 35.355900000000005,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_trace_ms_median": 0.24457700000000002,
+      "gpu_training_ms_median": 0.0
+    },
+    "pt-closest-queued-lean/dx12": {
+      "gpu_ms_median": 0.31596033333333334,
+      "gpu_ms_min": 0.29507,
+      "gpu_ms_max": 0.31699266666666664,
+      "trace_wall_ms_median": 44.5674,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_trace_ms_median": 0.31596033333333334,
+      "gpu_training_ms_median": 0.0
+    },
+    "sharc-raw-lean/vulkan": {
+      "gpu_ms_median": 0.089789,
+      "gpu_ms_min": 0.08975949999999999,
+      "gpu_ms_max": 0.08986999999999999,
+      "trace_wall_ms_median": 30.3899,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ]
+    },
+    "sharc-raw-lean/dx12": {
+      "gpu_ms_median": 0.09967799999999999,
+      "gpu_ms_min": 0.0953565,
+      "gpu_ms_max": 0.1045255,
+      "trace_wall_ms_median": 40.4805,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ]
+    },
+    "sharc-cached-lean/vulkan": {
+      "gpu_ms_median": 0.105686,
+      "gpu_ms_min": 0.105486,
+      "gpu_ms_max": 0.1057925,
+      "trace_wall_ms_median": 35.5856,
+      "mean_rgb": [
+        0.3006580561983535,
+        0.2752447189891542,
+        0.19161265449535467
+      ]
+    },
+    "sharc-cached-lean/dx12": {
+      "gpu_ms_median": 0.14269099999999998,
+      "gpu_ms_min": 0.14245049999999998,
+      "gpu_ms_max": 0.142817,
+      "trace_wall_ms_median": 52.0731,
+      "mean_rgb": [
+        0.30112912686995325,
+        0.2756259159203237,
+        0.19191488507612733
+      ]
+    },
+    "nrc-pt-lean/vulkan": {
+      "gpu_ms_median": 0.0802435,
+      "gpu_ms_min": 0.0800145,
+      "gpu_ms_max": 0.08032199999999999,
+      "trace_wall_ms_median": 53.114599999999996,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_trace_ms_median": 0.0802435,
+      "gpu_training_ms_median": 0.0
+    },
+    "nrc-pt-lean/dx12": {
+      "gpu_ms_median": 0.1239535,
+      "gpu_ms_min": 0.12319949999999999,
+      "gpu_ms_max": 0.1245235,
+      "trace_wall_ms_median": 80.97749999999999,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_trace_ms_median": 0.1239535,
+      "gpu_training_ms_median": 0.0
+    },
+    "nrc-lean/vulkan": {
+      "gpu_ms_median": 0.190601,
+      "gpu_ms_min": 0.19037149999999997,
+      "gpu_ms_max": 0.19108399999999998,
+      "trace_wall_ms_median": 114.9491,
+      "mean_rgb": [
+        0.38869518173481765,
+        0.3575555960116503,
+        0.25439591604038014
+      ],
+      "gpu_trace_ms_median": 0.11543199999999999,
+      "gpu_training_ms_median": 0.0753305
+    },
+    "nrc-lean/dx12": {
+      "gpu_ms_median": 0.178323,
+      "gpu_ms_min": 0.177318,
+      "gpu_ms_max": 0.17858649999999998,
+      "trace_wall_ms_median": 111.7888,
+      "mean_rgb": [
+        0.38869630938125965,
+        0.3575530355254841,
+        0.2543896947110227
+      ],
+      "gpu_trace_ms_median": 0.1176735,
+      "gpu_training_ms_median": 0.060676999999999995
+    }
+  },
+  "runs": [
+    {
+      "gpu_trace_ms": 0.31372133333333335,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 75.6878,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31372133333333335,
+      "name": "pt-closest-blocking",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4073056666666666,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 99.19890000000001,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.4073056666666666,
+      "name": "pt-closest-blocking",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31874766666666665,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.7174,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31874766666666665,
+      "name": "pt-closest-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.40539499999999995,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 56.239900000000006,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.40539499999999995,
+      "name": "pt-closest-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31297366666666665,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.4002,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31297366666666665,
+      "name": "pt-any-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4020053333333333,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 55.4777,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.4020053333333333,
+      "name": "pt-any-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.324551,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.7577,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.324551,
+      "name": "pt-any-wg128",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4264746666666666,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 58.6527,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.4264746666666666,
+      "name": "pt-any-wg128",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.13235449999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 34.7786,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1433045,
+      "rays_per_frame": 360042.71875,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 45.7879,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.139068,
+      "rays_per_frame": 186900.609375,
+      "cache_hits_per_frame": 41685.640625,
+      "trace_wall_ms": 42.3233,
+      "mean_rgb": [
+        0.30064957379890167,
+        0.2752443925922627,
+        0.19160725402516646
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1589875,
+      "rays_per_frame": 186898.71875,
+      "cache_hits_per_frame": 41683.9375,
+      "trace_wall_ms": 59.2114,
+      "mean_rgb": [
+        0.3010992678428355,
+        0.27558058196341556,
+        0.191901259779071
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.117463,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 73.0244,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.117463,
+      "name": "nrc-pt",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.141751,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 86.8627,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.141751,
+      "name": "nrc-pt",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1940945,
+      "gpu_training_ms": 0.2051655,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 222.7212,
+      "mean_rgb": [
+        0.3886951816898545,
+        0.3575555959020562,
+        0.2543959160410054
+      ],
+      "gpu_total_ms": 0.39926,
+      "name": "nrc",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.49368549999999994,
+      "gpu_training_ms": 0.3799105,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 440.9299,
+      "mean_rgb": [
+        0.38869630908982344,
+        0.35755303549922246,
+        0.2543896946426685
+      ],
+      "gpu_total_ms": 0.8735959999999999,
+      "name": "nrc",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.244731,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 35.2592,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.244731,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31596033333333334,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.572100000000006,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.31596033333333334,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.08986999999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 30.552300000000002,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.09598949999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 39.7586,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1057925,
+      "rays_per_frame": 186898.953125,
+      "cache_hits_per_frame": 41685.640625,
+      "trace_wall_ms": 36.9308,
+      "mean_rgb": [
+        0.3006580561983535,
+        0.2752447189891542,
+        0.19161265449535467
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.14269099999999998,
+      "rays_per_frame": 186900.546875,
+      "cache_hits_per_frame": 41683.984375,
+      "trace_wall_ms": 53.9493,
+      "mean_rgb": [
+        0.30112912686995325,
+        0.2756259159203237,
+        0.19191488507612733
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.08029549999999999,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 53.114599999999996,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.08029549999999999,
+      "name": "nrc-pt-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.123886,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 81.20429999999999,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.123886,
+      "name": "nrc-pt-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.11543199999999999,
+      "gpu_training_ms": 0.075169,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 114.6933,
+      "mean_rgb": [
+        0.38869518173481765,
+        0.3575555960116503,
+        0.25439591604038014
+      ],
+      "gpu_total_ms": 0.190601,
+      "name": "nrc-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.117731,
+      "gpu_training_ms": 0.060781499999999995,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 109.4976,
+      "mean_rgb": [
+        0.38869630938125965,
+        0.3575530355254841,
+        0.2543896947110227
+      ],
+      "gpu_total_ms": 0.1785125,
+      "name": "nrc-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 0,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1176735,
+      "gpu_training_ms": 0.060912999999999995,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 110.9799,
+      "mean_rgb": [
+        0.3886963093103759,
+        0.3575530353979275,
+        0.2543896946952202
+      ],
+      "gpu_total_ms": 0.17858649999999998,
+      "name": "nrc-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.115683,
+      "gpu_training_ms": 0.075401,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 114.7098,
+      "mean_rgb": [
+        0.3886951816509736,
+        0.3575555960425163,
+        0.25439591609051604
+      ],
+      "gpu_total_ms": 0.19108399999999998,
+      "name": "nrc-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.12319949999999999,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 80.97749999999999,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.12319949999999999,
+      "name": "nrc-pt-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.0802435,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 53.351099999999995,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.0802435,
+      "name": "nrc-pt-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.14245049999999998,
+      "rays_per_frame": 186900.546875,
+      "cache_hits_per_frame": 41683.984375,
+      "trace_wall_ms": 52.631,
+      "mean_rgb": [
+        0.30111947403327977,
+        0.27562071447153846,
+        0.19191412246595702
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.105679,
+      "rays_per_frame": 186899.15625,
+      "cache_hits_per_frame": 41685.59375,
+      "trace_wall_ms": 35.5274,
+      "mean_rgb": [
+        0.30065311850814674,
+        0.27524708447084373,
+        0.19161297312145442
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.0953565,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 39.4229,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.0897845,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 29.4359,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.29507,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 42.602599999999995,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.29507,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.24457700000000002,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 35.243700000000004,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.24457700000000002,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.493834,
+      "gpu_training_ms": 0.3799355,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 446.97520000000003,
+      "mean_rgb": [
+        0.38869630909954367,
+        0.35755303531738036,
+        0.25438969473611905
+      ],
+      "gpu_total_ms": 0.8737695,
+      "name": "nrc",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.180969,
+      "gpu_training_ms": 0.18464899999999998,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 209.7931,
+      "mean_rgb": [
+        0.3886969509210303,
+        0.35755376752814527,
+        0.2543901621559712
+      ],
+      "gpu_total_ms": 0.365618,
+      "name": "nrc",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.128377,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 83.7593,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.128377,
+      "name": "nrc-pt",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.11996799999999999,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 79.1159,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.11996799999999999,
+      "name": "nrc-pt",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.15897799999999998,
+      "rays_per_frame": 186900.125,
+      "cache_hits_per_frame": 41683.953125,
+      "trace_wall_ms": 61.059599999999996,
+      "mean_rgb": [
+        0.3010845655564894,
+        0.2755803621559954,
+        0.19189507489404772
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1391385,
+      "rays_per_frame": 186898.640625,
+      "cache_hits_per_frame": 41685.734375,
+      "trace_wall_ms": 42.5483,
+      "mean_rgb": [
+        0.3006605490084134,
+        0.27525636361866357,
+        0.19161677536615968
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1442695,
+      "rays_per_frame": 360042.71875,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 48.222500000000004,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1324275,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 35.3497,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.42661066666666664,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 58.4787,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.42661066666666664,
+      "name": "pt-any-wg128",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3298193333333333,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 47.554100000000005,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.3298193333333333,
+      "name": "pt-any-wg128",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.39629200000000003,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 54.6174,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.39629200000000003,
+      "name": "pt-any-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.30676333333333333,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 43.5435,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.30676333333333333,
+      "name": "pt-any-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.38821100000000003,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 54.6259,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.38821100000000003,
+      "name": "pt-closest-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31434366666666663,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.3537,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31434366666666663,
+      "name": "pt-closest-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3724066666666666,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 92.4088,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.3724066666666666,
+      "name": "pt-closest-blocking",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31503366666666666,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 76.3728,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31503366666666666,
+      "name": "pt-closest-blocking",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 1,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.315102,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 77.00319999999999,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.315102,
+      "name": "pt-closest-blocking",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.37595566666666663,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 95.8942,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.37595566666666663,
+      "name": "pt-closest-blocking",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31430433333333335,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.3863,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31430433333333335,
+      "name": "pt-closest-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.41193933333333327,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 56.8241,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.41193933333333327,
+      "name": "pt-closest-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.30733099999999997,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 43.7772,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.30733099999999997,
+      "name": "pt-any-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3973386666666667,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 55.410000000000004,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.3973386666666667,
+      "name": "pt-any-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3249316666666667,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.737,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.3249316666666667,
+      "name": "pt-any-wg128",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.40782433333333334,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 56.5163,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.40782433333333334,
+      "name": "pt-any-wg128",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.13232549999999998,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 33.942800000000005,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.134941,
+      "rays_per_frame": 360042.71875,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 45.0459,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.13930299999999998,
+      "rays_per_frame": 186898.953125,
+      "cache_hits_per_frame": 41685.640625,
+      "trace_wall_ms": 41.5696,
+      "mean_rgb": [
+        0.300647189328474,
+        0.27525830832501397,
+        0.1916155315308905
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.15913049999999998,
+      "rays_per_frame": 186898.921875,
+      "cache_hits_per_frame": 41683.9375,
+      "trace_wall_ms": 55.1864,
+      "mean_rgb": [
+        0.30112406783770845,
+        0.27559944167481565,
+        0.19190497214504165
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1172295,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 73.2668,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.1172295,
+      "name": "nrc-pt",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1416555,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 86.3394,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.1416555,
+      "name": "nrc-pt",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.18109799999999998,
+      "gpu_training_ms": 0.185266,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 202.1066,
+      "mean_rgb": [
+        0.38869518167263095,
+        0.35755559600056586,
+        0.25439591602719247
+      ],
+      "gpu_total_ms": 0.36636399999999997,
+      "name": "nrc",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4938545,
+      "gpu_training_ms": 0.3801845,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 446.8194,
+      "mean_rgb": [
+        0.38869630936892463,
+        0.35755303531226446,
+        0.2543896947534563
+      ],
+      "gpu_total_ms": 0.874039,
+      "name": "nrc",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.24455666666666664,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 35.499,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.24455666666666664,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.30471733333333334,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 43.725100000000005,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.30471733333333334,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.0897905,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 30.3899,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1045255,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 40.706399999999995,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.105709,
+      "rays_per_frame": 186898.71875,
+      "cache_hits_per_frame": 41685.609375,
+      "trace_wall_ms": 35.5856,
+      "mean_rgb": [
+        0.30066388473146594,
+        0.2752433282656524,
+        0.1916116177760888
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.142817,
+      "rays_per_frame": 186900.546875,
+      "cache_hits_per_frame": 41683.9375,
+      "trace_wall_ms": 51.598,
+      "mean_rgb": [
+        0.30111207524689687,
+        0.2755933511517344,
+        0.19190478920129006
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.0800145,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 53.3649,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.0800145,
+      "name": "nrc-pt-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.123956,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 79.8264,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.123956,
+      "name": "nrc-pt-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.11502699999999999,
+      "gpu_training_ms": 0.0753445,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 114.9491,
+      "mean_rgb": [
+        0.3886969509518394,
+        0.3575537675793612,
+        0.25439016218390975
+      ],
+      "gpu_total_ms": 0.19037149999999997,
+      "name": "nrc-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1174605,
+      "gpu_training_ms": 0.060023499999999994,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 113.13860000000001,
+      "mean_rgb": [
+        0.3886963093111149,
+        0.3575530355228693,
+        0.2543896946738755
+      ],
+      "gpu_total_ms": 0.17748399999999998,
+      "name": "nrc-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 2,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.117646,
+      "gpu_training_ms": 0.060676999999999995,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 111.7888,
+      "mean_rgb": [
+        0.3886963093781901,
+        0.3575530354385137,
+        0.25438969471608175
+      ],
+      "gpu_total_ms": 0.178323,
+      "name": "nrc-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.11569349999999999,
+      "gpu_training_ms": 0.0752815,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 115.15169999999999,
+      "mean_rgb": [
+        0.38869518200073117,
+        0.3575555958249197,
+        0.25439591612263257
+      ],
+      "gpu_total_ms": 0.190975,
+      "name": "nrc-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1245235,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 84.2468,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.1245235,
+      "name": "nrc-pt-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.0801535,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 52.9975,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.0801535,
+      "name": "nrc-pt-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.14248249999999998,
+      "rays_per_frame": 186900.5,
+      "cache_hits_per_frame": 41683.984375,
+      "trace_wall_ms": 51.3327,
+      "mean_rgb": [
+        0.30112548108484855,
+        0.27558559112583664,
+        0.19190323227415867
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.105686,
+      "rays_per_frame": 186900.296875,
+      "cache_hits_per_frame": 41685.734375,
+      "trace_wall_ms": 34.9955,
+      "mean_rgb": [
+        0.30065012854853584,
+        0.27524822547516514,
+        0.19161409230583948
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.1043635,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 40.4805,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.089789,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 29.7052,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31699266666666664,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.5674,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.31699266666666664,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.24422533333333332,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 35.355900000000005,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.24422533333333332,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4937525,
+      "gpu_training_ms": 0.38008349999999996,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 440.0851,
+      "mean_rgb": [
+        0.38869630915661446,
+        0.35755303560813445,
+        0.2543896948484985
+      ],
+      "gpu_total_ms": 0.873836,
+      "name": "nrc",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.18034699999999998,
+      "gpu_training_ms": 0.184695,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 212.0266,
+      "mean_rgb": [
+        0.3886951817647173,
+        0.35755559600380593,
+        0.2543959160027498
+      ],
+      "gpu_total_ms": 0.365042,
+      "name": "nrc",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.12818749999999998,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 82.2953,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.12818749999999998,
+      "name": "nrc-pt",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.11735599999999999,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 73.1751,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.11735599999999999,
+      "name": "nrc-pt",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.17361,
+      "rays_per_frame": 186898.921875,
+      "cache_hits_per_frame": 41683.890625,
+      "trace_wall_ms": 59.5066,
+      "mean_rgb": [
+        0.30110715967372015,
+        0.2755951376281505,
+        0.1919032095726406
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.139037,
+      "rays_per_frame": 186898.9375,
+      "cache_hits_per_frame": 41685.65625,
+      "trace_wall_ms": 42.1419,
+      "mean_rgb": [
+        0.3006525954206692,
+        0.2752421538116522,
+        0.19160966581001457
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.14427399999999999,
+      "rays_per_frame": 360042.71875,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 45.3903,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.13227049999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 34.7847,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.4006256666666666,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 56.2761,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.4006256666666666,
+      "name": "pt-any-wg128",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.32431766666666667,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.794200000000004,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.32431766666666667,
+      "name": "pt-any-wg128",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.40260199999999996,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 55.471199999999996,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.40260199999999996,
+      "name": "pt-any-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.30706666666666665,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 43.3435,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.30706666666666665,
+      "name": "pt-any-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.392992,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 54.9145,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.392992,
+      "name": "pt-closest-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31450633333333333,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.4174,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31450633333333333,
+      "name": "pt-closest-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.37502966666666665,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 96.6627,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.37502966666666665,
+      "name": "pt-closest-blocking",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.318758,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 81.0345,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.318758,
+      "name": "pt-closest-blocking",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 3,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31499866666666665,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 78.4697,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31499866666666665,
+      "name": "pt-closest-blocking",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3974976666666667,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 100.9307,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.3974976666666667,
+      "name": "pt-closest-blocking",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.31915899999999997,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 46.0353,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.31915899999999997,
+      "name": "pt-closest-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.412199,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 57.2087,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.412199,
+      "name": "pt-closest-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.311554,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.0272,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.311554,
+      "name": "pt-any-queued",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.40307333333333334,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 55.4354,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.40307333333333334,
+      "name": "pt-any-queued",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.324138,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 45.5585,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.324138,
+      "name": "pt-any-wg128",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.426882,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 58.687599999999996,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.426882,
+      "name": "pt-any-wg128",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.13236299999999998,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 36.45,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.144336,
+      "rays_per_frame": 360042.71875,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 45.9368,
+      "mean_rgb": [
+        0.30224678839471525,
+        0.2785437987837809,
+        0.1929012601653402
+      ],
+      "name": "sharc-raw",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.139345,
+      "rays_per_frame": 186900.59375,
+      "cache_hits_per_frame": 41685.65625,
+      "trace_wall_ms": 42.71,
+      "mean_rgb": [
+        0.30065342349228646,
+        0.27524366362590413,
+        0.1916104815558137
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.159323,
+      "rays_per_frame": 186898.921875,
+      "cache_hits_per_frame": 41683.9375,
+      "trace_wall_ms": 56.383,
+      "mean_rgb": [
+        0.3011050761424239,
+        0.27557863094349744,
+        0.1919007134625214
+      ],
+      "name": "sharc-cached",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.117239,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 72.84400000000001,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.117239,
+      "name": "nrc-pt",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.14172649999999998,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 84.2371,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.14172649999999998,
+      "name": "nrc-pt",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.180862,
+      "gpu_training_ms": 0.1852315,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 202.3745,
+      "mean_rgb": [
+        0.38869518172458584,
+        0.35755559602318954,
+        0.2543959160117595
+      ],
+      "gpu_total_ms": 0.36609349999999996,
+      "name": "nrc",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.49388299999999996,
+      "gpu_training_ms": 0.380088,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 439.70779999999996,
+      "mean_rgb": [
+        0.3886963091870257,
+        0.35755303539929173,
+        0.2543896947394728
+      ],
+      "gpu_total_ms": 0.8739709999999999,
+      "name": "nrc",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.24760799999999997,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.40625,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 36.512299999999996,
+      "mean_rgb": [
+        0.31005744067656127,
+        0.28387072947947206,
+        0.19776685093520188
+      ],
+      "gpu_total_ms": 0.24760799999999997,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.3164073333333333,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 273143.34375,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 44.6081,
+      "mean_rgb": [
+        0.3100572879706476,
+        0.2838705715364534,
+        0.19776678940403286
+      ],
+      "gpu_total_ms": 0.3164073333333333,
+      "name": "pt-closest-queued-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "warm32",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.08975949999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 31.1707,
+      "mean_rgb": [
+        0.30224848618213956,
+        0.27854489908642566,
+        0.1929021662541418
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.09967799999999999,
+      "rays_per_frame": 360043.25,
+      "cache_hits_per_frame": 0.0,
+      "trace_wall_ms": 40.724999999999994,
+      "mean_rgb": [
+        0.3022469596262772,
+        0.2785440224326268,
+        0.19290136947035977
+      ],
+      "name": "sharc-raw-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.105486,
+      "rays_per_frame": 186898.953125,
+      "cache_hits_per_frame": 41685.640625,
+      "trace_wall_ms": 36.218399999999995,
+      "mean_rgb": [
+        0.3006593048278813,
+        0.2752492231493838,
+        0.19161331930306924
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_total_ms": 0.142795,
+      "rays_per_frame": 186900.5,
+      "cache_hits_per_frame": 41683.984375,
+      "trace_wall_ms": 52.0731,
+      "mean_rgb": [
+        0.30111530850215745,
+        0.27559681018472454,
+        0.19190348304451862
+      ],
+      "name": "sharc-cached-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.08032199999999999,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 52.9886,
+      "mean_rgb": [
+        0.41361574748526664,
+        0.3787597646735321,
+        0.26396288082011665
+      ],
+      "gpu_total_ms": 0.08032199999999999,
+      "name": "nrc-pt-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1239535,
+      "gpu_training_ms": 0.0,
+      "path_and_shadow_rays_per_frame": 71420.3125,
+      "cache_queries_per_frame": 0.0,
+      "trace_wall_ms": 79.2418,
+      "mean_rgb": [
+        0.4136150260246154,
+        0.37875886262719405,
+        0.2639623759454537
+      ],
+      "gpu_total_ms": 0.1239535,
+      "name": "nrc-pt-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.1150475,
+      "gpu_training_ms": 0.0753305,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 114.9955,
+      "mean_rgb": [
+        0.38869518172748485,
+        0.3575555960454153,
+        0.25439591607221246
+      ],
+      "gpu_total_ms": 0.190378,
+      "name": "nrc-lean",
+      "requested_backend": "vulkan",
+      "backend": "Vulkan",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    },
+    {
+      "gpu_trace_ms": 0.118007,
+      "gpu_training_ms": 0.059310999999999996,
+      "path_and_shadow_rays_per_frame": 56709.03125,
+      "cache_queries_per_frame": 9294.234375,
+      "trace_wall_ms": 113.4103,
+      "mean_rgb": [
+        0.38869630921578846,
+        0.3575530353946874,
+        0.254389694677144
+      ],
+      "gpu_total_ms": 0.177318,
+      "name": "nrc-lean",
+      "requested_backend": "dx12",
+      "backend": "Direct3D 12",
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "round": 4,
+      "frames": "last64",
+      "gpu_errors": []
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "tool": "tools/splats/compare_matrix.py",
+  "date": "2026-10-10 05:50",
+  "scenes": {
+    "1M 1600x900": "--count 1000000",
+    "3M 2560x1440": "--count 3000000 --size 2560x1440",
+    "orb close-up": "--count 1000000 --look 0,1.4,3 --distance 0.12",
+    "1M 2.5x distance AA": "--count 1000000 --distance 2.5 --antialias"
+  },
+  "raster": "tile",
+  "builds": {
+    "final": "<local-path>",
+    "fixed": "<local-path>"
+  },
+  "build_env": {
+    "final": {
+      "POCKET_EXP_SPLAT_TILE": "<local-path>"
+    },
+    "fixed": {
+      "POCKET_EXP_SPLAT_TILE": "<local-path>"
+    }
+  },
+  "build_vs_build": [
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.16,
+        130.16,
+        57.06
+      ],
+      "mean_rgb_b": [
+        95.16,
+        130.16,
+        57.06
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "dx12",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 1440,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        102.61,
+        129.18,
+        61.69
+      ],
+      "mean_rgb_b": [
+        102.61,
+        129.18,
+        61.69
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 2560,
+      "adapter": "nvidia",
+      "backend": "dx12",
+      "scene": "3M 2560x1440",
+      "args": "--count 3000000 --size 2560x1440",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.26,
+        129.87,
+        73.01
+      ],
+      "mean_rgb_b": [
+        95.26,
+        129.87,
+        73.01
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "dx12",
+      "scene": "orb close-up",
+      "args": "--count 1000000 --look 0,1.4,3 --distance 0.12",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        110.99,
+        125.53,
+        102.75
+      ],
+      "mean_rgb_b": [
+        110.99,
+        125.53,
+        102.75
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "dx12",
+      "scene": "1M 2.5x distance AA",
+      "args": "--count 1000000 --distance 2.5 --antialias",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.17,
+        130.17,
+        57.07
+      ],
+      "mean_rgb_b": [
+        95.17,
+        130.17,
+        57.07
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "vulkan",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 1440,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        102.63,
+        129.19,
+        61.7
+      ],
+      "mean_rgb_b": [
+        102.63,
+        129.19,
+        61.7
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 2560,
+      "adapter": "nvidia",
+      "backend": "vulkan",
+      "scene": "3M 2560x1440",
+      "args": "--count 3000000 --size 2560x1440",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.27,
+        129.88,
+        73.02
+      ],
+      "mean_rgb_b": [
+        95.27,
+        129.88,
+        73.02
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "vulkan",
+      "scene": "orb close-up",
+      "args": "--count 1000000 --look 0,1.4,3 --distance 0.12",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        110.99,
+        125.53,
+        102.75
+      ],
+      "mean_rgb_b": [
+        110.99,
+        125.53,
+        102.75
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "vulkan",
+      "scene": "1M 2.5x distance AA",
+      "args": "--count 1000000 --distance 2.5 --antialias",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.12,
+        130.12,
+        57.02
+      ],
+      "mean_rgb_b": [
+        95.12,
+        130.12,
+        57.02
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "dx12",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 1440,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        102.58,
+        129.14,
+        61.65
+      ],
+      "mean_rgb_b": [
+        102.58,
+        129.14,
+        61.65
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 2560,
+      "adapter": "780m",
+      "backend": "dx12",
+      "scene": "3M 2560x1440",
+      "args": "--count 3000000 --size 2560x1440",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.23,
+        129.84,
+        72.97
+      ],
+      "mean_rgb_b": [
+        95.23,
+        129.84,
+        72.97
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "dx12",
+      "scene": "orb close-up",
+      "args": "--count 1000000 --look 0,1.4,3 --distance 0.12",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        110.94,
+        125.48,
+        102.7
+      ],
+      "mean_rgb_b": [
+        110.94,
+        125.48,
+        102.7
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "dx12",
+      "scene": "1M 2.5x distance AA",
+      "args": "--count 1000000 --distance 2.5 --antialias",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.12,
+        130.12,
+        57.02
+      ],
+      "mean_rgb_b": [
+        95.12,
+        130.12,
+        57.02
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "vulkan",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 1440,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        102.58,
+        129.14,
+        61.65
+      ],
+      "mean_rgb_b": [
+        102.58,
+        129.14,
+        61.65
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 2560,
+      "adapter": "780m",
+      "backend": "vulkan",
+      "scene": "3M 2560x1440",
+      "args": "--count 3000000 --size 2560x1440",
+      "first": "fixed"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.23,
+        129.84,
+        72.97
+      ],
+      "mean_rgb_b": [
+        95.23,
+        129.84,
+        72.97
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "vulkan",
+      "scene": "orb close-up",
+      "args": "--count 1000000 --look 0,1.4,3 --distance 0.12",
+      "first": "final"
+    },
+    {
+      "a": "final",
+      "b": "fixed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        110.94,
+        125.48,
+        102.7
+      ],
+      "mean_rgb_b": [
+        110.94,
+        125.48,
+        102.7
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "780m",
+      "backend": "vulkan",
+      "scene": "1M 2.5x distance AA",
+      "args": "--count 1000000 --distance 2.5 --antialias",
+      "first": "fixed"
+    }
+  ]
+}

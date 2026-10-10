@@ -1,0 +1,980 @@
+{
+  "summary": [
+    {
+      "case": "cubes-100k",
+      "path": "first-instance",
+      "runs": 2,
+      "frame_ms_median": 3.993,
+      "frame_p95_median": 10.485,
+      "gpu_ms_median": null,
+      "render_ms_median": 13.723,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "cubes-100k",
+      "path": "baseline",
+      "runs": 2,
+      "frame_ms_median": 3.544,
+      "frame_p95_median": 8.55,
+      "gpu_ms_median": null,
+      "render_ms_median": 10.705,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "cubes-400k",
+      "path": "first-instance",
+      "runs": 2,
+      "frame_ms_median": 8.366,
+      "frame_p95_median": 31.908,
+      "gpu_ms_median": 3.178,
+      "render_ms_median": 1.173,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "cubes-400k",
+      "path": "baseline",
+      "runs": 2,
+      "frame_ms_median": 10.41,
+      "frame_p95_median": 35.157,
+      "gpu_ms_median": 1.234,
+      "render_ms_median": 3.595,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "cubes-1.6M",
+      "path": "first-instance",
+      "runs": 2,
+      "frame_ms_median": 3.619,
+      "frame_p95_median": 7.713,
+      "gpu_ms_median": 6.079,
+      "render_ms_median": 162.201,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "cubes-1.6M",
+      "path": "baseline",
+      "runs": 2,
+      "frame_ms_median": 11.114,
+      "frame_p95_median": 56.994,
+      "gpu_ms_median": null,
+      "render_ms_median": 44.17,
+      "draw_calls": 1,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "mixed-8",
+      "path": "first-instance",
+      "runs": 3,
+      "frame_ms_median": 2.856,
+      "frame_p95_median": 3.227,
+      "gpu_ms_median": 0.694,
+      "render_ms_median": 14.897,
+      "draw_calls": 55,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "mixed-8",
+      "path": "baseline",
+      "runs": 2,
+      "frame_ms_median": 3.33,
+      "frame_p95_median": 4.206,
+      "gpu_ms_median": 0.775,
+      "render_ms_median": 8.571,
+      "draw_calls": 55,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "mixed-40",
+      "path": "first-instance",
+      "runs": 2,
+      "frame_ms_median": 1.555,
+      "frame_p95_median": 2.462,
+      "gpu_ms_median": null,
+      "render_ms_median": 0.651,
+      "draw_calls": 55,
+      "canvas": [
+        1254,
+        564
+      ]
+    },
+    {
+      "case": "mixed-40",
+      "path": "baseline",
+      "runs": 2,
+      "frame_ms_median": 2.237,
+      "frame_p95_median": 3.57,
+      "gpu_ms_median": null,
+      "render_ms_median": 6.086,
+      "draw_calls": 55,
+      "canvas": [
+        1254,
+        564
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.155315094500814,
+      "frame_ms_p50": 2.0166666666666666,
+      "frame_ms_p95": 8.478260869565217,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 14.026333332061768,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "first-instance",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 1.0702923152872492,
+      "frame_ms_p50": 0.6724999999999984,
+      "frame_ms_p95": 2.688405797446985,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 4.321333333651225,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "baseline",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 8.903025000000003,
+      "frame_ms_p50": 3.9833333333333334,
+      "frame_ms_p95": 29.3675,
+      "gpu_ms_mean": 3.1779999999999977,
+      "render_ms_mean": 1.6333333337306977,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.456
+        },
+        {
+          "pass": "lights",
+          "ms": 0.01
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.713
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "first-instance",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 12.383027777777777,
+      "frame_ms_p50": 0.6875,
+      "frame_ms_p95": 33.81333333333333,
+      "gpu_ms_mean": 1.2336800000000028,
+      "render_ms_mean": 6.366000000238419,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.51
+        },
+        {
+          "pass": "lights",
+          "ms": 0.01
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 2.95
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "baseline",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.6186555555555584,
+      "frame_ms_p50": 2.5525000000000015,
+      "frame_ms_p95": 7.7133333333333365,
+      "gpu_ms_mean": 6.078596666666652,
+      "render_ms_mean": 2.902333333690961,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 2.029
+        },
+        {
+          "pass": "lights",
+          "ms": 0.007
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 4.011
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "first-instance",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 11.114168170557306,
+      "frame_ms_p50": 0.9266666666666727,
+      "frame_ms_p95": 56.994366196679394,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 2.339999998410543,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "baseline",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 15.744497222222224,
+      "frame_ms_p50": 2.2049999999999956,
+      "frame_ms_p95": 37.744166666666665,
+      "gpu_ms_mean": 0.5262800000000004,
+      "render_ms_mean": 14.897000001271566,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.028
+        },
+        {
+          "pass": "lights",
+          "ms": 0.009
+        },
+        {
+          "pass": "shadows",
+          "ms": 0.406
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.588
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 55,
+      "instances": 65,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "first-instance",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 4.391663441384214,
+      "frame_ms_p50": 4.322499999999999,
+      "frame_ms_p95": 5.8546874998137355,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 15.968666667342186,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 55,
+      "instances": 65,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "baseline",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 1.7093050420809512,
+      "frame_ms_p50": 1.5725000000000005,
+      "frame_ms_p95": 2.480597014391599,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0.722666667898496,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 55,
+      "instances": 1601,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "first-instance",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 3.6068844346512066,
+      "frame_ms_p50": 2.9724999999999984,
+      "frame_ms_p95": 6.209090908936093,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 1.231666668653488,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 55,
+      "instances": 1601,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "baseline",
+      "rep": 0
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 4.830449060935257,
+      "frame_ms_p50": 3.2991666666666672,
+      "frame_ms_p95": 12.491304348344388,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 13.420333334406218,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 100001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "first-instance",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 6.017908515105524,
+      "frame_ms_p50": 4.132500000000001,
+      "frame_ms_p95": 14.41159420272578,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 17.088666664560638,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 100001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "baseline",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 7.828618316533152,
+      "frame_ms_p50": 1.9958333333333333,
+      "frame_ms_p95": 34.449275362146075,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0.7133333327372869,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 400001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "first-instance",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 8.436514923137652,
+      "frame_ms_p50": 2.2424999999999953,
+      "frame_ms_p95": 36.50144927553509,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0.8243333341677984,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 400001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "baseline",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 1,
+      "frame_ms_mean": -151.5999999642372,
+      "frame_ms_p50": -151.5999999642372,
+      "frame_ms_p95": -151.5999999642372,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 321.5,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "first-instance",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 1,
+      "frame_ms_mean": -200.9000000000001,
+      "frame_ms_p50": -200.9000000000001,
+      "frame_ms_p95": -200.9000000000001,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 86,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 1,
+      "instances": 1600001,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "baseline",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 1.1082736926885903,
+      "frame_ms_p50": 1.1133333333333335,
+      "frame_ms_p95": 1.3735294115893988,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 16.531000001033146,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 55,
+      "instances": 65,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "first-instance",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "baseline",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "first-instance",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "baseline",
+      "rep": 1
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "first-instance",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-100k",
+      "path_requested": "baseline",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "first-instance",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-400k",
+      "path_requested": "baseline",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "first-instance",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 0,
+      "frame_ms_mean": 0,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0,
+      "backend": null,
+      "passes": null,
+      "draw_path": null,
+      "draw_calls": null,
+      "instances": null,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "cubes-1.6M",
+      "path_requested": "baseline",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.8555083333333355,
+      "frame_ms_p50": 2.683333333333333,
+      "frame_ms_p95": 3.2266666666666652,
+      "gpu_ms_mean": 0.8611533333333383,
+      "render_ms_mean": 1.4183333335320154,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.012
+        },
+        {
+          "pass": "lights",
+          "ms": 0.005
+        },
+        {
+          "pass": "shadows",
+          "ms": 0.305
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.366
+        }
+      ],
+      "draw_path": "first-instance",
+      "draw_calls": 55,
+      "instances": 65,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "first-instance",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 2.2676694444444436,
+      "frame_ms_p50": 2.275,
+      "frame_ms_p95": 2.5575000000000045,
+      "gpu_ms_mean": 0.7750366666666705,
+      "render_ms_mean": 1.1743333321809768,
+      "backend": "WebGPU",
+      "passes": [
+        {
+          "pass": "cull",
+          "ms": 0.018
+        },
+        {
+          "pass": "lights",
+          "ms": 0.006
+        },
+        {
+          "pass": "shadows",
+          "ms": 0.32
+        },
+        {
+          "pass": "opaque+sky",
+          "ms": 0.431
+        }
+      ],
+      "draw_path": "baseline",
+      "draw_calls": 55,
+      "instances": 65,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-8",
+      "path_requested": "baseline",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 1.3999131153570703,
+      "frame_ms_p50": 1.1666666666666667,
+      "frame_ms_p95": 2.443283581911628,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 0.5786666663487753,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "first-instance",
+      "draw_calls": 55,
+      "instances": 1601,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "first-instance",
+      "rep": 2
+    },
+    {
+      "url": "<local-endpoint>",
+      "frames": 300,
+      "frame_ms_mean": 0.8665573246623818,
+      "frame_ms_p50": 0.5625,
+      "frame_ms_p95": 0.9313432828703926,
+      "gpu_ms_mean": 0,
+      "render_ms_mean": 10.940333330631256,
+      "backend": "WebGPU",
+      "passes": [],
+      "draw_path": "baseline",
+      "draw_calls": 55,
+      "instances": 1601,
+      "canvas": [
+        1254,
+        564
+      ],
+      "gpu": "yes",
+      "case": "mixed-40",
+      "path_requested": "baseline",
+      "rep": 2
+    }
+  ],
+  "summary_filtered": [
+    {
+      "case": "cubes-100k",
+      "path": "first-instance",
+      "good_runs": 2,
+      "frame_med": 3.99,
+      "frame_min": 3.16,
+      "gpu_med": 0.0,
+      "render_med": 13.72,
+      "draw_calls": 1
+    },
+    {
+      "case": "cubes-100k",
+      "path": "baseline",
+      "good_runs": 2,
+      "frame_med": 3.54,
+      "frame_min": 1.07,
+      "gpu_med": 0.0,
+      "render_med": 10.7,
+      "draw_calls": 1
+    },
+    {
+      "case": "cubes-400k",
+      "path": "first-instance",
+      "good_runs": 2,
+      "frame_med": 8.37,
+      "frame_min": 7.83,
+      "gpu_med": 1.59,
+      "render_med": 1.17,
+      "draw_calls": 1
+    },
+    {
+      "case": "cubes-400k",
+      "path": "baseline",
+      "good_runs": 2,
+      "frame_med": 10.41,
+      "frame_min": 8.44,
+      "gpu_med": 0.62,
+      "render_med": 3.6,
+      "draw_calls": 1
+    },
+    {
+      "case": "cubes-1.6M",
+      "path": "first-instance",
+      "good_runs": 1,
+      "frame_med": 3.62,
+      "frame_min": 3.62,
+      "gpu_med": 6.08,
+      "render_med": 2.9,
+      "draw_calls": 1
+    },
+    {
+      "case": "cubes-1.6M",
+      "path": "baseline",
+      "good_runs": 1,
+      "frame_med": 11.11,
+      "frame_min": 11.11,
+      "gpu_med": 0,
+      "render_med": 2.34,
+      "draw_calls": 1
+    },
+    {
+      "case": "mixed-8",
+      "path": "first-instance",
+      "good_runs": 3,
+      "frame_med": 2.86,
+      "frame_min": 1.11,
+      "gpu_med": 0.53,
+      "render_med": 14.9,
+      "draw_calls": 55
+    },
+    {
+      "case": "mixed-8",
+      "path": "baseline",
+      "good_runs": 2,
+      "frame_med": 3.33,
+      "frame_min": 2.27,
+      "gpu_med": 0.39,
+      "render_med": 8.57,
+      "draw_calls": 55
+    },
+    {
+      "case": "mixed-40",
+      "path": "first-instance",
+      "good_runs": 2,
+      "frame_med": 1.55,
+      "frame_min": 1.4,
+      "gpu_med": 0.0,
+      "render_med": 0.65,
+      "draw_calls": 55
+    },
+    {
+      "case": "mixed-40",
+      "path": "baseline",
+      "good_runs": 2,
+      "frame_med": 2.24,
+      "frame_min": 0.87,
+      "gpu_med": 0.0,
+      "render_med": 6.09,
+      "draw_calls": 55
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+[Publication note: UI screenshots containing local connection addresses are omitted from the public copy; this source log is retained below.]
+[0.4s] connected to <local-endpoint>
+--- 1. breakpoint set by clicking the gutter of rules.ts:27 (Edit mode)
+  banner:      (none)
+  status bar:  (not paused)
+  paused line: (none shown)
+  call stack:  (empty)
+  variables:   (empty)
+  watches:     (none)
+  breakpoints: rules.ts:27 always ×
+[7.7s] screenshot debug-host-1-breakpoint.png
+[7.7s] Play
+--- 2. Play hit the breakpoint
+  banner:      Paused on breakpoint tick 1 system log scripts/rules.ts:27:13
+  status bar:  Paused at rules.ts:27
+  paused line: 27
+  call stack:  (anonymous) rules.ts:27 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : undefined | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [0] | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     (none)
+  breakpoints: rules.ts:27 always ×
+[8.8s] screenshot debug-host-2-paused.png
+--- 3. scopes expanded, watches evaluated on the paused frame
+  banner:      Paused on breakpoint tick 1 system log scripts/rules.ts:27:13
+  status bar:  Paused at rules.ts:27
+  paused line: 27
+  call stack:  (anonymous) rules.ts:27 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : undefined | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [0] | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …} | dt : 0.016666666666666666 | emit : ƒ emit() | events : [] | intent : ƒ intent() | part : {entity: [function entity]} | query : ƒ query() | rng : {chance: [function chance], fill: [function fill], int: [function int], next: [function next], normal: [function normal], …} | rngFor : ƒ rngFor() | rngNamed : ƒ rngNamed() | rngTimeless : ƒ rngTimeless() | single : ƒ single() | system : "log" | tick : 1 | time : 0.016666666666666666 | world : {despawn: [function despawn], exists: [function exists], get: [function get], has: [function has], insert: [function insert], …} | despawn : ƒ despawn() | exists : ƒ exists() | get : ƒ get() | has : ƒ has() | insert : ƒ insert() | remove : ƒ remove() | set : ƒ set() | spawn : ƒ spawn()
+  watches:     b.speed[r] * 3.6 : 0 × | l.distance[r] : 0 × | ctx.tick : 1 ×
+  breakpoints: rules.ts:27 always ×
+[11.5s] screenshot debug-host-3-scopes-watches.png
+[11.8s] F10 (step over)
+--- 4. stepped over to the next line
+  banner:      Paused on step tick 1 system log scripts/rules.ts:28:13
+  status bar:  Paused at rules.ts:28
+  paused line: 28
+  call stack:  (anonymous) rules.ts:28 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 0 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [0] | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : 0 × | l.distance[r] : 0 × | ctx.tick : 1 ×
+  breakpoints: rules.ts:27 always ×
+[12.8s] screenshot debug-host-4-stepped.png
+--- 5. l.distance[0] set to 1000 in the Variables tree
+  banner:      Paused on step tick 1 system log scripts/rules.ts:28:13
+  status bar:  Paused at rules.ts:28
+  paused line: 28
+  call stack:  (anonymous) rules.ts:28 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 0 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1000] | 0 : 1000 | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : 0 × | l.distance[r] : 1000 × | ctx.tick : 1 ×
+  breakpoints: rules.ts:27 always ×
+[14.0s] screenshot debug-host-5-set-value.png
+--- 5b. r set to 1 (l.distance[r] reads undefined), speed refused as a const
+  banner:      Paused on step tick 1 system log scripts/rules.ts:28:13
+  status bar:  Paused at rules.ts:28
+  paused line: 28
+  call stack:  (anonymous) rules.ts:28 | run rules.ts:26
+  variables:   Local | r : 1 | e : 3 | speed : 0 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1000] | 0 : 1000 | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : NaN × | l.distance[r] : undefined × | ctx.tick : 1 ×
+  breakpoints: rules.ts:27 always ×
+  toasts: Set speed: debug.set_failed speed is a constant.
+[15.2s] screenshot debug-host-5b-set-local.png
+--- 6a. stepped over the line that adds speed * dt
+  banner:      Paused on step tick 1 system log scripts/rules.ts:29:13
+  status bar:  Paused at rules.ts:29
+  paused line: 29
+  call stack:  (anonymous) rules.ts:29 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 0 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1000] | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : 0 × | l.distance[r] : 1000 × | ctx.tick : 1 ×
+  breakpoints: rules.ts:27 always ×
+[16.3s] F5 (continue)
+--- 6. continued: the next tick stops at the breakpoint again and reads the committed value
+  banner:      Paused on breakpoint tick 2 system log scripts/rules.ts:27:13
+  status bar:  Paused at rules.ts:27
+  paused line: 27
+  call stack:  (anonymous) rules.ts:27 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : undefined | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [-0.2507668893719575] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1000] | 0 : 1000 | sail_set : [1] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : -0.902760801739047 × | l.distance[r] : 1000 × | ctx.tick : 2 ×
+  breakpoints: rules.ts:27 always ×
+[17.9s] screenshot debug-host-6-next-tick.png
+[20.2s] debug.state.exceptions on the host: "uncaught"
+[20.2s] F5 (continue) with a data breakpoint on Sloop.Log.top_speed
+--- 7. paused by the data breakpoint
+  banner:      Paused on data breakpoint tick 2 system log scripts/rules.ts:30:13 Sloop.Log.top_speed: 0 → 0.250767 (written at rules.ts:29)
+  status bar:  Paused at rules.ts:30
+  paused line: 30
+  call stack:  (anonymous) rules.ts:30 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 0.2507668893719575 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [-0.2507668893719575] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1000.0041794481562] | sail_set : [1] | top_speed : [0.2507668893719575] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : -0.902760801739047 × | l.distance[r] : 1000.0041794481562 × | ctx.tick : 2 ×
+  breakpoints: Sloop.Log.top_speed on write ×
+[21.5s] screenshot debug-host-7-data-breakpoint.png
+--- 8. running again, no breakpoints
+  banner:      (none)
+  status bar:  (not paused)
+  paused line: (none shown)
+  call stack:  (empty)
+  variables:   (empty)
+  watches:     b.speed[r] * 3.6 : evaluated when paused × | l.distance[r] : evaluated when paused × | ctx.tick : evaluated when paused ×
+  breakpoints: (none)
+  world.query Log (the host): [{"Log.distance":1003.7730331656691,"Log.top_speed":3.2968784034587273,"id":3,"name":"Sloop"}]
+  inspector Log card inputs: ["1003","3.273"]
+[26.0s] screenshot debug-host-8-running.png
+[27.1s] typed a new line after rules.ts:27 and pressed Mod+S
+  toast: Scripts applied Bundle b388ac72bf1f75552dd7d286b2e6d78fc3c7f22f55a0612094590373ffc141f9 hot-swapped, no errors.
+[28.2s] breakpoint on rules.ts:29 (the line after the new one)
+--- 9. the new code runs: a breakpoint after the inserted line stops with `knots` in Local
+  banner:      Paused on breakpoint tick 387 system log scripts/rules.ts:29:13
+  status bar:  Paused at rules.ts:29
+  paused line: 29
+  call stack:  (anonymous) rules.ts:29 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 2.30660945272927 | knots : 4.484048776105701 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [2.30660945272927] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [1015.9667957343665] | sail_set : [1] | top_speed : [3.3197463260853572] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : 8.303794029825372 × | l.distance[r] : 1015.9667957343665 × | ctx.tick : 387 ×
+  breakpoints: rules.ts:29 always ×
+[29.2s] screenshot debug-host-9-edited-script.png
+[31.2s] Stop, while paused at rules.ts:29
+[31.3s] Edit mode 0.1 s after Stop
+  edit world: mode edit, bundle b388ac72bf1f75552dd7d286b2e6d78fc3c7f22f55a0612094590373ffc141f9 (step 9 applied b388ac72bf1f75552dd7d286b2e6d78fc3c7f22f55a0612094590373ffc141f9)
+  toasts: Scripts applied Bundle b388ac72bf1f75552dd7d286b2e6d78fc3c7f22f55a0612094590373ffc141f9 hot-swapped, no errors.
+--- 10. stopped while paused: Edit mode, the edit world runs the edited bundle
+  banner:      (none)
+  status bar:  (not paused)
+  paused line: (none shown)
+  call stack:  (empty)
+  variables:   (empty)
+  watches:     b.speed[r] * 3.6 : evaluated when paused × | l.distance[r] : evaluated when paused × | ctx.tick : evaluated when paused ×
+  breakpoints: rules.ts:29 always ×
+[32.2s] screenshot debug-host-10-stopped.png
+[32.2s] Play again
+--- 11. the new Play stops at rules.ts:29 with knots in Local
+  banner:      Paused on breakpoint tick 1 system log scripts/rules.ts:29:13
+  status bar:  Paused at rules.ts:29
+  paused line: 29
+  call stack:  (anonymous) rules.ts:29 | run rules.ts:26
+  variables:   Local | r : 0 | e : 3 | speed : 0 | knots : 0 | set : undefined | Closure | b : {hoist_now: […], speed: […]} | hoist_now : [1] | speed : [0] | l : {distance: […], sail_set: […], top_speed: […]} | distance : [0] | sail_set : [0] | top_speed : [0] | ctx : {dt: 0.016666666666666666, emit: [function emit], events: [], intent: [function intent], part: {…}, …}
+  watches:     b.speed[r] * 3.6 : 0 × | l.distance[r] : 0 × | ctx.tick : 1 ×
+  breakpoints: rules.ts:29 always ×
+[33.2s] screenshot debug-host-11-replay.png
+done

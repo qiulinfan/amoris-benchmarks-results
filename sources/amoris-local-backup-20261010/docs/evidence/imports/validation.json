@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "source_snapshot": "9a3e4b0814959629202629845b85205c42086505",
+  "validated_renderer_commit": "83c6c39c5c3a6124a9e3861e0d3b6ca2d429b786",
+  "actual_validation_start_utc": "2026-10-10T13:41:00Z",
+  "workspace": {
+    "passed": 687,
+    "failed": 0,
+    "ignored": 0,
+    "suites": 114,
+    "steps_passed": 14,
+    "steps_skipped": [
+      "contract",
+      "perf"
+    ]
+  },
+  "platform": "Apple M5 / Metal, macOS arm64",
+  "node": "24.19.0",
+  "python": "3.13.14",
+  "targeted": {
+    "benchmark_failure_path_tests": 19,
+    "fixed_time_occlusion_scenes": 6,
+    "all_scene_entity_coverage_l1": 0,
+    "occlusion_captures": 20,
+    "ray_shadow_fresh_processes": 8,
+    "gi_fresh_processes": 3,
+    "pt_fresh_processes": 3,
+    "ray_probe_fresh_processes": 3,
+    "probe_cases_per_process": 7,
+    "browser_viewport": {
+      "adapter": "apple metal-3",
+      "draw_paths": [
+        "first-instance",
+        "baseline"
+      ],
+      "visible_entities_per_variant": 52,
+      "both_draw_path_and_occlusion_coverage_l1": 0,
+      "pixels_differing_gt8": {
+        "draw_paths": 1,
+        "occlusion": 0
+      },
+      "total_pixels_per_capture": 138880
+    }
+  },
+  "viewport": {
+    "bytes": 2545124,
+    "rebuilt_from_curated_tree": true
+  },
+  "editor": "Typecheck, three desktop/arithmetic tests and build passed in the runtime slice; no editor code changed in renderer slice.",
+  "site": "MkDocs strict build passed.",
+  "limits": [
+    "Source Windows results are provenance, not a new Windows run of this Amoris integration.",
+    "Metal ray-traced sun shadows use one sample; TAA remains available. Skinned Metal ray shadows complete BLAS builds on the CPU pending an upstream synchronization fix.",
+    "Separate-process animation captures have timing noise; all six same-process fixed-time scenes preserve every entity.",
+    "Chrome benchmark exception cleanup and other benchmark build/env path publication still require manual review."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "source_snapshot": "9a3e4b0814959629202629845b85205c42086505",
+  "changed_paths": [
+    "crates/pocket-render/shaders/splat_tile.wgsl"
+  ],
+  "adapter": {
+    "hardware_inventory": [
+      "Apple M5"
+    ],
+    "backend": "Metal",
+    "selection": "POCKET_BACKEND=metal"
+  },
+  "logs": {
+    "tile-tests.log": {
+      "bytes": 1936,
+      "last_modified_utc": "2026-10-10T12:52:36.469290+00:00"
+    },
+    "taa-tests.log": {
+      "bytes": 2053,
+      "last_modified_utc": "2026-10-10T12:52:47.371198+00:00"
+    },
+    "build.log": {
+      "bytes": 6548,
+      "last_modified_utc": "2026-10-10T12:49:47.571047+00:00"
+    }
+  },
+  "tests": {
+    "tile": {
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0,
+      "includes_original_7_failures": true,
+      "includes_4_1m_growth": true
+    },
+    "taa": {
+      "passed": 11,
+      "failed": 0,
+      "ignored": 0
+    }
+  },
+  "unchanged": [
+    "tests and thresholds",
+    "Rust buffer size and stride",
+    "bindings",
+    "raster/composite arithmetic"
+  ],
+  "root_cause": "Different invocations concurrently stored components of one storage vec2u. WGSL vector-component writes may access the whole vector, producing a data race. Two scalar struct members are independent memory locations with the same eight-byte stride.",
+  "spec": "https://www.w3.org/TR/WGSL/#component-reference",
+  "observed_correctness": {
+    "tile_vs_quad_mean_abs_byte_diff": 0.0468,
+    "tile_vs_quad_max_abs_byte_diff": 1,
+    "tie_redraw_changed_values": 0,
+    "tile_splat_flicker_all_taa_modes": 0,
+    "mean_diff_precision": "four decimals printed by the unchanged test"
+  },
+  "gpu_slot_released": true,
+  "recorded_utc": "2026-10-10T12:54:30.451342+00:00"
+}

@@ -1,0 +1,482 @@
+{
+  "note": "cargo xtask check at 56b4d85f with docs/evidence/xtask/render-gi-lint.diff applied but not committed (renderer.rs and gi/ belong to other tracks this wave): the first full PASS on Windows (provisional timings: other agents built and used the GPU)",
+  "command": "cargo xtask check --record",
+  "commit": "56b4d85f0600+dirty",
+  "started_utc": "2026-10-09T13:09:32Z",
+  "duration_ms": 435749,
+  "verdict": "Pass",
+  "machine": {
+    "cpu": "AMD Ryzen 9 270 w/ Radeon 780M Graphics",
+    "logical_cores": 16,
+    "os": "windows x86_64",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "chrome": "Google Chrome 155.0.8059.39",
+    "on_ac_power": true,
+    "power_plan": "Balanced"
+  },
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 6501,
+      "summary": "19 workspace crates, 369 external packages, 2 targets; QuickJS-ng as its pins and patches give it",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "deps.crates": [
+          19.0,
+          "count"
+        ],
+        "deps.external": [
+          369.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 1601,
+      "summary": "formatted",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "docs",
+      "verdict": "Pass",
+      "duration_ms": 1000,
+      "summary": "52 Markdown files under docs/ (not docs/evidence/), 0 need wrapping",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "docs.files": [
+          52.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "clippy",
+      "verdict": "Pass",
+      "duration_ms": 21884,
+      "summary": "diagnostics: 0 on x86_64-pc-windows-msvc, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "clippy.fixture_reported": [
+          82.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 69138,
+      "summary": "native release build",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 8441,
+      "summary": "8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "gen.outputs": [
+          8.0,
+          "count"
+        ],
+        "gen.shared_files": [
+          24.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "test",
+      "verdict": "Pass",
+      "duration_ms": 165516,
+      "summary": "487 passed, 0 failed, 0 ignored in 82 suites, ignored tests included",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "test.passed": [
+          487.0,
+          "count"
+        ],
+        "test.failed": [
+          0.0,
+          "count"
+        ],
+        "test.ignored": [
+          0.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 4524,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": null
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 454,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/modules": [
+          3.0,
+          "count"
+        ],
+        "samples/sailing/tsc": [
+          182.2,
+          "ms"
+        ],
+        "tests/fixtures/controls/module-state-lint/control_caught": [
+          1.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 52053,
+      "summary": "1 projects; cross build against a debug pocket",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/ticks_compared": [
+          1800.0,
+          "count"
+        ],
+        "cross_build_ticks_compared": [
+          601.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 921,
+      "summary": "1 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/forks": [
+          6.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 1313,
+      "summary": "1 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/seed1.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed1.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed1.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed2.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed2.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed2.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed3.replay_bytes": [
+          175844.0,
+          "bytes"
+        ],
+        "samples/sailing/seed3.dropped_write_found_at": [
+          330.0,
+          "tick"
+        ],
+        "samples/sailing/seed3.delayed_write_found_at": [
+          330.0,
+          "tick"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 657,
+      "summary": "3 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "samples/sailing/reloads": [
+          6.0,
+          "count"
+        ],
+        "tests/fixtures/controls/closure-state/control_caught": [
+          1.0,
+          "count"
+        ],
+        "tests/fixtures/controls/module-state/control_caught": [
+          1.0,
+          "count"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": "contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet"
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 101208,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {
+        "web.size.wasm": [
+          9289.566,
+          "KiB"
+        ],
+        "web.size.wasm.gz": [
+          2870.04,
+          "KiB"
+        ],
+        "web.size.glue": [
+          15.857,
+          "KiB"
+        ],
+        "web.size.wasm.O3": [
+          7382.045,
+          "KiB"
+        ],
+        "web.size.wasm.gz.O3": [
+          2651.021,
+          "KiB"
+        ],
+        "web.size.page": [
+          9331.43,
+          "KiB"
+        ],
+        "web.start.compile": [
+          53.295,
+          "ms"
+        ],
+        "web.start.instantiate_page": [
+          1.36,
+          "ms"
+        ],
+        "web.start.module_ready [since navigation]": [
+          214.105,
+          "ms"
+        ],
+        "web.start.worker_created [since navigation]": [
+          221.84,
+          "ms"
+        ],
+        "web.start.worker_ready [since navigation]": [
+          378.735,
+          "ms"
+        ],
+        "web.start.first_snapshot [since navigation]": [
+          384.385,
+          "ms"
+        ],
+        "web.start.worker_instantiate": [
+          1.01,
+          "ms"
+        ],
+        "web.start.game_build": [
+          109.775,
+          "ms"
+        ],
+        "web.tick.sail [median]": [
+          0.19,
+          "ms"
+        ],
+        "web.tick.sail [p95]": [
+          0.31,
+          "ms"
+        ],
+        "web.publish.sail [median]": [
+          0.155,
+          "ms"
+        ],
+        "web.publish.sail [p95]": [
+          0.335,
+          "ms"
+        ],
+        "web.hash.sail [median]": [
+          0.115,
+          "ms"
+        ],
+        "web.hash.sail [p95]": [
+          0.18,
+          "ms"
+        ],
+        "web.snapshot.rebuild [median]": [
+          0.15,
+          "ms"
+        ],
+        "web.snapshot.rebuild [p95]": [
+          0.245,
+          "ms"
+        ],
+        "web.snapshot.transfer [median]": [
+          0.255,
+          "ms"
+        ],
+        "web.snapshot.transfer [p95]": [
+          8.3,
+          "ms"
+        ],
+        "web.start.compile.O3": [
+          38.79,
+          "ms"
+        ],
+        "web.start.instantiate_page.O3": [
+          0.97,
+          "ms"
+        ],
+        "web.start.module_ready.O3 [since navigation]": [
+          173.28,
+          "ms"
+        ],
+        "web.start.worker_created.O3 [since navigation]": [
+          192.02,
+          "ms"
+        ],
+        "web.start.worker_ready.O3 [since navigation]": [
+          295.325,
+          "ms"
+        ],
+        "web.start.first_snapshot.O3 [since navigation]": [
+          302.135,
+          "ms"
+        ],
+        "web.start.worker_instantiate.O3": [
+          0.755,
+          "ms"
+        ],
+        "web.start.game_build.O3": [
+          90.435,
+          "ms"
+        ],
+        "web.tick.sail.O3 [median]": [
+          0.17,
+          "ms"
+        ],
+        "web.tick.sail.O3 [p95]": [
+          0.38,
+          "ms"
+        ],
+        "web.publish.sail.O3 [median]": [
+          0.185,
+          "ms"
+        ],
+        "web.publish.sail.O3 [p95]": [
+          0.555,
+          "ms"
+        ],
+        "web.hash.sail.O3 [median]": [
+          0.095,
+          "ms"
+        ],
+        "web.hash.sail.O3 [p95]": [
+          0.2,
+          "ms"
+        ],
+        "web.snapshot.rebuild.O3 [median]": [
+          0.16,
+          "ms"
+        ],
+        "web.snapshot.rebuild.O3 [p95]": [
+          0.235,
+          "ms"
+        ],
+        "web.snapshot.transfer.O3 [median]": [
+          0.285,
+          "ms"
+        ],
+        "web.snapshot.transfer.O3 [p95]": [
+          8.21,
+          "ms"
+        ]
+      },
+      "skipped_because": null
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": {},
+      "skipped_because": "xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)"
+    }
+  ]
+}

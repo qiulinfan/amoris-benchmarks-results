@@ -1,0 +1,276 @@
+{
+  "commit": "7c40c52a",
+  "env": {},
+  "mutations": {
+    "cull: the camera's bound eight times too loose": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "FAILED",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "skinned_levels_follow_the_pose": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "FAILED",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion failed: camera_levels_used(&reference[0].counts) >= 3",
+        "assertion `left == right` failed: occlusion off, scale 1: short of level 1's distance",
+        "assertion `left == right` failed: the skinned level's silhouette stays within two pixels",
+        "[1, 0, 0, 0, 1, 0, 0, 99]"
+      ]
+    },
+    "cull: no hysteresis (coarser as soon as acceptable)": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: occlusion off, scale 1: past it, within the margin: kept"
+      ]
+    },
+    "cull: distance to the sphere's centre, not its nearest point": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "skinned_levels_follow_the_pose": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: occlusion off, scale 1: short of level 1's distance",
+        "assertion `left == right` failed: the skinned level's silhouette stays within two pixels"
+      ]
+    },
+    "cull: the instance's scale ignored": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: occlusion off, scale 2: short of it again: finer at once"
+      ]
+    },
+    "cull: the cascades draw the full meshes": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "FAILED",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: scale 1, 1 texels, at 5 m: cascade 0's level (bound 0.010009766)",
+        "levels cut the cascades' triangles"
+      ]
+    },
+    "cull: the cascades draw the camera's level": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: scale 1, 1 texels, at 5 m: cascade 1's level (bound 0.02142334)"
+      ]
+    },
+    "cull: the cascades' bound four times too loose": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: scale 1, 1 texels, at 5 m: cascade 0's level (bound 0.010009766)"
+      ]
+    },
+    "lod: the cascades' bound ignores shadow_texels": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: scale 1, 2 texels, at 5 m: cascade 0's level (bound 0.020019531)"
+      ]
+    },
+    "cull: a level's row one too far": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "FAILED",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: occlusion off, scale 1: past the margin",
+        "assertion `left == right` failed: scale 1, 1 texels, at 5 m: cascade 0's level (bound 0.010009766)",
+        "levels cut the camera's triangles"
+      ]
+    },
+    "cull: the late pass draws the full mesh": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "FAILED",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "assertion failed: (0..8).all(|l| lb[l] <= la[l]) && lb.iter().sum::<u64>() > 0",
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), cold: entity 1 covers 0.37331018 of the view without occlusion culling and 0.37291667 with it (None)"
+      ]
+    },
+    "cull: the late pass forgets the level": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "assertion `left == right` failed: occlusion on, scale 1: back within the margin: kept",
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), cut: entity 1 covers 0.2865355 of the view without occlusion culling and 0.2864969 with it (Some(OcclusionStats { frame: 6, frustum: 184, occluded: 38, early: 146, late: 0, frustum_triangles: 10506, occluded_triangles: 1960 }))"
+      ]
+    },
+    "meshes: level rows' errors are the full mesh's": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "cascades_pick_levels_by_their_texels": "FAILED",
+        "skinned_levels_follow_the_pose": "FAILED",
+        "hysteresis_holds_a_level_until_the_margin": "FAILED",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "FAILED",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: scale 1, 1 texels, at 5 m: cascade 0's level (bound 0.010009766)",
+        "assertion `left == right` failed: the skinned level's silhouette stays within two pixels",
+        "assertion `left == right` failed: occlusion off, scale 1: short of level 1's distance",
+        "assertion failed: camera_levels_used(&reference[0].counts) >= 3",
+        "[1, 0, 0, 0, 0, 0, 0, 100]"
+      ]
+    },
+    "meshes: a skinned copy's levels read the bind pose": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "skinned_levels_follow_the_pose": "FAILED",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "ok",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: the skinned level's silhouette stays within two pixels"
+      ]
+    },
+    "renderer: level rows get no regions": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "FAILED",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_cut_triangles_and_stay_within_a_pixel": "FAILED",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "skinned_levels_follow_the_pose": "FAILED",
+        "levels_give_way_at_the_binding_limit": "FAILED",
+        "occlusion_culling_never_drops_a_visible_instance": "FAILED"
+      },
+      "failures": [
+        "[(1, 0.47945988), (1002, 0.0069521605), (1001, 0.0056790123), (35, 0.0039737653), (34, 0.0031944443), (32, 0.0025), (27, 0.0022916666), (24, 0.002175926), (15, 0.0019675926), (23, 0.0015972222), (13, 0.0013888889), (16, 0.0012268518), (29, 0.0012114197), (4, 0.0012037037), (31, 0.0011728395), (20, 0",
+        "assertion `left == right` failed: silhouettes stay within two pixels",
+        "assertion `left == right` failed",
+        "assertion `left == right` failed: levels give way",
+        "default device (Vulkan, NVIDIA GeForce RTX 5060 Laptop GPU), cold: entity 1 covers 0 of the view without occlusion culling and 0.40108797 with it (None)"
+      ]
+    },
+    "renderer: levels kept past the binding limit": {
+      "tests": {
+        "every_draw_path_draws_the_same_frame": "ok",
+        "levels_cut_triangles_and_stay_within_a_pixel": "ok",
+        "cascades_pick_levels_by_their_texels": "ok",
+        "hysteresis_holds_a_level_until_the_margin": "ok",
+        "skinned_levels_follow_the_pose": "ok",
+        "every_draw_path_and_occlusion_draw_the_same_levels": "ok",
+        "levels_give_way_at_the_binding_limit": "FAILED",
+        "occlusion_culling_never_drops_a_visible_instance": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: levels give way"
+      ]
+    },
+    "generate: vertices left in their first order": {
+      "tests": {
+        "frame::tests::merge_keeps_the_latest_pose_and_drops_removed": "ok",
+        "collision::tests::builtins_clone_and_instance_transform_flip_winding": "ok",
+        "frame::tests::a_new_subscriber_gets_the_full_frame_then_deltas": "ok",
+        "frame::tests::environment_baked_gi_survives_frame_transport": "ok",
+        "gi::tests::json_round_trip_keeps_grid_order_and_negative_sh": "ok",
+        "gi::tests::neural_json_matches_trainer_fields_and_keeps_signed_weights": "ok",
+        "gi::tests::neural_rejects_malformed_or_nonfinite_layers": "ok",
+        "gi::tests::neural_rejects_invalid_normalization_and_grid_capacity": "ok",
+        "gi::tests::rejects_wrong_format_missing_probes_and_invalid_grid_capacity": "ok",
+        "gi::tests::neural_json_rejects_unknown_layer_fields_and_oversized_input": "ok",
+        "gi::tests::rejects_invalid_distance_shape_moments_and_ranges": "ok",
+        "gi::tests::rejects_non_finite_grid_and_sh_values": "ok",
+        "gi::tests::rejects_unknown_json_fields_at_asset_and_probe_levels": "ok",
+        "primitives::tests::faces_wind_outward": "ok",
+        "primitives::tests::every_primitive_builds_with_valid_indices": "ok",
+        "lod::tests::small_meshes_get_no_levels_but_keep_their_triangles": "ok",
+        "gi::tests::validates_total_moment_and_bake_settings_capacity": "ok",
+        "collision::tests::geometry_only_applies_nested_nodes_filters_alpha_and_preserves_winding": "ok",
+        "lod::tests::reordering_keeps_every_triangle_and_its_skin": "ok",
+        "lod::tests::coarse_levels_read_a_prefix_of_the_vertices": "FAILED",
+        "lod::tests::a_chain_halves_with_growing_errors_over_the_same_vertices": "ok"
+      },
+      "failures": [
+        "assertion `left == right` failed: the coarsest level uses vertices 0..2491 only"
+      ]
+    }
+  }
+}

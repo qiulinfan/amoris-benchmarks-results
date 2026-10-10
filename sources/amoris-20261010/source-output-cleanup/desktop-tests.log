@@ -1,0 +1,27 @@
+✔ Cancel on close keeps the host and unsaved editor alive (3.118459ms)
+✔ Discard close stops the owned host before closing the window (1.403ms)
+✔ Cancel on switch preserves the current project and host (1.148667ms)
+✔ new editor dirt received while switch completes is retained (1.478875ms)
+✔ failed candidate startup and page load both clean the candidate and return launcher (2.455583ms)
+✔ recent-list disk failure does not shut down a healthy newly opened project (1.042792ms)
+✔ unexpected engine exit preserves modified Monaco document instead of navigating away (3.865791ms)
+﹣ packaged runtime edits, type-checks, loads viewport assets, and stops an external project (0.31975ms) # SKIP
+✔ trusted renderer documents exclude same-origin project HTML and child frames (1.689583ms)
+✔ clipboard permits only sanitized writes from current editor main frame (0.220042ms)
+✔ readiness requires exact numeric loopback authority (0.188084ms)
+✔ duplicate native authority is refused without spawning or killing it (24.969875ms)
+✔ queued breakpoint or unreadable reachable authority is occupied after bounded deadline (41.027667ms)
+✔ definitively dead stale host metadata permits a new host (39.84575ms)
+✔ startup JSON failure and timeout always stop the owned child (48.073292ms)
+✔ spawn ENOENT without PID closes cleanly and never signals another process (8.486708ms)
+✔ owned stop is idempotent, forced when needed, and leaves foreign metadata intact (17.609041ms)
+✔ owned metadata is cleaned and an unexpected exit is reported (3.621833ms)
+✔ packaged resource paths never depend on the checkout; viewport wrapper and TS libs required (5.800709ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 250.68225

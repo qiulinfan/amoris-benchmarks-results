@@ -1,0 +1,2649 @@
+{
+  "tool": "tools/backend_bench.py",
+  "date": "2026-10-09 06:12",
+  "provisional": "measured while other agents built and ran GPU work on the machine",
+  "frames": 300,
+  "splat_frames": 100,
+  "runs": [
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 6.4,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.53,
+          "p50": 0.508,
+          "p95": 0.774
+        },
+        "device_ms": 2660.1,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1434.2,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.497,
+          "p50": 2.377,
+          "p95": 2.85
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.487,
+          "lights": 0.003,
+          "opaque+sky": 2.007
+        },
+        "renderer_new_ms": 86.7,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 3.426,
+          "p50": 3.33,
+          "p95": 3.767
+        }
+      },
+      "headline": [
+        3.33,
+        2.497
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 5.8,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.85,
+          "p50": 0.818,
+          "p95": 1.136
+        },
+        "device_ms": 1162.4,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1422.9,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.454,
+          "p50": 2.198,
+          "p95": 4.145
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.399,
+          "lights": 0.0,
+          "opaque+sky": 2.055
+        },
+        "renderer_new_ms": 596.7,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 3.822,
+          "p50": 3.435,
+          "p95": 6.016
+        }
+      },
+      "headline": [
+        3.435,
+        2.454
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 5.0,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.688,
+          "p50": 0.658,
+          "p95": 0.908
+        },
+        "device_ms": 1050.3,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1274.8,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.233,
+          "p50": 2.169,
+          "p95": 2.497
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.386,
+          "lights": 0.0,
+          "opaque+sky": 1.847
+        },
+        "renderer_new_ms": 640.0,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 3.226,
+          "p50": 3.169,
+          "p95": 3.569
+        }
+      },
+      "headline": [
+        3.169,
+        2.233
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 4.3,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.344,
+          "p50": 0.335,
+          "p95": 0.442
+        },
+        "device_ms": 1097.9,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1272.1,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.214,
+          "p50": 2.159,
+          "p95": 2.46
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.387,
+          "lights": 0.003,
+          "opaque+sky": 1.824
+        },
+        "renderer_new_ms": 76.6,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 2.802,
+          "p50": 2.736,
+          "p95": 3.1
+        }
+      },
+      "headline": [
+        2.736,
+        2.214
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12-fxc",
+      "seconds": 7.8,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.712,
+          "p50": 0.693,
+          "p95": 0.888
+        },
+        "device_ms": 1146.3,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1294.6,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.26,
+          "p50": 2.201,
+          "p95": 2.509
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.4,
+          "lights": 0.0,
+          "opaque+sky": 1.86
+        },
+        "renderer_new_ms": 3302.7,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 3.256,
+          "p50": 3.214,
+          "p95": 3.547
+        }
+      },
+      "headline": [
+        3.214,
+        2.26
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 7.1,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.735,
+          "p50": 0.675,
+          "p95": 1.089
+        },
+        "device_ms": 401.5,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1655.8,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 8.843,
+          "p50": 8.622,
+          "p95": 10.189
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.867,
+          "lights": 0.005,
+          "opaque+sky": 6.972
+        },
+        "renderer_new_ms": 106.4,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 10.487,
+          "p50": 10.299,
+          "p95": 12.285
+        }
+      },
+      "headline": [
+        10.299,
+        8.843
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 7.4,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 1.286,
+          "p50": 1.03,
+          "p95": 2.845
+        },
+        "device_ms": 482.0,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1480.3,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 6.861,
+          "p50": 6.8,
+          "p95": 7.648
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.67,
+          "lights": 0.005,
+          "opaque+sky": 5.186
+        },
+        "renderer_new_ms": 817.4,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 9.216,
+          "p50": 8.814,
+          "p95": 11.764
+        }
+      },
+      "headline": [
+        8.814,
+        6.861
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 7.8,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.838,
+          "p50": 0.863,
+          "p95": 1.048
+        },
+        "device_ms": 519.0,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1803.6,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 6.216,
+          "p50": 6.196,
+          "p95": 6.947
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.451,
+          "lights": 0.006,
+          "opaque+sky": 4.758
+        },
+        "renderer_new_ms": 766.4,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 7.986,
+          "p50": 7.992,
+          "p95": 8.87
+        }
+      },
+      "headline": [
+        7.992,
+        6.216
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 6.8,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.577,
+          "p50": 0.583,
+          "p95": 0.74
+        },
+        "device_ms": 422.5,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1310.6,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 7.987,
+          "p50": 7.912,
+          "p95": 8.668
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.615,
+          "lights": 0.004,
+          "opaque+sky": 6.369
+        },
+        "renderer_new_ms": 88.9,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 9.335,
+          "p50": 9.317,
+          "p95": 10.178
+        }
+      },
+      "headline": [
+        9.317,
+        7.987
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12-fxc",
+      "seconds": 10.5,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.906,
+          "p50": 0.895,
+          "p95": 1.114
+        },
+        "device_ms": 1131.1,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1884.5,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 6.67,
+          "p50": 6.462,
+          "p95": 8.138
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.539,
+          "lights": 0.008,
+          "opaque+sky": 5.123
+        },
+        "renderer_new_ms": 3424.7,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 8.475,
+          "p50": 8.325,
+          "p95": 10.107
+        }
+      },
+      "headline": [
+        8.325,
+        6.67
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 9.2,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 0.689,
+          "p50": 0.661,
+          "p95": 0.934
+        },
+        "device_ms": 396.9,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1325.0,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 16.329,
+          "p50": 16.375,
+          "p95": 18.282
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 0.449,
+          "lights": 0.005,
+          "opaque+sky": 15.875
+        },
+        "renderer_new_ms": 80.2,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 18.022,
+          "p50": 18.156,
+          "p95": 20.319
+        }
+      },
+      "headline": [
+        18.156,
+        16.329
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 12.0,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 1.794,
+          "p50": 1.863,
+          "p95": 3.134
+        },
+        "device_ms": 671.2,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1358.3,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 18.265,
+          "p50": 18.558,
+          "p95": 19.906
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 0.447,
+          "lights": 0.0,
+          "opaque+sky": 17.818
+        },
+        "renderer_new_ms": 605.6,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 20.889,
+          "p50": 21.303,
+          "p95": 23.149
+        }
+      },
+      "headline": [
+        21.303,
+        18.265
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 36.7,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 0.857,
+          "p50": 0.774,
+          "p95": 1.281
+        },
+        "device_ms": 439.2,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1659.0,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 93.476,
+          "p50": 91.264,
+          "p95": 103.888
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 4.059,
+          "lights": 0.006,
+          "opaque+sky": 89.412
+        },
+        "renderer_new_ms": 93.9,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 93.508,
+          "p50": 92.865,
+          "p95": 106.225
+        }
+      },
+      "headline": [
+        92.865,
+        93.476
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 32.9,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 1.061,
+          "p50": 0.938,
+          "p95": 1.696
+        },
+        "device_ms": 543.1,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1710.1,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 77.42,
+          "p50": 74.828,
+          "p95": 93.408
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 1.69,
+          "lights": 0.007,
+          "opaque+sky": 75.724
+        },
+        "renderer_new_ms": 1022.3,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 79.486,
+          "p50": 76.92,
+          "p95": 95.43
+        }
+      },
+      "headline": [
+        76.92,
+        77.42
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 2.1,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 3.59,
+          "submit_to_idle_p50": 3.57,
+          "gpu_ms": 2.79,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.005,
+            "lights": 0.003,
+            "splat preprocess": 0.195,
+            "splat sort": 0.349,
+            "opaque+sky": 0.111,
+            "splat depth": 0.034,
+            "splat draw": 2.098
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 1.51,
+          "submit_to_idle_p50": 1.37,
+          "gpu_ms": 0.62,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.005,
+            "lights": 0.003,
+            "splat preprocess": 0.179,
+            "splat sort": 0.327,
+            "opaque+sky": 0.105
+          }
+        }
+      },
+      "headline": [
+        3.57,
+        2.79
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 2.6,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 5.45,
+          "submit_to_idle_p50": 4.97,
+          "gpu_ms": 2.97,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.005,
+            "lights": 0.0,
+            "splat preprocess": 0.194,
+            "splat sort": 0.688,
+            "opaque+sky": 0.101,
+            "splat depth": 0.031,
+            "splat draw": 1.953
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 3.21,
+          "submit_to_idle_p50": 3.14,
+          "gpu_ms": 0.91,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.005,
+            "lights": 0.0,
+            "splat preprocess": 0.182,
+            "splat sort": 0.631,
+            "opaque+sky": 0.091
+          }
+        }
+      },
+      "headline": [
+        4.97,
+        2.97
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 4.5,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 19.47,
+          "submit_to_idle_p50": 19.4,
+          "gpu_ms": 17.7,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 1.194,
+            "lights": 0.005,
+            "splat preprocess": 0.882,
+            "splat sort": 6.216,
+            "opaque+sky": 2.407,
+            "splat depth": 0.143,
+            "splat draw": 6.85
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 11.52,
+          "submit_to_idle_p50": 11.43,
+          "gpu_ms": 9.44,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.006,
+            "lights": 0.005,
+            "splat preprocess": 0.872,
+            "splat sort": 6.16,
+            "opaque+sky": 2.402
+          }
+        }
+      },
+      "headline": [
+        19.4,
+        17.7
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 5.8,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 18.59,
+          "submit_to_idle_p50": 18.54,
+          "gpu_ms": 15.52,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.007,
+            "lights": 0.004,
+            "splat preprocess": 0.866,
+            "splat sort": 5.46,
+            "opaque+sky": 1.126,
+            "splat depth": 0.139,
+            "splat draw": 7.915
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 9.5,
+          "submit_to_idle_p50": 9.46,
+          "gpu_ms": 7.46,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.007,
+            "lights": 0.004,
+            "splat preprocess": 0.859,
+            "splat sort": 5.454,
+            "opaque+sky": 1.134
+          }
+        }
+      },
+      "headline": [
+        18.54,
+        15.52
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 5.4,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 4.360682671734442,
+        "frame_ms_p50": 4.343799781054258,
+        "frame_ms_p95": 4.926200024783611,
+        "gpu_ms_mean": 3.453165975411733,
+        "cpu_ms_mean": 0.6099156661828359,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.4190399944782257,
+          "lights": 0.003008000086992979,
+          "opaque+sky": 2.928607940673828
+        }
+      },
+      "headline": [
+        4.343799781054258,
+        3.453165975411733
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 5.7,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 3.781311667213837,
+        "frame_ms_p50": 3.7183999083936214,
+        "frame_ms_p95": 5.230200011283159,
+        "gpu_ms_mean": 3.2877030324935914,
+        "cpu_ms_mean": 1.0074310024579367,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.4195840060710907,
+          "lights": 6.399999983841553e-05,
+          "opaque+sky": 2.7088000774383545
+        }
+      },
+      "headline": [
+        3.7183999083936214,
+        3.2877030324935914
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 6.6,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 5.055541671657314,
+        "frame_ms_p50": 4.609200172126293,
+        "frame_ms_p95": 7.20309978350997,
+        "gpu_ms_mean": 4.431830094655354,
+        "cpu_ms_mean": 1.3319789958000183,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.508512020111084,
+          "lights": 6.399999983841553e-05,
+          "opaque+sky": 3.2263998985290527
+        }
+      },
+      "headline": [
+        4.609200172126293,
+        4.431830094655354
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 5.7,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 5.719955666766812,
+        "frame_ms_p50": 5.121500231325626,
+        "frame_ms_p95": 7.486999966204166,
+        "gpu_ms_mean": 4.734957110881806,
+        "cpu_ms_mean": 0.7286246686180433,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.42156800627708435,
+          "lights": 0.0033279999624937773,
+          "opaque+sky": 3.0728960037231445
+        }
+      },
+      "headline": [
+        5.121500231325626,
+        4.734957110881806
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 16.4,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 30.751334987580776,
+        "frame_ms_p50": 30.69950081408024,
+        "frame_ms_p95": 32.371699810028076,
+        "gpu_ms_mean": 29.519822057088216,
+        "cpu_ms_mean": 1.320347334742546,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 2.1254000663757324,
+          "lights": 0.0031999999191612005,
+          "opaque+sky": 24.613279342651367
+        }
+      },
+      "headline": [
+        30.69950081408024,
+        29.519822057088216
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 12.8,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 19.750015664224822,
+        "frame_ms_p50": 19.649799913167953,
+        "frame_ms_p95": 22.562300786376,
+        "gpu_ms_mean": 17.042926460901896,
+        "cpu_ms_mean": 3.010780662695567,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 1.5636399984359741,
+          "lights": 0.0055599999614059925,
+          "opaque+sky": 14.45617961883545
+        }
+      },
+      "headline": [
+        19.649799913167953,
+        17.042926460901896
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 12.8,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 19.997361994658906,
+        "frame_ms_p50": 19.78299953043461,
+        "frame_ms_p95": 25.54059959948063,
+        "gpu_ms_mean": 17.13558960914612,
+        "cpu_ms_mean": 3.649235991636912,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 1.4682400226593018,
+          "lights": 0.005239999853074551,
+          "opaque+sky": 14.272239685058594
+        }
+      },
+      "headline": [
+        19.78299953043461,
+        17.13558960914612
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 16.7,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 32.13705968732635,
+        "frame_ms_p50": 32.03139826655388,
+        "frame_ms_p95": 34.36119854450226,
+        "gpu_ms_mean": 31.222106990814208,
+        "cpu_ms_mean": 1.226900669535001,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 2.3308799266815186,
+          "lights": 0.005840000230818987,
+          "opaque+sky": 25.533079147338867
+        }
+      },
+      "headline": [
+        32.03139826655388,
+        31.222106990814208
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 20.5,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 40.74333275513103,
+        "frame_ms_p50": 38.09560090303421,
+        "frame_ms_p95": 49.44140091538429,
+        "gpu_ms_mean": 39.66625086466471,
+        "cpu_ms_mean": 1.3932730015118917,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.39321601390838623,
+          "lights": 0.003967999946326017,
+          "opaque+sky": 35.83590316772461
+        }
+      },
+      "headline": [
+        38.09560090303421,
+        39.66625086466471
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 23.1,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.03187465419372,
+        "frame_ms_p50": 50.70969834923744,
+        "frame_ms_p95": 55.53879961371422,
+        "gpu_ms_mean": 50.46624593098959,
+        "cpu_ms_mean": 1.6148163330554963,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.4195519983768463,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 50.036800384521484
+        }
+      },
+      "headline": [
+        50.70969834923744,
+        50.46624593098959
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 116.2,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 297.93412258227664,
+        "frame_ms_p50": 295.13031244277954,
+        "frame_ms_p95": 324.889212846756,
+        "gpu_ms_mean": 323.51127166748046,
+        "cpu_ms_mean": 1.1977930023272831,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 2.2218799591064453,
+          "lights": 0.011920000426471233,
+          "opaque+sky": 286.8070068359375
+        }
+      },
+      "headline": [
+        295.13031244277954,
+        323.51127166748046
+      ]
+    },
+    {
+      "round": 0,
+      "case": "cubes-dense-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 106.5,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 271.688448250837,
+        "frame_ms_p50": 267.3110067844391,
+        "frame_ms_p95": 301.89669132232666,
+        "gpu_ms_mean": 268.79661087036135,
+        "cpu_ms_mean": 1.9262960052490234,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 2.1375200748443604,
+          "lights": 0.01696000061929226,
+          "opaque+sky": 300.427978515625
+        }
+      },
+      "headline": [
+        267.3110067844391,
+        268.79661087036135
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 4.5,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 6.396582666784525,
+        "frame_ms_p50": 6.234200205653906,
+        "frame_ms_p95": 7.502399850636721,
+        "gpu_ms_mean": 5.666290771166484,
+        "cpu_ms_mean": 1.0411450038353602,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.0058559998869895935,
+          "lights": 0.002976000076159835,
+          "splat preprocess": 0.4408639967441559,
+          "splat sort": 0.4331200122833252,
+          "opaque+sky": 0.2900800108909607,
+          "splat depth": 0.08739200234413147,
+          "splat draw": 3.939903974533081
+        }
+      },
+      "headline": [
+        6.234200205653906,
+        5.666290771166484
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 4.9,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 6.3336030052353935,
+        "frame_ms_p50": 6.057399790734053,
+        "frame_ms_p95": 8.503800258040428,
+        "gpu_ms_mean": 5.6223250023523965,
+        "cpu_ms_mean": 1.4166273351510366,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.005311999935656786,
+          "lights": 6.399999983841553e-05,
+          "splat preprocess": 0.24633599817752838,
+          "splat sort": 0.9006720185279846,
+          "opaque+sky": 0.21536000072956085,
+          "splat depth": 0.08422400057315826,
+          "splat draw": 3.7084479331970215
+        }
+      },
+      "headline": [
+        6.057399790734053,
+        5.6223250023523965
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 14.8,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 33.871571347117424,
+        "frame_ms_p50": 33.43670070171356,
+        "frame_ms_p95": 37.38659992814064,
+        "gpu_ms_mean": 29.374433727264403,
+        "cpu_ms_mean": 1.498717995683352,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.004920000210404396,
+          "lights": 0.00419999985024333,
+          "splat preprocess": 0.983959972858429,
+          "splat sort": 6.272649765014648,
+          "opaque+sky": 5.544879913330078,
+          "splat depth": 0.3222000002861023,
+          "splat draw": 14.24683952331543
+        }
+      },
+      "headline": [
+        33.43670070171356,
+        29.374433727264403
+      ]
+    },
+    {
+      "round": 0,
+      "case": "splats-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 13.0,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 31.289245927085478,
+        "frame_ms_p50": 31.147699803113937,
+        "frame_ms_p95": 35.384900867938995,
+        "gpu_ms_mean": 28.215494136810303,
+        "cpu_ms_mean": 8.044353348414104,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.006719999946653843,
+          "lights": 0.004279999993741512,
+          "splat preprocess": 0.8569200038909912,
+          "splat sort": 5.1214799880981445,
+          "opaque+sky": 2.79475998878479,
+          "splat depth": 0.3352000117301941,
+          "splat draw": 17.167600631713867
+        }
+      },
+      "headline": [
+        31.147699803113937,
+        28.215494136810303
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 4.6,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.399,
+          "p50": 0.392,
+          "p95": 0.511
+        },
+        "device_ms": 278.8,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1759.4,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.348,
+          "p50": 2.241,
+          "p95": 2.656
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.388,
+          "lights": 0.003,
+          "opaque+sky": 1.957
+        },
+        "renderer_new_ms": 92.1,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 3.021,
+          "p50": 2.924,
+          "p95": 3.449
+        }
+      },
+      "headline": [
+        2.924,
+        2.348
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 6.4,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.99,
+          "p50": 0.97,
+          "p95": 1.382
+        },
+        "device_ms": 519.9,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1839.1,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 4.413,
+          "p50": 4.758,
+          "p95": 5.261
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.489,
+          "lights": 0.0,
+          "opaque+sky": 3.924
+        },
+        "renderer_new_ms": 763.7,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 6.479,
+          "p50": 6.915,
+          "p95": 7.581
+        }
+      },
+      "headline": [
+        6.915,
+        4.413
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 6.3,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 1.203,
+          "p50": 0.996,
+          "p95": 2.066
+        },
+        "device_ms": 1080.2,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1525.3,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.889,
+          "p50": 2.352,
+          "p95": 5.504
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.498,
+          "lights": 0.0,
+          "opaque+sky": 2.391
+        },
+        "renderer_new_ms": 770.6,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 4.739,
+          "p50": 3.924,
+          "p95": 8.652
+        }
+      },
+      "headline": [
+        3.924,
+        2.889
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 4.3,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.343,
+          "p50": 0.329,
+          "p95": 0.48
+        },
+        "device_ms": 373.1,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1566.0,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.329,
+          "p50": 2.263,
+          "p95": 2.546
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.488,
+          "lights": 0.003,
+          "opaque+sky": 1.838
+        },
+        "renderer_new_ms": 100.5,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 2.913,
+          "p50": 2.848,
+          "p95": 3.18
+        }
+      },
+      "headline": [
+        2.848,
+        2.329
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "nvidia",
+      "variant": "dx12-fxc",
+      "seconds": 7.1,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.785,
+          "p50": 0.742,
+          "p95": 1.054
+        },
+        "device_ms": 542.9,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1718.5,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 2.757,
+          "p50": 2.358,
+          "p95": 5.44
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 0.497,
+          "lights": 0.0,
+          "opaque+sky": 2.26
+        },
+        "renderer_new_ms": 2009.8,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 4.683,
+          "p50": 3.423,
+          "p95": 8.586
+        }
+      },
+      "headline": [
+        3.423,
+        2.757
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 8.3,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.855,
+          "p50": 0.816,
+          "p95": 1.257
+        },
+        "device_ms": 1153.4,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1469.0,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 8.95,
+          "p50": 8.708,
+          "p95": 10.585
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.74,
+          "lights": 0.006,
+          "opaque+sky": 7.205
+        },
+        "renderer_new_ms": 112.4,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 10.836,
+          "p50": 10.505,
+          "p95": 13.026
+        }
+      },
+      "headline": [
+        10.505,
+        8.95
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 8.5,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 1.094,
+          "p50": 1.002,
+          "p95": 1.584
+        },
+        "device_ms": 1178.8,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1482.4,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 7.745,
+          "p50": 7.574,
+          "p95": 9.016
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.65,
+          "lights": 0.007,
+          "opaque+sky": 6.088
+        },
+        "renderer_new_ms": 693.3,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 9.874,
+          "p50": 9.644,
+          "p95": 11.716
+        }
+      },
+      "headline": [
+        9.644,
+        7.745
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 8.5,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 1.016,
+          "p50": 0.925,
+          "p95": 1.483
+        },
+        "device_ms": 1161.6,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1470.8,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 7.559,
+          "p50": 7.367,
+          "p95": 8.887
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.634,
+          "lights": 0.007,
+          "opaque+sky": 5.917
+        },
+        "renderer_new_ms": 696.5,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 9.553,
+          "p50": 9.262,
+          "p95": 11.484
+        }
+      },
+      "headline": [
+        9.262,
+        7.559
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 7.1,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.879,
+          "p50": 0.824,
+          "p95": 1.334
+        },
+        "device_ms": 393.1,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1534.3,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 9.286,
+          "p50": 8.924,
+          "p95": 11.086
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.861,
+          "lights": 0.006,
+          "opaque+sky": 7.42
+        },
+        "renderer_new_ms": 122.6,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 11.165,
+          "p50": 10.732,
+          "p95": 13.66
+        }
+      },
+      "headline": [
+        10.732,
+        9.286
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-headless",
+      "adapter": "780m",
+      "variant": "dx12-fxc",
+      "seconds": 10.1,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes sphere",
+        "cpu_encode_ms": {
+          "mean": 0.969,
+          "p50": 0.909,
+          "p95": 1.347
+        },
+        "device_ms": 1191.4,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1814.1,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 7.4,
+          "p50": 7.446,
+          "p95": 8.111
+        },
+        "instances": 1600001,
+        "passes_ms": {
+          "cull": 1.575,
+          "lights": 0.007,
+          "opaque+sky": 5.818
+        },
+        "renderer_new_ms": 2040.1,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 9.321,
+          "p50": 9.315,
+          "p95": 10.285
+        }
+      },
+      "headline": [
+        9.315,
+        7.4
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 9.6,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Vulkan",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 0.66,
+          "p50": 0.645,
+          "p95": 0.865
+        },
+        "device_ms": 721.0,
+        "driver": "NVIDIA 617.14",
+        "first_frame_ms": 1476.3,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 15.585,
+          "p50": 15.107,
+          "p95": 18.351
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 0.431,
+          "lights": 0.005,
+          "opaque+sky": 15.149
+        },
+        "renderer_new_ms": 84.5,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 17.12,
+          "p50": 16.799,
+          "p95": 20.513
+        }
+      },
+      "headline": [
+        16.799,
+        15.585
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 11.0,
+      "result": {
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 1.09,
+          "p50": 1.065,
+          "p95": 1.421
+        },
+        "device_ms": 488.0,
+        "driver": "32.0.16.1714 ",
+        "first_frame_ms": 1858.7,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 17.119,
+          "p50": 16.579,
+          "p95": 19.738
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 0.435,
+          "lights": 0.0,
+          "opaque+sky": 16.684
+        },
+        "renderer_new_ms": 683.9,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 18.929,
+          "p50": 18.254,
+          "p95": 22.245
+        }
+      },
+      "headline": [
+        18.254,
+        17.119
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 34.4,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Vulkan",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 1.089,
+          "p50": 1.093,
+          "p95": 1.557
+        },
+        "device_ms": 388.3,
+        "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+        "first_frame_ms": 1697.9,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 92.097,
+          "p50": 83.789,
+          "p95": 167.017
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 9.137,
+          "lights": 0.005,
+          "opaque+sky": 82.955
+        },
+        "renderer_new_ms": 105.1,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 86.616,
+          "p50": 85.324,
+          "p95": 95.245
+        }
+      },
+      "headline": [
+        85.324,
+        92.097
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 34.4,
+      "result": {
+        "adapter": "AMD Radeon 780M Graphics",
+        "backend": "Direct3D 12",
+        "bench": "many_cubes dense",
+        "cpu_encode_ms": {
+          "mean": 1.735,
+          "p50": 1.645,
+          "p95": 2.404
+        },
+        "device_ms": 577.9,
+        "driver": "32.0.13062.3005 ",
+        "first_frame_ms": 1915.1,
+        "frames": 300,
+        "gpu_ms": {
+          "mean": 79.533,
+          "p50": 78.208,
+          "p95": 88.065
+        },
+        "instances": 1600000,
+        "passes_ms": {
+          "cull": 1.772,
+          "lights": 0.006,
+          "opaque+sky": 77.754
+        },
+        "renderer_new_ms": 902.2,
+        "size": [
+          1280,
+          720
+        ],
+        "submit_to_idle_ms": {
+          "mean": 82.328,
+          "p50": 80.913,
+          "p95": 91.218
+        }
+      },
+      "headline": [
+        80.913,
+        79.533
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-headless",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 2.1,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 3.77,
+          "submit_to_idle_p50": 3.75,
+          "gpu_ms": 2.85,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.006,
+            "lights": 0.003,
+            "splat preprocess": 0.226,
+            "splat sort": 0.357,
+            "opaque+sky": 0.121,
+            "splat depth": 0.034,
+            "splat draw": 2.105
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 1.3,
+          "submit_to_idle_p50": 1.28,
+          "gpu_ms": 0.61,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.005,
+            "lights": 0.003,
+            "splat preprocess": 0.171,
+            "splat sort": 0.329,
+            "opaque+sky": 0.104
+          }
+        }
+      },
+      "headline": [
+        3.75,
+        2.85
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-headless",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 3.1,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 7.07,
+          "submit_to_idle_p50": 7.7,
+          "gpu_ms": 3.36,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.006,
+            "lights": 0.0,
+            "splat preprocess": 0.219,
+            "splat sort": 0.684,
+            "opaque+sky": 0.12,
+            "splat depth": 0.037,
+            "splat draw": 2.295
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 3.21,
+          "submit_to_idle_p50": 3.22,
+          "gpu_ms": 1.22,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.006,
+            "lights": 0.0,
+            "splat preprocess": 0.3,
+            "splat sort": 0.802,
+            "opaque+sky": 0.115
+          }
+        }
+      },
+      "headline": [
+        7.7,
+        3.36
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-headless",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 4.9,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 18.86,
+          "submit_to_idle_p50": 18.73,
+          "gpu_ms": 17.03,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.932,
+            "lights": 0.005,
+            "splat preprocess": 0.852,
+            "splat sort": 6.112,
+            "opaque+sky": 2.29,
+            "splat depth": 0.143,
+            "splat draw": 6.701
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 11.81,
+          "submit_to_idle_p50": 11.39,
+          "gpu_ms": 9.93,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.253,
+            "lights": 0.005,
+            "splat preprocess": 0.903,
+            "splat sort": 6.193,
+            "opaque+sky": 2.572
+          }
+        }
+      },
+      "headline": [
+        18.73,
+        17.03
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-headless",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 5.3,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "size": [
+          1600,
+          900
+        ],
+        "draw_on": {
+          "submit_to_idle_mean": 19.26,
+          "submit_to_idle_p50": 19.22,
+          "gpu_ms": 16.14,
+          "submitted": 1069361,
+          "visible": 874525.0,
+          "passes_ms": {
+            "cull": 0.009,
+            "lights": 0.006,
+            "splat preprocess": 0.9,
+            "splat sort": 5.61,
+            "opaque+sky": 1.14,
+            "splat depth": 0.172,
+            "splat draw": 8.301
+          }
+        },
+        "draw_off": {
+          "submit_to_idle_mean": 12.53,
+          "submit_to_idle_p50": 12.23,
+          "gpu_ms": 8.54,
+          "submitted": 1069361,
+          "visible": 871981.0,
+          "passes_ms": {
+            "cull": 0.013,
+            "lights": 0.008,
+            "splat preprocess": 1.05,
+            "splat sort": 6.181,
+            "opaque+sky": 1.292
+          }
+        }
+      },
+      "headline": [
+        19.22,
+        16.14
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 7.0,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 5.262607680633664,
+        "frame_ms_p50": 4.74150013178587,
+        "frame_ms_p95": 7.683100178837776,
+        "gpu_ms_mean": 4.2524964435895285,
+        "cpu_ms_mean": 0.8207846659421921,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.4221760034561157,
+          "lights": 0.0037440001033246517,
+          "opaque+sky": 3.4384961128234863
+        }
+      },
+      "headline": [
+        4.74150013178587,
+        4.2524964435895285
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 6.0,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 4.311436328959341,
+        "frame_ms_p50": 4.316600039601326,
+        "frame_ms_p95": 6.182299926877022,
+        "gpu_ms_mean": 3.6282103459040322,
+        "cpu_ms_mean": 1.8403636610507965,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.42073601484298706,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 2.98140811920166
+        }
+      },
+      "headline": [
+        4.316600039601326,
+        3.6282103459040322
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 6.8,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 3.9546146554251513,
+        "frame_ms_p50": 3.9135999977588654,
+        "frame_ms_p95": 4.8870001919567585,
+        "gpu_ms_mean": 3.4949786535898846,
+        "cpu_ms_mean": 1.1303376636902491,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.4219839870929718,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 2.9434878826141357
+        }
+      },
+      "headline": [
+        3.9135999977588654,
+        3.4949786535898846
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "nvidia",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 6.1,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 5.727066676093576,
+        "frame_ms_p50": 4.792000167071819,
+        "frame_ms_p95": 10.156500153243542,
+        "gpu_ms_mean": 4.766269028186798,
+        "cpu_ms_mean": 0.8381963314612707,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 0.41977599263191223,
+          "lights": 0.0037120000924915075,
+          "opaque+sky": 3.5040640830993652
+        }
+      },
+      "headline": [
+        4.792000167071819,
+        4.766269028186798
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 15.5,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 30.609369073063135,
+        "frame_ms_p50": 30.4407998919487,
+        "frame_ms_p95": 33.43750163912773,
+        "gpu_ms_mean": 27.715028991699217,
+        "cpu_ms_mean": 1.32371733268102,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 1.5856000185012817,
+          "lights": 0.0040799998678267,
+          "opaque+sky": 22.477949142456055
+        }
+      },
+      "headline": [
+        30.4407998919487,
+        27.715028991699217
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 14.5,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 21.504456661641598,
+        "frame_ms_p50": 21.30899950861931,
+        "frame_ms_p95": 25.971800088882446,
+        "gpu_ms_mean": 18.657041460673014,
+        "cpu_ms_mean": 3.3735379954179128,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 1.953320026397705,
+          "lights": 0.005119999870657921,
+          "opaque+sky": 15.626399993896484
+        }
+      },
+      "headline": [
+        21.30899950861931,
+        18.657041460673014
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "dx12-no-indirect-validation",
+      "seconds": 13.8,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 21.08047898548345,
+        "frame_ms_p50": 20.817700773477554,
+        "frame_ms_p95": 25.24000033736229,
+        "gpu_ms_mean": 18.28701201438904,
+        "cpu_ms_mean": 3.0657526687781016,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 1.5652799606323242,
+          "lights": 0.005919999908655882,
+          "opaque+sky": 15.298870086669922
+        }
+      },
+      "headline": [
+        20.817700773477554,
+        18.28701201438904
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-sphere-window",
+      "adapter": "780m",
+      "variant": "vulkan-indirect-validation",
+      "seconds": 19.3,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 32.91396490608653,
+        "frame_ms_p50": 32.92360156774521,
+        "frame_ms_p95": 36.01060062646866,
+        "gpu_ms_mean": 30.001071942647297,
+        "cpu_ms_mean": 1.2431716660658518,
+        "instances": 1600001.0,
+        "passes_ms": {
+          "cull": 2.0940001010894775,
+          "lights": 0.007799999788403511,
+          "opaque+sky": 23.915359497070312
+        }
+      },
+      "headline": [
+        32.92360156774521,
+        30.001071942647297
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 21.4,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 42.755489054058366,
+        "frame_ms_p50": 43.78670081496239,
+        "frame_ms_p95": 52.12390050292015,
+        "gpu_ms_mean": 41.7413862991333,
+        "cpu_ms_mean": 1.4206116678317389,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.6950399875640869,
+          "lights": 0.030271999537944794,
+          "opaque+sky": 34.412574768066406
+        }
+      },
+      "headline": [
+        43.78670081496239,
+        41.7413862991333
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 24.1,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 51.111922723551594,
+        "frame_ms_p50": 50.04119873046875,
+        "frame_ms_p95": 57.76920169591904,
+        "gpu_ms_mean": 50.530760828653975,
+        "cpu_ms_mean": 1.9297506618499756,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 0.40755200386047363,
+          "lights": 9.600000339560211e-05,
+          "opaque+sky": 48.52009582519531
+        }
+      },
+      "headline": [
+        50.04119873046875,
+        50.530760828653975
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 116.1,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 308.3405591050784,
+        "frame_ms_p50": 307.9299032688141,
+        "frame_ms_p95": 328.7208080291748,
+        "gpu_ms_mean": 304.2035637410482,
+        "cpu_ms_mean": 1.3234836693604788,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 2.171720027923584,
+          "lights": 0.009119999594986439,
+          "opaque+sky": 277.5758972167969
+        }
+      },
+      "headline": [
+        307.9299032688141,
+        304.2035637410482
+      ]
+    },
+    {
+      "round": 1,
+      "case": "cubes-dense-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 102.3,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 264.6619574725628,
+        "frame_ms_p50": 262.80680298805237,
+        "frame_ms_p95": 281.85299038887024,
+        "gpu_ms_mean": 262.45654134114585,
+        "cpu_ms_mean": 3.4581396607557933,
+        "instances": 1600000.0,
+        "passes_ms": {
+          "cull": 1.9775199890136719,
+          "lights": 0.005760000087320805,
+          "opaque+sky": 272.3717041015625
+        }
+      },
+      "headline": [
+        262.80680298805237,
+        262.45654134114585
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-window",
+      "adapter": "nvidia",
+      "variant": "vulkan",
+      "seconds": 4.2,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 7.451507318764925,
+        "frame_ms_p50": 5.98229980096221,
+        "frame_ms_p95": 16.50260016322136,
+        "gpu_ms_mean": 5.244803118705749,
+        "cpu_ms_mean": 1.7651226607958477,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.006144000217318535,
+          "lights": 0.003135999897494912,
+          "splat preprocess": 0.4336639940738678,
+          "splat sort": 0.44675201177597046,
+          "opaque+sky": 0.2951039969921112,
+          "splat depth": 0.09254399687051773,
+          "splat draw": 4.158559799194336
+        }
+      },
+      "headline": [
+        5.98229980096221,
+        5.244803118705749
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-window",
+      "adapter": "nvidia",
+      "variant": "dx12",
+      "seconds": 5.5,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 6.889735676037769,
+        "frame_ms_p50": 6.558199878782034,
+        "frame_ms_p95": 9.139999747276306,
+        "gpu_ms_mean": 6.001519360542297,
+        "cpu_ms_mean": 1.5897376676400503,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.005535999778658152,
+          "lights": 9.600000339560211e-05,
+          "splat preprocess": 0.2491839975118637,
+          "splat sort": 0.9815679788589478,
+          "opaque+sky": 0.2202879935503006,
+          "splat depth": 0.08764799684286118,
+          "splat draw": 3.844575881958008
+        }
+      },
+      "headline": [
+        6.558199878782034,
+        6.001519360542297
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-window",
+      "adapter": "780m",
+      "variant": "vulkan",
+      "seconds": 15.7,
+      "result": {
+        "backend": "Vulkan",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 34.6264006011188,
+        "frame_ms_p50": 34.28089991211891,
+        "frame_ms_p95": 38.60440105199814,
+        "gpu_ms_mean": 31.35712837855021,
+        "cpu_ms_mean": 1.5256376638015112,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.00571999978274107,
+          "lights": 0.004800000227987766,
+          "splat preprocess": 0.9409999847412109,
+          "splat sort": 5.491559982299805,
+          "opaque+sky": 6.2923102378845215,
+          "splat depth": 0.34360000491142273,
+          "splat draw": 15.158519744873047
+        }
+      },
+      "headline": [
+        34.28089991211891,
+        31.35712837855021
+      ]
+    },
+    {
+      "round": 1,
+      "case": "splats-window",
+      "adapter": "780m",
+      "variant": "dx12",
+      "seconds": 13.3,
+      "result": {
+        "backend": "Direct3D 12",
+        "adapter": "AMD Radeon 780M Graphics",
+        "width": 2560.0,
+        "height": 1440.0,
+        "frames": 300.0,
+        "frame_ms_mean": 31.356918271631002,
+        "frame_ms_p50": 31.063400208950043,
+        "frame_ms_p95": 37.0338000357151,
+        "gpu_ms_mean": 27.832905330657958,
+        "cpu_ms_mean": 6.615906649430593,
+        "instances": 7.0,
+        "passes_ms": {
+          "cull": 0.005640000104904175,
+          "lights": 0.0032399999909102917,
+          "splat preprocess": 0.8059999942779541,
+          "splat sort": 5.119239807128906,
+          "opaque+sky": 2.856839895248413,
+          "splat depth": 0.32839998602867126,
+          "splat draw": 17.879520416259766
+        }
+      },
+      "headline": [
+        31.063400208950043,
+        27.832905330657958
+      ]
+    }
+  ]
+}

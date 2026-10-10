@@ -1,0 +1,93 @@
+{
+  "tool": "tools/splats/compare_matrix.py",
+  "date": "2026-10-10 05:51",
+  "scenes": {
+    "1M 1600x900": "--count 1000000"
+  },
+  "raster": "tile",
+  "builds": {
+    "override": "<local-path>",
+    "committed": "<local-path>"
+  },
+  "build_env": {
+    "override": {
+      "POCKET_EXP_SPLAT_TILE": "<local-path>"
+    }
+  },
+  "build_vs_build": [
+    {
+      "a": "override",
+      "b": "committed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.16,
+        130.16,
+        57.06
+      ],
+      "mean_rgb_b": [
+        95.16,
+        130.16,
+        57.06
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "dx12",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "override"
+    },
+    {
+      "a": "override",
+      "b": "committed",
+      "height": 900,
+      "max_diff_8bit": 0,
+      "max_diff_at": [
+        0,
+        0
+      ],
+      "mean_rgb_a": [
+        95.17,
+        130.17,
+        57.07
+      ],
+      "mean_rgb_b": [
+        95.17,
+        130.17,
+        57.07
+      ],
+      "pixels_over_percent": {
+        ">1": 0.0,
+        ">16": 0.0,
+        ">2": 0.0,
+        ">32": 0.0,
+        ">4": 0.0,
+        ">64": 0.0,
+        ">8": 0.0
+      },
+      "psnr_db": null,
+      "rmse_8bit": 0.0,
+      "width": 1600,
+      "adapter": "nvidia",
+      "backend": "vulkan",
+      "scene": "1M 1600x900",
+      "args": "--count 1000000",
+      "first": "override"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "provisional": "other agents shared the machine and its GPUs; headless Chrome 155, tools/web_bench.mjs, uncapped frame loop",
+  "page": "web/viewport/?demo=lod&n=48&detail=6&occlusion=off (canvas 1254x564 in a 1280x720 window)",
+  "build": "pocket-viewport, web profile, wasm-bindgen 0.2.129, wasm-opt -O3",
+  "wasm_bytes": {
+    "master_3138f9e2": 2293805,
+    "explore_lod": 2333175
+  },
+  "wasm_gzip_bytes": {
+    "master_3138f9e2": 936992,
+    "explore_lod": 955966
+  },
+  "meshes_levels_and_field_ms": {
+    "lod_on": 1350.1,
+    "lod_off": 1270.8,
+    "note": "demo::lod_model(6) and lod_field(48, 6) on the page's thread: three 81,920-triangle rocks and a 49,152-triangle knot made and given their levels in WebAssembly; natively 33 ms for the meshes and 522 ms for the levels"
+  },
+  "runs": [
+    {
+      "adapter": "amd rdna-3 (Radeon 780M), Chrome's default",
+      "lod": "on",
+      "draw_path": "first-instance",
+      "draw_calls": 165,
+      "gpu_ms_p50": 3.611,
+      "frame_ms_p50": 6.153
+    },
+    {
+      "adapter": "amd rdna-3 (Radeon 780M), Chrome's default",
+      "lod": "on",
+      "draw_path": "first-instance",
+      "gpu_ms_p50": 3.86,
+      "frame_ms_p50": 6.003
+    },
+    {
+      "adapter": "amd rdna-3 (Radeon 780M), Chrome's default",
+      "lod": "off",
+      "draw_path": "first-instance",
+      "draw_calls": 25,
+      "gpu_ms_p50": 193.66,
+      "gpu_ms_min": 146.128,
+      "frame_ms_p50": 52.618,
+      "note": "121 of 200 frames carried timestamps; frame times are not meaningful with the queue this far behind"
+    },
+    {
+      "adapter": "nvidia blackwell (RTX 5060), --force_high_performance_gpu",
+      "lod": "on",
+      "draw_path": "first-instance",
+      "gpu_ms_p50": 0.87,
+      "frame_ms_p50": 3.573
+    },
+    {
+      "adapter": "nvidia blackwell (RTX 5060), --force_high_performance_gpu",
+      "lod": "on",
+      "draw_path": "first-instance",
+      "draw_calls": 165,
+      "gpu_ms_p50": 0.864,
+      "frame_ms_p50": 2.689,
+      "render_ms_p50": 0.8
+    },
+    {
+      "adapter": "nvidia blackwell (RTX 5060), --force_high_performance_gpu",
+      "lod": "on",
+      "draw_path": "baseline (gpu_minimal=first-instance)",
+      "draw_calls": 165,
+      "gpu_ms_p50": 1.848,
+      "frame_ms_p50": 2.579,
+      "render_ms_p50": 0.8
+    },
+    {
+      "adapter": "nvidia blackwell (RTX 5060), --force_high_performance_gpu",
+      "lod": "off",
+      "draw_path": "first-instance",
+      "gpu_ms_p50": 82.731,
+      "frame_ms_p50": 89.306,
+      "passes_last_frame_ms": {
+        "shadows": 41.816,
+        "opaque+sky": 40.901
+      }
+    }
+  ]
+}

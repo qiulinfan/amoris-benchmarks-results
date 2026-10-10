@@ -1,0 +1,85 @@
+{
+  "tool": "tools/backend_compare.py",
+  "date": "2026-10-10 00:00",
+  "backends": [
+    "vulkan",
+    "dx12"
+  ],
+  "adapters": [
+    "nvidia"
+  ],
+  "cases": {
+    "cubes-shadows": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "<local-path>",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+            "ok": true,
+            "seconds": 3.1
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "<local-path>",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+            "ok": true,
+            "seconds": 2.5
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.033,
+          "psnr_db": 77.72,
+          "max_diff_8bit": 21,
+          "pixels_over_percent": {
+            ">1": 0.0,
+            ">16": 0.0,
+            ">2": 0.0,
+            ">32": 0.0,
+            ">4": 0.0,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    },
+    "cubes-sphere": {
+      "nvidia": {
+        "captures": [
+          {
+            "backend": "vulkan",
+            "adapter": "nvidia",
+            "png": "<local-path>",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+            "ok": true,
+            "seconds": 3.3
+          },
+          {
+            "backend": "dx12",
+            "adapter": "nvidia",
+            "png": "<local-path>",
+            "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+            "ok": true,
+            "seconds": 4.4
+          }
+        ],
+        "dx12_vs_vulkan": {
+          "rmse_8bit": 0.07,
+          "psnr_db": 71.27,
+          "max_diff_8bit": 29,
+          "pixels_over_percent": {
+            ">1": 0.01,
+            ">16": 0.0,
+            ">2": 0.01,
+            ">32": 0.0,
+            ">4": 0.01,
+            ">64": 0.0,
+            ">8": 0.0
+          }
+        }
+      }
+    }
+  }
+}

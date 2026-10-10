@@ -1,0 +1,1070 @@
+{
+  "format": 1,
+  "command": "cargo xtask check --record --json",
+  "commit": "b6943ade3437+dirty",
+  "machine": {
+    "id": "other",
+    "cpu": "Apple M5",
+    "logical_cores": 10,
+    "gpus": [],
+    "os": "macos aarch64",
+    "on_ac_power": null,
+    "power_plan": null,
+    "chrome": null,
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "started_utc": "2026-10-10T12:36:03Z",
+  "duration_ms": 567235,
+  "verdict": "Fail",
+  "steps": [
+    {
+      "name": "deps",
+      "verdict": "Pass",
+      "duration_ms": 555,
+      "summary": "19 workspace crates, 387 external packages, 2 targets",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [
+        {
+          "code": "deps.vendor_unchecked",
+          "message": "the pinned rquickjs-sys crate is not in cargo's cache, so the vendored QuickJS-ng is not compared; run python third_party/vendor.py --check once",
+          "detail": {
+            "tail": "not cached: rquickjs-sys-0.14.0.crate is not in <local-path>"
+          }
+        }
+      ],
+      "measurements": [
+        {
+          "name": "deps.crates",
+          "value": 19.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "deps.external",
+          "value": 387.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/deps.log"
+    },
+    {
+      "name": "fmt",
+      "verdict": "Pass",
+      "duration_ms": 837,
+      "summary": "formatted",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/fmt.log"
+    },
+    {
+      "name": "docs",
+      "verdict": "Pass",
+      "duration_ms": 86,
+      "summary": "59 Markdown files under docs/ (not docs/evidence/), 0 need wrapping",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "docs.files",
+          "value": 59.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/docs.log"
+    },
+    {
+      "name": "clippy",
+      "verdict": "Pass",
+      "duration_ms": 48216,
+      "summary": "diagnostics: 0 on aarch64-apple-darwin, 0 on wasm32-unknown-unknown; lint fixture: 82 of 82 entries reported",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "clippy.fixture_reported",
+          "value": 82.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/clippy.log"
+    },
+    {
+      "name": "build",
+      "verdict": "Pass",
+      "duration_ms": 115662,
+      "summary": "native release build",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/build.log"
+    },
+    {
+      "name": "gen",
+      "verdict": "Pass",
+      "duration_ms": 113,
+      "summary": "8 clippy.toml copies, 13 @generated files, 24 shared files against shared/SYNC.toml; the engine's generators (pocket gen) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "gen.outputs",
+          "value": 8.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "gen.shared_files",
+          "value": 24.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "test",
+      "verdict": "Fail",
+      "duration_ms": 204571,
+      "summary": "677 passed, 10 failed, 0 ignored in 114 suites, ignored tests included",
+      "errors": [
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::splat_overflow_is_reported failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "the nearest 2048 of 20000 splats differ from all by 2.562\nthread 'splat::tile::tests::splat_overflow_is_reported' (19194630) panicked at crates/pocket-render/src/splat/tile.rs:1064:9:\nassertion failed: mean_abs_diff(&full, &back) < 0.01",
+            "test": "splat::tile::tests::splat_overflow_is_reported"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::tiles_match_quads failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "splats change the image by 7.66; tiles differ from quads by 1.2248, at most Some(100)\nthread 'splat::tile::tests::tiles_match_quads' (19194889) panicked at crates/pocket-render/src/splat/tile.rs:812:9:\nmean difference 1.2248020833333333",
+            "test": "splat::tile::tests::tiles_match_quads"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::antialias_fades_subpixel_splats failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "image change (quads, quads aa, tiles, tiles aa): [0.15672916666666667, 0.07569791666666667, 0.10366666666666667, 0.07441666666666667]\nthread 'splat::tile::tests::antialias_fades_subpixel_splats' (19194481) panicked at crates/pocket-render/src/splat/tile.rs:844:9:\n[0.15672916666666667, 0.07569791666666667, 0.10366666666666667, 0.07441666666666667]",
+            "test": "splat::tile::tests::antialias_fades_subpixel_splats"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::pair_overflow_is_reported failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "thread 'splat::tile::tests::pair_overflow_is_reported' (19194483) panicked at crates/pocket-render/src/splat/tile.rs:974:9:\nassertion failed: mean_abs_diff(&full, &back) < 0.01",
+            "test": "splat::tile::tests::pair_overflow_is_reported"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::transient_pair_drops_are_reported failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "(pairs wanted, capacity, dropped) per frame: [(None, 1048576, 0), (None, 1048576, 0), (Some(2277228), 2846535, 1228652), (Some(2277228), 2846535, 1228652), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0)]\nthread 'splat::tile::tests::transient_pair_drops_are_reported' (19194936) panicked at crates/pocket-render/src/splat/tile.rs:1035:9:\nmean difference 9.928729166666667",
+            "test": "splat::tile::tests::transient_pair_drops_are_reported"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::ties_are_stable failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "Quads: 0 channel values changed over 4 redraws\nTiles: 82119 channel values changed over 4 redraws\nthread 'splat::tile::tests::ties_are_stable' (19194846) panicked at crates/pocket-render/src/splat/tile.rs:871:13:\nassertion `left == right` failed: Tiles\n  left: 82119\n right: 0",
+            "test": "splat::tile::tests::ties_are_stable"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "pocket_render splat::tile::tests::growth_respects_binding_limit failed",
+          "detail": {
+            "crate": "pocket_render",
+            "message": "storage binding 19169 MB, buffer 19169 MB\nSplatStats { assets: 2, stored: 4100000, clouds: 2, submitted: 4100000, skipped: 0, visible: Some(4100000), quad_pixels: Some(148094192), gpu_bytes: 963704704, tile_pairs: Some(7796399), pair_capacity: 17104896, tile_dropped: 0, tile_splats_dropped: 0, tile_drop_frames: 0, tile_visits: None }\nthread 'splat::tile::tests::growth_respects_binding_limit' (19194482) panicked at crates/pocket-render/src/splat/tile.rs:1115:9:\nmean difference 7.78909375",
+            "test": "splat::tile::tests::growth_respects_binding_limit"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "lod levels_cut_triangles_and_stay_within_a_pixel failed",
+          "detail": {
+            "crate": "lod",
+            "message": "t 0: camera triangles 1843202 full, 35490 with levels (instances per level [1, 1, 0, 0, 6, 11, 21, 61]); shadows 5050376 and 128648\nt 0: 929 pixels show another entity (0.403%), 1 of them more than 1 pixel and 0 more than 2 pixels from an edge of the full meshes' id image; 1471 pixels differ by more than 32 (0.638%)\nt 0.45: camera triangles 1159170 full, 18402 with levels (instances per level [1, 0, 1, 0, 2, 11, 8, 41]); shadows 5730312 and 180040\nt 0.45: 1227 pixels show another entity (0.533%), 5 of them more than 1 pixel and 2 more than 2 pixels from an edge of the full meshes' id image; 1406 pixels differ by more than 32 (0.610%)\nthread 'levels_cut_triangles_and_stay_within_a_pixel' (19195243) panicked at crates/pocket-render/tests/lod.rs:183:9:\nassertion `left == right` failed: silhouettes stay within two pixels\n  left: 2\n right: 0\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+            "test": "levels_cut_triangles_and_stay_within_a_pixel"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "rt_shadows ray_traced_shadows_fall_where_cascades_do failed",
+          "detail": {
+            "crate": "rt_shadows",
+            "message": "Metal on Apple M5, static: shadowed pixels 2286 cascaded, 129600 ray traced, overlap 0.018\nthread 'ray_traced_shadows_fall_where_cascades_do' (19197214) panicked at crates/pocket-render/tests/rt_shadows.rs:295:5:\nMetal on Apple M5, static: shadows fall in the same places (intersection over union 0.018)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+            "test": "ray_traced_shadows_fall_where_cascades_do"
+          }
+        },
+        {
+          "code": "test.failed",
+          "message": "taa splats_behind_meshes_are_stable_under_taa failed",
+          "detail": {
+            "crate": "taa",
+            "message": "Quads Msaa: 2012 pixels of splats, 0 flickering\nQuads Taa: 2014 pixels of splats, 0 flickering\nQuads MsaaTaa: 2014 pixels of splats, 0 flickering\nTiles Msaa: 1787 pixels of splats, 0 flickering\nTiles Taa: 1790 pixels of splats, 0 flickering\nTiles MsaaTaa: 1790 pixels of splats, 165 flickering\nthread 'splats_behind_meshes_are_stable_under_taa' (19197775) panicked at crates/pocket-render/tests/taa.rs:681:13:\nassertion `left == right` failed: Tiles MsaaTaa: splats flickered on 165 pixels of a still frame\n  left: 165\n right: 0\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+            "test": "splats_behind_meshes_are_stable_under_taa"
+          }
+        }
+      ],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "test.passed",
+          "value": 677.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.failed",
+          "value": 10.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "test.ignored",
+          "value": 0.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/test.log"
+    },
+    {
+      "name": "wasm",
+      "verdict": "Pass",
+      "duration_ms": 29429,
+      "summary": "checked for wasm32-unknown-unknown: game crates, pocket-web",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": null,
+      "log": "out/check/wasm.log"
+    },
+    {
+      "name": "types",
+      "verdict": "Pass",
+      "duration_ms": 99,
+      "summary": "3 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/tsc",
+          "value": 31.3,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/modules",
+          "value": 3.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/tsc",
+          "value": 34.2,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state-lint/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "determinism",
+      "verdict": "Pass",
+      "duration_ms": 20145,
+      "summary": "2 projects; cross build against a debug pocket",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/ticks_compared",
+          "value": 3600.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/ticks_compared",
+          "value": 1800.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "cross_build_ticks_compared",
+          "value": 601.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/determinism-cross-build.log"
+    },
+    {
+      "name": "fork",
+      "verdict": "Pass",
+      "duration_ms": 1554,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/forks",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "replay",
+      "verdict": "Pass",
+      "duration_ms": 1502,
+      "summary": "2 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/seed1.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed1.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed2.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.replay_bytes",
+          "value": 463882.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.dropped_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing-course/seed3.delayed_write_found_at",
+          "value": 600.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed1.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed2.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.replay_bytes",
+          "value": 177568.0,
+          "unit": "bytes",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.dropped_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/seed3.delayed_write_found_at",
+          "value": 330.0,
+          "unit": "tick",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "reload",
+      "verdict": "Pass",
+      "duration_ms": 888,
+      "summary": "4 projects",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "samples/sailing-course/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "samples/sailing/reloads",
+          "value": 6.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/closure-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "tests/fixtures/controls/module-state/control_caught",
+          "value": 1.0,
+          "unit": "count",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": null
+    },
+    {
+      "name": "contract",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "contract.sync: shared/SYNC.toml records no reference commit yet; the conformance checks and the benchmark self-test (checks.md 8.7) are not built yet",
+      "log": null
+    },
+    {
+      "name": "web",
+      "verdict": "Pass",
+      "duration_ms": 143446,
+      "summary": "samples/sailing against native pocket hashes in headless Chrome, isolated and not, and with wasm-opt -O3: [true, true]",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [
+        {
+          "name": "web.size.wasm",
+          "value": 11975.1904296875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz",
+          "value": 3590.6728515625,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.glue",
+          "value": 15.857421875,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.O3",
+          "value": 9512.033203125,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.wasm.gz.O3",
+          "value": 3332.1640625,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.size.page",
+          "value": 12017.4677734375,
+          "unit": "KiB",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile",
+          "value": 12.83,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page",
+          "value": 0.445,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready",
+          "value": 42.07,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created",
+          "value": 43.91,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready",
+          "value": 121.04,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot",
+          "value": 124.305,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate",
+          "value": 0.37,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build",
+          "value": 66.29,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail",
+          "value": 0.13,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail",
+          "value": 0.505,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.04,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail",
+          "value": 0.07,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild",
+          "value": 0.12,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 0.11,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer",
+          "value": 8.265,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.compile.O3",
+          "value": 13.37,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.instantiate_page.O3",
+          "value": 0.415,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.module_ready.O3",
+          "value": 48.44,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_created.O3",
+          "value": 53.15,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_ready.O3",
+          "value": 141.485,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.first_snapshot.O3",
+          "value": 144.72,
+          "unit": "ms",
+          "stat": "since navigation",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.worker_instantiate.O3",
+          "value": 0.465,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.start.game_build.O3",
+          "value": 66.835,
+          "unit": "ms",
+          "stat": "value",
+          "samples": 1,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.055,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.tick.sail.O3",
+          "value": 0.175,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1200,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.095,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.publish.sail.O3",
+          "value": 0.455,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 11,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.035,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.hash.sail.O3",
+          "value": 0.1,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 1189,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.06,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.rebuild.O3",
+          "value": 0.105,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 0.11,
+          "unit": "ms",
+          "stat": "median",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        },
+        {
+          "name": "web.snapshot.transfer.O3",
+          "value": 8.06,
+          "unit": "ms",
+          "stat": "p95",
+          "samples": 32,
+          "limit": null,
+          "limit_kind": null
+        }
+      ],
+      "skipped_because": null,
+      "log": "out/check/web.log"
+    },
+    {
+      "name": "perf",
+      "verdict": "Skipped",
+      "duration_ms": 0,
+      "summary": "skipped: xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "errors": [],
+      "more_errors": 0,
+      "warnings": [],
+      "measurements": [],
+      "skipped_because": "xtask does not run the budgets of bench/budgets/ yet (budgets.md 8)",
+      "log": null
+    }
+  ]
+}

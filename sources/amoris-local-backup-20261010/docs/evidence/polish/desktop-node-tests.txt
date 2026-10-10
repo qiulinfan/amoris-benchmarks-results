@@ -1,0 +1,41 @@
+# node --test test/*.test.cjs (Windows 11, Node 25.8.1, 2026-10-09), without AMORIS_TEST_RESOURCES
+✔ Cancel on close keeps the host and unsaved editor alive (2.9666ms)
+✔ Discard close stops the owned host before closing the window (1.7723ms)
+✔ Cancel on switch preserves the current project and host (1.2638ms)
+✔ new editor dirt received while switch completes is retained (1.3517ms)
+✔ failed candidate startup and page load both clean the candidate and return launcher (2.4289ms)
+✔ recent-list disk failure does not shut down a healthy newly opened project (0.9951ms)
+✔ unexpected engine exit preserves modified Monaco document instead of navigating away (3.6872ms)
+﹣ packaged runtime edits, type-checks, loads viewport assets, and stops an external project (0.5715ms) # SKIP
+✔ trusted renderer documents exclude same-origin project HTML and child frames (1.2865ms)
+✔ clipboard permits only sanitized writes from current editor main frame (0.2445ms)
+✔ readiness requires exact numeric loopback authority (0.2314ms)
+✔ duplicate native authority is refused without spawning or killing it (38.5276ms)
+✔ queued breakpoint or unreadable reachable authority is occupied after bounded deadline (47.5722ms)
+✔ definitively dead stale host metadata permits a new host (21.0583ms)
+✔ startup JSON failure and timeout always stop the owned child (40.8492ms)
+✔ spawn ENOENT without PID closes cleanly and never signals another process (5.1355ms)
+✔ owned stop is idempotent, forced when needed, and leaves foreign metadata intact (26.8417ms)
+✔ owned metadata is cleaned and an unexpected exit is reported (11.1671ms)
+✔ packaged resource paths never depend on the checkout; viewport wrapper and TS libs required (33.343ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 322.9756
+
+# runtime.integration.test.cjs with AMORIS_TEST_RESOURCES: master 3138f9e2's pocket.exe (release)
+✖ packaged runtime edits, type-checks, loads viewport assets, and stops an external project (503.3314ms)
+ℹ pass 0
+ℹ fail 1
+✖ failing tests:
+  Error: Engine returned an invalid readiness response.
+  (host.cjs: the readiness line's project, $USER_HOME/Sailing, is not fs.realpath's $USER_HOME/Sailing)
+
+# the same with explore/polish's pocket.exe (debug), whose serve reports a plain project path
+✔ packaged runtime edits, type-checks, loads viewport assets, and stops an external project (364.5045ms)
+ℹ pass 1
+ℹ fail 0

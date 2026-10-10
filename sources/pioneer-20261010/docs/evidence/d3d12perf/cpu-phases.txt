@@ -1,0 +1,41 @@
+Per-phase CPU time of Renderer::render, RTX 5060, 2026-10-09, single-agent, AC power.
+A temporary timer (not committed) stamped the phases of render() and printed their average over
+200 frames; ms. Phases: sync = applying the frame; uniforms = the per-frame uniform writes before
+the command encoder; cull+shadows = encoder until the opaque pass (skinning, cull, lights,
+cascades); opaque = recording the opaque pass; gtao/taa/splat; post+ui = bloom, display
+transform, overlays, UI; resolve = timestamp resolve; finish = CommandEncoder::finish (wgpu-core
+records the passes into Direct3D 12 or Vulkan command lists); submit = Queue::submit.
+POCKET_AA=msaa POCKET_GTAO=off POCKET_OCCLUSION=off unless said.
+
+many_cubes sphere (--headless-bench 400), master's renderer
+  dx12    sync 0.003 | uniforms 0.099 | cull+shadows 0.015 | opaque 0.010 | gtao/taa/splat 0.001 | post+ui 0.199 | resolve 0.002 | finish 0.361 | submit 0.107
+  vulkan  sync 0.003 | uniforms 0.024 | cull+shadows 0.007 | opaque 0.007 | gtao/taa/splat 0.001 | post+ui 0.064 | resolve 0.002 | finish 0.170 | submit 0.063
+  dx12, POCKET_GPU_MINIMAL=timestamps         uniforms 0.087 | post+ui 0.189 | resolve 0.000 | finish 0.317 | submit 0.096
+  vulkan, POCKET_GPU_MINIMAL=timestamps       uniforms 0.024 | post+ui 0.064 | resolve 0.000 | finish 0.158 | submit 0.059
+  dx12, WGPU_VALIDATION_INDIRECT_CALL=0       uniforms 0.090 | post+ui 0.194 | resolve 0.002 | finish 0.295 | submit 0.101
+    (the baseline draw path: one batch here, so the same draws without wgpu's validation pass)
+
+after the bloom chain keeps its bind groups and writes its parameters once
+  dx12    uniforms 0.089 | post+ui 0.013 | finish 0.346 | submit 0.099
+  vulkan  uniforms 0.023 | post+ui 0.012 | finish 0.161 | submit 0.060
+  without the 12 bloom and display passes at all (experiment): dx12 finish 0.180, vulkan 0.077;
+  dx12 also without timestamps and indirect validation: finish 0.124
+  -> about 14 us per render pass on Direct3D 12 against 9 us on Vulkan, in wgpu-core and wgpu-hal
+
+after the frame uniforms are written only when their bytes change (the camera turns every frame,
+so the view and culling uniforms still change; the cluster and overlay ones do not)
+  dx12    uniforms 0.071        vulkan  uniforms 0.021
+
+lod_field (--frames 400 --warm 30, still camera, 4 cascades)
+  dx12                              finish 0.532 / 0.512 (two runs) | submit 0.090 / 0.084
+  dx12, WGPU_DISCARD_HAL_LABELS=1   finish 0.475 / 0.484            | submit 0.083 / 0.085
+  vulkan                            finish 0.191                    | submit 0.053
+  vulkan, WGPU_DISCARD_HAL_LABELS=1 finish 0.192                    | submit 0.053
+
+lod_field --crowd 40 (40 skinned columns), after the skinning pass's single bind group
+  dx12    cull+shadows 0.089 | finish 0.731 | submit 0.094
+  vulkan  cull+shadows 0.055 | finish 0.263 | submit 0.059
+  dx12, POCKET_GPU_MINIMAL=timestamps     finish 0.711
+  vulkan, POCKET_GPU_MINIMAL=timestamps   finish 0.245
+  dx12, WGPU_VALIDATION_INDIRECT_CALL=0   cull+shadows 0.187 | opaque 0.024 | finish 0.975 (baseline path: a draw per batch)
+  dx12, without the bloom chain           finish 0.561

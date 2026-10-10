@@ -1,0 +1,490 @@
+{
+  "tool": "tools/occlusion_compare.py",
+  "date": "2026-10-10 09:23",
+  "backend": "metal",
+  "adapter": null,
+  "cases": {
+    "cubes-sphere": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-sphere-off.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 2.2,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-sphere-on.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.9,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.001,
+        "psnr_db": 111.48,
+        "max_diff_8bit": 1,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "cubes-dense": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-dense-off.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.9,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-dense-on.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.8,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "cubes-shadows": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-shadows-off.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.1,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-shadows-on.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.2,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "splats": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/splats-off.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.5,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/splats-on.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "gi-room-static": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/gi-room-static-off.png",
+          "gpu": "\"adapter\": \"Apple M5\",",
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/gi-room-static-on.png",
+          "gpu": "\"adapter\": \"Apple M5\",",
+          "ok": true,
+          "seconds": 0.1,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "pt-lab-static": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/pt-lab-static-off.png",
+          "gpu": "\"adapter\": \"Apple M5\",",
+          "ok": true,
+          "seconds": 0.2,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/pt-lab-static-on.png",
+          "gpu": "\"adapter\": \"Apple M5\",",
+          "ok": true,
+          "seconds": 0.1,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.001,
+        "psnr_db": 106.53,
+        "max_diff_8bit": 1,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "sailing": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/sailing-off.png",
+          "capture": {
+            "world_tick": 120,
+            "tick": 0,
+            "instances": 5
+          },
+          "ok": true,
+          "seconds": 1.2,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/sailing-on.png",
+          "capture": {
+            "world_tick": 120,
+            "tick": 0,
+            "instances": 5
+          },
+          "ok": true,
+          "seconds": 0.2,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "anim": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/anim-off.png",
+          "capture": {
+            "world_tick": 90,
+            "tick": 0,
+            "instances": 22
+          },
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/anim-on.png",
+          "capture": {
+            "world_tick": 90,
+            "tick": 0,
+            "instances": 22
+          },
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.486,
+        "psnr_db": 54.39,
+        "max_diff_8bit": 29,
+        "pixels_over_percent": {
+          ">1": 0.56,
+          ">16": 0.05,
+          ">2": 0.46,
+          ">32": 0.0,
+          ">4": 0.32,
+          ">64": 0.0,
+          ">8": 0.18
+        }
+      }
+    },
+    "gi-room": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/gi-room-off.png",
+          "capture": {
+            "world_tick": 60,
+            "tick": 0,
+            "instances": 8
+          },
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/gi-room-on.png",
+          "capture": {
+            "world_tick": 60,
+            "tick": 0,
+            "instances": 8
+          },
+          "ok": true,
+          "seconds": 0.3,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    },
+    "cubes-orbit": {
+      "captures": [
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-orbit-off.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 1.0,
+          "occlusion": "off"
+        },
+        {
+          "backend": "metal",
+          "adapter": null,
+          "png": "out/pioneer-integration/occlusion/cubes-orbit-on.png",
+          "gpu": "[INFO] GPU: Apple M5 (Metal, IntegratedGpu); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+          "ok": true,
+          "seconds": 0.9,
+          "occlusion": "on"
+        }
+      ],
+      "on_vs_off": {
+        "rmse_8bit": 0.0,
+        "psnr_db": null,
+        "max_diff_8bit": 0,
+        "pixels_over_percent": {
+          ">1": 0.0,
+          ">16": 0.0,
+          ">2": 0.0,
+          ">32": 0.0,
+          ">4": 0.0,
+          ">64": 0.0,
+          ">8": 0.0
+        }
+      }
+    }
+  },
+  "scenes": [
+    {
+      "scene": "mixed",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 65,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 59,
+      "entities_visible_on": 59,
+      "max_abs_diff": 0,
+      "mean_abs_diff": 0.0,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    },
+    {
+      "scene": "cubes",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 100001,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 10765,
+      "entities_visible_on": 10765,
+      "max_abs_diff": 0,
+      "mean_abs_diff": 0.0,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    },
+    {
+      "scene": "samples/anim",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 22,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 7,
+      "entities_visible_on": 7,
+      "max_abs_diff": 0,
+      "mean_abs_diff": 0.0,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    },
+    {
+      "scene": "samples/sailing",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 5,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 3,
+      "entities_visible_on": 3,
+      "max_abs_diff": 0,
+      "mean_abs_diff": 0.0,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    },
+    {
+      "scene": "samples/gi-room",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 8,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 8,
+      "entities_visible_on": 8,
+      "max_abs_diff": 0,
+      "mean_abs_diff": 0.0,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    },
+    {
+      "scene": "samples/pt-lab",
+      "adapter": "Apple M5",
+      "backend": "Metal",
+      "instances": 11,
+      "draw_path": "multi-draw",
+      "coverage_l1": 0.0,
+      "entities_only_off": 0,
+      "entities_only_on": 0,
+      "entities_visible_off": 10,
+      "entities_visible_on": 10,
+      "max_abs_diff": 1,
+      "mean_abs_diff": 1.9290123456790124e-06,
+      "pixels_differing_gt8": 0,
+      "pixels_differing_share": 0.0
+    }
+  ]
+}

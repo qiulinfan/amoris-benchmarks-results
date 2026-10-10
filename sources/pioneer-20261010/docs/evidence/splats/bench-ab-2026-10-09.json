@@ -1,0 +1,1322 @@
+{
+  "note": "tools/splats/ab.py: interleaved quad/tile headless benches (examples/splats --headless-bench 60), 3 runs each, best per pass (ms); provisional: RTX 5060 Laptop shared with other agents, clocks drifting with temperature (55-75 C) between runs",
+  "final": {
+    "--count 1000000": {
+      "quad": {
+        "splat_total_best": 2.691,
+        "splat_total_runs": [
+          2.691,
+          2.698,
+          2.705
+        ],
+        "passes_best": {
+          "splat compact": 0.038,
+          "splat depth": 0.033,
+          "splat draw": 2.057,
+          "splat preprocess": 0.238,
+          "splat sort": 0.325
+        },
+        "visible": 875997,
+        "quad_mpixels": 46.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.962,
+        "splat_total_runs": [
+          2.962,
+          3.084,
+          3.123
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat composite": 0.032,
+          "splat preprocess": 0.242,
+          "splat raster": 1.48,
+          "splat sort": 0.32,
+          "splat tile count": 0.214,
+          "splat tile emit": 0.181,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.45
+        },
+        "visible": 875997,
+        "quad_mpixels": 46.7,
+        "pairs": 2008915
+      }
+    },
+    "--count 3000000": {
+      "quad": {
+        "splat_total_best": 6.784,
+        "splat_total_runs": [
+          6.871,
+          6.806,
+          6.784
+        ],
+        "passes_best": {
+          "splat compact": 0.129,
+          "splat depth": 0.034,
+          "splat draw": 5.175,
+          "splat preprocess": 0.7,
+          "splat sort": 0.745
+        },
+        "visible": 2466150,
+        "quad_mpixels": 92.5,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 6.644,
+        "splat_total_runs": [
+          6.647,
+          6.644,
+          6.737
+        ],
+        "passes_best": {
+          "splat compact": 0.127,
+          "splat composite": 0.034,
+          "splat preprocess": 0.717,
+          "splat raster": 2.649,
+          "splat sort": 0.712,
+          "splat tile count": 0.806,
+          "splat tile emit": 0.444,
+          "splat tile scan": 0.014,
+          "splat tile sort": 1.135
+        },
+        "visible": 2466150,
+        "quad_mpixels": 92.5,
+        "pairs": 5219761
+      }
+    },
+    "--count 1000000 --size 2560x1440": {
+      "quad": {
+        "splat_total_best": 4.202,
+        "splat_total_runs": [
+          4.217,
+          4.458,
+          4.202
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.077,
+          "splat draw": 3.519,
+          "splat preprocess": 0.239,
+          "splat sort": 0.317
+        },
+        "visible": 875943,
+        "quad_mpixels": 106.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 4.065,
+        "splat_total_runs": [
+          4.076,
+          4.065,
+          4.073
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat composite": 0.104,
+          "splat preprocess": 0.244,
+          "splat raster": 2.283,
+          "splat sort": 0.325,
+          "splat tile count": 0.217,
+          "splat tile emit": 0.202,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.647
+        },
+        "visible": 875943,
+        "quad_mpixels": 106.7,
+        "pairs": 2739278
+      }
+    },
+    "--count 3000000 --size 2560x1440": {
+      "quad": {
+        "splat_total_best": 10.198,
+        "splat_total_runs": [
+          10.342,
+          10.198,
+          10.272
+        ],
+        "passes_best": {
+          "splat compact": 0.117,
+          "splat depth": 0.083,
+          "splat draw": 8.438,
+          "splat preprocess": 0.684,
+          "splat sort": 0.852
+        },
+        "visible": 2465985,
+        "quad_mpixels": 200.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 8.156,
+        "splat_total_runs": [
+          8.236,
+          8.245,
+          8.156
+        ],
+        "passes_best": {
+          "splat compact": 0.111,
+          "splat composite": 0.107,
+          "splat preprocess": 0.676,
+          "splat raster": 3.718,
+          "splat sort": 0.815,
+          "splat tile count": 0.744,
+          "splat tile emit": 0.445,
+          "splat tile scan": 0.015,
+          "splat tile sort": 1.477
+        },
+        "visible": 2465985,
+        "quad_mpixels": 200.7,
+        "pairs": 6798554
+      }
+    },
+    "--count 1000000 --look 0,1.4,3 --distance 0.12": {
+      "quad": {
+        "splat_total_best": 2.352,
+        "splat_total_runs": [
+          2.352,
+          2.54,
+          2.542
+        ],
+        "passes_best": {
+          "splat compact": 0.031,
+          "splat depth": 0.03,
+          "splat draw": 1.904,
+          "splat preprocess": 0.199,
+          "splat sort": 0.177
+        },
+        "visible": 500765,
+        "quad_mpixels": 67.8,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.066,
+        "splat_total_runs": [
+          2.066,
+          2.076,
+          2.076
+        ],
+        "passes_best": {
+          "splat compact": 0.032,
+          "splat composite": 0.032,
+          "splat preprocess": 0.216,
+          "splat raster": 0.966,
+          "splat sort": 0.189,
+          "splat tile count": 0.111,
+          "splat tile emit": 0.125,
+          "splat tile scan": 0.005,
+          "splat tile sort": 0.382
+        },
+        "visible": 500765,
+        "quad_mpixels": 67.8,
+        "pairs": 1774592
+      }
+    },
+    "--count 1000000 --antialias": {
+      "quad": {
+        "splat_total_best": 2.485,
+        "splat_total_runs": [
+          2.638,
+          2.485,
+          2.63
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.031,
+          "splat draw": 1.864,
+          "splat preprocess": 0.227,
+          "splat sort": 0.316
+        },
+        "visible": 875992,
+        "quad_mpixels": 45.9,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 3.187,
+        "splat_total_runs": [
+          3.198,
+          3.431,
+          3.187
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.03,
+          "splat preprocess": 0.245,
+          "splat raster": 1.742,
+          "splat sort": 0.302,
+          "splat tile count": 0.215,
+          "splat tile emit": 0.183,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.426
+        },
+        "visible": 875992,
+        "quad_mpixels": 45.9,
+        "pairs": 1985482
+      }
+    },
+    "--count 1000000 --distance 2.5": {
+      "quad": {
+        "splat_total_best": 1.828,
+        "splat_total_runs": [
+          1.828,
+          1.906,
+          1.905
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.031,
+          "splat draw": 1.197,
+          "splat preprocess": 0.183,
+          "splat sort": 0.375
+        },
+        "visible": 1069361,
+        "quad_mpixels": 16.3,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.702,
+        "splat_total_runs": [
+          2.843,
+          2.846,
+          2.702
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.028,
+          "splat preprocess": 0.187,
+          "splat raster": 1.283,
+          "splat sort": 0.357,
+          "splat tile count": 0.278,
+          "splat tile emit": 0.178,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.314
+        },
+        "visible": 1069361,
+        "quad_mpixels": 16.3,
+        "pairs": 1814305
+      }
+    },
+    "--count 1000000 --distance 2.5 --antialias": {
+      "quad": {
+        "splat_total_best": 1.736,
+        "splat_total_runs": [
+          1.761,
+          1.755,
+          1.736
+        ],
+        "passes_best": {
+          "splat compact": 0.038,
+          "splat depth": 0.033,
+          "splat draw": 1.102,
+          "splat preprocess": 0.182,
+          "splat sort": 0.381
+        },
+        "visible": 1069073,
+        "quad_mpixels": 14.6,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 3.282,
+        "splat_total_runs": [
+          3.486,
+          3.487,
+          3.282
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.028,
+          "splat preprocess": 0.186,
+          "splat raster": 1.878,
+          "splat sort": 0.361,
+          "splat tile count": 0.278,
+          "splat tile emit": 0.175,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.3
+        },
+        "visible": 1069073,
+        "quad_mpixels": 14.6,
+        "pairs": 1737238
+      }
+    }
+  },
+  "final_note": "sub-tile culling restored, raster test counter off (the default)",
+  "first_after_fix": {
+    "--count 1000000": {
+      "quad": {
+        "splat_total_best": 2.506,
+        "splat_total_runs": [
+          2.679,
+          2.665,
+          2.506
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.03,
+          "splat draw": 1.892,
+          "splat preprocess": 0.226,
+          "splat sort": 0.31
+        },
+        "visible": 875997,
+        "quad_mpixels": 46.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.795,
+        "splat_total_runs": [
+          2.944,
+          2.953,
+          2.795
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.03,
+          "splat preprocess": 0.242,
+          "splat raster": 1.326,
+          "splat sort": 0.302,
+          "splat tile count": 0.214,
+          "splat tile emit": 0.181,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.425
+        },
+        "visible": 875997,
+        "quad_mpixels": 46.7,
+        "pairs": 2008915
+      }
+    },
+    "--count 3000000": {
+      "quad": {
+        "splat_total_best": 6.657,
+        "splat_total_runs": [
+          6.78,
+          6.713,
+          6.657
+        ],
+        "passes_best": {
+          "splat compact": 0.126,
+          "splat depth": 0.033,
+          "splat draw": 5.061,
+          "splat preprocess": 0.663,
+          "splat sort": 0.733
+        },
+        "visible": 2466150,
+        "quad_mpixels": 92.5,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 6.628,
+        "splat_total_runs": [
+          6.628,
+          6.657,
+          6.702
+        ],
+        "passes_best": {
+          "splat compact": 0.125,
+          "splat composite": 0.034,
+          "splat preprocess": 0.678,
+          "splat raster": 2.639,
+          "splat sort": 0.717,
+          "splat tile count": 0.775,
+          "splat tile emit": 0.417,
+          "splat tile scan": 0.015,
+          "splat tile sort": 1.128
+        },
+        "visible": 2466150,
+        "quad_mpixels": 92.5,
+        "pairs": 5219761
+      }
+    },
+    "--count 1000000 --size 2560x1440": {
+      "quad": {
+        "splat_total_best": 4.356,
+        "splat_total_runs": [
+          4.441,
+          4.663,
+          4.356
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.074,
+          "splat draw": 3.664,
+          "splat preprocess": 0.252,
+          "splat sort": 0.323
+        },
+        "visible": 875943,
+        "quad_mpixels": 106.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 3.799,
+        "splat_total_runs": [
+          3.799,
+          3.906,
+          4.013
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.103,
+          "splat preprocess": 0.244,
+          "splat raster": 2.035,
+          "splat sort": 0.306,
+          "splat tile count": 0.217,
+          "splat tile emit": 0.201,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.613
+        },
+        "visible": 875943,
+        "quad_mpixels": 106.7,
+        "pairs": 2739278
+      }
+    },
+    "--count 3000000 --size 2560x1440": {
+      "quad": {
+        "splat_total_best": 10.19,
+        "splat_total_runs": [
+          10.215,
+          10.19,
+          10.295
+        ],
+        "passes_best": {
+          "splat compact": 0.117,
+          "splat depth": 0.083,
+          "splat draw": 8.432,
+          "splat preprocess": 0.708,
+          "splat sort": 0.85
+        },
+        "visible": 2465985,
+        "quad_mpixels": 200.7,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 8.143,
+        "splat_total_runs": [
+          8.208,
+          8.316,
+          8.143
+        ],
+        "passes_best": {
+          "splat compact": 0.114,
+          "splat composite": 0.111,
+          "splat preprocess": 0.715,
+          "splat raster": 3.638,
+          "splat sort": 0.812,
+          "splat tile count": 0.775,
+          "splat tile emit": 0.471,
+          "splat tile scan": 0.015,
+          "splat tile sort": 1.491
+        },
+        "visible": 2465985,
+        "quad_mpixels": 200.7,
+        "pairs": 6798554
+      }
+    },
+    "--count 1000000 --look 0,1.4,3 --distance 0.12": {
+      "quad": {
+        "splat_total_best": 2.529,
+        "splat_total_runs": [
+          2.544,
+          2.529,
+          2.544
+        ],
+        "passes_best": {
+          "splat compact": 0.032,
+          "splat depth": 0.033,
+          "splat draw": 2.076,
+          "splat preprocess": 0.198,
+          "splat sort": 0.19
+        },
+        "visible": 500765,
+        "quad_mpixels": 67.8,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.053,
+        "splat_total_runs": [
+          2.056,
+          2.065,
+          2.053
+        ],
+        "passes_best": {
+          "splat compact": 0.032,
+          "splat composite": 0.032,
+          "splat preprocess": 0.216,
+          "splat raster": 0.956,
+          "splat sort": 0.188,
+          "splat tile count": 0.11,
+          "splat tile emit": 0.125,
+          "splat tile scan": 0.005,
+          "splat tile sort": 0.382
+        },
+        "visible": 500765,
+        "quad_mpixels": 67.8,
+        "pairs": 1774592
+      }
+    },
+    "--count 1000000 --antialias": {
+      "quad": {
+        "splat_total_best": 2.61,
+        "splat_total_runs": [
+          2.634,
+          2.637,
+          2.61
+        ],
+        "passes_best": {
+          "splat compact": 0.038,
+          "splat depth": 0.033,
+          "splat draw": 1.977,
+          "splat preprocess": 0.237,
+          "splat sort": 0.325
+        },
+        "visible": 875992,
+        "quad_mpixels": 45.9,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 3.1670000000000003,
+        "splat_total_runs": [
+          3.387,
+          3.386,
+          3.167
+        ],
+        "passes_best": {
+          "splat compact": 0.035,
+          "splat composite": 0.03,
+          "splat preprocess": 0.242,
+          "splat raster": 1.727,
+          "splat sort": 0.302,
+          "splat tile count": 0.214,
+          "splat tile emit": 0.18,
+          "splat tile scan": 0.006,
+          "splat tile sort": 0.43
+        },
+        "visible": 875992,
+        "quad_mpixels": 45.9,
+        "pairs": 1985482
+      }
+    },
+    "--count 1000000 --distance 2.5": {
+      "quad": {
+        "splat_total_best": 1.838,
+        "splat_total_runs": [
+          1.944,
+          1.838,
+          1.928
+        ],
+        "passes_best": {
+          "splat compact": 0.037,
+          "splat depth": 0.032,
+          "splat draw": 1.211,
+          "splat preprocess": 0.179,
+          "splat sort": 0.377
+        },
+        "visible": 1069361,
+        "quad_mpixels": 16.3,
+        "pairs": null
+      },
+      "tile": {
+        "splat_total_best": 2.6999999999999997,
+        "splat_total_runs": [
+          2.829,
+          2.7,
+          2.866
+        ],
+        "passes_best": {
+          "splat compact": 0.036,
+          "splat composite": 0.028,
+          "splat preprocess": 0.187,
+          "splat raster": 1.275,
+          "splat sort": 0.361,
+          "splat tile count": 0.279,
+          "splat tile emit": 0.178,
+          "splat tile scan": 0.007,
+          "splat tile sort": 0.315
+        },
+        "visible": 1069361,
+        "quad_mpixels": 16.3,
+        "pairs": 1814305
+      }
+    }
+  },
+  "first_after_fix_note": "same shader without the counter code, earlier in the session (cooler GPU)",
+  "subtile_culling_ablation": {
+    "--count 1000000": {
+      "culled": {
+        "raster_runs": [
+          1.603,
+          1.616,
+          1.594
+        ],
+        "splat_total_runs": [
+          3.279,
+          3.212,
+          3.267
+        ],
+        "tests_per_pixel": 47.7,
+        "tests_per_tile_pair": 34.2
+      },
+      "unculled": {
+        "raster_runs": [
+          2.327,
+          2.204,
+          2.339
+        ],
+        "splat_total_runs": [
+          4.022,
+          3.873,
+          4.036
+        ],
+        "tests_per_pixel": 161.8,
+        "tests_per_tile_pair": 116.0
+      }
+    },
+    "--count 3000000 --size 2560x1440": {
+      "culled": {
+        "raster_runs": [
+          4.406,
+          4.595,
+          4.403
+        ],
+        "splat_total_runs": [
+          9.619,
+          9.422,
+          9.608
+        ],
+        "tests_per_pixel": 51.5,
+        "tests_per_tile_pair": 27.9
+      },
+      "unculled": {
+        "raster_runs": [
+          6.829,
+          6.929,
+          6.736
+        ],
+        "splat_total_runs": [
+          12.16,
+          12.302,
+          12.052
+        ],
+        "tests_per_pixel": 157.6,
+        "tests_per_tile_pair": 85.5
+      }
+    },
+    "--count 1000000 --distance 2.5": {
+      "culled": {
+        "raster_runs": [
+          1.451,
+          1.353,
+          1.461
+        ],
+        "splat_total_runs": [
+          2.904,
+          2.913,
+          2.973
+        ],
+        "tests_per_pixel": 27.5,
+        "tests_per_tile_pair": 21.9
+      },
+      "unculled": {
+        "raster_runs": [
+          2.723,
+          2.701,
+          2.675
+        ],
+        "splat_total_runs": [
+          4.33,
+          4.3,
+          4.274
+        ],
+        "tests_per_pixel": 133.9,
+        "tests_per_tile_pair": 106.2
+      }
+    },
+    "--count 1000000 --antialias": {
+      "culled": {
+        "raster_runs": [
+          1.827,
+          1.833,
+          1.834
+        ],
+        "splat_total_runs": [
+          3.755,
+          3.764,
+          3.768
+        ],
+        "tests_per_pixel": 72.2,
+        "tests_per_tile_pair": 52.4
+      },
+      "unculled": {
+        "raster_runs": [
+          2.74,
+          2.788,
+          2.779
+        ],
+        "splat_total_runs": [
+          4.42,
+          4.478,
+          4.467
+        ],
+        "tests_per_pixel": 231.6,
+        "tests_per_tile_pair": 168.0
+      }
+    },
+    "--count 1000000 --look 0,1.4,3 --distance 0.12": {
+      "culled": {
+        "raster_runs": [
+          1.016,
+          1.006,
+          0.918
+        ],
+        "splat_total_runs": [
+          2.194,
+          2.145,
+          2.071
+        ],
+        "tests_per_pixel": 37.3,
+        "tests_per_tile_pair": 30.2
+      },
+      "unculled": {
+        "raster_runs": [
+          1.414,
+          1.277,
+          1.32
+        ],
+        "splat_total_runs": [
+          2.643,
+          2.45,
+          2.516
+        ],
+        "tests_per_pixel": 97.2,
+        "tests_per_tile_pair": 78.9
+      }
+    }
+  },
+  "subtile_culling_ablation_note": "the culled build against the same build with the sub-tile test replaced by if (true), tile raster only, interleaved, 3 runs each; tests counted after the timed frames",
+  "test_counter_cost": {
+    "always_on": {
+      "--count 1000000": {
+        "counter": [
+          1.58,
+          1.612,
+          1.597,
+          1.595
+        ],
+        "no_counter": [
+          1.464,
+          1.478,
+          1.524,
+          1.543
+        ]
+      },
+      "--count 3000000 --size 2560x1440": {
+        "counter": [
+          4.401,
+          4.786,
+          4.388,
+          3.834
+        ],
+        "no_counter": [
+          4.171,
+          4.263,
+          3.871,
+          3.731
+        ]
+      },
+      "--count 1000000 --distance 2.5": {
+        "counter": [
+          1.434,
+          1.302,
+          1.302,
+          1.433
+        ],
+        "no_counter": [
+          1.41,
+          1.409,
+          1.28,
+          1.408
+        ]
+      }
+    },
+    "gated_off": {
+      "--count 1000000": {
+        "gated_off": [
+          1.338,
+          1.48,
+          1.481,
+          1.48
+        ],
+        "no_counter": [
+          1.327,
+          1.465,
+          1.466,
+          1.466
+        ]
+      },
+      "--count 3000000 --size 2560x1440": {
+        "gated_off": [
+          3.924,
+          3.581,
+          4.508,
+          4.77
+        ],
+        "no_counter": [
+          3.69,
+          3.869,
+          4.734,
+          4.886
+        ]
+      }
+    },
+    "note": "raster ms per run, interleaved; the always-on workgroup sum cost about 0.09 ms (6%) at 1M 1600x900, so it is off unless Splats::count_tests is set"
+  },
+  "superseded_without_subtile_culling": {
+    "note": "the late-session measurements first recorded here: commit 2e90b3c8 shipped tile_raster with the sub-tile test replaced by if (true) (an ablation left in), so every splat landed in every sub-tile list; these numbers time that ablation, not power capping as first written",
+    "final": {
+      "--count 1000000": {
+        "quad": {
+          "splat_total_best": 2.56,
+          "splat_total_runs": [
+            2.674,
+            2.672,
+            2.56
+          ],
+          "passes_best": {
+            "splat compact": 0.038,
+            "splat depth": 0.03,
+            "splat draw": 1.942,
+            "splat preprocess": 0.24,
+            "splat sort": 0.309
+          },
+          "visible": 875997,
+          "quad_mpixels": 46.7,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 3.5380000000000003,
+          "splat_total_runs": [
+            3.666,
+            3.544,
+            3.538
+          ],
+          "passes_best": {
+            "splat compact": 0.04,
+            "splat composite": 0.032,
+            "splat preprocess": 0.297,
+            "splat raster": 1.959,
+            "splat sort": 0.3,
+            "splat tile count": 0.251,
+            "splat tile emit": 0.229,
+            "splat tile scan": 0.006,
+            "splat tile sort": 0.423
+          },
+          "visible": 875997,
+          "quad_mpixels": 46.7,
+          "pairs": 2008915
+        }
+      },
+      "--count 3000000": {
+        "quad": {
+          "splat_total_best": 6.637,
+          "splat_total_runs": [
+            6.92,
+            6.637,
+            6.662
+          ],
+          "passes_best": {
+            "splat compact": 0.13,
+            "splat depth": 0.033,
+            "splat draw": 5.047,
+            "splat preprocess": 0.701,
+            "splat sort": 0.726
+          },
+          "visible": 2466150,
+          "quad_mpixels": 92.5,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 8.019,
+          "splat_total_runs": [
+            9.064,
+            8.019,
+            8.244
+          ],
+          "passes_best": {
+            "splat compact": 0.127,
+            "splat composite": 0.034,
+            "splat preprocess": 0.717,
+            "splat raster": 3.987,
+            "splat sort": 0.701,
+            "splat tile count": 0.808,
+            "splat tile emit": 0.444,
+            "splat tile scan": 0.015,
+            "splat tile sort": 1.132
+          },
+          "visible": 2466150,
+          "quad_mpixels": 92.5,
+          "pairs": 5219761
+        }
+      },
+      "--count 1000000 --size 2560x1440": {
+        "quad": {
+          "splat_total_best": 4.236,
+          "splat_total_runs": [
+            4.256,
+            4.249,
+            4.236
+          ],
+          "passes_best": {
+            "splat compact": 0.037,
+            "splat depth": 0.078,
+            "splat draw": 3.552,
+            "splat preprocess": 0.253,
+            "splat sort": 0.316
+          },
+          "visible": 875943,
+          "quad_mpixels": 106.7,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 4.756,
+          "splat_total_runs": [
+            4.756,
+            4.787,
+            4.773
+          ],
+          "passes_best": {
+            "splat compact": 0.038,
+            "splat composite": 0.109,
+            "splat preprocess": 0.261,
+            "splat raster": 2.862,
+            "splat sort": 0.303,
+            "splat tile count": 0.227,
+            "splat tile emit": 0.218,
+            "splat tile scan": 0.006,
+            "splat tile sort": 0.616
+          },
+          "visible": 875943,
+          "quad_mpixels": 106.7,
+          "pairs": 2739278
+        }
+      },
+      "--count 3000000 --size 2560x1440": {
+        "quad": {
+          "splat_total_best": 10.025,
+          "splat_total_runs": [
+            10.026,
+            10.025,
+            12.212
+          ],
+          "passes_best": {
+            "splat compact": 0.13,
+            "splat depth": 0.082,
+            "splat draw": 8.324,
+            "splat preprocess": 0.7,
+            "splat sort": 0.787
+          },
+          "visible": 2465985,
+          "quad_mpixels": 200.7,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 10.362,
+          "splat_total_runs": [
+            10.362,
+            44.26,
+            11.051
+          ],
+          "passes_best": {
+            "splat compact": 0.127,
+            "splat composite": 0.125,
+            "splat preprocess": 0.767,
+            "splat raster": 5.408,
+            "splat sort": 0.788,
+            "splat tile count": 0.956,
+            "splat tile emit": 0.53,
+            "splat tile scan": 0.015,
+            "splat tile sort": 1.421
+          },
+          "visible": 2465985,
+          "quad_mpixels": 200.7,
+          "pairs": 6798554
+        }
+      },
+      "--count 1000000 --look 0,1.4,3 --distance 0.12": {
+        "quad": {
+          "splat_total_best": 2.412,
+          "splat_total_runs": [
+            2.44,
+            2.477,
+            2.412
+          ],
+          "passes_best": {
+            "splat compact": 0.033,
+            "splat depth": 0.031,
+            "splat draw": 1.932,
+            "splat preprocess": 0.218,
+            "splat sort": 0.18
+          },
+          "visible": 500765,
+          "quad_mpixels": 67.8,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 2.355,
+          "splat_total_runs": [
+            2.363,
+            2.455,
+            2.355
+          ],
+          "passes_best": {
+            "splat compact": 0.032,
+            "splat composite": 0.031,
+            "splat preprocess": 0.265,
+            "splat raster": 1.214,
+            "splat sort": 0.176,
+            "splat tile count": 0.119,
+            "splat tile emit": 0.152,
+            "splat tile scan": 0.005,
+            "splat tile sort": 0.361
+          },
+          "visible": 500765,
+          "quad_mpixels": 67.8,
+          "pairs": 1774592
+        }
+      },
+      "--count 1000000 --antialias": {
+        "quad": {
+          "splat_total_best": 2.461,
+          "splat_total_runs": [
+            2.616,
+            2.644,
+            2.461
+          ],
+          "passes_best": {
+            "splat compact": 0.037,
+            "splat depth": 0.031,
+            "splat draw": 1.847,
+            "splat preprocess": 0.225,
+            "splat sort": 0.309
+          },
+          "visible": 875992,
+          "quad_mpixels": 45.9,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 3.9459999999999997,
+          "splat_total_runs": [
+            4.37,
+            3.946,
+            4.265
+          ],
+          "passes_best": {
+            "splat compact": 0.036,
+            "splat composite": 0.031,
+            "splat preprocess": 0.242,
+            "splat raster": 2.481,
+            "splat sort": 0.315,
+            "splat tile count": 0.214,
+            "splat tile emit": 0.18,
+            "splat tile scan": 0.006,
+            "splat tile sort": 0.441
+          },
+          "visible": 875992,
+          "quad_mpixels": 45.9,
+          "pairs": 1985482
+        }
+      },
+      "--count 1000000 --distance 2.5": {
+        "quad": {
+          "splat_total_best": 1.8139999999999998,
+          "splat_total_runs": [
+            1.925,
+            1.814,
+            1.929
+          ],
+          "passes_best": {
+            "splat compact": 0.037,
+            "splat depth": 0.031,
+            "splat draw": 1.188,
+            "splat preprocess": 0.18,
+            "splat sort": 0.37
+          },
+          "visible": 1069361,
+          "quad_mpixels": 16.3,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 3.8209999999999997,
+          "splat_total_runs": [
+            3.826,
+            4.201,
+            3.821
+          ],
+          "passes_best": {
+            "splat compact": 0.036,
+            "splat composite": 0.028,
+            "splat preprocess": 0.188,
+            "splat raster": 2.42,
+            "splat sort": 0.359,
+            "splat tile count": 0.281,
+            "splat tile emit": 0.182,
+            "splat tile scan": 0.007,
+            "splat tile sort": 0.316
+          },
+          "visible": 1069361,
+          "quad_mpixels": 16.3,
+          "pairs": 1814305
+        }
+      }
+    },
+    "antialias_and_distance": {
+      "--count 1000000": {
+        "quad": {
+          "splat_total_best": 3.773,
+          "splat_total_runs": [
+            3.773,
+            3.892
+          ],
+          "passes_best": {
+            "splat depth": 0.034,
+            "splat draw": 2.964,
+            "splat preprocess": 0.222,
+            "splat sort": 0.473
+          },
+          "visible": 875997,
+          "quad_mpixels": 46.7,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 3.912,
+          "splat_total_runs": [
+            6.649,
+            3.912
+          ],
+          "passes_best": {
+            "splat composite": 0.034,
+            "splat preprocess": 0.241,
+            "splat raster": 2.053,
+            "splat sort": 0.474,
+            "splat tile count": 0.244,
+            "splat tile emit": 0.229,
+            "splat tile scan": 0.006,
+            "splat tile sort": 0.531
+          },
+          "visible": 875997,
+          "quad_mpixels": 46.7,
+          "pairs": 2008915
+        }
+      },
+      "--count 1000000 --antialias": {
+        "quad": {
+          "splat_total_best": 2.7119999999999997,
+          "splat_total_runs": [
+            2.712,
+            3.477
+          ],
+          "passes_best": {
+            "splat depth": 0.033,
+            "splat draw": 2.105,
+            "splat preprocess": 0.205,
+            "splat sort": 0.359
+          },
+          "visible": 875992,
+          "quad_mpixels": 45.9,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 5.811,
+          "splat_total_runs": [
+            5.811,
+            8.788
+          ],
+          "passes_best": {
+            "splat composite": 0.04,
+            "splat preprocess": 0.189,
+            "splat raster": 3.971,
+            "splat sort": 0.423,
+            "splat tile count": 0.256,
+            "splat tile emit": 0.245,
+            "splat tile scan": 0.007,
+            "splat tile sort": 0.614
+          },
+          "visible": 875992,
+          "quad_mpixels": 45.9,
+          "pairs": 1985482
+        }
+      },
+      "--count 1000000 --distance 2.5": {
+        "quad": {
+          "splat_total_best": 2.291,
+          "splat_total_runs": [
+            3.019,
+            2.291
+          ],
+          "passes_best": {
+            "splat depth": 0.032,
+            "splat draw": 1.486,
+            "splat preprocess": 0.206,
+            "splat sort": 0.501
+          },
+          "visible": 1069361,
+          "quad_mpixels": 16.3,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 3.96,
+          "splat_total_runs": [
+            8.444,
+            3.96
+          ],
+          "passes_best": {
+            "splat composite": 0.028,
+            "splat preprocess": 0.242,
+            "splat raster": 2.434,
+            "splat sort": 0.375,
+            "splat tile count": 0.329,
+            "splat tile emit": 0.229,
+            "splat tile scan": 0.007,
+            "splat tile sort": 0.316
+          },
+          "visible": 1069361,
+          "quad_mpixels": 16.3,
+          "pairs": 1814305
+        }
+      },
+      "--count 1000000 --distance 2.5 --antialias": {
+        "quad": {
+          "splat_total_best": 2.216,
+          "splat_total_runs": [
+            2.216,
+            2.369
+          ],
+          "passes_best": {
+            "splat depth": 0.031,
+            "splat draw": 1.397,
+            "splat preprocess": 0.234,
+            "splat sort": 0.475
+          },
+          "visible": 1069073,
+          "quad_mpixels": 14.6,
+          "pairs": null
+        },
+        "tile": {
+          "splat_total_best": 9.878,
+          "splat_total_runs": [
+            9.878,
+            10.739
+          ],
+          "passes_best": {
+            "splat composite": 0.035,
+            "splat preprocess": 0.255,
+            "splat raster": 7.519,
+            "splat sort": 0.534,
+            "splat tile count": 0.33,
+            "splat tile emit": 0.382,
+            "splat tile scan": 0.007,
+            "splat tile sort": 0.641
+          },
+          "visible": 1069073,
+          "quad_mpixels": 14.6,
+          "pairs": 1737238
+        }
+      }
+    }
+  }
+}

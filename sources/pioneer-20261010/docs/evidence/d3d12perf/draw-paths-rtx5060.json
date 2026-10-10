@@ -1,0 +1,1138 @@
+{
+  "argv": [
+    "target/scratch/paths1.json",
+    "3",
+    "sphere=many_cubes --headless-bench 300;;dense=many_cubes --dense --headless-bench 200;;shadows=many_cubes --count 200000 --shadows --headless-bench 300;;crowd=lod_field --crowd 40 --frames 150 --warm 30",
+    "vk=new|vulkan,d3d=new|dx12,d3d-baseline=new|dx12|WGPU_VALIDATION_INDIRECT_CALL=0,d3d-firstinst=new|dx12|POCKET_GPU_MINIMAL=multi-draw"
+  ],
+  "runs": [
+    {
+      "round": 0,
+      "case": "sphere",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 1.967,
+      "cpu_ms": 0.264,
+      "wall_ms": 2.438,
+      "passes_ms": {
+        "cull": 0.387,
+        "lights": 0.003,
+        "opaque+sky": 1.577
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 43.2,
+      "device_ms": 931.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.1
+    },
+    {
+      "round": 0,
+      "case": "sphere",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 2.285,
+      "cpu_ms": 0.534,
+      "wall_ms": 3.025,
+      "passes_ms": {
+        "cull": 0.392,
+        "lights": 0.0,
+        "opaque+sky": 1.893
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 181.0,
+      "device_ms": 1147.0,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 0,
+      "case": "sphere",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 2.339,
+      "cpu_ms": 0.535,
+      "wall_ms": 3.124,
+      "passes_ms": {
+        "cull": 0.388,
+        "lights": 0.0,
+        "opaque+sky": 1.951
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 179.0,
+      "device_ms": 1133.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 0,
+      "case": "sphere",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 2.438,
+      "cpu_ms": 0.537,
+      "wall_ms": 3.25,
+      "passes_ms": {
+        "cull": 0.495,
+        "lights": 0.0,
+        "opaque+sky": 1.943
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 177.9,
+      "device_ms": 1134.0,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 0,
+      "case": "dense",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 14.844,
+      "cpu_ms": 0.503,
+      "wall_ms": 15.551,
+      "passes_ms": {
+        "cull": 0.398,
+        "lights": 0.004,
+        "opaque+sky": 14.443
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 41.8,
+      "device_ms": 359.9,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 6.7
+    },
+    {
+      "round": 0,
+      "case": "dense",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 16.445,
+      "cpu_ms": 0.885,
+      "wall_ms": 17.466,
+      "passes_ms": {
+        "cull": 0.444,
+        "lights": 0.0,
+        "opaque+sky": 16.0
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 185.6,
+      "device_ms": 1165.6,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 0,
+      "case": "dense",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 16.591,
+      "cpu_ms": 0.817,
+      "wall_ms": 17.438,
+      "passes_ms": {
+        "cull": 0.444,
+        "lights": 0.0,
+        "opaque+sky": 16.147
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 189.7,
+      "device_ms": 1166.7,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.3
+    },
+    {
+      "round": 0,
+      "case": "dense",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 16.554,
+      "cpu_ms": 0.859,
+      "wall_ms": 17.406,
+      "passes_ms": {
+        "cull": 0.445,
+        "lights": 0.0,
+        "opaque+sky": 16.11
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 203.3,
+      "device_ms": 1203.4,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.3
+    },
+    {
+      "round": 0,
+      "case": "shadows",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.385,
+      "cpu_ms": 0.287,
+      "wall_ms": 0.871,
+      "passes_ms": {
+        "cull": 0.05,
+        "lights": 0.003,
+        "opaque+sky": 0.308,
+        "shadows": 0.024
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 47.6,
+      "device_ms": 473.2,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 1.2
+    },
+    {
+      "round": 0,
+      "case": "shadows",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.436,
+      "cpu_ms": 0.587,
+      "wall_ms": 1.289,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.337,
+        "shadows": 0.038
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 194.9,
+      "device_ms": 1220.7,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.2
+    },
+    {
+      "round": 0,
+      "case": "shadows",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.436,
+      "cpu_ms": 0.502,
+      "wall_ms": 1.143,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.341,
+        "shadows": 0.034
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 187.2,
+      "device_ms": 1213.3,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.1
+    },
+    {
+      "round": 0,
+      "case": "shadows",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.424,
+      "cpu_ms": 0.542,
+      "wall_ms": 1.223,
+      "passes_ms": {
+        "cull": 0.06,
+        "lights": 0.0,
+        "opaque+sky": 0.328,
+        "shadows": 0.036
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 196.2,
+      "device_ms": 690.0,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 1.7
+    },
+    {
+      "round": 0,
+      "case": "crowd",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.804,
+      "cpu_ms": 0.613,
+      "wall_ms": 1.836,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.003,
+        "opaque+sky": 0.389,
+        "shadows": 0.398
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.1
+    },
+    {
+      "round": 0,
+      "case": "crowd",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.914,
+      "cpu_ms": 1.541,
+      "wall_ms": 3.02,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.492,
+        "shadows": 0.408
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.7
+    },
+    {
+      "round": 0,
+      "case": "crowd",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.922,
+      "cpu_ms": 1.926,
+      "wall_ms": 3.361,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.496,
+        "shadows": 0.412
+      },
+      "draw_calls": 1765,
+      "draw_path": "baseline",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.7
+    },
+    {
+      "round": 0,
+      "case": "crowd",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.902,
+      "cpu_ms": 1.831,
+      "wall_ms": 3.229,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.491,
+        "shadows": 0.397
+      },
+      "draw_calls": 1765,
+      "draw_path": "first-instance",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.6
+    },
+    {
+      "round": 1,
+      "case": "sphere",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 2.318,
+      "cpu_ms": 0.277,
+      "wall_ms": 2.77,
+      "passes_ms": {
+        "cull": 0.383,
+        "lights": 0.003,
+        "opaque+sky": 1.932
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 43.6,
+      "device_ms": 253.3,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 3.6
+    },
+    {
+      "round": 1,
+      "case": "sphere",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 2.464,
+      "cpu_ms": 0.54,
+      "wall_ms": 3.232,
+      "passes_ms": {
+        "cull": 0.497,
+        "lights": 0.0,
+        "opaque+sky": 1.966
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 180.2,
+      "device_ms": 1157.0,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 1,
+      "case": "sphere",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 2.462,
+      "cpu_ms": 0.508,
+      "wall_ms": 3.223,
+      "passes_ms": {
+        "cull": 0.497,
+        "lights": 0.0,
+        "opaque+sky": 1.964
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 181.5,
+      "device_ms": 1137.6,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 1,
+      "case": "sphere",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 2.414,
+      "cpu_ms": 0.527,
+      "wall_ms": 3.164,
+      "passes_ms": {
+        "cull": 0.497,
+        "lights": 0.0,
+        "opaque+sky": 1.917
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 172.7,
+      "device_ms": 1164.2,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.8
+    },
+    {
+      "round": 1,
+      "case": "dense",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 14.76,
+      "cpu_ms": 0.514,
+      "wall_ms": 15.373,
+      "passes_ms": {
+        "cull": 0.408,
+        "lights": 0.004,
+        "opaque+sky": 14.348
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 43.5,
+      "device_ms": 394.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 6.7
+    },
+    {
+      "round": 1,
+      "case": "dense",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 16.459,
+      "cpu_ms": 0.867,
+      "wall_ms": 17.472,
+      "passes_ms": {
+        "cull": 0.445,
+        "lights": 0.0,
+        "opaque+sky": 16.014
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 179.0,
+      "device_ms": 1181.4,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 1,
+      "case": "dense",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 16.548,
+      "cpu_ms": 0.808,
+      "wall_ms": 17.413,
+      "passes_ms": {
+        "cull": 0.444,
+        "lights": 0.0,
+        "opaque+sky": 16.104
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 188.2,
+      "device_ms": 1158.7,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 1,
+      "case": "dense",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 16.513,
+      "cpu_ms": 0.86,
+      "wall_ms": 17.453,
+      "passes_ms": {
+        "cull": 0.444,
+        "lights": 0.0,
+        "opaque+sky": 16.068
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 184.4,
+      "device_ms": 1184.8,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 1,
+      "case": "shadows",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.365,
+      "cpu_ms": 0.287,
+      "wall_ms": 0.85,
+      "passes_ms": {
+        "cull": 0.048,
+        "lights": 0.003,
+        "opaque+sky": 0.29,
+        "shadows": 0.024
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 44.0,
+      "device_ms": 257.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 0.9
+    },
+    {
+      "round": 1,
+      "case": "shadows",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.433,
+      "cpu_ms": 0.537,
+      "wall_ms": 1.231,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.335,
+        "shadows": 0.037
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 186.2,
+      "device_ms": 1254.0,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.2
+    },
+    {
+      "round": 1,
+      "case": "shadows",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.437,
+      "cpu_ms": 0.502,
+      "wall_ms": 1.141,
+      "passes_ms": {
+        "cull": 0.062,
+        "lights": 0.0,
+        "opaque+sky": 0.342,
+        "shadows": 0.034
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 184.8,
+      "device_ms": 1187.8,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.1
+    },
+    {
+      "round": 1,
+      "case": "shadows",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.434,
+      "cpu_ms": 0.549,
+      "wall_ms": 1.235,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.335,
+        "shadows": 0.038
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 190.0,
+      "device_ms": 1217.8,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.2
+    },
+    {
+      "round": 1,
+      "case": "crowd",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.813,
+      "cpu_ms": 0.614,
+      "wall_ms": 1.836,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.003,
+        "opaque+sky": 0.393,
+        "shadows": 0.404
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.0
+    },
+    {
+      "round": 1,
+      "case": "crowd",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.952,
+      "cpu_ms": 1.505,
+      "wall_ms": 2.981,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.51,
+        "shadows": 0.427
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.5
+    },
+    {
+      "round": 1,
+      "case": "crowd",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.907,
+      "cpu_ms": 1.814,
+      "wall_ms": 3.193,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.49,
+        "shadows": 0.403
+      },
+      "draw_calls": 1765,
+      "draw_path": "baseline",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.6
+    },
+    {
+      "round": 1,
+      "case": "crowd",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.925,
+      "cpu_ms": 1.827,
+      "wall_ms": 3.255,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.5,
+        "shadows": 0.411
+      },
+      "draw_calls": 1765,
+      "draw_path": "first-instance",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.6
+    },
+    {
+      "round": 2,
+      "case": "sphere",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 2.318,
+      "cpu_ms": 0.275,
+      "wall_ms": 2.753,
+      "passes_ms": {
+        "cull": 0.384,
+        "lights": 0.003,
+        "opaque+sky": 1.931
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 44.1,
+      "device_ms": 391.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 3.7
+    },
+    {
+      "round": 2,
+      "case": "sphere",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 2.452,
+      "cpu_ms": 0.537,
+      "wall_ms": 3.25,
+      "passes_ms": {
+        "cull": 0.497,
+        "lights": 0.0,
+        "opaque+sky": 1.955
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 177.6,
+      "device_ms": 1167.1,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.9
+    },
+    {
+      "round": 2,
+      "case": "sphere",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 2.352,
+      "cpu_ms": 0.495,
+      "wall_ms": 3.076,
+      "passes_ms": {
+        "cull": 0.388,
+        "lights": 0.0,
+        "opaque+sky": 1.963
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 185.4,
+      "device_ms": 1262.8,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.9
+    },
+    {
+      "round": 2,
+      "case": "sphere",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 2.341,
+      "cpu_ms": 0.53,
+      "wall_ms": 3.121,
+      "passes_ms": {
+        "cull": 0.388,
+        "lights": 0.0,
+        "opaque+sky": 1.952
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 185.4,
+      "device_ms": 1260.4,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 4.9
+    },
+    {
+      "round": 2,
+      "case": "dense",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 14.651,
+      "cpu_ms": 0.497,
+      "wall_ms": 15.362,
+      "passes_ms": {
+        "cull": 0.388,
+        "lights": 0.004,
+        "opaque+sky": 14.259
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 44.1,
+      "device_ms": 355.9,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 6.6
+    },
+    {
+      "round": 2,
+      "case": "dense",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 16.473,
+      "cpu_ms": 0.879,
+      "wall_ms": 17.483,
+      "passes_ms": {
+        "cull": 0.445,
+        "lights": 0.0,
+        "opaque+sky": 16.028
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 182.8,
+      "device_ms": 1179.1,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 2,
+      "case": "dense",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 16.583,
+      "cpu_ms": 0.802,
+      "wall_ms": 17.422,
+      "passes_ms": {
+        "cull": 0.445,
+        "lights": 0.0,
+        "opaque+sky": 16.138
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 182.8,
+      "device_ms": 1170.3,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 2,
+      "case": "dense",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 16.45,
+      "cpu_ms": 0.849,
+      "wall_ms": 17.29,
+      "passes_ms": {
+        "cull": 0.444,
+        "lights": 0.0,
+        "opaque+sky": 16.005
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 181.7,
+      "device_ms": 1189.2,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 8.2
+    },
+    {
+      "round": 2,
+      "case": "shadows",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.417,
+      "cpu_ms": 0.289,
+      "wall_ms": 0.907,
+      "passes_ms": {
+        "cull": 0.048,
+        "lights": 0.003,
+        "opaque+sky": 0.342,
+        "shadows": 0.024
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 45.6,
+      "device_ms": 463.4,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 1.1
+    },
+    {
+      "round": 2,
+      "case": "shadows",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.433,
+      "cpu_ms": 0.508,
+      "wall_ms": 1.202,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.335,
+        "shadows": 0.037
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 186.2,
+      "device_ms": 1284.4,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.3
+    },
+    {
+      "round": 2,
+      "case": "shadows",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.422,
+      "cpu_ms": 0.502,
+      "wall_ms": 1.12,
+      "passes_ms": {
+        "cull": 0.06,
+        "lights": 0.0,
+        "opaque+sky": 0.33,
+        "shadows": 0.032
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 183.0,
+      "device_ms": 584.5,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 1.5
+    },
+    {
+      "round": 2,
+      "case": "shadows",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.434,
+      "cpu_ms": 0.504,
+      "wall_ms": 1.219,
+      "passes_ms": {
+        "cull": 0.061,
+        "lights": 0.0,
+        "opaque+sky": 0.335,
+        "shadows": 0.037
+      },
+      "draw_calls": null,
+      "draw_path": null,
+      "renderer_new_ms": 183.8,
+      "device_ms": 1274.8,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.2
+    },
+    {
+      "round": 2,
+      "case": "crowd",
+      "variant": "vk",
+      "backend": "vulkan",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.812,
+      "cpu_ms": 0.614,
+      "wall_ms": 1.834,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.003,
+        "opaque+sky": 0.393,
+        "shadows": 0.402
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.0
+    },
+    {
+      "round": 2,
+      "case": "crowd",
+      "variant": "d3d",
+      "backend": "dx12",
+      "root": "new",
+      "env": {},
+      "gpu_ms": 0.943,
+      "cpu_ms": 1.506,
+      "wall_ms": 2.992,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.505,
+        "shadows": 0.423
+      },
+      "draw_calls": 20,
+      "draw_path": "multi-draw",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.5
+    },
+    {
+      "round": 2,
+      "case": "crowd",
+      "variant": "d3d-baseline",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "WGPU_VALIDATION_INDIRECT_CALL": "0"
+      },
+      "gpu_ms": 0.93,
+      "cpu_ms": 1.854,
+      "wall_ms": 3.322,
+      "passes_ms": {
+        "cull": 0.015,
+        "lights": 0.0,
+        "opaque+sky": 0.502,
+        "shadows": 0.414
+      },
+      "draw_calls": 1765,
+      "draw_path": "baseline",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.6
+    },
+    {
+      "round": 2,
+      "case": "crowd",
+      "variant": "d3d-firstinst",
+      "backend": "dx12",
+      "root": "new",
+      "env": {
+        "POCKET_GPU_MINIMAL": "multi-draw"
+      },
+      "gpu_ms": 0.934,
+      "cpu_ms": 1.855,
+      "wall_ms": 3.288,
+      "passes_ms": {
+        "cull": 0.014,
+        "lights": 0.0,
+        "opaque+sky": 0.504,
+        "shadows": 0.415
+      },
+      "draw_calls": 1765,
+      "draw_path": "first-instance",
+      "renderer_new_ms": null,
+      "device_ms": null,
+      "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "seconds": 2.6
+    }
+  ]
+}

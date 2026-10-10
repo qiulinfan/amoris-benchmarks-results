@@ -1,0 +1,104 @@
+{
+  "source_repository": "qiulinfan/amoris-pioneer",
+  "source_commit": "9a3e4b0814959629202629845b85205c42086505",
+  "hardware": "Apple M5",
+  "backend": "Metal",
+  "wgpu": "30.0.1",
+  "workload": "480x270, demo::mixed(4), 17 static casters, 29 instances after three skinned characters, alpha-masked checker mesh, moved/interpolated caster poses, raised arms",
+  "os": "macOS-27.0.1-arm64-arm-64bit",
+  "fix": [
+    "Wait for static/masked BLAS completion on Metal before later TLAS build.",
+    "Submit the frame prefix containing skinning and skinned BLAS builds, wait for its completion, then encode TLAS and forward passes. No extra TLAS wait.",
+    "Only Metal ray-query forward shader maps MSAA to Off and MSAA+TAA to TAA in constructor and setter. Effective metadata reflects real mode; normal Metal keeps MSAA defaults."
+  ],
+  "unmodified": [
+    "rt_shadows.wgsl",
+    "all original shadow IoU/change/count/cutout thresholds",
+    "Vulkan/Direct3D paths"
+  ],
+  "final_verification": {
+    "rt_integrated_fresh_processes_passed": 8,
+    "default_aa_runs": 6,
+    "explicit_msaa_taa_runs": 1,
+    "explicit_msaa_runs": 1,
+    "rt_unit_tests_passed": 2,
+    "git_diff_check": "PASS",
+    "full_gate": "Parent owns combined integration tree gate; not run here."
+  },
+  "strict_results": {
+    "static_iou": 0.934,
+    "halfway_iou": 0.938,
+    "moved_iou": 0.934,
+    "characters_iou": 0.924,
+    "raised_arms_iou": 0.928,
+    "change_iou_range": [
+      0.908,
+      0.936
+    ],
+    "masked_light_pixels": {
+      "CSM": 103,
+      "RT": 96
+    }
+  },
+  "ablation": [
+    {
+      "condition": "All waits removed, sample1",
+      "fresh_processes": 8,
+      "pass": 3,
+      "fail": 5,
+      "failure": "static IoU 0.859 (2100 RT vs 2244 CSM pixels)"
+    },
+    {
+      "condition": "Static BLAS wait only, sample1",
+      "fresh_processes": 6,
+      "pass": 0,
+      "fail": 6,
+      "failure": "characters IoU typically0.399; arms0.339"
+    },
+    {
+      "condition": "TLAS wait only, sample1",
+      "fresh_processes": 6,
+      "pass": 0,
+      "fail": 6,
+      "failure": "static IoU0.822"
+    },
+    {
+      "condition": "Static BLAS + TLAS waits, no skinned BLAS wait, sample1",
+      "fresh_processes": 6,
+      "pass": 0,
+      "fail": 6,
+      "failure": "characters IoU0.399"
+    },
+    {
+      "condition": "Static + skinned BLAS waits, no TLAS wait, sample1",
+      "fresh_processes": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "condition": "BLAS and TLAS waits, MSAA4",
+      "fresh_processes": 4,
+      "pass": 0,
+      "fail": 4,
+      "failure": "RGBA all0 on both shadowed and unshadowed ray-query forward shader"
+    },
+    {
+      "condition": "BLAS and TLAS waits, sample1",
+      "fresh_processes": 4,
+      "pass": 4,
+      "fail": 0
+    }
+  ],
+  "upstream": [
+    "https://github.com/gfx-rs/wgpu/issues/9215",
+    "https://github.com/gfx-rs/wgpu/pull/9645",
+    "https://github.com/gfx-rs/wgpu/pull/10292"
+  ],
+  "limits": [
+    "Metal workaround stalls CPU when BLAS rebuilds; measured correctness only, no performance claims.",
+    "Remove build waits only after a released wgpu Metal AS barrier fix is pinned and these strict tests pass.",
+    "MSAA ray-query failure verified on Apple M5 with current pinned stack; no claim that all Metal devices or Metal API forbid MSAA. Remove AA guard after a fixed stack passes default and reset MSAA pixel regressions.",
+    "Windows cannot be re-run on this Mac; paths unchanged."
+  ],
+  "patch": "<review-workspace>/render/out/rt-metal/metal-rt-shadows.patch"
+}
