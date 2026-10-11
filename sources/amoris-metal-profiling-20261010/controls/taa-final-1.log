@@ -1,0 +1,37 @@
+
+running 11 tests
+test a_still_capture_settles_taa ... against 64 jittered frames: msaa 33.95 dB, taa's first frame 29.46 dB, a still capture 38.59 dB
+ok
+test camera_cuts_and_resizes_drop_the_history ... ok
+test gtao_darkens_only_indirect_light ... GTAO darkened 2.5% of the pixels by 3% or more
+ok
+test gtao_normals_from_the_target_match_the_depth ... the target's darkening is 1.032 times the depth's, 11.9% of it apart
+the target's darkening is 0.942 times the depth's, 18.9% of it apart
+ok
+test msaa_with_taa_converges_beyond_msaa ... after 32 frames: msaa 34.0 dB, taa 39.1 dB, msaa+taa 39.3 dB
+ok
+test object_motion_reprojects_a_moving_board_exactly ... Taa board (101, 44)-(153, 82): 53.1 dB, 19.5 dB without
+MsaaTaa board (101, 44)-(153, 82): 53.0 dB, 21.0 dB without
+ok
+test skinned_motion_reprojects_a_sliding_board_exactly ... skinned board (101, 44)-(153, 82): 47.5 dB, 23.0 dB rigid
+ok
+test splats_behind_meshes_are_stable_under_taa ... Quads Msaa: 2012 pixels of splats, 0 flickering
+Quads Taa: 2014 pixels of splats, 0 flickering
+Quads MsaaTaa: 2014 pixels of splats, 0 flickering
+Tiles Msaa: 2012 pixels of splats, 0 flickering
+Tiles Taa: 2014 pixels of splats, 0 flickering
+Tiles MsaaTaa: 2014 pixels of splats, 0 flickering
+ok
+test taa_reprojects_a_whole_pixel_pan_exactly ... Taa still: 42.7 dB against the mean of 64 jittered frames
+Taa pan: 52.5 dB against the still camera
+MsaaTaa still: 45.2 dB against the mean of 64 jittered frames
+MsaaTaa pan: 53.6 dB against the still camera
+ok
+test the_entity_id_pass_is_not_jittered ... ok
+test the_sea_hides_what_lies_under_it ... 16176 pixels inside the sea
+GTAO changed 0 of them
+object motion changed 0 of them
+ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.55s
+
