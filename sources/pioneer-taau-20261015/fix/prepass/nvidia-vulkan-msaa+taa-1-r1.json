@@ -1,0 +1,45 @@
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-15 13:38",
+ "backend": "vulkan",
+ "adapter": "nvidia",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "../../../out/taau/fix/prepass/nvidia-vulkan-msaa+taa-1-r1/cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "../../../out/taau/fix/prepass/nvidia-vulkan-msaa+taa-1-r1/cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.006,
+    "psnr_db": 92.23,
+    "max_diff_8bit": 4,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}

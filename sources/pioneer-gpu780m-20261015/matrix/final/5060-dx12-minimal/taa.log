@@ -1,0 +1,72 @@
+
+running 11 tests
+test a_still_capture_settles_taa ... ok
+test camera_cuts_and_resizes_drop_the_history ... ok
+test object_motion_reprojects_a_moving_board_exactly ... ok
+test skinned_motion_reprojects_a_sliding_board_exactly ... ok
+test the_sea_hides_what_lies_under_it ... ok
+test taa_reprojects_a_whole_pixel_pan_exactly ... ok
+test msaa_with_taa_converges_beyond_msaa ... ok
+test gtao_normals_from_the_target_match_the_depth ... ok
+test the_entity_id_pass_is_not_jittered ... ok
+test gtao_darkens_only_indirect_light ... ok
+test splats_behind_meshes_are_stable_under_taa ... ok
+
+successes:
+
+---- a_still_capture_settles_taa stdout ----
+against 64 jittered frames: msaa 34.32 dB, taa's first frame 29.62 dB, a still capture 38.91 dB
+
+---- object_motion_reprojects_a_moving_board_exactly stdout ----
+Taa board (101, 44)-(153, 82): 51.3 dB, 19.5 dB without
+MsaaTaa board (101, 44)-(153, 82): 53.0 dB, 21.0 dB without
+
+---- skinned_motion_reprojects_a_sliding_board_exactly stdout ----
+skinned board (101, 44)-(153, 82): 46.2 dB, 23.2 dB rigid
+
+---- the_sea_hides_what_lies_under_it stdout ----
+16344 pixels inside the sea
+GTAO changed 0 of them
+object motion changed 0 of them
+
+---- taa_reprojects_a_whole_pixel_pan_exactly stdout ----
+Taa still: 42.7 dB against the mean of 64 jittered frames
+Taa pan: 52.7 dB against the still camera
+MsaaTaa still: 45.2 dB against the mean of 64 jittered frames
+MsaaTaa pan: 53.0 dB against the still camera
+
+---- msaa_with_taa_converges_beyond_msaa stdout ----
+after 32 frames: msaa 34.3 dB, taa 39.4 dB, msaa+taa 39.5 dB
+
+---- gtao_normals_from_the_target_match_the_depth stdout ----
+the target's darkening is 1.041 times the depth's, 12.4% of it apart
+the target's darkening is 0.938 times the depth's, 19.5% of it apart
+
+---- gtao_darkens_only_indirect_light stdout ----
+GTAO darkened 2.5% of the pixels by 3% or more
+
+---- splats_behind_meshes_are_stable_under_taa stdout ----
+Quads Msaa: 2012 pixels of splats, 0 flickering
+Quads Taa: 2014 pixels of splats, 0 flickering
+Quads MsaaTaa: 2014 pixels of splats, 0 flickering
+Tiles Msaa: 2012 pixels of splats, 0 flickering
+Tiles Taa: 2014 pixels of splats, 0 flickering
+Tiles MsaaTaa: 2014 pixels of splats, 0 flickering
+
+
+successes:
+    a_still_capture_settles_taa
+    camera_cuts_and_resizes_drop_the_history
+    gtao_darkens_only_indirect_light
+    gtao_normals_from_the_target_match_the_depth
+    msaa_with_taa_converges_beyond_msaa
+    object_motion_reprojects_a_moving_board_exactly
+    skinned_motion_reprojects_a_sliding_board_exactly
+    splats_behind_meshes_are_stable_under_taa
+    taa_reprojects_a_whole_pixel_pan_exactly
+    the_entity_id_pass_is_not_jittered
+    the_sea_hides_what_lies_under_it
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.67s
+
+

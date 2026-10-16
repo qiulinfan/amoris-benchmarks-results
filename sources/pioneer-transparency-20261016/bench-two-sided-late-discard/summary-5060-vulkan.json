@@ -1,0 +1,98 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+ "backend": "Vulkan",
+ "driver": "NVIDIA 617.14",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "msaa",
+ "gtao": "depth",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 0.366,
+   "opaque_pass_ms": 0.179,
+   "shadows_ms": 0.042,
+   "cpu_encode_ms": 0.512,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 1.273,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    0.366,
+    0.366,
+    0.367
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "opaque": {
+   "gpu_ms": 0.616,
+   "opaque_pass_ms": 0.315,
+   "shadows_ms": 0.15,
+   "cpu_encode_ms": 0.748,
+   "transparent_ms": 0.001,
+   "submit_to_idle_ms": 1.858,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    0.614,
+    0.616,
+    0.631
+   ],
+   "gpu_over_hidden_ms": 0.25,
+   "cpu_over_hidden_ms": 0.236
+  },
+  "blend": {
+   "gpu_ms": 0.726,
+   "opaque_pass_ms": 0.422,
+   "shadows_ms": 0.157,
+   "cpu_encode_ms": 0.684,
+   "transparent_ms": 0.097,
+   "submit_to_idle_ms": 1.839,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    0.721,
+    0.726,
+    0.742
+   ],
+   "gpu_over_hidden_ms": 0.36,
+   "cpu_over_hidden_ms": 0.172
+  },
+  "glass": {
+   "gpu_ms": 0.725,
+   "opaque_pass_ms": 0.448,
+   "shadows_ms": 0.161,
+   "cpu_encode_ms": 0.688,
+   "transparent_ms": 0.099,
+   "submit_to_idle_ms": 1.87,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    0.722,
+    0.728,
+    0.725
+   ],
+   "gpu_over_hidden_ms": 0.359,
+   "cpu_over_hidden_ms": 0.176
+  },
+  "double": {
+   "gpu_ms": 1.3,
+   "opaque_pass_ms": 0.993,
+   "shadows_ms": 0.168,
+   "cpu_encode_ms": 0.743,
+   "transparent_ms": 0.104,
+   "submit_to_idle_ms": 2.567,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    1.3,
+    1.294,
+    1.304
+   ],
+   "gpu_over_hidden_ms": 0.934,
+   "cpu_over_hidden_ms": 0.231
+  }
+ }
+}

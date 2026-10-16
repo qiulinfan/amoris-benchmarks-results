@@ -1,0 +1,386 @@
+2026-10-16 02:12:16 before publish: RTX 52 C
+2026-10-16 02:12:16 start publish
+run 1 full: snapshot 138.4 us
+run 1 cached: snapshot 74.3 us
+run 1 base: snapshot 132.6 us
+run 2 cached: snapshot 72.5 us
+run 2 base: snapshot 131.4 us
+run 2 full: snapshot 143.3 us
+run 3 base: snapshot 130.9 us
+run 3 full: snapshot 139.8 us
+run 3 cached: snapshot 72.9 us
+run 4 full: snapshot 142.9 us
+run 4 cached: snapshot 72.8 us
+run 4 base: snapshot 132.2 us
+run 5 cached: snapshot 71.1 us
+run 5 base: snapshot 132.9 us
+run 5 full: snapshot 141.6 us
+Paced every 16.667 ms, 1800 ticks a run, 5 runs: the median over the runs of each part's median (mean, p95) in us per tick
+
+| Mode | step | streams | present | snapshot | publish | after_step |
+|---|---|---|---|---|---|---|
+| full | 267.2 (275.0, 358.0) | 0.5 (0.6, 0.9) | 9.7 (10.0, 13.2) | 141.6 (147.5, 194.5) | 5.0 (5.3, 7.3) | 157.2 (163.5, 216.7) |
+| cached | 270.9 (276.9, 361.8) | 0.5 (0.6, 0.8) | 10.0 (10.4, 14.2) | 72.8 (75.7, 105.6) | 4.4 (4.6, 6.1) | 88.2 (91.0, 126.4) |
+| base | 265.7 (272.8, 358.7) | 0.6 (0.7, 1.0) | 32.4 (33.5, 44.2) | 132.2 (136.3, 181.3) | 5.1 (5.3, 7.2) | 171.0 (175.8, 230.2) |
+
+Sections changed per tick (ticks of the last run whose digest changed): cache:physics.rapier 1800, component:Boat 1800, component:Floater 1800, component:Log 1800, component:Transform 1800, component:Velocity 1800, resource:EventCounter 1, resource:EventInbox 2, resource:SimClock 1800
+
+Anatomy (back to back, last run): {"hashing": 0.98, "registry_checks": 0.48, "section_digests": 39.19, "snapshot": 41.94}
+2026-10-16 02:20:08 end publish: exit 0
+2026-10-16 02:20:09 before live: RTX 50 C
+2026-10-16 02:20:09 start live
+base: host at http://<local-endpoint>/
+new: host at http://<local-endpoint>/
+  base idle none: 0.454 % of a core by cycles, 0.42 % by CPU time
+  base idle sockets: 0.868 % of a core by cycles, 0.94 % by CPU time
+  new idle none: 0.251 % of a core by cycles, 0.05 % by CPU time
+  new idle sockets: 0.310 % of a core by cycles, 0.16 % by CPU time
+  new idle none: 0.246 % of a core by cycles, 0.21 % by CPU time
+  new idle sockets: 0.302 % of a core by cycles, 0.42 % by CPU time
+  base idle none: 0.465 % of a core by cycles, 0.47 % by CPU time
+  base idle sockets: 0.876 % of a core by cycles, 0.89 % by CPU time
+  base idle none: 0.471 % of a core by cycles, 0.47 % by CPU time
+  base idle sockets: 0.868 % of a core by cycles, 0.62 % by CPU time
+  new idle none: 0.243 % of a core by cycles, 0.26 % by CPU time
+  new idle sockets: 0.304 % of a core by cycles, 0.05 % by CPU time
+  round 1 base none: busy 0.466 tick 0.278 publish 0.1521 present 0.0347
+  round 1 base sockets: busy 0.473 tick 0.280 publish 0.1551 present 0.0370
+  round 1 base editor: busy 0.637 tick 0.382 publish 0.2068 present 0.0468
+  round 1 new none: busy 0.373 tick 0.274 publish 0.0875 present 0.0102
+  round 1 new sockets: busy 0.379 tick 0.273 publish 0.0946 present 0.0103
+  round 1 new editor: busy 0.552 tick 0.391 publish 0.1426 present 0.0164
+  round 2 new sockets: busy 0.385 tick 0.278 publish 0.0959 present 0.0108
+  round 2 new editor: busy 0.544 tick 0.391 publish 0.1352 present 0.0161
+  round 2 new none: busy 0.360 tick 0.267 publish 0.0825 present 0.0096
+  round 2 base sockets: busy 0.470 tick 0.281 publish 0.1530 present 0.0345
+  round 2 base editor: busy 0.660 tick 0.398 publish 0.2100 present 0.0499
+  round 2 base none: busy 0.450 tick 0.267 publish 0.1481 present 0.0341
+  round 3 base editor: busy 0.637 tick 0.386 publish 0.2018 present 0.0476
+  round 3 base none: busy 0.449 tick 0.268 publish 0.1469 present 0.0332
+  round 3 base sockets: busy 0.471 tick 0.281 publish 0.1530 present 0.0357
+  round 3 new editor: busy 0.557 tick 0.398 publish 0.1411 present 0.0166
+  round 3 new none: busy 0.387 tick 0.287 publish 0.0885 present 0.0106
+  round 3 new sockets: busy 0.397 tick 0.287 publish 0.0975 present 0.0111
+  round 4 new none: busy 0.383 tick 0.283 publish 0.0884 present 0.0107
+  round 4 new sockets: busy 0.394 tick 0.283 publish 0.0986 present 0.0109
+  round 4 new editor: busy 0.553 tick 0.395 publish 0.1396 present 0.0163
+  round 4 base none: busy 0.474 tick 0.285 publish 0.1527 present 0.0349
+  round 4 base sockets: busy 0.482 tick 0.290 publish 0.1555 present 0.0352
+  round 4 base editor: busy 0.646 tick 0.391 publish 0.2037 present 0.0491
+  round 5 base sockets: busy 0.475 tick 0.284 publish 0.1543 present 0.0356
+  round 5 base editor: busy 0.643 tick 0.389 publish 0.2047 present 0.0484
+  round 5 base none: busy 0.466 tick 0.279 publish 0.1516 present 0.0342
+  round 5 new sockets: busy 0.396 tick 0.285 publish 0.0982 present 0.0110
+  round 5 new editor: busy 0.554 tick 0.395 publish 0.1417 present 0.0166
+  round 5 new none: busy 0.377 tick 0.279 publish 0.0865 present 0.0104
+| Build | Clients | Plays | busy_ms | tick_ms | loop.publish | loop.present | loop.after | script:log | physics.step | /render frames/s (each play) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | none | 5 | 0.466 | 0.278 | 0.1516 | 0.0342 | 0.0011 | 0.1002 | 0.0658 |  |
+| base | sockets | 5 | 0.473 | 0.281 | 0.1543 | 0.0356 | 0.0011 | 0.1056 | 0.0664 | 54.9 (54.9, 56.0, 55.4, 54.9, 54.9) |
+| base | editor | 5 | 0.643 | 0.389 | 0.2047 | 0.0484 | 0.0017 | 0.1506 | 0.0969 |  |
+| new | none | 5 | 0.377 | 0.279 | 0.0875 | 0.0104 | 0.0010 | 0.1040 | 0.0648 |  |
+| new | sockets | 5 | 0.394 | 0.283 | 0.0975 | 0.0109 | 0.0010 | 0.1045 | 0.0671 | 60.0 (60.0, 60.0, 60.0, 60.0, 60.0) |
+| new | editor | 5 | 0.553 | 0.395 | 0.1411 | 0.0164 | 0.0016 | 0.1521 | 0.0969 |  |
+
+Idle, every try: % of one core by cycles (by CPU time); median by cycles
+
+| Build | Clients | Tries | Median | /render messages/s |
+|---|---|---|---|---|
+| base | none | 0.454 (0.42), 0.465 (0.47), 0.471 (0.47) | 0.465 | 0.0 |
+| base | sockets | 0.868 (0.94), 0.876 (0.89), 0.868 (0.62) | 0.868 | 0.0 |
+| new | none | 0.251 (0.05), 0.246 (0.21), 0.243 (0.26) | 0.246 | 0.0 |
+| new | sockets | 0.310 (0.16), 0.302 (0.42), 0.304 (0.05) | 0.304 | 0.0 |
+2026-10-16 02:34:49 end live: exit 0
+2026-10-16 02:34:50 before diag: RTX 56 C
+2026-10-16 02:34:50 start diag
+base: host at http://<local-endpoint>/
+  round 1 base none: busy 0.463 tick 0.276 publish 0.1511 present 0.0346
+  round 1 base sockets-reads: busy 0.471 tick 0.283 publish 0.1517 present 0.0346
+  round 1 base editor: busy 0.647 tick 0.391 publish 0.2063 present 0.0483
+  round 1 base editor-dgpu: busy 0.556 tick 0.339 publish 0.1743 present 0.0413
+  round 1 base busy1: busy 0.462 tick 0.277 publish 0.1496 present 0.0337
+  round 1 base busy3: busy 0.455 tick 0.274 publish 0.1460 present 0.0337
+  round 2 base sockets-reads: busy 0.464 tick 0.278 publish 0.1505 present 0.0346
+  round 2 base editor: busy 0.636 tick 0.388 publish 0.2002 present 0.0469
+  round 2 base editor-dgpu: busy 0.560 tick 0.338 publish 0.1772 present 0.0427
+  round 2 base busy1: busy 0.460 tick 0.275 publish 0.1499 present 0.0339
+  round 2 base busy3: busy 0.442 tick 0.265 publish 0.1432 present 0.0331
+  round 2 base none: busy 0.449 tick 0.269 publish 0.1458 present 0.0333
+  round 3 base editor: busy 0.641 tick 0.388 publish 0.2024 present 0.0491
+  round 3 base editor-dgpu: busy 0.557 tick 0.338 publish 0.1764 present 0.0418
+  round 3 base busy1: busy 0.455 tick 0.270 publish 0.1501 present 0.0339
+  round 3 base busy3: busy 0.444 tick 0.267 publish 0.1425 present 0.0334
+  round 3 base none: busy 0.451 tick 0.271 publish 0.1461 present 0.0330
+  round 3 base sockets-reads: busy 0.455 tick 0.273 publish 0.1473 present 0.0341
+  round 4 base editor-dgpu: busy 0.560 tick 0.341 publish 0.1759 present 0.0424
+  round 4 base busy1: busy 0.465 tick 0.278 publish 0.1511 present 0.0344
+  round 4 base busy3: busy 0.440 tick 0.264 publish 0.1415 present 0.0330
+  round 4 base none: busy 0.460 tick 0.275 publish 0.1486 present 0.0345
+  round 4 base sockets-reads: busy 0.460 tick 0.275 publish 0.1484 present 0.0353
+  round 4 base editor: busy 0.651 tick 0.393 publish 0.2077 present 0.0485
+  round 5 base busy1: busy 0.463 tick 0.275 publish 0.1523 present 0.0349
+  round 5 base busy3: busy 0.442 tick 0.266 publish 0.1424 present 0.0328
+  round 5 base none: busy 0.454 tick 0.273 publish 0.1469 present 0.0337
+  round 5 base sockets-reads: busy 0.471 tick 0.282 publish 0.1530 present 0.0353
+  round 5 base editor: busy 0.645 tick 0.391 publish 0.2040 present 0.0487
+  round 5 base editor-dgpu: busy 0.561 tick 0.339 publish 0.1786 present 0.0414
+| Build | Clients | Plays | busy_ms | tick_ms | loop.publish | loop.present | loop.after | script:log | physics.step | /render frames/s (each play) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | none | 5 | 0.454 | 0.273 | 0.1469 | 0.0337 | 0.0011 | 0.1003 | 0.0642 |  |
+| base | sockets-reads | 5 | 0.464 | 0.278 | 0.1505 | 0.0346 | 0.0011 | 0.1025 | 0.0657 | 55.2 (55.6, 55.2, 55.8, 54.7, 55.1) |
+| base | editor | 5 | 0.645 | 0.391 | 0.2040 | 0.0485 | 0.0016 | 0.1509 | 0.0960 |  |
+| base | editor-dgpu | 5 | 0.560 | 0.339 | 0.1764 | 0.0418 | 0.0014 | 0.1297 | 0.0823 |  |
+| base | busy1 | 5 | 0.462 | 0.275 | 0.1501 | 0.0339 | 0.0011 | 0.1009 | 0.0639 |  |
+| base | busy3 | 5 | 0.442 | 0.266 | 0.1425 | 0.0331 | 0.0010 | 0.0979 | 0.0629 |  |
+2026-10-16 02:43:22 end diag: exit 0
+2026-10-16 02:43:23 before speed8: RTX 63 C
+2026-10-16 02:43:23 start speed8
+base: host at http://<local-endpoint>/
+  round 1 base none: busy 0.290 tick 0.165 publish 0.1016 present 0.0228
+  round 1 base editor: busy 0.387 tick 0.222 publish 0.1335 present 0.0306
+  round 1 base editor-dgpu: busy 0.368 tick 0.211 publish 0.1272 present 0.0289
+  round 1 base busy1: busy 0.303 tick 0.172 publish 0.1071 present 0.0239
+  round 2 base editor: busy 0.398 tick 0.226 publish 0.1383 present 0.0333
+  round 2 base editor-dgpu: busy 0.362 tick 0.212 publish 0.1213 present 0.0280
+  round 2 base busy1: busy 0.292 tick 0.165 publish 0.1032 present 0.0229
+  round 2 base none: busy 0.290 tick 0.168 publish 0.1001 present 0.0215
+  round 3 base editor-dgpu: busy 0.382 tick 0.218 publish 0.1311 present 0.0318
+  round 3 base busy1: busy 0.292 tick 0.168 publish 0.1021 present 0.0211
+  round 3 base none: busy 0.284 tick 0.164 publish 0.0984 present 0.0208
+  round 3 base editor: busy 0.387 tick 0.222 publish 0.1339 present 0.0300
+  round 4 base busy1: busy 0.300 tick 0.173 publish 0.1044 present 0.0218
+  round 4 base none: busy 0.289 tick 0.164 publish 0.1019 present 0.0229
+  round 4 base editor: busy 0.392 tick 0.222 publish 0.1369 present 0.0324
+  round 4 base editor-dgpu: busy 0.362 tick 0.213 publish 0.1211 present 0.0275
+  round 5 base none: busy 0.295 tick 0.167 publish 0.1051 present 0.0229
+  round 5 base editor: busy 0.384 tick 0.221 publish 0.1327 present 0.0292
+  round 5 base editor-dgpu: busy 0.379 tick 0.223 publish 0.1255 present 0.0296
+  round 5 base busy1: busy 0.294 tick 0.166 publish 0.1045 present 0.0228
+| Build | Clients | Plays | busy_ms | tick_ms | loop.publish | loop.present | loop.after | script:log | physics.step | /render frames/s (each play) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | none | 5 | 0.290 | 0.165 | 0.1016 | 0.0228 | 0.0006 | 0.0565 | 0.0343 |  |
+| base | editor | 5 | 0.387 | 0.222 | 0.1339 | 0.0306 | 0.0009 | 0.0816 | 0.0494 |  |
+| base | editor-dgpu | 5 | 0.368 | 0.213 | 0.1255 | 0.0289 | 0.0009 | 0.0783 | 0.0467 |  |
+| base | busy1 | 5 | 0.294 | 0.168 | 0.1044 | 0.0228 | 0.0005 | 0.0576 | 0.0344 |  |
+2026-10-16 02:49:26 end speed8: exit 0
+2026-10-16 02:49:27 before pinned: RTX 64 C
+2026-10-16 02:49:27 start pinned
+base: host at http://<local-endpoint>/
+  round 1 base none: busy 0.461 tick 0.273 publish 0.1519 present 0.0345
+  round 1 base sockets: busy 0.496 tick 0.293 publish 0.1637 present 0.0374
+  round 1 base editor: busy 0.666 tick 0.401 publish 0.2130 present 0.0503
+  round 1 base editor-dgpu: busy 0.569 tick 0.345 publish 0.1807 present 0.0424
+  round 2 base sockets: busy 0.467 tick 0.279 publish 0.1518 present 0.0356
+  round 2 base editor: busy 0.648 tick 0.391 publish 0.2046 present 0.0499
+  round 2 base editor-dgpu: busy 0.562 tick 0.340 publish 0.1782 present 0.0424
+  round 2 base none: busy 0.468 tick 0.279 publish 0.1533 present 0.0349
+  round 3 base editor: busy 0.646 tick 0.389 publish 0.2061 present 0.0486
+  round 3 base editor-dgpu: busy 0.570 tick 0.343 publish 0.1823 present 0.0433
+  round 3 base none: busy 0.457 tick 0.273 publish 0.1490 present 0.0343
+  round 3 base sockets: busy 0.489 tick 0.294 publish 0.1571 present 0.0373
+| Build | Clients | Plays | busy_ms | tick_ms | loop.publish | loop.present | loop.after | script:log | physics.step | /render frames/s (each play) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| base | none | 3 | 0.461 | 0.273 | 0.1519 | 0.0345 | 0.0012 | 0.1005 | 0.0654 |  |
+| base | sockets | 3 | 0.489 | 0.293 | 0.1571 | 0.0373 | 0.0011 | 0.1097 | 0.0692 | 55.8 (55.8, 54.9, 56.4) |
+| base | editor | 3 | 0.648 | 0.391 | 0.2061 | 0.0499 | 0.0017 | 0.1518 | 0.0969 |  |
+| base | editor-dgpu | 3 | 0.569 | 0.343 | 0.1807 | 0.0424 | 0.0015 | 0.1307 | 0.0838 |  |
+2026-10-16 02:53:11 end pinned: exit 0
+2026-10-16 02:53:12 before gizmo-base: RTX 61 C
+2026-10-16 02:53:12 start gizmo-base
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":1,"min":0.7,"max":7.2,"mean":1},"feed_ms":{"n":40,"median":12.6,"p95":21.5,"min":3.5,"max":27.3,"mean":14.1}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":0.9,"mean":0.8},"feed_ms":{"n":40,"median":12.1,"p95":21.2,"min":2.9,"max":27.1,"mean":14}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":61.3,"p95":93.2,"min":22.2,"max":104.7,"mean":62.7}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1518,"release_to_first_feed_ms":19,"undo_added":1,"frames":252,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.3,"p95":11.7,"min":4.2,"max":12.5,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":1.2,"mean":0.8},"feed_ms":{"n":40,"median":11.5,"p95":20.8,"min":2.9,"max":24.2,"mean":13.2}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":1,"mean":0.8},"feed_ms":{"n":40,"median":12.3,"p95":20.7,"min":2.8,"max":29.6,"mean":13.2}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":66.2,"p95":97.2,"min":27.1,"max":109.7,"mean":67.5}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1518,"release_to_first_feed_ms":20,"undo_added":1,"frames":251,"drag_ms":1500,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.5,"min":2.9,"max":12.6,"mean":8.3}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":1,"min":0.6,"max":1.2,"mean":0.8},"feed_ms":{"n":40,"median":12.9,"p95":25.4,"min":2.6,"max":29.6,"mean":14.4}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":1,"min":0.7,"max":1.3,"mean":0.8},"feed_ms":{"n":40,"median":13,"p95":23.3,"min":2.1,"max":29.1,"mean":14.1}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":59.8,"p95":92,"min":23.4,"max":122.6,"mean":61.8}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":252,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.7,"min":3.3,"max":13.1,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":1.6,"mean":0.8},"feed_ms":{"n":40,"median":18,"p95":28.2,"min":3,"max":28.8,"mean":15.8}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":0.9,"mean":0.8},"feed_ms":{"n":40,"median":11.6,"p95":21.8,"min":1.8,"max":25.1,"mean":12.9}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":60.2,"p95":92.4,"min":24,"max":109.9,"mean":60.6}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1509,"release_to_first_feed_ms":10,"undo_added":1,"frames":237,"drag_ms":1502,"moves_seen":89,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":236,"median":8.4,"p95":11.6,"min":3.1,"max":136.7,"mean":8.9}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":1.1,"mean":0.8},"feed_ms":{"n":40,"median":11.6,"p95":22.9,"min":1.9,"max":27.4,"mean":13.5}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":0.9,"mean":0.8},"feed_ms":{"n":40,"median":14.3,"p95":27.3,"min":3.1,"max":27.8,"mean":15.4}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":60.5,"p95":92.1,"min":25,"max":109.6,"mean":60.5}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1523,"release_to_first_feed_ms":24,"undo_added":1,"frames":252,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.8,"min":1.5,"max":13.5,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+2026-10-16 02:55:33 end gizmo-base: exit 0
+2026-10-16 02:55:34 before gizmo-host: RTX 64 C
+2026-10-16 02:55:34 start gizmo-host
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.2,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.5,"max":0.8,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":46.6,"p95":75.5,"min":11,"max":88.8,"mean":47.3}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":11,"undo_added":1,"frames":252,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.6,"min":4,"max":13.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":49.4,"p95":77.7,"min":14.7,"max":82.5,"mean":48.5}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1501,"release_to_first_feed_ms":3,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.7,"min":3.8,"max":13.3,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":1,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.2,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":44.4,"p95":75.5,"min":13.7,"max":77.8,"mean":48.3}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1507,"release_to_first_feed_ms":8,"undo_added":1,"frames":252,"drag_ms":1503,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.5,"min":2.9,"max":13.9,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.2,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.9,"min":0.5,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":48,"p95":75.8,"min":15.5,"max":93.6,"mean":48.4}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":8,"undo_added":1,"frames":252,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.7,"min":3.4,"max":12.3,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.4,"max":0.8,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":52.4,"p95":77,"min":14.3,"max":92.5,"mean":50.3}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":9,"undo_added":1,"frames":252,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.7,"min":4.6,"max":13.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+2026-10-16 02:57:50 end gizmo-host: exit 0
+2026-10-16 02:57:50 before gizmo-new: RTX 64 C
+2026-10-16 02:57:51 start gizmo-new
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":1,"min":0.6,"max":1.9,"mean":0.8},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.2,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":14.6,"p95":26.1,"min":9.1,"max":28.9,"mean":16.8}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1500,"release_to_first_feed_ms":3,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.9,"min":2.8,"max":13.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":1,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.2,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":13.3,"p95":25.5,"min":9.3,"max":36.9,"mean":14.8}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":8,"undo_added":1,"frames":252,"drag_ms":1503,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.8,"min":3.1,"max":12.4,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":1,"min":0.6,"max":1.2,"mean":0.8},"feed_ms":{"n":40,"median":0.7,"p95":1,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":13.8,"p95":25.8,"min":8.9,"max":39.2,"mean":15.8}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":11,"undo_added":1,"frames":252,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.9,"min":2.7,"max":14.1,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.4,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.3,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.5,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":14.6,"p95":26.9,"min":9.5,"max":37.6,"mean":17.4}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":6,"undo_added":1,"frames":252,"drag_ms":1505,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":12,"min":1.6,"max":14.3,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":0.9,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":21.8,"p95":204.6,"min":9.3,"max":270.4,"mean":41.7}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1499,"release_to_first_feed_ms":2,"undo_added":1,"frames":251,"drag_ms":1500,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.7,"min":2.4,"max":13.1,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+2026-10-16 03:00:06 end gizmo-new: exit 0
+| Editor | Runs | Input to frame, median (p95) ms | Listener | Wait | Send to feed | Feed to frame | Edit reply | Edits / feeds / moves | History pushes | Frame interval | Long tasks (ms) | Undo entries added | Escape |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| built | 5 | 60.5 (92.4) | 4.1 | 34.9 | 18.4 | 8.5 | 1.6 | 24 / 24 / 90 | 1 | 8.4 | 0 (0) | [1] | restores; the drag moves to redo |
+built run1: orbit distance 5.36, moved 2.12; input to frame 61.3 (from the listener 58.9); frame interval streamed 8.4 (p95 12.2, 251 frames), on release 8.3 (p95 11.7, 251 frames); adapter rdna-3
+built run2: orbit distance 5.36, moved 2.12; input to frame 66.2 (from the listener 62.3); frame interval streamed 8.4 (p95 12.2, 251 frames), on release 8.4 (p95 11.5, 250 frames); adapter rdna-3
+built run3: orbit distance 5.36, moved 2.12; input to frame 59.8 (from the listener 55.1); frame interval streamed 8.4 (p95 11.8, 251 frames), on release 8.4 (p95 11.7, 251 frames); adapter rdna-3
+built run4: orbit distance 5.36, moved 2.12; input to frame 60.2 (from the listener 56.2); frame interval streamed 8.4 (p95 12.3, 250 frames), on release 8.4 (p95 11.6, 236 frames); adapter rdna-3
+built run5: orbit distance 5.36, moved 2.12; input to frame 60.5 (from the listener 58.5); frame interval streamed 8.4 (p95 11.9, 251 frames), on release 8.4 (p95 11.8, 251 frames); adapter rdna-3
+floor, to the host: reply 0.8 ms, feed 12.6 ms (p95 22.9)
+built, on release: first move to first feed 1518 ms, release to feed 19 ms, sends 1, undo entries added [1], frame interval 8.4 ms (p95 11.7), long tasks 0
+built, streamed: frame interval p95 12.2 ms
+| Editor | Runs | Input to frame, median (p95) ms | Listener | Wait | Send to feed | Feed to frame | Edit reply | Edits / feeds / moves | History pushes | Frame interval | Long tasks (ms) | Undo entries added | Escape |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| built | 5 | 48 (75.8) | 4.2 | 33 | 1.9 | 9.6 | 1.9 | 24 / 24 / 90 | 1 | 8.4 | 0 (0) | [1] | restores; the drag moves to redo |
+built run1: orbit distance 5.36, moved 2.12; input to frame 46.6 (from the listener 41.9); frame interval streamed 8.4 (p95 12, 251 frames), on release 8.4 (p95 11.6, 251 frames); adapter rdna-3
+built run2: orbit distance 5.36, moved 2.12; input to frame 49.4 (from the listener 41.9); frame interval streamed 8.4 (p95 11.8, 251 frames), on release 8.4 (p95 11.7, 250 frames); adapter rdna-3
+built run3: orbit distance 5.36, moved 2.12; input to frame 44.4 (from the listener 41.8); frame interval streamed 8.4 (p95 11.9, 251 frames), on release 8.4 (p95 11.5, 251 frames); adapter rdna-3
+built run4: orbit distance 5.36, moved 2.12; input to frame 48 (from the listener 42); frame interval streamed 8.4 (p95 12, 251 frames), on release 8.4 (p95 11.7, 251 frames); adapter rdna-3
+built run5: orbit distance 5.36, moved 2.12; input to frame 52.4 (from the listener 46.3); frame interval streamed 8.4 (p95 12.6, 250 frames), on release 8.4 (p95 11.7, 251 frames); adapter rdna-3
+floor, to the host: reply 0.7 ms, feed 0.7 ms (p95 0.8)
+built, on release: first move to first feed 1508 ms, release to feed 8 ms, sends 1, undo entries added [1], frame interval 8.4 ms (p95 11.7), long tasks 0
+built, streamed: frame interval p95 12 ms
+| Editor | Runs | Input to frame, median (p95) ms | Listener | Wait | Send to feed | Feed to frame | Edit reply | Edits / feeds / moves | History pushes | Frame interval | Long tasks (ms) | Undo entries added | Escape |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| built | 5 | 14.6 (26.1) | 4.1 | 3 | 5 | 1.1 | 5.2 | 91 / 91 / 90 | 1 | 8.4 | 0 (0) | [1] | restores; the drag moves to redo |
+built run1: orbit distance 5.36, moved 2.12; input to frame 14.6 (from the listener 8.7); frame interval streamed 8.4 (p95 12, 251 frames), on release 8.4 (p95 11.9, 250 frames); adapter rdna-3
+built run2: orbit distance 5.36, moved 2.12; input to frame 13.3 (from the listener 8.5); frame interval streamed 8.4 (p95 12, 251 frames), on release 8.4 (p95 11.8, 251 frames); adapter rdna-3
+built run3: orbit distance 5.36, moved 2.12; input to frame 13.8 (from the listener 8.6); frame interval streamed 8.4 (p95 12, 252 frames), on release 8.4 (p95 11.9, 251 frames); adapter rdna-3
+built run4: orbit distance 5.36, moved 2.12; input to frame 14.6 (from the listener 8.7); frame interval streamed 8.4 (p95 12.1, 251 frames), on release 8.4 (p95 12, 251 frames); adapter rdna-3
+built run5: orbit distance 5.36, moved 2.12; input to frame 21.8 (from the listener 18.8); frame interval streamed 8.4 (p95 11.9, 221 frames), on release 8.4 (p95 11.7, 250 frames); adapter rdna-3
+floor, to the host: reply 0.7 ms, feed 0.7 ms (p95 0.9)
+built, on release: first move to first feed 1508 ms, release to feed 6 ms, sends 1, undo entries added [1], frame interval 8.4 ms (p95 11.9), long tasks 0
+built, streamed: frame interval p95 12 ms
+QUIET-DONE

@@ -1,0 +1,280 @@
+{
+ "target": "chrome",
+ "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+ "wasm": "web-opt.wasm",
+ "warmup": 120,
+ "ticks": 600,
+ "rounds": 1,
+ "verify": {
+  "ticks": 720,
+  "identical": true,
+  "first_divergent_tick": null,
+  "final": "e13690add0b3a196",
+  "chain": "241f611fc67a04f2",
+  "native_final": "e13690add0b3a196",
+  "same_as_native": true
+ },
+ "results": [
+  {
+   "variant": "twin",
+   "ticks": 600,
+   "tick_us": {
+    "median": 165,
+    "min": 150,
+    "p99": 245,
+    "max": 300,
+    "mean": 173.2
+   },
+   "update_us": {
+    "median": 130,
+    "min": 120,
+    "p99": 195,
+    "max": 270,
+    "mean": 137.4
+   },
+   "system_us": {
+    "median": 130,
+    "min": 120,
+    "p99": 195,
+    "max": 270,
+    "mean": 137.4
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "run": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "diff": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "apply": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    }
+   },
+   "steps": {
+    "median": 0,
+    "min": 0,
+    "p99": 0,
+    "max": 0,
+    "mean": 0
+   },
+   "digest": "e13690add0b3a196",
+   "round": 1
+  },
+  {
+   "variant": "idle",
+   "ticks": 600,
+   "tick_us": {
+    "median": 10,
+    "min": 5,
+    "p99": 30,
+    "max": 505,
+    "mean": 13.4
+   },
+   "update_us": {
+    "median": 10,
+    "min": 0,
+    "p99": 25,
+    "max": 495,
+    "mean": 11.4
+   },
+   "system_us": {
+    "median": 10,
+    "min": 0,
+    "p99": 20,
+    "max": 495,
+    "mean": 10.8
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 10,
+     "min": 0,
+     "p99": 15,
+     "max": 40,
+     "mean": 7.6
+    },
+    "run": {
+     "median": 0,
+     "min": 0,
+     "p99": 10,
+     "max": 10,
+     "mean": 1.5
+    },
+    "diff": {
+     "median": 0,
+     "min": 0,
+     "p99": 5,
+     "max": 485,
+     "mean": 1.1
+    },
+    "apply": {
+     "median": 0,
+     "min": 0,
+     "p99": 5,
+     "max": 5,
+     "mean": 0.3
+    }
+   },
+   "steps": {
+    "median": 7,
+    "min": 7,
+    "p99": 7,
+    "max": 7,
+    "mean": 7
+   },
+   "digest": "02507fdf8b0db15d",
+   "round": 1
+  },
+  {
+   "variant": "scan",
+   "ticks": 600,
+   "tick_us": {
+    "median": 190,
+    "min": 175,
+    "p99": 315,
+    "max": 445,
+    "mean": 202.8
+   },
+   "update_us": {
+    "median": 185,
+    "min": 175,
+    "p99": 305,
+    "max": 440,
+    "mean": 200.5
+   },
+   "system_us": {
+    "median": 185,
+    "min": 175,
+    "p99": 305,
+    "max": 435,
+    "mean": 199.6
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 155,
+     "min": 145,
+     "p99": 260,
+     "max": 390,
+     "mean": 168.9
+    },
+    "run": {
+     "median": 0,
+     "min": 0,
+     "p99": 10,
+     "max": 10,
+     "mean": 2
+    },
+    "diff": {
+     "median": 25,
+     "min": 20,
+     "p99": 50,
+     "max": 95,
+     "mean": 26.6
+    },
+    "apply": {
+     "median": 0,
+     "min": 0,
+     "p99": 10,
+     "max": 30,
+     "mean": 1.8
+    }
+   },
+   "steps": {
+    "median": 14,
+    "min": 14,
+    "p99": 14,
+    "max": 14,
+    "mean": 14
+   },
+   "digest": "02507fdf8b0db15d",
+   "round": 1
+  },
+  {
+   "variant": "rules",
+   "ticks": 600,
+   "tick_us": {
+    "median": 3290,
+    "min": 2875,
+    "p99": 4825,
+    "max": 5305,
+    "mean": 3406.2
+   },
+   "update_us": {
+    "median": 3240,
+    "min": 2845,
+    "p99": 4770,
+    "max": 5250,
+    "mean": 3364.1
+   },
+   "system_us": {
+    "median": 3240,
+    "min": 2845,
+    "p99": 4760,
+    "max": 5245,
+    "mean": 3361.8
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 190,
+     "min": 155,
+     "p99": 375,
+     "max": 405,
+     "mean": 209.9
+    },
+    "run": {
+     "median": 2605,
+     "min": 2300,
+     "p99": 3830,
+     "max": 4460,
+     "mean": 2706.6
+    },
+    "diff": {
+     "median": 120,
+     "min": 105,
+     "p99": 190,
+     "max": 320,
+     "mean": 127.1
+    },
+    "apply": {
+     "median": 300,
+     "min": 265,
+     "p99": 475,
+     "max": 590,
+     "mean": 317.8
+    }
+   },
+   "steps": {
+    "median": 62518,
+    "min": 62139,
+    "p99": 62792,
+    "max": 62870,
+    "mean": 62509.9
+   },
+   "digest": "e13690add0b3a196",
+   "round": 1
+  }
+ ],
+ "crossOriginIsolated": true,
+ "wall": {
+  "start": "2026-10-15T09:31:29",
+  "end": "2026-10-15T09:31:41"
+ }
+}

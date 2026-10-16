@@ -1,0 +1,143 @@
+{
+ "url": "http://<local-endpoint>/viewport/?demo=lod&t=0&shadow_cull=on",
+ "stats": {
+  "url": "http://<local-endpoint>/viewport/?demo=lod&t=0&shadow_cull=on",
+  "frames": 300,
+  "frame_ms_mean": 4.149819444444441,
+  "frame_ms_p50": 4.131666666666669,
+  "frame_ms_p95": 4.248333333333335,
+  "gpu_ms_mean": 2.657093333333316,
+  "gpu_ms_timed_mean": 2.657093333333316,
+  "gpu_timed_frames": 300,
+  "antialiasing": "msaa",
+  "render_ms_mean": 3.4383333330849806,
+  "backend": "WebGPU",
+  "passes": [
+   {
+    "pass": "cull",
+    "ms": 0.016
+   },
+   {
+    "pass": "lights",
+    "ms": 0.002
+   },
+   {
+    "pass": "shadows",
+    "ms": 1.08
+   },
+   {
+    "pass": "depth prepass",
+    "ms": 0.634
+   },
+   {
+    "pass": "opaque+sky",
+    "ms": 0.972
+   }
+  ],
+  "draw_path": "first-instance",
+  "draw_calls": 165,
+  "instances": 2305,
+  "occlusion": "auto-off",
+  "occluded": 251,
+  "canvas": [
+   1254,
+   564
+  ],
+  "gpu": "yes"
+ },
+ "id_pass": {
+  "adapter": "amd rdna-3",
+  "draw_path": "first-instance",
+  "draw_calls": 165,
+  "readback_ms": 1415,
+  "entities": 266,
+  "coverage": [
+   [
+    1,
+    0.279
+   ],
+   [
+    2,
+    0.20651
+   ],
+   [
+    3,
+    0.03647
+   ],
+   [
+    4,
+    0.01781
+   ],
+   [
+    5,
+    0.00305
+   ],
+   [
+    6,
+    0.00088
+   ],
+   [
+    8,
+    1e-05
+   ],
+   [
+    50,
+    0.00493
+   ],
+   [
+    51,
+    0.00678
+   ],
+   [
+    52,
+    0.00626
+   ],
+   [
+    53,
+    0.00658
+   ],
+   [
+    54,
+    0.00356
+   ],
+   [
+    56,
+    0.00102
+   ],
+   [
+    57,
+    0.00054
+   ],
+   [
+    99,
+    0.00514
+   ],
+   [
+    100,
+    0.00463
+   ],
+   [
+    101,
+    0.00052
+   ],
+   [
+    102,
+    0.0007
+   ],
+   [
+    104,
+    0.00062
+   ],
+   [
+    106,
+    8e-05
+   ]
+  ],
+  "coverage_sha1": "05bb2c9c1327fb7a5bc83910290a4f778c741499"
+ },
+ "logs": [
+  "[log] [pocket INFO] limits: buffer 2048 MB, storage binding 2047 MB, storage buffers/stage 16, texture 2D 16384",
+  "[log] [pocket INFO] GPU:  (BrowserWebGpu, Other); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: false, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+  "[info] demo=lod: meshes, levels and field in 747.2 ms"
+ ]
+}

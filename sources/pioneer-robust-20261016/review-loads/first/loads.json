@@ -1,0 +1,1703 @@
+{
+  "url": "http://<local-endpoint>/",
+  "loads": 10,
+  "seconds": 12,
+  "touch": null,
+  "phases": [
+    {
+      "name": "load 1",
+      "ok": false,
+      "why": [
+        "the viewport's canvas shows no world: {\"width\":951,\"height\":480,\"flat\":0.948,\"colors\":148,\"shot\":\"<local-path>\"}",
+        "errors: 1998 pocket-error"
+      ],
+      "ready_s": 2.2,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 2,
+        "renderer": {
+          "gpu_ms": 0.243,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.049
+            },
+            {
+              "pass": "lights",
+              "ms": 0.194
+            },
+            {
+              "pass": "shadows",
+              "ms": 0
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 0
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.948,
+        "colors": 148,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-1.png"
+      },
+      "counts": {
+        "pocket-error": 1998
+      },
+      "messages": [
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 6.2,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        }
+      ]
+    },
+    {
+      "name": "load 2",
+      "ok": false,
+      "why": [
+        "the viewport's canvas shows no world: {\"width\":951,\"height\":480,\"flat\":0.948,\"colors\":148,\"shot\":\"<local-path>\"}",
+        "errors: 2858 pocket-error"
+      ],
+      "ready_s": 0.8,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 1,
+        "renderer": {
+          "gpu_ms": 0.222,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.047
+            },
+            {
+              "pass": "lights",
+              "ms": 0.175
+            },
+            {
+              "pass": "shadows",
+              "ms": 0
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 0
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.948,
+        "colors": 148,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-2.png"
+      },
+      "counts": {
+        "previous-page": 14,
+        "pocket-error": 2858
+      },
+      "messages": [
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        }
+      ]
+    },
+    {
+      "name": "load 3",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.9,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 8,
+        "renderer": {
+          "gpu_ms": 1.304,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.06
+            },
+            {
+              "pass": "lights",
+              "ms": 0.016
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.009
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.219
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-3.png"
+      },
+      "counts": {
+        "previous-page": 13
+      },
+      "messages": [
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        }
+      ]
+    },
+    {
+      "name": "load 4",
+      "ok": false,
+      "why": [
+        "the viewport's canvas shows no world: {\"width\":951,\"height\":480,\"flat\":0.948,\"colors\":148,\"shot\":\"<local-path>\"}",
+        "errors: 2887 pocket-error"
+      ],
+      "ready_s": 0.8,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 18,
+        "renderer": {
+          "gpu_ms": 0.101,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.056
+            },
+            {
+              "pass": "lights",
+              "ms": 0.03
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.01
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 0.004
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.948,
+        "colors": 148,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-4.png"
+      },
+      "counts": {
+        "pocket-error": 2887
+      },
+      "messages": [
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0.9,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 1.1,
+          "kind": "pocket-error",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        }
+      ]
+    },
+    {
+      "name": "load 5",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.8,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 9,
+        "renderer": {
+          "gpu_ms": 1.319,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.053
+            },
+            {
+              "pass": "lights",
+              "ms": 0.017
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.009
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.24
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-5.png"
+      },
+      "counts": {
+        "previous-page": 9
+      },
+      "messages": [
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[TextureView of Texture \\\"D3DImageBacking_D3DSharedImage_WebGPUSwapBufferProvider_Pid:<pid>\\\"] is associated with [Device \\\"pocket\\\"], and cannot be used with [Device \\\"pocket\\\"].\\n - While validating colorAttachments[0].\\n - While encoding [CommandEncoder \\\"frame\\\"].BeginRenderPass([RenderPassDescriptor \\\"\\\"display transform\\\"\\\"]).\\n - While finishing [CommandEncoder \\\"frame\\\"].\\n\" }"
+        },
+        {
+          "t": 0,
+          "kind": "previous-page",
+          "text": "[pocket ERROR] wgpu: Validation { source: \"<WebGPU Error>\", description: \"[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"] is invalid due to a previous error.\\n - While calling [Queue].Submit([[Invalid CommandBuffer \\\"frame\\\" from CommandEncoder \\\"frame\\\"]])\\n\" }"
+        }
+      ]
+    },
+    {
+      "name": "load 6",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.8,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 11,
+        "renderer": {
+          "gpu_ms": 1.338,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.051
+            },
+            {
+              "pass": "lights",
+              "ms": 0.015
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.012
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.26
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-6.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "load 7",
+      "ok": true,
+      "why": [],
+      "ready_s": 1.1,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 14,
+        "renderer": {
+          "gpu_ms": 1.322,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.047
+            },
+            {
+              "pass": "lights",
+              "ms": 0.011
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.011
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.253
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-7.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "load 8",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.9,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 22,
+        "renderer": {
+          "gpu_ms": 1.375,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.05
+            },
+            {
+              "pass": "lights",
+              "ms": 0.022
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.012
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.292
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-8.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "load 9",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.9,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 28,
+        "renderer": {
+          "gpu_ms": 1.348,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.057
+            },
+            {
+              "pass": "lights",
+              "ms": 0.029
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.013
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.249
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-9.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "load 10",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.9,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 17,
+        "renderer": {
+          "gpu_ms": 1.357,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.057
+            },
+            {
+              "pass": "lights",
+              "ms": 0.029
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.01
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.261
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-10.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "layout reset (the viewport panel remounted)",
+      "ok": true,
+      "why": [],
+      "ready_s": 0.3,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 2,
+        "frames": 2,
+        "renderer": {
+          "gpu_ms": 1.294,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.052
+            },
+            {
+              "pass": "lights",
+              "ms": 0.028
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.01
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.203
+            }
+          ]
+        },
+        "wasm_fetches": 1
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\review-loads\\first\\phase-11.png"
+      },
+      "counts": {},
+      "messages": []
+    }
+  ]
+}

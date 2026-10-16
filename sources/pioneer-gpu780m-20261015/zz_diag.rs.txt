@@ -1,0 +1,300 @@
+//! Neural texture materials in the forward pass (docs/spec/neural-textures.md 5, 7): a material
+//! whose network outputs constants must draw like the inline material with those values, in half
+//! and single precision, on WebGPU's baseline (no optional features, default limits), and as the
+//! second of two loaded textures with other channel sets; a texture of another shape is refused;
+//! and a scene with no neural material must not change at all when the renderer has one loaded.
+//! A probe network whose output depends on the mip and the latents (not on the position) checks
+//! the level of detail, the blend between mips and the latent fetches of `fs_neural` against the
+//! CPU reference decoder at known fractional levels of detail, also after the latent texture grew.
+//! Material names that are not ASCII must not crash the renderer. Skips without a GPU.
+
+use pocket_assets::RenderFrame;
+use pocket_assets::neural::{
+    Channel, Decoder, GridSpec, LatentGrid, LatentLevel, NeuralLayout, NeuralTexture, Sampling,
+    f32_to_f16, full_mip_count, level_dims,
+};
+use pocket_render::gpu::Minimal;
+use pocket_render::neural::train::srgb_to_linear;
+use pocket_render::{BackendChoice, CameraState, Gpu, Renderer, demo};
+
+/// Base color sRGB, a flat normal, occlusion 1, `roughness`, metallic 0.
+fn orm(base: [f32; 3], roughness: f32) -> Vec<(Channel, f32)> {
+    vec![
+        (Channel::BaseR, base[0]),
+        (Channel::BaseG, base[1]),
+        (Channel::BaseB, base[2]),
+        (Channel::NormalX, 0.5),
+        (Channel::NormalY, 0.5),
+        (Channel::Occlusion, 1.0),
+        (Channel::Roughness, roughness),
+        (Channel::Metallic, 0.0),
+    ]
+}
+
+/// The default profile's shape (8x8-bit grids at a quarter resolution, bilinear, two octaves, a
+/// 32-32 network) with `channels`.
+fn layout(channels: Vec<Channel>) -> NeuralLayout {
+    NeuralLayout {
+        channels,
+        fine: GridSpec {
+            features: 8,
+            bits: 8,
+        },
+        coarse: GridSpec {
+            features: 8,
+            bits: 8,
+        },
+        fine_shift: 2,
+        sampling: Sampling::Bilinear,
+        pe_octaves: 2,
+        hidden: [32, 32],
+    }
+}
+
+/// A texture whose every texel is `values`: zero weights, the values as output biases, latents
+/// anything.
+fn constant(values: &[(Channel, f32)]) -> NeuralTexture {
+    let layout = layout(values.iter().map(|(c, _)| *c).collect());
+    let size = 64;
+    let mips = full_mip_count(size, size);
+    let levels = level_dims(&layout, size, size, mips)
+        .iter()
+        .map(|d| {
+            let grid = |[w, h]: [u32; 2]| LatentGrid {
+                width: w,
+                height: h,
+                words: (0..2 * w * h)
+                    .map(|i| i.wrapping_mul(2_654_435_761))
+                    .collect(),
+            };
+            LatentLevel {
+                fine: grid(d.fine),
+                coarse: grid(d.coarse),
+            }
+        })
+        .collect();
+    let mut weights = vec![0u16; layout.weight_count()];
+    let [_, _, (_, b3)] = layout.offsets();
+    for (i, (_, v)) in values.iter().enumerate() {
+        weights[b3 + i] = f32_to_f16(*v);
+    }
+    NeuralTexture {
+        name: "constant".into(),
+        width: size,
+        height: size,
+        mip_count: mips,
+        layout,
+        levels,
+        weights,
+    }
+}
+
+fn shoot(
+    gpu: &Gpu,
+    frame: pocket_assets::RenderFrame,
+    neural: Option<(&NeuralTexture, bool)>,
+) -> Vec<u8> {
+    let mut r = Renderer::new(gpu, wgpu::TextureFormat::Rgba8UnormSrgb, 320, 180);
+    r.add_model(demo::NEURAL_GROUND, &demo::neural_ground_model(40.0, 8.0));
+    if let Some((texture, f16)) = neural {
+        r.set_neural_half_precision(f16);
+        r.add_neural_texture("materials/constant.ntex", texture)
+            .expect("the texture loads");
+    }
+    r.apply(frame, 0.0);
+    r.set_camera_override(Some(demo::neural_camera(1)));
+    let mut rgba = Vec::new();
+    let frames: usize = std::env::var("FRAMES").ok().and_then(|v| v.parse().ok()).unwrap_or(3);
+    let fixed = std::env::var_os("FIXED_TIME").is_some();
+    for k in 0..frames {
+        let t = if fixed { 1.0 / 60.0 } else { (k + 1) as f64 / 60.0 };
+        rgba = r.capture_rgba(t).2;
+        if std::env::var_os("PENDING").is_some() { eprintln!("frame {k}: pending assets {}", r.last.pending_assets); }
+    }
+    rgba
+}
+
+fn worst(a: &[u8], b: &[u8]) -> (u8, usize) {
+    let mut worst = 0;
+    let mut over = 0;
+    for (p, q) in a.chunks(4).zip(b.chunks(4)) {
+        let d = (0..3).map(|i| p[i].abs_diff(q[i])).max().unwrap();
+        worst = worst.max(d);
+        over += usize::from(d > 2);
+    }
+    (worst, over)
+}
+
+
+fn dump(name: &str, w: u32, h: u32, px: &[u8]) {
+    let dir = std::path::Path::new("<local-path>/out/gpu780m/diag");
+    std::fs::create_dir_all(dir).unwrap();
+    image::save_buffer(dir.join(name), px, w, h, image::ColorType::Rgba8).unwrap();
+}
+
+#[test]
+fn zz_neural_dump() {
+    let gpu = Gpu::headless(BackendChoice::from_env()).unwrap();
+    let tag = format!("{}-{}", gpu.backend_name().replace(' ', ""), if gpu.info.name.contains("780M") {"780m"} else {"rtx"});
+    let base = [0.8, 0.35, 0.1];
+    let texture = constant(&orm(base, 0.6));
+    let linear = base.map(srgb_to_linear);
+    let inline = shoot(&gpu, demo::neural_scene("", [linear[0], linear[1], linear[2], 1.0], 0.6), None);
+    dump(&format!("{tag}-inline.png"), 320, 180, &inline);
+    for f16 in [true, false] {
+        let neural = shoot(&gpu, demo::neural_scene("materials/constant.ntex", [1.0; 4], 0.6), Some((&texture, f16)));
+        dump(&format!("{tag}-neural-f16{f16}.png"), 320, 180, &neural);
+        let mut diff = vec![0u8; inline.len()];
+        let mut n = 0;
+        for (i, (p, q)) in inline.chunks(4).zip(neural.chunks(4)).enumerate() {
+            let d = (0..3).map(|c| p[c].abs_diff(q[c])).max().unwrap();
+            diff[i * 4] = d.saturating_mul(8);
+            diff[i * 4 + 3] = 255;
+            if d > 2 {
+                n += 1;
+                if n <= 40 {
+                    eprintln!("f16 {f16}: ({}, {}) inline {:?} neural {:?}", i % 320, i / 320, &p[..3], &q[..3]);
+                }
+            }
+        }
+        eprintln!("f16 {f16}: {n} pixels over 2");
+        dump(&format!("{tag}-diff-f16{f16}.png"), 320, 180, &diff);
+    }
+}
+
+fn read_ticks(gpu: &Gpu, f: &dyn Fn(&mut wgpu::CommandEncoder, &wgpu::QuerySet)) -> (u64, u64) {
+    if std::env::var_os("DEFERRED").is_some() { return read_ticks_deferred(gpu, f); }
+    let device = &gpu.device;
+    let queries = device.create_query_set(&wgpu::QuerySetDescriptor { label: None, ty: wgpu::QueryType::Timestamp, count: 2 });
+    let resolve = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::QUERY_RESOLVE | wgpu::BufferUsages::COPY_SRC, mapped_at_creation: false });
+    let readback = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::MAP_READ | wgpu::BufferUsages::COPY_DST, mapped_at_creation: false });
+    let mut enc = device.create_command_encoder(&Default::default());
+    f(&mut enc, &queries);
+    enc.resolve_query_set(&queries, 0..2, &resolve, 0);
+    enc.copy_buffer_to_buffer(&resolve, 0, &readback, 0, 16);
+    gpu.queue.submit([enc.finish()]);
+    readback.slice(..).map_async(wgpu::MapMode::Read, |_| {});
+    device.poll(wgpu::PollType::wait_indefinitely()).unwrap();
+    let d = readback.slice(..).get_mapped_range().unwrap();
+    (u64::from_le_bytes(d[..8].try_into().unwrap()), u64::from_le_bytes(d[8..16].try_into().unwrap()))
+}
+
+#[test]
+fn zz_timestamps() {
+    let gpu = Gpu::headless(BackendChoice::from_env()).unwrap();
+    eprintln!("{} on {}", gpu.backend_name(), gpu.info.name);
+    let device = gpu.device.clone();
+    let target = device.create_texture(&wgpu::TextureDescriptor { label: None, size: wgpu::Extent3d { width: 1, height: 1, depth_or_array_layers: 1 }, mip_level_count: 1, sample_count: 1, dimension: wgpu::TextureDimension::D2, format: wgpu::TextureFormat::Rgba8Unorm, usage: wgpu::TextureUsages::RENDER_ATTACHMENT, view_formats: &[] });
+    let view = target.create_view(&Default::default());
+    let mut seen: Vec<(u64,u64)> = Vec::new(); let mut bad = [0usize; 4];
+    for round in 0..40 {
+        let compute = read_ticks(&gpu, &|enc, q| {
+            let _ = enc.begin_compute_pass(&wgpu::ComputePassDescriptor { label: None, timestamp_writes: Some(wgpu::ComputePassTimestampWrites { query_set: q, beginning_of_pass_write_index: Some(0), end_of_pass_write_index: Some(1) }) });
+        });
+        let render = read_ticks(&gpu, &|enc, q| {
+            let _ = enc.begin_render_pass(&wgpu::RenderPassDescriptor { label: None, color_attachments: &[Some(wgpu::RenderPassColorAttachment { view: &view, depth_slice: None, resolve_target: None, ops: wgpu::Operations { load: wgpu::LoadOp::Clear(wgpu::Color::BLACK), store: wgpu::StoreOp::Store } })], depth_stencil_attachment: None, timestamp_writes: Some(wgpu::RenderPassTimestampWrites { query_set: q, beginning_of_pass_write_index: Some(0), end_of_pass_write_index: Some(1) }), occlusion_query_set: None, multiview_mask: None });
+        });
+        let encoder = if device.features().contains(wgpu::Features::TIMESTAMP_QUERY_INSIDE_ENCODERS) {
+            Some(read_ticks(&gpu, &|enc, q| { enc.write_timestamp(q, 0); enc.write_timestamp(q, 1); }))
+        } else { None };
+        let compute_after_copy = read_ticks(&gpu, &|enc, q| {
+            let _ = enc.begin_render_pass(&wgpu::RenderPassDescriptor { label: None, color_attachments: &[Some(wgpu::RenderPassColorAttachment { view: &view, depth_slice: None, resolve_target: None, ops: wgpu::Operations { load: wgpu::LoadOp::Clear(wgpu::Color::BLACK), store: wgpu::StoreOp::Store } })], depth_stencil_attachment: None, timestamp_writes: None, occlusion_query_set: None, multiview_mask: None });
+            let _ = enc.begin_compute_pass(&wgpu::ComputePassDescriptor { label: None, timestamp_writes: Some(wgpu::ComputePassTimestampWrites { query_set: q, beginning_of_pass_write_index: Some(0), end_of_pass_write_index: Some(1) }) });
+        });
+        for (k, v) in [compute, render, encoder.unwrap_or((1, 2)), compute_after_copy].into_iter().enumerate() {
+            if v.0 == 0 || seen.contains(&v) { bad[k] += 1; if bad[k] < 3 { eprintln!("round {round} case {k}: {v:?}"); } }
+            seen.push(v);
+        }
+    }
+    eprintln!("bad (zero or repeated) out of 40: compute {} render {} encoder {} compute-after-render {}", bad[0], bad[1], bad[2], bad[3]);
+}
+
+fn read_ticks_deferred(gpu: &Gpu, f: &dyn Fn(&mut wgpu::CommandEncoder, &wgpu::QuerySet)) -> (u64, u64) {
+    let device = &gpu.device;
+    let queries = device.create_query_set(&wgpu::QuerySetDescriptor { label: None, ty: wgpu::QueryType::Timestamp, count: 2 });
+    let resolve = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::QUERY_RESOLVE | wgpu::BufferUsages::COPY_SRC, mapped_at_creation: false });
+    let readback = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::MAP_READ | wgpu::BufferUsages::COPY_DST, mapped_at_creation: false });
+    let mut enc = device.create_command_encoder(&Default::default());
+    f(&mut enc, &queries);
+    gpu.queue.submit([enc.finish()]);
+    device.poll(wgpu::PollType::wait_indefinitely()).unwrap();
+    let mut enc = device.create_command_encoder(&Default::default());
+    enc.resolve_query_set(&queries, 0..2, &resolve, 0);
+    enc.copy_buffer_to_buffer(&resolve, 0, &readback, 0, 16);
+    gpu.queue.submit([enc.finish()]);
+    readback.slice(..).map_async(wgpu::MapMode::Read, |_| {});
+    device.poll(wgpu::PollType::wait_indefinitely()).unwrap();
+    let d = readback.slice(..).get_mapped_range().unwrap();
+    (u64::from_le_bytes(d[..8].try_into().unwrap()), u64::from_le_bytes(d[8..16].try_into().unwrap()))
+}
+
+fn calib(gpu: &Gpu, rounds: usize, poll_before: bool, deferred: bool, reuse: bool) -> Vec<(u64, u64)> {
+    let device = &gpu.device;
+    let queue = &gpu.queue;
+    let mk = || {
+        let q = device.create_query_set(&wgpu::QuerySetDescriptor { label: None, ty: wgpu::QueryType::Timestamp, count: 2 });
+        let r = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::QUERY_RESOLVE | wgpu::BufferUsages::COPY_SRC, mapped_at_creation: false });
+        let b = device.create_buffer(&wgpu::BufferDescriptor { label: None, size: 16, usage: wgpu::BufferUsages::MAP_READ | wgpu::BufferUsages::COPY_DST, mapped_at_creation: false });
+        (q, r, b)
+    };
+    let mut set = mk();
+    let mut out = Vec::new();
+    for _ in 0..rounds {
+        if !reuse { set = mk(); }
+        let (queries, resolve, readback) = &set;
+        let mut enc = device.create_command_encoder(&Default::default());
+        {
+            let _pass = enc.begin_compute_pass(&wgpu::ComputePassDescriptor { label: None, timestamp_writes: Some(wgpu::ComputePassTimestampWrites { query_set: queries, beginning_of_pass_write_index: Some(0), end_of_pass_write_index: Some(1) }) });
+        }
+        let readback_enc = |enc: &mut wgpu::CommandEncoder| { enc.resolve_query_set(queries, 0..2, resolve, 0); enc.copy_buffer_to_buffer(resolve, 0, readback, 0, 16); };
+        if !deferred { readback_enc(&mut enc); }
+        let c = enc.finish();
+        if poll_before { device.poll(wgpu::PollType::wait_indefinitely()).unwrap(); }
+        queue.submit([c]);
+        device.poll(wgpu::PollType::wait_indefinitely()).unwrap();
+        if deferred { let mut e = device.create_command_encoder(&Default::default()); readback_enc(&mut e); queue.submit([e.finish()]); }
+        readback.slice(..).map_async(wgpu::MapMode::Read, |_| {});
+        device.poll(wgpu::PollType::wait_indefinitely()).unwrap();
+        let v = { let d = readback.slice(..).get_mapped_range().unwrap(); (u64::from_le_bytes(d[..8].try_into().unwrap()), u64::from_le_bytes(d[8..16].try_into().unwrap())) };
+        readback.unmap();
+        out.push(v);
+    }
+    out
+}
+
+#[test]
+fn zz_calib() {
+    let gpu = Gpu::headless(BackendChoice::from_env()).unwrap();
+    let v: Vec<String> = std::env::var("VARIANT").unwrap_or("pdr".into()).split(',').map(String::from).collect();
+    for variant in v {
+        let r = calib(&gpu, 4, variant.contains('p'), variant.contains('d'), variant.contains('r'));
+        eprintln!("{variant}: {r:?}");
+    }
+}
+
+#[test]
+fn zz_parallel_open() {
+    let choice = BackendChoice::from_env();
+    let n: usize = std::env::var("THREADS").ok().and_then(|v| v.parse().ok()).unwrap_or(12);
+    for round in 0..4 {
+        let errors: Vec<String> = std::thread::scope(|s| {
+            let hs: Vec<_> = (0..n).map(|_| s.spawn(move || Gpu::headless(choice).err().map(|e| e.to_string()))).collect();
+            hs.into_iter().filter_map(|h| h.join().unwrap()).collect()
+        });
+        eprintln!("round {round}: {} of {n} failed {:?}", errors.len(), errors.first());
+    }
+}
+
+#[test]
+fn zz_taa_sensitivity() {
+    let gpu = Gpu::headless(BackendChoice::from_env()).unwrap();
+    let base = [0.8f32, 0.35, 0.1];
+    let linear = base.map(srgb_to_linear);
+    let a = shoot(&gpu, demo::neural_scene("", [linear[0], linear[1], linear[2], 1.0], 0.6), None);
+    for eps in [0.0f32, 0.0, 0.001, 0.0, 0.003, 0.0, 0.01, 0.0] {
+        let l = linear.map(|c| c * (1.0 + eps));
+        let b = shoot(&gpu, demo::neural_scene("", [l[0], l[1], l[2], 1.0], 0.6), None);
+        let (d, over) = worst(&a, &b);
+        eprintln!("inline vs inline x(1+{eps}): worst {d}, {over} pixels over 2");
+    }
+}

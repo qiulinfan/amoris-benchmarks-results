@@ -1,0 +1,117 @@
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene-compare ...
+[bench_lock] waiting for dynscene-compare ...
+[bench_lock] waiting for dynscene-compare ...
+[bench_lock] waiting for dynscene-compare ...
+[bench_lock] waiting for dynscene-compare ...
+[bench_lock] waiting for dynscene-compare ...
+2026-10-14 21:36:36 profiler-start: AC True, CPU 6.6%, RTX 67 C 277/3090 MHz 11.91 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+capturing http://<local-endpoint>/ (viewport: WebGPU) -> <local-path>\out\liveprof\run2\capture
+  editor-profiler.png
+  profiler-panel.png
+  viewport.png
+WebGPU 119 fps GPU 1.02 ms 60 tps tick 827 9 entities
+2026-10-14 21:37:19 profiler-end: AC True, CPU 5.0%, RTX 63 C 0/3090 MHz 12.36 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+## this
+
+| Project | Runs | Without hooks (us/tick) | With hooks (us/tick) | Overhead (median of runs) | Overhead per run | Clock reading (ns) | Readings per tick | Tick (ms) | Systems' share of the tick |
+|---|---|---|---|---|---|---|---|---|---|
+| sailing | 3 | 70.3 | 73.0 | +4.32% | +2.61%, +4.32%, +4.91% | 31.4 | 32.0 | 0.0737 | 98% |
+| sailing-course | 3 | 87.9 | 89.8 | +1.37% | +1.37%, +0.35%, +2.14% | 31.8 | 32.0 | 0.0896 | 99% |
+
+sailing, last run (3000 profiled ticks): ms per tick
+
+| System | ms | max ms |
+|---|---|---|
+| script:log | 0.0205 | 0.0835 |
+| physics.buoyancy | 0.0185 | 0.0589 |
+| script:take_aboard | 0.0146 | 0.0960 |
+| physics.step | 0.0137 | 0.0750 |
+| physics.hull | 0.0017 | 0.0104 |
+| physics.wind | 0.0013 | 0.0146 |
+| tick.other | 0.0012 | 0.0185 |
+| physics.sail | 0.0011 | 0.0188 |
+| script.update | 0.0004 | 0.0072 |
+| sim.finish | 0.0002 | 0.0033 |
+| sim.begin | 0.0001 | 0.0006 |
+| physics.contacts | 0.0001 | 0.0009 |
+| interface.perception | 0.0001 | 0.0108 |
+| assets.animate | 0.0001 | 0.0013 |
+| interface.intents | 0.0000 | 0.0008 |
+| interface.turns | 0.0000 | 0.0036 |
+| loop.present | 0.0000 | 0.0000 |
+| loop.publish | 0.0000 | 0.0000 |
+
+Phases (ms per tick): Begin 0.0001, Control 0.0000, Update 0.0355, Forces 0.0226, Physics 0.0138, Finish 0.0004
+
+sailing-course, last run (3000 profiled ticks): ms per tick
+
+| System | ms | max ms |
+|---|---|---|
+| script:rounding | 0.0225 | 0.0564 |
+| physics.buoyancy | 0.0186 | 0.0414 |
+| script:take_aboard | 0.0161 | 0.0642 |
+| physics.step | 0.0142 | 0.0618 |
+| interface.perception | 0.0112 | 0.0441 |
+| physics.hull | 0.0017 | 0.0107 |
+| physics.wind | 0.0015 | 0.0098 |
+| tick.other | 0.0012 | 0.0062 |
+| physics.sail | 0.0009 | 0.0070 |
+| interface.intents | 0.0006 | 0.0078 |
+| script.update | 0.0004 | 0.0044 |
+| interface.turns | 0.0003 | 0.0034 |
+| sim.finish | 0.0002 | 0.0030 |
+| sim.begin | 0.0001 | 0.0010 |
+| physics.contacts | 0.0001 | 0.0012 |
+| assets.animate | 0.0001 | 0.0046 |
+| loop.present | 0.0000 | 0.0000 |
+| loop.publish | 0.0000 | 0.0000 |
+
+Phases (ms per tick): Begin 0.0001, Control 0.0006, Update 0.0390, Forces 0.0226, Physics 0.0143, Finish 0.0118
+host at http://<local-endpoint>/
+600 ticks to tick 601: tick 0.279 ms (max 0.729), game thread 0.468 ms per tick
+  system                              ms       max  share
+  sim.begin                       0.0009    0.0275   0.2%
+  interface.intents               0.0007    0.0020   0.1%
+  script:log                      0.1048    0.4072  22.4%
+  script:take_aboard              0.0367    0.1254   7.8%
+  script.update                   0.0053    0.0246   1.1%
+  physics.wind                    0.0095    0.0449   2.0%
+  physics.buoyancy                0.0293    0.0731   6.3%
+  physics.sail                    0.0039    0.0096   0.8%
+  physics.hull                    0.0049    0.0126   1.0%
+  physics.step                    0.0681    0.1465  14.6%
+  physics.contacts                0.0005    0.0028   0.1%
+  interface.perception            0.0011    0.0040   0.2%
+  interface.turns                 0.0006    0.0018   0.1%
+  assets.animate                  0.0011    0.0029   0.2%
+  sim.finish                      0.0009    0.0040   0.2%
+  tick.other                      0.0107    0.0452   2.3%
+  loop.present                    0.0355    0.1397   7.6%
+  loop.publish                    0.1534    0.6502  32.8%
+  phases (ms): Begin 0.001, Control 0.001, Update 0.147, Forces 0.048, Physics 0.069, Finish 0.004
+

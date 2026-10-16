@@ -1,0 +1,225 @@
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-16 01:35",
+ "backend": "vulkan",
+ "adapter": "780m",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 4.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.0,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.001,
+    "psnr_db": 108.47,
+    "max_diff_8bit": 1,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-dense": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-dense-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.1,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-dense-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.9,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-shadows": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-shadows-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\cubes-shadows-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.6,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "splats": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\splats-off.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.3,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\splats-on.png",
+     "gpu": "[INFO] GPU: AMD Radeon 780M Graphics (Vulkan, IntegratedGpu); driver AMD proprietary driver 24.30.62.03 (LLPC); features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "gi-room-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\gi-room-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.4,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}

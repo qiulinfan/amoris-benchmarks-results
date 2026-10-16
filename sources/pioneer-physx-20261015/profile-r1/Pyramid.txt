@@ -1,0 +1,96 @@
+2841 samples from 1 thread(s) over 6.1 s (2842 ticks); program exit 0
+{"engine":"rapier","version":"0.36.0","deterministic":true,"config":"enhanced-determinism native","scene":"Pyramid","threads":1,"steps":500,"solver_iterations":4,"bodies":1241,"colliders":1241,"active_at_end":1240,"setup_ms":2.5,"mean_ms":13.3900,"p50_ms":13.4027,"p95_ms":21.2523,"max_ms":45.6859,"total_ms":6694.99,"first_step_ms":28.8111,"mean_ms_after_first":13.3591,"top_y":28.992,"mean_y":7.772,"hash":"0x35b8325978916b7f"}
+Samples per thread: <tid>: 2841
+
+Leaf module: % of samples
+   99.8  physics-bench.exe
+    0.2  ntdll.dll
+
+Leaf function: % of samples
+   23.1  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::generate
+   22.1  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::solve
+   13.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update
+    9.7  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::worker::run_worker
+    6.5  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update_rhs_wo_bias
+    5.5  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::writeback_impulses
+    5.1  physics-bench.exe!rapier3d::geometry::contact_pair::SolverContactGeneric::gather_unchecked
+    4.7  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::warmstart
+    3.1  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_update::process_pair
+    1.5  physics-bench.exe!core::iter::adapters::chain::impl$1::fold<core::iter::adapters::flatten::FlatMap<core::iter::adapters::filter_map::FilterMap<core::iter::adapt
+    1.2  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::step_inner
+    0.6  physics-bench.exe!parry3d::shape::shape::impl$3::compute_aabb
+    0.5  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::reinsert_or_update_if_present
+    0.4  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_qualified_manifold_count
+    0.4  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::solve::solve_pass
+    0.2  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyPosition::pose_errors
+    0.2  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::compute_contacts
+    0.1  physics-bench.exe!rapier3d::dynamics::solver::solver_body::SolverBodies::copy_from
+    0.1  physics-bench.exe!parry3d::mass_properties::mass_properties::MassProperties::world_inv_inertia
+    0.1  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyCcd::is_moving_fast_with_next_position
+    0.1  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyActivation::update_energy
+    0.1  ntdll.dll!RtlFreeHeap
+    0.1  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyMassProps::update_world_mass_properties
+    0.1  physics-bench.exe!physics_bench::main
+    0.1  physics-bench.exe!rapier3d::dynamics::solver::solver_body::SolverBodies::resize
+    0.0  physics-bench.exe!parry3d::shape::shape::Shape::as_composite_shape<parry3d::shape::cuboid::Cuboid>
+    0.0  physics-bench.exe!parry3d::utils::isometry_ops::impl$1::prepend_to
+    0.0  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_cuboid_cuboid::contact_manifold_cuboid_cuboid_shapes<rapier3d::geometry::contact_pair::Co
+    0.0  physics-bench.exe!indexmap::map::IndexMap::get_index_of<tuple$<rapier3d::geometry::collider_handle::ColliderHandle,rapier3d::geometry::collider_handle::Collider
+    0.0  physics-bench.exe!rapier3d::dynamics::solver::velocity_solver::VelocitySolver::init_solver_buffers_and_multibodies
+    0.0  ntdll.dll!RtlAllocateHeap
+    0.0  physics-bench.exe!rapier3d::pipeline::user_changes::handle_user_changes_to_colliders
+    0.0  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::sync::StageSync::claim
+    0.0  physics-bench.exe!libm::math::atanf::atanf
+    0.0  physics-bench.exe!rapier3d::pipeline::user_changes::handle_user_changes_to_rigid_bodies
+    0.0  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::handle_user_changes
+    0.0  physics-bench.exe!rapier3d::dynamics::solver::joint_constraint::joint_constraints_set::JointConstraintsSet::compute_generic_joint_constraints
+    0.0  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::StagedIslandSolver::init_and_solve
+    0.0  ntdll.dll!AlpcGetMessageFromCompletionList
+    0.0  ntdll.dll!ZwTerminateProcess
+
+Inclusive function: % of samples
+  100.0  ntdll.dll!RtlUserThreadStart
+  100.0  KERNEL32.DLL!BaseThreadInitThunk
+  100.0  physics-bench.exe!__scrt_common_main_seh
+   99.9  physics-bench.exe!std::sys::backtrace::__rust_begin_short_backtrace<void (*)(),tuple$<> >
+   99.9  physics-bench.exe!std::rt::lang_start_internal
+   99.9  physics-bench.exe!physics_bench::main
+   99.9  physics-bench.exe!core::ops::function::FnOnce::call_once<std::rt::lang_start::closure_env$0<tuple$<> >,tuple$<> >
+   99.9  physics-bench.exe!main
+   99.8  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::step_inner
+   99.8  physics-bench.exe!rapier3d::pipeline::physics_world::PhysicsWorld::step_with_events
+   93.2  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::StagedIslandSolver::init_and_solve
+   91.4  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::worker::run_worker
+   29.0  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::solve::solve_pass
+   28.1  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::generate
+   22.1  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::solve
+   13.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update
+    6.5  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update_rhs_wo_bias
+    5.5  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::writeback_impulses
+    5.1  physics-bench.exe!rapier3d::geometry::contact_pair::SolverContactGeneric::gather_unchecked
+    4.7  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::warmstart
+    3.8  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::detect_collisions
+    3.8  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::compute_contacts
+    3.6  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_update::process_pair
+    1.5  physics-bench.exe!core::iter::adapters::chain::impl$1::fold<core::iter::adapters::flatten::FlatMap<core::iter::adapters::filter_map::FilterMap<core::iter::adapt
+    0.6  physics-bench.exe!parry3d::shape::shape::impl$3::compute_aabb
+    0.5  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::reinsert_or_update_if_present
+    0.5  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::reinsert_or_update_with_change_detection
+    0.4  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_qualified_manifold_count
+    0.3  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyPosition::pose_errors
+    0.2  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyMassProps::update_world_mass_properties
+    0.1  physics-bench.exe!rapier3d::dynamics::solver::solver_body::SolverBodies::copy_from
+    0.1  physics-bench.exe!rapier3d::dynamics::solver::velocity_solver::VelocitySolver::init_solver_buffers_and_multibodies
+    0.1  physics-bench.exe!parry3d::mass_properties::mass_properties::MassProperties::world_inv_inertia
+    0.1  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyCcd::is_moving_fast_with_next_position
+    0.1  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyActivation::update_energy
+    0.1  physics-bench.exe!core::ptr::drop_glue<rapier3d::geometry::narrow_phase::NarrowPhase>
+    0.1  ntdll.dll!RtlFreeHeap
+    0.1  physics-bench.exe!core::ptr::drop_glue<rapier3d::geometry::contact_pair::ContactPair>
+    0.1  physics-bench.exe!core::ptr::drop_glue<rapier3d::pipeline::physics_world::PhysicsWorld>
+    0.1  physics-bench.exe!parry3d::query::default_query_dispatcher::impl$1::contact_manifolds<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3d::geometry::
+    0.1  physics-bench.exe!rapier3d::dynamics::solver::solver_body::SolverBodies::resize
+    0.1  ucrtbase.dll!logbf
+    0.0  physics-bench.exe!parry3d::shape::shape::Shape::as_composite_shape<parry3d::shape::cuboid::Cuboid>
+    0.0  physics-bench.exe!parry3d::utils::isometry_ops::impl$1::prepend_to
+    0.0  physics-bench.exe!parry3d::query::default_query_dispatcher::impl$1::contact_manifold_convex_convex<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3

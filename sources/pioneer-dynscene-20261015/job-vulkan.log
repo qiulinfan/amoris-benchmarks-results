@@ -1,0 +1,77 @@
+[bench_lock] waiting for physx ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for liveprof ...
+$ python tools/dynamic_scenes_bench.py --build before=<local-path>/out/dynscene/before --build c=<local-path>/out/dynscene/c --build d=<local-path>/out/dynscene/d --cases static,moving-1k,moving-10k,moving-100k,sparse-1k,sparse-10k,sparse-100k --backends vulkan --frames 60 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/bcd-vulkan.json --conditions <local-path>/out/dynscene/bcd-vulkan-conditions
+2026-10-14 21:02:04 start: AC True, CPU 14.4%, RTX 65 C 0/3090 MHz 12.54 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "static", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 8.7, "headline": {"apply": null, "feed": null, "scene sync": 0.001, "render cpu": 0.459, "frame": 3.282, "gpu": 2.622}, "error": null}
+{"case": "static", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.3, "headline": {"apply": null, "feed": null, "scene sync": 0.0009, "render cpu": 0.379, "frame": 3.109, "gpu": 2.531}, "error": null}
+{"case": "static", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 8.6, "headline": {"apply": null, "feed": null, "scene sync": 0.0007, "render cpu": 0.363, "frame": 2.824, "gpu": 2.22}, "error": null}
+{"case": "moving-1k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 8.5, "headline": {"apply": 0.595, "feed": 0.013, "scene sync": 0.0345, "render cpu": 0.494, "frame": 3.921, "gpu": 2.594}, "error": null}
+{"case": "moving-1k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.4, "headline": {"apply": 0.281, "feed": 0.013, "scene sync": 0.0374, "render cpu": 0.523, "frame": 3.603, "gpu": 2.58}, "error": null}
+{"case": "moving-1k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 8.0, "headline": {"apply": 0.221, "feed": 0.015, "scene sync": 0.0357, "render cpu": 0.495, "frame": 3.542, "gpu": 2.594}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 10.1, "headline": {"apply": 7.193, "feed": 0.374, "scene sync": 0.1397, "render cpu": 0.668, "frame": 11.601, "gpu": 2.772}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.5, "headline": {"apply": 2.497, "feed": 0.355, "scene sync": 0.1256, "render cpu": 0.614, "frame": 6.38, "gpu": 2.635}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 8.8, "headline": {"apply": 2.813, "feed": 0.445, "scene sync": 0.1844, "render cpu": 0.88, "frame": 7.424, "gpu": 2.472}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 43.9, "headline": {"apply": 351.512, "feed": 3.802, "scene sync": 5.8691, "render cpu": 6.981, "frame": 395.428, "gpu": 31.624}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 16.6, "headline": {"apply": 40.723, "feed": 3.79, "scene sync": 3.1768, "render cpu": 4.155, "frame": 67.05, "gpu": 16.761}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 10.7, "headline": {"apply": 16.896, "feed": 3.235, "scene sync": 0.9019, "render cpu": 1.453, "frame": 24.519, "gpu": 2.584}, "error": null}
+{"case": "sparse-1k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 8.8, "headline": {"apply": 0.918, "feed": 0.012, "scene sync": 1.4173, "render cpu": 1.878, "frame": 6.815, "gpu": 2.588}, "error": null}
+{"case": "sparse-1k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.9, "headline": {"apply": 0.405, "feed": 0.014, "scene sync": 0.1023, "render cpu": 0.61, "frame": 4.261, "gpu": 2.813}, "error": null}
+{"case": "sparse-1k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 7.9, "headline": {"apply": 0.169, "feed": 0.013, "scene sync": 0.0737, "render cpu": 0.484, "frame": 3.496, "gpu": 2.607}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 12.2, "headline": {"apply": 9.155, "feed": 0.328, "scene sync": 15.3536, "render cpu": 16.304, "frame": 44.378, "gpu": 3.425}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 9.9, "headline": {"apply": 3.758, "feed": 0.419, "scene sync": 0.5747, "render cpu": 1.205, "frame": 8.745, "gpu": 2.759}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 13.5, "headline": {"apply": 2.497, "feed": 0.389, "scene sync": 0.4989, "render cpu": 1.148, "frame": 7.55, "gpu": 2.813}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 70.8, "headline": {"apply": 260.442, "feed": 2.984, "scene sync": 148.6517, "render cpu": 151.851, "frame": 704.744, "gpu": 16.569}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 12.6, "headline": {"apply": 25.749, "feed": 3.171, "scene sync": 5.2927, "render cpu": 5.952, "frame": 54.077, "gpu": 17.723}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 10.0, "headline": {"apply": 15.654, "feed": 3.153, "scene sync": 3.8841, "render cpu": 4.503, "frame": 26.828, "gpu": 2.878}, "error": null}
+2026-10-14 21:07:22 end: AC True, CPU 5.4%, RTX 64 C 0/3090 MHz 10.82 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| static | vulkan | - | before | - | 0.001 | 0.459 | 3.282 | 2.622 | 1680.0 |
+| static | vulkan | - | c | - | 0.001 | 0.379 | 3.109 | 2.531 | 1492 |
+| static | vulkan | - | d | - | 0.001 | 0.363 | 2.824 | 2.220 | 1680.0 |
+| moving-1k | vulkan | - | before | 0.595 | 0.035 | 0.494 | 3.921 | 2.594 | 285.0 |
+| moving-1k | vulkan | - | c | 0.281 | 0.037 | 0.523 | 3.603 | 2.580 | 217 |
+| moving-1k | vulkan | - | d | 0.221 | 0.036 | 0.495 | 3.542 | 2.594 | 217 |
+| moving-10k | vulkan | - | before | 7.193 | 0.140 | 0.668 | 11.601 | 2.772 | 464.5 |
+| moving-10k | vulkan | - | c | 2.497 | 0.126 | 0.614 | 6.380 | 2.635 | 210 |
+| moving-10k | vulkan | - | d | 2.813 | 0.184 | 0.880 | 7.424 | 2.472 | 217 |
+| moving-100k | vulkan | - | before | 351.512 | 5.869 | 6.981 | 395.428 | 31.624 | 420 |
+| moving-100k | vulkan | - | c | 40.723 | 3.177 | 4.155 | 67.050 | 16.761 | 787 |
+| moving-100k | vulkan | - | d | 16.896 | 0.902 | 1.453 | 24.519 | 2.584 | 1680.0 |
+| sparse-1k | vulkan | - | before | 0.918 | 1.417 | 1.878 | 6.815 | 2.588 | 1680.0 |
+| sparse-1k | vulkan | - | c | 0.405 | 0.102 | 0.610 | 4.261 | 2.813 | 225 |
+| sparse-1k | vulkan | - | d | 0.169 | 0.074 | 0.484 | 3.496 | 2.607 | 307 |
+| sparse-10k | vulkan | - | before | 9.155 | 15.354 | 16.304 | 44.378 | 3.425 | 753.5 |
+| sparse-10k | vulkan | - | c | 3.758 | 0.575 | 1.205 | 8.745 | 2.759 | 217 |
+| sparse-10k | vulkan | - | d | 2.497 | 0.499 | 1.148 | 7.550 | 2.813 | 180 |
+| sparse-100k | vulkan | - | before | 260.442 | 148.652 | 151.851 | 704.744 | 16.569 | 390 |
+| sparse-100k | vulkan | - | c | 25.749 | 5.293 | 5.952 | 54.077 | 17.723 | 1125 |
+| sparse-100k | vulkan | - | d | 15.654 | 3.884 | 4.503 | 26.828 | 2.878 | 555 |
+$ python tools/dynamic_scenes_bench.py --build d=<local-path>/out/dynscene/d --cases moving-1.6m --backends vulkan,dx12 --frames 60 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/d-1.6m.json
+{"case": "moving-1.6m", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 41.6, "headline": {"apply": 235.171, "feed": 47.793, "scene sync": 47.3017, "render cpu": 48.236, "frame": 393.221, "gpu": 33.882}, "error": null}
+{"case": "moving-1.6m", "backend": "dx12", "adapter": null, "build": "d", "seconds": 42.5, "headline": {"apply": 240.333, "feed": 48.311, "scene sync": 47.2713, "render cpu": 48.351, "frame": 385.029, "gpu": 30.115}, "error": null}
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-1.6m | vulkan | - | d | 235.171 | 47.302 | 48.236 | 393.221 | 33.882 | 633.5 |
+| moving-1.6m | dx12 | - | d | 240.333 | 47.271 | 48.351 | 385.029 | 30.115 | 637 |

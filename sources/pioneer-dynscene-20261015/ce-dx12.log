@@ -1,0 +1,36 @@
+[bench_lock] waiting for physx ...
+[bench_lock] waiting for physx ...
+[bench_lock] waiting for physx ...
+[bench_lock] waiting for physx ...
+$ python tools/dynamic_scenes_bench.py --build c=<local-path>/out/dynscene/c --build e=<local-path>/out/dynscene/e --cases moving-10k,moving-100k,sparse-10k,sparse-100k,moving-1.6m --backends dx12 --frames 60 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/ce-dx12.json --conditions <local-path>/out/dynscene/ce-dx12-conditions
+2026-10-14 20:40:04 start: AC True, CPU 6.5%, RTX 63 C 0/3090 MHz 12.39 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "moving-10k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 9.2, "headline": {"apply": 2.688, "feed": 0.365, "scene sync": 0.2161, "render cpu": 1.027, "frame": 6.866, "gpu": 2.555}, "error": null}
+{"case": "moving-10k", "backend": "dx12", "adapter": null, "build": "e", "seconds": 9.1, "headline": {"apply": 1.797, "feed": 0.376, "scene sync": 0.2055, "render cpu": 0.913, "frame": 5.923, "gpu": 2.553}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 11.1, "headline": {"apply": 21.751, "feed": 3.151, "scene sync": 0.9883, "render cpu": 1.79, "frame": 29.564, "gpu": 2.578}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "e", "seconds": 10.3, "headline": {"apply": 15.746, "feed": 3.108, "scene sync": 1.0706, "render cpu": 1.877, "frame": 23.699, "gpu": 2.534}, "error": null}
+{"case": "sparse-10k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 9.1, "headline": {"apply": 3.024, "feed": 0.358, "scene sync": 0.5291, "render cpu": 1.232, "frame": 7.461, "gpu": 2.55}, "error": null}
+{"case": "sparse-10k", "backend": "dx12", "adapter": null, "build": "e", "seconds": 8.7, "headline": {"apply": 1.862, "feed": 0.345, "scene sync": 0.5228, "render cpu": 1.174, "frame": 6.156, "gpu": 2.568}, "error": null}
+{"case": "sparse-100k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 11.8, "headline": {"apply": 26.153, "feed": 3.114, "scene sync": 4.0811, "render cpu": 4.946, "frame": 37.314, "gpu": 2.634}, "error": null}
+{"case": "sparse-100k", "backend": "dx12", "adapter": null, "build": "e", "seconds": 10.6, "headline": {"apply": 17.277, "feed": 3.087, "scene sync": 4.0998, "render cpu": 4.944, "frame": 28.28, "gpu": 2.709}, "error": null}
+{"case": "moving-1.6m", "backend": "dx12", "adapter": null, "build": "c", "seconds": 56.6, "headline": {"apply": 329.95, "feed": 47.788, "scene sync": 91.9128, "render cpu": 92.949, "frame": 534.409, "gpu": 35.748}, "error": null}
+{"case": "moving-1.6m", "backend": "dx12", "adapter": null, "build": "e", "seconds": 43.4, "headline": {"apply": 229.571, "feed": 48.086, "scene sync": 63.0413, "render cpu": 78.362, "frame": 417.293, "gpu": 34.875}, "error": null}
+2026-10-14 20:43:19 end: AC True, CPU 4.1%, RTX 64 C 0/3090 MHz 10.88 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-10k | dx12 | - | c | 2.688 | 0.216 | 1.027 | 6.866 | 2.555 | 1680 |
+| moving-10k | dx12 | - | e | 1.797 | 0.205 | 0.913 | 5.923 | 2.553 | 1680 |
+| moving-100k | dx12 | - | c | 21.751 | 0.988 | 1.790 | 29.564 | 2.578 | 1680 |
+| moving-100k | dx12 | - | e | 15.746 | 1.071 | 1.877 | 23.699 | 2.534 | 1680.0 |
+| sparse-10k | dx12 | - | c | 3.024 | 0.529 | 1.232 | 7.461 | 2.550 | 1680.0 |
+| sparse-10k | dx12 | - | e | 1.862 | 0.523 | 1.174 | 6.156 | 2.568 | 1680.0 |
+| sparse-100k | dx12 | - | c | 26.153 | 4.081 | 4.946 | 37.314 | 2.634 | 1680 |
+| sparse-100k | dx12 | - | e | 17.277 | 4.100 | 4.944 | 28.280 | 2.709 | 1680.0 |
+| moving-1.6m | dx12 | - | c | 329.950 | 91.913 | 92.949 | 534.409 | 35.748 | 555.0 |
+| moving-1.6m | dx12 | - | e | 229.571 | 63.041 | 78.362 | 417.293 | 34.875 | 607 |
+$ python tools/dynamic_scenes_bench.py --build c=<local-path>/out/dynscene/c --build e=<local-path>/out/dynscene/e --count 100000 --cases moving-100k --backends dx12 --frames 60 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/ce-dx12-count100k.json
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 8.1, "headline": {"apply": 14.836, "feed": 3.011, "scene sync": 1.0409, "render cpu": 1.872, "frame": 20.409, "gpu": 0.416}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "e", "seconds": 8.1, "headline": {"apply": 10.099, "feed": 2.985, "scene sync": 0.9943, "render cpu": 1.781, "frame": 15.585, "gpu": 0.416}, "error": null}
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-100k | dx12 | - | c | 14.836 | 1.041 | 1.872 | 20.409 | 0.416 | 1680 |
+| moving-100k | dx12 | - | e | 10.099 | 0.994 | 1.781 | 15.585 | 0.416 | 1680 |

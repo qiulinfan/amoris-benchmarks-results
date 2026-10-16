@@ -1,0 +1,188 @@
+[bench_lock] waiting for taau ...
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --emit <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600
+{"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-start.json --label rules-start
+2026-10-15 09:29:51 rules-start: AC True, CPU 56.4%, RTX 69 C 570/3090 MHz 9.23 W P4 util 0% reasons 0x0000000000000400; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-r1.json --label rules-r1 --cpu-seconds 3
+2026-10-15 09:30:08 rules-r1: AC True, CPU 50.6%, RTX 70 C 180/3090 MHz 11.90 W P4 util 0% reasons 0x0000000000000400; GPU users: <omitted>
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --warmup 120 --ticks 600 --rounds 1 --offset 0 --no-verify --json <local-path>\out\qjs\native-vs-web\native-r1.json
+round 1 rules tick median 3657.9 us min 3356.2 p99 5013.9 | system 3621.7 | steps 62518.0
+round 1 twin  tick median 140.3 us min 134.5 p99 209.0 | system 119.4 | steps 0.0
+round 1 idle  tick median 6.6 us min 6.4 p99 7.5 | system 5.9 | steps 7.0
+round 1 scan  tick median 276.6 us min 264.6 p99 449.5 | system 275.4 | steps 14.0
+wrote <local-path>\out\qjs\native-vs-web\native-r1.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 0 --json <local-path>\out\qjs\native-vs-web\node-web-r1.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 rules tick median 4170.5 us min 3094.5 p99 5349 | system 4114.4 | steps 62518
+round 1 idle  tick median 8.6 us min 8.1 p99 26.8 | system 7.2 | steps 7
+round 1 scan  tick median 269.2 us min 189.2 p99 383.8 | system 264.6 | steps 14
+round 1 twin  tick median 222.1 us min 154.8 p99 275 | system 181 | steps 0
+wrote <local-path>\out\qjs\native-vs-web\node-web-r1.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.opt.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 0 --json <local-path>\out\qjs\native-vs-web\node-web-opt-r1.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 rules tick median 3835.4 us min 3048.1 p99 6330.3 | system 3784.6 | steps 62518
+round 1 idle  tick median 13.8 us min 11.9 p99 27 | system 11.6 | steps 7
+round 1 scan  tick median 223.9 us min 178.1 p99 335.4 | system 221.2 | steps 14
+round 1 twin  tick median 166.8 us min 156.9 p99 308.7 | system 134.1 | steps 0
+wrote <local-path>\out\qjs\native-vs-web\node-web-opt-r1.json
+chrome web round 1: done
+chrome web-opt round 1: done
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-r2.json --label rules-r2 --cpu-seconds 3
+2026-10-15 09:31:03 rules-r2: AC True, CPU 25.3%, RTX 68 C 615/3090 MHz 9.43 W P4 util 0% reasons 0x0000000000000400; GPU users: <omitted>
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.opt.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 1 --json <local-path>\out\qjs\native-vs-web\node-web-opt-r2.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 idle  tick median 14.1 us min 11.6 p99 33.9 | system 11.7 | steps 7
+round 1 scan  tick median 304.3 us min 185.8 p99 341.1 | system 299.9 | steps 14
+round 1 twin  tick median 244.8 us min 202.9 p99 271.7 | system 200.6 | steps 0
+round 1 rules tick median 5229.8 us min 3252 p99 5589.5 | system 5168.3 | steps 62518
+wrote <local-path>\out\qjs\native-vs-web\node-web-opt-r2.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 1 --json <local-path>\out\qjs\native-vs-web\node-web-r2.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 idle  tick median 12.7 us min 8.4 p99 31.7 | system 10.6 | steps 7
+round 1 scan  tick median 199.5 us min 185.5 p99 362.3 | system 197.1 | steps 14
+round 1 twin  tick median 163.6 us min 156.7 p99 258.8 | system 132.3 | steps 0
+round 1 rules tick median 3837.3 us min 3079.7 p99 5540.9 | system 3787 | steps 62518
+wrote <local-path>\out\qjs\native-vs-web\node-web-r2.json
+chrome web-opt round 2: done
+chrome web round 2: done
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --warmup 120 --ticks 600 --rounds 1 --offset 1 --no-verify --json <local-path>\out\qjs\native-vs-web\native-r2.json
+round 1 twin  tick median 138.3 us min 132.7 p99 224.8 | system 117.4 | steps 0.0
+round 1 idle  tick median 6.5 us min 6.3 p99 6.9 | system 5.8 | steps 7.0
+round 1 scan  tick median 276.7 us min 264.1 p99 423.7 | system 275.4 | steps 14.0
+round 1 rules tick median 3482.0 us min 3330.7 p99 4249.2 | system 3447.6 | steps 62518.0
+wrote <local-path>\out\qjs\native-vs-web\native-r2.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-r3.json --label rules-r3 --cpu-seconds 3
+2026-10-15 09:31:55 rules-r3: AC True, CPU 11.4%, RTX 67 C 0/3090 MHz 12.71 W P4 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+chrome web round 3: done
+chrome web-opt round 3: done
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --warmup 120 --ticks 600 --rounds 1 --offset 2 --no-verify --json <local-path>\out\qjs\native-vs-web\native-r3.json
+round 1 idle  tick median 6.5 us min 6.3 p99 6.7 | system 5.8 | steps 7.0
+round 1 scan  tick median 286.1 us min 273.6 p99 428.3 | system 284.7 | steps 14.0
+round 1 rules tick median 3625.3 us min 3476.4 p99 4652.7 | system 3589.6 | steps 62518.0
+round 1 twin  tick median 138.4 us min 133.5 p99 226.1 | system 118.9 | steps 0.0
+wrote <local-path>\out\qjs\native-vs-web\native-r3.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 2 --json <local-path>\out\qjs\native-vs-web\node-web-r3.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 scan  tick median 203.6 us min 181.4 p99 427.9 | system 200.4 | steps 14
+round 1 twin  tick median 204.9 us min 198.5 p99 325.3 | system 173.2 | steps 0
+round 1 rules tick median 3328.3 us min 2986.3 p99 4962.6 | system 3286.7 | steps 62518
+round 1 idle  tick median 13.5 us min 9 p99 25.7 | system 11.9 | steps 7
+wrote <local-path>\out\qjs\native-vs-web\node-web-r3.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.opt.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 2 --json <local-path>\out\qjs\native-vs-web\node-web-opt-r3.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 scan  tick median 242.4 us min 183 p99 396.2 | system 237.8 | steps 14
+round 1 twin  tick median 191.4 us min 155.1 p99 352.7 | system 152.1 | steps 0
+round 1 rules tick median 3314.9 us min 2978.2 p99 5109.6 | system 3273.5 | steps 62518
+round 1 idle  tick median 8.1 us min 7.7 p99 20.6 | system 6.9 | steps 7
+wrote <local-path>\out\qjs\native-vs-web\node-web-opt-r3.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-r4.json --label rules-r4 --cpu-seconds 3
+2026-10-15 09:32:45 rules-r4: AC True, CPU 12.2%, RTX 66 C 0/3090 MHz 12.67 W P4 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --warmup 120 --ticks 600 --rounds 1 --offset 3 --no-verify --json <local-path>\out\qjs\native-vs-web\native-r4.json
+round 1 scan  tick median 272.5 us min 266.2 p99 364.8 | system 271.4 | steps 14.0
+round 1 rules tick median 3534.8 us min 3360.8 p99 4345.6 | system 3504.1 | steps 62518.0
+round 1 twin  tick median 138.6 us min 132.2 p99 213.0 | system 118.5 | steps 0.0
+round 1 idle  tick median 6.5 us min 6.3 p99 6.8 | system 5.8 | steps 7.0
+wrote <local-path>\out\qjs\native-vs-web\native-r4.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.opt.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 3 --json <local-path>\out\qjs\native-vs-web\node-web-opt-r4.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 twin  tick median 161.9 us min 154.2 p99 283.9 | system 130.9 | steps 0
+round 1 rules tick median 3285.3 us min 3043.4 p99 4423.8 | system 3246.5 | steps 62518
+round 1 idle  tick median 8 us min 7.7 p99 19.2 | system 6.9 | steps 7
+round 1 scan  tick median 179.3 us min 176.5 p99 303.6 | system 177.7 | steps 14
+wrote <local-path>\out\qjs\native-vs-web\node-web-opt-r4.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 3 --json <local-path>\out\qjs\native-vs-web\node-web-r4.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 twin  tick median 160.4 us min 154.9 p99 275.8 | system 129.4 | steps 0
+round 1 rules tick median 3404.5 us min 3014 p99 5182.9 | system 3356.8 | steps 62518
+round 1 idle  tick median 8.8 us min 7.8 p99 22 | system 7.4 | steps 7
+round 1 scan  tick median 233.4 us min 181 p99 376.5 | system 229.8 | steps 14
+wrote <local-path>\out\qjs\native-vs-web\node-web-r4.json
+chrome web-opt round 4: done
+chrome web round 4: done
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-r5.json --label rules-r5 --cpu-seconds 3
+2026-10-15 09:33:34 rules-r5: AC True, CPU 15.8%, RTX 65 C 0/3090 MHz 12.54 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 4 --json <local-path>\out\qjs\native-vs-web\node-web-r5.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 rules tick median 3321.1 us min 2964 p99 5312 | system 3279.4 | steps 62518
+round 1 idle  tick median 8.6 us min 7.9 p99 22.1 | system 7.3 | steps 7
+round 1 scan  tick median 186.3 us min 180.5 p99 340.3 | system 184.4 | steps 14
+round 1 twin  tick median 163.4 us min 154.2 p99 260.4 | system 132 | steps 0
+wrote <local-path>\out\qjs\native-vs-web\node-web-r5.json
++ node <local-path>\.claude\worktrees\qjs\bench\rules\web\node.mjs <local-path>\.claude\worktrees\qjs\target\wasm32-unknown-unknown\web\examples\rules_web.opt.wasm <local-path>\out\qjs\native-vs-web\sets --warmup 120 --ticks 600 --rounds 1 --offset 4 --json <local-path>\out\qjs\native-vs-web\node-web-opt-r5.json --raw
+verify {"ticks":720,"identical":true,"first_divergent_tick":null,"final":"e13690add0b3a196","chain":"241f611fc67a04f2","native_final":"e13690add0b3a196","same_as_native":true}
+round 1 rules tick median 3345.6 us min 2986.2 p99 4840.9 | system 3299.7 | steps 62518
+round 1 idle  tick median 8.5 us min 7.9 p99 18.7 | system 7.1 | steps 7
+round 1 scan  tick median 182.4 us min 176.7 p99 310.1 | system 180.7 | steps 14
+round 1 twin  tick median 202.7 us min 165 p99 295.3 | system 161.3 | steps 0
+wrote <local-path>\out\qjs\native-vs-web\node-web-opt-r5.json
+chrome web round 5: done
+chrome web-opt round 5: done
++ <local-path>\.claude\worktrees\qjs\target\release\examples\rules_bench.exe --warmup 120 --ticks 600 --rounds 1 --offset 4 --no-verify --json <local-path>\out\qjs\native-vs-web\native-r5.json
+round 1 rules tick median 3505.3 us min 3335.9 p99 5203.8 | system 3472.3 | steps 62518.0
+round 1 twin  tick median 140.7 us min 133.4 p99 202.0 | system 119.2 | steps 0.0
+round 1 idle  tick median 6.6 us min 6.3 p99 9.7 | system 5.9 | steps 7.0
+round 1 scan  tick median 273.5 us min 264.7 p99 428.0 | system 272.1 | steps 14.0
+wrote <local-path>\out\qjs\native-vs-web\native-r5.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\native-vs-web\conditions-end.json --label rules-end
+2026-10-15 09:34:24 rules-end: AC True, CPU 12.0%, RTX 65 C 180/3090 MHz 9.41 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+Verification (script world against the twin at every tick; wasm digests against native):
+
+- chrome-web: identical True, final e13690add0b3a196, as native True
+- chrome-web-opt: identical True, final e13690add0b3a196, as native True
+- native: identical True, final e13690add0b3a196, as native True
+- node-web: identical True, final e13690add0b3a196, as native True
+- node-web-opt: identical True, final e13690add0b3a196, as native True
+
+| Target | Variant | Tick median, us (by round) | Tick min | Tick p99 (median) | System median | Steps |
+|---|---|---|---|---|---|---|
+| native | rules | 3,658 / 3,482 / 3,625 / 3,535 / 3,505 | 3,331 | 4,653 | 3,504 | 62,518 |
+| native | twin | 140 / 138 / 138 / 139 / 141 | 132 | 213 | 119 | 0 |
+| native | idle | 6.6 / 6.5 / 6.5 / 6.5 / 6.6 | 6.3 | 6.9 | 5.8 | 7 |
+| native | scan | 277 / 277 / 286 / 272 / 274 | 264 | 428 | 275 | 14 |
+| chrome-web | rules | 5,115 / 3,310 / 3,470 / 3,330 / 3,795 | 2,915 | 5,010 | 3,425 | 62,518 |
+| chrome-web | twin | 245 / 230 / 160 / 160 / 160 | 150 | 245 | 130 | 0 |
+| chrome-web | idle | 20.0 / 15.0 / 15.0 / 10.0 / 10.0 | 5.0 | 35.0 | 10.0 | 7 |
+| chrome-web | scan | 305 / 190 / 265 / 195 / 190 | 175 | 430 | 190 | 14 |
+| chrome-web-opt | rules | 5,235 / 3,290 / 3,155 / 3,240 / 3,275 | 2,875 | 4,825 | 3,235 | 62,518 |
+| chrome-web-opt | twin | 235 / 165 / 160 / 165 / 160 | 150 | 255 | 130 | 0 |
+| chrome-web-opt | idle | 10.0 / 10.0 / 10.0 / 10.0 / 10.0 | 5.0 | 25.0 | 10.0 | 7 |
+| chrome-web-opt | scan | 290 / 190 / 265 / 185 / 180 | 170 | 315 | 185 | 14 |
+| node-web | rules | 4,170 / 3,837 / 3,328 / 3,404 / 3,321 | 2,964 | 5,312 | 3,357 | 62,518 |
+| node-web | twin | 222 / 164 / 205 / 160 / 163 | 154 | 275 | 132 | 0 |
+| node-web | idle | 8.6 / 12.7 / 13.5 / 8.8 / 8.6 | 7.8 | 25.7 | 7.4 | 7 |
+| node-web | scan | 269 / 200 / 204 / 233 / 186 | 180 | 376 | 200 | 14 |
+| node-web-opt | rules | 3,835 / 5,230 / 3,315 / 3,285 / 3,346 | 2,978 | 5,110 | 3,300 | 62,518 |
+| node-web-opt | twin | 167 / 245 / 191 / 162 / 203 | 154 | 295 | 152 | 0 |
+| node-web-opt | idle | 13.8 / 14.1 / 8.1 / 8.0 / 8.5 | 7.7 | 20.6 | 7.1 | 7 |
+| node-web-opt | scan | 224 / 304 / 242 / 179 / 182 | 176 | 335 | 221 | 14 |
+
+| Target | rules / twin, tick (median of medians) | by min | `damage` / `twin.damage`, system median |
+|---|---|---|---|
+| native | 25.5 | 25.2 | 29.5 |
+| chrome-web | 21.7 | 19.4 | 26.3 |
+| chrome-web-opt | 19.8 | 19.2 | 24.9 |
+| node-web | 20.8 | 19.2 | 25.4 |
+| node-web-opt | 17.5 | 19.3 | 21.7 |
+
+| Host | `web-opt` against `web`, rules tick median, by round (paired) |
+|---|---|
+| node | -8.0 % / +36.3 % / -0.4 % / -3.5 % / +0.7 % |
+| chrome | +2.3 % / -0.6 % / -9.1 % / -2.7 % / -13.7 % |
+
+| Target | Variant | prepare | run | diff | apply (medians, us) |
+|---|---|---|---|---|---|
+| native | rules | 301 | 2,654 | 152 | 355 |
+| native | scan | 259 | 1.1 | 13.5 | 1.2 |
+| native | idle | 4.9 | 0.6 | 0.1 | 0.2 |
+| chrome-web | rules | 205 | 2,750 | 125 | 315 |
+| chrome-web | scan | 160 | 0.0 | 25.0 | 0.0 |
+| chrome-web | idle | 10.0 | 0.0 | 0.0 | 0.0 |
+| chrome-web-opt | rules | 190 | 2,580 | 120 | 295 |
+| chrome-web-opt | scan | 155 | 0.0 | 25.0 | 0.0 |
+| chrome-web-opt | idle | 5.0 | 0.0 | 0.0 | 0.0 |
+| node-web | rules | 212 | 2,661 | 120 | 299 |
+| node-web | scan | 167 | 2.0 | 28.2 | 1.8 |
+| node-web | idle | 5.9 | 1.0 | 0.1 | 0.2 |
+| node-web-opt | rules | 203 | 2,637 | 113 | 296 |
+| node-web-opt | scan | 183 | 2.3 | 28.2 | 2.1 |
+| node-web-opt | idle | 5.7 | 1.0 | 0.1 | 0.2 |

@@ -1,0 +1,281 @@
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one sailing <local-path>\out\writes\quiet\sailing-1.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-1-conditions-start.json --label writes-sailing-start
+2026-10-15 15:41:07 writes-sailing-start: AC True, CPU 3.9%, RTX 51 C 0/3090 MHz 9.91 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 600 --rounds 20 --warmup 120 --out <local-path>\out\writes\quiet\sailing-1.json --field Sloop.Boat.rudder --field Sloop.Log.distance --field Sloop.Model <local-path>\.claude\worktrees\writes\samples\sailing
+15 script statements a tick
+round 1 of 20 at tick 4622
+round 2 of 20 at tick 8822
+round 3 of 20 at tick 13022
+round 4 of 20 at tick 17222
+round 5 of 20 at tick 21422
+round 6 of 20 at tick 25622
+round 7 of 20 at tick 29822
+round 8 of 20 at tick 34022
+round 9 of 20 at tick 38222
+round 10 of 20 at tick 42422
+round 11 of 20 at tick 46622
+round 12 of 20 at tick 50822
+round 13 of 20 at tick 55022
+round 14 of 20 at tick 59222
+round 15 of 20 at tick 63422
+round 16 of 20 at tick 67622
+round 17 of 20 at tick 71822
+round 18 of 20 at tick 76022
+round 19 of 20 at tick 80222
+round 20 of 20 at tick 84422
+15 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                    72.1       73.7    1.000       79.2        0
+probe Sloop.Boat.rudder                76.5       77.8    1.061     2148.7        0
+probe Sloop.Log.distance               77.2       78.6    1.071       85.2    12000
+probe Sloop.Model                      73.5       75.0    1.019       79.5        0
+trace Sloop.Boat.rudder                82.3       84.5    1.141       93.9        0
+trace Sloop.Log.distance               84.0       87.4    1.165       97.8    12000
+trace Sloop.Model                     101.7      104.3    1.411     2151.7        0
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-1-conditions-end.json --label writes-sailing-end
+2026-10-15 15:41:23 writes-sailing-end: AC True, CPU 6.0%, RTX 54 C 0/3090 MHz 11.41 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one rules <local-path>\out\writes\quiet\rules-1.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-1-conditions-start.json --label writes-rules-start
+2026-10-15 15:41:34 writes-rules-start: AC True, CPU 3.7%, RTX 54 C 0/3090 MHz 10.09 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 60 --rounds 6 --warmup 30 --out <local-path>\out\writes\quiet\rules-1.json --field 2.Health.hp --field 2.Spot.x <local-path>\.claude\worktrees\writes\bench\rules
+22947 script statements a tick
+round 1 of 6 at tick 392
+round 2 of 6 at tick 692
+round 3 of 6 at tick 992
+round 4 of 6 at tick 1292
+round 5 of 6 at tick 1592
+round 6 of 6 at tick 1892
+22947 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                  3559.2     3572.5    1.000     5709.4        0
+probe 2.Health.hp                   10749.4    10829.8    3.020    12870.4        0
+probe 2.Spot.x                      10877.0    10911.4    3.056    10885.3      360
+trace 2.Health.hp                   10894.0    10942.4    3.061    10933.0        0
+trace 2.Spot.x                      10968.0    11019.5    3.082    10880.3      360
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-1-conditions-end.json --label writes-rules-end
+2026-10-15 15:42:00 writes-rules-end: AC True, CPU 5.8%, RTX 56 C 0/3090 MHz 11.55 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one rules <local-path>\out\writes\quiet\rules-2.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-2-conditions-start.json --label writes-rules-start
+2026-10-15 15:42:10 writes-rules-start: AC True, CPU 5.4%, RTX 56 C 0/3090 MHz 10.20 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 60 --rounds 6 --warmup 30 --out <local-path>\out\writes\quiet\rules-2.json --field 2.Health.hp --field 2.Spot.x <local-path>\.claude\worktrees\writes\bench\rules
+22947 script statements a tick
+round 1 of 6 at tick 392
+round 2 of 6 at tick 692
+round 3 of 6 at tick 992
+round 4 of 6 at tick 1292
+round 5 of 6 at tick 1592
+round 6 of 6 at tick 1892
+22947 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                  3582.1     3613.8    1.000     5608.0        0
+probe 2.Health.hp                   10975.0    11028.6    3.064    13107.3        0
+probe 2.Spot.x                      11041.3    11095.4    3.082    11050.2      360
+trace 2.Health.hp                   10935.8    10980.6    3.053    10881.5        0
+trace 2.Spot.x                      11014.2    11035.9    3.075    10940.5      360
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-2-conditions-end.json --label writes-rules-end
+2026-10-15 15:42:37 writes-rules-end: AC True, CPU 3.3%, RTX 57 C 0/3090 MHz 11.69 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one sailing <local-path>\out\writes\quiet\sailing-2.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-2-conditions-start.json --label writes-sailing-start
+2026-10-15 15:42:47 writes-sailing-start: AC True, CPU 3.7%, RTX 57 C 0/3090 MHz 10.24 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 600 --rounds 20 --warmup 120 --out <local-path>\out\writes\quiet\sailing-2.json --field Sloop.Boat.rudder --field Sloop.Log.distance --field Sloop.Model <local-path>\.claude\worktrees\writes\samples\sailing
+15 script statements a tick
+round 1 of 20 at tick 4622
+round 2 of 20 at tick 8822
+round 3 of 20 at tick 13022
+round 4 of 20 at tick 17222
+round 5 of 20 at tick 21422
+round 6 of 20 at tick 25622
+round 7 of 20 at tick 29822
+round 8 of 20 at tick 34022
+round 9 of 20 at tick 38222
+round 10 of 20 at tick 42422
+round 11 of 20 at tick 46622
+round 12 of 20 at tick 50822
+round 13 of 20 at tick 55022
+round 14 of 20 at tick 59222
+round 15 of 20 at tick 63422
+round 16 of 20 at tick 67622
+round 17 of 20 at tick 71822
+round 18 of 20 at tick 76022
+round 19 of 20 at tick 80222
+round 20 of 20 at tick 84422
+15 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                    72.9       74.0    1.000       78.2        0
+probe Sloop.Boat.rudder                76.8       78.3    1.053     2218.7        0
+probe Sloop.Log.distance               77.5       79.0    1.063       84.3    12000
+probe Sloop.Model                      73.6       75.3    1.010       80.2        0
+trace Sloop.Boat.rudder                80.8       82.4    1.108       93.0        0
+trace Sloop.Log.distance               83.0       85.0    1.139       95.1    12000
+trace Sloop.Model                     101.8      103.7    1.396     2195.3        0
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-2-conditions-end.json --label writes-sailing-end
+2026-10-15 15:43:03 writes-sailing-end: AC True, CPU 4.3%, RTX 58 C 0/3090 MHz 11.92 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one sailing <local-path>\out\writes\quiet\sailing-3.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-3-conditions-start.json --label writes-sailing-start
+2026-10-15 15:43:14 writes-sailing-start: AC True, CPU 7.6%, RTX 58 C 0/3090 MHz 10.42 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 600 --rounds 20 --warmup 120 --out <local-path>\out\writes\quiet\sailing-3.json --field Sloop.Boat.rudder --field Sloop.Log.distance --field Sloop.Model <local-path>\.claude\worktrees\writes\samples\sailing
+15 script statements a tick
+round 1 of 20 at tick 4622
+round 2 of 20 at tick 8822
+round 3 of 20 at tick 13022
+round 4 of 20 at tick 17222
+round 5 of 20 at tick 21422
+round 6 of 20 at tick 25622
+round 7 of 20 at tick 29822
+round 8 of 20 at tick 34022
+round 9 of 20 at tick 38222
+round 10 of 20 at tick 42422
+round 11 of 20 at tick 46622
+round 12 of 20 at tick 50822
+round 13 of 20 at tick 55022
+round 14 of 20 at tick 59222
+round 15 of 20 at tick 63422
+round 16 of 20 at tick 67622
+round 17 of 20 at tick 71822
+round 18 of 20 at tick 76022
+round 19 of 20 at tick 80222
+round 20 of 20 at tick 84422
+15 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                    71.2       72.6    1.000       76.2        0
+probe Sloop.Boat.rudder                76.4       79.0    1.073     2150.4        0
+probe Sloop.Log.distance               76.9       79.4    1.080       82.5    12000
+probe Sloop.Model                      72.6       74.6    1.020       78.0        0
+trace Sloop.Boat.rudder                80.6       83.8    1.132       94.2        0
+trace Sloop.Log.distance               82.3       84.7    1.156       98.0    12000
+trace Sloop.Model                      99.2      101.8    1.393     2177.6        0
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-3-conditions-end.json --label writes-sailing-end
+2026-10-15 15:43:29 writes-sailing-end: AC True, CPU 4.5%, RTX 59 C 0/3090 MHz 11.90 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one rules <local-path>\out\writes\quiet\rules-3.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-3-conditions-start.json --label writes-rules-start
+2026-10-15 15:43:40 writes-rules-start: AC True, CPU 4.2%, RTX 59 C 0/3090 MHz 10.43 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 60 --rounds 6 --warmup 30 --out <local-path>\out\writes\quiet\rules-3.json --field 2.Health.hp --field 2.Spot.x <local-path>\.claude\worktrees\writes\bench\rules
+22947 script statements a tick
+round 1 of 6 at tick 392
+round 2 of 6 at tick 692
+round 3 of 6 at tick 992
+round 4 of 6 at tick 1292
+round 5 of 6 at tick 1592
+round 6 of 6 at tick 1892
+22947 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                  3573.6     3614.6    1.000     5631.4        0
+probe 2.Health.hp                   10932.7    11041.0    3.059    13259.7        0
+probe 2.Spot.x                      11010.7    11129.4    3.081    11256.0      360
+trace 2.Health.hp                   10992.2    11385.2    3.076    10989.8        0
+trace 2.Spot.x                      11029.2    11179.5    3.086    10993.0      360
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-3-conditions-end.json --label writes-rules-end
+2026-10-15 15:44:06 writes-rules-end: AC True, CPU 4.5%, RTX 59 C 0/3090 MHz 11.95 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one rules <local-path>\out\writes\quiet\rules-4.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-4-conditions-start.json --label writes-rules-start
+2026-10-15 15:44:17 writes-rules-start: AC True, CPU 4.2%, RTX 59 C 0/3090 MHz 10.42 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 60 --rounds 6 --warmup 30 --out <local-path>\out\writes\quiet\rules-4.json --field 2.Health.hp --field 2.Spot.x <local-path>\.claude\worktrees\writes\bench\rules
+22947 script statements a tick
+round 1 of 6 at tick 392
+round 2 of 6 at tick 692
+round 3 of 6 at tick 992
+round 4 of 6 at tick 1292
+round 5 of 6 at tick 1592
+round 6 of 6 at tick 1892
+22947 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                  3568.8     3670.7    1.000     5907.1        0
+probe 2.Health.hp                   11029.8    11079.6    3.091    13192.0        0
+probe 2.Spot.x                      11066.6    11112.5    3.101    11149.2      360
+trace 2.Health.hp                   10905.0    10955.5    3.056    10993.2        0
+trace 2.Spot.x                      10977.5    11004.2    3.076    11066.9      360
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-4-conditions-end.json --label writes-rules-end
+2026-10-15 15:44:43 writes-rules-end: AC True, CPU 6.9%, RTX 59 C 0/3090 MHz 11.98 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one sailing <local-path>\out\writes\quiet\sailing-4.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-4-conditions-start.json --label writes-sailing-start
+2026-10-15 15:44:54 writes-sailing-start: AC True, CPU 4.6%, RTX 59 C 0/3090 MHz 10.40 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 600 --rounds 20 --warmup 120 --out <local-path>\out\writes\quiet\sailing-4.json --field Sloop.Boat.rudder --field Sloop.Log.distance --field Sloop.Model <local-path>\.claude\worktrees\writes\samples\sailing
+15 script statements a tick
+round 1 of 20 at tick 4622
+round 2 of 20 at tick 8822
+round 3 of 20 at tick 13022
+round 4 of 20 at tick 17222
+round 5 of 20 at tick 21422
+round 6 of 20 at tick 25622
+round 7 of 20 at tick 29822
+round 8 of 20 at tick 34022
+round 9 of 20 at tick 38222
+round 10 of 20 at tick 42422
+round 11 of 20 at tick 46622
+round 12 of 20 at tick 50822
+round 13 of 20 at tick 55022
+round 14 of 20 at tick 59222
+round 15 of 20 at tick 63422
+round 16 of 20 at tick 67622
+round 17 of 20 at tick 71822
+round 18 of 20 at tick 76022
+round 19 of 20 at tick 80222
+round 20 of 20 at tick 84422
+15 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                    72.3       74.2    1.000       78.0        0
+probe Sloop.Boat.rudder                76.7       79.5    1.061     2192.6        0
+probe Sloop.Log.distance               77.2       79.7    1.068       84.7    12000
+probe Sloop.Model                      73.5       75.7    1.017       79.3        0
+trace Sloop.Boat.rudder                80.7       83.5    1.116       93.0        0
+trace Sloop.Log.distance               82.5       85.4    1.141       96.1    12000
+trace Sloop.Model                     100.0      103.5    1.383     2185.9        0
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-4-conditions-end.json --label writes-sailing-end
+2026-10-15 15:45:09 writes-sailing-end: AC True, CPU 5.6%, RTX 60 C 0/3090 MHz 11.92 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one sailing <local-path>\out\writes\quiet\sailing-5.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-5-conditions-start.json --label writes-sailing-start
+2026-10-15 15:45:20 writes-sailing-start: AC True, CPU 4.3%, RTX 60 C 0/3090 MHz 10.44 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 600 --rounds 20 --warmup 120 --out <local-path>\out\writes\quiet\sailing-5.json --field Sloop.Boat.rudder --field Sloop.Log.distance --field Sloop.Model <local-path>\.claude\worktrees\writes\samples\sailing
+15 script statements a tick
+round 1 of 20 at tick 4622
+round 2 of 20 at tick 8822
+round 3 of 20 at tick 13022
+round 4 of 20 at tick 17222
+round 5 of 20 at tick 21422
+round 6 of 20 at tick 25622
+round 7 of 20 at tick 29822
+round 8 of 20 at tick 34022
+round 9 of 20 at tick 38222
+round 10 of 20 at tick 42422
+round 11 of 20 at tick 46622
+round 12 of 20 at tick 50822
+round 13 of 20 at tick 55022
+round 14 of 20 at tick 59222
+round 15 of 20 at tick 63422
+round 16 of 20 at tick 67622
+round 17 of 20 at tick 71822
+round 18 of 20 at tick 76022
+round 19 of 20 at tick 80222
+round 20 of 20 at tick 84422
+15 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                    71.3       72.6    1.000       77.1        0
+probe Sloop.Boat.rudder                76.4       77.7    1.072     2152.7        0
+probe Sloop.Log.distance               76.9       78.3    1.079       82.8    12000
+probe Sloop.Model                      72.7       73.9    1.020       76.2        0
+trace Sloop.Boat.rudder                80.6       82.1    1.130       91.5        0
+trace Sloop.Log.distance               82.4       84.4    1.156       95.1    12000
+trace Sloop.Model                      99.0      101.2    1.388     2234.3        0
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\sailing-5-conditions-end.json --label writes-sailing-end
+2026-10-15 15:45:36 writes-sailing-end: AC True, CPU 4.1%, RTX 60 C 0/3090 MHz 11.93 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\writes\tools\write_trace_bench.py one rules <local-path>\out\writes\quiet\rules-5.json
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-5-conditions-start.json --label writes-rules-start
+2026-10-15 15:45:46 writes-rules-start: AC True, CPU 5.9%, RTX 59 C 0/3090 MHz 10.46 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\writes\target\release\examples\write_trace_bench.exe --ticks 60 --rounds 6 --warmup 30 --out <local-path>\out\writes\quiet\rules-5.json --field 2.Health.hp --field 2.Spot.x <local-path>\.claude\worktrees\writes\bench\rules
+22947 script statements a tick
+round 1 of 6 at tick 392
+round 2 of 6 at tick 692
+round 3 of 6 at tick 992
+round 4 of 6 at tick 1292
+round 5 of 6 at tick 1592
+round 6 of 6 at tick 1892
+22947 script statements a tick
+mode                              median us    mean us   vs off   first us     rows
+off                                  3554.9     3571.5    1.000     5597.6        0
+probe 2.Health.hp                   10822.1    10898.1    3.044    12843.4        0
+probe 2.Spot.x                      10893.0    10936.4    3.064    10960.6      360
+trace 2.Health.hp                   10868.9    10913.7    3.057    10887.5        0
+trace 2.Spot.x                      10956.2    11011.5    3.082    11125.0      360
++ <local-path> <local-path>\.claude\worktrees\writes\tools\machine_conditions.py <local-path>\out\writes\quiet\rules-5-conditions-end.json --label writes-rules-end
+2026-10-15 15:46:12 writes-rules-end: AC True, CPU 6.2%, RTX 59 C 0/3090 MHz 11.93 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+exit 0

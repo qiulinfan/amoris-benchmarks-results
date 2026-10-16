@@ -1,0 +1,19 @@
+[
+ [
+  "python",
+  "tools/dynamic_scenes_bench.py",
+  "--build",
+  "head=<local-path>/out/dynscene/review/head",
+  "--cases",
+  "rt-200k-moving",
+  "--backends",
+  "dx12,vulkan",
+  "--rt-first",
+  "--stall",
+  "900",
+  "--out",
+  "<local-path>/out/dynscene/traces",
+  "--summary",
+  "<local-path>/out/dynscene/review/ctl-rt-stall.json"
+ ]
+]

@@ -1,0 +1,22 @@
+[
+ [
+  "python",
+  "tools/dynamic_scenes_bench.py",
+  "--build",
+  "before=<local-path>/out/dynscene/review/before",
+  "--build",
+  "head=<local-path>/out/dynscene/review/head",
+  "--cases",
+  "static,moving-10k,moving-100k,sparse-10k,sparse-100k",
+  "--adapters",
+  "780m",
+  "--backends",
+  "dx12,vulkan",
+  "--out",
+  "<local-path>/out/dynscene/traces",
+  "--summary",
+  "<local-path>/out/dynscene/review/head-780m.json",
+  "--conditions",
+  "<local-path>/out/dynscene/review/head-780m-conditions"
+ ]
+]

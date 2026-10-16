@@ -1,0 +1,363 @@
+{
+ "target": "node",
+ "node": "v25.8.1",
+ "wasm": "<local-path>\\.claude\\worktrees\\rules\\target\\wasm32-unknown-unknown\\web\\examples\\rules_web.wasm",
+ "warmup": 5,
+ "ticks": 20,
+ "rounds": 1,
+ "verify": {
+  "ticks": 25,
+  "identical": true,
+  "first_divergent_tick": null,
+  "final": "a554b2ef8c140731",
+  "chain": "6bb17f5698f40224",
+  "native_final": "a554b2ef8c140731",
+  "same_as_native": true
+ },
+ "results": [
+  {
+   "variant": "idle",
+   "ticks": 20,
+   "tick_us": {
+    "median": 10.4,
+    "min": 9.6,
+    "p99": 20,
+    "max": 20,
+    "mean": 11.1
+   },
+   "update_us": {
+    "median": 8.8,
+    "min": 8.3,
+    "p99": 16.5,
+    "max": 16.5,
+    "mean": 9.4
+   },
+   "system_us": {
+    "median": 8.4,
+    "min": 7.9,
+    "p99": 15.4,
+    "max": 15.4,
+    "mean": 8.9
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 6.7,
+     "min": 6.3,
+     "p99": 13,
+     "max": 13,
+     "mean": 7
+    },
+    "run": {
+     "median": 1.1,
+     "min": 1,
+     "p99": 1.5,
+     "max": 1.5,
+     "mean": 1.1
+    },
+    "diff": {
+     "median": 0.2,
+     "min": 0.1,
+     "p99": 0.3,
+     "max": 0.3,
+     "mean": 0.2
+    },
+    "apply": {
+     "median": 0.2,
+     "min": 0.2,
+     "p99": 2.8,
+     "max": 2.8,
+     "mean": 0.4
+    }
+   },
+   "steps": {
+    "median": 7,
+    "min": 7,
+    "p99": 7,
+    "max": 7,
+    "mean": 7
+   },
+   "digest": "1471b342007979ce",
+   "raw_tick_us": [
+    20,
+    11.2,
+    11.1,
+    11.8,
+    10.2,
+    11.5,
+    10.1,
+    10.4,
+    9.8,
+    13.2,
+    10.5,
+    9.9,
+    10.3,
+    9.9,
+    11.8,
+    10.4,
+    10.7,
+    10.6,
+    9.9,
+    9.6
+   ],
+   "round": 1
+  },
+  {
+   "variant": "scan",
+   "ticks": 20,
+   "tick_us": {
+    "median": 196.8,
+    "min": 186,
+    "p99": 290,
+    "max": 290,
+    "mean": 203.9
+   },
+   "update_us": {
+    "median": 193.8,
+    "min": 184.4,
+    "p99": 286,
+    "max": 286,
+    "mean": 199.3
+   },
+   "system_us": {
+    "median": 192.9,
+    "min": 183.8,
+    "p99": 284.8,
+    "max": 284.8,
+    "mean": 198.5
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 158.2,
+     "min": 152.7,
+     "p99": 246.9,
+     "max": 246.9,
+     "mean": 165
+    },
+    "run": {
+     "median": 1.8,
+     "min": 1.6,
+     "p99": 3.6,
+     "max": 3.6,
+     "mean": 2.1
+    },
+    "diff": {
+     "median": 27.5,
+     "min": 27.1,
+     "p99": 41.6,
+     "max": 41.6,
+     "mean": 29
+    },
+    "apply": {
+     "median": 1.8,
+     "min": 1.5,
+     "p99": 4.7,
+     "max": 4.7,
+     "mean": 2
+    }
+   },
+   "steps": {
+    "median": 14,
+    "min": 14,
+    "p99": 14,
+    "max": 14,
+    "mean": 14
+   },
+   "digest": "1471b342007979ce",
+   "raw_tick_us": [
+    210.8,
+    290,
+    192.4,
+    200.1,
+    188.1,
+    187.6,
+    234.8,
+    196.8,
+    202.7,
+    188.5,
+    186,
+    187.9,
+    187.5,
+    197.4,
+    194.9,
+    196,
+    203,
+    202.6,
+    221.1,
+    210.3
+   ],
+   "round": 1
+  },
+  {
+   "variant": "twin",
+   "ticks": 20,
+   "tick_us": {
+    "median": 164.2,
+    "min": 160.2,
+    "p99": 204.5,
+    "max": 204.5,
+    "mean": 170.7
+   },
+   "update_us": {
+    "median": 131.6,
+    "min": 127.6,
+    "p99": 162.8,
+    "max": 162.8,
+    "mean": 136.1
+   },
+   "system_us": {
+    "median": 131.6,
+    "min": 127.6,
+    "p99": 162.8,
+    "max": 162.8,
+    "mean": 136.1
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "run": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "diff": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    },
+    "apply": {
+     "median": 0,
+     "min": 0,
+     "p99": 0,
+     "max": 0,
+     "mean": 0
+    }
+   },
+   "steps": {
+    "median": 0,
+    "min": 0,
+    "p99": 0,
+    "max": 0,
+    "mean": 0
+   },
+   "digest": "a554b2ef8c140731",
+   "raw_tick_us": [
+    190.1,
+    204.5,
+    184,
+    164.2,
+    163,
+    163.6,
+    187.9,
+    167.6,
+    161,
+    160.5,
+    162,
+    160.2,
+    172.2,
+    175.6,
+    178.7,
+    163.1,
+    160.2,
+    163.2,
+    164.9,
+    166.7
+   ],
+   "round": 1
+  },
+  {
+   "variant": "rules",
+   "ticks": 20,
+   "tick_us": {
+    "median": 3482.1,
+    "min": 3346.9,
+    "p99": 4597,
+    "max": 4597,
+    "mean": 3552.4
+   },
+   "update_us": {
+    "median": 3435.2,
+    "min": 3303.3,
+    "p99": 4538.7,
+    "max": 4538.7,
+    "mean": 3503.3
+   },
+   "system_us": {
+    "median": 3432,
+    "min": 3300.5,
+    "p99": 4533.9,
+    "max": 4533.9,
+    "mean": 3499.7
+   },
+   "phases_us": {
+    "prepare": {
+     "median": 286,
+     "min": 230.7,
+     "p99": 392.3,
+     "max": 392.3,
+     "mean": 290.9
+    },
+    "run": {
+     "median": 2700.8,
+     "min": 2623.3,
+     "p99": 3732,
+     "max": 3732,
+     "mean": 2755.5
+    },
+    "diff": {
+     "median": 124.5,
+     "min": 121,
+     "p99": 153.1,
+     "max": 153.1,
+     "mean": 127.1
+    },
+    "apply": {
+     "median": 320.3,
+     "min": 291.5,
+     "p99": 361.7,
+     "max": 361.7,
+     "mean": 324.9
+    }
+   },
+   "steps": {
+    "median": 62701,
+    "min": 62485,
+    "p99": 62877,
+    "max": 62877,
+    "mean": 62709.9
+   },
+   "digest": "a554b2ef8c140731",
+   "raw_tick_us": [
+    3500.7,
+    3623.6,
+    3572.5,
+    3553.6,
+    3675.7,
+    3469.2,
+    4597,
+    3631,
+    3475.4,
+    3346.9,
+    3421.6,
+    3412.4,
+    3413.9,
+    3398.2,
+    3416.9,
+    3523.5,
+    3482.1,
+    3455.6,
+    3575.5,
+    3503.5
+   ],
+   "round": 1
+  }
+ ]
+}

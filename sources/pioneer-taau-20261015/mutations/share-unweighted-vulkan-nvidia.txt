@@ -1,0 +1,22 @@
+mutation share-unweighted: [('crates/pocket-render/src/taa.rs', '            upscale_weight: true,', '            upscale_weight: false,')]
+exit 101
+
+running 1 test
+test upscaling_converges_on_a_still_scene ... FAILED
+
+failures:
+
+failures:
+    upscaling_converges_on_a_still_scene
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 3.38s
+
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.37s
+     Running tests\taa.rs (target\release\deps\taa-38c1e73fef474ddb.exe)
+scale 0.5: first frame 27.5 dB, frame 64 31.6 dB (scale 1: 40.8)
+scale 0.67: first frame 28.8 dB, frame 64 34.4 dB (scale 1: 40.8)
+
+thread 'upscaling_converges_on_a_still_scene' (<tid>) panicked at crates\pocket-render\tests\taa.rs:1166:9:
+scale 0.5: frame 64 at 31.6 dB, its first frame 27.5 dB
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `-p pocket-render --test taa`

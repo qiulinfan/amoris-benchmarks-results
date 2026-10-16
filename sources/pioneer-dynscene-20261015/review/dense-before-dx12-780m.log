@@ -1,0 +1,23 @@
+built 1600000 cubes in 128 ms
+[INFO] Direct3D 12 shader compiler: DXC 1.8.2502.11 <local-path> (Windows SDK 10.0.26100.0)
+[INFO] adapters: 0: AMD Radeon 780M Graphics (Dx12), 1: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12), 2: Microsoft Basic Render Driver (Dx12)
+[INFO] limits: buffer 2047 MB, storage binding 2047 MB, storage buffers/stage 262144, texture 2D 16384
+[INFO] GPU: AMD Radeon 780M Graphics (Dx12, IntegratedGpu); driver 32.0.13062.3005 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+[ERROR] GPU device lost (Unknown): Out of memory
+[ERROR] wgpu: OutOfMemory { source: ContextError { fn_ident: "Queue::write_buffer", source: Queue(OutOfMemory), label: "" } }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::map_async", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::map_async\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::buffer_unmap", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::buffer_unmap\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::map_async", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::map_async\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::buffer_unmap", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::buffer_unmap\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::map_async", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::map_async\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::buffer_unmap", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::buffer_unmap\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::map_async", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::map_async\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::buffer_unmap", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::buffer_unmap\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::map_async", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::map_async\n    Buffer with 'capture readback' label is invalid\n" }
+[ERROR] wgpu: Validation { source: ContextError { fn_ident: "Buffer::buffer_unmap", source: InvalidResource(InvalidResourceError(ResourceErrorIdent { type: "Buffer", label: "capture readback" })), label: "" }, description: "Validation Error\n\nCaused by:\n  In Buffer::buffer_unmap\n    Buffer with 'capture readback' label is invalid\n" }
+
+thread 'main' (<tid>) panicked at <local-path>:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

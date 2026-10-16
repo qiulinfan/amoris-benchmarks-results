@@ -1,0 +1,82 @@
+$ python tools/build_compare.py --before <local-path>/out/dynscene/review/before --backends dx12,vulkan --out target/build-compare --summary <local-path>/out/dynscene/review/compare-rtx.json
+cubes-shadows  msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+splats         msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+gi-room        msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+pt-lab         msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+crowd          msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa              dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa dx12 None before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+splats         msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+crowd          msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa-gtao         dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa-gtao dx12 None before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+splats         taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+crowd          taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa               dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa dx12 None before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+splats         taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+crowd          taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa-gtao-normals  dx12    -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa-gtao-normals dx12 None before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+splats         msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+gi-room        msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+pt-lab         msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+crowd          msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa              vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-shadows  msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+splats         msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+crowd          msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa-gtao         vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-shadows  taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+splats         taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+crowd          taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa               vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-shadows  taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+splats         taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+crowd          taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa-gtao-normals  vulkan  -       rmse 0.000 max   0 >1 0.0%
+56 successful pairs, 4 failed, 0 differ

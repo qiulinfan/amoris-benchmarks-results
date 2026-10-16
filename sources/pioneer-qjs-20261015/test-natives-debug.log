@@ -1,0 +1,194 @@
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+   Compiling pocket-script v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-script)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 27.28s
+     Running unittests src\lib.rs (target\debug\deps\pocket_script-15e815d4c9f4a9ee.exe)
+
+running 9 tests
+test error::tests::columns_count_utf16_units ... ok
+test source::tests::paths ... ok
+test sourcemap::tests::decodes_vlq ... ok
+test natives::events::tests::the_sdk_reserves_the_prefixes_emit_refuses ... ok
+test sourcemap::tests::a_hostile_map_reads_as_none ... ok
+test source::tests::bundle_hash_is_order_free_and_pinned ... ok
+test error::tests::problems_carry_the_detail ... ok
+test types::tests::components_become_values_and_columns ... ok
+test resolve::tests::specifiers ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\budget.rs (target\debug\deps\budget-aa3ef818038796e0.exe)
+
+running 5 tests
+test a_failed_system_changes_nothing_and_a_good_one_applies_in_order ... ok
+test rng_draws_of_a_failed_call_are_undone ... ok
+test steps_depend_on_the_call_alone ... ok
+stopped after logging 49000 (system) and 49000 (job)
+test an_endless_loop_stops_at_the_same_step_every_run ... ok
+test a_failed_call_leaves_no_job_behind ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+     Running tests\depth.rs (target\debug\deps\depth-e8b708cd6c5b941b.exe)
+
+running 7 tests
+
+thread 'a_panic_outside_any_native_faults_and_keeps_the_scripts' (<tid>) panicked at crates\pocket-script\tests\depth.rs:278:5:
+the accessor is broken
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'a_panicking_native_poisons_the_world_and_the_process_lives' (<tid>) panicked at crates\pocket-script\tests\depth.rs:278:5:
+the accessor is broken
+test a_panicking_native_poisons_the_world_and_the_process_lives ... ok
+test a_panic_outside_any_native_faults_and_keeps_the_scripts ... ok
+test a_memory_fault_poisons_the_world ... ok
+test proxy_chains_stop_by_depth ... ok
+test depth_fails_at_exactly_the_limit ... ok
+test running_out_of_memory_on_small_allocations_faults_too ... ok
+debug: 3508566 bytes of stack at max_call_depth 200; stack_bytes 6291456 (needs 5262849)
+test the_default_stack_holds_the_depth_limit ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+
+     Running tests\errors.rs (target\debug\deps\errors-34e35a1ce3f916e7.exe)
+
+running 6 tests
+test a_removed_global_has_a_hint ... ok
+test harden_refuses_a_top_level_map ... ok
+test a_binding_named_proto_is_hardened ... ok
+test mutating_a_frozen_module_value_throws_at_the_mutation ... ok
+test errors_name_the_typescript_line_and_the_entity ... ok
+test scripts_cannot_forge_host_codes_or_faults ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests\hot_update.rs (target\debug\deps\hot_update-184f94c784c68cec.exe)
+
+running 6 tests
+test new_defaults_apply_to_components_inserted_after_the_swap ... ok
+test a_swap_lands_between_two_ticks ... ok
+test a_hot_update_fixes_a_failing_system ... ok
+test an_unchanged_bundle_is_a_no_op_unless_forced ... ok
+test a_failing_candidate_keeps_the_old_scripts_and_the_world ... ok
+test project_components_across_a_swap ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests\limits.rs (target\debug\deps\limits-371bf6055dc0ec20.exe)
+
+running 4 tests
+test console_lines_are_bounded ... ok
+test shuffle_lengths_are_checked_before_allocating ... ok
+test plain_data_too_large_is_refused_while_it_is_read ... ok
+test query_buffers_are_charged_to_the_call ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.38s
+
+     Running tests\lint.rs (target\debug\deps\lint-fdb404faf7a53146.exe)
+
+running 12 tests
+test module_let ... ok
+test static_private ... ok
+test module_statement ... ok
+test async_code ... ok
+test lint_off_is_only_for_the_negative_control ... ok
+test reserved_name ... ok
+test load_time_hook ... ok
+test module_reassign ... ok
+test decorator_namespace_private_module ... ok
+test removed_global ... ok
+test an_import_mutated_by_a_method_call_passes_the_lint_and_fails_at_run_time ... ok
+test load_time_code ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests\lockdown.rs (target\debug\deps\lockdown-0487468bfc1c0506.exe)
+
+running 8 tests
+QuickJS-ng compiled by clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb)
+test writes_to_intrinsics_throw_and_taming_works ... ok
+test the_runtime_reads_no_clock ... ok
+test removed_globals_are_absent ... ok
+test the_engine_math_functions_are_builtins ... ok
+test code_generation_is_refused ... ok
+test hidden_intrinsics_are_frozen ... ok
+test a_hidden_intrinsic_keeps_no_state ... ok
+701 objects frozen from 21 roots, 45 reviewed setters
+test everything_reachable_is_frozen ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests\prelude.rs (target\debug\deps\prelude-b285cec4fb76af6d.exe)
+
+running 2 tests
+test prelude_dts_is_current ... ok
+test prelude_js_is_current ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests\reload.rs (target\debug\deps\reload-17bb43184378738e.exe)
+
+running 3 tests
+test module_state_is_caught_by_the_reload_check ... ok
+test a_fork_is_a_fresh_sim_with_the_same_scripts ... ok
+test reloading_unchanged_scripts_changes_nothing ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.63s
+
+     Running tests\rules.rs (target\debug\deps\rules-629063c059fb9d62.exe)
+
+running 1 test
+test the_rule_and_its_twin_build_the_same_world ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.84s
+
+     Running tests\smoke.rs (target\debug\deps\smoke-12784dde0578d269.exe)
+
+running 1 test
+[("drift", 20)]
+test a_small_game_runs ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests\web.rs (target\debug\deps\web-463e8ff42b27a7e0.exe)
+
+running 3 tests
+test exponent_lowers_to_the_engine_pow ... ok
+   Compiling rquickjs-sys v0.14.0 (<local-path>\.claude\worktrees\qjs\third_party\rquickjs-sys-0.14.0)
+ok lockdown problems 0 setters 45 objects 701 roots 21
+ok math.replaced 2837a30d
+math.kept [105198831,869719725,36862]
+final 507e8ac55b06797f steps 18654424
+test web_report ... ok
+   Compiling rquickjs-core v0.14.0
+   Compiling rquickjs v0.14.0
+   Compiling pocket-script v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-script)
+    Finished `release` profile [optimized + debuginfo] target(s) in 37.00s
+report in 1467 ms
+identical to the native report
+
+test the_wasm_report_is_the_native_one ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 47.73s
+
+     Running tests\writes.rs (target\debug\deps\writes-90caadc1388676e3.exe)
+
+running 7 tests
+test only_changed_cells_are_written_back ... ok
+test copies_and_ids_have_their_order ... ok
+test console_runs_no_project_code ... ok
+test the_overlay_rows_of_5_4 ... ok
+test column_writes_are_checked ... ok
+test data_refusals ... ok
+test refusals_name_their_code_line_and_entity ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+   Doc-tests pocket_script
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

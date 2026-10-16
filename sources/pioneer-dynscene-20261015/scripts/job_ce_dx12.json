@@ -1,0 +1,4 @@
+[
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "c=<local-path>/out/dynscene/c", "--build", "e=<local-path>/out/dynscene/e", "--cases", "moving-10k,moving-100k,sparse-10k,sparse-100k,moving-1.6m", "--backends", "dx12", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/ce-dx12.json", "--conditions", "<local-path>/out/dynscene/ce-dx12-conditions"],
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "c=<local-path>/out/dynscene/c", "--build", "e=<local-path>/out/dynscene/e", "--count", "100000", "--cases", "moving-100k", "--backends", "dx12", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/ce-dx12-count100k.json"]
+]

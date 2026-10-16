@@ -1,0 +1,902 @@
+2026-10-16 00:56:08 settling after the builds
+2026-10-16 00:57:39 transparency quiet start: AC True, CPU 5.1%, RTX 50 C 0/3090 MHz 11.02 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+2026-10-16 00:57:50 rtx 51 C
+2026-10-16 00:57:50 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --out <local-path>/out/transparency/quiet/bench
+2026-10-16 00:57:50 transparency 5060-dx12: AC True, CPU 7.3%, RTX 52 C 0/3090 MHz 9.83 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.404    0.000   0.210   0.000  0.129   0.052   0.542    0.000  0.000      0
+opaque     0.713    0.309   0.429   0.000  0.131   0.154   0.677    0.135  0.000      0
+blend      0.752    0.348   0.180   0.377  0.129   0.054   0.802    0.260  0.076     30
+glass      0.757    0.353   0.179   0.381  0.122   0.053   0.801    0.259  0.075     30
+double     1.093    0.689   0.180   0.722  0.122   0.053   0.823    0.281  0.082     30
+2026-10-16 00:59:47 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:00:05 rtx 59 C
+2026-10-16 01:00:05 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,blend,glass,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab-05716664
+2026-10-16 01:00:05 transparency 5060-dx12: AC True, CPU 4.5%, RTX 59 C 0/3090 MHz 10.06 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.404    0.000   0.211   0.000  0.129   0.052   0.532    0.000  0.000      0
+blend      0.865    0.461   0.555   0.000  0.128   0.165   0.786    0.254  0.078     30
+glass      0.876    0.472   0.567   0.000  0.127   0.166   0.783    0.251  0.078     30
+double     1.230    0.826   0.918   0.000  0.130   0.168   0.811    0.279  0.083     30
+2026-10-16 01:01:42 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,blend,glass,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab-05716664
+2026-10-16 01:01:59 rtx 60 C
+2026-10-16 01:01:59 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:02:00 transparency 5060-dx12-orbit: AC True, CPU 4.2%, RTX 60 C 0/3090 MHz 10.50 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.407    0.000   0.213   0.000  0.129   0.053   0.550    0.000  0.000      0
+blend      0.728    0.321   0.182   0.355  0.123   0.056   0.851    0.301  0.106     32
+double     1.072    0.665   0.182   0.696  0.123   0.054   0.873    0.323  0.109     32
+2026-10-16 01:03:14 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:03:14 rtx 68 C
+2026-10-16 01:03:14 start: python tools/transparency_bench.py --adapter 5060 --backend vulkan --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:03:15 transparency 5060-vulkan: AC True, CPU 4.7%, RTX 63 C 0/3090 MHz 10.72 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.177   0.000  0.131   0.041   0.318    0.000  0.000      0
+opaque     0.606    0.243   0.376   0.000  0.154   0.154   0.326    0.008  0.000      0
+blend      0.609    0.246   0.165   0.312  0.145   0.049   0.422    0.104  0.077     30
+glass      0.612    0.249   0.150   0.295  0.138   0.045   0.419    0.101  0.077     30
+double     0.859    0.496   0.137   0.528  0.136   0.042   0.433    0.115  0.080     30
+2026-10-16 01:04:54 exit 0: python tools/transparency_bench.py --adapter 5060 --backend vulkan --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:04:54 rtx 67 C
+2026-10-16 01:04:55 start: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,blend,glass,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab-05716664
+2026-10-16 01:04:55 transparency 5060-vulkan: AC True, CPU 4.2%, RTX 60 C 0/3090 MHz 10.52 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.177   0.000  0.131   0.041   0.322    0.000  0.000      0
+blend      0.713    0.350   0.413   0.000  0.131   0.158   0.420    0.098  0.080     30
+glass      0.714    0.351   0.470   0.000  0.139   0.160   0.417    0.095  0.078     30
+double     0.965    0.602   0.661   0.000  0.133   0.155   0.431    0.109  0.081     30
+2026-10-16 01:06:17 exit 0: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,blend,glass,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab-05716664
+2026-10-16 01:06:17 rtx 63 C
+2026-10-16 01:06:17 start: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:06:17 transparency 5060-vulkan-orbit: AC True, CPU 3.5%, RTX 60 C 0/3090 MHz 10.44 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.365    0.000   0.180   0.000  0.131   0.042   0.325    0.000  0.000      0
+blend      0.598    0.233   0.161   0.294  0.143   0.049   0.427    0.102  0.079     32
+double     0.836    0.471   0.137   0.509  0.135   0.043   0.467    0.142  0.101     32
+2026-10-16 01:07:21 exit 0: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:07:22 rtx 60 C
+2026-10-16 01:07:22 start: python tools/transparency_bench.py --adapter 780m --backend dx12 --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:07:22 transparency 780m-dx12: AC True, CPU 6.9%, RTX 60 C 0/3090 MHz 10.55 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     2.102    0.000   0.689   0.000  0.000   0.749   0.765    0.000  0.000      0
+opaque     2.942    0.840   1.190   0.000  0.000   1.149   0.866    0.101  0.000      0
+blend      2.877    0.775   1.460   0.000  0.000   0.772   0.994    0.229  0.110     30
+glass      2.810    0.708   1.455   0.000  0.000   0.774   0.981    0.216  0.105     30
+double     3.583    1.481   2.274   0.000  0.000   0.762   1.031    0.266  0.107     30
+2026-10-16 01:09:47 exit 0: python tools/transparency_bench.py --adapter 780m --backend dx12 --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:09:47 rtx 62 C
+2026-10-16 01:09:47 start: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:09:48 transparency 780m-dx12-orbit: AC True, CPU 4.8%, RTX 62 C 0/3090 MHz 10.68 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     2.095    0.000   0.695   0.000  0.000   0.771   0.794    0.000  0.000      0
+blend      2.825    0.730   1.422   0.000  0.000   0.766   1.029    0.235  0.109     32
+double     3.543    1.448   2.201   0.000  0.000   0.774   1.086    0.292  0.115     32
+2026-10-16 01:11:19 exit 0: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:11:19 rtx 62 C
+2026-10-16 01:11:19 start: python tools/transparency_bench.py --adapter 780m --backend vulkan --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:11:19 transparency 780m-vulkan: AC True, CPU 7.8%, RTX 63 C 0/3090 MHz 10.77 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     1.815    0.000   0.539   0.000  0.000   0.700   0.579    0.000  0.000      0
+opaque     2.531    0.716   0.894   0.000  0.000   1.084   0.661    0.082  0.000      0
+blend      2.351    0.536   1.050   0.000  0.000   0.713   0.788    0.209  0.105     30
+glass      2.419    0.604   1.102   0.000  0.000   0.706   0.789    0.210  0.107     30
+double     2.799    0.984   1.576   0.000  0.000   0.689   0.762    0.183  0.099     30
+2026-10-16 01:13:25 exit 0: python tools/transparency_bench.py --adapter 780m --backend vulkan --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:13:25 rtx 62 C
+2026-10-16 01:13:25 start: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:13:25 transparency 780m-vulkan-orbit: AC True, CPU 6.9%, RTX 63 C 0/3090 MHz 10.78 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     1.827    0.000   0.546   0.000  0.000   0.707   0.592    0.000  0.000      0
+blend      2.331    0.504   1.031   0.000  0.000   0.716   0.799    0.207  0.108     32
+double     2.840    1.013   1.573   0.000  0.000   0.705   0.771    0.179  0.104     32
+2026-10-16 01:14:44 exit 0: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,blend,double --extra=--orbit --out <local-path>/out/transparency/quiet/bench
+2026-10-16 01:14:45 rtx 62 C
+2026-10-16 01:14:45 start: python -I <local-path>/out/transparency/scripts/hitch.py
+2026-10-16 01:14:45 transparency hitch 5060-dx12: AC True, CPU 6.2%, RTX 63 C 0/3090 MHz 10.65 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{'config': '5060-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 0, 'wall_ms': 1665.6, 'first_encode_ms': 12.812, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'before', 'kind': 'blend', 'rep': 0, 'wall_ms': 1757.8, 'first_encode_ms': 109.971, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 0, 'wall_ms': 1669.8, 'first_encode_ms': 13.508, 'init_ms': 231.895, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'blend', 'rep': 0, 'wall_ms': 1717.5, 'first_encode_ms': 15.333, 'init_ms': 236.431, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 1, 'wall_ms': 1607.4, 'first_encode_ms': 13.485, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'before', 'kind': 'blend', 'rep': 1, 'wall_ms': 1747.3, 'first_encode_ms': 105.535, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 1, 'wall_ms': 1631.3, 'first_encode_ms': 12.688, 'init_ms': 223.879, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'blend', 'rep': 1, 'wall_ms': 1712.1, 'first_encode_ms': 14.093, 'init_ms': 219.122, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 2, 'wall_ms': 1602.2, 'first_encode_ms': 13.436, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'before', 'kind': 'blend', 'rep': 2, 'wall_ms': 1734.3, 'first_encode_ms': 111.481, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 2, 'wall_ms': 1648.1, 'first_encode_ms': 12.668, 'init_ms': 222.014, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-dx12', 'build': 'after', 'kind': 'blend', 'rep': 2, 'wall_ms': 1649.9, 'first_encode_ms': 13.072, 'init_ms': 227.285, 'antialiasing': 'msaa', 'gtao': 'depth'}
+2026-10-16 01:15:14 transparency hitch 5060-vulkan: AC True, CPU 4.9%, RTX 65 C 0/3090 MHz 10.85 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 0, 'wall_ms': 1115.4, 'first_encode_ms': 2.757, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 0, 'wall_ms': 429.8, 'first_encode_ms': 4.463, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 0, 'wall_ms': 420.5, 'first_encode_ms': 2.565, 'init_ms': 51.29, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 0, 'wall_ms': 423.6, 'first_encode_ms': 2.661, 'init_ms': 49.847, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 1, 'wall_ms': 423.3, 'first_encode_ms': 2.697, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 1, 'wall_ms': 437.6, 'first_encode_ms': 4.68, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 1, 'wall_ms': 443.6, 'first_encode_ms': 3.5, 'init_ms': 52.736, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 1, 'wall_ms': 442.9, 'first_encode_ms': 2.736, 'init_ms': 55.093, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 2, 'wall_ms': 443.3, 'first_encode_ms': 3.246, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 2, 'wall_ms': 426.2, 'first_encode_ms': 4.887, 'init_ms': None, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 2, 'wall_ms': 576.4, 'first_encode_ms': 2.956, 'init_ms': 61.256, 'antialiasing': 'msaa', 'gtao': 'depth'}
+{'config': '5060-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 2, 'wall_ms': 446.3, 'first_encode_ms': 3.622, 'init_ms': 53.257, 'antialiasing': 'msaa', 'gtao': 'depth'}
+2026-10-16 01:15:29 transparency hitch 780m-dx12: AC True, CPU 5.9%, RTX 64 C 2070/3090 MHz 10.74 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{'config': '780m-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 0, 'wall_ms': 2399.9, 'first_encode_ms': 8.435, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'before', 'kind': 'blend', 'rep': 0, 'wall_ms': 2390.1, 'first_encode_ms': 101.285, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 0, 'wall_ms': 2437.4, 'first_encode_ms': 8.571, 'init_ms': 253.335, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'blend', 'rep': 0, 'wall_ms': 2385.9, 'first_encode_ms': 7.905, 'init_ms': 249.798, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 1, 'wall_ms': 2423.6, 'first_encode_ms': 8.196, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'before', 'kind': 'blend', 'rep': 1, 'wall_ms': 2406.1, 'first_encode_ms': 108.836, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 1, 'wall_ms': 2430.7, 'first_encode_ms': 8.037, 'init_ms': 258.052, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'blend', 'rep': 1, 'wall_ms': 2409.1, 'first_encode_ms': 8.455, 'init_ms': 283.378, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'before', 'kind': 'hidden', 'rep': 2, 'wall_ms': 2427.9, 'first_encode_ms': 8.046, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'before', 'kind': 'blend', 'rep': 2, 'wall_ms': 2493.0, 'first_encode_ms': 110.266, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'hidden', 'rep': 2, 'wall_ms': 1768.1, 'first_encode_ms': 7.803, 'init_ms': 255.292, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-dx12', 'build': 'after', 'kind': 'blend', 'rep': 2, 'wall_ms': 2377.1, 'first_encode_ms': 8.582, 'init_ms': 251.892, 'antialiasing': 'taa', 'gtao': 'off'}
+2026-10-16 01:16:06 transparency hitch 780m-vulkan: AC True, CPU 5.6%, RTX 66 C 0/3090 MHz 11.04 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 0, 'wall_ms': 1256.5, 'first_encode_ms': 7.216, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 0, 'wall_ms': 582.7, 'first_encode_ms': 9.722, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 0, 'wall_ms': 1248.5, 'first_encode_ms': 7.3, 'init_ms': 73.781, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 0, 'wall_ms': 573.7, 'first_encode_ms': 7.897, 'init_ms': 71.888, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 1, 'wall_ms': 568.5, 'first_encode_ms': 6.681, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 1, 'wall_ms': 1246.8, 'first_encode_ms': 9.498, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 1, 'wall_ms': 575.7, 'first_encode_ms': 8.193, 'init_ms': 72.796, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 1, 'wall_ms': 572.7, 'first_encode_ms': 7.668, 'init_ms': 71.073, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'hidden', 'rep': 2, 'wall_ms': 568.3, 'first_encode_ms': 7.316, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'before', 'kind': 'blend', 'rep': 2, 'wall_ms': 576.7, 'first_encode_ms': 10.402, 'init_ms': None, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'hidden', 'rep': 2, 'wall_ms': 572.6, 'first_encode_ms': 7.788, 'init_ms': 71.408, 'antialiasing': 'taa', 'gtao': 'off'}
+{'config': '780m-vulkan', 'build': 'after', 'kind': 'blend', 'rep': 2, 'wall_ms': 594.6, 'first_encode_ms': 8.175, 'init_ms': 80.896, 'antialiasing': 'taa', 'gtao': 'off'}
+median per config, build, kind: first-frame encode ms, wall ms, init ms
+5060-dx12 before hidden 13.436 1607.4 None
+5060-dx12 before blend 109.971 1747.3 None
+5060-dx12 after hidden 12.688 1648.1 223.879
+5060-dx12 after blend 14.093 1712.1 227.285
+5060-vulkan before hidden 2.757 443.3 None
+5060-vulkan before blend 4.68 429.8 None
+5060-vulkan after hidden 2.956 443.6 52.736
+5060-vulkan after blend 2.736 442.9 53.257
+780m-dx12 before hidden 8.196 2423.6 None
+780m-dx12 before blend 108.836 2406.1 None
+780m-dx12 after hidden 8.037 2430.7 255.292
+780m-dx12 after blend 8.455 2385.9 251.892
+780m-vulkan before hidden 7.216 568.5 None
+780m-vulkan before blend 9.722 582.7 None
+780m-vulkan after hidden 7.788 575.7 72.796
+780m-vulkan after blend 7.897 573.7 71.888
+2026-10-16 01:16:23 exit 0: python -I <local-path>/out/transparency/scripts/hitch.py
+2026-10-16 01:16:24 rtx 65 C
+2026-10-16 01:16:24 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:16:24 transparency 5060-dx12: AC True, CPU 8.1%, RTX 65 C 1867/3090 MHz 10.97 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.404    0.000   0.210   0.000  0.129   0.053   0.608    0.000  0.000      0
+double     1.102    0.698   0.179   0.725  0.129   0.055   0.846    0.238  0.083     30
+2026-10-16 01:17:17 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:17:35 rtx 62 C
+2026-10-16 01:17:35 start: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:17:36 transparency 5060-dx12: AC True, CPU 5.7%, RTX 63 C 0/3090 MHz 10.59 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     0.405    0.000   0.211   0.053   0.630    0.000  0.000      0
+double     1.713    1.308   1.429   0.172   0.850    0.220  0.086     30
+2026-10-16 01:18:30 exit 0: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:18:48 rtx 61 C
+2026-10-16 01:18:48 start: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:18:48 transparency 5060-dx12: AC True, CPU 5.7%, RTX 62 C 0/3090 MHz 10.58 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     0.405    0.000   0.211   0.053   0.517    0.000  0.000      0
+double     1.240    0.835   0.921   0.170   1.829    1.312  0.091   2000
+2026-10-16 01:19:42 exit 0: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:19:43 rtx 68 C
+2026-10-16 01:19:43 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:19:43 transparency 5060-dx12: AC True, CPU 5.1%, RTX 64 C 4635/3090 MHz 10.76 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12 msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.404    0.000   0.212   0.000  0.128   0.053   0.606    0.000  0.000      0
+double     1.232    0.828   0.921   0.000  0.130   0.169   0.833    0.227  0.085     30
+2026-10-16 01:20:35 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:20:53 rtx 61 C
+2026-10-16 01:20:53 start: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:20:53 transparency 5060-vulkan: AC True, CPU 9.1%, RTX 61 C 0/3090 MHz 10.50 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.177   0.000  0.131   0.041   0.320    0.000  0.000      0
+double     0.856    0.493   0.178   0.556  0.150   0.052   0.459    0.139  0.082     30
+2026-10-16 01:21:39 exit 0: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:21:57 rtx 60 C
+2026-10-16 01:21:57 start: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:21:57 transparency 5060-vulkan: AC True, CPU 4.8%, RTX 61 C 0/3090 MHz 10.52 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.249   0.053   0.321    0.000  0.000      0
+double     1.250    0.887   0.943   0.157   0.447    0.126  0.079     30
+2026-10-16 01:22:43 exit 0: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:22:43 rtx 67 C
+2026-10-16 01:22:43 start: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:22:44 transparency 5060-vulkan: AC True, CPU 5.4%, RTX 62 C 0/3090 MHz 10.70 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.178   0.041   0.319    0.000  0.000      0
+double     0.967    0.604   0.666   0.155   1.397    1.078  0.084   2000
+2026-10-16 01:23:30 exit 0: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:23:31 rtx 62 C
+2026-10-16 01:23:31 start: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:23:31 transparency 5060-vulkan: AC True, CPU 4.7%, RTX 62 C 0/3090 MHz 10.72 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Vulkan msaa gtao depth
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     0.363    0.000   0.241   0.000  0.141   0.051   0.327    0.000  0.000      0
+double     0.964    0.601   0.661   0.000  0.133   0.155   0.444    0.117  0.080     30
+2026-10-16 01:24:17 exit 0: python tools/transparency_bench.py --adapter 5060 --backend vulkan --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:24:34 rtx 60 C
+2026-10-16 01:24:34 start: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:24:35 transparency 780m-dx12: AC True, CPU 5.6%, RTX 60 C 0/3090 MHz 10.50 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     2.195    0.000   0.747   0.000  0.000   0.764   0.892    0.000  0.000      0
+double     3.479    1.284   2.208   0.000  0.000   0.754   1.079    0.187  0.109     30
+2026-10-16 01:25:39 exit 0: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:25:39 rtx 63 C
+2026-10-16 01:25:39 start: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:25:40 transparency 780m-dx12: AC True, CPU 6.3%, RTX 64 C 0/3090 MHz 10.76 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     2.216    0.000   0.766   0.759   0.887    0.000  0.000      0
+double     5.593    3.377   4.124   1.018   1.347    0.460  0.112     30
+2026-10-16 01:26:47 exit 0: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:26:48 rtx 63 C
+2026-10-16 01:26:48 start: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:26:48 transparency 780m-dx12: AC True, CPU 5.6%, RTX 64 C 0/3090 MHz 10.81 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     2.258    0.000   0.789   0.768   0.867    0.000  0.000      0
+double     4.846    2.588   3.050   1.149   1.832    0.965  0.107   2000
+2026-10-16 01:27:55 exit 0: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:27:55 rtx 63 C
+2026-10-16 01:27:55 start: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:27:55 transparency 780m-dx12: AC True, CPU 6.6%, RTX 64 C 0/3090 MHz 10.76 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Direct3D 12 taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     2.198    0.000   0.759   0.000  0.000   0.758   0.872    0.000  0.001      0
+double     3.691    1.493   2.233   0.000  0.000   0.972   1.068    0.196  0.108     30
+2026-10-16 01:29:00 exit 0: python tools/transparency_bench.py --adapter 780m --backend dx12 --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:29:01 rtx 63 C
+2026-10-16 01:29:01 start: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:29:01 transparency 780m-vulkan: AC True, CPU 5.4%, RTX 64 C 0/3090 MHz 10.79 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     1.793    0.000   0.544   0.000  0.000   0.669   0.590    0.000  0.000      0
+double     2.880    1.087   1.616   0.000  0.000   0.679   0.768    0.178  0.100     30
+2026-10-16 01:29:57 exit 0: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-lists
+2026-10-16 01:29:57 rtx 63 C
+2026-10-16 01:29:57 start: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:29:58 transparency 780m-vulkan: AC True, CPU 5.7%, RTX 64 C 0/3090 MHz 10.75 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     1.832    0.000   0.549   0.687   0.592    0.000  0.000      0
+double     3.694    1.862   2.365   0.898   0.792    0.200  0.100     30
+2026-10-16 01:30:54 exit 0: python <local-path>/out/transparency/src-b9eea658/tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-one-draw
+2026-10-16 01:30:55 rtx 63 C
+2026-10-16 01:30:55 start: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:30:55 transparency 780m-vulkan: AC True, CPU 9.5%, RTX 64 C 0/3090 MHz 10.82 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  shadow     cpu  +hidden   sort  draws
+hidden     1.777    0.000   0.542   0.680   0.602    0.000  0.000      0
+double     4.027    2.250   2.434   1.070   1.934    1.332  0.101   2000
+2026-10-16 01:31:54 exit 0: python <local-path>/out/transparency/src-440dd7f8/tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --out <local-path>/out/transparency/quiet/ab3-two-draws
+2026-10-16 01:31:54 rtx 62 C
+2026-10-16 01:31:54 start: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:31:54 transparency 780m-vulkan: AC True, CPU 6.6%, RTX 63 C 0/3090 MHz 10.71 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+AMD Radeon 780M Graphics Vulkan taa gtao off
+kind         gpu  +hidden  opaque  transp   gtao  shadow     cpu  +hidden   sort  draws
+hidden     1.792    0.000   0.546   0.000  0.000   0.673   0.604    0.000  0.000      0
+double     3.023    1.231   1.595   0.000  0.000   0.881   0.770    0.166  0.102     30
+2026-10-16 01:32:50 exit 0: python tools/transparency_bench.py --adapter 780m --backend vulkan --kinds hidden,double --exe <local-path>/out/transparency/build-05716664/target/release/examples/transparency.exe --out <local-path>/out/transparency/quiet/ab3-lists-05716664
+2026-10-16 01:32:51 rtx 62 C
+2026-10-16 01:32:51 start: python tools/transparency_bench.py --adapter 5060 --backend dx12 --ghost --out <local-path>/out/transparency/quiet/ghost
+2026-10-16 01:32:51 transparency 5060-dx12: AC True, CPU 9.2%, RTX 63 C 0/3090 MHz 10.59 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+NVIDIA GeForce RTX 5060 Laptop GPU Direct3D 12: mean |luminance - reference|, TAA (4x MSAA)
+kind     motion             sphere             trail             image
+opaque   object    0.0119 (0.0012)   0.0236 (0.0031)   0.0046 (0.0016)
+opaque   pan       0.0024 (0.0010)   0.0112 (0.0060)   0.0055 (0.0017)
+blend    object    0.0073 (0.0032)   0.0204 (0.0025)   0.0046 (0.0016)
+blend    pan       0.0090 (0.0015)   0.0156 (0.0051)   0.0056 (0.0017)
+glass    object    0.0135 (0.0046)   0.0123 (0.0026)   0.0046 (0.0016)
+glass    pan       0.0142 (0.0023)   0.0115 (0.0053)   0.0056 (0.0017)
+2026-10-16 01:33:23 exit 0: python tools/transparency_bench.py --adapter 5060 --backend dx12 --ghost --out <local-path>/out/transparency/quiet/ghost
+2026-10-16 01:33:25 rtx 65 C
+2026-10-16 01:33:25 start: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060
+image      region      pixels     rmse rel rmse      mae  mean error rgb
+before     all          76800   0.4454    0.534   0.0713  -0.1054, -0.0557, -0.0313
+before     BlendCard     1369   0.0869    0.512   0.0649  -0.0938, -0.0374, +0.0206
+before     Glass         3612   0.5975    0.934   0.1241  -0.0935, -0.0478, +0.0132
+after      all          76800   0.4455    0.535   0.0707  -0.1064, -0.0580, -0.0352
+after      BlendCard     1369   0.0850    0.501   0.0598  -0.0906, -0.0478, -0.0055
+after      Glass         3612   0.6030    0.943   0.1185  -0.1242, -0.0995, -0.0649
+pt-seed2   all          76800   0.4134    0.496   0.0136  -0.0018, -0.0019, -0.0024
+pt-seed2   BlendCard     1369   0.0313    0.184   0.0147  -0.0002, +0.0002, +0.0005
+pt-seed2   Glass         3612   0.6320    0.988   0.0484  -0.0090, -0.0074, -0.0074
+2026-10-16 01:33:29 exit 0: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060
+2026-10-16 01:33:30 rtx 66 C
+2026-10-16 01:33:30 start: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --pt-args=--emission-scale 0
+image      region      pixels     rmse rel rmse      mae  mean error rgb
+before     all          76800   0.7526    1.662   0.0766  +0.0633, +0.0670, +0.0543
+before     BlendCard     1369   0.0432    0.403   0.0346  -0.0157, +0.0166, +0.0510
+before     Glass         3612   0.5781    0.986   0.1115  +0.0398, +0.0637, +0.0927
+after      all          76800   0.7524    1.662   0.0742  +0.0623, +0.0647, +0.0505
+after      BlendCard     1369   0.0346    0.323   0.0248  -0.0125, +0.0062, +0.0250
+after      Glass         3612   0.5710    0.974   0.0597  +0.0091, +0.0120, +0.0145
+pt-seed2   all          76800   0.4129    0.912   0.0090  -0.0018, -0.0020, -0.0025
+pt-seed2   BlendCard     1369   0.0277    0.259   0.0092  +0.0005, +0.0007, +0.0007
+pt-seed2   Glass         3612   0.6298    1.074   0.0352  -0.0093, -0.0078, -0.0078
+2026-10-16 01:33:34 exit 0: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --pt-args=--emission-scale 0
+2026-10-16 01:33:35 rtx 66 C
+2026-10-16 01:33:35 start: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build prefix=<local-path>/out/transparency/build-05716664 --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --gtao depth
+image      region      pixels     rmse rel rmse      mae  mean error rgb
+before     all          76800   0.4461    0.535   0.0728  -0.1075, -0.0579, -0.0345
+before     BlendCard     1369   0.0879    0.517   0.0660  -0.0949, -0.0393, +0.0175
+before     Glass         3612   0.5989    0.936   0.1257  -0.0982, -0.0541, +0.0037
+prefix     all          76800   0.4458    0.535   0.0717  -0.1080, -0.0595, -0.0375
+prefix     BlendCard     1369   0.0855    0.504   0.0602  -0.0946, -0.0533, -0.0133
+prefix     Glass         3612   0.6032    0.943   0.1186  -0.1265, -0.1025, -0.0694
+after      all          76800   0.4458    0.535   0.0716  -0.1080, -0.0595, -0.0375
+after      BlendCard     1369   0.0854    0.503   0.0597  -0.0947, -0.0531, -0.0127
+after      Glass         3612   0.6031    0.943   0.1186  -0.1266, -0.1026, -0.0695
+pt-seed2   all          76800   0.4134    0.496   0.0136  -0.0018, -0.0019, -0.0024
+pt-seed2   BlendCard     1369   0.0313    0.184   0.0147  -0.0002, +0.0002, +0.0005
+pt-seed2   Glass         3612   0.6320    0.988   0.0484  -0.0090, -0.0074, -0.0074
+2026-10-16 01:33:41 exit 0: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build prefix=<local-path>/out/transparency/build-05716664 --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --gtao depth
+2026-10-16 01:33:42 rtx 66 C
+2026-10-16 01:33:42 start: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build prefix=<local-path>/out/transparency/build-05716664 --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --gtao depth --pt-args=--emission-scale 0
+image      region      pixels     rmse rel rmse      mae  mean error rgb
+before     all          76800   0.7520    1.661   0.0763  +0.0612, +0.0648, +0.0512
+before     BlendCard     1369   0.0435    0.406   0.0351  -0.0168, +0.0147, +0.0480
+before     Glass         3612   0.5779    0.985   0.1086  +0.0351, +0.0574, +0.0831
+prefix     all          76800   0.7518    1.661   0.0738  +0.0607, +0.0631, +0.0482
+prefix     BlendCard     1369   0.0302    0.282   0.0214  -0.0165, +0.0007, +0.0172
+prefix     Glass         3612   0.5710    0.974   0.0584  +0.0068, +0.0090, +0.0100
+after      all          76800   0.7518    1.660   0.0738  +0.0607, +0.0631, +0.0482
+after      BlendCard     1369   0.0298    0.279   0.0209  -0.0166, +0.0010, +0.0178
+after      Glass         3612   0.5709    0.973   0.0583  +0.0067, +0.0089, +0.0099
+pt-seed2   all          76800   0.4129    0.912   0.0090  -0.0018, -0.0020, -0.0025
+pt-seed2   BlendCard     1369   0.0277    0.259   0.0092  +0.0005, +0.0007, +0.0007
+pt-seed2   Glass         3612   0.6298    1.074   0.0352  -0.0093, -0.0078, -0.0078
+2026-10-16 01:33:49 exit 0: python tools/transparency_pt.py --build before=<local-path>/out/transparency/before --build prefix=<local-path>/out/transparency/build-05716664 --build after=. --out <local-path>/out/transparency/quiet/pt-lab --backend dx12 --adapter 5060 --gtao depth --pt-args=--emission-scale 0
+2026-10-16 01:33:50 rtx 67 C
+2026-10-16 01:33:50 start: python -I <local-path>/out/transparency/quiet/compares_quiet.py prepass
+5060-dx12 exit 0
+ "dx12",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-dx12\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-dx12\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-dx12\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+5060-vulkan exit 0
+    "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\5060-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+780m-dx12 exit 0
+"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-dx12\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.4,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-dx12\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-dx12\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+780m-vulkan exit 0
+ {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\prepass-compare\\780m-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+2026-10-16 01:35:38 exit 0: python -I <local-path>/out/transparency/quiet/compares_quiet.py prepass
+2026-10-16 01:35:38 rtx 66 C
+2026-10-16 01:35:38 start: python -I <local-path>/out/transparency/quiet/compares_quiet.py occlusion
+5060-dx12 exit 0
+  "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-dx12\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-dx12\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.8,
+     "occlusion": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-dx12\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 1.7,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+5060-vulkan exit 0
+": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "occlusion": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "5060",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\5060-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+780m-dx12 exit 0
+ {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-dx12\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.9,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-dx12\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.8,
+     "occlusion": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-dx12\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 2.8,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+780m-vulkan exit 0
+kend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.6,
+     "occlusion": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "780m",
+     "png": "<local-path>\\out\\transparency\\quiet\\occlusion-compare\\780m-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"AMD Radeon 780M Graphics\",",
+     "ok": true,
+     "seconds": 1.3,
+     "occlusion": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}
+
+2026-10-16 01:37:30 exit 0: python -I <local-path>/out/transparency/quiet/compares_quiet.py occlusion
+2026-10-16 01:37:30 transparency quiet end: AC True, CPU 5.6%, RTX 67 C 0/3090 MHz 11.03 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+2026-10-16 01:37:39 done

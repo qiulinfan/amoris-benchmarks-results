@@ -1,0 +1,49 @@
+{
+ "started": "2026-10-15 11:46:13",
+ "profile": "release",
+ "commit": "f994e00a5cb5",
+ "built": {
+  "draw_paths": "2026-10-15 11:29:04",
+  "forward_variants": "2026-10-15 11:28:51",
+  "frame_trace": "2026-10-15 11:29:08",
+  "gpu_profiler": "2026-10-15 11:29:18",
+  "hiz": "2026-10-15 11:28:48",
+  "lib": "2026-10-15 11:29:21",
+  "lod": "2026-10-15 11:28:51",
+  "neural": "2026-10-15 11:28:38",
+  "neural_material": "2026-10-15 11:29:15",
+  "neural_mlp": "2026-10-15 11:29:13",
+  "occlusion": "2026-10-15 11:28:43",
+  "prepass": "2026-10-15 11:28:42",
+  "rt_shadows": "2026-10-15 11:28:55",
+  "scene_changes": "2026-10-15 11:28:47",
+  "skinned_bounds": "2026-10-15 11:28:38",
+  "taa": "2026-10-15 11:29:22"
+ },
+ "environment": {
+  "WGPU_DEBUG": "1"
+ },
+ "configs": {
+  "780m-dx12": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "780m"
+   },
+   "adapter": "Direct3D 12 on AMD Radeon 780M Graphics (IntegratedGpu), driver 32.0.13062.3005 ; timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "lib": {
+     "exit": 101,
+     "seconds": 2.8,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "FAIL",
+     "notes": [],
+     "message": "Direct3D 12: pt-lab's mean radiance [0.05999755859375, 0.0799560546875, 0.1199951171875] (sum 0.2599) is that of single-sided surfaces seen from their front (sum 0.6945)"
+    }
+   }
+  }
+ }
+}

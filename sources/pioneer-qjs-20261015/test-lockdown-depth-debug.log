@@ -1,0 +1,118 @@
+   Compiling syn v3.0.6
+   Compiling hashbrown v0.17.1
+   Compiling phf_macros v0.14.0
+   Compiling num-traits v0.2.19
+   Compiling serde_json v1.0.151
+   Compiling phf v0.14.0
+   Compiling indexmap v2.14.2
+   Compiling num-integer v0.1.47
+   Compiling derive_more-impl v2.1.1
+   Compiling num-bigint v0.5.1
+   Compiling toml_edit v0.25.15+spec-1.1.0
+   Compiling bevy_macro_utils v0.19.1
+   Compiling miniz_oxide v0.9.1
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+   Compiling bevy_ecs_macro_logic v0.19.1
+   Compiling bevy_utils v0.19.1
+   Compiling synstructure v0.14.0
+   Compiling serde_derive_internals v0.30.0
+   Compiling bevy_ecs_macros v0.19.1
+   Compiling rquickjs-core v0.14.0
+   Compiling derive_more v2.1.1
+   Compiling bevy_tasks v0.19.1
+   Compiling serde_derive v1.0.229
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.6
+   Compiling zerofrom v0.1.8
+   Compiling displaydoc v0.2.7
+   Compiling yoke v0.8.3
+   Compiling oxc_ast_macros v0.152.0
+   Compiling thiserror-impl v2.0.21
+   Compiling zerotrie v0.2.5
+   Compiling zerovec v0.11.8
+   Compiling ref-cast-impl v1.0.27
+   Compiling serde v1.0.229
+   Compiling ref-cast v1.0.27
+   Compiling schemars_derive v1.2.2
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling thiserror v2.0.21
+   Compiling smallvec v1.16.2
+   Compiling icu_locale_core v2.3.0
+   Compiling icu_collections v2.3.0
+   Compiling oxc_index v5.0.0
+   Compiling ropey v1.6.1
+   Compiling cobs v0.3.0
+   Compiling postcard v1.1.3
+   Compiling oxc_data_structures v0.152.0
+   Compiling oxc_allocator v0.152.0
+   Compiling schemars v1.2.2
+   Compiling oxc-browserslist v5.0.1
+   Compiling bevy_ecs v0.19.1
+   Compiling oxc_str v0.152.0
+   Compiling icu_provider v2.3.1
+   Compiling oxc_span v0.152.0
+   Compiling icu_locale_fallback v2.3.0
+   Compiling oxc_syntax v0.152.0
+   Compiling pocket-contract v0.1.0 (<local-path>\.claude\worktrees\qjs\shared\contract\rust)
+   Compiling icu_segmenter v2.3.0
+   Compiling oxc_sourcemap v9.0.0
+   Compiling textwrap v0.16.4
+   Compiling oxc_compat v0.152.0
+   Compiling oxc_diagnostics v0.152.0
+   Compiling serde-reflection v0.6.0
+   Compiling rquickjs v0.14.0
+   Compiling oxc_regular_expression v0.152.0
+   Compiling oxc_ast v0.152.0
+   Compiling oxc_ecmascript v0.152.0
+   Compiling oxc_ast_visit v0.152.0
+   Compiling oxc_parser v0.152.0
+   Compiling oxc_semantic v0.152.0
+   Compiling oxc_isolated_declarations v0.152.0
+   Compiling oxc_traverse v0.152.0
+   Compiling oxc_transformer v0.152.0
+   Compiling pocket-sim v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-sim)
+   Compiling oxc_codegen v0.152.0
+   Compiling pocket-script v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-script)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 05s
+     Running tests\depth.rs (target\debug\deps\depth-e8b708cd6c5b941b.exe)
+
+running 7 tests
+
+thread 'a_panicking_native_poisons_the_world_and_the_process_lives' (<tid>) panicked at crates\pocket-script\tests\depth.rs:278:5:
+the accessor is broken
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'a_panic_outside_any_native_faults_and_keeps_the_scripts' (<tid>) panicked at crates\pocket-script\tests\depth.rs:278:5:
+the accessor is broken
+test a_panicking_native_poisons_the_world_and_the_process_lives ... ok
+test a_panic_outside_any_native_faults_and_keeps_the_scripts ... ok
+test a_memory_fault_poisons_the_world ... ok
+test proxy_chains_stop_by_depth ... ok
+test depth_fails_at_exactly_the_limit ... ok
+test running_out_of_memory_on_small_allocations_faults_too ... ok
+debug: 3508566 bytes of stack at max_call_depth 200; stack_bytes 6291456 (needs 5262849)
+test the_default_stack_holds_the_depth_limit ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running tests\lockdown.rs (target\debug\deps\lockdown-0487468bfc1c0506.exe)
+
+running 8 tests
+QuickJS-ng compiled by clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb)
+test code_generation_is_refused ... ok
+test the_runtime_reads_no_clock ... ok
+test removed_globals_are_absent ... ok
+test hidden_intrinsics_are_frozen ... ok
+test the_engine_math_functions_are_builtins ... ok
+test writes_to_intrinsics_throw_and_taming_works ... ok
+test a_hidden_intrinsic_keeps_no_state ... ok
+701 objects frozen from 21 roots, 45 reviewed setters
+test everything_reachable_is_frozen ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

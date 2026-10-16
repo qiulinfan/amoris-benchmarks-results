@@ -1,0 +1,21 @@
+[bench_lock] waiting for writes ...
+[bench_lock] waiting for writes ...
+[bench_lock] waiting for writes ...
+rtx mixed 0 {"name": "mixed", "compare": ["off", "on"], "paths": ["first-instance", "first-instance"], "occlusion": ["auto-off", "auto-off"], "adapter": "nvidia blackwell", "entities": [59, 59], "id_readback_ms": [202, 204], "coverage_l1": 0.0, "only_off": [], "only_on": [], "pixels": {"pixels": 707256, "differing_gt8": 0, "max_abs_diff": 0, "kept": "mixed-off.png"}} 
+rtx lod-0 0 {"name": "lod-0", "compare": ["off", "on"], "paths": ["first-instance", "first-instance"], "occlusion": ["auto-off", "auto-off"], "adapter": "nvidia blackwell", "entities": [266, 266], "id_readback_ms": [407, 355], "coverage_l1": 0.0, "only_off": [], "only_on": [], "pixels": {"pixels": 707256, "differing_gt8": 0, "max_abs_diff": 0, "kept": "lod-0-off.png"}} 
+rtx lod-off-0 1 {"name": "lod-off-0", "compare": ["off", "on"], "error": "coverage readback failed", "coverage_errors": {"off": "no coverage", "on": "no coverage"}} 
+780m mixed 0 {"name": "mixed", "compare": ["off", "on"], "paths": ["first-instance", "first-instance"], "occlusion": ["auto-off", "auto-off"], "adapter": "amd rdna-3", "entities": [59, 59], "id_readback_ms": [824, 765], "coverage_l1": 0.0, "only_off": [], "only_on": [], "pixels": {"pixels": 707256, "differing_gt8": 0, "max_abs_diff": 0, "kept": "mixed-off.png"}} 
+780m lod-0 0 {"name": "lod-0", "compare": ["off", "on"], "paths": ["first-instance", "first-instance"], "occlusion": ["auto-off", "auto-off"], "adapter": "amd rdna-3", "entities": [266, 266], "id_readback_ms": [1715, 1517], "coverage_l1": 0.0, "only_off": [], "only_on": [], "pixels": {"pixels": 707256, "differing_gt8": 0, "max_abs_diff": 0, "kept": "lod-0-off.png"}} 
+780m lod-off-0 1  ^^^^^^^^^^^^
+    ).stdout
+    ^
+  File "<local-path>", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<local-path>", line 1220, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<local-path>", line 1663, in _communicate
+    raise TimeoutExpired(self.args, orig_timeout)
+subprocess.TimeoutExpired: Command '['node', '<local-path>\\.claude\\worktrees\\shadowcull\\tools\\web_bench.mjs', 'http://<local-endpoint>/viewport/?demo=lod&t=0&lod=off&shadow_cull=off', '8.0', '1280', '720']' timed out after 180 seconds
+

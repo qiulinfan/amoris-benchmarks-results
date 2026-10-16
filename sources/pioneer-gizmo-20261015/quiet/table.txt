@@ -1,0 +1,11 @@
+| Editor | Runs | Input to frame, median (p95) ms | Listener | Wait | Send to feed | Feed to frame | Edit reply | Edits / feeds / moves | History pushes | Frame interval | Long tasks (ms) | Undo entries added | Escape |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| built | 5 | 59.7 (92.1) | 4.2 | 28.2 | 17 | 4 | 1.9 | 24 / 24 / 90 | 1 | 8.4 | 0 (0) | [1] | restores; the drag moves to redo |
+built run1: orbit distance 5.36, moved 2.12; input to frame 59.7 (from the listener 54.1); frame interval streamed 8.4 (p95 11.8, 252 frames), on release 8.4 (p95 11.5, 251 frames); adapter rdna-3
+built run2: orbit distance 5.36, moved 2.12; input to frame 57.4 (from the listener 53.2); frame interval streamed 8.4 (p95 11.6, 251 frames), on release 8.4 (p95 11.4, 250 frames); adapter rdna-3
+built run3: orbit distance 5.36, moved 2.12; input to frame 56.8 (from the listener 53.8); frame interval streamed 8.4 (p95 11.9, 251 frames), on release 8.4 (p95 12.1, 249 frames); adapter rdna-3
+built run4: orbit distance 5.36, moved 2.12; input to frame 59.9 (from the listener 54.2); frame interval streamed 8.4 (p95 11.9, 251 frames), on release 8.4 (p95 11.6, 250 frames); adapter rdna-3
+built run5: orbit distance 5.36, moved 2.12; input to frame 60.7 (from the listener 55.1); frame interval streamed 8.4 (p95 11.9, 251 frames), on release 8.4 (p95 11.5, 251 frames); adapter rdna-3
+floor, to the host: reply 0.8 ms, feed 12.8 ms (p95 25.4)
+built, on release: first move to first feed 1509 ms, release to feed 12 ms, sends 1, undo entries added [1], frame interval 8.4 ms (p95 11.5), long tasks 0
+built, streamed: frame interval p95 11.9 ms

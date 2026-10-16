@@ -1,0 +1,19 @@
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+   Compiling pocket-runtime v0.1.0 (<local-path>\.claude\worktrees\robust\crates\pocket-runtime)
+error[E0599]: no method named `setup` found for struct `Project` in the current scope
+  --> crates\pocket-runtime\tests\common\mod.rs:21:24
+   |
+21 |             Arc::new(p.setup(false).unwrap_or_else(|e| panic!("{e:#?}")))
+   |                        ^^^^^ method not found in `Project`
+
+error[E0599]: no method named `setup` found for struct `Project` in the current scope
+  --> crates\pocket-runtime\tests\schedule.rs:19:32
+   |
+19 |         let setup = Arc::new(p.setup(false).unwrap_or_else(|e| panic!("{e:#?}")));
+   |                                ^^^^^ method not found in `Project`
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `pocket-runtime` (test "schedule") due to 2 previous errors

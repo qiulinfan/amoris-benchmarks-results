@@ -1,0 +1,17 @@
+$ python tools/dynamic_scenes_bench.py --build before=<local-path>/out/dynscene/review/before --build head=<local-path>/out/dynscene/review/head --cases rt-200k-moving --backends dx12,vulkan --rt-first --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/review/ctl-rt.json --conditions <local-path>/out/dynscene/review/ctl-rt-conditions
+2026-10-14 23:53:59 start: AC True, CPU 4.0%, RTX 62 C 0/3090 MHz 10.73 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "before", "seconds": 181.6, "headline": {"cascaded": {"frame": 913.808, "cpu": 12.655, "gpu": 12.559}, "ray_traced": {"frame": 983.494, "cpu": 57.893, "gpu": 14.036}}, "error": null}
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "head", "seconds": 21.7, "headline": {"cascaded": {"frame": 27.131, "cpu": 2.876, "gpu": 0.856}, "ray_traced": {"frame": 62.923, "cpu": 37.47, "gpu": 1.203}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 178.9, "headline": {"cascaded": {"frame": 914.27, "cpu": 12.381, "gpu": 11.723}, "ray_traced": {"frame": 984.525, "cpu": 56.297, "gpu": 14.418}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "head", "seconds": 22.4, "headline": {"cascaded": {"frame": 39.674, "cpu": 6.721, "gpu": 5.882}, "ray_traced": {"frame": 85.205, "cpu": 45.533, "gpu": 7.411}}, "error": null}
+2026-10-15 00:00:55 end: AC True, CPU 6.4%, RTX 61 C 0/3090 MHz 10.65 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| rt-200k-moving (cascaded) | dx12 | - | before | | | 12.655 | 913.808 | 12.559 | 180.0 |
+| rt-200k-moving (ray_traced) | dx12 | - | before | | | 57.893 | 983.494 | 14.036 | None |
+| rt-200k-moving (cascaded) | dx12 | - | head | | | 2.876 | 27.131 | 0.856 | 1747 |
+| rt-200k-moving (ray_traced) | dx12 | - | head | | | 37.47 | 62.923 | 1.203 | None |
+| rt-200k-moving (cascaded) | vulkan | - | before | | | 12.381 | 914.27 | 11.723 | 180.0 |
+| rt-200k-moving (ray_traced) | vulkan | - | before | | | 56.297 | 984.525 | 14.418 | None |
+| rt-200k-moving (cascaded) | vulkan | - | head | | | 6.721 | 39.674 | 5.882 | 937 |
+| rt-200k-moving (ray_traced) | vulkan | - | head | | | 45.533 | 85.205 | 7.411 | None |

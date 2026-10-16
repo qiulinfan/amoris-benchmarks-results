@@ -1,0 +1,176 @@
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+   Compiling pocket-runtime v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-runtime)
+   Compiling pocket-check v0.1.0 (<local-path>\.claude\worktrees\qjs\crates\pocket-check)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 53.18s
+     Running unittests src\lib.rs (target\debug\deps\pocket_check-7e2b7f1c2b3a7442.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\checks.rs (target\debug\deps\checks-7da7112d6f30a904.exe)
+
+running 6 tests
+test a_misspelt_check_toml_names_its_line ... ok
+test module_state_with_the_lint_on_fails_types ... ok
+test the_types_step_writes_declarations_and_reports_tsc ... ok
+test closure_and_module_state_fail_reload_equivalence ... ok
+test the_sailing_scene_passes_the_four_checks ... ok
+test the_sailing_course_player_scenario_passes_the_four_checks has been running for over 60 seconds
+test the_sailing_course_player_scenario_passes_the_four_checks ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 173.86s
+
+     Running tests\controls.rs (target\debug\deps\controls-7d7fc002a480049e.exe)
+
+running 5 tests
+test child_chain ... ok
+test process_random_fails_cross_process_determinism ... ok
+test an_unrecorded_write_fails_the_replay ... ok
+test shared_static_state_fails_determinism_and_fork ... ok
+test a_moved_input_is_named_at_its_tick ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.49s
+
+     Running tests\sailboat.rs (target\debug\deps\sailboat-f7dca8ee0c495162.exe)
+
+running 1 test
+test the_sloop_sails_before_the_wind ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.93s
+
+     Running unittests src\lib.rs (target\debug\deps\pocket_runtime-e3d2504ff30a7b2a.exe)
+
+running 8 tests
+test boundary::tests::a_tick_counts_against_the_front_step_before_the_model_is_asked_again ... ok
+test boundary::tests::held_envelopes_whose_tick_passed_are_taken_out ... ok
+test profile::tests::nested_systems_keep_their_own_time ... ok
+test profile::tests::names_follow_the_keys_whatever_the_order ... ok
+test engine::tests::patches_reach_inside_values ... ok
+test engine::tests::boat_slots_round_trip ... ok
+test scripts::tests::modules_of_this_engine_are_reused ... ok
+test scripts::tests::modules_of_another_engine_are_not_reused ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\agent_reads.rs (target\debug\deps\agent_reads-beb7da0e74965722.exe)
+
+running 5 tests
+test scripts_read_numbers_the_lines_asked_for ... ok
+test world_get_reads_fields_alone ... ok
+test a_step_samples_fields_as_a_table ... ok
+test a_restore_keeps_the_applied_scripts ... ok
+test a_restore_under_the_applied_scripts_replays ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.45s
+
+     Running tests\edits.rs (target\debug\deps\edits-125f3f00078442d9.exe)
+
+running 5 tests
+test scene_entities_name_each_other ... ok
+test a_fault_is_recorded_once_and_a_restore_records_on ... ok
+test two_sets_of_one_component_in_one_call_keep_both ... ok
+test an_edit_of_an_entity_destroyed_earlier_in_the_call_refuses_the_whole_call ... ok
+test a_restore_while_recording_rebases_and_replays ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.30s
+
+     Running tests\game.rs (target\debug\deps\game-f71121d3d6bef4ae.exe)
+
+running 6 tests
+test the_crew_takes_a_crate_aboard_within_reach ... ok
+test writes_are_recorded_with_names_resolved_and_refusals_change_nothing ... ok
+test a_reload_is_a_recorded_host_swap_and_an_unforced_one_is_nothing ... ok
+test every_kind_of_edit_replays ... ok
+test the_sailing_scene_sails ... ok
+test a_fork_matches_its_source_and_stays_apart ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+     Running tests\host.rs (target\debug\deps\host-0c51c748b6d68c42.exe)
+
+running 6 tests
+test script_types_cost ... ignored
+test script_types_declare_engine_and_game_components ... ok
+test edits_undo_and_redo_exactly ... ok
+test readers_and_stop_conditions ... ok
+test declarations_follow_the_scripts_and_stay_out_of_the_source_tree ... ok
+test play_stop_and_kept_snapshots_on_the_thread ... ok
+
+test result: ok. 5 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.54s
+
+     Running tests\player.rs (target\debug\deps\player-c6f5cda69e4be77f.exe)
+
+running 6 tests
+test a_game_without_players_says_so ... ok
+test a_call_with_one_bad_action_applies_nothing ... ok
+test a_player_is_its_seat_and_sees_through_its_own_perception ... ok
+test a_developer_naming_a_seat_leaves_its_push_cursor ... ok
+test a_player_sends_the_player_tools_alone ... ok
+test a_scripted_agent_sails_the_course_through_player_tools_and_the_run_replays ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 41.61s
+
+     Running tests\player_session.rs (target\debug\deps\player_session-326227939e497928.exe)
+
+running 4 tests
+test the_thread_refuses_a_players_developer_calls ... ok
+test a_rule_that_throws_halts_the_players_until_a_hot_update ... ok
+test a_developers_resume_ends_the_halt_on_the_thread ... ok
+test a_restore_rebases_the_players_session ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.72s
+
+     Running tests\schedule.rs (target\debug\deps\schedule-289878e155a1a734.exe)
+
+running 3 tests
+test the_anim_schedule_is_pinned ... ok
+test the_sailing_schedule_is_pinned ... ok
+test the_sailing_course_schedule_is_pinned ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+
+     Running tests\thread.rs (target\debug\deps\thread-8bc5d41412401a81.exe)
+
+running 12 tests
+test twenty_live_runs_replay_tick_for_tick ... ignored
+test time_control_refuses_speeds_it_cannot_run ... ok
+test a_source_handed_out_again_continues_its_sequence ... ok
+test the_depth_limit_holds_on_the_game_thread ... ok
+test held_commands_count_against_the_capacity_and_sources_are_one_client_each ... ok
+test commands_are_held_for_their_tick_and_refused_when_it_passed ... ok
+test held_commands_whose_tick_passed_are_answered_and_freed ... ok
+test panics_poison_the_world_or_stop_the_thread ... ok
+test ticks_are_profiled_while_a_host_serves_the_profile ... ok
+test a_poisoned_world_halts_real_time_and_records_one_fault ... ok
+test published_snapshots_restore_and_read_back ... ok
+test a_live_run_replays_tick_for_tick ... ok
+
+test result: ok. 11 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 22.03s
+
+     Running tests\thread_player.rs (target\debug\deps\thread_player-00a4507284d80334.exe)
+
+running 5 tests
+test shutdown_answers_a_wait_under_way ... ok
+test a_wait_ending_inside_a_step_leaves_no_tick_owed ... ok
+test real_time_pauses_on_each_decision_until_the_seat_answers ... ok
+test a_stepped_wait_runs_to_the_next_decision_while_reads_are_served ... ok
+test the_skipper_finishes_on_the_thread_and_a_developer_still_steps ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.40s
+
+   Doc-tests pocket_check
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests pocket_runtime
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

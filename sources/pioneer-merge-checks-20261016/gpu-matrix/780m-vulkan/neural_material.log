@@ -1,0 +1,66 @@
+
+running 8 tests
+test material_names_that_are_not_ascii_do_not_crash_the_renderer ... ok
+test a_grown_latent_table_keeps_the_textures_it_holds ... ok
+test a_neural_material_draws_under_taa_with_splats ... ok
+test textures_with_other_channel_sets_share_the_pipelines ... ok
+test a_loaded_neural_texture_leaves_other_materials_alone ... ok
+test a_constant_neural_material_draws_on_the_webgpu_baseline ... ok
+test a_constant_neural_material_draws_like_the_inline_one ... ok
+test the_level_of_detail_selects_and_blends_mips_like_the_reference ... ok
+
+successes:
+
+---- a_grown_latent_table_keeps_the_textures_it_holds stdout ----
+small before: worst difference 1, 0 pixels over 2 ([100, 74, 148])
+large: worst difference 1, 0 pixels over 2 ([98, 85, 114])
+large, mip 0: worst difference 1, 0 pixels over 2 ([106, 64, 204])
+small after: worst difference 1, 0 pixels over 2 ([100, 74, 148])
+
+---- a_neural_material_draws_under_taa_with_splats stdout ----
+TAA with splats: worst difference 22, 6 pixels over 2
+
+---- textures_with_other_channel_sets_share_the_pipelines stdout ----
+second texture: worst difference 1, 0 pixels over 2
+
+---- a_constant_neural_material_draws_on_the_webgpu_baseline stdout ----
+baseline: worst difference 1, 0 pixels over 2
+
+---- a_constant_neural_material_draws_like_the_inline_one stdout ----
+f16 true: worst difference 1, 0 pixels over 2
+f16 false: worst difference 1, 0 pixels over 2
+
+---- the_level_of_detail_selects_and_blends_mips_like_the_reference stdout ----
+f16 true, lod -0.5: worst difference 1, 0 pixels over 2 ([64, 55, 133])
+f16 true, lod 0.2: worst difference 1, 0 pixels over 2 ([64, 55, 133])
+f16 true, lod 0.45: worst difference 1, 0 pixels over 2 ([106, 53, 129])
+f16 true, lod 1.55: worst difference 1, 0 pixels over 2 ([100, 74, 147])
+f16 true, lod 2.8: worst difference 1, 0 pixels over 2 ([195, 85, 147])
+f16 true, lod 3.42: worst difference 1, 0 pixels over 2 ([172, 91, 143])
+f16 true, lod 4.6: worst difference 1, 0 pixels over 2 ([175, 123, 117])
+f16 true, lod 5.5: worst difference 1, 0 pixels over 2 ([116, 144, 148])
+f16 true, lod 6.4: worst difference 1, 0 pixels over 2 ([61, 165, 177])
+f16 false, lod -0.5: worst difference 1, 0 pixels over 2 ([64, 55, 133])
+f16 false, lod 0.2: worst difference 1, 0 pixels over 2 ([64, 55, 133])
+f16 false, lod 0.45: worst difference 1, 0 pixels over 2 ([106, 53, 129])
+f16 false, lod 1.55: worst difference 1, 0 pixels over 2 ([100, 74, 148])
+f16 false, lod 2.8: worst difference 1, 0 pixels over 2 ([195, 85, 147])
+f16 false, lod 3.42: worst difference 1, 0 pixels over 2 ([172, 91, 143])
+f16 false, lod 4.6: worst difference 1, 0 pixels over 2 ([175, 123, 117])
+f16 false, lod 5.5: worst difference 1, 0 pixels over 2 ([116, 144, 148])
+f16 false, lod 6.4: worst difference 1, 0 pixels over 2 ([60, 165, 177])
+
+
+successes:
+    a_constant_neural_material_draws_like_the_inline_one
+    a_constant_neural_material_draws_on_the_webgpu_baseline
+    a_grown_latent_table_keeps_the_textures_it_holds
+    a_loaded_neural_texture_leaves_other_materials_alone
+    a_neural_material_draws_under_taa_with_splats
+    material_names_that_are_not_ascii_do_not_crash_the_renderer
+    textures_with_other_channel_sets_share_the_pipelines
+    the_level_of_detail_selects_and_blends_mips_like_the_reference
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.50s
+
+

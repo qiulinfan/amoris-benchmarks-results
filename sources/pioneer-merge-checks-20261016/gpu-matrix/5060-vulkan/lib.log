@@ -1,0 +1,342 @@
+
+running 137 tests
+test app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges ... ok
+test camera::tests::the_point_ahead_is_inside_and_behind_is_outside ... ok
+test gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces ... ok
+test gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions ... ok
+test gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating ... ok
+test gi::bsdf::tests::fresnel_snell_and_total_internal_reflection ... ok
+test gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature ... ok
+test gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered ... ok
+test gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats ... ok
+test gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility ... ok
+test gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface ... ok
+test gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes ... ok
+test gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding ... ok
+test gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded ... ok
+test gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled ... ok
+test gi::nrc::tests::invalid_config_rejected ... ok
+test gi::nrc::tests::backpropagation_matches_finite_differences ... ok
+test gi::nrc::tests::packed_contract_and_deterministic_initialization ... ok
+test gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha ... ok
+test gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits ... ok
+test gi::pt::tests::pt_gpu_abi_and_limits_are_explicit ... ok
+test gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes ... ok
+test gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator ... ok
+test gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian ... ok
+test gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset ... ok
+test gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization ... ok
+test gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate ... ok
+test gi::sky_radiance::tests::all_faces_match_bake_shader_orientation ... ok
+test gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers ... ok
+test gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once ... ok
+test gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section ... ok
+test gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc ... ok
+test gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields ... ok
+test gpu::dxc::tests::sdk_versions_order_numerically ... ok
+test gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported ... ok
+test gpu::dxc::tests::versions_compare_by_major_minor_build ... ok
+test gi::bsdf::tests::roulette_compensation_preserves_expected_brightness ... ok
+test gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals ... ok
+test gpu::dxc::tests::windows_dll_versions_read ... ok
+test gpu::tests::adapters_match_by_index_or_name ... ok
+test gpu::tests::auto_picks_the_platform_default ... ok
+test gpu::tests::backend_names_parse_in_any_case ... ok
+test gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation ... ok
+test gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker ... ok
+test gpu::tests::direct3d_12_keeps_indirect_validation ... ok
+test lod::tests::modes_parse ... ok
+test loader::tests::neural_texture_paths_are_recognized_in_any_script ... ok
+test lod::tests::a_pixel_at_a_distance ... ok
+test gpu::tests::validation_keeps_labels ... ok
+test gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply ... ok
+test materials::tests::which_rows_are_transparent_and_which_cast ... ok
+test meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere ... ok
+test neural::tests::channel_words_locate_each_group ... ok
+test neural::tests::profile_constants_are_consistent ... ok
+test neural::tests::weights_pack_into_column_major_blocks ... ok
+test gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials ... ok
+test neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals ... ok
+test neural::train::tests::quantization_rounds_ties_to_even_and_clamps ... ok
+test occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not ... ok
+test occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation ... ok
+test occlusion::tests::levels_halve_down_to_one_texel ... ok
+test occlusion::tests::modes_parse ... ok
+test post::tests::defaults_by_adapter ... ok
+test post::tests::render_scales_clamp_or_turn_off ... ok
+test par::tests::a_panic_reaches_the_caller - should panic ... ok
+test prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind ... ok
+test prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost ... ok
+test gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target ... ok
+test prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe ... ok
+test prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides ... ok
+test prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time ... ok
+test prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis ... ok
+test prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls ... ok
+test prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not ... ok
+test par::tests::tasks_return_their_results_in_order ... ok
+test gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates ... ok
+test prepass::tests::probes_back_off_while_the_choice_holds ... ok
+test prepass::tests::modes_without_timings_and_without_instances ... ok
+test prepass::tests::one_and_two_phase_frames_decide_separately ... ok
+test prepass::tests::frames_without_instances_never_decide ... ok
+test prepass::tests::readings_sum_the_opaque_passes_and_the_prepass ... ok
+test prepass::tests::readings_from_before_a_restart_do_not_count ... ok
+test profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values ... ok
+test rt_shadows::tests::transforms_interpolate_like_the_cull_pass ... ok
+test scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes ... ok
+test scene::tests::transparent_slots_follow_rebuild_hide_remove_and_reset ... ok
+test scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots ... ok
+test par::tests::nested_tasks_finish ... ok
+test shadows::tests::hull_drops_inner_and_collinear_points ... ok
+test shadows::tests::modes_parse ... ok
+test splat::cloud::tests::halves_round_trip ... ok
+test splat::cloud::tests::quaternions_round_trip ... ok
+test splat::loader::tests::ply_round_trips ... ok
+test splat::loader::tests::rejects_other_plys ... ok
+test splat::loader::tests::splat_format_decodes ... ok
+test scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say ... ok
+test splat::sort::tests::the_tile_matches_the_shaders ... ok
+test shadows::tests::the_slice_culls_inside_the_box ... ok
+test rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup ... ok
+test shaders::tests::forward_clip_positions_are_invariant_in_every_backend ... ok
+test shadows::tests::every_caster_a_receiver_can_read_is_kept ... ok
+test gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral ... ok
+test scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark ... ok
+test scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does ... ok
+test prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution ... ok
+test neural::tests::neural_shaders_validate ... ok
+test gpu::tests::indirect_draws_keep_their_first_instance ... ok
+test trace::tests::a_slow_gpu_clock_still_calibrates_when_the_rounds_spread_out ... ok
+test trace::tests::brackets_intersect_to_the_tightest_offset ... ok
+test trace::tests::calibrations_combine_or_drift ... ok
+test trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations ... ok
+test trace::tests::export_places_gpu_passes_with_the_calibration ... ok
+test trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit ... ok
+test gpu::tests::the_adapter_under_test_is_named ... ok
+test trace::tests::overlapping_spans_get_their_own_lanes ... ok
+test trace::tests::specs_parse_and_refuse ... ok
+test transparent::tests::instances_draw_back_to_front_and_neighbours_alike_share_a_draw ... ok
+test transparent::tests::nlerp_matches_the_shader ... ok
+test transparent::tests::the_index_reversal_shader_validates ... ok
+test transparent::tests::two_sided_lists_grow_refill_or_wait_and_never_churn ... ok
+test upload::tests::batches_cover_every_slot_once_in_order ... ok
+test gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history ... ok
+test gi::rt::tests::ray_query_cache_requires_history_and_resets ... ok
+test splat::sort::tests::sorts_like_a_stable_cpu_sort ... ok
+test gi::pt::tests::ray_query_pt_transport_training_and_accumulation ... ok
+test splat::tile::tests::antialias_fades_subpixel_splats ... ok
+test splat::tile::tests::pair_overflow_is_reported ... ok
+test splat::tile::tests::quads_are_the_default_rasterizer ... ok
+test splat::tile::tests::picking_sees_splats ... ok
+test splat::tile::tests::splat_overflow_is_reported ... ok
+test splat::tile::tests::subtile_culling_limits_tests ... ok
+test trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets ... ok
+test splat::tile::tests::growth_respects_binding_limit ... ok
+test splat::tile::tests::tiles_match_quads ... ok
+test upload::tests::written_slots_reach_the_instance_buffer ... ok
+test splat::tile::tests::transient_pair_drops_are_reported ... ok
+test splat::tile::tests::ties_are_stable ... ok
+
+successes:
+
+---- par::tests::a_panic_reaches_the_caller stdout ----
+
+thread '<unnamed>' (<tid>) panicked at crates\pocket-render\src\par.rs:240:30:
+task failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- shadows::tests::the_slice_culls_inside_the_box stdout ----
+share of the box culled by the slice, per cascade: [0.6776406, 0.7066875, 0.7305625, 0.765]
+
+---- scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does stdout ----
+made 200000 in 140.4828ms; a moving tick 11.2773ms, a stopping tick 720.8µs
+
+---- gpu::tests::indirect_draws_keep_their_first_instance stdout ----
+Dx12: not under test (POCKET_BACKEND names Vulkan)
+
+---- gpu::tests::the_adapter_under_test_is_named stdout ----
+adapter under test: Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver NVIDIA 617.14; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+
+---- gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history stdout ----
+Dx12: not under test (POCKET_BACKEND names Vulkan)
+Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU: ray queries
+
+---- gi::rt::tests::ray_query_cache_requires_history_and_resets stdout ----
+Dx12: not under test (POCKET_BACKEND names Vulkan)
+Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU: ray queries
+
+---- gi::pt::tests::ray_query_pt_transport_training_and_accumulation stdout ----
+Dx12: not under test (POCKET_BACKEND names Vulkan)
+Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU: ray queries
+Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU: pt-lab mean radiance [0.2812032876962955, 0.2145465617273127, 0.19874829559627946]
+
+---- splat::tile::tests::antialias_fades_subpixel_splats stdout ----
+image change (quads, quads aa, tiles, tiles aa): [0.15538541666666666, 0.07305208333333334, 0.15548958333333332, 0.07311458333333333]
+
+---- splat::tile::tests::picking_sees_splats stdout ----
+coverage: [(7, 0.11208333), (3, 0.008166667)]
+
+---- splat::tile::tests::splat_overflow_is_reported stdout ----
+the nearest 2048 of 20000 splats differ from all by 1.287
+
+---- splat::tile::tests::subtile_culling_limits_tests stdout ----
+23717 pairs, 1110144 tests: 0.183 of 256 per pair
+
+---- splat::tile::tests::growth_respects_binding_limit stdout ----
+storage binding 2047 MB, buffer 1048576 MB
+SplatStats { assets: 2, stored: 4100000, clouds: 2, submitted: 4100000, skipped: 0, visible: Some(4100000), quad_pixels: Some(148094192), gpu_bytes: 963704704, tile_pairs: Some(7796396), pair_capacity: 17104896, tile_dropped: 0, tile_splats_dropped: 0, tile_drop_frames: 0, tile_visits: None }
+
+---- splat::tile::tests::tiles_match_quads stdout ----
+splats change the image by 7.64; tiles differ from quads by 0.0194, at most Some(1)
+
+---- splat::tile::tests::transient_pair_drops_are_reported stdout ----
+(pairs wanted, capacity, dropped) per frame: [(None, 1048576, 0), (None, 1048576, 0), (Some(2277228), 2846535, 1228652), (Some(2277228), 2846535, 1228652), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0), (Some(2277228), 2846535, 0)]
+
+---- splat::tile::tests::ties_are_stable stdout ----
+Quads: 0 channel values changed over 4 redraws
+Tiles: 0 channel values changed over 4 redraws
+
+
+successes:
+    app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges
+    camera::tests::the_point_ahead_is_inside_and_behind_is_outside
+    gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces
+    gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility
+    gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating
+    gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply
+    gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker
+    gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions
+    gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled
+    gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials
+    gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding
+    gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature
+    gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered
+    gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes
+    gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats
+    gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface
+    gi::bsdf::tests::fresnel_snell_and_total_internal_reflection
+    gi::bsdf::tests::roulette_compensation_preserves_expected_brightness
+    gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded
+    gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral
+    gi::nrc::tests::backpropagation_matches_finite_differences
+    gi::nrc::tests::invalid_config_rejected
+    gi::nrc::tests::packed_contract_and_deterministic_initialization
+    gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha
+    gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits
+    gi::pt::tests::pt_gpu_abi_and_limits_are_explicit
+    gi::pt::tests::ray_query_pt_transport_training_and_accumulation
+    gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes
+    gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator
+    gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian
+    gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset
+    gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target
+    gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates
+    gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals
+    gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization
+    gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate
+    gi::rt::tests::ray_query_cache_requires_history_and_resets
+    gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history
+    gi::sky_radiance::tests::all_faces_match_bake_shader_orientation
+    gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers
+    gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once
+    gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields
+    gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc
+    gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section
+    gpu::dxc::tests::sdk_versions_order_numerically
+    gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported
+    gpu::dxc::tests::versions_compare_by_major_minor_build
+    gpu::dxc::tests::windows_dll_versions_read
+    gpu::tests::adapters_match_by_index_or_name
+    gpu::tests::auto_picks_the_platform_default
+    gpu::tests::backend_names_parse_in_any_case
+    gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation
+    gpu::tests::direct3d_12_keeps_indirect_validation
+    gpu::tests::indirect_draws_keep_their_first_instance
+    gpu::tests::the_adapter_under_test_is_named
+    gpu::tests::validation_keeps_labels
+    loader::tests::neural_texture_paths_are_recognized_in_any_script
+    lod::tests::a_pixel_at_a_distance
+    lod::tests::modes_parse
+    materials::tests::which_rows_are_transparent_and_which_cast
+    meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere
+    neural::tests::channel_words_locate_each_group
+    neural::tests::neural_shaders_validate
+    neural::tests::profile_constants_are_consistent
+    neural::tests::weights_pack_into_column_major_blocks
+    neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals
+    neural::train::tests::quantization_rounds_ties_to_even_and_clamps
+    occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation
+    occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not
+    occlusion::tests::levels_halve_down_to_one_texel
+    occlusion::tests::modes_parse
+    par::tests::a_panic_reaches_the_caller
+    par::tests::nested_tasks_finish
+    par::tests::tasks_return_their_results_in_order
+    post::tests::defaults_by_adapter
+    post::tests::render_scales_clamp_or_turn_off
+    prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides
+    prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe
+    prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind
+    prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls
+    prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost
+    prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time
+    prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis
+    prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not
+    prepass::tests::frames_without_instances_never_decide
+    prepass::tests::modes_without_timings_and_without_instances
+    prepass::tests::one_and_two_phase_frames_decide_separately
+    prepass::tests::probes_back_off_while_the_choice_holds
+    prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution
+    prepass::tests::readings_from_before_a_restart_do_not_count
+    prepass::tests::readings_sum_the_opaque_passes_and_the_prepass
+    profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values
+    rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup
+    rt_shadows::tests::transforms_interpolate_like_the_cull_pass
+    scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does
+    scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark
+    scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say
+    scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes
+    scene::tests::transparent_slots_follow_rebuild_hide_remove_and_reset
+    scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots
+    shaders::tests::forward_clip_positions_are_invariant_in_every_backend
+    shadows::tests::every_caster_a_receiver_can_read_is_kept
+    shadows::tests::hull_drops_inner_and_collinear_points
+    shadows::tests::modes_parse
+    shadows::tests::the_slice_culls_inside_the_box
+    splat::cloud::tests::halves_round_trip
+    splat::cloud::tests::quaternions_round_trip
+    splat::loader::tests::ply_round_trips
+    splat::loader::tests::rejects_other_plys
+    splat::loader::tests::splat_format_decodes
+    splat::sort::tests::sorts_like_a_stable_cpu_sort
+    splat::sort::tests::the_tile_matches_the_shaders
+    splat::tile::tests::antialias_fades_subpixel_splats
+    splat::tile::tests::growth_respects_binding_limit
+    splat::tile::tests::pair_overflow_is_reported
+    splat::tile::tests::picking_sees_splats
+    splat::tile::tests::quads_are_the_default_rasterizer
+    splat::tile::tests::splat_overflow_is_reported
+    splat::tile::tests::subtile_culling_limits_tests
+    splat::tile::tests::ties_are_stable
+    splat::tile::tests::tiles_match_quads
+    splat::tile::tests::transient_pair_drops_are_reported
+    trace::tests::a_slow_gpu_clock_still_calibrates_when_the_rounds_spread_out
+    trace::tests::brackets_intersect_to_the_tightest_offset
+    trace::tests::calibrations_combine_or_drift
+    trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations
+    trace::tests::export_places_gpu_passes_with_the_calibration
+    trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit
+    trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets
+    trace::tests::overlapping_spans_get_their_own_lanes
+    trace::tests::specs_parse_and_refuse
+    transparent::tests::instances_draw_back_to_front_and_neighbours_alike_share_a_draw
+    transparent::tests::nlerp_matches_the_shader
+    transparent::tests::the_index_reversal_shader_validates
+    transparent::tests::two_sided_lists_grow_refill_or_wait_and_never_churn
+    upload::tests::batches_cover_every_slot_once_in_order
+    upload::tests::written_slots_reach_the_instance_buffer
+
+test result: ok. 137 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.87s
+
+

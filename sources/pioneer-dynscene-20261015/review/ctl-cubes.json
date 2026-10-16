@@ -1,0 +1,1440 @@
+{
+ "note": "provisional: measured while other agents built and ran GPU work on the machine",
+ "runs": [
+  {
+   "case": "moving-100k",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "cubes",
+   "seconds": 32.9,
+   "cmd": [
+    "--count",
+    "1600000",
+    "--moving",
+    "100000",
+    "--headless-bench",
+    "60",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0",
+    "--trace",
+    "frames=60,skip=30,out=<local-path>\\out\\dynscene\\traces\\trace-20261014-235058-moving-100k-dx12-default-before-r0.json"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "antialiasing": "msaa",
+    "backend": "Direct3D 12",
+    "bench": "many_cubes sphere",
+    "cpu_encode_ms": {
+     "max": 7.142,
+     "mean": 5.614,
+     "p50": 6.687,
+     "p95": 6.998,
+     "p99": 7.142
+    },
+    "device_ms": 779.2,
+    "driver": "32.0.16.1714 ",
+    "first_frame_ms": 1320.2,
+    "frames": 60,
+    "gpu_ms": {
+     "max": 32.434,
+     "mean": 25.692,
+     "p50": 31.448,
+     "p95": 32.248,
+     "p99": 32.434
+    },
+    "gtao": "depth",
+    "instances": 1600001,
+    "moving": {
+     "apply_ms": {
+      "max": 255.214,
+      "mean": 244.783,
+      "p50": 244.389,
+      "p95": 253.311,
+      "p99": 255.214
+     },
+     "feed_ms": {
+      "max": 3.508,
+      "mean": 3.177,
+      "p50": 3.153,
+      "p95": 3.43,
+      "p99": 3.508
+     },
+     "instances": 100000,
+     "sparse": 1
+    },
+    "occluded_triangle_share": {
+     "max": 0.0,
+     "mean": 0.0,
+     "p50": 0.0,
+     "p95": 0.0,
+     "p99": 0.0
+    },
+    "occlusion_frames": {
+     "auto-off": 60
+    },
+    "occlusion_last": {
+     "early": 187054,
+     "frustum": 187512,
+     "frustum_triangles": 2250144,
+     "late": 458,
+     "occluded": 0,
+     "occluded_triangles": 0
+    },
+    "occlusion_mode": "auto",
+    "passes_ms": {
+     "cull": 10.665,
+     "gtao": 1.626,
+     "lights": 0.0,
+     "opaque+sky": 12.894,
+     "post": 0.516
+    },
+    "prepass_frame_ms": {
+     "auto-off": {
+      "max": 300.213,
+      "mean": 281.096,
+      "p50": 285.009,
+      "p95": 293.599,
+      "p99": 300.213
+     }
+    },
+    "prepass_frames": {
+     "auto-off": 60
+    },
+    "prepass_mode": "auto",
+    "renderer_new_ms": 183.7,
+    "rt_shadows": null,
+    "size": [
+     1280,
+     720
+    ],
+    "splats": 0,
+    "submit_to_idle_ms": {
+     "max": 300.213,
+     "mean": 281.096,
+     "p50": 285.009,
+     "p95": 293.599,
+     "p99": 300.213
+    }
+   },
+   "clocks": {
+    "samples": 300,
+    "graphics_mhz_median": 532.0,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 810.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 239,
+     "graphics_mhz_median": 510,
+     "graphics_mhz_min": 240,
+     "memory_mhz_median": 810,
+     "utilization_median": 0,
+     "pstates": [
+      "P2",
+      "P5",
+      "P8"
+     ]
+    }
+   },
+   "trace": {
+    "cpu": {
+     "update": {
+      "n": 60,
+      "median": 247.4658,
+      "p95": 254.9055,
+      "min": 243.5586,
+      "max": 258.6456,
+      "spread": 0.061
+     },
+     "feed": {
+      "n": 60,
+      "median": 3.1477,
+      "p95": 3.3744,
+      "min": 2.9668,
+      "max": 3.505,
+      "spread": 0.171
+     },
+     "apply": {
+      "n": 60,
+      "median": 244.3705,
+      "p95": 251.5406,
+      "min": 240.279,
+      "max": 255.2132,
+      "spread": 0.0611
+     },
+     "render": {
+      "n": 60,
+      "median": 6.6559,
+      "p95": 6.942,
+      "min": 3.8438,
+      "max": 7.1145,
+      "spread": 0.4914
+     },
+     "assets": {
+      "n": 60,
+      "median": 0.0026,
+      "p95": 0.0031,
+      "min": 0.0021,
+      "max": 0.005,
+      "spread": 1.1154
+     },
+     "scene sync": {
+      "n": 60,
+      "median": 5.8514,
+      "p95": 6.003,
+      "min": 3.0719,
+      "max": 6.0517,
+      "spread": 0.5093
+     },
+     "uniforms": {
+      "n": 60,
+      "median": 0.0508,
+      "p95": 0.0814,
+      "min": 0.0429,
+      "max": 0.1405,
+      "spread": 1.9213
+     },
+     "encode particles, skinning": {
+      "n": 60,
+      "median": 0.0072,
+      "p95": 0.0115,
+      "min": 0.006,
+      "max": 0.0141,
+      "spread": 1.125
+     },
+     "encode cull, lights": {
+      "n": 60,
+      "median": 0.0065,
+      "p95": 0.0097,
+      "min": 0.0056,
+      "max": 0.0112,
+      "spread": 0.8615
+     },
+     "encode shadows": {
+      "n": 60,
+      "median": 0.0001,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0004,
+      "spread": 3.0
+     },
+     "encode splat sort": {
+      "n": 60,
+      "median": 0.0019,
+      "p95": 0.0027,
+      "min": 0.0016,
+      "max": 0.0043,
+      "spread": 1.4211
+     },
+     "encode opaque": {
+      "n": 60,
+      "median": 0.0152,
+      "p95": 0.0228,
+      "min": 0.0137,
+      "max": 0.024,
+      "spread": 0.6776
+     },
+     "encode occlusion, late opaque": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0005,
+      "spread": 2.0
+     },
+     "encode gtao, taa": {
+      "n": 60,
+      "median": 0.0222,
+      "p95": 0.0317,
+      "min": 0.0175,
+      "max": 0.0405,
+      "spread": 1.036
+     },
+     "encode splats": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0007,
+      "min": 0.0002,
+      "max": 0.0009,
+      "spread": 2.3333
+     },
+     "encode post": {
+      "n": 60,
+      "median": 0.0188,
+      "p95": 0.0255,
+      "min": 0.0166,
+      "max": 0.0348,
+      "spread": 0.9681
+     },
+     "encode overlays, ui": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0005,
+      "min": 0.0001,
+      "max": 0.0005,
+      "spread": 1.3333
+     },
+     "submit": {
+      "n": 60,
+      "median": 0.6978,
+      "p95": 0.8083,
+      "min": 0.639,
+      "max": 1.0141,
+      "spread": 0.5375
+     },
+     "wait idle": {
+      "n": 60,
+      "median": 33.11,
+      "p95": 35.933,
+      "min": 17.2817,
+      "max": 40.0512,
+      "spread": 0.6877
+     }
+    },
+    "frame": {
+     "frame interval": {
+      "n": 59,
+      "median": 285.0106,
+      "p95": 291.9138,
+      "min": 266.0917,
+      "max": 300.216,
+      "spread": 0.1197
+     },
+     "CPU frame": {
+      "n": 60,
+      "median": 284.9762,
+      "p95": 291.9113,
+      "min": 266.0891,
+      "max": 300.2104,
+      "spread": 0.1197
+     },
+     "GPU busy": {
+      "n": 60,
+      "median": 31.4435,
+      "p95": 32.208,
+      "min": 16.181,
+      "max": 32.434,
+      "spread": 0.5169
+     },
+     "GPU frame span": {
+      "n": 60,
+      "median": 31.5115,
+      "p95": 32.2735,
+      "min": 16.2208,
+      "max": 32.5015,
+      "spread": 0.5167
+     },
+     "GPU idle before frame": {
+      "n": 59,
+      "median": 255.4176,
+      "p95": 261.771,
+      "min": 249.6007,
+      "max": 268.3034,
+      "spread": 0.0732
+     },
+     "submit to GPU start": {
+      "n": 60,
+      "median": 1.3384,
+      "p95": 5.2473,
+      "min": 0.7263,
+      "max": 7.7329,
+      "spread": 5.2349
+     }
+    }
+   },
+   "round": 0,
+   "build": "before",
+   "headline": {
+    "apply": 244.389,
+    "feed": 3.153,
+    "scene sync": 5.8514,
+    "render cpu": 6.687,
+    "frame": 285.009,
+    "gpu": 31.448
+   }
+  },
+  {
+   "case": "moving-100k",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "cubes",
+   "seconds": 9.2,
+   "cmd": [
+    "--count",
+    "1600000",
+    "--moving",
+    "100000",
+    "--headless-bench",
+    "60",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0",
+    "--trace",
+    "frames=60,skip=30,out=<local-path>\\out\\dynscene\\traces\\trace-20261014-235058-moving-100k-dx12-default-head-r0.json"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "antialiasing": "msaa",
+    "backend": "Direct3D 12",
+    "bench": "many_cubes sphere",
+    "cpu_encode_ms": {
+     "max": 2.235,
+     "mean": 1.9,
+     "p50": 1.873,
+     "p95": 2.152,
+     "p99": 2.235
+    },
+    "device_ms": 892.4,
+    "driver": "32.0.16.1714 ",
+    "first_frame_ms": 896.9,
+    "frames": 60,
+    "gpu_ms": {
+     "max": 2.631,
+     "mean": 2.591,
+     "p50": 2.59,
+     "p95": 2.624,
+     "p99": 2.631
+    },
+    "gtao": "depth",
+    "instances": 1600001,
+    "moving": {
+     "apply_ms": {
+      "max": 6.562,
+      "mean": 5.922,
+      "p50": 5.889,
+      "p95": 6.362,
+      "p99": 6.562
+     },
+     "feed_ms": {
+      "max": 3.532,
+      "mean": 3.135,
+      "p50": 3.145,
+      "p95": 3.444,
+      "p99": 3.532
+     },
+     "instances": 100000,
+     "sparse": 1
+    },
+    "occluded_triangle_share": {
+     "max": 0.0,
+     "mean": 0.0,
+     "p50": 0.0,
+     "p95": 0.0,
+     "p99": 0.0
+    },
+    "occlusion_frames": {
+     "auto-off": 60
+    },
+    "occlusion_last": {
+     "early": 187054,
+     "frustum": 187512,
+     "frustum_triangles": 2250144,
+     "late": 458,
+     "occluded": 0,
+     "occluded_triangles": 0
+    },
+    "occlusion_mode": "auto",
+    "passes_ms": {
+     "cull": 0.386,
+     "gtao": 0.116,
+     "lights": 0.0,
+     "opaque+sky": 2.007,
+     "post": 0.083
+    },
+    "prepass_frame_ms": {
+     "auto-off": {
+      "max": 14.564,
+      "mean": 13.843,
+      "p50": 13.798,
+      "p95": 14.416,
+      "p99": 14.564
+     }
+    },
+    "prepass_frames": {
+     "auto-off": 60
+    },
+    "prepass_mode": "auto",
+    "renderer_new_ms": 175.3,
+    "rt_shadows": null,
+    "size": [
+     1280,
+     720
+    ],
+    "splats": 0,
+    "stall_ms": null,
+    "submit_to_idle_ms": {
+     "max": 14.564,
+     "mean": 13.843,
+     "p50": 13.798,
+     "p95": 14.416,
+     "p99": 14.564
+    }
+   },
+   "clocks": {
+    "samples": 81,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2",
+     "P8"
+    ],
+    "frames": {
+     "samples": 12,
+     "graphics_mhz_median": 1965.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 20.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "trace": {
+    "cpu": {
+     "update": {
+      "n": 60,
+      "median": 9.0124,
+      "p95": 9.5286,
+      "min": 8.61,
+      "max": 9.7601,
+      "spread": 0.1276
+     },
+     "feed": {
+      "n": 60,
+      "median": 3.1324,
+      "p95": 3.4378,
+      "min": 2.7869,
+      "max": 3.5281,
+      "spread": 0.2366
+     },
+     "apply": {
+      "n": 60,
+      "median": 5.8829,
+      "p95": 6.3375,
+      "min": 5.5857,
+      "max": 6.5607,
+      "spread": 0.1657
+     },
+     "render": {
+      "n": 60,
+      "median": 1.8393,
+      "p95": 2.0673,
+      "min": 1.7801,
+      "max": 2.1907,
+      "spread": 0.2232
+     },
+     "assets": {
+      "n": 60,
+      "median": 0.0032,
+      "p95": 0.0042,
+      "min": 0.0023,
+      "max": 0.0054,
+      "spread": 0.9688
+     },
+     "scene sync": {
+      "n": 60,
+      "median": 1.0904,
+      "p95": 1.2101,
+      "min": 1.0441,
+      "max": 1.4253,
+      "spread": 0.3496
+     },
+     "uniforms": {
+      "n": 60,
+      "median": 0.044,
+      "p95": 0.053,
+      "min": 0.0379,
+      "max": 0.0733,
+      "spread": 0.8036
+     },
+     "encode particles, skinning": {
+      "n": 60,
+      "median": 0.0073,
+      "p95": 0.0102,
+      "min": 0.0064,
+      "max": 0.0152,
+      "spread": 1.2055
+     },
+     "encode cull, lights": {
+      "n": 60,
+      "median": 0.0064,
+      "p95": 0.0082,
+      "min": 0.0057,
+      "max": 0.0119,
+      "spread": 0.9688
+     },
+     "encode shadows": {
+      "n": 60,
+      "median": 0.0001,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0004,
+      "spread": 3.0
+     },
+     "encode splat sort": {
+      "n": 60,
+      "median": 0.0018,
+      "p95": 0.0022,
+      "min": 0.0015,
+      "max": 0.0024,
+      "spread": 0.5
+     },
+     "encode opaque": {
+      "n": 60,
+      "median": 0.015,
+      "p95": 0.0189,
+      "min": 0.014,
+      "max": 0.0225,
+      "spread": 0.5648
+     },
+     "encode occlusion, late opaque": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0004,
+      "spread": 1.5
+     },
+     "encode gtao, taa": {
+      "n": 60,
+      "median": 0.0202,
+      "p95": 0.0234,
+      "min": 0.016,
+      "max": 0.1222,
+      "spread": 5.2574
+     },
+     "encode splats": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0004,
+      "min": 0.0002,
+      "max": 0.0005,
+      "spread": 1.0
+     },
+     "encode post": {
+      "n": 60,
+      "median": 0.0177,
+      "p95": 0.025,
+      "min": 0.0165,
+      "max": 0.0281,
+      "spread": 0.6554
+     },
+     "encode overlays, ui": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0004,
+      "spread": 1.5
+     },
+     "submit": {
+      "n": 60,
+      "median": 0.6307,
+      "p95": 0.6725,
+      "min": 0.5872,
+      "max": 0.7954,
+      "spread": 0.3301
+     },
+     "wait idle": {
+      "n": 60,
+      "median": 2.8819,
+      "p95": 2.9374,
+      "min": 2.8146,
+      "max": 2.9697,
+      "spread": 0.0538
+     }
+    },
+    "frame": {
+     "frame interval": {
+      "n": 59,
+      "median": 13.7849,
+      "p95": 14.4135,
+      "min": 13.3528,
+      "max": 14.5657,
+      "spread": 0.088
+     },
+     "CPU frame": {
+      "n": 60,
+      "median": 13.7908,
+      "p95": 14.4109,
+      "min": 13.3487,
+      "max": 14.5637,
+      "spread": 0.0881
+     },
+     "GPU busy": {
+      "n": 60,
+      "median": 2.589,
+      "p95": 2.612,
+      "min": 2.576,
+      "max": 2.631,
+      "spread": 0.0212
+     },
+     "GPU frame span": {
+      "n": 60,
+      "median": 2.6083,
+      "p95": 2.6307,
+      "min": 2.5928,
+      "max": 2.6524,
+      "spread": 0.0229
+     },
+     "GPU idle before frame": {
+      "n": 59,
+      "median": 11.2004,
+      "p95": 11.7373,
+      "min": 10.73,
+      "max": 11.9348,
+      "spread": 0.1076
+     },
+     "submit to GPU start": {
+      "n": 60,
+      "median": 0.0875,
+      "p95": 0.1028,
+      "min": 0.0507,
+      "max": 0.1137,
+      "spread": 0.7204
+     }
+    }
+   },
+   "round": 0,
+   "build": "head",
+   "headline": {
+    "apply": 5.889,
+    "feed": 3.145,
+    "scene sync": 1.0904,
+    "render cpu": 1.873,
+    "frame": 13.798,
+    "gpu": 2.59
+   }
+  },
+  {
+   "case": "moving-100k",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "cubes",
+   "seconds": 34.0,
+   "cmd": [
+    "--count",
+    "1600000",
+    "--moving",
+    "100000",
+    "--headless-bench",
+    "60",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0",
+    "--trace",
+    "frames=60,skip=30,out=<local-path>\\out\\dynscene\\traces\\trace-20261014-235058-moving-100k-vulkan-default-before-r0.json"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "antialiasing": "msaa",
+    "backend": "Vulkan",
+    "bench": "many_cubes sphere",
+    "cpu_encode_ms": {
+     "max": 6.869,
+     "mean": 5.347,
+     "p50": 6.38,
+     "p95": 6.755,
+     "p99": 6.869
+    },
+    "device_ms": 1887.8,
+    "driver": "NVIDIA 617.14",
+    "first_frame_ms": 1279.6,
+    "frames": 60,
+    "gpu_ms": {
+     "max": 32.771,
+     "mean": 25.55,
+     "p50": 32.057,
+     "p95": 32.733,
+     "p99": 32.771
+    },
+    "gtao": "depth",
+    "instances": 1600001,
+    "moving": {
+     "apply_ms": {
+      "max": 296.073,
+      "mean": 252.28,
+      "p50": 250.608,
+      "p95": 259.816,
+      "p99": 296.073
+     },
+     "feed_ms": {
+      "max": 5.434,
+      "mean": 3.376,
+      "p50": 3.199,
+      "p95": 5.326,
+      "p99": 5.434
+     },
+     "instances": 100000,
+     "sparse": 1
+    },
+    "occluded_triangle_share": {
+     "max": 0.0,
+     "mean": 0.0,
+     "p50": 0.0,
+     "p95": 0.0,
+     "p99": 0.0
+    },
+    "occlusion_frames": {
+     "auto-off": 60
+    },
+    "occlusion_last": {
+     "early": 187054,
+     "frustum": 187512,
+     "frustum_triangles": 2250144,
+     "late": 458,
+     "occluded": 0,
+     "occluded_triangles": 0
+    },
+    "occlusion_mode": "auto",
+    "passes_ms": {
+     "cull": 10.651,
+     "gtao": 1.343,
+     "lights": 0.015,
+     "opaque+sky": 13.282,
+     "post": 0.263
+    },
+    "prepass_frame_ms": {
+     "auto-off": {
+      "max": 342.267,
+      "mean": 288.501,
+      "p50": 292.982,
+      "p95": 304.109,
+      "p99": 342.267
+     }
+    },
+    "prepass_frames": {
+     "auto-off": 60
+    },
+    "prepass_mode": "auto",
+    "renderer_new_ms": 69.3,
+    "rt_shadows": null,
+    "size": [
+     1280,
+     720
+    ],
+    "splats": 0,
+    "submit_to_idle_ms": {
+     "max": 342.267,
+     "mean": 288.501,
+     "p50": 292.982,
+     "p95": 304.109,
+     "p99": 342.267
+    }
+   },
+   "clocks": {
+    "samples": 306,
+    "graphics_mhz_median": 532.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 810.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 239,
+     "graphics_mhz_median": 382,
+     "graphics_mhz_min": 172,
+     "memory_mhz_median": 405,
+     "utilization_median": 0,
+     "pstates": [
+      "P2",
+      "P5",
+      "P8"
+     ]
+    }
+   },
+   "trace": {
+    "cpu": {
+     "update": {
+      "n": 60,
+      "median": 254.0078,
+      "p95": 263.3627,
+      "min": 246.1594,
+      "max": 301.423,
+      "spread": 0.2176
+     },
+     "feed": {
+      "n": 60,
+      "median": 3.1902,
+      "p95": 5.2005,
+      "min": 2.8527,
+      "max": 5.4313,
+      "spread": 0.8083
+     },
+     "apply": {
+      "n": 60,
+      "median": 250.5843,
+      "p95": 259.1328,
+      "min": 242.7665,
+      "max": 296.0725,
+      "spread": 0.2127
+     },
+     "render": {
+      "n": 60,
+      "median": 6.3565,
+      "p95": 6.7093,
+      "min": 3.5581,
+      "max": 6.8473,
+      "spread": 0.5175
+     },
+     "assets": {
+      "n": 60,
+      "median": 0.0027,
+      "p95": 0.0035,
+      "min": 0.0023,
+      "max": 0.0052,
+      "spread": 1.0741
+     },
+     "scene sync": {
+      "n": 60,
+      "median": 5.7014,
+      "p95": 5.8595,
+      "min": 2.9257,
+      "max": 5.8843,
+      "spread": 0.5189
+     },
+     "uniforms": {
+      "n": 60,
+      "median": 0.0249,
+      "p95": 0.0366,
+      "min": 0.0184,
+      "max": 0.0398,
+      "spread": 0.8577
+     },
+     "encode particles, skinning": {
+      "n": 60,
+      "median": 0.0083,
+      "p95": 0.013,
+      "min": 0.0066,
+      "max": 0.0178,
+      "spread": 1.3576
+     },
+     "encode cull, lights": {
+      "n": 60,
+      "median": 0.0072,
+      "p95": 0.01,
+      "min": 0.0058,
+      "max": 0.0124,
+      "spread": 0.9231
+     },
+     "encode shadows": {
+      "n": 60,
+      "median": 0.0001,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0005,
+      "spread": 4.0
+     },
+     "encode splat sort": {
+      "n": 60,
+      "median": 0.0018,
+      "p95": 0.0028,
+      "min": 0.0014,
+      "max": 0.0039,
+      "spread": 1.3889
+     },
+     "encode opaque": {
+      "n": 60,
+      "median": 0.0162,
+      "p95": 0.0254,
+      "min": 0.0138,
+      "max": 0.0298,
+      "spread": 0.9877
+     },
+     "encode occlusion, late opaque": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0005,
+      "min": 0.0001,
+      "max": 0.0007,
+      "spread": 3.0
+     },
+     "encode gtao, taa": {
+      "n": 60,
+      "median": 0.0142,
+      "p95": 0.0193,
+      "min": 0.0116,
+      "max": 0.0257,
+      "spread": 0.993
+     },
+     "encode splats": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0005,
+      "min": 0.0002,
+      "max": 0.0008,
+      "spread": 2.0
+     },
+     "encode post": {
+      "n": 60,
+      "median": 0.0208,
+      "p95": 0.0292,
+      "min": 0.0179,
+      "max": 0.0471,
+      "spread": 1.4038
+     },
+     "encode overlays, ui": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0007,
+      "min": 0.0001,
+      "max": 0.0015,
+      "spread": 4.6667
+     },
+     "submit": {
+      "n": 60,
+      "median": 0.6119,
+      "p95": 0.8974,
+      "min": 0.5073,
+      "max": 1.0314,
+      "spread": 0.8566
+     },
+     "wait idle": {
+      "n": 60,
+      "median": 33.6535,
+      "p95": 34.3455,
+      "min": 17.3705,
+      "max": 40.1381,
+      "spread": 0.6765
+     }
+    },
+    "frame": {
+     "frame interval": {
+      "n": 59,
+      "median": 292.6095,
+      "p95": 302.5971,
+      "min": 268.4571,
+      "max": 306.7742,
+      "spread": 0.1309
+     },
+     "CPU frame": {
+      "n": 60,
+      "median": 292.7948,
+      "p95": 303.6734,
+      "min": 268.4541,
+      "max": 342.2669,
+      "spread": 0.2521
+     },
+     "GPU busy": {
+      "n": 60,
+      "median": 32.0535,
+      "p95": 32.592,
+      "min": 16.252,
+      "max": 32.741,
+      "spread": 0.5144
+     },
+     "GPU frame span": {
+      "n": 60,
+      "median": 32.1715,
+      "p95": 32.7165,
+      "min": 16.367,
+      "max": 32.8543,
+      "spread": 0.5125
+     },
+     "GPU idle before frame": {
+      "n": 59,
+      "median": 261.4753,
+      "p95": 271.5173,
+      "min": 251.5748,
+      "max": 309.6888,
+      "spread": 0.2223
+     },
+     "submit to GPU start": {
+      "n": 60,
+      "median": 0.9907,
+      "p95": 5.9796,
+      "min": 0.6134,
+      "max": 7.8449,
+      "spread": 7.2992
+     }
+    }
+   },
+   "round": 0,
+   "build": "before",
+   "headline": {
+    "apply": 250.608,
+    "feed": 3.199,
+    "scene sync": 5.7014,
+    "render cpu": 6.38,
+    "frame": 292.982,
+    "gpu": 32.057
+   }
+  },
+  {
+   "case": "moving-100k",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "cubes",
+   "seconds": 8.9,
+   "cmd": [
+    "--count",
+    "1600000",
+    "--moving",
+    "100000",
+    "--headless-bench",
+    "60",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0",
+    "--trace",
+    "frames=60,skip=30,out=<local-path>\\out\\dynscene\\traces\\trace-20261014-235058-moving-100k-vulkan-default-head-r0.json"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "antialiasing": "msaa",
+    "backend": "Vulkan",
+    "bench": "many_cubes sphere",
+    "cpu_encode_ms": {
+     "max": 1.65,
+     "mean": 1.46,
+     "p50": 1.441,
+     "p95": 1.568,
+     "p99": 1.65
+    },
+    "device_ms": 521.5,
+    "driver": "NVIDIA 617.14",
+    "first_frame_ms": 1083.2,
+    "frames": 60,
+    "gpu_ms": {
+     "max": 2.903,
+     "mean": 2.809,
+     "p50": 2.816,
+     "p95": 2.882,
+     "p99": 2.903
+    },
+    "gtao": "depth",
+    "instances": 1600001,
+    "moving": {
+     "apply_ms": {
+      "max": 6.827,
+      "mean": 6.037,
+      "p50": 6.012,
+      "p95": 6.485,
+      "p99": 6.827
+     },
+     "feed_ms": {
+      "max": 3.405,
+      "mean": 3.102,
+      "p50": 3.098,
+      "p95": 3.391,
+      "p99": 3.405
+     },
+     "instances": 100000,
+     "sparse": 1
+    },
+    "occluded_triangle_share": {
+     "max": 0.0,
+     "mean": 0.0,
+     "p50": 0.0,
+     "p95": 0.0,
+     "p99": 0.0
+    },
+    "occlusion_frames": {
+     "auto-off": 60
+    },
+    "occlusion_last": {
+     "early": 187054,
+     "frustum": 187512,
+     "frustum_triangles": 2250144,
+     "late": 458,
+     "occluded": 0,
+     "occluded_triangles": 0
+    },
+    "occlusion_mode": "auto",
+    "passes_ms": {
+     "cull": 0.452,
+     "gtao": 0.121,
+     "lights": 0.003,
+     "opaque+sky": 2.148,
+     "post": 0.086
+    },
+    "prepass_frame_ms": {
+     "auto-off": {
+      "max": 14.596,
+      "mean": 13.748,
+      "p50": 13.717,
+      "p95": 14.4,
+      "p99": 14.596
+     }
+    },
+    "prepass_frames": {
+     "auto-off": 60
+    },
+    "prepass_mode": "auto",
+    "renderer_new_ms": 138.0,
+    "rt_shadows": null,
+    "size": [
+     1280,
+     720
+    ],
+    "splats": 0,
+    "stall_ms": null,
+    "submit_to_idle_ms": {
+     "max": 14.596,
+     "mean": 13.748,
+     "p50": 13.717,
+     "p95": 14.4,
+     "p99": 14.596
+    }
+   },
+   "clocks": {
+    "samples": 81,
+    "graphics_mhz_median": 930,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 810,
+    "utilization_median": 0,
+    "pstates": [
+     "P2",
+     "P4",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 11,
+     "graphics_mhz_median": 1132,
+     "graphics_mhz_min": 930,
+     "memory_mhz_median": 9001,
+     "utilization_median": 52,
+     "pstates": [
+      "P2",
+      "P4",
+      "P8"
+     ]
+    }
+   },
+   "trace": {
+    "cpu": {
+     "update": {
+      "n": 60,
+      "median": 9.1017,
+      "p95": 9.5895,
+      "min": 8.6383,
+      "max": 9.9878,
+      "spread": 0.1483
+     },
+     "feed": {
+      "n": 60,
+      "median": 3.0937,
+      "p95": 3.3587,
+      "min": 2.792,
+      "max": 3.4012,
+      "spread": 0.1969
+     },
+     "apply": {
+      "n": 60,
+      "median": 6.0107,
+      "p95": 6.4366,
+      "min": 5.576,
+      "max": 6.8264,
+      "spread": 0.208
+     },
+     "render": {
+      "n": 60,
+      "median": 1.4226,
+      "p95": 1.521,
+      "min": 1.3752,
+      "max": 1.6222,
+      "spread": 0.1736
+     },
+     "assets": {
+      "n": 60,
+      "median": 0.0027,
+      "p95": 0.0038,
+      "min": 0.002,
+      "max": 0.0055,
+      "spread": 1.2963
+     },
+     "scene sync": {
+      "n": 60,
+      "median": 0.9335,
+      "p95": 0.9722,
+      "min": 0.9174,
+      "max": 1.0567,
+      "spread": 0.1492
+     },
+     "uniforms": {
+      "n": 60,
+      "median": 0.0216,
+      "p95": 0.0295,
+      "min": 0.0165,
+      "max": 0.0324,
+      "spread": 0.7361
+     },
+     "encode particles, skinning": {
+      "n": 60,
+      "median": 0.0072,
+      "p95": 0.0117,
+      "min": 0.0057,
+      "max": 0.0135,
+      "spread": 1.0759
+     },
+     "encode cull, lights": {
+      "n": 60,
+      "median": 0.0072,
+      "p95": 0.0113,
+      "min": 0.0056,
+      "max": 0.0152,
+      "spread": 1.3333
+     },
+     "encode shadows": {
+      "n": 60,
+      "median": 0.0001,
+      "p95": 0.0003,
+      "min": 0.0,
+      "max": 0.0004,
+      "spread": 4.0
+     },
+     "encode splat sort": {
+      "n": 60,
+      "median": 0.0017,
+      "p95": 0.0028,
+      "min": 0.0013,
+      "max": 0.0033,
+      "spread": 1.1765
+     },
+     "encode opaque": {
+      "n": 60,
+      "median": 0.0143,
+      "p95": 0.0208,
+      "min": 0.0125,
+      "max": 0.0218,
+      "spread": 0.6481
+     },
+     "encode occlusion, late opaque": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0005,
+      "spread": 2.0
+     },
+     "encode gtao, taa": {
+      "n": 60,
+      "median": 0.0118,
+      "p95": 0.0181,
+      "min": 0.0097,
+      "max": 0.0191,
+      "spread": 0.7966
+     },
+     "encode splats": {
+      "n": 60,
+      "median": 0.0003,
+      "p95": 0.0004,
+      "min": 0.0,
+      "max": 0.0006,
+      "spread": 2.0
+     },
+     "encode post": {
+      "n": 60,
+      "median": 0.0154,
+      "p95": 0.0218,
+      "min": 0.0132,
+      "max": 0.035,
+      "spread": 1.4156
+     },
+     "encode overlays, ui": {
+      "n": 60,
+      "median": 0.0002,
+      "p95": 0.0003,
+      "min": 0.0001,
+      "max": 0.0005,
+      "spread": 2.0
+     },
+     "submit": {
+      "n": 60,
+      "median": 0.3996,
+      "p95": 0.4725,
+      "min": 0.3629,
+      "max": 0.5055,
+      "spread": 0.3568
+     },
+     "wait idle": {
+      "n": 60,
+      "median": 3.1501,
+      "p95": 3.2494,
+      "min": 3.0151,
+      "max": 3.3361,
+      "spread": 0.1019
+     }
+    },
+    "frame": {
+     "frame interval": {
+      "n": 59,
+      "median": 13.6925,
+      "p95": 14.1997,
+      "min": 13.1882,
+      "max": 14.5973,
+      "spread": 0.1029
+     },
+     "CPU frame": {
+      "n": 60,
+      "median": 13.7031,
+      "p95": 14.1983,
+      "min": 13.187,
+      "max": 14.5956,
+      "spread": 0.1028
+     },
+     "GPU busy": {
+      "n": 60,
+      "median": 2.8165,
+      "p95": 2.876,
+      "min": 2.679,
+      "max": 2.903,
+      "spread": 0.0795
+     },
+     "GPU frame span": {
+      "n": 60,
+      "median": 2.86,
+      "p95": 2.9218,
+      "min": 2.7239,
+      "max": 2.9483,
+      "spread": 0.0784
+     },
+     "GPU idle before frame": {
+      "n": 59,
+      "median": 10.8421,
+      "p95": 11.5318,
+      "min": 10.2973,
+      "max": 11.8084,
+      "spread": 0.1394
+     },
+     "submit to GPU start": {
+      "n": 60,
+      "median": 0.1314,
+      "p95": 0.1492,
+      "min": 0.1052,
+      "max": 0.1529,
+      "spread": 0.3625
+     }
+    }
+   },
+   "round": 0,
+   "build": "head",
+   "headline": {
+    "apply": 6.012,
+    "feed": 3.098,
+    "scene sync": 0.9335,
+    "render cpu": 1.441,
+    "frame": 13.717,
+    "gpu": 2.816
+   }
+  }
+ ]
+}

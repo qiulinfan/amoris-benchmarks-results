@@ -1,0 +1,22 @@
+mutation jitter-sign: [('crates/pocket-render/src/taa.rs', '            jitter: [\n                jitter.pixels.x,\n                jitter.pixels.y,', '            jitter: [\n                -jitter.pixels.x,\n                -jitter.pixels.y,')]
+exit 101
+
+running 1 test
+test upscaling_converges_on_a_still_scene ... FAILED
+
+failures:
+
+failures:
+    upscaling_converges_on_a_still_scene
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 3.33s
+
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.36s
+     Running tests\taa.rs (target\release\deps\taa-38c1e73fef474ddb.exe)
+scale 0.5: first frame 25.0 dB, frame 64 26.1 dB (scale 1: 40.8)
+scale 0.67: first frame 25.3 dB, frame 64 27.9 dB (scale 1: 40.8)
+
+thread 'upscaling_converges_on_a_still_scene' (<tid>) panicked at crates\pocket-render\tests\taa.rs:1166:9:
+scale 0.5: frame 64 at 26.1 dB, its first frame 25.0 dB
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `-p pocket-render --test taa`

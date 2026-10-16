@@ -1,0 +1,209 @@
+{
+ "started": "2026-10-15 22:59:11",
+ "profile": "release",
+ "commit": "d2964692c3cc-dirty",
+ "built": {
+  "draw_paths": "2026-10-15 22:58:52",
+  "forward_variants": "2026-10-15 22:58:43",
+  "frame_trace": "2026-10-15 22:58:42",
+  "gpu_profiler": "2026-10-15 22:58:48",
+  "hiz": "2026-10-15 22:58:49",
+  "lib": "2026-10-15 22:58:32",
+  "lod": "2026-10-15 22:59:00",
+  "neural": "2026-10-15 22:58:40",
+  "neural_material": "2026-10-15 22:58:45",
+  "neural_mlp": "2026-10-15 22:58:32",
+  "occlusion": "2026-10-15 22:58:36",
+  "prepass": "2026-10-15 22:58:55",
+  "rt_shadows": "2026-10-15 22:58:41",
+  "scene_changes": "2026-10-15 22:58:37",
+  "shadow_cull": "2026-10-15 22:58:48",
+  "skinned_bounds": "2026-10-15 22:58:25",
+  "taa": "2026-10-15 22:58:55",
+  "transparency": "2026-10-15 22:58:44"
+ },
+ "environment": {},
+ "configs": {
+  "5060-dx12": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "5060"
+   },
+   "adapter": "Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "transparency": {
+     "exit": 0,
+     "seconds": 2.7,
+     "tests": 2
+    },
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.4,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "transparency overlapping_blended_quads_compose_back_to_front_in_any_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "transparency transparent_instances_never_occlude_and_are_picked": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "5060-vulkan": {
+   "env": {
+    "POCKET_BACKEND": "vulkan",
+    "POCKET_ADAPTER": "5060"
+   },
+   "adapter": "Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver NVIDIA 617.14; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "transparency": {
+     "exit": 0,
+     "seconds": 1.0,
+     "tests": 2
+    },
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 1.0,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "transparency overlapping_blended_quads_compose_back_to_front_in_any_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "transparency transparent_instances_never_occlude_and_are_picked": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "780m-dx12": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "780m"
+   },
+   "adapter": "Direct3D 12 on AMD Radeon 780M Graphics (IntegratedGpu), driver 32.0.13062.3005 ; timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "transparency": {
+     "exit": 0,
+     "seconds": 3.3,
+     "tests": 2
+    },
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.9,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "transparency overlapping_blended_quads_compose_back_to_front_in_any_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "transparency transparent_instances_never_occlude_and_are_picked": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "780m-vulkan": {
+   "env": {
+    "POCKET_BACKEND": "vulkan",
+    "POCKET_ADAPTER": "780m"
+   },
+   "adapter": "Vulkan on AMD Radeon 780M Graphics (IntegratedGpu), driver AMD proprietary driver 24.30.62.03 (LLPC); timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "transparency": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 2
+    },
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "transparency overlapping_blended_quads_compose_back_to_front_in_any_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "transparency transparent_instances_never_occlude_and_are_picked": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "5060-dx12-minimal": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "5060",
+    "POCKET_GPU_MINIMAL": "features,limits,timestamps"
+   },
+   "adapter": "Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: false, multi_draw_indirect: true, timestamps: false, shader_f16: false, float32_filterable: false, ray_query: false }",
+   "binaries": {
+    "transparency": {
+     "exit": 0,
+     "seconds": 2.5,
+     "tests": 2
+    },
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.3,
+     "tests": 1
+    }
+   },
+   "tests": {
+    "transparency overlapping_blended_quads_compose_back_to_front_in_any_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "transparency transparent_instances_never_occlude_and_are_picked": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,12 @@
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":1.2,"mean":0.8},"feed_ms":{"n":40,"median":13.2,"p95":28.1,"min":3.6,"max":28.8,"mean":15.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":1,"p95":1.3,"min":0.7,"max":1.4,"mean":1.1},"feed_ms":{"n":40,"median":12.4,"p95":26.5,"min":2.3,"max":27.7,"mean":14}}}
+351 |       const p = window.pocket;
+352 |       if (!p) return { pocket: false, title: document.title };
+353 |       const c = p.connection.getState();
+354 |       return { info: c.info, viewport: c.viewport, engine: !!window.pocketEditorViewport?.engine, entities: p.world.getState().order.length };
+355 |     `);
+356 |     throw new Error(`the editor did not connect with the wasm viewport: ${JSON.stringify(state)}`);
+                    ^
+error: the editor did not connect with the wasm viewport: {"info":{"state":"open","retryAt":null,"attempts":0,"lastError":null},"viewport":null,"engine":false,"entities":9}
+      at <local-path>\.claude\worktrees\gizmo\editor\tools\gizmo-drag.ts:356:15
+
+Bun v1.4.2 (Windows x64)

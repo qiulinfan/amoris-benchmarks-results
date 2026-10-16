@@ -1,0 +1,36 @@
+2026-10-15 02:36:14 start: AC True, CPU 5.3%, RTX 62 C 0/3090 MHz 10.78 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "moving-10k", "backend": "dx12", "adapter": null, "build": "a", "seconds": 9.4, "headline": {"apply": 2.898, "feed": 0.428, "scene sync": 0.2024, "render cpu": 1.029, "frame": 7.065, "gpu": 2.5}, "error": null}
+{"case": "moving-10k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 9.3, "headline": {"apply": 2.592, "feed": 0.407, "scene sync": 0.1787, "render cpu": 0.853, "frame": 6.62, "gpu": 2.532}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": null, "build": "a", "seconds": 8.5, "headline": {"apply": 2.32, "feed": 0.42, "scene sync": 0.1208, "render cpu": 0.539, "frame": 6.172, "gpu": 2.586}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.4, "headline": {"apply": 2.464, "feed": 0.389, "scene sync": 0.1218, "render cpu": 0.566, "frame": 6.408, "gpu": 2.616}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "a", "seconds": 11.3, "headline": {"apply": 22.144, "feed": 3.357, "scene sync": 0.9866, "render cpu": 1.841, "frame": 30.271, "gpu": 2.586}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 11.3, "headline": {"apply": 22.556, "feed": 3.385, "scene sync": 0.9839, "render cpu": 1.89, "frame": 30.672, "gpu": 2.519}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "a", "seconds": 10.7, "headline": {"apply": 21.936, "feed": 3.389, "scene sync": 0.9291, "render cpu": 1.514, "frame": 29.946, "gpu": 2.715}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 11.1, "headline": {"apply": 22.502, "feed": 3.319, "scene sync": 0.9353, "render cpu": 1.592, "frame": 31.192, "gpu": 2.826}, "error": null}
+{"case": "sparse-10k", "backend": "dx12", "adapter": null, "build": "a", "seconds": 29.2, "headline": {"apply": 3.122, "feed": 0.325, "scene sync": 150.478, "render cpu": 151.584, "frame": 236.088, "gpu": 2.755}, "error": null}
+{"case": "sparse-10k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 9.3, "headline": {"apply": 3.334, "feed": 0.408, "scene sync": 0.5291, "render cpu": 1.255, "frame": 7.838, "gpu": 2.515}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": null, "build": "a", "seconds": 11.4, "headline": {"apply": 3.428, "feed": 0.355, "scene sync": 15.728, "render cpu": 16.713, "frame": 38.541, "gpu": 2.757}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 8.7, "headline": {"apply": 3.401, "feed": 0.395, "scene sync": 0.473, "render cpu": 0.966, "frame": 7.742, "gpu": 2.751}, "error": null}
+{"case": "sparse-100k", "backend": "dx12", "adapter": null, "build": "a", "seconds": 212.4, "headline": {"apply": 28.5, "feed": 3.101, "scene sync": 1165.6593, "render cpu": 1168.491, "frame": 2269.674, "gpu": 14.525}, "error": null}
+{"case": "sparse-100k", "backend": "dx12", "adapter": null, "build": "c", "seconds": 12.2, "headline": {"apply": 27.932, "feed": 3.371, "scene sync": 4.1893, "render cpu": 5.095, "frame": 39.224, "gpu": 2.713}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": null, "build": "a", "seconds": 47.4, "headline": {"apply": 27.052, "feed": 3.048, "scene sync": 154.601, "render cpu": 158.462, "frame": 441.634, "gpu": 14.437}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": null, "build": "c", "seconds": 11.5, "headline": {"apply": 28.23, "feed": 3.342, "scene sync": 4.1094, "render cpu": 4.723, "frame": 39.989, "gpu": 2.873}, "error": null}
+2026-10-15 02:43:28 end: AC True, CPU 6.8%, RTX 64 C 0/3090 MHz 10.99 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-10k | dx12 | - | a | 2.898 | 0.202 | 1.029 | 7.065 | 2.500 | 2081.0 |
+| moving-10k | dx12 | - | c | 2.592 | 0.179 | 0.853 | 6.620 | 2.532 | 1680 |
+| moving-10k | vulkan | - | a | 2.320 | 0.121 | 0.539 | 6.172 | 2.586 | 1380 |
+| moving-10k | vulkan | - | c | 2.464 | 0.122 | 0.566 | 6.408 | 2.616 | 180 |
+| moving-100k | dx12 | - | a | 22.144 | 0.987 | 1.841 | 30.271 | 2.586 | 1807 |
+| moving-100k | dx12 | - | c | 22.556 | 0.984 | 1.890 | 30.672 | 2.519 | 1807.0 |
+| moving-100k | vulkan | - | a | 21.936 | 0.929 | 1.514 | 29.946 | 2.715 | 532 |
+| moving-100k | vulkan | - | c | 22.502 | 0.935 | 1.592 | 31.192 | 2.826 | 660 |
+| sparse-10k | dx12 | - | a | 3.122 | 150.478 | 151.584 | 236.088 | 2.755 | 315 |
+| sparse-10k | dx12 | - | c | 3.334 | 0.529 | 1.255 | 7.838 | 2.515 | 2085.0 |
+| sparse-10k | vulkan | - | a | 3.428 | 15.728 | 16.713 | 38.541 | 2.757 | 802.0 |
+| sparse-10k | vulkan | - | c | 3.401 | 0.473 | 0.966 | 7.742 | 2.751 | 1762.0 |
+| sparse-100k | dx12 | - | a | 28.500 | 1165.659 | 1168.491 | 2269.674 | 14.525 | 180 |
+| sparse-100k | dx12 | - | c | 27.932 | 4.189 | 5.095 | 39.224 | 2.713 | 1785.0 |
+| sparse-100k | vulkan | - | a | 27.052 | 154.601 | 158.462 | 441.634 | 14.437 | 630 |
+| sparse-100k | vulkan | - | c | 28.230 | 4.109 | 4.723 | 39.989 | 2.873 | 442 |

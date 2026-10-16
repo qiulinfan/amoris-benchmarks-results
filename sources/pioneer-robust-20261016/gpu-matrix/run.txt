@@ -1,0 +1,26 @@
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for serveloop ...
+[bench_lock] waiting for serveloop ...
+[bench_lock] waiting for serveloop ...
+[bench_lock] waiting for serveloop ...
+[bench_lock] waiting for serveloop ...
+5060-dx12 lib: exit 0 in 14s; 131 pass
+5060-dx12 frame_trace: exit 0 in 2s; 2 pass
+5060-dx12 gpu_profiler: exit 0 in 2s; 1 pass
+5060-vulkan lib: exit 0 in 4s; 131 pass
+5060-vulkan frame_trace: exit 0 in 1s; 2 pass
+5060-vulkan gpu_profiler: exit 0 in 0s; 1 pass
+780m-dx12 lib: exit 0 in 15s; 131 pass
+780m-dx12 frame_trace: exit 0 in 2s; 2 pass
+780m-dx12 gpu_profiler: exit 0 in 2s; 1 pass
+780m-vulkan lib: exit 0 in 14s; 131 pass
+780m-vulkan frame_trace: exit 0 in 2s; 2 pass
+780m-vulkan gpu_profiler: exit 0 in 1s; 1 pass
+
+test    5060-dx12   5060-vulkan  780m-dx12   780m-vulkan
+
+5060-dx12: 134 pass; Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+5060-vulkan: 134 pass; Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver NVIDIA 617.14; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+780m-dx12: 134 pass; Direct3D 12 on AMD Radeon 780M Graphics (IntegratedGpu), driver 32.0.13062.3005 ; timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+780m-vulkan: 134 pass; Vulkan on AMD Radeon 780M Graphics (IntegratedGpu), driver AMD proprietary driver 24.30.62.03 (LLPC); timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }

@@ -1,0 +1,215 @@
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet fork-r1 -- fork <local-path>\out\lookahead\quiet\fork-r1.json
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-fork-r1.json --label fork-r1
+2026-10-16 01:50:30 fork-r1: AC True, CPU 7.2%, RTX 53 C 0/3090 MHz 10.02 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe fork <local-path>\out\lookahead\quiet\fork-r1.json
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet fork-r2 -- fork <local-path>\out\lookahead\quiet\fork-r2.json
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-fork-r2.json --label fork-r2
+2026-10-16 01:50:41 fork-r2: AC True, CPU 7.4%, RTX 55 C 5992/3090 MHz 10.03 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe fork <local-path>\out\lookahead\quiet\fork-r2.json
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet fork-r3 -- fork <local-path>\out\lookahead\quiet\fork-r3.json
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-fork-r3.json --label fork-r3
+2026-10-16 01:50:51 fork-r3: AC True, CPU 10.0%, RTX 56 C 7897/3090 MHz 10.00 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe fork <local-path>\out\lookahead\quiet\fork-r3.json
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet course-0-7 -- course <local-path>\out\lookahead\quiet\course-0-7.json --seeds 0-7 --models greedy,lookahead,nofork
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-course-0-7.json --label course-0-7
+2026-10-16 01:51:02 course-0-7: AC True, CPU 8.1%, RTX 58 C 0/3090 MHz 10.20 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe course <local-path>\out\lookahead\quiet\course-0-7.json --seeds 0-7 --models greedy,lookahead,nofork
+perception seed 0 greedy: finished true ticks 5148 taken 2 decisions 12 acts 9 branch ticks 0 wall 0.61s
+perception seed 0 lookahead: finished true ticks 5235 taken 3 decisions 14 acts 10 branch ticks 6000 wall 1.35s
+perception seed 0 nofork: finished true ticks 5232 taken 3 decisions 14 acts 10 branch ticks 0 wall 0.57s
+perception seed 1 greedy: finished true ticks 5136 taken 1 decisions 9 acts 6 branch ticks 0 wall 0.57s
+perception seed 1 lookahead: finished true ticks 4959 taken 1 decisions 9 acts 5 branch ticks 4200 wall 1.14s
+perception seed 1 nofork: finished true ticks 5515 taken 3 decisions 13 acts 10 branch ticks 0 wall 0.60s
+perception seed 2 greedy: finished true ticks 6904 taken 4 decisions 15 acts 11 branch ticks 0 wall 0.75s
+perception seed 2 lookahead: finished true ticks 6937 taken 4 decisions 15 acts 11 branch ticks 4800 wall 1.40s
+perception seed 2 nofork: finished true ticks 6513 taken 4 decisions 15 acts 11 branch ticks 0 wall 0.70s
+perception seed 3 greedy: finished true ticks 5763 taken 2 decisions 11 acts 8 branch ticks 0 wall 0.67s
+perception seed 3 lookahead: finished true ticks 5608 taken 2 decisions 11 acts 8 branch ticks 4800 wall 1.27s
+perception seed 3 nofork: finished true ticks 5414 taken 2 decisions 10 acts 8 branch ticks 0 wall 0.60s
+perception seed 4 greedy: finished true ticks 4873 taken 1 decisions 9 acts 5 branch ticks 0 wall 0.54s
+perception seed 4 lookahead: finished true ticks 4873 taken 1 decisions 9 acts 5 branch ticks 4200 wall 1.16s
+perception seed 4 nofork: finished true ticks 4895 taken 4 decisions 15 acts 12 branch ticks 0 wall 0.55s
+perception seed 5 greedy: finished true ticks 6886 taken 1 decisions 9 acts 6 branch ticks 0 wall 0.76s
+perception seed 5 lookahead: finished true ticks 5814 taken 3 decisions 13 acts 10 branch ticks 4800 wall 1.23s
+perception seed 5 nofork: finished true ticks 5818 taken 3 decisions 13 acts 10 branch ticks 0 wall 0.63s
+perception seed 6 greedy: finished true ticks 7941 taken 3 decisions 11 acts 10 branch ticks 0 wall 0.87s
+perception seed 6 lookahead: finished true ticks 5826 taken 2 decisions 9 acts 8 branch ticks 3000 wall 1.08s
+perception seed 6 nofork: finished true ticks 5826 taken 2 decisions 9 acts 8 branch ticks 0 wall 0.64s
+perception seed 7 greedy: finished true ticks 6555 taken 2 decisions 10 acts 9 branch ticks 0 wall 0.71s
+perception seed 7 lookahead: finished true ticks 8392 taken 3 decisions 12 acts 11 branch ticks 4800 wall 1.56s
+perception seed 7 nofork: finished true ticks 8426 taken 4 decisions 14 acts 13 branch ticks 0 wall 0.92s
+omniscient seed 0 greedy: finished true ticks 5129 taken 0 decisions 4 acts 3 branch ticks 0 wall 0.55s
+omniscient seed 0 lookahead: finished true ticks 5232 taken 3 decisions 10 acts 10 branch ticks 3600 wall 1.02s
+omniscient seed 0 nofork: finished true ticks 5232 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.55s
+omniscient seed 1 greedy: finished true ticks 6910 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.72s
+omniscient seed 1 lookahead: finished true ticks 4959 taken 1 decisions 6 acts 5 branch ticks 2400 wall 0.88s
+omniscient seed 1 nofork: finished true ticks 5515 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.58s
+omniscient seed 2 greedy: finished true ticks 5520 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.57s
+omniscient seed 2 lookahead: finished true ticks 5520 taken 3 decisions 10 acts 9 branch ticks 3600 wall 1.07s
+omniscient seed 2 nofork: finished true ticks 6513 taken 4 decisions 12 acts 11 branch ticks 0 wall 0.67s
+omniscient seed 3 greedy: finished true ticks 5371 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.57s
+omniscient seed 3 lookahead: finished true ticks 5371 taken 1 decisions 6 acts 5 branch ticks 2400 wall 0.94s
+omniscient seed 3 nofork: finished true ticks 5462 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.58s
+omniscient seed 4 greedy: finished true ticks 4873 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.52s
+omniscient seed 4 lookahead: finished true ticks 4873 taken 1 decisions 6 acts 5 branch ticks 2400 wall 0.87s
+omniscient seed 4 nofork: finished true ticks 4924 taken 4 decisions 12 acts 12 branch ticks 0 wall 0.52s
+omniscient seed 5 greedy: finished true ticks 7458 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.79s
+omniscient seed 5 lookahead: finished true ticks 5814 taken 3 decisions 10 acts 10 branch ticks 3000 wall 0.98s
+omniscient seed 5 nofork: finished true ticks 5818 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.60s
+omniscient seed 6 greedy: finished true ticks 7941 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.81s
+omniscient seed 6 lookahead: finished true ticks 5826 taken 2 decisions 8 acts 8 branch ticks 2400 wall 0.95s
+omniscient seed 6 nofork: finished true ticks 5826 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.60s
+omniscient seed 7 greedy: finished true ticks 6177 taken 1 decisions 6 acts 6 branch ticks 0 wall 0.64s
+omniscient seed 7 lookahead: finished true ticks 6345 taken 2 decisions 8 acts 8 branch ticks 3000 wall 1.09s
+omniscient seed 7 nofork: finished true ticks 8632 taken 4 decisions 12 acts 12 branch ticks 0 wall 0.88s
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet course-8-15 -- course <local-path>\out\lookahead\quiet\course-8-15.json --seeds 8-15 --models greedy,lookahead,nofork
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-course-8-15.json --label course-8-15
+2026-10-16 01:51:51 course-8-15: AC True, CPU 8.6%, RTX 60 C 0/3090 MHz 11.88 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe course <local-path>\out\lookahead\quiet\course-8-15.json --seeds 8-15 --models greedy,lookahead,nofork
+perception seed 8 greedy: finished true ticks 8369 taken 2 decisions 12 acts 7 branch ticks 0 wall 0.95s
+perception seed 8 lookahead: finished true ticks 6037 taken 2 decisions 12 acts 8 branch ticks 5400 wall 1.41s
+perception seed 8 nofork: finished true ticks 6525 taken 4 decisions 16 acts 10 branch ticks 0 wall 0.71s
+perception seed 9 greedy: finished true ticks 5348 taken 1 decisions 7 acts 5 branch ticks 0 wall 0.60s
+perception seed 9 lookahead: finished true ticks 5391 taken 2 decisions 9 acts 7 branch ticks 3000 wall 1.05s
+perception seed 9 nofork: finished true ticks 6847 taken 4 decisions 14 acts 12 branch ticks 0 wall 0.74s
+perception seed 10 greedy: finished true ticks 5293 taken 0 decisions 8 acts 3 branch ticks 0 wall 0.60s
+perception seed 10 lookahead: finished true ticks 5293 taken 0 decisions 8 acts 3 branch ticks 4200 wall 1.18s
+perception seed 10 nofork: finished true ticks 6655 taken 3 decisions 15 acts 10 branch ticks 0 wall 0.74s
+perception seed 11 greedy: finished true ticks 7091 taken 3 decisions 14 acts 10 branch ticks 0 wall 0.78s
+perception seed 11 lookahead: finished true ticks 5921 taken 2 decisions 12 acts 8 branch ticks 5400 wall 1.39s
+perception seed 11 nofork: finished true ticks 5921 taken 2 decisions 12 acts 8 branch ticks 0 wall 0.68s
+perception seed 12 greedy: finished true ticks 7492 taken 1 decisions 8 acts 5 branch ticks 0 wall 0.85s
+perception seed 12 lookahead: finished true ticks 7809 taken 4 decisions 14 acts 12 branch ticks 3600 wall 1.37s
+perception seed 12 nofork: finished true ticks 6118 taken 2 decisions 10 acts 8 branch ticks 0 wall 0.69s
+perception seed 13 greedy: finished true ticks 7535 taken 3 decisions 14 acts 11 branch ticks 0 wall 0.84s
+perception seed 13 lookahead: finished true ticks 6454 taken 4 decisions 16 acts 11 branch ticks 5400 wall 1.40s
+perception seed 13 nofork: finished true ticks 6452 taken 4 decisions 16 acts 11 branch ticks 0 wall 0.72s
+perception seed 14 greedy: finished true ticks 5975 taken 0 decisions 7 acts 3 branch ticks 0 wall 0.66s
+perception seed 14 lookahead: finished true ticks 5975 taken 0 decisions 7 acts 3 branch ticks 3600 wall 1.19s
+perception seed 14 nofork: finished true ticks 6720 taken 2 decisions 11 acts 8 branch ticks 0 wall 0.75s
+perception seed 15 greedy: finished true ticks 5921 taken 3 decisions 13 acts 10 branch ticks 0 wall 0.64s
+perception seed 15 lookahead: finished true ticks 5784 taken 3 decisions 13 acts 9 branch ticks 4800 wall 1.29s
+perception seed 15 nofork: finished true ticks 5786 taken 3 decisions 13 acts 9 branch ticks 0 wall 0.63s
+omniscient seed 8 greedy: finished true ticks 8369 taken 2 decisions 8 acts 7 branch ticks 0 wall 0.88s
+omniscient seed 8 lookahead: finished true ticks 8369 taken 2 decisions 8 acts 7 branch ticks 3000 wall 1.32s
+omniscient seed 8 nofork: finished true ticks 6525 taken 4 decisions 12 acts 10 branch ticks 0 wall 0.67s
+omniscient seed 9 greedy: finished true ticks 5542 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.60s
+omniscient seed 9 lookahead: finished true ticks 5594 taken 2 decisions 8 acts 7 branch ticks 2400 wall 0.95s
+omniscient seed 9 nofork: finished true ticks 6847 taken 4 decisions 12 acts 12 branch ticks 0 wall 0.69s
+omniscient seed 10 greedy: finished true ticks 5293 taken 0 decisions 4 acts 3 branch ticks 0 wall 0.55s
+omniscient seed 10 lookahead: finished true ticks 5293 taken 0 decisions 4 acts 3 branch ticks 1800 wall 0.85s
+omniscient seed 10 nofork: finished true ticks 6655 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.70s
+omniscient seed 11 greedy: finished true ticks 7091 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.73s
+omniscient seed 11 lookahead: finished true ticks 7091 taken 3 decisions 10 acts 10 branch ticks 3600 wall 1.19s
+omniscient seed 11 nofork: finished true ticks 7110 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.73s
+omniscient seed 12 greedy: finished true ticks 7492 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.78s
+omniscient seed 12 lookahead: finished true ticks 7809 taken 4 decisions 12 acts 12 branch ticks 3000 wall 1.22s
+omniscient seed 12 nofork: finished true ticks 6118 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.65s
+omniscient seed 13 greedy: finished true ticks 6947 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.74s
+omniscient seed 13 lookahead: finished true ticks 6452 taken 4 decisions 12 acts 11 branch ticks 3000 wall 1.07s
+omniscient seed 13 nofork: finished true ticks 6452 taken 4 decisions 12 acts 11 branch ticks 0 wall 0.66s
+omniscient seed 14 greedy: finished true ticks 5975 taken 0 decisions 4 acts 3 branch ticks 0 wall 0.63s
+omniscient seed 14 lookahead: finished true ticks 5975 taken 0 decisions 4 acts 3 branch ticks 1800 wall 0.92s
+omniscient seed 14 nofork: finished true ticks 6720 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.69s
+omniscient seed 15 greedy: finished true ticks 5259 taken 2 decisions 8 acts 7 branch ticks 0 wall 0.55s
+omniscient seed 15 lookahead: finished true ticks 5802 taken 3 decisions 10 acts 9 branch ticks 3000 wall 1.02s
+omniscient seed 15 nofork: finished true ticks 5786 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.61s
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet course-16-23 -- course <local-path>\out\lookahead\quiet\course-16-23.json --seeds 16-23 --models greedy,lookahead,nofork
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-course-16-23.json --label course-16-23
+2026-10-16 01:52:44 course-16-23: AC True, CPU 4.8%, RTX 61 C 0/3090 MHz 12.14 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe course <local-path>\out\lookahead\quiet\course-16-23.json --seeds 16-23 --models greedy,lookahead,nofork
+perception seed 16 greedy: finished true ticks 7208 taken 2 decisions 12 acts 8 branch ticks 0 wall 0.80s
+perception seed 16 lookahead: finished true ticks 7221 taken 3 decisions 14 acts 10 branch ticks 6000 wall 1.63s
+perception seed 16 nofork: finished true ticks 6551 taken 3 decisions 13 acts 9 branch ticks 0 wall 0.73s
+perception seed 17 greedy: finished true ticks 10942 taken 4 decisions 13 acts 12 branch ticks 0 wall 1.17s
+perception seed 17 lookahead: finished true ticks 6644 taken 2 decisions 9 acts 8 branch ticks 3600 wall 1.25s
+perception seed 17 nofork: finished true ticks 8634 taken 2 decisions 9 acts 9 branch ticks 0 wall 0.94s
+perception seed 18 greedy: finished true ticks 24633 taken 2 decisions 1997 acts 1994 branch ticks 0 wall 7.69s
+perception seed 18 lookahead: finished true ticks 23587 taken 2 decisions 2090 acts 2086 branch ticks 5400 wall 8.65s
+perception seed 18 nofork: finished true ticks 10155 taken 4 decisions 856 acts 852 branch ticks 0 wall 2.69s
+perception seed 19 greedy: finished true ticks 6944 taken 1 decisions 8 acts 5 branch ticks 0 wall 0.76s
+perception seed 19 lookahead: finished true ticks 5918 taken 2 decisions 11 acts 7 branch ticks 4800 wall 1.29s
+perception seed 19 nofork: finished true ticks 7713 taken 4 decisions 14 acts 11 branch ticks 0 wall 0.81s
+perception seed 20 greedy: finished true ticks 6475 taken 1 decisions 8 acts 6 branch ticks 0 wall 0.73s
+perception seed 20 lookahead: finished true ticks 6653 taken 3 decisions 12 acts 10 branch ticks 4200 wall 1.28s
+perception seed 20 nofork: finished true ticks 6653 taken 3 decisions 12 acts 10 branch ticks 0 wall 0.77s
+perception seed 21 greedy: finished true ticks 5352 taken 3 decisions 14 acts 9 branch ticks 0 wall 0.58s
+perception seed 21 lookahead: finished true ticks 5901 taken 3 decisions 13 acts 9 branch ticks 5400 wall 1.38s
+perception seed 21 nofork: finished true ticks 5837 taken 3 decisions 14 acts 9 branch ticks 0 wall 0.65s
+perception seed 22 greedy: finished true ticks 5654 taken 2 decisions 11 acts 8 branch ticks 0 wall 0.62s
+perception seed 22 lookahead: finished true ticks 5654 taken 2 decisions 11 acts 8 branch ticks 4800 wall 1.26s
+perception seed 22 nofork: finished true ticks 6557 taken 4 decisions 15 acts 11 branch ticks 0 wall 0.71s
+perception seed 23 greedy: finished true ticks 7671 taken 3 decisions 14 acts 10 branch ticks 0 wall 0.84s
+perception seed 23 lookahead: finished true ticks 5936 taken 3 decisions 14 acts 9 branch ticks 5400 wall 1.36s
+perception seed 23 nofork: finished true ticks 9665 taken 4 decisions 16 acts 12 branch ticks 0 wall 1.05s
+omniscient seed 16 greedy: finished true ticks 7855 taken 2 decisions 8 acts 7 branch ticks 0 wall 0.81s
+omniscient seed 16 lookahead: finished true ticks 7865 taken 3 decisions 10 acts 9 branch ticks 3600 wall 1.32s
+omniscient seed 16 nofork: finished true ticks 6551 taken 3 decisions 9 acts 9 branch ticks 0 wall 0.68s
+omniscient seed 17 greedy: finished true ticks 10942 taken 4 decisions 12 acts 12 branch ticks 0 wall 1.11s
+omniscient seed 17 lookahead: finished true ticks 6644 taken 2 decisions 8 acts 8 branch ticks 3000 wall 1.13s
+omniscient seed 17 nofork: finished true ticks 10050 taken 3 decisions 10 acts 10 branch ticks 0 wall 1.01s
+omniscient seed 18 greedy: finished true ticks 5180 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.55s
+omniscient seed 18 lookahead: finished true ticks 24475 taken 2 decisions 2086 acts 2085 branch ticks 16800 wall 13.55s
+omniscient seed 18 nofork: finished true ticks 10112 taken 3 decisions 1388 acts 1388 branch ticks 0 wall 3.16s
+omniscient seed 19 greedy: finished true ticks 6949 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.74s
+omniscient seed 19 lookahead: finished true ticks 5922 taken 1 decisions 6 acts 5 branch ticks 2400 wall 0.99s
+omniscient seed 19 nofork: finished true ticks 7744 taken 4 decisions 12 acts 11 branch ticks 0 wall 0.78s
+omniscient seed 20 greedy: finished true ticks 6475 taken 1 decisions 6 acts 6 branch ticks 0 wall 0.68s
+omniscient seed 20 lookahead: finished true ticks 6653 taken 3 decisions 10 acts 10 branch ticks 3000 wall 1.10s
+omniscient seed 20 nofork: finished true ticks 6653 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.68s
+omniscient seed 21 greedy: finished true ticks 5354 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.55s
+omniscient seed 21 lookahead: finished true ticks 5385 taken 3 decisions 10 acts 8 branch ticks 3600 wall 1.03s
+omniscient seed 21 nofork: finished true ticks 5837 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.62s
+omniscient seed 22 greedy: finished true ticks 5654 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.58s
+omniscient seed 22 lookahead: finished true ticks 5654 taken 2 decisions 8 acts 8 branch ticks 3000 wall 1.01s
+omniscient seed 22 nofork: finished true ticks 6557 taken 4 decisions 12 acts 11 branch ticks 0 wall 0.66s
+omniscient seed 23 greedy: finished true ticks 5195 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.55s
+omniscient seed 23 lookahead: finished true ticks 5936 taken 3 decisions 10 acts 9 branch ticks 3000 wall 1.01s
+omniscient seed 23 nofork: finished true ticks 9665 taken 4 decisions 12 acts 12 branch ticks 0 wall 1.01s
++ <local-path> <local-path>/out/locks/bench_lock.py run --label quiet-lookahead --max-hold-min 25 -- <local-path> <local-path>\.claude\worktrees\lookahead\tools\lookahead_bench.py step <local-path>\out\lookahead\quiet course-24-30 -- course <local-path>\out\lookahead\quiet\course-24-30.json --seeds 24-30 --models greedy,lookahead,nofork
++ <local-path> <local-path>\.claude\worktrees\lookahead\tools\machine_conditions.py <local-path>\out\lookahead\quiet\conditions-course-24-30.json --label course-24-30
+2026-10-16 01:54:11 course-24-30: AC True, CPU 5.7%, RTX 62 C 0/3090 MHz 12.02 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\lookahead\target\release\examples\lookahead_bench.exe course <local-path>\out\lookahead\quiet\course-24-30.json --seeds 24-30 --models greedy,lookahead,nofork
+perception seed 24 greedy: finished true ticks 5382 taken 0 decisions 8 acts 4 branch ticks 0 wall 0.62s
+perception seed 24 lookahead: finished true ticks 5095 taken 1 decisions 10 acts 6 branch ticks 3600 wall 1.08s
+perception seed 24 nofork: finished true ticks 6558 taken 3 decisions 14 acts 10 branch ticks 0 wall 0.73s
+perception seed 25 greedy: finished true ticks 6123 taken 1 decisions 8 acts 5 branch ticks 0 wall 0.67s
+perception seed 25 lookahead: finished true ticks 6123 taken 1 decisions 8 acts 5 branch ticks 3600 wall 1.19s
+perception seed 25 nofork: finished true ticks 6895 taken 2 decisions 10 acts 8 branch ticks 0 wall 0.77s
+perception seed 26 greedy: finished true ticks 7504 taken 2 decisions 10 acts 8 branch ticks 0 wall 0.84s
+perception seed 26 lookahead: finished true ticks 7504 taken 2 decisions 10 acts 8 branch ticks 4200 wall 1.41s
+perception seed 26 nofork: finished true ticks 5990 taken 3 decisions 12 acts 10 branch ticks 0 wall 0.65s
+perception seed 27 greedy: finished true ticks 8858 taken 2 decisions 11 acts 8 branch ticks 0 wall 0.98s
+perception seed 27 lookahead: finished true ticks 6225 taken 4 decisions 15 acts 13 branch ticks 5400 wall 1.37s
+perception seed 27 nofork: finished true ticks 6152 taken 4 decisions 15 acts 12 branch ticks 0 wall 0.67s
+perception seed 28 greedy: finished true ticks 15799 taken 3 decisions 1105 acts 1100 branch ticks 0 wall 4.84s
+perception seed 28 lookahead: finished true ticks 5142 taken 3 decisions 16 acts 9 branch ticks 6000 wall 1.37s
+perception seed 28 nofork: finished true ticks 5142 taken 3 decisions 16 acts 9 branch ticks 0 wall 0.57s
+perception seed 29 greedy: finished true ticks 4873 taken 0 decisions 9 acts 3 branch ticks 0 wall 0.54s
+perception seed 29 lookahead: finished true ticks 6092 taken 3 decisions 15 acts 9 branch ticks 5400 wall 1.42s
+perception seed 29 nofork: finished true ticks 7466 taken 3 decisions 15 acts 9 branch ticks 0 wall 0.84s
+perception seed 30 greedy: finished true ticks 6881 taken 3 decisions 14 acts 9 branch ticks 0 wall 0.75s
+perception seed 30 lookahead: finished true ticks 6798 taken 3 decisions 14 acts 10 branch ticks 6000 wall 1.55s
+perception seed 30 nofork: finished true ticks 6381 taken 4 decisions 16 acts 11 branch ticks 0 wall 0.69s
+omniscient seed 24 greedy: finished true ticks 5962 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.63s
+omniscient seed 24 lookahead: finished true ticks 5095 taken 1 decisions 6 acts 6 branch ticks 1200 wall 0.75s
+omniscient seed 24 nofork: finished true ticks 6558 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.70s
+omniscient seed 25 greedy: finished true ticks 6123 taken 1 decisions 6 acts 5 branch ticks 0 wall 0.63s
+omniscient seed 25 lookahead: finished true ticks 6123 taken 1 decisions 6 acts 5 branch ticks 2400 wall 1.01s
+omniscient seed 25 nofork: finished true ticks 6895 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.71s
+omniscient seed 26 greedy: finished true ticks 7504 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.78s
+omniscient seed 26 lookahead: finished true ticks 7504 taken 2 decisions 8 acts 8 branch ticks 3000 wall 1.21s
+omniscient seed 26 nofork: finished true ticks 5990 taken 3 decisions 10 acts 10 branch ticks 0 wall 0.63s
+omniscient seed 27 greedy: finished true ticks 8858 taken 2 decisions 8 acts 8 branch ticks 0 wall 0.93s
+omniscient seed 27 lookahead: finished true ticks 5921 taken 3 decisions 10 acts 10 branch ticks 3600 wall 1.08s
+omniscient seed 27 nofork: finished true ticks 6152 taken 4 decisions 12 acts 12 branch ticks 0 wall 0.63s
+omniscient seed 28 greedy: finished true ticks 5146 taken 2 decisions 8 acts 7 branch ticks 0 wall 0.55s
+omniscient seed 28 lookahead: finished true ticks 5142 taken 3 decisions 10 acts 9 branch ticks 3000 wall 0.98s
+omniscient seed 28 nofork: finished true ticks 5142 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.56s
+omniscient seed 29 greedy: finished true ticks 4873 taken 0 decisions 4 acts 3 branch ticks 0 wall 0.52s
+omniscient seed 29 lookahead: finished true ticks 6092 taken 3 decisions 10 acts 9 branch ticks 2400 wall 1.00s
+omniscient seed 29 nofork: finished true ticks 7466 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.79s
+omniscient seed 30 greedy: finished true ticks 6881 taken 3 decisions 10 acts 9 branch ticks 0 wall 0.72s
+omniscient seed 30 lookahead: finished true ticks 5460 taken 4 decisions 12 acts 10 branch ticks 3600 wall 1.03s
+omniscient seed 30 nofork: finished true ticks 6381 taken 4 decisions 12 acts 11 branch ticks 0 wall 0.66s
+done

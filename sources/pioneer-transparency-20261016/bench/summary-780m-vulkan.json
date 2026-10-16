@@ -1,0 +1,98 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "AMD Radeon 780M Graphics",
+ "backend": "Vulkan",
+ "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "taa",
+ "gtao": "off",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 1.971,
+   "opaque_pass_ms": 0.596,
+   "shadows_ms": 0.731,
+   "cpu_encode_ms": 0.858,
+   "transparent_ms": 0.001,
+   "submit_to_idle_ms": 3.934,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    1.821,
+    1.971,
+    1.985
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "opaque": {
+   "gpu_ms": 2.769,
+   "opaque_pass_ms": 1.0,
+   "shadows_ms": 1.138,
+   "cpu_encode_ms": 0.936,
+   "transparent_ms": 0.001,
+   "submit_to_idle_ms": 4.906,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    2.491,
+    2.795,
+    2.769
+   ],
+   "gpu_over_hidden_ms": 0.798,
+   "cpu_over_hidden_ms": 0.078
+  },
+  "blend": {
+   "gpu_ms": 2.843,
+   "opaque_pass_ms": 1.25,
+   "shadows_ms": 0.997,
+   "cpu_encode_ms": 1.107,
+   "transparent_ms": 0.113,
+   "submit_to_idle_ms": 5.214,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    2.499,
+    2.915,
+    2.843
+   ],
+   "gpu_over_hidden_ms": 0.872,
+   "cpu_over_hidden_ms": 0.249
+  },
+  "glass": {
+   "gpu_ms": 2.932,
+   "opaque_pass_ms": 1.293,
+   "shadows_ms": 0.975,
+   "cpu_encode_ms": 1.028,
+   "transparent_ms": 0.108,
+   "submit_to_idle_ms": 5.1,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    2.932,
+    2.92,
+    2.945
+   ],
+   "gpu_over_hidden_ms": 0.961,
+   "cpu_over_hidden_ms": 0.17
+  },
+  "double": {
+   "gpu_ms": 4.814,
+   "opaque_pass_ms": 3.112,
+   "shadows_ms": 1.002,
+   "cpu_encode_ms": 1.09,
+   "transparent_ms": 0.114,
+   "submit_to_idle_ms": 7.14,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    4.814,
+    4.836,
+    4.542
+   ],
+   "gpu_over_hidden_ms": 2.843,
+   "cpu_over_hidden_ms": 0.232
+  }
+ }
+}

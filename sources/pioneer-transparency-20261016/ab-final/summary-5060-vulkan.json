@@ -1,0 +1,50 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+ "backend": "Vulkan",
+ "driver": "NVIDIA 617.14",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "msaa",
+ "gtao": "depth",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 0.363,
+   "opaque_pass_ms": 0.177,
+   "shadows_ms": 0.041,
+   "cpu_encode_ms": 0.321,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 0.937,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    0.363,
+    0.363,
+    0.363
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "double": {
+   "gpu_ms": 1.255,
+   "opaque_pass_ms": 0.985,
+   "shadows_ms": 0.161,
+   "cpu_encode_ms": 0.443,
+   "transparent_ms": 0.076,
+   "submit_to_idle_ms": 1.981,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    1.255,
+    1.257,
+    1.255
+   ],
+   "gpu_over_hidden_ms": 0.892,
+   "cpu_over_hidden_ms": 0.122
+  }
+ }
+}

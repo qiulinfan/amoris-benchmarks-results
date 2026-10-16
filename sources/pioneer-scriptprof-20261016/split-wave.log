@@ -1,0 +1,125 @@
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for lookahead ...
+[bench_lock] waiting for transparency ...
+[bench_lock] waiting for transparency ...
+[bench_lock] waiting for physcache ...
+[bench_lock] waiting for physcache ...
+[bench_lock] waiting for physcache ...
+[bench_lock] waiting for physcache ...
+[bench_lock] waiting for physcache ...
+[bench_lock] waiting for physcache ...
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-start.json --label split-start
+2026-10-15 19:19:16 split-start: AC True, CPU 9.6%, RTX 59 C 0/3090 MHz 10.40 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-r1.json --label split-r1 --cpu-seconds 3
+2026-10-15 19:19:25 split-r1: AC True, CPU 7.0%, RTX 60 C 9390/3090 MHz 10.39 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 0 --warmup 120 --ticks 600 --json <local-path>\out\scriptprof\split-wave\split-r1.json
+verify {"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
+round 1 rules tick median 3375.0 us min 3260.2 p99 3747.3 | system 3347.2 | steps 62518.0
+round 1 natives tick median 3417.0 us min 3291.2 p99 3965.4 | system 3388.8 | steps 62518.0
+round 1 profiled tick median 3593.6 us min 3457.2 p99 4981.9 | system 3560.4 | steps 62518.0
+wrote <local-path>\out\scriptprof\split-wave\split-r1.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-r2.json --label split-r2 --cpu-seconds 3
+2026-10-15 19:19:43 split-r2: AC True, CPU 34.9%, RTX 61 C 0/3090 MHz 11.99 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 1 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\split-wave\split-r2.json
+round 1 natives tick median 3776.9 us min 3564.5 p99 5534.1 | system 3727.3 | steps 62518.0
+round 1 profiled tick median 4057.4 us min 3740.1 p99 5619.8 | system 4006.9 | steps 62518.0
+round 1 rules tick median 3662.2 us min 3360.9 p99 5033.8 | system 3624.3 | steps 62518.0
+wrote <local-path>\out\scriptprof\split-wave\split-r2.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-r3.json --label split-r3 --cpu-seconds 3
+2026-10-15 19:20:00 split-r3: AC True, CPU 3.9%, RTX 66 C 0/3090 MHz 12.55 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 2 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\split-wave\split-r3.json
+round 1 profiled tick median 3548.1 us min 3420.9 p99 4111.9 | system 3518.8 | steps 62518.0
+round 1 rules tick median 3446.9 us min 3285.1 p99 4163.9 | system 3408.7 | steps 62518.0
+round 1 natives tick median 3429.3 us min 3318.6 p99 4168.1 | system 3398.4 | steps 62518.0
+wrote <local-path>\out\scriptprof\split-wave\split-r3.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-r4.json --label split-r4 --cpu-seconds 3
+2026-10-15 19:20:16 split-r4: AC True, CPU 8.8%, RTX 64 C 0/3090 MHz 12.47 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 3 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\split-wave\split-r4.json
+round 1 rules tick median 3313.0 us min 3251.5 p99 3864.7 | system 3289.0 | steps 62518.0
+round 1 natives tick median 3441.1 us min 3293.2 p99 4093.7 | system 3409.9 | steps 62518.0
+round 1 profiled tick median 3488.5 us min 3401.1 p99 3857.6 | system 3462.8 | steps 62518.0
+wrote <local-path>\out\scriptprof\split-wave\split-r4.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-r5.json --label split-r5 --cpu-seconds 3
+2026-10-15 19:20:33 split-r5: AC True, CPU 6.6%, RTX 64 C 0/3090 MHz 12.29 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 4 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\split-wave\split-r5.json
+round 1 natives tick median 3354.6 us min 3272.8 p99 4007.8 | system 3330.5 | steps 62518.0
+round 1 profiled tick median 3661.7 us min 3497.3 p99 4178.6 | system 3635.3 | steps 62518.0
+round 1 rules tick median 3370.0 us min 3249.2 p99 3873.3 | system 3341.5 | steps 62518.0
+wrote <local-path>\out\scriptprof\split-wave\split-r5.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\split-wave\conditions-end.json --label split-end
+2026-10-15 19:20:49 split-end: AC True, CPU 4.1%, RTX 64 C 0/3090 MHz 12.16 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+Per round, medians of the 600 ticks, us (`rules` untimed; `natives` its timed twin):
+
+| Round | First | rules tick | rules `run` | natives `run` | native, raw | calls | reading, ns | native, less readings | interpretation | of `run` | of the tick |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | rules | 3,375 | 2,574 | 2,604 | 851 | 2,998 | 7.3 | 829 | 1,745 | 67.8 % | 51.7 % |
+| 2 | natives | 3,662 | 2,710 | 2,733 | 896 | 2,998 | 7.5 | 873 | 1,837 | 67.8 % | 50.1 % |
+| 3 | profiled | 3,447 | 2,600 | 2,625 | 849 | 2,998 | 7.3 | 827 | 1,773 | 68.2 % | 51.4 % |
+| 4 | rules | 3,313 | 2,547 | 2,606 | 845 | 2,998 | 7.3 | 823 | 1,724 | 67.7 % | 52.0 % |
+| 5 | natives | 3,370 | 2,572 | 2,584 | 834 | 2,998 | 7.3 | 812 | 1,761 | 68.4 % | 52.2 % |
+
+Median of the rounds: rules `run` 2,574 us of a 3,375 us tick; inside the natives 827 us (849 raw, 2,998 calls at 7.3 ns a reading); interpretation 1,761 us, 68.4 % of `run` and 52.2 % of the tick. Timing the natives made `run` +1.2 % (the readings' cost). Steps 62,518 a tick.
+
+Inside the natives by kind, per round: us a tick less the readings (calls a tick):
+
+| Round | math | events | rng | world | other |
+|---|---|---|---|---|---|
+| 1 | 25.1 (2,992) | 800 (5) | 3.5 (1) | 0.0 (0) | 0.0 (0) |
+| 2 | 26.8 (2,992) | 841 (5) | 5.5 (1) | 0.0 (0) | 0.0 (0) |
+| 3 | 26.0 (2,992) | 798 (5) | 3.3 (1) | 0.0 (0) | 0.0 (0) |
+| 4 | 25.8 (2,992) | 794 (5) | 3.4 (1) | 0.0 (0) | 0.0 (0) |
+| 5 | 24.6 (2,992) | 783 (5) | 3.3 (1) | 0.0 (0) | 0.0 (0) |
+
+The step profiler on the same rule (`profiled`; tick medians, us):
+
+| Round | rules tick | profiled tick | samples a tick | cost a sample, us |
+|---|---|---|---|---|
+| 1 | 3,375 | 3,594 | 625 | 0.35 |
+| 2 | 3,662 | 4,057 | 625 | 0.63 |
+| 3 | 3,447 | 3,548 | 625 | 0.16 |
+| 4 | 3,313 | 3,488 | 625 | 0.28 |
+| 5 | 3,370 | 3,662 | 625 | 0.47 |
+
+The profile (interval 100; the same in every round: True), `damage`'s top lines by self samples of 450,061:
+
+| Line | Function | Self samples | Share |
+|---|---|---|---|
+| pocket:323 | row | 85,220 | 18.9 % |
+| pocket:319 | row | 63,732 | 14.2 % |
+| pocket:322 | row | 63,721 | 14.2 % |
+| scripts/rules.ts:60 | run | 36,346 | 8.1 % |
+| pocket:324 | row | 27,899 | 6.2 % |
+| scripts/rules.ts:78 | run | 21,645 | 4.8 % |
+| scripts/rules.ts:66 | run | 14,858 | 3.3 % |
+| scripts/rules.ts:77 | run | 14,447 | 3.2 % |
+| scripts/rules.ts:53 | run | 14,290 | 3.2 % |
+| scripts/rules.ts:71 | run | 14,194 | 3.2 % |
+
+| Function | File | Self | Total |
+|---|---|---|---|
+| row | pocket | 53.5 % | 53.5 % |
+| run | scripts/rules.ts | 41.7 % | 100.0 % |
+| driftY | scripts/combat.ts | 1.6 % | 1.6 % |
+| driftX | scripts/combat.ts | 1.6 % | 1.6 % |
+| wobble | scripts/combat.ts | 1.6 % | 1.6 % |
+| emit | pocket | 0.0 % | 0.0 % |
+| (host) | host | 0.0 % | 0.0 % |
+| __context | pocket | 0.0 % | 0.0 % |
+| Query | pocket | 0.0 % | 0.0 % |
+| fill | pocket | 0.0 % | 0.0 % |

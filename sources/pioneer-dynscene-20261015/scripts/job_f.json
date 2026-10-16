@@ -1,0 +1,4 @@
+[
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "d=<local-path>/out/dynscene/d", "--build", "f=<local-path>/out/dynscene/f", "--cases", "moving-10k,moving-100k,sparse-10k,sparse-100k,moving-1.6m", "--backends", "dx12,vulkan", "--rounds", "2", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/df.json", "--conditions", "<local-path>/out/dynscene/df-conditions"],
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "f=<local-path>/out/dynscene/f", "--cases", "rt-200k-moving", "--backends", "dx12,vulkan", "--rt-frames", "60", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/f-rt.json"]
+]

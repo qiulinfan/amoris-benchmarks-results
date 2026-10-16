@@ -1,0 +1,99 @@
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-start.json --label split-start
+2026-10-16 03:08:46 split-start: AC True, CPU 4.0%, RTX 55 C 0/3090 MHz 10.01 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-r1.json --label split-r1 --cpu-seconds 3
+2026-10-16 03:08:55 split-r1: AC True, CPU 7.9%, RTX 56 C 0/3090 MHz 10.03 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 0 --warmup 120 --ticks 600 --json <local-path>\out\scriptprof\quiet\split\split-r1.json
+verify {"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
+round 1 rules tick median 3331.5 us min 3245.2 p99 3899.9 | system 3306.7 | steps 62518.0
+round 1 natives tick median 3383.8 us min 3300.7 p99 4160.3 | system 3357.6 | steps 62518.0
+round 1 profiled tick median 3481.6 us min 3380.1 p99 4162.5 | system 3455.1 | steps 62518.0
+wrote <local-path>\out\scriptprof\quiet\split\split-r1.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-r2.json --label split-r2 --cpu-seconds 3
+2026-10-16 03:09:13 split-r2: AC True, CPU 4.1%, RTX 58 C 0/3090 MHz 11.82 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 1 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\quiet\split\split-r2.json
+round 1 natives tick median 3425.6 us min 3277.4 p99 3956.9 | system 3398.4 | steps 62518.0
+round 1 profiled tick median 3530.0 us min 3399.0 p99 4014.7 | system 3498.8 | steps 62518.0
+round 1 rules tick median 3416.0 us min 3251.9 p99 3978.2 | system 3386.0 | steps 62518.0
+wrote <local-path>\out\scriptprof\quiet\split\split-r2.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-r3.json --label split-r3 --cpu-seconds 3
+2026-10-16 03:09:29 split-r3: AC True, CPU 3.3%, RTX 60 C 0/3090 MHz 11.91 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 2 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\quiet\split\split-r3.json
+round 1 profiled tick median 3523.3 us min 3416.9 p99 3859.8 | system 3497.0 | steps 62518.0
+round 1 rules tick median 3369.9 us min 3270.5 p99 3682.6 | system 3335.5 | steps 62518.0
+round 1 natives tick median 3387.3 us min 3284.9 p99 4032.6 | system 3356.7 | steps 62518.0
+wrote <local-path>\out\scriptprof\quiet\split\split-r3.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-r4.json --label split-r4 --cpu-seconds 3
+2026-10-16 03:09:45 split-r4: AC True, CPU 3.7%, RTX 61 C 0/3090 MHz 11.92 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 3 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\quiet\split\split-r4.json
+round 1 rules tick median 3358.8 us min 3258.7 p99 3685.7 | system 3333.1 | steps 62518.0
+round 1 natives tick median 3433.5 us min 3308.7 p99 3904.5 | system 3399.2 | steps 62518.0
+round 1 profiled tick median 3499.3 us min 3402.3 p99 4148.1 | system 3470.4 | steps 62518.0
+wrote <local-path>\out\scriptprof\quiet\split\split-r4.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-r5.json --label split-r5 --cpu-seconds 3
+2026-10-16 03:10:01 split-r5: AC True, CPU 4.0%, RTX 61 C 0/3090 MHz 12.05 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\.claude\worktrees\scriptprof\target\release\examples\rules_bench.exe --variants rules,natives,profiled --profile-interval 100 --rounds 1 --offset 4 --warmup 120 --ticks 600 --no-verify --json <local-path>\out\scriptprof\quiet\split\split-r5.json
+round 1 natives tick median 3412.2 us min 3299.3 p99 4417.9 | system 3386.6 | steps 62518.0
+round 1 profiled tick median 3508.0 us min 3410.2 p99 3791.7 | system 3480.2 | steps 62518.0
+round 1 rules tick median 3353.7 us min 3276.2 p99 3785.2 | system 3329.1 | steps 62518.0
+wrote <local-path>\out\scriptprof\quiet\split\split-r5.json
++ <local-path> <local-path>\.claude\worktrees\scriptprof\tools\machine_conditions.py <local-path>\out\scriptprof\quiet\split\conditions-end.json --label split-end
+2026-10-16 03:10:18 split-end: AC True, CPU 3.9%, RTX 62 C 0/3090 MHz 12.11 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+Per round, medians of the 600 ticks, us (`rules` untimed; `natives` its timed twin). Interpretation is `run` less the natives, between the natives raw and less one reading a call:
+
+| Round | First | rules tick | rules `run` | natives `run` | native, raw | calls | reading, ns | native, less readings | interpretation | of `run` | of the tick |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | rules | 3,332 | 2,549 | 2,600 | 843 | 2,998 | 7.2 | 822 | 1,706 to 1,728 | 66.9 to 67.8 % | 51.2 to 51.9 % |
+| 2 | natives | 3,416 | 2,588 | 2,579 | 846 | 2,998 | 7.2 | 824 | 1,742 to 1,763 | 67.3 to 68.1 % | 51.0 to 51.6 % |
+| 3 | profiled | 3,370 | 2,574 | 2,593 | 854 | 2,998 | 7.2 | 832 | 1,720 to 1,742 | 66.8 to 67.7 % | 51.1 to 51.7 % |
+| 4 | rules | 3,359 | 2,553 | 2,610 | 854 | 2,998 | 7.3 | 832 | 1,699 to 1,721 | 66.5 to 67.4 % | 50.6 to 51.2 % |
+| 5 | natives | 3,354 | 2,576 | 2,625 | 869 | 2,998 | 7.2 | 847 | 1,708 to 1,729 | 66.3 to 67.1 % | 50.9 to 51.6 % |
+
+Medians of the rounds: rules `run` 2,574 us of a 3,359 us tick; inside the natives 832 to 854 us (less one 7.2 ns reading a call, and raw; 2,998 calls); interpretation the rest of `run`, 1,720 to 1,742 us. Medians of the rounds' shares: interpretation 66.8 to 67.7 % of `run`, 51.0 to 51.6 % of the tick. Removing it would leave 1,617 to 1,638 us of the tick (2.05 to 2.08 times faster). Timing the natives made `run` +26 us (+1.0 %; per round +51, -9, +18, +56, +49), which is 4.3 ns per reading in place, two a call. Steps 62,518 a tick.
+
+Inside the natives by kind, per round: us a tick less one reading a call, and raw (calls a tick):
+
+| Round | math | events | rng | world | other |
+|---|---|---|---|---|---|
+| 1 | 25.3 to 46.8 (2,992) | 793 (5) | 3.2 (1) | 0.0 (0) | 0.0 (0) |
+| 2 | 23.0 to 44.5 (2,992) | 798 (5) | 3.5 (1) | 0.0 (0) | 0.0 (0) |
+| 3 | 25.1 to 46.6 (2,992) | 803 (5) | 3.3 (1) | 0.0 (0) | 0.0 (0) |
+| 4 | 24.9 to 46.7 (2,992) | 804 (5) | 3.5 (1) | 0.0 (0) | 0.0 (0) |
+| 5 | 24.5 to 46.0 (2,992) | 819 (5) | 3.3 (1) | 0.0 (0) | 0.0 (0) |
+
+The step profiler on the same rule (`profiled`; tick medians, us):
+
+| Round | rules tick | profiled tick | samples a tick | cost a sample, us |
+|---|---|---|---|---|
+| 1 | 3,332 | 3,482 | 625 | 0.24 |
+| 2 | 3,416 | 3,530 | 625 | 0.18 |
+| 3 | 3,370 | 3,523 | 625 | 0.25 |
+| 4 | 3,359 | 3,499 | 625 | 0.22 |
+| 5 | 3,354 | 3,508 | 625 | 0.25 |
+
+The profile (sampled every 100 steps on average, so its shares are estimates; the same in every round: True), `damage`'s top lines by self samples of 450,061:
+
+| Line | Function | Self samples | Share |
+|---|---|---|---|
+| pocket:323 | row | 85,220 | 18.9 % |
+| pocket:319 | row | 63,732 | 14.2 % |
+| pocket:322 | row | 63,721 | 14.2 % |
+| scripts/rules.ts:60 | run | 36,346 | 8.1 % |
+| pocket:324 | row | 27,899 | 6.2 % |
+| scripts/rules.ts:78 | run | 21,645 | 4.8 % |
+| scripts/rules.ts:66 | run | 14,858 | 3.3 % |
+| scripts/rules.ts:77 | run | 14,447 | 3.2 % |
+| scripts/rules.ts:53 | run | 14,290 | 3.2 % |
+| scripts/rules.ts:71 | run | 14,194 | 3.2 % |
+
+| Function | File | Self | Total |
+|---|---|---|---|
+| row | pocket | 53.5 % | 53.5 % |
+| run | scripts/rules.ts | 41.7 % | 100.0 % |
+| driftY | scripts/combat.ts | 1.6 % | 1.6 % |
+| driftX | scripts/combat.ts | 1.6 % | 1.6 % |
+| wobble | scripts/combat.ts | 1.6 % | 1.6 % |
+| emit | pocket | 0.0 % | 0.0 % |
+| (host) | host | 0.0 % | 0.0 % |
+| __context | pocket | 0.0 % | 0.0 % |
+| Query | pocket | 0.0 % | 0.0 % |
+| fill | pocket | 0.0 % | 0.0 % |

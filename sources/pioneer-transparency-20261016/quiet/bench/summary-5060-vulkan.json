@@ -1,0 +1,110 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+ "backend": "Vulkan",
+ "driver": "NVIDIA 617.14",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "msaa",
+ "gtao": "depth",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "env": [],
+ "exe": "<local-path>\\.claude\\worktrees\\transparency\\target\\release\\examples\\transparency.exe",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 0.363,
+   "opaque_pass_ms": 0.177,
+   "transparent_pass_ms": 0.0,
+   "gtao_ms": 0.131,
+   "shadows_ms": 0.041,
+   "cpu_encode_ms": 0.318,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 0.936,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    0.363,
+    0.362,
+    0.364
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "opaque": {
+   "gpu_ms": 0.606,
+   "opaque_pass_ms": 0.376,
+   "transparent_pass_ms": 0.0,
+   "gtao_ms": 0.154,
+   "shadows_ms": 0.154,
+   "cpu_encode_ms": 0.326,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 1.198,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    0.606,
+    0.608,
+    0.606
+   ],
+   "gpu_over_hidden_ms": 0.243,
+   "cpu_over_hidden_ms": 0.008
+  },
+  "blend": {
+   "gpu_ms": 0.609,
+   "opaque_pass_ms": 0.165,
+   "transparent_pass_ms": 0.312,
+   "gtao_ms": 0.145,
+   "shadows_ms": 0.049,
+   "cpu_encode_ms": 0.422,
+   "transparent_ms": 0.077,
+   "submit_to_idle_ms": 1.296,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    0.609,
+    0.61,
+    0.609
+   ],
+   "gpu_over_hidden_ms": 0.246,
+   "cpu_over_hidden_ms": 0.104
+  },
+  "glass": {
+   "gpu_ms": 0.612,
+   "opaque_pass_ms": 0.15,
+   "transparent_pass_ms": 0.295,
+   "gtao_ms": 0.138,
+   "shadows_ms": 0.045,
+   "cpu_encode_ms": 0.419,
+   "transparent_ms": 0.077,
+   "submit_to_idle_ms": 1.291,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    0.612,
+    0.611,
+    0.612
+   ],
+   "gpu_over_hidden_ms": 0.249,
+   "cpu_over_hidden_ms": 0.101
+  },
+  "double": {
+   "gpu_ms": 0.859,
+   "opaque_pass_ms": 0.137,
+   "transparent_pass_ms": 0.528,
+   "gtao_ms": 0.136,
+   "shadows_ms": 0.042,
+   "cpu_encode_ms": 0.433,
+   "transparent_ms": 0.08,
+   "submit_to_idle_ms": 1.569,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    0.859,
+    0.859,
+    0.859
+   ],
+   "gpu_over_hidden_ms": 0.496,
+   "cpu_over_hidden_ms": 0.115
+  }
+ }
+}

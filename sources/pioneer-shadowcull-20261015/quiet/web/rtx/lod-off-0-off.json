@@ -1,0 +1,69 @@
+{
+ "url": "http://<local-endpoint>/viewport/?demo=lod&t=0&lod=off&shadow_cull=off",
+ "stats": {
+  "url": "http://<local-endpoint>/viewport/?demo=lod&t=0&lod=off&shadow_cull=off",
+  "frames": 300,
+  "frame_ms_mean": 5.899750000000001,
+  "frame_ms_p50": 0.6933333333333318,
+  "frame_ms_p95": 37.519999999999996,
+  "gpu_ms_mean": 16.240503333333333,
+  "gpu_ms_timed_mean": 91.92737735849056,
+  "gpu_timed_frames": 53,
+  "antialiasing": "msaa",
+  "render_ms_mean": 1.746333333849907,
+  "backend": "WebGPU",
+  "passes": [
+   {
+    "pass": "cull",
+    "ms": 0.01
+   },
+   {
+    "pass": "lights",
+    "ms": 0.002
+   },
+   {
+    "pass": "shadows",
+    "ms": 37.705
+   },
+   {
+    "pass": "depth prepass",
+    "ms": 21.999
+   },
+   {
+    "pass": "opaque early",
+    "ms": 31.908
+   },
+   {
+    "pass": "hi-z",
+    "ms": 0.055
+   },
+   {
+    "pass": "cull late",
+    "ms": 0.006
+   },
+   {
+    "pass": "opaque+sky",
+    "ms": 0.011
+   }
+  ],
+  "draw_path": "first-instance",
+  "draw_calls": 40,
+  "instances": 2305,
+  "occlusion": "auto-on",
+  "occluded": 274,
+  "canvas": [
+   1254,
+   564
+  ],
+  "gpu": "yes"
+ },
+ "id_pass": {
+  "error": "no coverage",
+  "debug": "want=None in_flight=true request=Some(Full) mapping=true ready=false failed=false"
+ },
+ "logs": [
+  "[log] [pocket INFO] limits: buffer 2048 MB, storage binding 2047 MB, storage buffers/stage 16, texture 2D 16384",
+  "[log] [pocket INFO] GPU:  (BrowserWebGpu, Other); driver  ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: false, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+  "[info] demo=lod: meshes, levels and field in 707.7 ms"
+ ]
+}

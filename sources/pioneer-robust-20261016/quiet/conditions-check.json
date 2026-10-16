@@ -1,0 +1,68 @@
+{
+ "label": "quiet-robust-check",
+ "time": "2026-10-16 03:16:11",
+ "on_ac_power": true,
+ "power_plan": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+ "adapters": [
+  {
+   "Name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "DriverVersion": "32.0.16.1714"
+  },
+  {
+   "Name": "AMD Radeon 780M Graphics",
+   "DriverVersion": "32.0.13062.3005"
+  }
+ ],
+ "nvidia": {
+  "query": {
+   "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+   "driver_version": "617.14",
+   "temperature.gpu": "64",
+   "clocks.sm": "667",
+   "clocks.max.sm": "3090",
+   "clocks.mem": "810",
+   "power.draw": "10.60",
+   "pstate": "P5",
+   "utilization.gpu": "38",
+   "memory.used": "222",
+   "clocks_event_reasons.active": "0x0000000000000400"
+  }
+ },
+ "cpu_load": {
+  "samples_pct": [
+   51.9,
+   50.5,
+   46.8,
+   46.7,
+   44.1,
+   30.3,
+   30.4,
+   26.3,
+   24.8,
+   14.4
+  ],
+  "mean_pct": 36.6
+ },
+ "gpu_engine_users": [
+  {
+   "pct": 7.9
+  },
+  {
+   "pct": 11.6
+  },
+  {
+   "pct": 33.6
+  },
+  {
+   "pct": 5.2
+  },
+  {
+   "pct": 8.1
+  }
+ ],
+ "sanitization": {
+  "source_file": "out/robust/quiet/conditions-check.json",
+  "source_commit": "495703d3e67dd613fe52fcaed476e973e87cbb11",
+  "policy": "Public numeric conditions only; process names, full command lines, PIDs and private process inventories omitted."
+ }
+}

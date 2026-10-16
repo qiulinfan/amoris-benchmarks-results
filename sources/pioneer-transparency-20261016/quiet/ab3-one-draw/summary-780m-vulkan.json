@@ -1,0 +1,50 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "AMD Radeon 780M Graphics",
+ "backend": "Vulkan",
+ "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "taa",
+ "gtao": "off",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 1.832,
+   "opaque_pass_ms": 0.549,
+   "shadows_ms": 0.687,
+   "cpu_encode_ms": 0.592,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 3.334,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    1.832,
+    1.834,
+    1.805
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "double": {
+   "gpu_ms": 3.694,
+   "opaque_pass_ms": 2.365,
+   "shadows_ms": 0.898,
+   "cpu_encode_ms": 0.792,
+   "transparent_ms": 0.1,
+   "submit_to_idle_ms": 5.879,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    3.648,
+    3.713,
+    3.694
+   ],
+   "gpu_over_hidden_ms": 1.862,
+   "cpu_over_hidden_ms": 0.2
+  }
+ }
+}

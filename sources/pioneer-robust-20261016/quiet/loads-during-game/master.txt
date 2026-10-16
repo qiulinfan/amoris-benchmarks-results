@@ -1,0 +1,33 @@
+FAIL load 1: ready 2.3 s, remounted true, canvas flat 0.164, {"pocket":true,"viewport":"wasm","engine":true,"generation":1,"frames":3,"renderer":{"entities":5,"draw_calls":40,"backend":"WebGPU"},"wasm_fetches":2}
+     errors: 3 exception, 2 error
+     2.1s [exception] Error: closure invoked recursively or after being dropped
+     2.3s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     2.3s [exception] RuntimeError: unreachable
+     2.3s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     2.3s [exception] RuntimeError: unreachable
+ok   load 2: ready 1.8 s, remounted true, canvas flat 0.164, {"pocket":true,"viewport":"wasm","engine":true,"generation":1,"frames":11,"renderer":{"entities":5,"draw_calls":40,"backend":"WebGPU"},"wasm_fetches":2}
+FAIL load 3: ready - s, remounted false, canvas flat 0.987, {"pocket":true,"viewport":null,"engine":false,"generation":0,"frames":0,"renderer":null,"wasm_fetches":2}
+     no new wasm viewport attached: {"pocket":true,"viewport":null,"engine":false,"generation":0,"frames":0,"renderer":null,"wasm_fetches":2}
+     errors: 3 exception, 2 error
+     0.8s [exception] Error: closure invoked recursively or after being dropped
+     17.6s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     17.6s [exception] RuntimeError: unreachable
+     17.6s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     17.6s [exception] RuntimeError: unreachable
+FAIL load 4: ready 1.6 s, remounted true, canvas flat 0.164, {"pocket":true,"viewport":"wasm","engine":true,"generation":1,"frames":15,"renderer":{"entities":5,"draw_calls":40,"backend":"WebGPU"},"wasm_fetches":2}
+     errors: 1 exception
+     1.3s [exception] Error: closure invoked recursively or after being dropped
+FAIL load 5: ready 0.9 s, remounted true, canvas flat 0.164, {"pocket":true,"viewport":"wasm","engine":true,"generation":1,"frames":15,"renderer":{"entities":5,"draw_calls":40,"backend":"WebGPU"},"wasm_fetches":2}
+     errors: 1 exception
+     0.7s [exception] Error: closure invoked recursively or after being dropped
+FAIL layout reset (the viewport panel remounted): ready 0.6 s, remounted true, canvas flat 0.167, {"pocket":true,"viewport":"wasm","engine":true,"generation":2,"frames":0,"renderer":{"entities":0,"draw_calls":0,"backend":"WebGPU"},"wasm_fetches":2}
+     the viewport drew no frames of the world: {"pocket":true,"viewport":"wasm","engine":true,"generation":2,"frames":0,"renderer":{"gpu_ms":0,"instances":0,"entities":0,"meshes":28,"pending_assets":0,"tick":0,"backend":"WebGPU","draw_path":"first-instance","draw_calls":0,"occlusion":"auto-off","occluded":0,"prepass":"auto-off","lod":"on","antialiasing":"msaa","gtao":"off","render_scale":1,"passes":[]},"wasm_fetches":2}
+     errors: 2 error, 5 exception
+     0.3s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     0.3s [exception] RuntimeError: unreachable
+     0.4s [exception] RuntimeError: memory access out of bounds
+     0.4s [error] pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:
+     0.4s [exception] RuntimeError: unreachable
+     0.6s [exception] RuntimeError: memory access out of bounds
+     0.6s [exception] Error: recursive use of an object detected which would lead to unsafe aliasing in rust
+1 of 6 phases passed; <local-path>\out\robust\quiet\loads\master\loads.json

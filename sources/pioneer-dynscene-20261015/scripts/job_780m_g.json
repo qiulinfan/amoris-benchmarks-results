@@ -1,0 +1,4 @@
+[
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "g=<local-path>/out/dynscene/g", "--cases", "moving-10k,moving-100k,sparse-10k,sparse-100k", "--backends", "dx12,vulkan", "--adapters", "780m", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/g-780m.json"],
+ ["python", "tools/build_compare.py", "--before", "<local-path>/out/dynscene/before", "--backends", "dx12,vulkan", "--adapters", "780m", "--modes", "msaa,taa", "--out", "target/build-compare", "--summary", "target/build-compare/780m.json"]
+]

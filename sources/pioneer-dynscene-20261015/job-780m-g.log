@@ -1,0 +1,70 @@
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+[bench_lock] waiting for webauto ...
+$ python tools/dynamic_scenes_bench.py --build g=<local-path>/out/dynscene/g --cases moving-10k,moving-100k,sparse-10k,sparse-100k --backends dx12,vulkan --adapters 780m --frames 60 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/g-780m.json
+{"case": "moving-10k", "backend": "dx12", "adapter": "780m", "build": "g", "seconds": 11.2, "headline": {"apply": 0.828, "feed": 0.378, "scene sync": 0.2117, "render cpu": 1.015, "frame": 9.301, "gpu": 6.516}, "error": null}
+{"case": "moving-10k", "backend": "vulkan", "adapter": "780m", "build": "g", "seconds": 9.6, "headline": {"apply": 0.862, "feed": 0.396, "scene sync": 0.162, "render cpu": 0.837, "frame": 9.434, "gpu": 6.52}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": "780m", "build": "g", "seconds": 10.6, "headline": {"apply": 6.358, "feed": 3.215, "scene sync": 0.7847, "render cpu": 1.65, "frame": 24.18, "gpu": 12.152}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": "780m", "build": "g", "seconds": 9.7, "headline": {"apply": 6.179, "feed": 3.33, "scene sync": 0.6579, "render cpu": 1.325, "frame": 24.072, "gpu": 12.306}, "error": null}
+{"case": "sparse-10k", "backend": "dx12", "adapter": "780m", "build": "g", "seconds": 9.4, "headline": {"apply": 1.168, "feed": 0.392, "scene sync": 0.5806, "render cpu": 1.639, "frame": 11.295, "gpu": 7.416}, "error": null}
+{"case": "sparse-10k", "backend": "vulkan", "adapter": "780m", "build": "g", "seconds": 9.0, "headline": {"apply": 1.348, "feed": 0.393, "scene sync": 0.5252, "render cpu": 1.457, "frame": 11.634, "gpu": 7.717}, "error": null}
+{"case": "sparse-100k", "backend": "dx12", "adapter": "780m", "build": "g", "seconds": 12.2, "headline": {"apply": 8.548, "feed": 3.62, "scene sync": 4.0575, "render cpu": 5.173, "frame": 32.455, "gpu": 13.957}, "error": null}
+{"case": "sparse-100k", "backend": "vulkan", "adapter": "780m", "build": "g", "seconds": 11.6, "headline": {"apply": 8.278, "feed": 3.596, "scene sync": 3.7342, "render cpu": 4.457, "frame": 31.887, "gpu": 14.43}, "error": null}
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-10k | dx12 | 780m | g | 0.828 | 0.212 | 1.015 | 9.301 | 6.516 | 390 |
+| moving-10k | vulkan | 780m | g | 0.862 | 0.162 | 0.837 | 9.434 | 6.520 | 2992 |
+| moving-100k | dx12 | 780m | g | 6.358 | 0.785 | 1.650 | 24.180 | 12.152 | 1177.0 |
+| moving-100k | vulkan | 780m | g | 6.179 | 0.658 | 1.325 | 24.072 | 12.306 | 1335.0 |
+| sparse-10k | dx12 | 780m | g | 1.168 | 0.581 | 1.639 | 11.295 | 7.416 | 5145.0 |
+| sparse-10k | vulkan | 780m | g | 1.348 | 0.525 | 1.457 | 11.634 | 7.717 | 1042.0 |
+| sparse-100k | dx12 | 780m | g | 8.548 | 4.058 | 5.173 | 32.455 | 13.957 | 300.0 |
+| sparse-100k | vulkan | 780m | g | 8.278 | 3.734 | 4.457 | 31.887 | 14.430 | 3105.0 |
+$ python tools/build_compare.py --before <local-path>/out/dynscene/before --backends dx12,vulkan --adapters 780m --modes msaa,taa --out target/build-compare --summary target/build-compare/780m.json
+cubes-shadows  msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+splats         msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+gi-room        msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+pt-lab         msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+crowd          msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa              dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa dx12 780m before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+splats         taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+crowd          taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa               dx12    780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa dx12 780m before: no capture; nne\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\image-0.25.10\src\io\encoder.rs:115:17:
+assertion `left == right` failed: Invalid buffer length: expected 5760000 got 0 for 1600x900 image
+  left: 5760000
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+cubes-shadows  msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense    msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+splats         msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+gi-room        msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+pt-lab         msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+crowd          msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving   msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving msaa              vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-shadows  taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense    taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+splats         taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+crowd          taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving   taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-moving-sparse taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+cubes-dense-moving taa               vulkan  780m    rmse 0.000 max   0 >1 0.0%
+30 successful pairs, 2 failed, 0 differ

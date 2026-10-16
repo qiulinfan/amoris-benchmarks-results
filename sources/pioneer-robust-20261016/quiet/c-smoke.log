@@ -1,0 +1,60 @@
+host at http://<local-endpoint>
+ok   cli status: tick 0 (0.00 s) edit paused real-time x1.0 | 9 entities | hash 6673c43227e4 | scripts 3ae1a99021d4
+ok   cli world tree: 9 entities
+ok   cli world set: set Cargo on Crate1 (1 edit at tick 0)
+ok   cli edit applied
+ok   cli undo: undone: set Cargo on Crate1 (1 edit at tick 0)
+ok   cli undo restored the value
+ok   cli step --until: tick 1 hash ea73a44b1682 | stopped by #id1 t=1 sail.set subject=3 {"tick":1}
+ok   cli step until a field: tick 17 hash 8f53d0a22270 | stopped: Boat.speed 0.9639983504867307 -> 1.030825919656487
+ok   cli profile: ['17 ticks to tick 17 (epoch 0): tick 0.152 ms (max 0.724), game thread 0.269 ms per tick']
+ok   cli refusal: request.unknown_field: Boat has no field 'ruder'; did you mean 'rudder'?
+ok   cli play start: tick 17 (0.28 s) play running real-time x4.0 | 9 entities | hash 8f53d0a22270 | scripts 3ae1a99021d4
+ok   cli play stop: tick 17 (0.28 s) edit paused real-time x1.0 | 9 entities | hash 8f53d0a22270 | scripts 3ae1a99021d4
+ok   cli help from the catalog
+ok   catalog: 64 commands with schemas
+ok   api status
+ok   api world.edit destroy
+ok   api undo revives Crate2 under its id
+ok   api unknown method refused
+ok   ws: status pushed on connect
+ok   ws subscribe refuses a topic the host does not push, by its index
+ok   ws subscribe
+ok   ws world.edit
+ok   ws: history pushed after the edit
+ok   ws: world.changed pushed {'changed': [[6, 'Cargo']], 'despawned': [], 'spawned': [], 'tick': 17}
+ok   ws history.undo
+ok   ws time.step
+ok   ws play.start
+ok   ws: world.changed reset on Play
+info ws: events pushed during Play: yes
+ok   ws: profile pushed in Play (29 ticks, epoch 3)
+ok   ws play.stop
+ok   api events.since: last 3
+ok   api events.why
+ok   mcp initialize
+ok   mcp tools/list: 11 tools, 9194 bytes (~2298 tokens)
+ok   mcp world tree: [{"children":[],"components":["Boat","Collider","Crew","ExternalForce","Floater"
+ok   mcp refusal carries the problem
+ok   mcp time step
+ok   mcp debug state: {"attached":false,"breakpoints":[],"cdp":{"devtools":"devtools://devtools/bundle
+ok   mcp debug tool lists 20 parameters
+ok   cli debug break: bp1 scripts/rules.ts:27
+ok   cli step returns at the breakpoint in 24 ms: tick 58 hash - | stopped at scripts/rules.ts:27 (breakpoint bp1 in log, tick 58): pocket debug state | pocket debug continue
+ok   cli status while held, 16 ms: tick 57 (0.95 s) edit paused real-time x1.0 | 9 entities | hash 039b9c015738 | scripts 3ae1a99021d4 | HELD at scripts/rules.ts:27 (breakpoint bp1 in log, tick 58)
+ok   cli world get fields while held, 20 ms
+ok   cli world tree while held
+ok   cli scripts read --lines: 27|             const speed = Math.abs(b.speed[r]);
+ok   cli scripts apply refused at once while held, 22 ms
+ok   cli debug state, 307 bytes
+ok   cli debug eval: 1  (number)
+ok   mcp debug state brief: 660 bytes
+ok   mcp world get while held
+ok   api debug.watch by name
+ok   cli debug continue
+ok   cli step after: tick 59 hash 4ba77ea52df1
+ok   cli restore keeps the applied scripts: restored tick 0; scripts dd3ac0de7414 (applied) | tick 0 (0.00 s) edit paused real-time x1.0 | 9 entities | hash 6673c43227e4 | scripts dd3ac0de7414
+ok   cli restore --bundle snapshot: restored tick 0; scripts 3ae1a99021d4 (snapshot) | tick 0 (0.00 s) edit paused real-time x1.0 | 9 entities | hash 6673c43227e4 | scripts 3ae1a99021d4
+ok   host.json removed on shutdown
+
+0 failures

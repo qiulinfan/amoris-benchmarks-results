@@ -1,0 +1,53 @@
+    // Throwaway probe (explore/robust, 2026-10-15; not committed): PROBE_N calibrations in one
+    // process, PROBE_GAP_MS idle between them, each calibration's raw samples appended as JSON
+    // lines to PROBE_OUT: [before_s, after_s, begin_ticks, end_ticks] per round.
+    #[test]
+    #[ignore]
+    #[cfg(not(target_arch = "wasm32"))]
+    fn calibration_probe() {
+        let gpu = crate::Gpu::headless(crate::BackendChoice::from_env()).expect("a GPU");
+        let env = |k: &str, d: u64| {
+            std::env::var(k)
+                .ok()
+                .and_then(|s| s.parse().ok())
+                .unwrap_or(d)
+        };
+        let n = env("PROBE_N", 20);
+        let gap = env("PROBE_GAP_MS", 0);
+        let out = std::env::var("PROBE_OUT").expect("PROBE_OUT");
+        let period_s = f64::from(gpu.queue.get_timestamp_period()) * 1e-9;
+        let mut lines = String::new();
+        let t0 = crate::web_time();
+        for k in 0..n {
+            if gap > 0 {
+                std::thread::sleep(std::time::Duration::from_millis(gap));
+            }
+            let line = match calibration_samples(&gpu.device, &gpu.queue, &gpu.info) {
+                Ok(samples) => {
+                    let rows: Vec<_> = samples
+                        .iter()
+                        .map(|s| json!([s.before, s.after, s.begin, s.end]))
+                        .collect();
+                    let brackets: Vec<_> = samples
+                        .iter()
+                        .map(|s| (s.before, s.after, s.begin as f64 * period_s))
+                        .collect();
+                    json!({"k": k, "t0": t0, "period_s": period_s, "ok": intersect(&brackets, MAX_CLOCK_DRIFT).is_some(), "ok_exact": intersect(&brackets, 0.0).is_some(),
+                           "adapter": gpu.info.name, "backend": format!("{:?}", gpu.info.backend),
+                           "samples": rows})
+                }
+                Err(e) => json!({"k": k, "err": e}),
+            };
+            lines += &line.to_string();
+            lines.push('\n');
+        }
+        use std::io::Write;
+        std::fs::OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open(out)
+            .unwrap()
+            .write_all(lines.as_bytes())
+            .unwrap();
+    }
+

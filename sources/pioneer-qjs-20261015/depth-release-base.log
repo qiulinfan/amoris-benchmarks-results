@@ -1,0 +1,26 @@
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+warning: rquickjs-sys@0.14.0: clang-cl: warning: argument unused during compilation: '/experimental:c11atomics' [-Wunused-command-line-argument]
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.21s
+     Running tests\depth.rs (<local-path>/out/qjs/target-rev\release\deps\depth-d175ac0788053317.exe)
+
+running 7 tests
+test a_memory_fault_poisons_the_world ... ok
+test a_panic_outside_any_native_faults_and_keeps_the_scripts ... 
+thread 'a_panic_outside_any_native_faults_and_keeps_the_scripts' (<tid>) panicked at crates\pocket-script\tests\depth.rs:276:5:
+the accessor is broken
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+ok
+test a_panicking_native_poisons_the_world_and_the_process_lives ... 
+thread 'a_panicking_native_poisons_the_world_and_the_process_lives' (<tid>) panicked at crates\pocket-script\tests\depth.rs:276:5:
+the accessor is broken
+ok
+test depth_fails_at_exactly_the_limit ... ok
+test proxy_chains_stop_by_depth ... ok
+test running_out_of_memory_on_small_allocations_faults_too ... ok
+test the_default_stack_holds_the_depth_limit ... release: 368468 bytes of stack at max_call_depth 200; stack_bytes 1048576 (needs 552702)
+ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+

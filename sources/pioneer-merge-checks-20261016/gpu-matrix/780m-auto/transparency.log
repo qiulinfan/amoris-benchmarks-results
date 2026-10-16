@@ -1,0 +1,33 @@
+
+running 6 tests
+test transparent_instances_never_occlude_and_are_picked ... ok
+test panes_converge_under_taa_at_a_render_scale_below_one ... ok
+test gtao_darkens_what_shows_through_a_pane_by_its_transmittance_only ... ok
+test the_stage_follows_the_opaque_pass_format_on_one_renderer ... ok
+test overlapping_blended_quads_compose_back_to_front_in_any_order ... ok
+test transparent_casters_shadow_by_their_opacity ... ok
+
+successes:
+
+---- gtao_darkens_what_shows_through_a_pane_by_its_transmittance_only stdout ----
+Msaa, occlusion Off: 6530 pixels, ratio 0.9985, worst 0.00012207031
+Msaa, occlusion On: 6530 pixels, ratio 0.9985, worst 0.00012207031
+Off, occlusion Off: 6339 pixels, ratio 0.9985, worst 0.00012207031
+Off, occlusion On: 6339 pixels, ratio 0.9985, worst 0.00012207031
+
+---- transparent_casters_shadow_by_their_opacity stdout ----
+cascades: lit [0.6852727, 0.68485844, 0.68485844, 0.68485844], shadowed [0.04725149, 0.68485844, 0.04725149, 0.68485844]
+ray traced: lit [0.6852727, 0.68485844, 0.68485844, 0.68485844], shadowed [0.04725149, 0.68485844, 0.04725149, 0.68485844]
+
+
+successes:
+    gtao_darkens_what_shows_through_a_pane_by_its_transmittance_only
+    overlapping_blended_quads_compose_back_to_front_in_any_order
+    panes_converge_under_taa_at_a_render_scale_below_one
+    the_stage_follows_the_opaque_pass_format_on_one_renderer
+    transparent_casters_shadow_by_their_opacity
+    transparent_instances_never_occlude_and_are_picked
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.99s
+
+

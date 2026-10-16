@@ -1,0 +1,18 @@
+diff --git a/third_party/rquickjs-sys-0.14.0/build.rs b/third_party/rquickjs-sys-0.14.0/build.rs
+index b98952a2..6492eb36 100644
+--- a/third_party/rquickjs-sys-0.14.0/build.rs
++++ b/third_party/rquickjs-sys-0.14.0/build.rs
+@@ -169,6 +169,13 @@ fn main() {
+     // takes it through /clang:, and MSVC's cl contracts only under /fp:contract, never passed.
+     if clang_cl {
+         builder.flag("/clang:-ffp-contract=off");
++        // EXPERIMENT flags5 (not committed): wasm32's values for the five MSVC defaults.
++        builder
++            .flag("/clang:-fstrict-aliasing")
++            .flag("/clang:-fno-math-errno")
++            .flag("/GS-")
++            .flag("/clang:-fno-wrapv")
++            .flag("/volatile:iso");
+     } else {
+         builder.flag_if_supported("-ffp-contract=off");
+     }

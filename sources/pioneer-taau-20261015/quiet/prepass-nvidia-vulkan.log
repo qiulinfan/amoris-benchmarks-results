@@ -1,0 +1,243 @@
+  cubes-sphere     vulkan  nvidia   ok
+  cubes-sphere     vulkan  nvidia   ok
+cubes-sphere     {"rmse_8bit": 0.006, "psnr_db": 92.53, "max_diff_8bit": 6, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  cubes-dense      vulkan  nvidia   ok
+  cubes-dense      vulkan  nvidia   ok
+cubes-dense      {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  cubes-shadows    vulkan  nvidia   ok
+  cubes-shadows    vulkan  nvidia   ok
+cubes-shadows    {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  splats           vulkan  nvidia   ok
+  splats           vulkan  nvidia   ok
+splats           {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  gi-room-static   vulkan  nvidia   ok
+  gi-room-static   vulkan  nvidia   ok
+gi-room-static   {"rmse_8bit": 0.0, "psnr_db": null, "max_diff_8bit": 0, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+  pt-lab-static    vulkan  nvidia   ok
+  pt-lab-static    vulkan  nvidia   ok
+pt-lab-static    {"rmse_8bit": 0.003, "psnr_db": 98.93, "max_diff_8bit": 4, "pixels_over_percent": {">1": 0.0, ">16": 0.0, ">2": 0.0, ">32": 0.0, ">4": 0.0, ">64": 0.0, ">8": 0.0}}
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-15 15:06",
+ "backend": "vulkan",
+ "adapter": "nvidia",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.6,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.1,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.006,
+    "psnr_db": 92.53,
+    "max_diff_8bit": 6,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-dense": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-dense-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.0,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-dense-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 2.0,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "cubes-shadows": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-shadows-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.1,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\cubes-shadows-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 0.6,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "splats": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\splats-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 1.5,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\splats-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Vulkan, DiscreteGpu); driver NVIDIA 617.14; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 0.8,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "gi-room-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\gi-room-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.6,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\gi-room-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.0,
+    "psnr_db": null,
+    "max_diff_8bit": 0,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  },
+  "pt-lab-static": {
+   "captures": [
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\pt-lab-static-off.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.7,
+     "prepass": "off"
+    },
+    {
+     "backend": "vulkan",
+     "adapter": "nvidia",
+     "png": "<local-path>\\out\\taau\\quiet\\prepass\\nvidia-vulkan\\pt-lab-static-on.png",
+     "gpu": "\"adapter\": \"NVIDIA GeForce RTX 5060 Laptop GPU\",",
+     "ok": true,
+     "seconds": 0.5,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.003,
+    "psnr_db": 98.93,
+    "max_diff_8bit": 4,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}

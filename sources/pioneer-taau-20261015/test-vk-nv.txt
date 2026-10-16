@@ -1,0 +1,20 @@
+[bench_lock] waiting for shadowcull ...
+
+running 3 tests
+test picking_and_captures_work_below_scale_one ... scale 0.5: first frame 27.42 dB, a still capture 31.96 dB
+ok
+test render_scale_changes_reset_and_return ... ok
+test upscaling_converges_on_a_still_scene ... scale 0.5: first frame 27.3 dB, frame 64 32.4 dB (scale 1: 40.8)
+
+thread 'upscaling_converges_on_a_still_scene' (<tid>) panicked at crates\pocket-render\tests\taa.rs:1138:9:
+scale 0.5: frame 64 at 32.4 dB, scale 1 at 40.8 dB
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+FAILED
+
+failures:
+
+failures:
+    upscaling_converges_on_a_still_scene
+
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 11 filtered out; finished in 5.80s
+

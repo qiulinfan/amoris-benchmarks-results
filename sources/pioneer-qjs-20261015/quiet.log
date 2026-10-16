@@ -1,0 +1,383 @@
++ <local-path>\out\qjs\bin\base\rules_bench.exe --emit <local-path>\out\qjs\quiet\sets-base --warmup 120 --ticks 600
+{"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --emit <local-path>\out\qjs\quiet\sets-p12 --warmup 120 --ticks 600
+{"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --emit <local-path>\out\qjs\quiet\sets-natives --warmup 120 --ticks 600
+{"chain":"241f611fc67a04f2","damaged_events":2880,"final":"e13690add0b3a196","hits":714648,"identical":true,"kills":10828,"ticks":720}
+verified: every build ends on e13690add0b3a196
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-start.json --label qjs-start
+2026-10-15 16:03:27 qjs-start: AC True, CPU 3.4%, RTX 54 C 0/3090 MHz 11.50 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-r1.json --label qjs-r1
+2026-10-15 16:03:37 qjs-r1: AC True, CPU 4.3%, RTX 54 C 0/3090 MHz 10.16 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\out\qjs\bin\base\rules_bench.exe --rounds 1 --offset 0 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-base-r1.json
+round 1 rules tick median 3767.9 us min 3583.7 p99 4211.3 | system 3736.6 | steps 62518.0
+round 1 twin  tick median 134.0 us min 129.5 p99 156.7 | system 115.4 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 9.1 | system 5.7 | steps 7.0
+round 1 scan  tick median 264.4 us min 261.2 p99 320.0 | system 263.3 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-base-r1.json
++ <local-path>\out\qjs\bin\base\qjs_micro.exe --rounds 1 --offset 0 --json <local-path>\out\qjs\quiet\micro-base-r1.json
+round 1 loop   21.47 ns/iter  tick median 4293.3 us  steps 400009
+round 1 int    22.2 ns/iter  tick median 4439.2 us  steps 400009
+round 1 call   45.21 ns/iter  tick median 9041.7 us  steps 600009
+round 1 f64    74.05 ns/iter  tick median 14810.7 us  steps 600010
+round 1 prop   26.98 ns/iter  tick median 5396.2 us  steps 400009
+round 1 sqrt   44.51 ns/iter  tick median 8902.1 us  steps 600009
+round 1 sin    109.02 ns/iter  tick median 21804.6 us  steps 600009
+round 1 cos    114.08 ns/iter  tick median 22816.2 us  steps 600009
+round 1 atan2  130.01 ns/iter  tick median 26001.2 us  steps 600009
+round 1 pow    169.15 ns/iter  tick median 33829.4 us  steps 600009
+round 1 hypot  172.24 ns/iter  tick median 34448.5 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-base-r1.json
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --rounds 1 --offset 0 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-p12-r1.json
+round 1 rules tick median 3535.6 us min 3386.4 p99 4310.3 | system 3509.1 | steps 62518.0
+round 1 twin  tick median 136.6 us min 130.7 p99 188.0 | system 117.7 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 10.4 | system 5.7 | steps 7.0
+round 1 scan  tick median 263.6 us min 260.2 p99 398.2 | system 262.5 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-p12-r1.json
++ <local-path>\out\qjs\bin\p12\qjs_micro.exe --rounds 1 --offset 0 --json <local-path>\out\qjs\quiet\micro-p12-r1.json
+round 1 loop   20.54 ns/iter  tick median 4107.9 us  steps 400009
+round 1 int    20.82 ns/iter  tick median 4163.6 us  steps 400009
+round 1 call   43.2 ns/iter  tick median 8639.7 us  steps 600009
+round 1 f64    71.68 ns/iter  tick median 14335.1 us  steps 600010
+round 1 prop   25.99 ns/iter  tick median 5197.8 us  steps 400009
+round 1 sqrt   43.81 ns/iter  tick median 8762.4 us  steps 600009
+round 1 sin    110.14 ns/iter  tick median 22028.8 us  steps 600009
+round 1 cos    109.56 ns/iter  tick median 21912.9 us  steps 600009
+round 1 atan2  127.27 ns/iter  tick median 25453.6 us  steps 600009
+round 1 pow    163.14 ns/iter  tick median 32628.9 us  steps 600009
+round 1 hypot  169.7 ns/iter  tick median 33940.2 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-p12-r1.json
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --rounds 1 --offset 0 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-natives-r1.json
+round 1 rules tick median 3377.5 us min 3252.1 p99 4121.1 | system 3351.0 | steps 62518.0
+round 1 twin  tick median 130.7 us min 127.9 p99 157.2 | system 111.7 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 6.6 | system 5.7 | steps 7.0
+round 1 scan  tick median 256.7 us min 254.2 p99 312.3 | system 255.7 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-natives-r1.json
++ <local-path>\out\qjs\bin\natives\qjs_micro.exe --rounds 1 --offset 0 --json <local-path>\out\qjs\quiet\micro-natives-r1.json
+round 1 loop   21.74 ns/iter  tick median 4347.9 us  steps 400009
+round 1 int    22.89 ns/iter  tick median 4578.6 us  steps 400009
+round 1 call   44.93 ns/iter  tick median 8985.2 us  steps 600009
+round 1 f64    62.79 ns/iter  tick median 12557.3 us  steps 600010
+round 1 prop   26.47 ns/iter  tick median 5293.9 us  steps 400009
+round 1 sqrt   44.38 ns/iter  tick median 8876.6 us  steps 600009
+round 1 sin    57.83 ns/iter  tick median 11565.0 us  steps 600009
+round 1 cos    68.58 ns/iter  tick median 13716.2 us  steps 600009
+round 1 atan2  56.65 ns/iter  tick median 11330.3 us  steps 600009
+round 1 pow    96.51 ns/iter  tick median 19301.0 us  steps 600009
+round 1 hypot  174.34 ns/iter  tick median 34868.7 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-natives-r1.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-r2.json --label qjs-r2
+2026-10-15 16:04:05 qjs-r2: AC True, CPU 3.8%, RTX 56 C 0/3090 MHz 11.60 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --rounds 1 --offset 1 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-p12-r2.json
+round 1 twin  tick median 136.0 us min 130.0 p99 156.4 | system 116.2 | steps 0.0
+round 1 idle  tick median 6.3 us min 6.2 p99 9.7 | system 5.6 | steps 7.0
+round 1 scan  tick median 261.3 us min 256.0 p99 341.1 | system 260.2 | steps 14.0
+round 1 rules tick median 3608.2 us min 3461.3 p99 4159.9 | system 3566.5 | steps 62518.0
+wrote <local-path>\out\qjs\quiet\rules-p12-r2.json
++ <local-path>\out\qjs\bin\p12\qjs_micro.exe --rounds 1 --offset 1 --json <local-path>\out\qjs\quiet\micro-p12-r2.json
+round 1 int    21.82 ns/iter  tick median 4364.5 us  steps 400009
+round 1 call   43.91 ns/iter  tick median 8782.1 us  steps 600009
+round 1 f64    73.68 ns/iter  tick median 14735.9 us  steps 600010
+round 1 prop   26.2 ns/iter  tick median 5239.0 us  steps 400009
+round 1 sqrt   44.22 ns/iter  tick median 8843.1 us  steps 600009
+round 1 sin    108.51 ns/iter  tick median 21702.4 us  steps 600009
+round 1 cos    108.49 ns/iter  tick median 21698.8 us  steps 600009
+round 1 atan2  129.87 ns/iter  tick median 25974.1 us  steps 600009
+round 1 pow    166.68 ns/iter  tick median 33335.7 us  steps 600009
+round 1 hypot  166.71 ns/iter  tick median 33342.3 us  steps 600009
+round 1 loop   21.33 ns/iter  tick median 4266.2 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-p12-r2.json
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --rounds 1 --offset 1 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-natives-r2.json
+round 1 twin  tick median 131.4 us min 128.5 p99 161.3 | system 112.6 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 6.8 | system 5.7 | steps 7.0
+round 1 scan  tick median 260.0 us min 257.1 p99 328.6 | system 259.0 | steps 14.0
+round 1 rules tick median 3336.1 us min 3239.7 p99 3750.9 | system 3299.7 | steps 62518.0
+wrote <local-path>\out\qjs\quiet\rules-natives-r2.json
++ <local-path>\out\qjs\bin\natives\qjs_micro.exe --rounds 1 --offset 1 --json <local-path>\out\qjs\quiet\micro-natives-r2.json
+round 1 int    23.53 ns/iter  tick median 4705.0 us  steps 400009
+round 1 call   44.81 ns/iter  tick median 8961.3 us  steps 600009
+round 1 f64    63.49 ns/iter  tick median 12697.7 us  steps 600010
+round 1 prop   26.2 ns/iter  tick median 5240.1 us  steps 400009
+round 1 sqrt   44.6 ns/iter  tick median 8919.2 us  steps 600009
+round 1 sin    55.55 ns/iter  tick median 11109.1 us  steps 600009
+round 1 cos    56.24 ns/iter  tick median 11248.4 us  steps 600009
+round 1 atan2  54.97 ns/iter  tick median 10994.0 us  steps 600009
+round 1 pow    95.3 ns/iter  tick median 19060.7 us  steps 600009
+round 1 hypot  169.77 ns/iter  tick median 33953.2 us  steps 600009
+round 1 loop   22.5 ns/iter  tick median 4500.9 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-natives-r2.json
++ <local-path>\out\qjs\bin\base\rules_bench.exe --rounds 1 --offset 1 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-base-r2.json
+round 1 twin  tick median 133.6 us min 128.5 p99 153.4 | system 114.9 | steps 0.0
+round 1 idle  tick median 9.0 us min 6.2 p99 15.2 | system 8.0 | steps 7.0
+round 1 scan  tick median 261.7 us min 258.2 p99 312.1 | system 260.6 | steps 14.0
+round 1 rules tick median 3590.1 us min 3482.8 p99 3910.3 | system 3556.4 | steps 62518.0
+wrote <local-path>\out\qjs\quiet\rules-base-r2.json
++ <local-path>\out\qjs\bin\base\qjs_micro.exe --rounds 1 --offset 1 --json <local-path>\out\qjs\quiet\micro-base-r2.json
+round 1 int    22.41 ns/iter  tick median 4481.8 us  steps 400009
+round 1 call   45.35 ns/iter  tick median 9070.8 us  steps 600009
+round 1 f64    74.39 ns/iter  tick median 14877.3 us  steps 600010
+round 1 prop   26.76 ns/iter  tick median 5352.3 us  steps 400009
+round 1 sqrt   43.18 ns/iter  tick median 8635.4 us  steps 600009
+round 1 sin    109.68 ns/iter  tick median 21935.2 us  steps 600009
+round 1 cos    108.89 ns/iter  tick median 21778.6 us  steps 600009
+round 1 atan2  132.1 ns/iter  tick median 26420.6 us  steps 600009
+round 1 pow    169.96 ns/iter  tick median 33992.0 us  steps 600009
+round 1 hypot  175.07 ns/iter  tick median 35014.5 us  steps 600009
+round 1 loop   20.8 ns/iter  tick median 4160.7 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-base-r2.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-r3.json --label qjs-r3
+2026-10-15 16:04:33 qjs-r3: AC True, CPU 4.0%, RTX 57 C 0/3090 MHz 11.76 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --rounds 1 --offset 2 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-natives-r3.json
+round 1 idle  tick median 6.4 us min 6.2 p99 6.6 | system 5.6 | steps 7.0
+round 1 scan  tick median 264.6 us min 258.1 p99 398.8 | system 263.6 | steps 14.0
+round 1 rules tick median 3326.5 us min 3244.7 p99 3692.2 | system 3296.5 | steps 62518.0
+round 1 twin  tick median 132.3 us min 129.3 p99 176.3 | system 113.6 | steps 0.0
+wrote <local-path>\out\qjs\quiet\rules-natives-r3.json
++ <local-path>\out\qjs\bin\natives\qjs_micro.exe --rounds 1 --offset 2 --json <local-path>\out\qjs\quiet\micro-natives-r3.json
+round 1 call   44.73 ns/iter  tick median 8945.8 us  steps 600009
+round 1 f64    62.15 ns/iter  tick median 12430.6 us  steps 600010
+round 1 prop   26.43 ns/iter  tick median 5285.2 us  steps 400009
+round 1 sqrt   43.91 ns/iter  tick median 8781.8 us  steps 600009
+round 1 sin    57.58 ns/iter  tick median 11516.4 us  steps 600009
+round 1 cos    56.94 ns/iter  tick median 11388.4 us  steps 600009
+round 1 atan2  53.96 ns/iter  tick median 10792.4 us  steps 600009
+round 1 pow    96.81 ns/iter  tick median 19362.1 us  steps 600009
+round 1 hypot  170.74 ns/iter  tick median 34148.0 us  steps 600009
+round 1 loop   20.67 ns/iter  tick median 4134.7 us  steps 400009
+round 1 int    22.21 ns/iter  tick median 4441.0 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-natives-r3.json
++ <local-path>\out\qjs\bin\base\rules_bench.exe --rounds 1 --offset 2 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-base-r3.json
+round 1 idle  tick median 6.3 us min 6.2 p99 6.6 | system 5.6 | steps 7.0
+round 1 scan  tick median 260.1 us min 253.7 p99 397.7 | system 259.1 | steps 14.0
+round 1 rules tick median 3651.3 us min 3540.9 p99 4183.1 | system 3618.0 | steps 62518.0
+round 1 twin  tick median 134.0 us min 128.6 p99 157.0 | system 115.2 | steps 0.0
+wrote <local-path>\out\qjs\quiet\rules-base-r3.json
++ <local-path>\out\qjs\bin\base\qjs_micro.exe --rounds 1 --offset 2 --json <local-path>\out\qjs\quiet\micro-base-r3.json
+round 1 call   45.27 ns/iter  tick median 9053.7 us  steps 600009
+round 1 f64    74.24 ns/iter  tick median 14848.4 us  steps 600010
+round 1 prop   26.91 ns/iter  tick median 5381.6 us  steps 400009
+round 1 sqrt   43.54 ns/iter  tick median 8708.7 us  steps 600009
+round 1 sin    108.34 ns/iter  tick median 21667.8 us  steps 600009
+round 1 cos    107.9 ns/iter  tick median 21579.1 us  steps 600009
+round 1 atan2  129.05 ns/iter  tick median 25809.6 us  steps 600009
+round 1 pow    168.07 ns/iter  tick median 33613.5 us  steps 600009
+round 1 hypot  169.01 ns/iter  tick median 33801.6 us  steps 600009
+round 1 loop   21.5 ns/iter  tick median 4300.6 us  steps 400009
+round 1 int    22.74 ns/iter  tick median 4547.5 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-base-r3.json
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --rounds 1 --offset 2 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-p12-r3.json
+round 1 idle  tick median 6.4 us min 6.2 p99 8.1 | system 5.7 | steps 7.0
+round 1 scan  tick median 261.1 us min 256.0 p99 331.2 | system 260.0 | steps 14.0
+round 1 rules tick median 3519.6 us min 3406.3 p99 3934.5 | system 3486.7 | steps 62518.0
+round 1 twin  tick median 132.5 us min 127.9 p99 153.1 | system 113.9 | steps 0.0
+wrote <local-path>\out\qjs\quiet\rules-p12-r3.json
++ <local-path>\out\qjs\bin\p12\qjs_micro.exe --rounds 1 --offset 2 --json <local-path>\out\qjs\quiet\micro-p12-r3.json
+round 1 call   44.53 ns/iter  tick median 8906.5 us  steps 600009
+round 1 f64    71.76 ns/iter  tick median 14352.6 us  steps 600010
+round 1 prop   26.03 ns/iter  tick median 5206.4 us  steps 400009
+round 1 sqrt   44.6 ns/iter  tick median 8919.5 us  steps 600009
+round 1 sin    109.31 ns/iter  tick median 21861.8 us  steps 600009
+round 1 cos    109.73 ns/iter  tick median 21945.7 us  steps 600009
+round 1 atan2  127.5 ns/iter  tick median 25499.9 us  steps 600009
+round 1 pow    164.11 ns/iter  tick median 32822.3 us  steps 600009
+round 1 hypot  181.71 ns/iter  tick median 36341.2 us  steps 600009
+round 1 loop   22.28 ns/iter  tick median 4456.9 us  steps 400009
+round 1 int    20.44 ns/iter  tick median 4087.8 us  steps 400009
+wrote <local-path>\out\qjs\quiet\micro-p12-r3.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-r4.json --label qjs-r4
+2026-10-15 16:05:01 qjs-r4: AC True, CPU 4.1%, RTX 57 C 0/3090 MHz 11.60 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\out\qjs\bin\base\rules_bench.exe --rounds 1 --offset 3 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-base-r4.json
+round 1 scan  tick median 264.5 us min 258.1 p99 402.0 | system 263.4 | steps 14.0
+round 1 rules tick median 3610.9 us min 3493.3 p99 4082.8 | system 3584.8 | steps 62518.0
+round 1 twin  tick median 162.5 us min 157.7 p99 189.2 | system 143.6 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 7.2 | system 5.7 | steps 7.0
+wrote <local-path>\out\qjs\quiet\rules-base-r4.json
++ <local-path>\out\qjs\bin\base\qjs_micro.exe --rounds 1 --offset 3 --json <local-path>\out\qjs\quiet\micro-base-r4.json
+round 1 f64    74.28 ns/iter  tick median 14855.2 us  steps 600010
+round 1 prop   26.81 ns/iter  tick median 5361.4 us  steps 400009
+round 1 sqrt   53.08 ns/iter  tick median 10615.5 us  steps 600009
+round 1 sin    109.49 ns/iter  tick median 21897.4 us  steps 600009
+round 1 cos    109.87 ns/iter  tick median 21973.8 us  steps 600009
+round 1 atan2  146.03 ns/iter  tick median 29206.6 us  steps 600009
+round 1 pow    172.04 ns/iter  tick median 34407.1 us  steps 600009
+round 1 hypot  172.29 ns/iter  tick median 34457.5 us  steps 600009
+round 1 loop   21.38 ns/iter  tick median 4276.0 us  steps 400009
+round 1 int    22.25 ns/iter  tick median 4449.1 us  steps 400009
+round 1 call   45.64 ns/iter  tick median 9128.6 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-base-r4.json
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --rounds 1 --offset 3 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-p12-r4.json
+round 1 scan  tick median 264.2 us min 259.3 p99 319.3 | system 263.1 | steps 14.0
+round 1 rules tick median 3648.4 us min 3537.9 p99 3976.6 | system 3622.9 | steps 62518.0
+round 1 twin  tick median 134.6 us min 129.1 p99 146.8 | system 116.1 | steps 0.0
+round 1 idle  tick median 6.3 us min 6.2 p99 6.5 | system 5.6 | steps 7.0
+wrote <local-path>\out\qjs\quiet\rules-p12-r4.json
++ <local-path>\out\qjs\bin\p12\qjs_micro.exe --rounds 1 --offset 3 --json <local-path>\out\qjs\quiet\micro-p12-r4.json
+round 1 f64    72.35 ns/iter  tick median 14470.2 us  steps 600010
+round 1 prop   25.96 ns/iter  tick median 5192.0 us  steps 400009
+round 1 sqrt   46.13 ns/iter  tick median 9225.3 us  steps 600009
+round 1 sin    108.37 ns/iter  tick median 21673.5 us  steps 600009
+round 1 cos    110.14 ns/iter  tick median 22028.8 us  steps 600009
+round 1 atan2  130.16 ns/iter  tick median 26031.7 us  steps 600009
+round 1 pow    164.85 ns/iter  tick median 32969.7 us  steps 600009
+round 1 hypot  173.87 ns/iter  tick median 34774.3 us  steps 600009
+round 1 loop   20.25 ns/iter  tick median 4050.5 us  steps 400009
+round 1 int    21.68 ns/iter  tick median 4335.0 us  steps 400009
+round 1 call   43.34 ns/iter  tick median 8667.1 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-p12-r4.json
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --rounds 1 --offset 3 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-natives-r4.json
+round 1 scan  tick median 263.5 us min 256.1 p99 326.9 | system 262.2 | steps 14.0
+round 1 rules tick median 3356.3 us min 3264.5 p99 4022.5 | system 3328.6 | steps 62518.0
+round 1 twin  tick median 131.4 us min 128.8 p99 150.4 | system 112.8 | steps 0.0
+round 1 idle  tick median 6.4 us min 6.2 p99 6.9 | system 5.7 | steps 7.0
+wrote <local-path>\out\qjs\quiet\rules-natives-r4.json
++ <local-path>\out\qjs\bin\natives\qjs_micro.exe --rounds 1 --offset 3 --json <local-path>\out\qjs\quiet\micro-natives-r4.json
+round 1 f64    72.75 ns/iter  tick median 14550.0 us  steps 600010
+round 1 prop   26.74 ns/iter  tick median 5347.2 us  steps 400009
+round 1 sqrt   43.21 ns/iter  tick median 8642.1 us  steps 600009
+round 1 sin    55.64 ns/iter  tick median 11128.7 us  steps 600009
+round 1 cos    57.09 ns/iter  tick median 11418.9 us  steps 600009
+round 1 atan2  55.61 ns/iter  tick median 11122.9 us  steps 600009
+round 1 pow    96.2 ns/iter  tick median 19240.8 us  steps 600009
+round 1 hypot  170.88 ns/iter  tick median 34175.0 us  steps 600009
+round 1 loop   23.28 ns/iter  tick median 4656.7 us  steps 400009
+round 1 int    23.51 ns/iter  tick median 4701.1 us  steps 400009
+round 1 call   44.93 ns/iter  tick median 8985.9 us  steps 600009
+wrote <local-path>\out\qjs\quiet\micro-natives-r4.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-r5.json --label qjs-r5
+2026-10-15 16:05:30 qjs-r5: AC True, CPU 3.7%, RTX 57 C 0/3090 MHz 11.25 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
++ <local-path>\out\qjs\bin\p12\rules_bench.exe --rounds 1 --offset 4 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-p12-r5.json
+round 1 rules tick median 3563.1 us min 3412.5 p99 4559.9 | system 3537.9 | steps 62518.0
+round 1 twin  tick median 134.7 us min 129.1 p99 163.0 | system 115.8 | steps 0.0
+round 1 idle  tick median 6.5 us min 6.3 p99 9.8 | system 5.7 | steps 7.0
+round 1 scan  tick median 267.1 us min 256.2 p99 509.6 | system 265.8 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-p12-r5.json
++ <local-path>\out\qjs\bin\p12\qjs_micro.exe --rounds 1 --offset 4 --json <local-path>\out\qjs\quiet\micro-p12-r5.json
+round 1 prop   26.4 ns/iter  tick median 5280.6 us  steps 400009
+round 1 sqrt   43.98 ns/iter  tick median 8796.6 us  steps 600009
+round 1 sin    110.53 ns/iter  tick median 22106.9 us  steps 600009
+round 1 cos    110.28 ns/iter  tick median 22056.0 us  steps 600009
+round 1 atan2  132.79 ns/iter  tick median 26557.7 us  steps 600009
+round 1 pow    166.42 ns/iter  tick median 33284.8 us  steps 600009
+round 1 hypot  168.95 ns/iter  tick median 33789.1 us  steps 600009
+round 1 loop   21.94 ns/iter  tick median 4388.3 us  steps 400009
+round 1 int    20.93 ns/iter  tick median 4185.0 us  steps 400009
+round 1 call   43.92 ns/iter  tick median 8783.0 us  steps 600009
+round 1 f64    72.37 ns/iter  tick median 14473.8 us  steps 600010
+wrote <local-path>\out\qjs\quiet\micro-p12-r5.json
++ <local-path>\out\qjs\bin\natives\rules_bench.exe --rounds 1 --offset 4 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-natives-r5.json
+round 1 rules tick median 3443.4 us min 3278.6 p99 4045.1 | system 3413.7 | steps 62518.0
+round 1 twin  tick median 133.0 us min 129.9 p99 155.1 | system 114.2 | steps 0.0
+round 1 idle  tick median 6.5 us min 6.3 p99 7.2 | system 5.8 | steps 7.0
+round 1 scan  tick median 261.4 us min 258.2 p99 308.7 | system 260.4 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-natives-r5.json
++ <local-path>\out\qjs\bin\natives\qjs_micro.exe --rounds 1 --offset 4 --json <local-path>\out\qjs\quiet\micro-natives-r5.json
+round 1 prop   26.59 ns/iter  tick median 5317.6 us  steps 400009
+round 1 sqrt   44.76 ns/iter  tick median 8952.3 us  steps 600009
+round 1 sin    56.68 ns/iter  tick median 11336.3 us  steps 600009
+round 1 cos    57.49 ns/iter  tick median 11497.3 us  steps 600009
+round 1 atan2  56.61 ns/iter  tick median 11322.2 us  steps 600009
+round 1 pow    101.19 ns/iter  tick median 20237.6 us  steps 600009
+round 1 hypot  178.38 ns/iter  tick median 35676.0 us  steps 600009
+round 1 loop   23.59 ns/iter  tick median 4717.2 us  steps 400009
+round 1 int    21.2 ns/iter  tick median 4239.7 us  steps 400009
+round 1 call   44.81 ns/iter  tick median 8962.7 us  steps 600009
+round 1 f64    62.55 ns/iter  tick median 12509.1 us  steps 600010
+wrote <local-path>\out\qjs\quiet\micro-natives-r5.json
++ <local-path>\out\qjs\bin\base\rules_bench.exe --rounds 1 --offset 4 --no-verify --warmup 120 --ticks 600 --json <local-path>\out\qjs\quiet\rules-base-r5.json
+round 1 rules tick median 3854.7 us min 3596.6 p99 4274.6 | system 3828.8 | steps 62518.0
+round 1 twin  tick median 134.9 us min 129.5 p99 180.1 | system 115.9 | steps 0.0
+round 1 idle  tick median 6.6 us min 6.4 p99 7.1 | system 5.9 | steps 7.0
+round 1 scan  tick median 284.5 us min 277.4 p99 412.9 | system 283.4 | steps 14.0
+wrote <local-path>\out\qjs\quiet\rules-base-r5.json
++ <local-path>\out\qjs\bin\base\qjs_micro.exe --rounds 1 --offset 4 --json <local-path>\out\qjs\quiet\micro-base-r5.json
+round 1 prop   26.9 ns/iter  tick median 5379.0 us  steps 400009
+round 1 sqrt   43.52 ns/iter  tick median 8704.5 us  steps 600009
+round 1 sin    110.1 ns/iter  tick median 22020.6 us  steps 600009
+round 1 cos    109.41 ns/iter  tick median 21881.6 us  steps 600009
+round 1 atan2  132.96 ns/iter  tick median 26592.9 us  steps 600009
+round 1 pow    171.89 ns/iter  tick median 34377.0 us  steps 600009
+round 1 hypot  171.92 ns/iter  tick median 34384.5 us  steps 600009
+round 1 loop   22.73 ns/iter  tick median 4545.7 us  steps 400009
+round 1 int    23.81 ns/iter  tick median 4761.8 us  steps 400009
+round 1 call   46.2 ns/iter  tick median 9239.1 us  steps 600009
+round 1 f64    73.84 ns/iter  tick median 14768.1 us  steps 600010
+wrote <local-path>\out\qjs\quiet\micro-base-r5.json
++ <local-path> <local-path>\.claude\worktrees\qjs\tools\machine_conditions.py <local-path>\out\qjs\quiet\conditions-end.json --label qjs-end
+2026-10-15 16:05:58 qjs-end: AC True, CPU 4.1%, RTX 58 C 0/3090 MHz 11.77 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+Builds: base, p12, natives (reference: base)
+
+| Build | Variant | Tick median, us (by round) | Median | Min | p99 (median) | System median | Steps |
+|---|---|---|---|---|---|---|---|
+| base | rules | 3,768 / 3,590 / 3,651 / 3,611 / 3,855 | 3,651 | 3,483 | 4,183 | 3,618 | 62,518 |
+| base | twin | 134 / 134 / 134 / 162 / 135 | 134 | 128 | 157 | 115 | 0 |
+| base | idle | 6.40 / 9.00 / 6.30 / 6.40 / 6.60 | 6.40 | 6.20 | 7.20 | 5.70 | 7 |
+| base | scan | 264 / 262 / 260 / 264 / 284 | 264 | 254 | 398 | 263 | 14 |
+| p12 | rules | 3,536 / 3,608 / 3,520 / 3,648 / 3,563 | 3,563 | 3,386 | 4,160 | 3,538 | 62,518 |
+| p12 | twin | 137 / 136 / 132 / 135 / 135 | 135 | 128 | 156 | 116 | 0 |
+| p12 | idle | 6.40 / 6.30 / 6.40 / 6.30 / 6.50 | 6.40 | 6.20 | 9.70 | 5.70 | 7 |
+| p12 | scan | 264 / 261 / 261 / 264 / 267 | 264 | 256 | 341 | 262 | 14 |
+| natives | rules | 3,378 / 3,336 / 3,326 / 3,356 / 3,443 | 3,356 | 3,240 | 4,022 | 3,329 | 62,518 |
+| natives | twin | 131 / 131 / 132 / 131 / 133 | 131 | 128 | 157 | 113 | 0 |
+| natives | idle | 6.40 / 6.40 / 6.40 / 6.40 / 6.50 | 6.40 | 6.20 | 6.80 | 5.70 | 7 |
+| natives | scan | 257 / 260 / 265 / 264 / 261 | 261 | 254 | 327 | 260 | 14 |
+
+Phases of `damage` (median of the round medians, us):
+
+| Build | prepare | run | diff | apply |
+|---|---|---|---|---|
+| base | 266 | 2,856 | 142 | 336 |
+| p12 | 267 | 2,715 | 145 | 340 |
+| natives | 265 | 2,567 | 136 | 332 |
+
+Against base, paired by round (tick median of `rules`, `run` median, twin tick median):
+
+| Build | rules tick, by round | median | `run`, median of pairs | twin tick, median of pairs |
+|---|---|---|---|---|
+| p12 | -6.2 / +0.5 / -3.6 / +1.0 / -7.6 % | -3.6 % | -4.9 % | -0.1 % |
+| natives | -10.4 / -7.1 / -8.9 / -7.1 / -10.7 % | -8.9 % | -10.6 % | -1.6 % |
+
+Microloops, ns per iteration (median of the round medians; steps per tick):
+
+| Probe | base | p12 | natives | steps |
+|---|---|---|---|---|
+| loop | 21.5 | 21.3 | 22.5 | 400,009 |
+| int | 22.4 | 20.9 | 22.9 | 400,009 |
+| call | 45.4 | 43.9 | 44.8 | 600,009 |
+| f64 | 74.2 | 72.3 | 62.8 | 600,010 |
+| prop | 26.9 | 26.0 | 26.5 | 400,009 |
+| sqrt | 43.5 | 44.2 | 44.4 | 600,009 |
+| sin | 109 | 109 | 56.7 | 600,009 |
+| cos | 109 | 110 | 57.1 | 600,009 |
+| atan2 | 132 | 130 | 55.6 | 600,009 |
+| pow | 170 | 165 | 96.5 | 600,009 |
+| hypot | 172 | 170 | 171 | 600,009 |
+
+Microloops against base, paired by round (the median of the rounds' ratios):
+
+| Probe | p12 | natives |
+|---|---|---|
+| loop | -3.5 % | +3.8 % |
+| int | -6.2 % | +3.1 % |
+| call | -4.4 % | -1.2 % |
+| f64 | -2.6 % | -15.2 % |
+| prop | -3.2 % | -1.8 % |
+| sqrt | +1.1 % | +0.8 % |
+| sin | +0.4 % | -48.5 % |
+| cos | +0.2 % | -47.5 % |
+| atan2 | -1.7 % | -58.2 % |
+| pow | -3.2 % | -42.9 % |
+| hypot | -1.5 % | +1.0 % |
+
+A `Math` call, ns (the probe less `loop`, per round, then the median):
+
+| Call | base | p12 | natives |
+|---|---|---|---|
+| `Math.sqrt` | 22.4 | 22.9 | 22.1 |
+| `Math.sin` | 87.5 | 88.1 | 33.1 |
+| `Math.cos` | 88.1 | 88.3 | 33.9 |
+| `Math.atan2` | 110 | 109 | 33.0 |
+| `Math.pow` | 149 | 144 | 74.8 |
+| `Math.hypot` | 151 | 149 | 150 |
+
+Compilers: base: clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb); p12: clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb); natives: clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb)
+exit 0

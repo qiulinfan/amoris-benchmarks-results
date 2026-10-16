@@ -1,0 +1,74 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "AMD Radeon 780M Graphics",
+ "backend": "Vulkan",
+ "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "taa",
+ "gtao": "off",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "--orbit",
+ "env": [],
+ "exe": "<local-path>\\.claude\\worktrees\\transparency\\target\\release\\examples\\transparency.exe",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 1.724,
+   "opaque_pass_ms": 0.526,
+   "transparent_pass_ms": 0.0,
+   "gtao_ms": 0.0,
+   "shadows_ms": 0.671,
+   "cpu_encode_ms": 0.548,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 3.134,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    1.719,
+    1.724,
+    1.771
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "blend": {
+   "gpu_ms": 2.249,
+   "opaque_pass_ms": 1.013,
+   "transparent_pass_ms": 0.0,
+   "gtao_ms": 0.0,
+   "shadows_ms": 0.674,
+   "cpu_encode_ms": 0.708,
+   "transparent_ms": 0.098,
+   "submit_to_idle_ms": 3.845,
+   "transparent_draws": 32,
+   "gpu_ms_rounds": [
+    2.311,
+    2.224,
+    2.249
+   ],
+   "gpu_over_hidden_ms": 0.525,
+   "cpu_over_hidden_ms": 0.16
+  },
+  "double": {
+   "gpu_ms": 2.629,
+   "opaque_pass_ms": 1.457,
+   "transparent_pass_ms": 0.0,
+   "gtao_ms": 0.0,
+   "shadows_ms": 0.674,
+   "cpu_encode_ms": 0.706,
+   "transparent_ms": 0.099,
+   "submit_to_idle_ms": 4.225,
+   "transparent_draws": 32,
+   "gpu_ms_rounds": [
+    2.641,
+    2.629,
+    2.611
+   ],
+   "gpu_over_hidden_ms": 0.905,
+   "cpu_over_hidden_ms": 0.158
+  }
+ }
+}

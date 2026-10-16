@@ -1,0 +1,9 @@
+Trajectory evidence, 2026-10-15 (scratch test crates/pocket-physics/tests/zz_trajectory_probe.rs, release):
+FNV folds of per-tick FNV hashes of every probe section except physics.rapier (TRAJ), and of all sections (FULL).
+sailing1200 = sailing_world 1200 ticks; sailing600forked = forked into a fresh world before every tick, 600 ticks;
+level300 = level_world(100 cells, side 3) 300 ticks; level300forked = forked before every tick.
+layout 1 (c05f49a6): TRAJ sailing1200 1fdebe41b3f423a6 sailing600forked 4ed8986923db0f80 level300 c66dc801a00b849e level300forked c66dc801a00b849e
+layout 1 (c05f49a6): FULL sailing1200 baa8e8c3a6c885dc level300 92a2352f88add62e
+layout 2 (worktree):  TRAJ sailing1200 1fdebe41b3f423a6 sailing600forked 4ed8986923db0f80 level300 c66dc801a00b849e level300forked c66dc801a00b849e
+layout 2 (worktree):  FULL sailing1200 529a28aaa772e3c9 level300 a113e24d0b794728
+In both layouts the forked runs' per-tick hashes (TRAJ and FULL) equal the unforked runs' (asserted).

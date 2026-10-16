@@ -1,0 +1,12 @@
+2026-10-15 04:02:07 start: AC True, CPU 3.9%, RTX 63 C 0/3090 MHz 10.76 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "before", "seconds": 33.9, "headline": {"apply": 254.063, "feed": 3.225, "scene sync": 5.8208, "render cpu": 6.859, "frame": 294.981, "gpu": 31.551}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "after", "seconds": 9.3, "headline": {"apply": 6.574, "feed": 3.539, "scene sync": 1.0646, "render cpu": 1.915, "frame": 14.928, "gpu": 2.571}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 33.3, "headline": {"apply": 253.65, "feed": 3.121, "scene sync": 5.7102, "render cpu": 6.513, "frame": 296.059, "gpu": 32.037}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "after", "seconds": 8.8, "headline": {"apply": 6.385, "feed": 3.46, "scene sync": 0.9395, "render cpu": 1.506, "frame": 14.423, "gpu": 2.709}, "error": null}
+2026-10-15 04:03:44 end: AC True, CPU 4.8%, RTX 62 C 0/3090 MHz 10.78 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-100k | dx12 | - | before | 254.063 | 5.821 | 6.859 | 294.981 | 31.551 | 382 |
+| moving-100k | dx12 | - | after | 6.574 | 1.065 | 1.915 | 14.928 | 2.571 | 1950 |
+| moving-100k | vulkan | - | before | 253.650 | 5.710 | 6.513 | 296.059 | 32.037 | 367.0 |
+| moving-100k | vulkan | - | after | 6.385 | 0.940 | 1.506 | 14.423 | 2.709 | 885.0 |

@@ -1,0 +1,48 @@
+
+running 5 tests
+test zz_calib ... ok
+test zz_timestamps ... ok
+test zz_taa_sensitivity ... ok
+test zz_neural_dump ... ok
+test zz_parallel_open ... ok
+
+successes:
+
+---- zz_calib stdout ----
+pdr: [(1792069766303344192, 1792069766303347232), (1792069766305028864, 1792069766305030400), (1792069766305482464, 1792069766305484032), (1792069766306013056, 1792069766306014752)]
+
+---- zz_timestamps stdout ----
+Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU
+bad (zero or repeated) out of 40: compute 0 render 0 encoder 0 compute-after-render 0
+
+---- zz_taa_sensitivity stdout ----
+inline vs inline x(1+0): worst 0, 0 pixels over 2
+inline vs inline x(1+0): worst 0, 0 pixels over 2
+inline vs inline x(1+0.001): worst 1, 0 pixels over 2
+inline vs inline x(1+0): worst 0, 0 pixels over 2
+inline vs inline x(1+0.003): worst 1, 0 pixels over 2
+inline vs inline x(1+0): worst 0, 0 pixels over 2
+inline vs inline x(1+0.01): worst 1, 0 pixels over 2
+inline vs inline x(1+0): worst 0, 0 pixels over 2
+
+---- zz_neural_dump stdout ----
+f16 true: 0 pixels over 2
+f16 false: 0 pixels over 2
+
+---- zz_parallel_open stdout ----
+round 0: 0 of 12 failed None
+round 1: 0 of 12 failed None
+round 2: 0 of 12 failed None
+round 3: 0 of 12 failed None
+
+
+successes:
+    zz_calib
+    zz_neural_dump
+    zz_parallel_open
+    zz_taa_sensitivity
+    zz_timestamps
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 42.39s
+
+

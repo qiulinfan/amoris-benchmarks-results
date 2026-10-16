@@ -1,0 +1,24 @@
+mutation splat-jittered-depth: [('crates/pocket-render/src/renderer.rs', "        pass.set_bind_group(0, &self.binds.frame_stable, &[]);\n        pass.set_bind_group(1, self.empty, &[]);\n        pass.set_bind_group(2, &self.binds.textures, &[]);\n        pass.set_vertex_buffer(0, self.meshes.vertices.slice(..));\n        pass.set_index_buffer(self.meshes.indices.slice(..), wgpu::IndexFormat::Uint32);\n        let mut calls = 0;\n        for variant in 0..VARIANTS {\n            // A neural variant (NEURAL_VARIANT + v) has variant v's culling and alpha test.\n            pass.set_pipeline(&self.pipelines[(variant % NEURAL_VARIANT) as usize]);", "        pass.set_bind_group(0, &self.binds.frame, &[]);\n        pass.set_bind_group(1, self.empty, &[]);\n        pass.set_bind_group(2, &self.binds.textures, &[]);\n        pass.set_vertex_buffer(0, self.meshes.vertices.slice(..));\n        pass.set_index_buffer(self.meshes.indices.slice(..), wgpu::IndexFormat::Uint32);\n        let mut calls = 0;\n        for variant in 0..VARIANTS {\n            // A neural variant (NEURAL_VARIANT + v) has variant v's culling and alpha test.\n            pass.set_pipeline(&self.pipelines[(variant % NEURAL_VARIANT) as usize]);")]
+exit 101
+
+running 1 test
+test splats_behind_meshes_are_stable_under_taa ... FAILED
+
+failures:
+
+failures:
+    splats_behind_meshes_are_stable_under_taa
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 2.33s
+
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.32s
+     Running tests\taa.rs (target\release\deps\taa-38c1e73fef474ddb.exe)
+Quads Msaa x1: 2012 pixels of splats, 0 flickering (0 by the contribution alone)
+Quads Taa x1: 1955 pixels of splats, 572 flickering (572 by the contribution alone)
+
+thread 'splats_behind_meshes_are_stable_under_taa' (<tid>) panicked at crates\pocket-render\tests\taa.rs:787:13:
+assertion `left == right` failed: Quads Taa x1: splats flickered on 572 pixels of a still frame
+  left: 572
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `-p pocket-render --test taa`

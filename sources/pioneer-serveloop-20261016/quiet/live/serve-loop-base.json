@@ -1,0 +1,2499 @@
+{
+  "label": "base",
+  "pocket": "<local-path>\\out\\serveloop\\bin\\pocket-base.exe",
+  "version": {
+    "c_compiler": "clang-cl: clang version 23.1.2 (https://github.com/llvm/llvm-project 85ac560262434c9ccfc0c183ec22d4138ed647fb)",
+    "commit": "3fdc5b832b75b665996d3f49c5ff8b454b0cfd5f",
+    "contract": "0.2+unsynced",
+    "profile": "release",
+    "semver": "0.1.0",
+    "source": "183d247e6b95a4b2234062af5fd102e633725ca9c2b539e0d0b3b3058fcc02f9",
+    "target": "x86_64-pc-windows-msvc"
+  },
+  "plays": [
+    {
+      "client": "none",
+      "profile": {
+        "busy_ms": 0.4664,
+        "epoch": 1,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0007,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0049,
+            "ms": 0.0008,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2834,
+            "ms": 0.1408,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0818,
+            "ms": 0.0479,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 3.8238,
+            "ms": 0.0728,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.032,
+            "ms": 0.0036,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0007,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0049,
+            "ms": 0.0008,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.2107,
+            "ms": 0.1002,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0919,
+            "ms": 0.0354,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0127,
+            "ms": 0.0052,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0193,
+            "ms": 0.009,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0547,
+            "ms": 0.0305,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0119,
+            "ms": 0.0036,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0097,
+            "ms": 0.0048,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 3.8229,
+            "ms": 0.0723,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0023,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0297,
+            "ms": 0.0012,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0005,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0032,
+            "ms": 0.0009,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0046,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0528,
+            "ms": 0.0116,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0913,
+            "ms": 0.0347,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.3034,
+            "ms": 0.1521,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0315,
+            "ms": 0.0013,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 780,
+        "tick_max_ms": 4.0014,
+        "tick_ms": 0.2783,
+        "ticks": 600
+      },
+      "received": null,
+      "round": 1
+    },
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.4728,
+        "epoch": 3,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0267,
+            "ms": 0.0008,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0037,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2561,
+            "ms": 0.1446,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1101,
+            "ms": 0.0496,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1523,
+            "ms": 0.0678,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0115,
+            "ms": 0.0038,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0267,
+            "ms": 0.0008,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0037,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.1916,
+            "ms": 0.1028,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0707,
+            "ms": 0.0364,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0327,
+            "ms": 0.0054,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.033,
+            "ms": 0.0096,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.078,
+            "ms": 0.0312,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.011,
+            "ms": 0.0036,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0475,
+            "ms": 0.0052,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1512,
+            "ms": 0.0672,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0018,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0067,
+            "ms": 0.0012,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0023,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0027,
+            "ms": 0.001,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0038,
+            "ms": 0.0011,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0525,
+            "ms": 0.0122,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0959,
+            "ms": 0.037,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.2797,
+            "ms": 0.1551,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0033,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 795,
+        "tick_max_ms": 0.5114,
+        "tick_ms": 0.2796,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 14.001773499999999,
+        "ws": {
+          "messages": 338,
+          "bytes": 166680,
+          "by_topic": {
+            "status": 140,
+            "world.changed": 140,
+            "profile": 56,
+            "events": 2
+          },
+          "per_s": 24.139799147586555,
+          "bytes_per_s": 11904.206277869016
+        },
+        "render": {
+          "messages": 769,
+          "bytes": 197972,
+          "per_s": 54.92161403696468,
+          "bytes_per_s": 14139.066026171615
+        }
+      },
+      "round": 1
+    },
+    {
+      "client": "editor",
+      "profile": {
+        "busy_ms": 0.6375,
+        "epoch": 5,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0087,
+            "ms": 0.0013,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0361,
+            "ms": 0.0014,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.3963,
+            "ms": 0.1985,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1008,
+            "ms": 0.0622,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1678,
+            "ms": 0.0947,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0205,
+            "ms": 0.0059,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0087,
+            "ms": 0.0013,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0361,
+            "ms": 0.0014,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.3062,
+            "ms": 0.1477,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.1045,
+            "ms": 0.0424,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0249,
+            "ms": 0.0084,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0435,
+            "ms": 0.0147,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0814,
+            "ms": 0.0358,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0134,
+            "ms": 0.0053,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0232,
+            "ms": 0.0065,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1663,
+            "ms": 0.094,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0021,
+            "ms": 0.0007,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0151,
+            "ms": 0.002,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0031,
+            "ms": 0.001,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0045,
+            "ms": 0.0016,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0034,
+            "ms": 0.0013,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.1017,
+            "ms": 0.0183,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.1178,
+            "ms": 0.0468,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.4145,
+            "ms": 0.2068,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0041,
+            "ms": 0.0016,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 905,
+        "tick_max_ms": 0.7025,
+        "tick_ms": 0.3824,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "editor",
+        "sent": {
+          "world.get": 700,
+          "world.tree": 140,
+          "snapshots.list": 14
+        },
+        "received": {
+          "/render": 756,
+          "status": 140,
+          "world.changed": 140,
+          "reply": 854,
+          "profile": 56,
+          "events": 1
+        },
+        "render_bytes": 195048,
+        "renderer": "WebGPU",
+        "overlay": "WebGPU 119 fps GPU 1.60 ms 60 tps tick 961 9 entities",
+        "chrome_flags": ""
+      },
+      "round": 1
+    },
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.4701,
+        "epoch": 7,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0041,
+            "ms": 0.0008,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.3212,
+            "ms": 0.1467,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0925,
+            "ms": 0.0499,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1966,
+            "ms": 0.0667,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0093,
+            "ms": 0.004,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0041,
+            "ms": 0.0008,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.237,
+            "ms": 0.1056,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0739,
+            "ms": 0.0358,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0321,
+            "ms": 0.0054,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0258,
+            "ms": 0.01,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0644,
+            "ms": 0.031,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0118,
+            "ms": 0.004,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0116,
+            "ms": 0.0049,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1959,
+            "ms": 0.0662,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0015,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0034,
+            "ms": 0.0013,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0015,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0011,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0038,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0514,
+            "ms": 0.0124,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.1009,
+            "ms": 0.0345,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.2929,
+            "ms": 0.153,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0071,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 795,
+        "tick_max_ms": 0.5684,
+        "tick_ms": 0.2815,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 14.0013068,
+        "ws": {
+          "messages": 338,
+          "bytes": 167120,
+          "by_topic": {
+            "status": 140,
+            "world.changed": 140,
+            "profile": 56,
+            "events": 2
+          },
+          "per_s": 24.14060378992624,
+          "bytes_per_s": 11936.028714119742
+        },
+        "render": {
+          "messages": 784,
+          "bytes": 201836,
+          "per_s": 55.99477328787624,
+          "bytes_per_s": 14415.51155782116
+        }
+      },
+      "round": 2
+    },
+    {
+      "client": "editor",
+      "profile": {
+        "busy_ms": 0.6598,
+        "epoch": 9,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0098,
+            "ms": 0.0015,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0431,
+            "ms": 0.0014,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.618,
+            "ms": 0.2094,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.2642,
+            "ms": 0.0645,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.2221,
+            "ms": 0.0969,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0194,
+            "ms": 0.0058,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0098,
+            "ms": 0.0015,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0431,
+            "ms": 0.0014,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.4115,
+            "ms": 0.1566,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.1882,
+            "ms": 0.0436,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0664,
+            "ms": 0.0093,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0461,
+            "ms": 0.0146,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.1832,
+            "ms": 0.0375,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0154,
+            "ms": 0.0055,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0318,
+            "ms": 0.0069,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.2213,
+            "ms": 0.0963,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.002,
+            "ms": 0.0006,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0067,
+            "ms": 0.0021,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0034,
+            "ms": 0.0009,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0053,
+            "ms": 0.0015,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0042,
+            "ms": 0.0013,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.1091,
+            "ms": 0.0184,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.2673,
+            "ms": 0.0499,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 1.2604,
+            "ms": 0.21,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0056,
+            "ms": 0.0017,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 1066,
+        "tick_max_ms": 1.1221,
+        "tick_ms": 0.3981,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "editor",
+        "sent": {
+          "snapshots.list": 15,
+          "world.get": 705,
+          "world.tree": 141
+        },
+        "received": {
+          "/render": 932,
+          "world.changed": 172,
+          "profile": 69,
+          "status": 171,
+          "events": 2,
+          "reply": 861
+        },
+        "render_bytes": 240456,
+        "renderer": "WebGPU",
+        "overlay": "WebGPU 119 fps GPU 1.58 ms 60 tps tick 1122 9 entities",
+        "chrome_flags": ""
+      },
+      "round": 2
+    },
+    {
+      "client": "none",
+      "profile": {
+        "busy_ms": 0.4498,
+        "epoch": 11,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0035,
+            "ms": 0.0007,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0258,
+            "ms": 0.0008,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.3793,
+            "ms": 0.1392,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0999,
+            "ms": 0.0475,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1389,
+            "ms": 0.0631,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0302,
+            "ms": 0.0036,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0035,
+            "ms": 0.0007,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0258,
+            "ms": 0.0008,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.3225,
+            "ms": 0.0995,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0979,
+            "ms": 0.0346,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0327,
+            "ms": 0.0052,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0183,
+            "ms": 0.0088,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0603,
+            "ms": 0.0304,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0075,
+            "ms": 0.0036,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0453,
+            "ms": 0.0047,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1383,
+            "ms": 0.0626,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0021,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0263,
+            "ms": 0.0012,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0018,
+            "ms": 0.0005,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0027,
+            "ms": 0.0009,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0033,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0673,
+            "ms": 0.0116,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0761,
+            "ms": 0.0341,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.2729,
+            "ms": 0.1481,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.003,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 780,
+        "tick_max_ms": 0.5808,
+        "tick_ms": 0.2665,
+        "ticks": 600
+      },
+      "received": null,
+      "round": 2
+    },
+    {
+      "client": "editor",
+      "profile": {
+        "busy_ms": 0.6367,
+        "epoch": 13,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0072,
+            "ms": 0.0013,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0325,
+            "ms": 0.0014,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.3566,
+            "ms": 0.1993,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1443,
+            "ms": 0.0626,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.2055,
+            "ms": 0.0979,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0142,
+            "ms": 0.006,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0072,
+            "ms": 0.0013,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0325,
+            "ms": 0.0014,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.271,
+            "ms": 0.1483,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0856,
+            "ms": 0.0425,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0196,
+            "ms": 0.0084,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0408,
+            "ms": 0.0144,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0742,
+            "ms": 0.036,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0147,
+            "ms": 0.0053,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0548,
+            "ms": 0.0069,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.2047,
+            "ms": 0.0973,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0025,
+            "ms": 0.0006,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0066,
+            "ms": 0.0021,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0083,
+            "ms": 0.001,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0045,
+            "ms": 0.0015,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0045,
+            "ms": 0.0014,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0443,
+            "ms": 0.0174,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0968,
+            "ms": 0.0476,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.4138,
+            "ms": 0.2018,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0048,
+            "ms": 0.0016,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 1061,
+        "tick_max_ms": 0.6482,
+        "tick_ms": 0.3858,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "editor",
+        "sent": {
+          "snapshots.list": 15,
+          "world.tree": 141,
+          "world.get": 700
+        },
+        "received": {
+          "reply": 861,
+          "status": 171,
+          "world.changed": 171,
+          "profile": 68,
+          "events": 2,
+          "/render": 919
+        },
+        "render_bytes": 237102,
+        "renderer": "WebGPU",
+        "overlay": "WebGPU 120 fps GPU 1.57 ms 60 tps tick 1114 9 entities",
+        "chrome_flags": ""
+      },
+      "round": 3
+    },
+    {
+      "client": "none",
+      "profile": {
+        "busy_ms": 0.4488,
+        "epoch": 15,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0007,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0532,
+            "ms": 0.001,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2948,
+            "ms": 0.1392,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0959,
+            "ms": 0.0483,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1793,
+            "ms": 0.0632,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0122,
+            "ms": 0.0036,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0007,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0532,
+            "ms": 0.001,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.2294,
+            "ms": 0.0996,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0558,
+            "ms": 0.0346,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0249,
+            "ms": 0.005,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0239,
+            "ms": 0.0092,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0714,
+            "ms": 0.0307,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0093,
+            "ms": 0.0036,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0119,
+            "ms": 0.0048,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1782,
+            "ms": 0.0628,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0027,
+            "ms": 0.0004,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0046,
+            "ms": 0.0012,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0018,
+            "ms": 0.0005,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0041,
+            "ms": 0.0009,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0026,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0377,
+            "ms": 0.0114,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0656,
+            "ms": 0.0332,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.269,
+            "ms": 0.1469,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0033,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 781,
+        "tick_max_ms": 0.5851,
+        "tick_ms": 0.2675,
+        "ticks": 600
+      },
+      "received": null,
+      "round": 3
+    },
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.4708,
+        "epoch": 17,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0023,
+            "ms": 0.0008,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2454,
+            "ms": 0.1471,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1087,
+            "ms": 0.0491,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1327,
+            "ms": 0.0669,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0118,
+            "ms": 0.004,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0023,
+            "ms": 0.0008,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.1844,
+            "ms": 0.1055,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0698,
+            "ms": 0.0358,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0548,
+            "ms": 0.0058,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0294,
+            "ms": 0.01,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0823,
+            "ms": 0.0305,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0117,
+            "ms": 0.0039,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0134,
+            "ms": 0.0047,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.132,
+            "ms": 0.0664,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0014,
+            "ms": 0.0004,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0101,
+            "ms": 0.0013,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0018,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0028,
+            "ms": 0.001,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.004,
+            "ms": 0.0011,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0424,
+            "ms": 0.0121,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0789,
+            "ms": 0.0357,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.3134,
+            "ms": 0.153,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0074,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 795,
+        "tick_max_ms": 0.4772,
+        "tick_ms": 0.2809,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 14.0011882,
+        "ws": {
+          "messages": 338,
+          "bytes": 167266,
+          "by_topic": {
+            "status": 140,
+            "world.changed": 140,
+            "profile": 56,
+            "events": 2
+          },
+          "per_s": 24.140808277971722,
+          "bytes_per_s": 11946.557507169286
+        },
+        "render": {
+          "messages": 776,
+          "bytes": 199774,
+          "per_s": 55.423867525757565,
+          "bytes_per_s": 14268.360452436458
+        }
+      },
+      "round": 3
+    },
+    {
+      "client": "none",
+      "profile": {
+        "busy_ms": 0.4737,
+        "epoch": 19,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0248,
+            "ms": 0.0009,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0083,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2562,
+            "ms": 0.1484,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0876,
+            "ms": 0.051,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.152,
+            "ms": 0.0672,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0131,
+            "ms": 0.0039,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0248,
+            "ms": 0.0009,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0083,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.1847,
+            "ms": 0.1061,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.065,
+            "ms": 0.0365,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0373,
+            "ms": 0.0058,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0214,
+            "ms": 0.01,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0642,
+            "ms": 0.0316,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0092,
+            "ms": 0.0041,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0396,
+            "ms": 0.0053,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1508,
+            "ms": 0.0667,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0028,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0038,
+            "ms": 0.0013,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.009,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0027,
+            "ms": 0.001,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0036,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0619,
+            "ms": 0.0126,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0682,
+            "ms": 0.0349,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.3008,
+            "ms": 0.1527,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0033,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 780,
+        "tick_max_ms": 0.4771,
+        "tick_ms": 0.2849,
+        "ticks": 600
+      },
+      "received": null,
+      "round": 4
+    },
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.4824,
+        "epoch": 21,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0021,
+            "ms": 0.0009,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0069,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2238,
+            "ms": 0.1516,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1081,
+            "ms": 0.0507,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.146,
+            "ms": 0.0689,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0221,
+            "ms": 0.0041,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0021,
+            "ms": 0.0009,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0069,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.1759,
+            "ms": 0.1091,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0627,
+            "ms": 0.0366,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0276,
+            "ms": 0.0059,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0189,
+            "ms": 0.0103,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0766,
+            "ms": 0.0315,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0125,
+            "ms": 0.0039,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0106,
+            "ms": 0.005,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1446,
+            "ms": 0.0685,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0015,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0077,
+            "ms": 0.0013,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0016,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0192,
+            "ms": 0.0011,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0027,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0725,
+            "ms": 0.0134,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0893,
+            "ms": 0.0352,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.2891,
+            "ms": 0.1555,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0068,
+            "ms": 0.0012,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 794,
+        "tick_max_ms": 0.4236,
+        "tick_ms": 0.2905,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 14.0010865,
+        "ws": {
+          "messages": 338,
+          "bytes": 167298,
+          "by_topic": {
+            "status": 140,
+            "world.changed": 140,
+            "profile": 56,
+            "events": 2
+          },
+          "per_s": 24.140983630091853,
+          "bytes_per_s": 11948.929820553569
+        },
+        "render": {
+          "messages": 769,
+          "bytes": 197978,
+          "per_s": 54.92430890988353,
+          "bytes_per_s": 14140.1883346696
+        }
+      },
+      "round": 4
+    },
+    {
+      "client": "editor",
+      "profile": {
+        "busy_ms": 0.6457,
+        "epoch": 23,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.004,
+            "ms": 0.0014,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0121,
+            "ms": 0.0013,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.4262,
+            "ms": 0.202,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1613,
+            "ms": 0.0639,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.2696,
+            "ms": 0.0978,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0433,
+            "ms": 0.0063,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.004,
+            "ms": 0.0014,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0121,
+            "ms": 0.0013,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.3647,
+            "ms": 0.1518,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0919,
+            "ms": 0.0411,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0548,
+            "ms": 0.0091,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0418,
+            "ms": 0.0148,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0894,
+            "ms": 0.0362,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0294,
+            "ms": 0.0058,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0208,
+            "ms": 0.0072,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.2683,
+            "ms": 0.0971,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0026,
+            "ms": 0.0007,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0125,
+            "ms": 0.0022,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0091,
+            "ms": 0.001,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0392,
+            "ms": 0.0017,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0129,
+            "ms": 0.0013,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0747,
+            "ms": 0.0185,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0989,
+            "ms": 0.0491,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.4338,
+            "ms": 0.2037,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0066,
+            "ms": 0.0017,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 1065,
+        "tick_max_ms": 0.8246,
+        "tick_ms": 0.3912,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "editor",
+        "sent": {
+          "snapshots.list": 15,
+          "world.get": 710,
+          "world.tree": 142
+        },
+        "received": {
+          "/render": 928,
+          "profile": 69,
+          "status": 172,
+          "world.changed": 172,
+          "events": 2,
+          "reply": 867
+        },
+        "render_bytes": 239424,
+        "renderer": "WebGPU",
+        "overlay": "WebGPU 119 fps GPU 1.59 ms 60 tps tick 1123 9 entities",
+        "chrome_flags": ""
+      },
+      "round": 4
+    },
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.4752,
+        "epoch": 25,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0299,
+            "ms": 0.0009,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0025,
+            "ms": 0.0009,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2675,
+            "ms": 0.1496,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.084,
+            "ms": 0.0507,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1131,
+            "ms": 0.066,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0105,
+            "ms": 0.0038,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0299,
+            "ms": 0.0009,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0025,
+            "ms": 0.0009,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.2053,
+            "ms": 0.1067,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0886,
+            "ms": 0.0374,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0366,
+            "ms": 0.0055,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0223,
+            "ms": 0.01,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0553,
+            "ms": 0.0315,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0123,
+            "ms": 0.004,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0213,
+            "ms": 0.0053,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1126,
+            "ms": 0.0656,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0022,
+            "ms": 0.0005,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0034,
+            "ms": 0.0013,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0074,
+            "ms": 0.0006,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0025,
+            "ms": 0.001,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.003,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0451,
+            "ms": 0.0123,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.0788,
+            "ms": 0.0356,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.4545,
+            "ms": 0.1543,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.004,
+            "ms": 0.0011,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 794,
+        "tick_max_ms": 0.4683,
+        "tick_ms": 0.2842,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 14.0012901,
+        "ws": {
+          "messages": 338,
+          "bytes": 167174,
+          "by_topic": {
+            "profile": 56,
+            "status": 140,
+            "world.changed": 140,
+            "events": 2
+          },
+          "per_s": 24.140632583564567,
+          "bytes_per_s": 11939.89973823912
+        },
+        "render": {
+          "messages": 769,
+          "bytes": 197966,
+          "per_s": 54.923510227103996,
+          "bytes_per_s": 14139.125650999831
+        }
+      },
+      "round": 5
+    },
+    {
+      "client": "editor",
+      "profile": {
+        "busy_ms": 0.6433,
+        "epoch": 27,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0368,
+            "ms": 0.0016,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0892,
+            "ms": 0.0016,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.4417,
+            "ms": 0.2012,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.1178,
+            "ms": 0.062,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.2278,
+            "ms": 0.0975,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0154,
+            "ms": 0.0061,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0368,
+            "ms": 0.0016,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0892,
+            "ms": 0.0016,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.3448,
+            "ms": 0.1506,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0911,
+            "ms": 0.0412,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0988,
+            "ms": 0.0095,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0448,
+            "ms": 0.0144,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0652,
+            "ms": 0.0358,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.0131,
+            "ms": 0.0052,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0327,
+            "ms": 0.0066,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.2259,
+            "ms": 0.0969,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0019,
+            "ms": 0.0006,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0114,
+            "ms": 0.0022,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.003,
+            "ms": 0.001,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0086,
+            "ms": 0.0016,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0047,
+            "ms": 0.0013,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0968,
+            "ms": 0.0185,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.1081,
+            "ms": 0.0484,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.6892,
+            "ms": 0.2047,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0049,
+            "ms": 0.0017,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 1069,
+        "tick_max_ms": 0.7742,
+        "tick_ms": 0.3885,
+        "ticks": 600
+      },
+      "received": {
+        "mode": "editor",
+        "sent": {
+          "snapshots.list": 15,
+          "world.tree": 141,
+          "world.get": 700
+        },
+        "received": {
+          "reply": 861,
+          "status": 171,
+          "world.changed": 171,
+          "profile": 69,
+          "events": 2,
+          "/render": 935
+        },
+        "render_bytes": 241707,
+        "renderer": "WebGPU",
+        "overlay": "WebGPU 119 fps GPU 1.58 ms 59 tps tick 1122 9 entities",
+        "chrome_flags": ""
+      },
+      "round": 5
+    },
+    {
+      "client": "none",
+      "profile": {
+        "busy_ms": 0.4655,
+        "epoch": 29,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0296,
+            "ms": 0.0009,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0024,
+            "ms": 0.0008,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.2701,
+            "ms": 0.1451,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.0922,
+            "ms": 0.0498,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1708,
+            "ms": 0.0662,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0302,
+            "ms": 0.0037,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0296,
+            "ms": 0.0009,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0024,
+            "ms": 0.0008,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.1938,
+            "ms": 0.1031,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.1007,
+            "ms": 0.0362,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0567,
+            "ms": 0.0058,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.0334,
+            "ms": 0.0096,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0632,
+            "ms": 0.0311,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.012,
+            "ms": 0.0039,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0193,
+            "ms": 0.0051,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.1678,
+            "ms": 0.0658,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.003,
+            "ms": 0.0004,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0262,
+            "ms": 0.0012,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0018,
+            "ms": 0.0005,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0023,
+            "ms": 0.0009,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0033,
+            "ms": 0.001,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0477,
+            "ms": 0.0121,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.083,
+            "ms": 0.0342,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 0.3745,
+            "ms": 0.1516,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0045,
+            "ms": 0.0012,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 781,
+        "tick_max_ms": 0.5485,
+        "tick_ms": 0.2786,
+        "ticks": 600
+      },
+      "received": null,
+      "round": 5
+    }
+  ],
+  "idle": [
+    {
+      "client": "none",
+      "seconds": 30.000474299988127,
+      "cpu_s": 0.125,
+      "cpu_pct_of_one_core": 0.4166600792709783,
+      "cycles": 543416970,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 18.113612623791585,
+      "cycles_pct_of_one_core": 0.45413382265938745,
+      "received": null,
+      "round": 1
+    },
+    {
+      "client": "sockets",
+      "seconds": 30.00032540000393,
+      "cpu_s": 0.28125,
+      "cpu_pct_of_one_core": 0.937489831360173,
+      "cycles": 1038692283,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 34.6227005591034,
+      "cycles_pct_of_one_core": 0.8680399477597798,
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 31.0007042,
+        "ws": {
+          "messages": 153,
+          "bytes": 26008,
+          "by_topic": {
+            "profile": 124,
+            "status": 29
+          },
+          "per_s": 4.935371758426055,
+          "bytes_per_s": 838.9486842689205
+        },
+        "render": {
+          "messages": 0,
+          "bytes": 0,
+          "per_s": 0,
+          "bytes_per_s": 0
+        }
+      },
+      "round": 1
+    },
+    {
+      "client": "none",
+      "seconds": 30.000495399988722,
+      "cpu_s": 0.140625,
+      "cpu_pct_of_one_core": 0.46874225950299764,
+      "cycles": 556237673,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 18.54094959379268,
+      "cycles_pct_of_one_core": 0.4648477633724274,
+      "received": null,
+      "round": 2
+    },
+    {
+      "client": "sockets",
+      "seconds": 30.001001600001473,
+      "cpu_s": 0.265625,
+      "cpu_pct_of_one_core": 0.8853871065424261,
+      "cycles": 1048193654,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 34.938621982539026,
+      "cycles_pct_of_one_core": 0.8759605435384692,
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 31.0014802,
+        "ws": {
+          "messages": 153,
+          "bytes": 26008,
+          "by_topic": {
+            "profile": 124,
+            "status": 29
+          },
+          "per_s": 4.935248220825275,
+          "bytes_per_s": 838.9276844916586
+        },
+        "render": {
+          "messages": 0,
+          "bytes": 0,
+          "per_s": 0,
+          "bytes_per_s": 0
+        }
+      },
+      "round": 2
+    },
+    {
+      "client": "none",
+      "seconds": 30.0009785000002,
+      "cpu_s": 0.140625,
+      "cpu_pct_of_one_core": 0.46873471143615886,
+      "cycles": 563315240,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 18.776562237794884,
+      "cycles_pct_of_one_core": 0.47075490475332826,
+      "received": null,
+      "round": 3
+    },
+    {
+      "client": "sockets",
+      "seconds": 30.000428100000136,
+      "cpu_s": 0.1875,
+      "cpu_pct_of_one_core": 0.6249910813772659,
+      "cycles": 1038307787,
+      "cycle_rate": 3988606820.2802157,
+      "mcycles_per_s": 34.60976568531018,
+      "cycles_pct_of_one_core": 0.8677156522256236,
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 31.000469100000004,
+        "ws": {
+          "messages": 153,
+          "bytes": 26008,
+          "by_topic": {
+            "profile": 124,
+            "status": 29
+          },
+          "per_s": 4.935409187082269,
+          "bytes_per_s": 838.9550466512134
+        },
+        "render": {
+          "messages": 0,
+          "bytes": 0,
+          "per_s": 0,
+          "bytes_per_s": 0
+        }
+      },
+      "round": 3
+    }
+  ]
+}

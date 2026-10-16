@@ -1,0 +1,4675 @@
+{
+ "started": "2026-10-15 09:37:25",
+ "profile": "release",
+ "commit": "3854886f527e",
+ "configs": {
+  "5060-dx12": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "5060"
+   },
+   "adapter": "Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.0,
+     "tests": 1
+    },
+    "forward_variants": {
+     "exit": 0,
+     "seconds": 1.8,
+     "tests": 1
+    },
+    "frame_trace": {
+     "exit": 0,
+     "seconds": 2.3,
+     "tests": 2
+    },
+    "gpu_profiler": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    },
+    "hiz": {
+     "exit": 0,
+     "seconds": 3.3,
+     "tests": 2
+    },
+    "lib": {
+     "exit": 0,
+     "seconds": 12.8,
+     "tests": 125
+    },
+    "lod": {
+     "exit": 0,
+     "seconds": 8.1,
+     "tests": 6
+    },
+    "neural": {
+     "exit": 0,
+     "seconds": 6.2,
+     "tests": 2
+    },
+    "neural_material": {
+     "exit": 0,
+     "seconds": 12.5,
+     "tests": 8
+    },
+    "neural_mlp": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "occlusion": {
+     "exit": 0,
+     "seconds": 5.0,
+     "tests": 1
+    },
+    "prepass": {
+     "exit": 0,
+     "seconds": 7.3,
+     "tests": 2
+    },
+    "rt_shadows": {
+     "exit": 0,
+     "seconds": 3.1,
+     "tests": 1
+    },
+    "scene_changes": {
+     "exit": 0,
+     "seconds": 3.7,
+     "tests": 3
+    },
+    "skinned_bounds": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "taa": {
+     "exit": 0,
+     "seconds": 9.1,
+     "tests": 11
+    }
+   },
+   "tests": {
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "forward_variants every_forward_variant_draws_its_material": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace a_headless_trace_places_gpu_work_inside_its_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz occlusion_test_never_hides_a_box_in_front_of_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz pyramid_is_the_minimum_over_every_sample": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib camera::tests::the_point_ahead_is_inside_and_behind_is_outside": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::fresnel_snell_and_total_internal_reflection": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::roulette_compensation_preserves_expected_brightness": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::backpropagation_matches_finite_differences": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::invalid_config_rejected": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::packed_contract_and_deterministic_initialization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::pt_gpu_abi_and_limits_are_explicit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_cache_requires_history_and_resets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::all_faces_match_bake_shader_orientation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::sdk_versions_order_numerically": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::versions_compare_by_major_minor_build": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::windows_dll_versions_read": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::adapters_match_by_index_or_name": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::auto_picks_the_platform_default": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::backend_names_parse_in_any_case": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::direct3d_12_keeps_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::indirect_draws_keep_their_first_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::the_adapter_under_test_is_named": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::validation_keeps_labels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib loader::tests::neural_texture_paths_are_recognized_in_any_script": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::a_pixel_at_a_distance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::channel_words_locate_each_group": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::neural_shaders_validate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::profile_constants_are_consistent": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::weights_pack_into_column_major_blocks": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::quantization_rounds_ties_to_even_and_clamps": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::levels_halve_down_to_one_texel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::a_panic_reaches_the_caller": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::nested_tasks_finish": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::tasks_return_their_results_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib post::tests::defaults_by_adapter": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::frames_without_instances_never_decide": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::modes_without_timings_and_without_instances": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::one_and_two_phase_frames_decide_separately": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::probes_back_off_while_the_choice_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_from_before_a_restart_do_not_count": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_sum_the_opaque_passes_and_the_prepass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::transforms_interpolate_like_the_cull_pass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib shaders::tests::forward_clip_positions_are_invariant_in_every_backend": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::halves_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::quaternions_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::ply_round_trips": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::rejects_other_plys": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::splat_format_decodes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::sorts_like_a_stable_cpu_sort": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::the_tile_matches_the_shaders": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::antialias_fades_subpixel_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::growth_respects_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::pair_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::picking_sees_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::quads_are_the_default_rasterizer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::splat_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::subtile_culling_limits_tests": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::ties_are_stable": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::tiles_match_quads": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::transient_pair_drops_are_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::brackets_intersect_to_the_tightest_offset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::calibrations_combine_or_drift": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_places_gpu_passes_with_the_calibration": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::overlapping_spans_get_their_own_lanes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::specs_parse_and_refuse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::batches_cover_every_slot_once_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::written_slots_reach_the_instance_buffer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod cascades_pick_levels_by_their_texels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod every_draw_path_and_occlusion_draw_the_same_levels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod hysteresis_holds_a_level_until_the_margin": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_cut_triangles_and_stay_within_a_pixel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_give_way_at_the_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod skinned_levels_follow_the_pose": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural training_is_deterministic_for_a_seed": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural trains_and_decodes_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_like_the_inline_one": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_on_the_webgpu_baseline": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_grown_latent_table_keeps_the_textures_it_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_loaded_neural_texture_leaves_other_materials_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_neural_material_draws_under_taa_with_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material material_names_that_are_not_ascii_do_not_crash_the_renderer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material textures_with_other_channel_sets_share_the_pipelines": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material the_level_of_detail_selects_and_blends_mips_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_mlp neural_mlp_wgsl_is_current": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "occlusion occlusion_culling_never_drops_a_visible_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass the_depth_prepass_leaves_the_image_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "rt_shadows ray_traced_shadows_fall_where_cascades_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes exposure_and_resizes_reach_the_display_transform": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes moved_instances_draw_where_they_were_moved": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes skinned_characters_added_later_draw_in_their_own_poses": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "skinned_bounds skinned_occlusion_boxes_hold_every_pose_their_spheres_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa a_still_capture_settles_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa camera_cuts_and_resizes_drop_the_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_darkens_only_indirect_light": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_normals_from_the_target_match_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa msaa_with_taa_converges_beyond_msaa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa object_motion_reprojects_a_moving_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa skinned_motion_reprojects_a_sliding_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa splats_behind_meshes_are_stable_under_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa taa_reprojects_a_whole_pixel_pan_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_entity_id_pass_is_not_jittered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_sea_hides_what_lies_under_it": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "5060-vulkan": {
+   "env": {
+    "POCKET_BACKEND": "vulkan",
+    "POCKET_ADAPTER": "5060"
+   },
+   "adapter": "Vulkan on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver NVIDIA 617.14; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 1.1,
+     "tests": 1
+    },
+    "forward_variants": {
+     "exit": 0,
+     "seconds": 0.5,
+     "tests": 1
+    },
+    "frame_trace": {
+     "exit": 0,
+     "seconds": 0.9,
+     "tests": 2
+    },
+    "gpu_profiler": {
+     "exit": 0,
+     "seconds": 0.7,
+     "tests": 1
+    },
+    "hiz": {
+     "exit": 0,
+     "seconds": 1.3,
+     "tests": 2
+    },
+    "lib": {
+     "exit": 0,
+     "seconds": 4.0,
+     "tests": 125
+    },
+    "lod": {
+     "exit": 0,
+     "seconds": 2.5,
+     "tests": 6
+    },
+    "neural": {
+     "exit": 0,
+     "seconds": 1.3,
+     "tests": 2
+    },
+    "neural_material": {
+     "exit": 0,
+     "seconds": 2.1,
+     "tests": 8
+    },
+    "neural_mlp": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "occlusion": {
+     "exit": 0,
+     "seconds": 2.5,
+     "tests": 1
+    },
+    "prepass": {
+     "exit": 0,
+     "seconds": 3.0,
+     "tests": 2
+    },
+    "rt_shadows": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    },
+    "scene_changes": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 3
+    },
+    "skinned_bounds": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "taa": {
+     "exit": 0,
+     "seconds": 4.4,
+     "tests": 11
+    }
+   },
+   "tests": {
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "forward_variants every_forward_variant_draws_its_material": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace a_headless_trace_places_gpu_work_inside_its_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz occlusion_test_never_hides_a_box_in_front_of_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz pyramid_is_the_minimum_over_every_sample": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib camera::tests::the_point_ahead_is_inside_and_behind_is_outside": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::fresnel_snell_and_total_internal_reflection": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::roulette_compensation_preserves_expected_brightness": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::backpropagation_matches_finite_differences": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::invalid_config_rejected": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::packed_contract_and_deterministic_initialization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::pt_gpu_abi_and_limits_are_explicit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_cache_requires_history_and_resets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::all_faces_match_bake_shader_orientation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::sdk_versions_order_numerically": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::versions_compare_by_major_minor_build": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::windows_dll_versions_read": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::adapters_match_by_index_or_name": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::auto_picks_the_platform_default": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::backend_names_parse_in_any_case": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::direct3d_12_keeps_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::indirect_draws_keep_their_first_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::the_adapter_under_test_is_named": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::validation_keeps_labels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib loader::tests::neural_texture_paths_are_recognized_in_any_script": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::a_pixel_at_a_distance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::channel_words_locate_each_group": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::neural_shaders_validate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::profile_constants_are_consistent": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::weights_pack_into_column_major_blocks": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::quantization_rounds_ties_to_even_and_clamps": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::levels_halve_down_to_one_texel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::a_panic_reaches_the_caller": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::nested_tasks_finish": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::tasks_return_their_results_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib post::tests::defaults_by_adapter": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::frames_without_instances_never_decide": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::modes_without_timings_and_without_instances": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::one_and_two_phase_frames_decide_separately": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::probes_back_off_while_the_choice_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_from_before_a_restart_do_not_count": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_sum_the_opaque_passes_and_the_prepass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::transforms_interpolate_like_the_cull_pass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib shaders::tests::forward_clip_positions_are_invariant_in_every_backend": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::halves_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::quaternions_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::ply_round_trips": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::rejects_other_plys": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::splat_format_decodes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::sorts_like_a_stable_cpu_sort": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::the_tile_matches_the_shaders": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::antialias_fades_subpixel_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::growth_respects_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::pair_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::picking_sees_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::quads_are_the_default_rasterizer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::splat_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::subtile_culling_limits_tests": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::ties_are_stable": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::tiles_match_quads": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::transient_pair_drops_are_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::brackets_intersect_to_the_tightest_offset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::calibrations_combine_or_drift": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_places_gpu_passes_with_the_calibration": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::overlapping_spans_get_their_own_lanes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::specs_parse_and_refuse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::batches_cover_every_slot_once_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::written_slots_reach_the_instance_buffer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod cascades_pick_levels_by_their_texels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod every_draw_path_and_occlusion_draw_the_same_levels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod hysteresis_holds_a_level_until_the_margin": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_cut_triangles_and_stay_within_a_pixel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_give_way_at_the_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod skinned_levels_follow_the_pose": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural training_is_deterministic_for_a_seed": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural trains_and_decodes_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_like_the_inline_one": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_on_the_webgpu_baseline": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_grown_latent_table_keeps_the_textures_it_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_loaded_neural_texture_leaves_other_materials_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_neural_material_draws_under_taa_with_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material material_names_that_are_not_ascii_do_not_crash_the_renderer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material textures_with_other_channel_sets_share_the_pipelines": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material the_level_of_detail_selects_and_blends_mips_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_mlp neural_mlp_wgsl_is_current": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "occlusion occlusion_culling_never_drops_a_visible_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass the_depth_prepass_leaves_the_image_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "rt_shadows ray_traced_shadows_fall_where_cascades_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes exposure_and_resizes_reach_the_display_transform": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes moved_instances_draw_where_they_were_moved": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes skinned_characters_added_later_draw_in_their_own_poses": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "skinned_bounds skinned_occlusion_boxes_hold_every_pose_their_spheres_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa a_still_capture_settles_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa camera_cuts_and_resizes_drop_the_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_darkens_only_indirect_light": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_normals_from_the_target_match_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa msaa_with_taa_converges_beyond_msaa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa object_motion_reprojects_a_moving_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa skinned_motion_reprojects_a_sliding_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa splats_behind_meshes_are_stable_under_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa taa_reprojects_a_whole_pixel_pan_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_entity_id_pass_is_not_jittered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_sea_hides_what_lies_under_it": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "780m-dx12": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "780m"
+   },
+   "adapter": "Direct3D 12 on AMD Radeon 780M Graphics (IntegratedGpu), driver 32.0.13062.3005 ; timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.6,
+     "tests": 1
+    },
+    "forward_variants": {
+     "exit": 0,
+     "seconds": 2.4,
+     "tests": 1
+    },
+    "frame_trace": {
+     "exit": 0,
+     "seconds": 2.3,
+     "tests": 2
+    },
+    "gpu_profiler": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    },
+    "hiz": {
+     "exit": 0,
+     "seconds": 3.2,
+     "tests": 2
+    },
+    "lib": {
+     "exit": 0,
+     "seconds": 14.1,
+     "tests": 125
+    },
+    "lod": {
+     "exit": 0,
+     "seconds": 6.6,
+     "tests": 6
+    },
+    "neural": {
+     "exit": 0,
+     "seconds": 4.8,
+     "tests": 2
+    },
+    "neural_material": {
+     "exit": 0,
+     "seconds": 9.7,
+     "tests": 8
+    },
+    "neural_mlp": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "occlusion": {
+     "exit": 0,
+     "seconds": 7.2,
+     "tests": 1
+    },
+    "prepass": {
+     "exit": 0,
+     "seconds": 8.9,
+     "tests": 2
+    },
+    "rt_shadows": {
+     "exit": 0,
+     "seconds": 3.8,
+     "tests": 1
+    },
+    "scene_changes": {
+     "exit": 0,
+     "seconds": 3.9,
+     "tests": 3
+    },
+    "skinned_bounds": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "taa": {
+     "exit": 0,
+     "seconds": 11.2,
+     "tests": 11
+    }
+   },
+   "tests": {
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "forward_variants every_forward_variant_draws_its_material": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace a_headless_trace_places_gpu_work_inside_its_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz occlusion_test_never_hides_a_box_in_front_of_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz pyramid_is_the_minimum_over_every_sample": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib camera::tests::the_point_ahead_is_inside_and_behind_is_outside": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::fresnel_snell_and_total_internal_reflection": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::roulette_compensation_preserves_expected_brightness": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::backpropagation_matches_finite_differences": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::invalid_config_rejected": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::packed_contract_and_deterministic_initialization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::pt_gpu_abi_and_limits_are_explicit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_cache_requires_history_and_resets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::all_faces_match_bake_shader_orientation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::sdk_versions_order_numerically": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::versions_compare_by_major_minor_build": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::windows_dll_versions_read": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::adapters_match_by_index_or_name": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::auto_picks_the_platform_default": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::backend_names_parse_in_any_case": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::direct3d_12_keeps_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::indirect_draws_keep_their_first_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::the_adapter_under_test_is_named": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::validation_keeps_labels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib loader::tests::neural_texture_paths_are_recognized_in_any_script": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::a_pixel_at_a_distance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::channel_words_locate_each_group": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::neural_shaders_validate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::profile_constants_are_consistent": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::weights_pack_into_column_major_blocks": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::quantization_rounds_ties_to_even_and_clamps": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::levels_halve_down_to_one_texel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::a_panic_reaches_the_caller": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::nested_tasks_finish": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::tasks_return_their_results_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib post::tests::defaults_by_adapter": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::frames_without_instances_never_decide": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::modes_without_timings_and_without_instances": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::one_and_two_phase_frames_decide_separately": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::probes_back_off_while_the_choice_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_from_before_a_restart_do_not_count": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_sum_the_opaque_passes_and_the_prepass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::transforms_interpolate_like_the_cull_pass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib shaders::tests::forward_clip_positions_are_invariant_in_every_backend": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::halves_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::quaternions_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::ply_round_trips": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::rejects_other_plys": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::splat_format_decodes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::sorts_like_a_stable_cpu_sort": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::the_tile_matches_the_shaders": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::antialias_fades_subpixel_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::growth_respects_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::pair_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::picking_sees_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::quads_are_the_default_rasterizer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::splat_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::subtile_culling_limits_tests": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::ties_are_stable": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::tiles_match_quads": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::transient_pair_drops_are_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::brackets_intersect_to_the_tightest_offset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::calibrations_combine_or_drift": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_places_gpu_passes_with_the_calibration": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::overlapping_spans_get_their_own_lanes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::specs_parse_and_refuse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::batches_cover_every_slot_once_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::written_slots_reach_the_instance_buffer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod cascades_pick_levels_by_their_texels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod every_draw_path_and_occlusion_draw_the_same_levels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod hysteresis_holds_a_level_until_the_margin": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_cut_triangles_and_stay_within_a_pixel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_give_way_at_the_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod skinned_levels_follow_the_pose": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural training_is_deterministic_for_a_seed": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural trains_and_decodes_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_like_the_inline_one": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_on_the_webgpu_baseline": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_grown_latent_table_keeps_the_textures_it_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_loaded_neural_texture_leaves_other_materials_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_neural_material_draws_under_taa_with_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material material_names_that_are_not_ascii_do_not_crash_the_renderer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material textures_with_other_channel_sets_share_the_pipelines": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material the_level_of_detail_selects_and_blends_mips_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_mlp neural_mlp_wgsl_is_current": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "occlusion occlusion_culling_never_drops_a_visible_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass the_depth_prepass_leaves_the_image_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "rt_shadows ray_traced_shadows_fall_where_cascades_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes exposure_and_resizes_reach_the_display_transform": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes moved_instances_draw_where_they_were_moved": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes skinned_characters_added_later_draw_in_their_own_poses": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "skinned_bounds skinned_occlusion_boxes_hold_every_pose_their_spheres_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa a_still_capture_settles_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa camera_cuts_and_resizes_drop_the_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_darkens_only_indirect_light": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_normals_from_the_target_match_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa msaa_with_taa_converges_beyond_msaa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa object_motion_reprojects_a_moving_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa skinned_motion_reprojects_a_sliding_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa splats_behind_meshes_are_stable_under_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa taa_reprojects_a_whole_pixel_pan_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_entity_id_pass_is_not_jittered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_sea_hides_what_lies_under_it": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "780m-vulkan": {
+   "env": {
+    "POCKET_BACKEND": "vulkan",
+    "POCKET_ADAPTER": "780m"
+   },
+   "adapter": "Vulkan on AMD Radeon 780M Graphics (IntegratedGpu), driver AMD proprietary driver 24.30.62.03 (LLPC); timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+   "binaries": {
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 1.7,
+     "tests": 1
+    },
+    "forward_variants": {
+     "exit": 0,
+     "seconds": 0.5,
+     "tests": 1
+    },
+    "frame_trace": {
+     "exit": 0,
+     "seconds": 1.3,
+     "tests": 2
+    },
+    "gpu_profiler": {
+     "exit": 0,
+     "seconds": 0.5,
+     "tests": 1
+    },
+    "hiz": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 2
+    },
+    "lib": {
+     "exit": 0,
+     "seconds": 5.5,
+     "tests": 125
+    },
+    "lod": {
+     "exit": 0,
+     "seconds": 2.9,
+     "tests": 6
+    },
+    "neural": {
+     "exit": 0,
+     "seconds": 1.8,
+     "tests": 2
+    },
+    "neural_material": {
+     "exit": 0,
+     "seconds": 2.6,
+     "tests": 8
+    },
+    "neural_mlp": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "occlusion": {
+     "exit": 0,
+     "seconds": 4.2,
+     "tests": 1
+    },
+    "prepass": {
+     "exit": 0,
+     "seconds": 3.6,
+     "tests": 2
+    },
+    "rt_shadows": {
+     "exit": 0,
+     "seconds": 1.9,
+     "tests": 1
+    },
+    "scene_changes": {
+     "exit": 0,
+     "seconds": 1.7,
+     "tests": 3
+    },
+    "skinned_bounds": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "taa": {
+     "exit": 0,
+     "seconds": 3.7,
+     "tests": 11
+    }
+   },
+   "tests": {
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "forward_variants every_forward_variant_draws_its_material": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace a_headless_trace_places_gpu_work_inside_its_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz occlusion_test_never_hides_a_box_in_front_of_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz pyramid_is_the_minimum_over_every_sample": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib camera::tests::the_point_ahead_is_inside_and_behind_is_outside": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::fresnel_snell_and_total_internal_reflection": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::roulette_compensation_preserves_expected_brightness": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::backpropagation_matches_finite_differences": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::invalid_config_rejected": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::packed_contract_and_deterministic_initialization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::pt_gpu_abi_and_limits_are_explicit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_cache_requires_history_and_resets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::all_faces_match_bake_shader_orientation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::sdk_versions_order_numerically": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::versions_compare_by_major_minor_build": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::windows_dll_versions_read": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::adapters_match_by_index_or_name": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::auto_picks_the_platform_default": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::backend_names_parse_in_any_case": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::direct3d_12_keeps_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::indirect_draws_keep_their_first_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::the_adapter_under_test_is_named": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::validation_keeps_labels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib loader::tests::neural_texture_paths_are_recognized_in_any_script": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::a_pixel_at_a_distance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::channel_words_locate_each_group": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::neural_shaders_validate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::profile_constants_are_consistent": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::weights_pack_into_column_major_blocks": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::quantization_rounds_ties_to_even_and_clamps": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::levels_halve_down_to_one_texel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::a_panic_reaches_the_caller": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::nested_tasks_finish": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::tasks_return_their_results_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib post::tests::defaults_by_adapter": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::frames_without_instances_never_decide": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::modes_without_timings_and_without_instances": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::one_and_two_phase_frames_decide_separately": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::probes_back_off_while_the_choice_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_from_before_a_restart_do_not_count": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_sum_the_opaque_passes_and_the_prepass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::transforms_interpolate_like_the_cull_pass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib shaders::tests::forward_clip_positions_are_invariant_in_every_backend": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::halves_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::quaternions_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::ply_round_trips": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::rejects_other_plys": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::splat_format_decodes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::sorts_like_a_stable_cpu_sort": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::the_tile_matches_the_shaders": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::antialias_fades_subpixel_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::growth_respects_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::pair_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::picking_sees_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::quads_are_the_default_rasterizer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::splat_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::subtile_culling_limits_tests": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::ties_are_stable": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::tiles_match_quads": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::transient_pair_drops_are_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::brackets_intersect_to_the_tightest_offset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::calibrations_combine_or_drift": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_places_gpu_passes_with_the_calibration": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::overlapping_spans_get_their_own_lanes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::specs_parse_and_refuse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::batches_cover_every_slot_once_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::written_slots_reach_the_instance_buffer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod cascades_pick_levels_by_their_texels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod every_draw_path_and_occlusion_draw_the_same_levels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod hysteresis_holds_a_level_until_the_margin": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_cut_triangles_and_stay_within_a_pixel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_give_way_at_the_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod skinned_levels_follow_the_pose": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural training_is_deterministic_for_a_seed": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural trains_and_decodes_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_like_the_inline_one": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_on_the_webgpu_baseline": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_grown_latent_table_keeps_the_textures_it_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_loaded_neural_texture_leaves_other_materials_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_neural_material_draws_under_taa_with_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material material_names_that_are_not_ascii_do_not_crash_the_renderer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material textures_with_other_channel_sets_share_the_pipelines": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material the_level_of_detail_selects_and_blends_mips_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_mlp neural_mlp_wgsl_is_current": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "occlusion occlusion_culling_never_drops_a_visible_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass the_depth_prepass_leaves_the_image_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "rt_shadows ray_traced_shadows_fall_where_cascades_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes exposure_and_resizes_reach_the_display_transform": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes moved_instances_draw_where_they_were_moved": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes skinned_characters_added_later_draw_in_their_own_poses": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "skinned_bounds skinned_occlusion_boxes_hold_every_pose_their_spheres_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa a_still_capture_settles_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa camera_cuts_and_resizes_drop_the_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_darkens_only_indirect_light": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_normals_from_the_target_match_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa msaa_with_taa_converges_beyond_msaa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa object_motion_reprojects_a_moving_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa skinned_motion_reprojects_a_sliding_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa splats_behind_meshes_are_stable_under_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa taa_reprojects_a_whole_pixel_pan_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_entity_id_pass_is_not_jittered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_sea_hides_what_lies_under_it": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  },
+  "5060-dx12-minimal": {
+   "env": {
+    "POCKET_BACKEND": "dx12",
+    "POCKET_ADAPTER": "5060",
+    "POCKET_GPU_MINIMAL": "features,limits,timestamps"
+   },
+   "adapter": "Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: false, multi_draw_indirect: true, timestamps: false, shader_f16: false, float32_filterable: false, ray_query: false }",
+   "binaries": {
+    "draw_paths": {
+     "exit": 0,
+     "seconds": 3.4,
+     "tests": 1
+    },
+    "forward_variants": {
+     "exit": 0,
+     "seconds": 1.7,
+     "tests": 1
+    },
+    "frame_trace": {
+     "exit": 0,
+     "seconds": 2.3,
+     "tests": 2
+    },
+    "gpu_profiler": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    },
+    "hiz": {
+     "exit": 0,
+     "seconds": 3.1,
+     "tests": 2
+    },
+    "lib": {
+     "exit": 0,
+     "seconds": 12.4,
+     "tests": 125
+    },
+    "lod": {
+     "exit": 0,
+     "seconds": 5.8,
+     "tests": 6
+    },
+    "neural": {
+     "exit": 0,
+     "seconds": 3.4,
+     "tests": 2
+    },
+    "neural_material": {
+     "exit": 0,
+     "seconds": 9.0,
+     "tests": 8
+    },
+    "neural_mlp": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "occlusion": {
+     "exit": 0,
+     "seconds": 2.0,
+     "tests": 1
+    },
+    "prepass": {
+     "exit": 0,
+     "seconds": 5.1,
+     "tests": 2
+    },
+    "rt_shadows": {
+     "exit": 0,
+     "seconds": 1.4,
+     "tests": 1
+    },
+    "scene_changes": {
+     "exit": 0,
+     "seconds": 2.8,
+     "tests": 3
+    },
+    "skinned_bounds": {
+     "exit": 0,
+     "seconds": 0.0,
+     "tests": 1
+    },
+    "taa": {
+     "exit": 0,
+     "seconds": 7.9,
+     "tests": 11
+    }
+   },
+   "tests": {
+    "draw_paths every_draw_path_draws_the_same_frame": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "forward_variants every_forward_variant_draws_its_material": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "frame_trace a_headless_trace_places_gpu_work_inside_its_frame": {
+     "status": "skip",
+     "notes": [
+      "no GPU timestamps: placement not checked"
+     ],
+     "message": ""
+    },
+    "frame_trace tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later": {
+     "status": "skip",
+     "notes": [
+      "no GPU timestamps: GPU capture not checked"
+     ],
+     "message": ""
+    },
+    "gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window": {
+     "status": "skip",
+     "notes": [
+      "no GPU timestamps: skipped"
+     ],
+     "message": ""
+    },
+    "hiz occlusion_test_never_hides_a_box_in_front_of_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "hiz pyramid_is_the_minimum_over_every_sample": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib camera::tests::the_point_ahead_is_inside_and_behind_is_outside": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::fresnel_snell_and_total_internal_reflection": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::roulette_compensation_preserves_expected_brightness": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::backpropagation_matches_finite_differences": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::invalid_config_rejected": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::nrc::tests::packed_contract_and_deterministic_initialization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::pt_gpu_abi_and_limits_are_explicit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::ray_query_pt_transport_training_and_accumulation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_cache_requires_history_and_resets": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::all_faces_match_bake_shader_orientation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::sdk_versions_order_numerically": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::versions_compare_by_major_minor_build": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::dxc::tests::windows_dll_versions_read": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::adapters_match_by_index_or_name": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::auto_picks_the_platform_default": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::backend_names_parse_in_any_case": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::direct3d_12_keeps_indirect_validation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::indirect_draws_keep_their_first_instance": {
+     "status": "skip",
+     "notes": [
+      "Direct3D 12: no INDIRECT_FIRST_INSTANCE, skipped"
+     ],
+     "message": ""
+    },
+    "lib gpu::tests::the_adapter_under_test_is_named": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib gpu::tests::validation_keeps_labels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib loader::tests::neural_texture_paths_are_recognized_in_any_script": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::a_pixel_at_a_distance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib lod::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::channel_words_locate_each_group": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::neural_shaders_validate": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::profile_constants_are_consistent": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::tests::weights_pack_into_column_major_blocks": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib neural::train::tests::quantization_rounds_ties_to_even_and_clamps": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::levels_halve_down_to_one_texel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib occlusion::tests::modes_parse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::a_panic_reaches_the_caller": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::nested_tasks_finish": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib par::tests::tasks_return_their_results_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib post::tests::defaults_by_adapter": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_browser_readback_lag_of_hundreds_of_frames_decides": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_keeps_waiting_when_the_readback_lag_falls": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::frames_without_instances_never_decide": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::modes_without_timings_and_without_instances": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::one_and_two_phase_frames_decide_separately": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::probes_back_off_while_the_choice_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::quantized_timestamps_decide_by_differences_beyond_their_resolution": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_from_before_a_restart_do_not_count": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib prepass::tests::readings_sum_the_opaque_passes_and_the_prepass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib profiler::tests::timestamps_resolve_late_where_early_resolves_read_stale_values": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib rt_shadows::tests::transforms_interpolate_like_the_cull_pass": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib shaders::tests::forward_clip_positions_are_invariant_in_every_backend": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::halves_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::cloud::tests::quaternions_round_trip": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::ply_round_trips": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::rejects_other_plys": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::loader::tests::splat_format_decodes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::sorts_like_a_stable_cpu_sort": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::sort::tests::the_tile_matches_the_shaders": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::antialias_fades_subpixel_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::growth_respects_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::pair_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::picking_sees_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::quads_are_the_default_rasterizer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::splat_overflow_is_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::subtile_culling_limits_tests": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::ties_are_stable": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::tiles_match_quads": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib splat::tile::tests::transient_pair_drops_are_reported": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::brackets_intersect_to_the_tightest_offset": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::calibrations_combine_or_drift": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_places_gpu_passes_with_the_calibration": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets": {
+     "status": "skip",
+     "notes": [
+      "no GPU timestamps: skipped"
+     ],
+     "message": ""
+    },
+    "lib trace::tests::overlapping_spans_get_their_own_lanes": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib trace::tests::specs_parse_and_refuse": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::batches_cover_every_slot_once_in_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lib upload::tests::written_slots_reach_the_instance_buffer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod cascades_pick_levels_by_their_texels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod every_draw_path_and_occlusion_draw_the_same_levels": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod hysteresis_holds_a_level_until_the_margin": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_cut_triangles_and_stay_within_a_pixel": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod levels_give_way_at_the_binding_limit": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "lod skinned_levels_follow_the_pose": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural training_is_deterministic_for_a_seed": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural trains_and_decodes_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_like_the_inline_one": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_constant_neural_material_draws_on_the_webgpu_baseline": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_grown_latent_table_keeps_the_textures_it_holds": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_loaded_neural_texture_leaves_other_materials_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material a_neural_material_draws_under_taa_with_splats": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material material_names_that_are_not_ascii_do_not_crash_the_renderer": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material textures_with_other_channel_sets_share_the_pipelines": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_material the_level_of_detail_selects_and_blends_mips_like_the_reference": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "neural_mlp neural_mlp_wgsl_is_current": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "occlusion occlusion_culling_never_drops_a_visible_instance": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "prepass the_depth_prepass_leaves_the_image_alone": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "rt_shadows ray_traced_shadows_fall_where_cascades_do": {
+     "status": "skip",
+     "notes": [
+      "Dx12 on NVIDIA GeForce RTX 5060 Laptop GPU: no ray queries, skipped"
+     ],
+     "message": ""
+    },
+    "scene_changes exposure_and_resizes_reach_the_display_transform": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes moved_instances_draw_where_they_were_moved": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "scene_changes skinned_characters_added_later_draw_in_their_own_poses": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "skinned_bounds skinned_occlusion_boxes_hold_every_pose_their_spheres_do": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa a_still_capture_settles_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa camera_cuts_and_resizes_drop_the_history": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_darkens_only_indirect_light": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa gtao_normals_from_the_target_match_the_depth": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa msaa_with_taa_converges_beyond_msaa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa object_motion_reprojects_a_moving_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa skinned_motion_reprojects_a_sliding_board_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa splats_behind_meshes_are_stable_under_taa": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa taa_reprojects_a_whole_pixel_pan_exactly": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_entity_id_pass_is_not_jittered": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    },
+    "taa the_sea_hides_what_lies_under_it": {
+     "status": "pass",
+     "notes": [],
+     "message": ""
+    }
+   }
+  }
+ }
+}

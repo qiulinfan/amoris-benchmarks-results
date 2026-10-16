@@ -1,0 +1,45 @@
+{
+ "tool": "tools/prepass_compare.py",
+ "date": "2026-10-15 13:38",
+ "backend": "dx12",
+ "adapter": "nvidia",
+ "cases": {
+  "cubes-sphere": {
+   "captures": [
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "../../../out/taau/fix/prepass/nvidia-dx12-msaa+taa-1-r0/cubes-sphere-off.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.3,
+     "prepass": "off"
+    },
+    {
+     "backend": "dx12",
+     "adapter": "nvidia",
+     "png": "../../../out/taau/fix/prepass/nvidia-dx12-msaa+taa-1-r0/cubes-sphere-on.png",
+     "gpu": "[INFO] GPU: NVIDIA GeForce RTX 5060 Laptop GPU (Dx12, DiscreteGpu); driver 32.0.16.1714 ; features Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }",
+     "ok": true,
+     "seconds": 3.2,
+     "prepass": "on"
+    }
+   ],
+   "on_vs_off": {
+    "rmse_8bit": 0.007,
+    "psnr_db": 91.45,
+    "max_diff_8bit": 4,
+    "pixels_over_percent": {
+     ">1": 0.0,
+     ">16": 0.0,
+     ">2": 0.0,
+     ">32": 0.0,
+     ">4": 0.0,
+     ">64": 0.0,
+     ">8": 0.0
+    }
+   }
+  }
+ },
+ "scenes": []
+}

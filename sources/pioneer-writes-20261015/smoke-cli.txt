@@ -1,0 +1,79 @@
+$ pocket status
+tick 0 (0.00 s) edit paused real-time x1.0 | 14 entities | hash 910c5769a4e8 | scripts f8568e2edbfc
+$ pocket player act (sail_to Mark1) --seat skipper
+{"applied_at":1,"cursor":0,"events":[],"outcomes":[{"did":"start","intent":"sail_to","intent_id":1,"params":{"arrive_m":8,"timeout_s":900,"trim":"auto"},"progress":[{"name":"distance_m","value":95},{"name":"bearing_deg","value":72},{"name":"vmg_mps","value":0},{"name":"leg","value":"direct"},{"name":"tacks","value":0}],"superseded":[],"target":{"id":5,"name":"Mark1"}}],"pending":false,"tick":0,"warnings":[]}
+$ pocket debug writes Sloop.Boat.rudder --ticks 40
+Sloop.Boat.rudder, ticks 1..40: 0 -> -0.25, 42 changes
+tick  by                 phase    before     after      at
+1     boundary                                          player.act (player:0) {"actions":[{"do":"start","intent":"sail_to","params":{"arrive_m":8,"...
+1     interface.intents  Control  0          1
+2     interface.intents  Control  1          -1
+3     interface.intents  Control  -1         -0.671825
+4     interface.intents  Control  -0.671825  -0.683452
+5     interface.intents  Control  -0.683452  -0.6843
+6     interface.intents  Control  -0.6843    -0.692347
+7     interface.intents  Control  -0.692347  -0.709446
+8     interface.intents  Control  -0.709446  -0.705305
+9     interface.intents  Control  -0.705305  -0.711741
+10    interface.intents  Control  -0.711741  -0.732015
+11    interface.intents  Control  -0.732015  -0.719512
+12    interface.intents  Control  -0.719512  -0.721745
+13    interface.intents  Control  -0.721745  -0.705762
+14    interface.intents  Control  -0.705762  -0.707819
+15    interface.intents  Control  -0.707819  -0.68983
+16    interface.intents  Control  -0.68983   -0.539229
+17    interface.intents  Control  -0.539229  -0.519521
+18    interface.intents  Control  -0.519521  -0.522489
+19    interface.intents  Control  -0.522489  -0.50196
+20    interface.intents  Control  -0.50196   -0.45226
+20    script:helm        Update   -0.45226   -0.25      scripts/helm.ts:10:13
+21    interface.intents  Control  -0.25      -0.464928
+22    interface.intents  Control  -0.464928  -0.454229
+23    interface.intents  Control  -0.454229  -0.407792
+24    interface.intents  Control  -0.407792  -0.424514
+25    interface.intents  Control  -0.424514  -0.414199
+26    interface.intents  Control  -0.414199  -0.36506
+27    interface.intents  Control  -0.36506   -0.319391
+28    interface.intents  Control  -0.319391  -0.281663
+29    interface.intents  Control  -0.281663  -0.254876
+30    interface.intents  Control  -0.254876  -0.239925
+31    interface.intents  Control  -0.239925  -0.235938
+32    interface.intents  Control  -0.235938  -0.237107
+33    interface.intents  Control  -0.237107  -0.23783
+34    interface.intents  Control  -0.23783   -0.236699
+35    interface.intents  Control  -0.236699  -0.233922
+36    interface.intents  Control  -0.233922  -0.230072
+37    interface.intents  Control  -0.230072  -0.22514
+38    interface.intents  Control  -0.22514   -0.219348
+39    interface.intents  Control  -0.219348  -0.212794
+40    interface.intents  Control  -0.212794  -0.205425
+40    script:helm        Update   -0.205425  -0.25      scripts/helm.ts:10:13
+$ pocket debug writes Sloop.Boat.rudder --ticks 40 --json | (bytes)
+4962
+$ pocket debug writes Sloop.Boat.ruder
+request.invalid_value: Boat has no field 'ruder'; it has afloat, aground, awa_deg, aws, boom_deg, drive, heading_deg, heel_deg, hoist, hoist_now, rudder, rudder_now, sheet, sheet_now, speed, trim.
+  did you mean: rudder
+$ pocket debug writes Slop.Boat.rudder
+sim.entity_not_found: No live entity is named 'Slop'; did you mean ["Sloop"]?
+$ pocket debug watch Sloop.Boat.rudder ; pocket step 25
+w1 watching #3 Boat.rudder
+tick 100 hash - | stopped at scripts/helm.ts:10 (data breakpoint in helm, tick 100); w1 #3 Boat.rudder [0.41899776801607214] -> [-0.25], written at scripts/helm.ts:10: pocket debug state | pocket debug continue
+paused at scripts/helm.ts:10 (data breakpoint in helm, tick 100)
+  watch w1 #3 Boat.rudder [0.41899776801607214] -> [-0.25], written at scripts/helm.ts:10
+#0 (returned) scripts/helm.ts:10 (returned)
+watch w1 #3 Boat.rudder
+running
+running (tick 100, last in helm; attached false, instrumented true)
+$ pocket step 30 --trace Sloop.Transform.position.y
+tick 130 hash 73c7c9b75b42
+Sloop.Transform.position.y, ticks 101..130: -0.168466 -> 0.002075, 30 changes
+tick  by            phase    before     after      at
+101   physics.step  Physics  -0.168466  -0.159929
+102   physics.step  Physics  -0.159929  -0.151464
+103   physics.step  Physics  -0.151464  -0.143092
+104   physics.step  Physics  -0.143092  -0.134842
+105   physics.step  Physics  -0.134842  -0.126735
+106   physics.step  Physics  -0.126735  -0.118793
+107   physics.step  Physics  -0.118793  -0.111032
+108   physics.step  Physics  -0.111032  -0.103469
+109   physics.step  Physics  -0.103469  -0.096119

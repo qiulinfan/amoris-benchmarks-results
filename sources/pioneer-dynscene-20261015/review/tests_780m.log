@@ -1,0 +1,33 @@
+$ python <local-path>/out/dynscene/scripts/gpu_tests.py head dx12-780m,vulkan-780m all
+dx12-780m draw_paths: exit 0 in 4s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.65s
+dx12-780m forward_variants: exit 0 in 3s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.34s
+dx12-780m frame_trace: exit 0 in 3s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.54s
+dx12-780m gpu_profiler: exit 0 in 2s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.44s
+dx12-780m hiz: exit 0 in 5s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.27s
+dx12-780m lod: exit 0 in 10s; test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.52s
+dx12-780m neural: exit 0 in 17s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.99s
+dx12-780m neural_material: exit 101 in 23s; test a_constant_neural_material_draws_like_the_inline_one ... FAILED | test a_constant_neural_material_draws_on_the_webgpu_baseline ... FAILED | thread 'a_constant_neural_material_draws_like_the_inline_one' (<tid>) panicked at crates\pocket-render\tests\neural_material.rs:323:9: | thread 'a_constant_neural_material_draws_on_the_webgpu_baseline' (<tid>) panicked at crates\pocket-render\tests\neural_
+dx12-780m neural_mlp: exit 0 in 0s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+dx12-780m occlusion: exit 0 in 15s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.43s
+dx12-780m pocket_render: exit 101 in 35s; test gi::pt::tests::ray_query_pt_transport_training_and_accumulation ... FAILED | thread 'gi::pt::tests::ray_query_pt_transport_training_and_accumulation' (<tid>) panicked at crates\pocket-render\src\gi\pt.rs:1863:9: | test result: FAILED. 117 passed; 1 failed; 2 ignored; 0 measured; 0 filtered out; finished in 32.75s
+dx12-780m prepass: exit 0 in 23s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 21.84s
+dx12-780m rt_shadows: exit 0 in 18s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.64s
+dx12-780m scene_changes: exit 0 in 4s; test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.71s
+dx12-780m skinned_bounds: exit 0 in 0s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+dx12-780m taa: exit 0 in 19s; test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.49s
+vulkan-780m draw_paths: exit 0 in 3s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.60s
+vulkan-780m forward_variants: exit 0 in 2s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.49s
+vulkan-780m frame_trace: exit 101 in 2s; test a_headless_trace_places_gpu_work_inside_its_frame ... FAILED | thread 'a_headless_trace_places_gpu_work_inside_its_frame' (<tid>) panicked at crates\pocket-render\tests\frame_trace.rs:128:10: | test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.64s
+vulkan-780m gpu_profiler: exit 101 in 1s; test asynchronous_frames_keep_their_queries_and_only_record_the_capture_window ... FAILED | thread 'asynchronous_frames_keep_their_queries_and_only_record_the_capture_window' (<tid>) panicked at crates\pocket-render\tests\gpu_profiler.rs:88:9: | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s
+vulkan-780m hiz: exit 0 in 3s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.59s
+vulkan-780m lod: exit 0 in 7s; test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.06s
+vulkan-780m neural: exit 0 in 16s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.10s
+vulkan-780m neural_material: exit 101 in 23s; test a_constant_neural_material_draws_like_the_inline_one ... FAILED | test a_constant_neural_material_draws_on_the_webgpu_baseline ... FAILED | thread 'a_constant_neural_material_draws_like_the_inline_one' (<tid>) panicked at crates\pocket-render\tests\neural_material.rs:323:9: | thread 'a_constant_neural_material_draws_on_the_webgpu_baseline' (<tid>) panicked at crates\pocket-render\tests\neural
+vulkan-780m neural_mlp: exit 0 in 0s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+vulkan-780m occlusion: exit 0 in 12s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.90s
+vulkan-780m pocket_render: exit 101 in 34s; test trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets ... FAILED | test gi::pt::tests::ray_query_pt_transport_training_and_accumulation ... FAILED | thread 'trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets' (<tid>) panicked at crates\pocket-render\src\trace.rs:787:14: | thread 'gi::pt::tests::ray_query_pt_transport_training_and_accumulation' (<tid>)
+vulkan-780m prepass: exit 0 in 23s; test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 22.70s
+vulkan-780m rt_shadows: exit 0 in 9s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.53s
+vulkan-780m scene_changes: exit 0 in 4s; test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.04s
+vulkan-780m skinned_bounds: exit 0 in 0s; test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+vulkan-780m taa: exit 0 in 17s; test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.53s

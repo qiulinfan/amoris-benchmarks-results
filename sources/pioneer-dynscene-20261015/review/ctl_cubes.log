@@ -1,0 +1,21 @@
+[bench_lock] waiting for webauto ...
+$ python tools/dynamic_scenes_bench.py --build before=<local-path>/out/dynscene/review/before --build head=<local-path>/out/dynscene/review/head --cases moving-100k --backends dx12,vulkan --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/review/ctl-cubes.json --conditions <local-path>/out/dynscene/review/ctl-cubes-conditions
+2026-10-14 23:50:58 start: AC True, CPU 9.4%, RTX 66 C 435/3090 MHz 11.62 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "before", "seconds": 32.9, "headline": {"apply": 244.389, "feed": 3.153, "scene sync": 5.8514, "render cpu": 6.687, "frame": 285.009, "gpu": 31.448}, "error": null}
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "head", "seconds": 9.2, "headline": {"apply": 5.889, "feed": 3.145, "scene sync": 1.0904, "render cpu": 1.873, "frame": 13.798, "gpu": 2.59}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 34.0, "headline": {"apply": 250.608, "feed": 3.199, "scene sync": 5.7014, "render cpu": 6.38, "frame": 292.982, "gpu": 32.057}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "head", "seconds": 8.9, "headline": {"apply": 6.012, "feed": 3.098, "scene sync": 0.9335, "render cpu": 1.441, "frame": 13.717, "gpu": 2.816}, "error": null}
+2026-10-14 23:52:35 end: AC True, CPU 3.9%, RTX 65 C 0/3090 MHz 10.91 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-100k | dx12 | - | before | 244.389 | 5.851 | 6.687 | 285.009 | 31.448 | 510 |
+| moving-100k | dx12 | - | head | 5.889 | 1.090 | 1.873 | 13.798 | 2.590 | 1965.0 |
+| moving-100k | vulkan | - | before | 250.608 | 5.701 | 6.380 | 292.982 | 32.057 | 382 |
+| moving-100k | vulkan | - | head | 6.012 | 0.933 | 1.441 | 13.717 | 2.816 | 1132 |
+$ python tools/dynamic_scenes_bench.py --build head=<local-path>/out/dynscene/review/head --cases moving-100k --backends dx12,vulkan --stall 275 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/review/ctl-cubes-stall.json
+{"case": "moving-100k", "backend": "dx12", "adapter": null, "build": "head", "seconds": 35.9, "headline": {"apply": 5.862, "feed": 2.863, "scene sync": 3.349, "render cpu": 4.284, "frame": 43.95, "gpu": 29.223}, "error": null}
+{"case": "moving-100k", "backend": "vulkan", "adapter": null, "build": "head", "seconds": 35.8, "headline": {"apply": 5.774, "feed": 2.881, "scene sync": 5.7741, "render cpu": 6.451, "frame": 48.627, "gpu": 31.891}, "error": null}
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| moving-100k | dx12 | - | head | 5.862 | 3.349 | 4.284 | 43.950 | 29.223 | 435 |
+| moving-100k | vulkan | - | head | 5.774 | 5.774 | 6.451 | 48.627 | 31.891 | 427.0 |

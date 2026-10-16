@@ -1,0 +1,103 @@
+3216 samples from 1 thread(s) over 6.9 s (3217 ticks); program exit 0
+{"engine":"rapier","version":"0.36.0","deterministic":true,"config":"enhanced-determinism native","scene":"Raycast","threads":1,"steps":500,"solver_iterations":4,"bodies":1765,"colliders":1765,"active_at_end":1624,"setup_ms":14.3,"mean_ms":10.7207,"p50_ms":11.3603,"p95_ms":19.6277,"max_ms":23.5043,"total_ms":5360.33,"first_step_ms":2.1742,"mean_ms_after_first":10.7378,"top_y":10.349,"mean_y":1.931,"rays_per_step":10000,"ray_mean_ms":4.0043,"ray_p95_ms":5.7297,"ray_total_ms":2002.13,"ray_hits":4753000,"ray_fraction_sum":1660045.650,"hash":"0x9ae30402cc5cb77b"}
+Samples per thread: <tid>: 3216
+
+Leaf module: % of samples
+   97.8  physics-bench.exe
+    1.7  ntdll.dll
+    0.4  VCRUNTIME140.dll
+    0.0  KERNEL32.DLL
+
+Leaf function: % of samples
+   11.8  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::cast_ray<parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure_env$0<parry3d::s
+    9.1  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_update::process_pair
+    6.0  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::generate
+    5.6  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::cast_ray<parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure_env$0<rapier3d::
+    4.7  physics-bench.exe!parry3d::shape::trimesh::TriMesh::triangle_normal_constraints
+    4.1  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::worker::run_worker
+    3.8  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::solve
+    2.7  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update
+    2.6  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_trimesh_shape::contact_manifolds_trimesh_shape<rapier3d::geometry::contact_pair::ContactM
+    2.2  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::reconcile_pair
+    2.0  physics-bench.exe!parry3d::query::ray::ray_triangle::local_ray_intersection_with_triangle
+    2.0  physics-bench.exe!rapier3d::geometry::contact_pair::SolverContactGeneric::gather_unchecked
+    1.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::warmstart
+    1.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update_rhs_wo_bias
+    1.8  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_pfm_pfm::contact_manifold_pfm_pfm<rapier3d::geometry::contact_pair::ContactManifoldData,r
+    1.7  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifold::ContactManifold::try_update_contacts_eps<rapier3d::geometry::contact_pair::ContactManifol
+    1.6  physics-bench.exe!parry3d::shape::triangle::impl$3::local_support_point
+    1.6  physics-bench.exe!parry3d::shape::polygonal_feature3d::PolygonalFeature::contacts<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3d::geometry::cont
+    1.5  physics-bench.exe!parry3d::query::gjk::gjk::closest_points<dyn$<parry3d::shape::polygonal_feature_map::PolygonalFeatureMap>,dyn$<parry3d::shape::polygonal_featu
+    1.5  physics-bench.exe!rapier3d::geometry::contact_clustering::cluster_manifolds_for_solver
+    1.4  physics-bench.exe!parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure$0<parry3d::shape::trimesh::TriMesh>
+    1.3  physics-bench.exe!rapier3d::geometry::contact_clustering::transfer_warmstart_data
+    1.2  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::step_inner
+    1.2  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::writeback_impulses
+    1.2  physics-bench.exe!parry3d::shape::support_map::SupportMap::support_point_toward<parry3d::shape::triangle::Triangle>
+    1.1  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::BvhNode::intersects
+    0.8  ntdll.dll!RtlAllocateHeap
+    0.8  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_cuboid_triangle::contact_manifold_cuboid_triangle<rapier3d::geometry::contact_pair::Conta
+    0.7  physics-bench.exe!parry3d::shape::support_map::SupportMap::support_point_toward<parry3d::shape::segment::Segment>
+    0.7  physics-bench.exe!parry3d::shape::support_map::SupportMap::support_point<parry3d::shape::convex_polyhedron::ConvexPolyhedron>
+    0.7  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_qualified_manifold_count
+    0.7  physics-bench.exe!parry3d::query::point::point_triangle::impl$1::project_local_point_and_get_location
+    0.6  physics-bench.exe!parry3d::shape::polygonal_feature3d::closest_points_line2d
+    0.6  physics-bench.exe!indexmap::map::IndexMap::get_index_of<tuple$<rapier3d::geometry::collider_handle::ColliderHandle,rapier3d::geometry::collider_handle::Collider
+    0.6  physics-bench.exe!rapier3d::dynamics::rigid_body_components::RigidBodyPosition::pose_errors
+    0.5  physics-bench.exe!parry3d::partitioning::bvh::bvh_traverse::impl$1::next<parry3d::partitioning::bvh::bvh_queries::impl$1::intersect_aabb::closure_env$0>
+    0.5  physics-bench.exe!parry3d::query::sat::sat_cuboid_support_map::cuboid_support_map_find_local_separating_normal_oneway<parry3d::shape::triangle::Triangle>
+    0.5  ntdll.dll!RtlFreeHeap
+    0.4  physics-bench.exe!parry3d::query::point::point_triangle::impl$1::project_local_point_and_get_location::stable_check_edges_voronoi
+    0.4  physics-bench.exe!parry3d::query::point::point_tetrahedron::impl$1::project_local_point_and_get_location
+    0.4  physics-bench.exe!parry3d::query::default_query_dispatcher::impl$1::contact_manifold_convex_convex<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3
+    0.4  physics-bench.exe!rapier3d::pipeline::query_pipeline::QueryPipeline::cast_ray
+    0.4  VCRUNTIME140.dll!_NLG_Return2
+    0.4  physics-bench.exe!parry3d::partitioning::bvh::bvh_queries::impl$0::from
+    0.4  physics-bench.exe!parry3d::utils::isometry_ops::impl$1::prepend_to
+
+Inclusive function: % of samples
+  100.0  physics-bench.exe!__scrt_common_main_seh
+  100.0  KERNEL32.DLL!BaseThreadInitThunk
+  100.0  ntdll.dll!RtlUserThreadStart
+   99.9  physics-bench.exe!std::rt::lang_start_internal
+   99.9  physics-bench.exe!core::ops::function::FnOnce::call_once<std::rt::lang_start::closure_env$0<tuple$<> >,tuple$<> >
+   99.9  physics-bench.exe!physics_bench::main
+   99.9  physics-bench.exe!main
+   99.9  physics-bench.exe!std::sys::backtrace::__rust_begin_short_backtrace<void (*)(),tuple$<> >
+   73.6  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::step_inner
+   73.6  physics-bench.exe!rapier3d::pipeline::physics_world::PhysicsWorld::step_with_events
+   41.6  physics-bench.exe!rapier3d::pipeline::physics_pipeline::PhysicsPipeline::detect_collisions
+   39.2  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::compute_contacts
+   38.9  physics-bench.exe!rapier3d::geometry::narrow_phase::pair_update::process_pair
+   26.1  physics-bench.exe!rapier3d::pipeline::query_pipeline::QueryPipeline::cast_ray
+   25.7  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::cast_ray<parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure_env$0<rapier3d::
+   25.4  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::StagedIslandSolver::init_and_solve
+   25.2  physics-bench.exe!parry3d::query::default_query_dispatcher::impl$1::contact_manifolds<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3d::geometry::
+   24.8  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::worker::run_worker
+   21.1  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_trimesh_shape::contact_manifolds_trimesh_shape<rapier3d::geometry::contact_pair::ContactM
+   19.0  physics-bench.exe!parry3d::query::ray::ray::RayCast::cast_ray<parry3d::shape::trimesh::TriMesh>
+   18.8  physics-bench.exe!parry3d::query::default_query_dispatcher::impl$1::contact_manifold_convex_convex<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3
+   18.6  physics-bench.exe!parry3d::partitioning::bvh::bvh_tree::Bvh::cast_ray<parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure_env$0<parry3d::s
+   12.1  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_pfm_pfm::contact_manifold_pfm_pfm<rapier3d::geometry::contact_pair::ContactManifoldData,r
+    7.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::generate
+    7.6  physics-bench.exe!parry3d::query::contact::contact_support_map_support_map::contact_support_map_support_map_with_params<dyn$<parry3d::shape::polygonal_feature_m
+    6.8  physics-bench.exe!parry3d::query::ray::ray_composite_shape::impl$0::cast_local_ray::closure$0<parry3d::shape::trimesh::TriMesh>
+    5.8  physics-bench.exe!parry3d::query::gjk::gjk::closest_points<dyn$<parry3d::shape::polygonal_feature_map::PolygonalFeatureMap>,dyn$<parry3d::shape::polygonal_featu
+    5.7  physics-bench.exe!rapier3d::dynamics::solver::staged_island_solver::solve::solve_pass
+    4.7  physics-bench.exe!parry3d::shape::trimesh::TriMesh::triangle_normal_constraints
+    4.5  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_cuboid_triangle::contact_manifold_cuboid_triangle_shapes<rapier3d::geometry::contact_pair
+    4.3  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifolds_cuboid_triangle::contact_manifold_cuboid_triangle<rapier3d::geometry::contact_pair::Conta
+    3.8  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::solve
+    3.0  physics-bench.exe!rapier3d::geometry::contact_clustering::cluster_manifolds_for_solver
+    2.7  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update
+    2.5  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::maintain_solver_contact_graph
+    2.2  physics-bench.exe!rapier3d::geometry::narrow_phase::NarrowPhase::reconcile_pair
+    2.2  physics-bench.exe!parry3d::shape::polygonal_feature3d::PolygonalFeature::contacts<rapier3d::geometry::contact_pair::ContactManifoldData,rapier3d::geometry::cont
+    2.0  physics-bench.exe!rapier3d::geometry::broad_phase_bvh::BroadPhaseBvh::update
+    2.0  physics-bench.exe!parry3d::query::ray::ray_triangle::local_ray_intersection_with_triangle
+    2.0  physics-bench.exe!rapier3d::geometry::contact_pair::SolverContactGeneric::gather_unchecked
+    1.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFriction::warmstart
+    1.9  physics-bench.exe!rapier3d::dynamics::solver::contact_constraint::contact_with_twist_friction::ContactWithTwistFrictionBuilder::update_rhs_wo_bias
+    1.7  physics-bench.exe!parry3d::query::gjk::voronoi_simplex3::VoronoiSimplex::project_origin_and_reduce
+    1.7  physics-bench.exe!parry3d::query::contact_manifolds::contact_manifold::ContactManifold::try_update_contacts_eps<rapier3d::geometry::contact_pair::ContactManifol
+    1.6  physics-bench.exe!parry3d::query::sat::sat_cuboid_support_map::cuboid_support_map_find_local_separating_normal_oneway<parry3d::shape::triangle::Triangle>

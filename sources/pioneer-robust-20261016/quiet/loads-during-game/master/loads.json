@@ -1,0 +1,441 @@
+{
+  "url": "http://<local-endpoint>/",
+  "loads": 5,
+  "seconds": 12,
+  "touch": null,
+  "phases": [
+    {
+      "name": "load 1",
+      "ok": false,
+      "why": [
+        "errors: 3 exception, 2 error"
+      ],
+      "ready_s": 2.3,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 3,
+        "renderer": {
+          "gpu_ms": 1.393,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.058
+            },
+            {
+              "pass": "lights",
+              "ms": 0.028
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.014
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.294
+            }
+          ]
+        },
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-1.png"
+      },
+      "counts": {
+        "exception": 3,
+        "error": 2
+      },
+      "messages": [
+        {
+          "t": 2.1,
+          "kind": "exception",
+          "text": "Error: closure invoked recursively or after being dropped\n    at __wbg___wbindgen_throw_41e9ee4f547fc59a (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:503:19)\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1696]:0x17c4ad\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1321]:0x147d59\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1483]:0x14df13\n    at wasm_bindgen_b9ee389c17adf1c8___convert__closures_____invoke___wasm_bindgen_b9ee389c17adf1c8___sys__JsNullable_wgpu_87789dae20cfcf4a___backend__webgpu__webg"
+        },
+        {
+          "t": 2.3,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 2.3,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        },
+        {
+          "t": 2.3,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 2.3,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        }
+      ]
+    },
+    {
+      "name": "load 2",
+      "ok": true,
+      "why": [],
+      "ready_s": 1.8,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 11,
+        "renderer": {
+          "gpu_ms": 1.396,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.053
+            },
+            {
+              "pass": "lights",
+              "ms": 0.011
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.013
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.319
+            }
+          ]
+        },
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-2.png"
+      },
+      "counts": {},
+      "messages": []
+    },
+    {
+      "name": "load 3",
+      "ok": false,
+      "why": [
+        "no new wasm viewport attached: {\"pocket\":true,\"viewport\":null,\"engine\":false,\"generation\":0,\"frames\":0,\"renderer\":null,\"wasm_fetches\":2}",
+        "errors: 3 exception, 2 error"
+      ],
+      "ready_s": null,
+      "remounted": false,
+      "state": {
+        "pocket": true,
+        "viewport": null,
+        "engine": false,
+        "generation": 0,
+        "frames": 0,
+        "renderer": null,
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.987,
+        "colors": 133,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-3.png"
+      },
+      "counts": {
+        "exception": 3,
+        "error": 2
+      },
+      "messages": [
+        {
+          "t": 0.8,
+          "kind": "exception",
+          "text": "Error: closure invoked recursively or after being dropped\n    at __wbg___wbindgen_throw_41e9ee4f547fc59a (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:503:19)\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1696]:0x17c4ad\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1321]:0x147d59\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1483]:0x14df13\n    at wasm_bindgen_b9ee389c17adf1c8___convert__closures_____invoke___wasm_bindgen_b9ee389c17adf1c8___sys__JsNullable_wgpu_87789dae20cfcf4a___backend__webgpu__webg"
+        },
+        {
+          "t": 17.6,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 17.6,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        },
+        {
+          "t": 17.6,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 17.6,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        }
+      ]
+    },
+    {
+      "name": "load 4",
+      "ok": false,
+      "why": [
+        "errors: 1 exception"
+      ],
+      "ready_s": 1.6,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 15,
+        "renderer": {
+          "gpu_ms": 1.36,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.054
+            },
+            {
+              "pass": "lights",
+              "ms": 0.025
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.011
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.27
+            }
+          ]
+        },
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-4.png"
+      },
+      "counts": {
+        "exception": 1
+      },
+      "messages": [
+        {
+          "t": 1.3,
+          "kind": "exception",
+          "text": "Error: closure invoked recursively or after being dropped\n    at __wbg___wbindgen_throw_41e9ee4f547fc59a (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:503:19)\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1696]:0x17c4ad\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1321]:0x147d59\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1483]:0x14df13\n    at wasm_bindgen_b9ee389c17adf1c8___convert__closures_____invoke___wasm_bindgen_b9ee389c17adf1c8___sys__JsNullable_wgpu_87789dae20cfcf4a___backend__webgpu__webg"
+        }
+      ]
+    },
+    {
+      "name": "load 5",
+      "ok": false,
+      "why": [
+        "errors: 1 exception"
+      ],
+      "ready_s": 0.9,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 1,
+        "frames": 15,
+        "renderer": {
+          "gpu_ms": 1.36,
+          "instances": 5,
+          "entities": 5,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 40,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": [
+            {
+              "pass": "cull",
+              "ms": 0.056
+            },
+            {
+              "pass": "lights",
+              "ms": 0.03
+            },
+            {
+              "pass": "shadows",
+              "ms": 0.011
+            },
+            {
+              "pass": "opaque+sky",
+              "ms": 1.264
+            }
+          ]
+        },
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.164,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-5.png"
+      },
+      "counts": {
+        "exception": 1
+      },
+      "messages": [
+        {
+          "t": 0.7,
+          "kind": "exception",
+          "text": "Error: closure invoked recursively or after being dropped\n    at __wbg___wbindgen_throw_41e9ee4f547fc59a (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:503:19)\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1696]:0x17c4ad\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1321]:0x147d59\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1483]:0x14df13\n    at wasm_bindgen_b9ee389c17adf1c8___convert__closures_____invoke___wasm_bindgen_b9ee389c17adf1c8___sys__JsNullable_wgpu_87789dae20cfcf4a___backend__webgpu__webg"
+        }
+      ]
+    },
+    {
+      "name": "layout reset (the viewport panel remounted)",
+      "ok": false,
+      "why": [
+        "the viewport drew no frames of the world: {\"pocket\":true,\"viewport\":\"wasm\",\"engine\":true,\"generation\":2,\"frames\":0,\"renderer\":{\"gpu_ms\":0,\"instances\":0,\"entities\":0,\"meshes\":28,\"pending_assets\":0,\"tick\":0,\"backend\":\"WebGPU\",\"draw_path\":\"first-instance\",\"draw_calls\":0,\"occlusion\":\"auto-off\",\"occluded\":0,\"prepass\":\"auto-off\",\"lod\":\"on\",\"antialiasing\":\"msaa\",\"gtao\":\"off\",\"render_scale\":1,\"passes\":[]},\"wasm_fetches\":2}",
+        "errors: 2 error, 5 exception"
+      ],
+      "ready_s": 0.6,
+      "remounted": true,
+      "state": {
+        "pocket": true,
+        "viewport": "wasm",
+        "engine": true,
+        "generation": 2,
+        "frames": 0,
+        "renderer": {
+          "gpu_ms": 0,
+          "instances": 0,
+          "entities": 0,
+          "meshes": 28,
+          "pending_assets": 0,
+          "tick": 0,
+          "backend": "WebGPU",
+          "draw_path": "first-instance",
+          "draw_calls": 0,
+          "occlusion": "auto-off",
+          "occluded": 0,
+          "prepass": "auto-off",
+          "lod": "on",
+          "antialiasing": "msaa",
+          "gtao": "off",
+          "render_scale": 1,
+          "passes": []
+        },
+        "wasm_fetches": 2
+      },
+      "canvas": {
+        "width": 951,
+        "height": 480,
+        "flat": 0.167,
+        "colors": 257,
+        "shot": "<local-path>\\out\\robust\\quiet\\loads\\master\\phase-6.png"
+      },
+      "counts": {
+        "error": 2,
+        "exception": 5
+      },
+      "messages": [
+        {
+          "t": 0.3,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 0.3,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        },
+        {
+          "t": 0.4,
+          "kind": "exception",
+          "text": "RuntimeError: memory access out of bounds\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[863]:0x113b94\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[635]:0xef8f5\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x147349\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1201]:0x1433fb\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1420]:0x14b7f0\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1041]:0x12cb33\n    at Viewport"
+        },
+        {
+          "t": 0.4,
+          "kind": "error",
+          "text": "pocket panicked: panicked at /rust/deps/dlmalloc-0.2.13/src/dlmalloc.rs:1201:9:\nassertion failed: psize >= size + min_overhead"
+        },
+        {
+          "t": 0.4,
+          "kind": "exception",
+          "text": "RuntimeError: unreachable\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1018]:0x12b2c6\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1399]:0x14a947\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1594]:0x17aebd\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1295]:0x14735a\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1438]:0x14cd9f\n    at CLOSURE_DTORS (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:1851:46)"
+        },
+        {
+          "t": 0.6,
+          "kind": "exception",
+          "text": "RuntimeError: memory access out of bounds\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[376]:0x5f9d9\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1566]:0x17aa42\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[801]:0x10b35c\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1487]:0x17291b\n    at Viewport.render (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:223:30)\n    at frame (http://<local-endpoint>/wasm/pocket_web.js:74:18)"
+        },
+        {
+          "t": 0.6,
+          "kind": "exception",
+          "text": "Error: recursive use of an object detected which would lead to unsafe aliasing in rust\n    at __wbg___wbindgen_throw_41e9ee4f547fc59a (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:503:19)\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1696]:0x17c4ad\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[1698]:0x17c4ca\n    at http://<local-endpoint>/wasm/pkg/pocket_viewport_bg.wasm:wasm-function[882]:0x115b74\n    at Viewport.set_camera_look (http://<local-endpoint>/wasm/pkg/pocket_viewport.js:293:14)\n    at Object.setCamera (http://<local-endpoint>"
+        }
+      ]
+    }
+  ]
+}

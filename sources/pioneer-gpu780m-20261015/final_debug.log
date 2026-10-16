@@ -1,0 +1,64 @@
+$ <local-path> <local-path>/out/gpu780m/run_matrix.py debug-final 5060-dx12,780m-dx12 --debug
+2026-10-15 11:48:52 debug-final-5060-dx12+780m-dx12: AC True, CPU 6.1%, RTX 69 C 0/3090 MHz 11.32 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+5060-dx12 draw_paths: exit 0 in 4s; 1 pass
+5060-dx12 forward_variants: exit 0 in 2s; 1 pass
+5060-dx12 frame_trace: exit 0 in 3s; 2 pass
+5060-dx12 gpu_profiler: exit 0 in 1s; 1 pass
+5060-dx12 hiz: exit 0 in 4s; 2 pass
+5060-dx12 lib: exit 0 in 34s; 125 pass
+5060-dx12 lod: exit 0 in 8s; 6 pass
+5060-dx12 neural: exit 0 in 14s; 2 pass
+5060-dx12 neural_material: exit 0 in 19s; 8 pass
+5060-dx12 neural_mlp: exit 0 in 0s; 1 pass
+5060-dx12 occlusion: exit 0 in 13s; 1 pass
+5060-dx12 prepass: exit 0 in 19s; 2 pass
+5060-dx12 rt_shadows: exit 0 in 5s; 1 pass
+5060-dx12 scene_changes: exit 0 in 4s; 3 pass
+5060-dx12 skinned_bounds: exit 0 in 0s; 1 pass
+5060-dx12 taa: exit 0 in 16s; 11 pass
+780m-dx12 draw_paths: exit 0 in 5s; 1 pass
+780m-dx12 forward_variants: exit 0 in 3s; 1 pass
+780m-dx12 frame_trace: exit 0 in 3s; 2 pass
+780m-dx12 gpu_profiler: exit 0 in 2s; 1 pass
+780m-dx12 hiz: exit 0 in 5s; 2 pass
+780m-dx12 lib: exit 0 in 34s; 125 pass
+780m-dx12 lod: exit 0 in 12s; 6 pass
+780m-dx12 neural: exit 0 in 17s; 2 pass
+780m-dx12 neural_material: exit 0 in 23s; 8 pass
+780m-dx12 neural_mlp: exit 0 in 0s; 1 pass
+780m-dx12 occlusion: exit 0 in 16s; 1 pass
+780m-dx12 prepass: exit 0 in 24s; 2 pass
+780m-dx12 rt_shadows: exit 0 in 6s; 1 pass
+780m-dx12 scene_changes: exit 0 in 7s; 3 pass
+780m-dx12 skinned_bounds: exit 0 in 0s; 1 pass
+780m-dx12 taa: exit 0 in 24s; 11 pass
+
+test    5060-dx12   780m-dx12 
+
+5060-dx12: 168 pass; Direct3D 12 on NVIDIA GeForce RTX 5060 Laptop GPU (DiscreteGpu), driver 32.0.16.1714 ; timestamp period 1 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+780m-dx12: 168 pass; Direct3D 12 on AMD Radeon 780M Graphics (IntegratedGpu), driver 32.0.13062.3005 ; timestamp period 10 ns; Capabilities { indirect_first_instance: true, multi_draw_indirect: true, timestamps: true, shader_f16: true, float32_filterable: true, ray_query: false }
+exit 0
+$ <local-path> <local-path>/out/gpu780m/reruns/rerun.py splat-780m-vulkan-growth 10 780m-vulkan <local-path>/.claude/worktrees/gpu780m/target/release/deps\pocket_render-9bba5b86bd6778e9.exe splat::tile --include-ignored
+2026-10-15 11:54:42 splat-780m-vulkan-growth: AC True, CPU 14.3%, RTX 70 C 52/3090 MHz 10.95 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+run 0: exit 0 in 5s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 4.50s
+run 1: exit 0 in 5s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 3.94s
+run 2: exit 0 in 4s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 3.02s
+run 3: exit 0 in 5s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 3.83s
+run 4: exit 0 in 5s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 4.02s
+run 5: exit 0 in 4s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 3.60s
+run 6: exit 0 in 4s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 2.82s
+run 7: exit 0 in 4s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 3.34s
+run 8: exit 0 in 3s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 2.63s
+run 9: exit 0 in 4s; test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 2.84s
+exit 0
+$ <local-path> <local-path>/.claude/worktrees/gpu780m/tools/gpu_matrix.py --configs 780n-dx12 --bins gpu_profiler --out <local-path>/out/gpu780m/matrix/typo --json <local-path>/out/gpu780m/matrix/typo-780n-dx12.json
+780n-dx12 gpu_profiler: exit 0 in 1s; 1 skip
+
+test                                                                                    780n-dx12 
+gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window  skip [1]  
+
+780n-dx12: 1 skip; adapter not reported
+[1] 780n-dx12 gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window: no GPU: skipped
+error: 780n-dx12: no adapter reported
+error: 780n-dx12: 1 tests found no GPU (gpu_profiler asynchronous_frames_keep_their_queries_and_only_record_the_capture_window, ...)
+exit 1

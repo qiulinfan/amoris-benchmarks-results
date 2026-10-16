@@ -1,0 +1,1297 @@
+{
+  "crate_ticks": 1000.0,
+  "limits": {
+    "branches": 4,
+    "ticks_per_decision": 600
+  },
+  "max_ticks": 36000,
+  "provisional": true,
+  "runs": [
+    {
+      "acts": 6,
+      "condition": "perception",
+      "decide_s": 0.0,
+      "decisions": 9,
+      "finished": true,
+      "lookahead": null,
+      "model": "greedy",
+      "next_mark": "none",
+      "score": 4136.0,
+      "seed": 1,
+      "taken": 1.0,
+      "ticks": 5136,
+      "wall_s": 1.558,
+      "weighed": [],
+      "world_hash": "8844c2e8295e89091e82997488558894"
+    },
+    {
+      "acts": 8,
+      "condition": "perception",
+      "decide_s": 1.37,
+      "decisions": 11,
+      "finished": true,
+      "lookahead": {
+        "branch_acts": 14,
+        "branch_ticks": 4200,
+        "decisions": 11,
+        "forks": 18,
+        "looked": 7,
+        "max_branch_ticks_per_decision": 600,
+        "overrides": 1
+      },
+      "model": "lookahead",
+      "next_mark": "none",
+      "score": 3481.0,
+      "seed": 1,
+      "taken": 2.0,
+      "ticks": 5481,
+      "wall_s": 2.255,
+      "weighed": [
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 2
+                },
+                "tag": "crate",
+                "target": 11
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": null,
+              "acts": 0,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": -293.2009402892098
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 11
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 11
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -292.9550063981266
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 12
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -293.32881014956996
+            }
+          ],
+          "chosen": {
+            "crate": 11
+          },
+          "tick": 1
+        },
+        {
+          "act": null,
+          "branches": [
+            {
+              "act": null,
+              "acts": 0,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": -198.40175056385326
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark1"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "mark",
+              "refused": null,
+              "ticks": 200,
+              "value": -241.62906772663868
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 12
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -241.49762269111682
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 978
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 8
+                },
+                "tag": "mark",
+                "target": "Mark1"
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark1"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -163.2167312877227
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 12
+              },
+              "refused": null,
+              "ticks": 300,
+              "value": -165.56130529101256
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 1573
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 2
+                },
+                "tag": "crate",
+                "target": 12
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -86.65400143755306
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark2"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "mark",
+              "refused": null,
+              "ticks": 300,
+              "value": -143.6685950122937
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 1880
+        },
+        {
+          "act": null,
+          "branches": [
+            {
+              "act": null,
+              "acts": 0,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -34.041998083028844
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 10
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 10
+              },
+              "refused": null,
+              "ticks": 300,
+              "value": -36.755063106755884
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 2818
+        },
+        {
+          "act": null,
+          "branches": [
+            {
+              "act": null,
+              "acts": 0,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": -35.88043990461453
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 10
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 10
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -36.77468963621688
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 9
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 9
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -37.012423313696715
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 2883
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 8
+                },
+                "tag": "mark",
+                "target": "Mark3"
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark3"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 10
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 10
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 9
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 9
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 3646
+        }
+      ],
+      "world_hash": "a7002afeee12a0cc3f1c9e2cb800f51e"
+    },
+    {
+      "acts": 5,
+      "condition": "omniscient",
+      "decide_s": 0.0,
+      "decisions": 6,
+      "finished": true,
+      "lookahead": null,
+      "model": "greedy",
+      "next_mark": "none",
+      "score": 5910.0,
+      "seed": 1,
+      "taken": 1.0,
+      "ticks": 6910,
+      "wall_s": 0.955,
+      "weighed": [],
+      "world_hash": "bb2398407f243f360c30c76bc10e59a0"
+    },
+    {
+      "acts": 8,
+      "condition": "omniscient",
+      "decide_s": 0.894,
+      "decisions": 8,
+      "finished": true,
+      "lookahead": {
+        "branch_acts": 11,
+        "branch_ticks": 3000,
+        "decisions": 8,
+        "forks": 12,
+        "looked": 5,
+        "max_branch_ticks_per_decision": 600,
+        "overrides": 1
+      },
+      "model": "lookahead",
+      "next_mark": "none",
+      "score": 3481.0,
+      "seed": 1,
+      "taken": 2.0,
+      "ticks": 5481,
+      "wall_s": 1.65,
+      "weighed": [
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 2
+                },
+                "tag": "crate",
+                "target": 11
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": null,
+              "acts": 0,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": -293.2009402892098
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 11
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 11
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -292.9550063981266
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 12
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": -293.32881014956996
+            }
+          ],
+          "chosen": {
+            "crate": 11
+          },
+          "tick": 1
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 8
+                },
+                "tag": "mark",
+                "target": "Mark1"
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark1"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -163.2167312877227
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 12
+              },
+              "refused": null,
+              "ticks": 300,
+              "value": -165.56130529101256
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 1573
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 2
+                },
+                "tag": "crate",
+                "target": 12
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 12
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -86.65400143755306
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark2"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "mark",
+              "refused": null,
+              "ticks": 300,
+              "value": -143.6685950122937
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 1880
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 8
+                },
+                "tag": "mark",
+                "target": "Mark2"
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark2"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 300,
+              "value": -47.97628612785475
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 10
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 10
+              },
+              "refused": null,
+              "ticks": 300,
+              "value": -49.05406442829529
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 2563
+        },
+        {
+          "act": {
+            "actions": [
+              {
+                "do": "start",
+                "intent": "sail_to",
+                "params": {
+                  "arrive_m": 8
+                },
+                "tag": "mark",
+                "target": "Mark3"
+              }
+            ]
+          },
+          "branches": [
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 8
+                    },
+                    "tag": "mark",
+                    "target": "Mark3"
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": "greedy",
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 10
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 10
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            },
+            {
+              "act": {
+                "actions": [
+                  {
+                    "do": "start",
+                    "intent": "sail_to",
+                    "params": {
+                      "arrive_m": 2
+                    },
+                    "tag": "crate",
+                    "target": 9
+                  }
+                ]
+              },
+              "acts": 1,
+              "done": false,
+              "plan": {
+                "crate": 9
+              },
+              "refused": null,
+              "ticks": 200,
+              "value": 11.871819465098596
+            }
+          ],
+          "chosen": "greedy",
+          "tick": 3646
+        }
+      ],
+      "world_hash": "7d5137d584ca2d2d2985ed3ca6fc2020"
+    }
+  ],
+  "seeds": [
+    1,
+    1
+  ],
+  "summary": {
+    "omniscient": {
+      "greedy": {
+        "acts": {
+          "max": 5.0,
+          "mean": 5.0,
+          "median": 5.0,
+          "min": 5.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "branch_ticks": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decide_s": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decisions": {
+          "max": 6.0,
+          "mean": 6.0,
+          "median": 6.0,
+          "min": 6.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "episodes": 1,
+        "finished": 1,
+        "forks": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "overrides": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "score": {
+          "max": 5910.0,
+          "mean": 5910.0,
+          "median": 5910.0,
+          "min": 5910.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "taken": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_finished": {
+          "max": 6910.0,
+          "mean": 6910.0,
+          "median": 6910.0,
+          "min": 6910.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "wall_s": {
+          "max": 0.95,
+          "mean": 0.95,
+          "median": 0.95,
+          "min": 0.95,
+          "n": 1,
+          "sd": 0.0
+        }
+      },
+      "lookahead": {
+        "acts": {
+          "max": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "min": 8.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "branch_ticks": {
+          "max": 3000.0,
+          "mean": 3000.0,
+          "median": 3000.0,
+          "min": 3000.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decide_s": {
+          "max": 0.89,
+          "mean": 0.89,
+          "median": 0.89,
+          "min": 0.89,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decisions": {
+          "max": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "min": 8.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "episodes": 1,
+        "finished": 1,
+        "forks": {
+          "max": 12.0,
+          "mean": 12.0,
+          "median": 12.0,
+          "min": 12.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "overrides": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "score": {
+          "max": 3481.0,
+          "mean": 3481.0,
+          "median": 3481.0,
+          "min": 3481.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "taken": {
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0,
+          "min": 2.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_finished": {
+          "max": 5481.0,
+          "mean": 5481.0,
+          "median": 5481.0,
+          "min": 5481.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "wall_s": {
+          "max": 1.65,
+          "mean": 1.65,
+          "median": 1.65,
+          "min": 1.65,
+          "n": 1,
+          "sd": 0.0
+        }
+      },
+      "lookahead_minus_greedy": {
+        "score": {
+          "max": -2429.0,
+          "mean": -2429.0,
+          "median": -2429.0,
+          "min": -2429.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "seeds_better": 1,
+        "seeds_equal": 0,
+        "seeds_worse": 0,
+        "taken": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_both_finished": {
+          "max": -1429.0,
+          "mean": -1429.0,
+          "median": -1429.0,
+          "min": -1429.0,
+          "n": 1,
+          "sd": 0.0
+        }
+      }
+    },
+    "perception": {
+      "greedy": {
+        "acts": {
+          "max": 6.0,
+          "mean": 6.0,
+          "median": 6.0,
+          "min": 6.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "branch_ticks": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decide_s": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decisions": {
+          "max": 9.0,
+          "mean": 9.0,
+          "median": 9.0,
+          "min": 9.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "episodes": 1,
+        "finished": 1,
+        "forks": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "overrides": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "score": {
+          "max": 4136.0,
+          "mean": 4136.0,
+          "median": 4136.0,
+          "min": 4136.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "taken": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_finished": {
+          "max": 5136.0,
+          "mean": 5136.0,
+          "median": 5136.0,
+          "min": 5136.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "wall_s": {
+          "max": 1.56,
+          "mean": 1.56,
+          "median": 1.56,
+          "min": 1.56,
+          "n": 1,
+          "sd": 0.0
+        }
+      },
+      "lookahead": {
+        "acts": {
+          "max": 8.0,
+          "mean": 8.0,
+          "median": 8.0,
+          "min": 8.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "branch_ticks": {
+          "max": 4200.0,
+          "mean": 4200.0,
+          "median": 4200.0,
+          "min": 4200.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decide_s": {
+          "max": 1.37,
+          "mean": 1.37,
+          "median": 1.37,
+          "min": 1.37,
+          "n": 1,
+          "sd": 0.0
+        },
+        "decisions": {
+          "max": 11.0,
+          "mean": 11.0,
+          "median": 11.0,
+          "min": 11.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "episodes": 1,
+        "finished": 1,
+        "forks": {
+          "max": 18.0,
+          "mean": 18.0,
+          "median": 18.0,
+          "min": 18.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "overrides": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "score": {
+          "max": 3481.0,
+          "mean": 3481.0,
+          "median": 3481.0,
+          "min": 3481.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "taken": {
+          "max": 2.0,
+          "mean": 2.0,
+          "median": 2.0,
+          "min": 2.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_finished": {
+          "max": 5481.0,
+          "mean": 5481.0,
+          "median": 5481.0,
+          "min": 5481.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "wall_s": {
+          "max": 2.26,
+          "mean": 2.26,
+          "median": 2.26,
+          "min": 2.26,
+          "n": 1,
+          "sd": 0.0
+        }
+      },
+      "lookahead_minus_greedy": {
+        "score": {
+          "max": -655.0,
+          "mean": -655.0,
+          "median": -655.0,
+          "min": -655.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "seeds_better": 1,
+        "seeds_equal": 0,
+        "seeds_worse": 0,
+        "taken": {
+          "max": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1.0,
+          "n": 1,
+          "sd": 0.0
+        },
+        "ticks_both_finished": {
+          "max": 345.0,
+          "mean": 345.0,
+          "median": 345.0,
+          "min": 345.0,
+          "n": 1,
+          "sd": 0.0
+        }
+      }
+    }
+  }
+}

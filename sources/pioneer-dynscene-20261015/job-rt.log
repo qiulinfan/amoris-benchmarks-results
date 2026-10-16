@@ -1,0 +1,51 @@
+[bench_lock] waiting for physx ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+[bench_lock] waiting for dynscene-tests ...
+$ python tools/dynamic_scenes_bench.py --build before=<local-path>/out/dynscene/before --build d=<local-path>/out/dynscene/d --cases crowd --backends dx12,vulkan --rounds 2 --frames 120 --warm 30 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/bd-crowd.json --conditions <local-path>/out/dynscene/bd-crowd-conditions
+2026-10-14 20:52:21 start: AC True, CPU 13.1%, RTX 66 C 180/3090 MHz 6.90 W P4 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "before", "seconds": 8.6, "headline": {"crowd": {"frame": 2.607, "cpu": 1.268, "gpu": 0.929, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 8.5, "headline": {"crowd": {"frame": 2.33, "cpu": 1.071, "gpu": 0.922, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 7.3, "headline": {"crowd": {"frame": 2.32, "cpu": 0.866, "gpu": 0.809, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 7.2, "headline": {"crowd": {"frame": 1.538, "cpu": 0.435, "gpu": 0.802, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "before", "seconds": 7.4, "headline": {"crowd": {"frame": 2.595, "cpu": 1.259, "gpu": 0.927, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.4, "headline": {"crowd": {"frame": 2.418, "cpu": 1.151, "gpu": 0.936, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 6.8, "headline": {"crowd": {"frame": 1.679, "cpu": 0.488, "gpu": 0.805, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.537, "cpu": 0.428, "gpu": 0.802, "skinning": null}}, "error": null}
+2026-10-14 20:53:34 end: AC True, CPU 24.2%, RTX 65 C 435/3090 MHz 11.58 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| crowd (crowd) | dx12 | - | before | | | 1.268 | 2.607 | 0.929 | 1680.0 |
+| crowd (crowd) | dx12 | - | d | | | 1.071 | 2.33 | 0.922 | 1680 |
+| crowd (crowd) | vulkan | - | before | | | 0.866 | 2.32 | 0.809 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.435 | 1.538 | 0.802 | 1680.0 |
+| crowd (crowd) | dx12 | - | before | | | 1.259 | 2.595 | 0.927 | 1680 |
+| crowd (crowd) | dx12 | - | d | | | 1.151 | 2.418 | 0.936 | 1680 |
+| crowd (crowd) | vulkan | - | before | | | 0.488 | 1.679 | 0.805 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.428 | 1.537 | 0.802 | 1680 |
+$ python tools/dynamic_scenes_bench.py --build before=<local-path>/out/dynscene/before --build d=<local-path>/out/dynscene/d --cases rt-200k-moving --backends vulkan,dx12 --rt-frames 60 --settle 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/bd-rt.json --conditions <local-path>/out/dynscene/bd-rt-conditions
+2026-10-14 20:53:46 start: AC True, CPU 33.6%, RTX 67 C 562/3090 MHz 9.36 W P4 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 182.5, "headline": {"cascaded": {"frame": 923.38, "cpu": 12.419, "gpu": 12.385}, "ray_traced": {"frame": 981.366, "cpu": 57.107, "gpu": 14.376}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 25.0, "headline": {"cascaded": {"frame": 39.196, "cpu": 2.578, "gpu": 0.864}, "ray_traced": {"frame": 99.125, "cpu": 46.138, "gpu": 7.517}}, "error": null}
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "before", "seconds": 181.2, "headline": {"cascaded": {"frame": 920.768, "cpu": 12.678, "gpu": 12.594}, "ray_traced": {"frame": 980.07, "cpu": 57.443, "gpu": 13.929}}, "error": null}
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "d", "seconds": 23.8, "headline": {"cascaded": {"frame": 38.432, "cpu": 2.923, "gpu": 0.858}, "ray_traced": {"frame": 75.284, "cpu": 38.097, "gpu": 1.202}}, "error": null}
+2026-10-14 21:00:54 end: AC True, CPU 8.2%, RTX 63 C 270/3090 MHz 9.38 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| rt-200k-moving (cascaded) | vulkan | - | before | | | 12.419 | 923.38 | 12.385 | 180.0 |
+| rt-200k-moving (ray_traced) | vulkan | - | before | | | 57.107 | 981.366 | 14.376 | 180.0 |
+| rt-200k-moving (cascaded) | vulkan | - | d | | | 2.578 | 39.196 | 0.864 | 870.0 |
+| rt-200k-moving (ray_traced) | vulkan | - | d | | | 46.138 | 99.125 | 7.517 | 870.0 |
+| rt-200k-moving (cascaded) | dx12 | - | before | | | 12.678 | 920.768 | 12.594 | 180.0 |
+| rt-200k-moving (ray_traced) | dx12 | - | before | | | 57.443 | 980.07 | 13.929 | 180.0 |
+| rt-200k-moving (cascaded) | dx12 | - | d | | | 2.923 | 38.432 | 0.858 | 1680 |
+| rt-200k-moving (ray_traced) | dx12 | - | d | | | 38.097 | 75.284 | 1.202 | 1680 |

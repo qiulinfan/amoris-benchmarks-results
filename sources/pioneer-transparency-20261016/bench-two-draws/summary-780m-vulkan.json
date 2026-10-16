@@ -1,0 +1,98 @@
+{
+ "tool": "tools/transparency_bench.py",
+ "adapter": "AMD Radeon 780M Graphics",
+ "backend": "Vulkan",
+ "driver": "AMD proprietary driver 24.30.62.03 (LLPC)",
+ "size": [
+  1600,
+  900
+ ],
+ "antialiasing": "taa",
+ "gtao": "off",
+ "count": 1000,
+ "frames": 300,
+ "rounds": 3,
+ "extra": "",
+ "kinds": {
+  "hidden": {
+   "gpu_ms": 1.896,
+   "opaque_pass_ms": 0.573,
+   "shadows_ms": 0.701,
+   "cpu_encode_ms": 1.02,
+   "transparent_ms": 0.001,
+   "submit_to_idle_ms": 4.001,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    1.93,
+    1.775,
+    1.896
+   ],
+   "gpu_over_hidden_ms": 0.0,
+   "cpu_over_hidden_ms": 0.0
+  },
+  "opaque": {
+   "gpu_ms": 2.662,
+   "opaque_pass_ms": 0.965,
+   "shadows_ms": 1.112,
+   "cpu_encode_ms": 0.983,
+   "transparent_ms": 0.0,
+   "submit_to_idle_ms": 4.643,
+   "transparent_draws": 0,
+   "gpu_ms_rounds": [
+    2.677,
+    2.609,
+    2.662
+   ],
+   "gpu_over_hidden_ms": 0.766,
+   "cpu_over_hidden_ms": -0.037
+  },
+  "blend": {
+   "gpu_ms": 2.908,
+   "opaque_pass_ms": 1.245,
+   "shadows_ms": 1.019,
+   "cpu_encode_ms": 1.381,
+   "transparent_ms": 0.141,
+   "submit_to_idle_ms": 5.431,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    2.908,
+    2.929,
+    2.588
+   ],
+   "gpu_over_hidden_ms": 1.012,
+   "cpu_over_hidden_ms": 0.361
+  },
+  "glass": {
+   "gpu_ms": 2.751,
+   "opaque_pass_ms": 1.205,
+   "shadows_ms": 0.919,
+   "cpu_encode_ms": 1.159,
+   "transparent_ms": 0.156,
+   "submit_to_idle_ms": 4.876,
+   "transparent_draws": 30,
+   "gpu_ms_rounds": [
+    2.889,
+    2.751,
+    2.707
+   ],
+   "gpu_over_hidden_ms": 0.855,
+   "cpu_over_hidden_ms": 0.139
+  },
+  "double": {
+   "gpu_ms": 5.879,
+   "opaque_pass_ms": 3.736,
+   "shadows_ms": 1.309,
+   "cpu_encode_ms": 3.465,
+   "transparent_ms": 0.142,
+   "submit_to_idle_ms": 10.866,
+   "transparent_draws": 2000,
+   "gpu_ms_rounds": [
+    5.1,
+    6.146,
+    5.879
+   ],
+   "gpu_over_hidden_ms": 3.983,
+   "cpu_over_hidden_ms": 2.445
+  }
+ }
+}

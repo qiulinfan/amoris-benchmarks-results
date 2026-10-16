@@ -1,0 +1,36 @@
+[
+ [
+  "python",
+  "tools/dynamic_scenes_bench.py",
+  "--build",
+  "before=<local-path>/out/dynscene/review/before",
+  "--build",
+  "head=<local-path>/out/dynscene/review/head",
+  "--cases",
+  "moving-100k",
+  "--backends",
+  "dx12,vulkan",
+  "--out",
+  "<local-path>/out/dynscene/traces",
+  "--summary",
+  "<local-path>/out/dynscene/review/ctl-cubes.json",
+  "--conditions",
+  "<local-path>/out/dynscene/review/ctl-cubes-conditions"
+ ],
+ [
+  "python",
+  "tools/dynamic_scenes_bench.py",
+  "--build",
+  "head=<local-path>/out/dynscene/review/head",
+  "--cases",
+  "moving-100k",
+  "--backends",
+  "dx12,vulkan",
+  "--stall",
+  "275",
+  "--out",
+  "<local-path>/out/dynscene/traces",
+  "--summary",
+  "<local-path>/out/dynscene/review/ctl-cubes-stall.json"
+ ]
+]

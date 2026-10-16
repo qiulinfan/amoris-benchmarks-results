@@ -1,0 +1,6845 @@
+{
+ "note": "provisional: measured while other agents built and ran GPU work on the machine",
+ "runs": [
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.7,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.121,
+     "p50": 1.126,
+     "p95": 1.33
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 18.729,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.928,
+     "p50": 0.927,
+     "p95": 0.93
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 144.017,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 145.534,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 158.853,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 71.071,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 31.998,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.014,
+     "cull late": 0.006,
+     "gtao": 0.093,
+     "hi-z": 0.059,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.393
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 17.748,
+    "wall_ms": {
+     "mean": 2.427,
+     "p50": 2.429,
+     "p95": 2.696
+    }
+   },
+   "clocks": {
+    "samples": 61,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 2.429,
+     "cpu": 1.126,
+     "gpu": 0.927,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.4,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.056,
+     "p50": 1.07,
+     "p95": 1.281
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 17.663,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.922,
+     "p50": 0.922,
+     "p95": 0.926
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 146.709,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 146.138,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 146.427,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 71.562,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.258,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.09,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 18.706,
+    "wall_ms": {
+     "mean": 2.308,
+     "p50": 2.319,
+     "p95": 2.556
+    }
+   },
+   "clocks": {
+    "samples": 63,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 2.319,
+     "cpu": 1.07,
+     "gpu": 0.922,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.9,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.544,
+     "p50": 0.531,
+     "p95": 0.737
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 5.01,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.803,
+     "p50": 0.801,
+     "p95": 0.805
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 143.068,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 142.773,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 145.997,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.485,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.113,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.063,
+     "lights": 0.005,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.062,
+    "wall_ms": {
+     "mean": 1.759,
+     "p50": 1.745,
+     "p95": 1.997
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 1.745,
+     "cpu": 0.531,
+     "gpu": 0.801,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.409,
+     "p50": 0.424,
+     "p95": 0.509
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.5,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.801,
+     "p50": 0.801,
+     "p95": 0.804
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 143.761,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 146.412,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 144.619,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.898,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 34.832,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 14.768,
+    "wall_ms": {
+     "mean": 1.513,
+     "p50": 1.527,
+     "p95": 1.652
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ]
+   },
+   "round": 0,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 1.527,
+     "cpu": 0.424,
+     "gpu": 0.801,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.4,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.16,
+     "p50": 1.16,
+     "p95": 1.475
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 17.309,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.93,
+     "p50": 0.927,
+     "p95": 0.932
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 142.742,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.229,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 147.802,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.268,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.537,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.094,
+     "hi-z": 0.06,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 17.106,
+    "wall_ms": {
+     "mean": 2.477,
+     "p50": 2.482,
+     "p95": 2.774
+    }
+   },
+   "clocks": {
+    "samples": 63,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 1,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 2.482,
+     "cpu": 1.16,
+     "gpu": 0.927,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.3,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.049,
+     "p50": 1.072,
+     "p95": 1.227
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 18.184,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.929,
+     "p50": 0.929,
+     "p95": 0.933
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 141.593,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 141.924,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 147.373,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 71.033,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.569,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.093,
+     "hi-z": 0.06,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 18.154,
+    "wall_ms": {
+     "mean": 2.299,
+     "p50": 2.316,
+     "p95": 2.506
+    }
+   },
+   "clocks": {
+    "samples": 63,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 1,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 2.316,
+     "cpu": 1.072,
+     "gpu": 0.929,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.471,
+     "p50": 0.452,
+     "p95": 0.674
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.366,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.803,
+     "p50": 0.801,
+     "p95": 0.806
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 144.27,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 148.328,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 149.736,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.851,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.304,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.097,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.326,
+    "wall_ms": {
+     "mean": 1.689,
+     "p50": 1.673,
+     "p95": 1.906
+    }
+   },
+   "clocks": {
+    "samples": 57,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 1,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 1.673,
+     "cpu": 0.452,
+     "gpu": 0.801,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.418,
+     "p50": 0.426,
+     "p95": 0.543
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.88,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.802,
+     "p50": 0.802,
+     "p95": 0.805
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 151.655,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 155.997,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 155.445,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 75.506,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 35.415,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.057,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.913,
+    "wall_ms": {
+     "mean": 1.525,
+     "p50": 1.53,
+     "p95": 1.657
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 1,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 1.53,
+     "cpu": 0.426,
+     "gpu": 0.802,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.4,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.165,
+     "p50": 1.155,
+     "p95": 1.417
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 19.537,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.928,
+     "p50": 0.926,
+     "p95": 0.931
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 142.481,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.348,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 141.723,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.682,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.369,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.014,
+     "cull late": 0.006,
+     "gtao": 0.094,
+     "hi-z": 0.059,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 18.531,
+    "wall_ms": {
+     "mean": 2.47,
+     "p50": 2.456,
+     "p95": 2.736
+    }
+   },
+   "clocks": {
+    "samples": 65,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 2,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 2.456,
+     "cpu": 1.155,
+     "gpu": 0.926,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.0,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.077,
+     "p50": 1.069,
+     "p95": 1.388
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 17.289,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.921,
+     "p50": 0.921,
+     "p95": 0.925
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 145.355,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 148.392,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 149.554,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 71.28,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 35.756,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.09,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 18.866,
+    "wall_ms": {
+     "mean": 2.308,
+     "p50": 2.296,
+     "p95": 2.625
+    }
+   },
+   "clocks": {
+    "samples": 62,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 2,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 2.296,
+     "cpu": 1.069,
+     "gpu": 0.921,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.7,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.506,
+     "p50": 0.507,
+     "p95": 0.618
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.762,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.804,
+     "p50": 0.802,
+     "p95": 0.805
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 144.367,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.753,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 148.333,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.777,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.143,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.057,
+     "shadows": 0.366
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.944,
+    "wall_ms": {
+     "mean": 1.705,
+     "p50": 1.704,
+     "p95": 1.838
+    }
+   },
+   "clocks": {
+    "samples": 57,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 2,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 1.704,
+     "cpu": 0.507,
+     "gpu": 0.802,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.445,
+     "p50": 0.445,
+     "p95": 0.651
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.755,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.801,
+     "p50": 0.801,
+     "p95": 0.804
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 141.853,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 145.125,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 145.751,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.114,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.454,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.096,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.363
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 14.709,
+    "wall_ms": {
+     "mean": 1.561,
+     "p50": 1.551,
+     "p95": 1.816
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 2,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 1.551,
+     "cpu": 0.445,
+     "gpu": 0.801,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.3,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.101,
+     "p50": 1.132,
+     "p95": 1.287
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 18.507,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.918,
+     "p50": 0.918,
+     "p95": 0.922
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 142.061,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 146.194,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 159.445,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.394,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 34.406,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.014,
+     "cull late": 0.006,
+     "gtao": 0.09,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.39
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 20.788,
+    "wall_ms": {
+     "mean": 2.395,
+     "p50": 2.418,
+     "p95": 2.623
+    }
+   },
+   "clocks": {
+    "samples": 65,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 3,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 2.418,
+     "cpu": 1.132,
+     "gpu": 0.918,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.3,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.065,
+     "p50": 1.077,
+     "p95": 1.365
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 17.47,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.923,
+     "p50": 0.92,
+     "p95": 0.924
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 143.913,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.338,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 150.721,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.376,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 34.583,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.089,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.3,
+     "opaque+sky": 0.066,
+     "shadows": 0.391
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 18.205,
+    "wall_ms": {
+     "mean": 2.316,
+     "p50": 2.325,
+     "p95": 2.635
+    }
+   },
+   "clocks": {
+    "samples": 64,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 3,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 2.325,
+     "cpu": 1.077,
+     "gpu": 0.92,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.58,
+     "p50": 0.584,
+     "p95": 0.812
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 5.016,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.802,
+     "p50": 0.8,
+     "p95": 0.803
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 185.972,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 150.102,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 146.91,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.359,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 34.115,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.014,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.062,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.363
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.87,
+    "wall_ms": {
+     "mean": 1.797,
+     "p50": 1.797,
+     "p95": 2.047
+    }
+   },
+   "clocks": {
+    "samples": 59,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 3,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 1.797,
+     "cpu": 0.584,
+     "gpu": 0.8,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.452,
+     "p50": 0.488,
+     "p95": 0.576
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.307,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.803,
+     "p50": 0.803,
+     "p95": 0.806
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 145.496,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.995,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 145.557,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 70.568,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.195,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.096,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.057,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.246,
+    "wall_ms": {
+     "mean": 1.564,
+     "p50": 1.591,
+     "p95": 1.71
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ]
+   },
+   "round": 3,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 1.591,
+     "cpu": 0.488,
+     "gpu": 0.803,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.3,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.103,
+     "p50": 1.127,
+     "p95": 1.286
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 18.119,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.922,
+     "p50": 0.919,
+     "p95": 0.922
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 142.38,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 145.165,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 147.538,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 74.728,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 34.181,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.014,
+     "cull late": 0.006,
+     "gtao": 0.09,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.299,
+     "opaque+sky": 0.066,
+     "shadows": 0.392
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 19.137,
+    "wall_ms": {
+     "mean": 2.401,
+     "p50": 2.428,
+     "p95": 2.611
+    }
+   },
+   "clocks": {
+    "samples": 64,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 4,
+     "graphics_mhz_median": 1680.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 4,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 2.428,
+     "cpu": 1.127,
+     "gpu": 0.919,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 7.3,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Direct3D 12",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 1.089,
+     "p50": 1.096,
+     "p95": 1.337
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 17.175,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.92,
+     "p50": 0.921,
+     "p95": 0.925
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 144.673,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 145.867,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 150.165,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 80.119,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.834,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.015,
+     "cull late": 0.006,
+     "gtao": 0.09,
+     "hi-z": 0.055,
+     "lights": 0.0,
+     "opaque early": 0.297,
+     "opaque+sky": 0.066,
+     "shadows": 0.391
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 19.066,
+    "wall_ms": {
+     "mean": 2.335,
+     "p50": 2.345,
+     "p95": 2.631
+    }
+   },
+   "clocks": {
+    "samples": 63,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ],
+    "frames": {
+     "samples": 3,
+     "graphics_mhz_median": 1680,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871,
+     "utilization_median": 0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 4,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 2.345,
+     "cpu": 1.096,
+     "gpu": 0.921,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.478,
+     "p50": 0.494,
+     "p95": 0.555
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 4.893,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.799,
+     "p50": 0.799,
+     "p95": 0.802
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 141.51,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 143.766,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 144.532,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.306,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 33.815,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.062,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.056,
+     "shadows": 0.363
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 14.897,
+    "wall_ms": {
+     "mean": 1.663,
+     "p50": 1.669,
+     "p95": 1.775
+    }
+   },
+   "clocks": {
+    "samples": 58,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2"
+    ]
+   },
+   "round": 4,
+   "build": "e",
+   "headline": {
+    "crowd": {
+     "frame": 1.669,
+     "cpu": 0.494,
+     "gpu": 0.799,
+     "skinning": null
+    }
+   }
+  },
+  {
+   "case": "crowd",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "lod",
+   "seconds": 6.8,
+   "cmd": [
+    "--crowd",
+    "40",
+    "--frames",
+    "120",
+    "--warm",
+    "30",
+    "--settle",
+    "5.0"
+   ],
+   "result": {
+    "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "backend": "Vulkan",
+    "bench": "lod_field",
+    "cpu_ms": {
+     "mean": 0.423,
+     "p50": 0.431,
+     "p95": 0.56
+    },
+    "crowd": 40,
+    "detail": 6,
+    "draw_calls": 24,
+    "draw_path": "multi-draw",
+    "first_frame_ms": 5.0,
+    "fly": false,
+    "frames": 120,
+    "gpu_ms": {
+     "mean": 0.802,
+     "p50": 0.802,
+     "p95": 0.805
+    },
+    "instances": 2304,
+    "last_frame": {
+     "camera": {
+      "instances": [
+       5,
+       1,
+       2,
+       5,
+       21,
+       15,
+       20,
+       416
+      ],
+      "total_triangles": 397474,
+      "triangles": [
+       97282,
+       2560,
+       2560,
+       3200,
+       26624,
+       7200,
+       20992,
+       237056
+      ]
+     },
+     "cascades": [
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        15,
+        2,
+        8,
+        1,
+        0
+       ],
+       "total_triangles": 37506,
+       "triangles": [
+        2,
+        0,
+        0,
+        9600,
+        6144,
+        20480,
+        1280,
+        0
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        33,
+        8,
+        16,
+        18
+       ],
+       "total_triangles": 54338,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        10560,
+        12288,
+        19968,
+        11520
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        40,
+        25,
+        182
+       ],
+       "total_triangles": 135938,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        6400,
+        19200,
+        110336
+       ]
+      },
+      {
+       "instances": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2173
+       ],
+       "total_triangles": 1231298,
+       "triangles": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1231296
+       ]
+      }
+     ],
+     "late": {
+      "instances": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      "total_triangles": 0,
+      "triangles": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     },
+     "shadow_triangles": 1459080
+    },
+    "list_bytes": 1275204,
+    "lod": "on",
+    "meshes": [
+     {
+      "errors": [
+       0.0006,
+       0.00116,
+       0.00209,
+       0.00379,
+       0.007,
+       0.01304,
+       0.02481
+      ],
+      "lod_build_ms": 144.528,
+      "name": "rock_a",
+      "radius": 1.3529475927352905,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00047,
+       0.00096,
+       0.00165,
+       0.00303,
+       0.00588,
+       0.01082,
+       0.01953
+      ],
+      "lod_build_ms": 144.209,
+      "name": "rock_b",
+      "radius": 1.2235304117202759,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.0005,
+       0.00095,
+       0.00163,
+       0.00294,
+       0.00575,
+       0.01091,
+       0.019
+      ],
+      "lod_build_ms": 147.386,
+      "name": "rock_c",
+      "radius": 1.3888736963272095,
+      "triangles": [
+       81920,
+       40960,
+       20480,
+       10240,
+       5120,
+       2560,
+       1280,
+       640
+      ],
+      "vertices": 40962
+     },
+     {
+      "errors": [
+       0.00069,
+       0.00164,
+       0.00431,
+       0.00639,
+       0.01313,
+       0.02481,
+       0.04853
+      ],
+      "lod_build_ms": 69.814,
+      "name": "knot",
+      "radius": 1.7702425718307495,
+      "triangles": [
+       49152,
+       24576,
+       12288,
+       6144,
+       3072,
+       1536,
+       768,
+       384
+      ],
+      "vertices": 24576
+     }
+    ],
+    "model_ms": 32.414,
+    "n": 48,
+    "occlusion": "auto-on",
+    "passes_ms": {
+     "cull": 0.012,
+     "cull late": 0.006,
+     "gtao": 0.095,
+     "hi-z": 0.063,
+     "lights": 0.003,
+     "opaque early": 0.202,
+     "opaque+sky": 0.057,
+     "shadows": 0.364
+    },
+    "pixels": 1.0,
+    "size": [
+     1280,
+     720
+    ],
+    "spacing": 6.0,
+    "t": 0.0,
+    "upload_ms": 15.617,
+    "wall_ms": {
+     "mean": 1.531,
+     "p50": 1.535,
+     "p95": 1.672
+    }
+   },
+   "clocks": {
+    "samples": 57,
+    "graphics_mhz_median": 1680,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871,
+    "utilization_median": 0,
+    "pstates": [
+     "P0",
+     "P2"
+    ]
+   },
+   "round": 4,
+   "build": "d",
+   "headline": {
+    "crowd": {
+     "frame": 1.535,
+     "cpu": 0.431,
+     "gpu": 0.802,
+     "skinning": null
+    }
+   }
+  }
+ ]
+}

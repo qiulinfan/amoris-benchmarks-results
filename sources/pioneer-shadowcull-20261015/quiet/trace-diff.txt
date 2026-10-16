@@ -1,0 +1,34 @@
+A = <local-path>/out/shadowcull/quiet/trace-off.json (Direct3D 12), B = <local-path>/out/shadowcull/quiet/trace-on.json (Direct3D 12); medians in ms
+  frame                                 A        B      B-A    B/A      A p95    B p95
+  frame interval                   65.957   51.198  -14.760  0.776     67.234   53.031
+  GPU frame span                   64.316   49.527  -14.789  0.770     65.442   51.219
+  GPU busy                         64.219   49.428  -14.790  0.770     65.364   51.117
+  GPU idle before frame             1.633    1.649    0.016  1.010      1.966    1.949
+  CPU frame                         1.324    1.325    0.001  1.001      1.429    1.462
+  submit to GPU start               0.039    0.035   -0.005  0.881      0.057    0.062
+  gpu                                   A        B      B-A    B/A      A p95    B p95
+  shadows                          33.357   18.473  -14.884  0.554     33.939   19.139
+  opaque early                     30.556   30.680    0.124  1.004     31.085   31.793
+  gtao                              0.097    0.098    0.001  1.009      0.100    0.101
+  post                              0.083    0.083   -0.000  0.999      0.085    0.085
+  hi-z                              0.061    0.061   -0.000  0.997      0.064    0.065
+  opaque+sky                        0.049    0.048   -0.000  0.996      0.050    0.050
+  cull                              0.015    0.015    0.000  1.007      0.017    0.017
+  cull late                         0.006    0.006    0.000  1.053      0.006    0.006
+  lights                            0.000    0.000    0.000      -      0.000    0.000
+  cpu                                   A        B      B-A    B/A      A p95    B p95
+  render                            1.323    1.324    0.001  1.001      1.429    1.462
+  submit                            1.117    1.114   -0.003  0.998      1.213    1.247
+  encode gtao, taa                  0.116    0.117    0.001  1.006      0.136    0.129
+  encode shadows                    0.019    0.019   -0.001  0.974      0.026    0.021
+  encode post                       0.018    0.017   -0.001  0.927      0.020    0.018
+  uniforms                          0.011    0.015    0.004  1.360      0.015    0.017
+  encode occlusion, late opaque     0.013    0.012   -0.001  0.936      0.014    0.013
+  encode cull, lights               0.007    0.006   -0.000  0.970      0.007    0.007
+  encode particles, skinning        0.006    0.006    0.000  1.016      0.007    0.007
+  encode opaque                     0.006    0.006    0.000  1.016      0.007    0.007
+  assets                            0.003    0.003    0.000  1.000      0.004    0.004
+  encode splat sort                 0.002    0.002   -0.000  0.905      0.003    0.002
+  scene sync                        0.002    0.002    0.000  1.000      0.002    0.002
+  encode splats                     0.000    0.000    0.000  1.000      0.001    0.001
+  encode overlays, ui               0.000    0.000   -0.000  0.667      0.000    0.000

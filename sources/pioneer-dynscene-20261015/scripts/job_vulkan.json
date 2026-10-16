@@ -1,0 +1,4 @@
+[
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "before=<local-path>/out/dynscene/before", "--build", "c=<local-path>/out/dynscene/c", "--build", "d=<local-path>/out/dynscene/d", "--cases", "static,moving-1k,moving-10k,moving-100k,sparse-1k,sparse-10k,sparse-100k", "--backends", "vulkan", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/bcd-vulkan.json", "--conditions", "<local-path>/out/dynscene/bcd-vulkan-conditions"],
+ ["python", "tools/dynamic_scenes_bench.py", "--build", "d=<local-path>/out/dynscene/d", "--cases", "moving-1.6m", "--backends", "vulkan,dx12", "--frames", "60", "--warm", "30", "--settle", "5", "--out", "<local-path>/out/dynscene/traces", "--summary", "<local-path>/out/dynscene/d-1.6m.json"]
+]

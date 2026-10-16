@@ -1,0 +1,21 @@
+
+running 1 test
+test splats_behind_meshes_are_stable_under_taa ... FAILED
+
+failures:
+
+failures:
+    splats_behind_meshes_are_stable_under_taa
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 13 filtered out; finished in 11.39s
+
+Quads Msaa x1: 2012 pixels of splats, 0 flickering
+Quads Taa x1: 2014 pixels of splats, 0 flickering
+Quads MsaaTaa x1: 2014 pixels of splats, 0 flickering
+Quads Taa x0.5: 2015 pixels of splats, 3 flickering
+
+thread 'splats_behind_meshes_are_stable_under_taa' (<tid>) panicked at crates\pocket-render\tests\taa.rs:772:13:
+assertion `left == right` failed: Quads Taa x0.5: splats flickered on 3 pixels of a still frame
+  left: 3
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

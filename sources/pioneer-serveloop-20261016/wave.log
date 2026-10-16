@@ -1,0 +1,217 @@
+[bench_lock] waiting for transparency ...
+run 1 full: snapshot 178.2 us
+run 1 cached: snapshot 90.3 us
+run 1 base: snapshot 157.3 us
+run 2 cached: snapshot 92.4 us
+run 2 base: snapshot 146.3 us
+run 2 full: snapshot 169.2 us
+run 3 base: snapshot 147.7 us
+run 3 full: snapshot 141.4 us
+run 3 cached: snapshot 70.1 us
+Paced every 16.667 ms, 1800 ticks a run, 3 runs: the median over the runs of each part's median (mean, p95) in us per tick
+
+| Mode | step | streams | present | snapshot | publish | after_step |
+|---|---|---|---|---|---|---|
+| full | 331.6 (324.2, 384.1) | 0.7 (0.7, 1.1) | 12.2 (12.4, 15.8) | 169.2 (167.6, 208.0) | 2.1 (2.1, 2.6) | 184.5 (182.8, 227.3) |
+| cached | 337.7 (341.7, 411.2) | 0.7 (0.8, 1.2) | 12.7 (13.4, 17.9) | 90.3 (93.9, 125.1) | 2.0 (2.1, 2.8) | 105.8 (110.2, 146.1) |
+| base | 302.0 (304.6, 385.1) | 0.7 (0.7, 1.1) | 37.0 (36.6, 48.1) | 147.7 (147.5, 193.7) | 5.8 (5.9, 7.9) | 191.3 (190.6, 247.7) |
+
+Sections changed per tick (ticks of the last run whose digest changed): cache:physics.rapier 1800, component:Boat 1800, component:Floater 1800, component:Log 1800, component:Transform 1800, component:Velocity 1800, resource:EventCounter 1, resource:EventInbox 2, resource:SimClock 1800
+
+Anatomy (back to back, last run): {"hashing": 1.0, "registry_checks": 0.51, "section_digests": 39.32, "snapshot": 45.16}
+base: host at http://<local-endpoint>/
+new: host at http://<local-endpoint>/
+  base idle none: 0.39 % of a core
+  base idle sockets: 0.55 % of a core
+  new idle none: 0.31 % of a core
+  new idle sockets: 0.16 % of a core
+  round 1 base none: busy 0.495 tick 0.298 publish 0.1589 present 0.0364
+  round 1 base sockets: busy 0.548 tick 0.328 publish 0.1775 present 0.0413
+  round 1 base editor: busy 0.647 tick 0.389 publish 0.2076 present 0.0487
+  round 1 new none: busy 0.435 tick 0.324 publish 0.0982 present 0.0118
+  round 1 new sockets: busy 0.374 tick 0.269 publish 0.0939 present 0.0098
+  round 1 new editor: busy 0.538 tick 0.384 publish 0.1373 present 0.0154
+  round 2 new sockets: busy 0.361 tick 0.262 publish 0.0890 present 0.0096
+  round 2 new editor: busy 0.537 tick 0.385 publish 0.1351 present 0.0153
+  round 2 new none: busy 0.403 tick 0.300 publish 0.0911 present 0.0108
+  round 2 base sockets: busy 0.440 tick 0.265 publish 0.1419 present 0.0327
+  round 2 base editor: busy 0.623 tick 0.372 publish 0.2007 present 0.0481
+  round 2 base none: busy 0.473 tick 0.282 publish 0.1529 present 0.0366
+  round 3 base editor: busy 0.631 tick 0.380 publish 0.2018 present 0.0478
+  round 3 base none: busy 0.552 tick 0.337 publish 0.1737 present 0.0404
+  round 3 base sockets: busy 0.547 tick 0.333 publish 0.1719 present 0.0408
+  round 3 new editor: busy 0.534 tick 0.380 publish 0.1369 present 0.0156
+  round 3 new none: busy 0.424 tick 0.312 publish 0.0987 present 0.0121
+  round 3 new sockets: busy 0.484 tick 0.347 publish 0.1217 present 0.0143
+| Build | Clients | Plays | busy_ms | tick_ms | loop.publish | loop.present | loop.after | script:log | physics.step |
+|---|---|---|---|---|---|---|---|---|---|
+| base | none | 3 | 0.495 | 0.298 | 0.1589 | 0.0366 | 0.0013 | 0.1114 | 0.0747 |
+| base | sockets | 3 | 0.547 | 0.328 | 0.1719 | 0.0408 | 0.0013 | 0.1241 | 0.0809 |
+| base | editor | 3 | 0.631 | 0.380 | 0.2018 | 0.0481 | 0.0015 | 0.1463 | 0.0949 |
+| new | none | 3 | 0.424 | 0.312 | 0.0982 | 0.0118 | 0.0010 | 0.1174 | 0.0775 |
+| new | sockets | 3 | 0.374 | 0.269 | 0.0939 | 0.0098 | 0.0009 | 0.0982 | 0.0640 |
+| new | editor | 3 | 0.537 | 0.384 | 0.1369 | 0.0154 | 0.0013 | 0.1474 | 0.0948 |
+
+| Build | Idle, clients | CPU (% of one core) | /render messages/s |
+|---|---|---|---|
+| base | none | 0.39 | 0.0 |
+| base | sockets | 0.55 | 0.0 |
+| new | none | 0.31 | 0.0 |
+| new | sockets | 0.16 | 0.0 |
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.9,"p95":1.4,"min":0.7,"max":6,"mean":1},"feed_ms":{"n":40,"median":12.9,"p95":27.9,"min":2,"max":30.4,"mean":14.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":1.2,"min":0.7,"max":1.4,"mean":0.9},"feed_ms":{"n":40,"median":12.7,"p95":27.1,"min":0.8,"max":28.9,"mean":15.4}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":75.1,"p95":112,"min":30,"max":124.2,"mean":73.5}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1509,"release_to_first_feed_ms":9,"undo_added":1,"frames":252,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.5,"min":3.7,"max":12.9,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":1.1,"mean":0.8},"feed_ms":{"n":40,"median":12.7,"p95":27.4,"min":2,"max":28.7,"mean":14.8}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":1.2,"mean":0.8},"feed_ms":{"n":40,"median":11.9,"p95":20.5,"min":0.8,"max":21.3,"mean":12.8}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":61.1,"p95":93.3,"min":26.9,"max":107.3,"mean":63.1}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1509,"release_to_first_feed_ms":10,"undo_added":1,"frames":251,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.5,"min":1.6,"max":13.4,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":1.1,"mean":0.8},"feed_ms":{"n":40,"median":12.5,"p95":27.1,"min":3.1,"max":28.5,"mean":14.8}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.7,"max":0.9,"mean":0.8},"feed_ms":{"n":40,"median":12.9,"p95":27.3,"min":3.4,"max":28.3,"mean":15.3}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":60.7,"p95":95.7,"min":23.3,"max":98.5,"mean":60.6}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.5,"min":1.5,"max":12.7,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":1.1,"mean":0.8},"feed_ms":{"n":40,"median":12.9,"p95":24.2,"min":0.6,"max":29.2,"mean":14.4}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":0.9,"mean":0.8},"feed_ms":{"n":40,"median":11.8,"p95":25.7,"min":2.5,"max":28.1,"mean":14.1}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":62.5,"p95":98.1,"min":21.7,"max":111.3,"mean":63.1}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":248,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":247,"median":8.4,"p95":12.4,"min":1.5,"max":14.2,"mean":8.5}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":1,"min":0.7,"max":1.1,"mean":0.8},"feed_ms":{"n":40,"median":12.3,"p95":26.4,"min":0.9,"max":29.3,"mean":14.5}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.8,"p95":0.9,"min":0.6,"max":1,"mean":0.8},"feed_ms":{"n":40,"median":12.3,"p95":25.8,"min":0.6,"max":28.2,"mean":14.6}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":67,"p95":93.5,"min":32.4,"max":108.4,"mean":65.9}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1519,"release_to_first_feed_ms":20,"undo_added":1,"frames":251,"drag_ms":1502,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.4,"min":3.5,"max":13.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":4.7,"mean":0.8},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":4,"mean":0.8}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":0.9,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":49.3,"p95":76.9,"min":11.6,"max":93.7,"mean":48.9}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":242,"drag_ms":1500,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":241,"median":8.4,"p95":13,"min":1.2,"max":15.8,"mean":8.7}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.3,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":1.3,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":54.3,"p95":77,"min":15.3,"max":90.7,"mean":49.7}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1499,"release_to_first_feed_ms":3,"undo_added":1,"frames":251,"drag_ms":1500,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.5,"min":2.4,"max":12.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":44.9,"p95":76.3,"min":12.1,"max":82.5,"mean":46.6}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1499,"release_to_first_feed_ms":2,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.6,"min":4.6,"max":12.4,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1.4,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.4,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":43.6,"p95":74.9,"min":11.1,"max":77.5,"mean":47.4}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":8,"undo_added":1,"frames":250,"drag_ms":1503,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":249,"median":8.4,"p95":11.5,"min":2.8,"max":13.3,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.3,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.2,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1.4,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.5,"max":1.4,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":48.5,"p95":75.6,"min":10.1,"max":88.6,"mean":49.1}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":252,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.6,"min":2.6,"max":15.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+conditions start: exit 0
+run 1 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":0.9,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.5,"max":0.9,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":13.4,"p95":26.1,"min":9,"max":40.6,"mean":15.6}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1507,"release_to_first_feed_ms":10,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.4,"min":4.4,"max":14.1,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 2 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.4,"max":0.9,"mean":0.6}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":13.9,"p95":26.1,"min":9.4,"max":37.3,"mean":15.6}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1499,"release_to_first_feed_ms":2,"undo_added":1,"frames":249,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":248,"median":8.4,"p95":12,"min":2.2,"max":14.5,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 3 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":2.5,"mean":0.8},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.5,"max":2.5,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":1,"min":0.6,"max":1.1,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":1,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":22.7,"p95":26.9,"min":8.9,"max":30,"mean":20.4}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":7,"undo_added":1,"frames":252,"drag_ms":1504,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.6,"min":4.7,"max":12.2,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 4 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":3,"mean":0.7},"feed_ms":{"n":40,"median":0.6,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":0.9,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":13.8,"p95":22.1,"min":10,"max":27.8,"mean":14.5}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1508,"release_to_first_feed_ms":10,"undo_added":1,"frames":252,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":251,"median":8.4,"p95":11.8,"min":1.8,"max":13.1,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+run 5 built attempt 1: exit 0
+floor: {"direct":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.2,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.6,"max":1.1,"mean":0.7}},"proxied":{"edits":40,"reply_ms":{"n":40,"median":0.7,"p95":0.9,"min":0.6,"max":0.9,"mean":0.7},"feed_ms":{"n":40,"median":0.7,"p95":0.8,"min":0.5,"max":0.9,"mean":0.7}}}
+  01-before.png
+  02-after-streamed.png
+  03-mid-drag-streamed.png
+  04-mid-drag-on-release.png
+  05-history-panel.png
+streamed: undo 1 -> 2; input->frame {"n":90,"median":14.3,"p95":25.2,"min":7.1,"max":36.7,"mean":16.4}
+on release: {"sends":1,"feeds":1,"first_move_to_first_feed_ms":1499,"release_to_first_feed_ms":2,"undo_added":1,"frames":251,"drag_ms":1501,"moves_seen":90,"long_tasks":0,"long_task_ms":0,"history_pushes":1,"frame_interval_ms":{"n":250,"median":8.4,"p95":11.5,"min":2.7,"max":12.3,"mean":8.4}}
+escape: {"undo_before":5,"undo_after":5,"redo_after":1,"next_redo":{"label":"Move Crate1","source":"editor"},"position_before":[5,0,2.2],"position_after":[5,0,2.2],"restored":true}
+conditions end: exit 0
+WAVE-DONE

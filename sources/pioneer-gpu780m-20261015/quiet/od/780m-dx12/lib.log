@@ -1,0 +1,26 @@
+
+running 1 test
+test gi::pt::tests::ray_query_pt_transport_training_and_accumulation ... FAILED
+
+successes:
+
+successes:
+
+failures:
+
+---- gi::pt::tests::ray_query_pt_transport_training_and_accumulation stdout ----
+Vulkan: not under test (POCKET_BACKEND names Dx12)
+Direct3D 12 on AMD Radeon 780M Graphics: ray queries
+Direct3D 12 on AMD Radeon 780M Graphics: pt-lab mean radiance [0.05999755859375, 0.0799560546875, 0.1199951171875]
+
+thread 'gi::pt::tests::ray_query_pt_transport_training_and_accumulation' (<tid>) panicked at crates\pocket-render\src\gi\pt.rs:1865:9:
+Direct3D 12: pt-lab's mean radiance [0.05999755859375, 0.0799560546875, 0.1199951171875] (sum 0.2599) is that of single-sided surfaces seen from their front (sum 0.6945)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    gi::pt::tests::ray_query_pt_transport_training_and_accumulation
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 124 filtered out; finished in 2.05s
+
+

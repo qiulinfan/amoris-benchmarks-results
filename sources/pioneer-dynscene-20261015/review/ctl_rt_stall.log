@@ -1,0 +1,9 @@
+$ python tools/dynamic_scenes_bench.py --build head=<local-path>/out/dynscene/review/head --cases rt-200k-moving --backends dx12,vulkan --rt-first --stall 900 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/review/ctl-rt-stall.json
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "head", "seconds": 190.0, "headline": {"cascaded": {"frame": 52.627, "cpu": 12.884, "gpu": 12.688}, "ray_traced": {"frame": 111.381, "cpu": 58.041, "gpu": 14.002}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "head", "seconds": 187.7, "headline": {"cascaded": {"frame": 50.912, "cpu": 12.486, "gpu": 11.796}, "ray_traced": {"frame": 111.696, "cpu": 56.712, "gpu": 14.103}}, "error": null}
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| rt-200k-moving (cascaded) | dx12 | - | head | | | 12.884 | 52.627 | 12.688 | 180 |
+| rt-200k-moving (ray_traced) | dx12 | - | head | | | 58.041 | 111.381 | 14.002 | None |
+| rt-200k-moving (cascaded) | vulkan | - | head | | | 12.486 | 50.912 | 11.796 | 180 |
+| rt-200k-moving (ray_traced) | vulkan | - | head | | | 56.712 | 111.696 | 14.103 | None |

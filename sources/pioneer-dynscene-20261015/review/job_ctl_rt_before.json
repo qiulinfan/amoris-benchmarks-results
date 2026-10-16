@@ -1,0 +1,21 @@
+[
+ [
+  "python",
+  "tools/dynamic_scenes_bench.py",
+  "--build",
+  "before=<local-path>/out/dynscene/review/before",
+  "--build",
+  "head=<local-path>/out/dynscene/review/head",
+  "--cases",
+  "rt-200k-moving",
+  "--backends",
+  "dx12,vulkan",
+  "--rt-first",
+  "--out",
+  "<local-path>/out/dynscene/traces",
+  "--summary",
+  "<local-path>/out/dynscene/review/ctl-rt.json",
+  "--conditions",
+  "<local-path>/out/dynscene/review/ctl-rt-conditions"
+ ]
+]

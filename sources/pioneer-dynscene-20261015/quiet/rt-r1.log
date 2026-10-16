@@ -1,0 +1,16 @@
+2026-10-15 03:38:41 start: AC True, CPU 9.2%, RTX 62 C 270/3090 MHz 8.43 W P4 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "before", "seconds": 188.3, "headline": {"cascaded": {"frame": 965.924, "cpu": 13.029, "gpu": 12.558}, "ray_traced": {"frame": 1014.487, "cpu": 60.449, "gpu": 14.053}}, "error": null}
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "after", "seconds": 22.6, "headline": {"cascaded": {"frame": 29.143, "cpu": 3.044, "gpu": 0.858}, "ray_traced": {"frame": 67.66, "cpu": 40.032, "gpu": 1.205}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "before", "seconds": 187.2, "headline": {"cascaded": {"frame": 955.19, "cpu": 12.616, "gpu": 12.094}, "ray_traced": {"frame": 1023.357, "cpu": 58.814, "gpu": 14.394}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "after", "seconds": 23.0, "headline": {"cascaded": {"frame": 40.785, "cpu": 6.937, "gpu": 6.097}, "ray_traced": {"frame": 90.462, "cpu": 47.94, "gpu": 7.508}}, "error": null}
+2026-10-15 03:45:54 end: AC True, CPU 4.4%, RTX 61 C 270/3090 MHz 9.15 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| rt-200k-moving (cascaded) | dx12 | - | before | | | 13.029 | 965.924 | 12.558 | 180.0 |
+| rt-200k-moving (ray_traced) | dx12 | - | before | | | 60.449 | 1014.487 | 14.053 | None |
+| rt-200k-moving (cascaded) | dx12 | - | after | | | 3.044 | 29.143 | 0.858 | 1755.0 |
+| rt-200k-moving (ray_traced) | dx12 | - | after | | | 40.032 | 67.66 | 1.205 | None |
+| rt-200k-moving (cascaded) | vulkan | - | before | | | 12.616 | 955.19 | 12.094 | 180 |
+| rt-200k-moving (ray_traced) | vulkan | - | before | | | 58.814 | 1023.357 | 14.394 | None |
+| rt-200k-moving (cascaded) | vulkan | - | after | | | 6.937 | 40.785 | 6.097 | 915.0 |
+| rt-200k-moving (ray_traced) | vulkan | - | after | | | 47.94 | 90.462 | 7.508 | None |

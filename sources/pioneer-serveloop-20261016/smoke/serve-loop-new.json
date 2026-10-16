@@ -1,0 +1,207 @@
+{
+  "label": "new",
+  "pocket": "<local-path>\\out\\serveloop\\bin\\pocket-new.exe",
+  "plays": [
+    {
+      "client": "sockets",
+      "profile": {
+        "busy_ms": 0.5131,
+        "epoch": 1,
+        "held": 0,
+        "phases": [
+          {
+            "max_ms": 0.0087,
+            "ms": 0.0011,
+            "name": "Begin"
+          },
+          {
+            "max_ms": 0.0019,
+            "ms": 0.0012,
+            "name": "Control"
+          },
+          {
+            "max_ms": 0.3338,
+            "ms": 0.1731,
+            "name": "Update"
+          },
+          {
+            "max_ms": 0.2273,
+            "ms": 0.0534,
+            "name": "Forces"
+          },
+          {
+            "max_ms": 0.1796,
+            "ms": 0.0984,
+            "name": "Physics"
+          },
+          {
+            "max_ms": 0.0106,
+            "ms": 0.0055,
+            "name": "Finish"
+          }
+        ],
+        "systems": [
+          {
+            "max_ms": 0.0087,
+            "ms": 0.0011,
+            "name": "sim.begin"
+          },
+          {
+            "max_ms": 0.0019,
+            "ms": 0.0012,
+            "name": "interface.intents"
+          },
+          {
+            "max_ms": 0.277,
+            "ms": 0.127,
+            "name": "script:log"
+          },
+          {
+            "max_ms": 0.0557,
+            "ms": 0.0388,
+            "name": "script:take_aboard"
+          },
+          {
+            "max_ms": 0.0338,
+            "ms": 0.0073,
+            "name": "script.update"
+          },
+          {
+            "max_ms": 0.1796,
+            "ms": 0.0134,
+            "name": "physics.wind"
+          },
+          {
+            "max_ms": 0.0481,
+            "ms": 0.0299,
+            "name": "physics.buoyancy"
+          },
+          {
+            "max_ms": 0.018,
+            "ms": 0.0046,
+            "name": "physics.sail"
+          },
+          {
+            "max_ms": 0.0097,
+            "ms": 0.0054,
+            "name": "physics.hull"
+          },
+          {
+            "max_ms": 0.179,
+            "ms": 0.0977,
+            "name": "physics.step"
+          },
+          {
+            "max_ms": 0.0025,
+            "ms": 0.0006,
+            "name": "physics.contacts"
+          },
+          {
+            "max_ms": 0.0044,
+            "ms": 0.002,
+            "name": "interface.perception"
+          },
+          {
+            "max_ms": 0.0015,
+            "ms": 0.0008,
+            "name": "interface.turns"
+          },
+          {
+            "max_ms": 0.0029,
+            "ms": 0.0015,
+            "name": "assets.animate"
+          },
+          {
+            "max_ms": 0.0021,
+            "ms": 0.0011,
+            "name": "sim.finish"
+          },
+          {
+            "max_ms": 0.0486,
+            "ms": 0.0165,
+            "name": "tick.other"
+          },
+          {
+            "max_ms": 0.2373,
+            "ms": 0.0144,
+            "name": "loop.present"
+          },
+          {
+            "max_ms": 3.6078,
+            "ms": 0.1483,
+            "name": "loop.publish"
+          },
+          {
+            "max_ms": 0.0116,
+            "ms": 0.0013,
+            "name": "loop.after"
+          }
+        ],
+        "tick": 315,
+        "tick_max_ms": 0.6308,
+        "tick_ms": 0.3491,
+        "ticks": 240
+      },
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 6.0015111,
+        "ws": {
+          "messages": 146,
+          "bytes": 71294,
+          "by_topic": {
+            "status": 60,
+            "world.changed": 60,
+            "profile": 24,
+            "events": 2
+          },
+          "per_s": 24.327206526369668,
+          "bytes_per_s": 11879.341521171225
+        },
+        "render": {
+          "messages": 360,
+          "bytes": 92410,
+          "per_s": 59.984892804747126,
+          "bytes_per_s": 15397.788733574116
+        }
+      },
+      "round": 1
+    }
+  ],
+  "idle": [
+    {
+      "client": "none",
+      "seconds": 5.0004217000096105,
+      "cpu_s": 0.03125,
+      "cpu_pct_of_one_core": 0.6249472919441962,
+      "received": null
+    },
+    {
+      "client": "sockets",
+      "seconds": 5.000433099994552,
+      "cpu_s": 0.0,
+      "cpu_pct_of_one_core": 0.0,
+      "received": {
+        "mode": "sockets",
+        "reads": 0,
+        "seconds": 6.0011795,
+        "ws": {
+          "messages": 30,
+          "bytes": 5136,
+          "by_topic": {
+            "profile": 24,
+            "status": 6
+          },
+          "per_s": 4.999017276520391,
+          "bytes_per_s": 855.8317577402909
+        },
+        "render": {
+          "messages": 0,
+          "bytes": 0,
+          "per_s": 0,
+          "bytes_per_s": 0
+        }
+      }
+    }
+  ]
+}

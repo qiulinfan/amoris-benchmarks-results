@@ -1,0 +1,10 @@
+2026-10-15 03:53:34 start: AC True, CPU 4.9%, RTX 61 C 270/3090 MHz 7.78 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "rt-200k-moving", "backend": "dx12", "adapter": null, "build": "after", "seconds": 190.3, "headline": {"cascaded": {"frame": 53.846, "cpu": 13.188, "gpu": 12.703}, "ray_traced": {"frame": 114.986, "cpu": 60.381, "gpu": 14.068}}, "error": null}
+{"case": "rt-200k-moving", "backend": "vulkan", "adapter": null, "build": "after", "seconds": 188.4, "headline": {"cascaded": {"frame": 52.595, "cpu": 12.686, "gpu": 12.132}, "ray_traced": {"frame": 116.241, "cpu": 59.854, "gpu": 14.149}}, "error": null}
+2026-10-15 04:00:04 end: AC True, CPU 3.9%, RTX 60 C 270/3090 MHz 11.21 W P2 util 0% reasons 0x0000000000000400; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| rt-200k-moving (cascaded) | dx12 | - | after | | | 13.188 | 53.846 | 12.703 | 180.0 |
+| rt-200k-moving (ray_traced) | dx12 | - | after | | | 60.381 | 114.986 | 14.068 | None |
+| rt-200k-moving (cascaded) | vulkan | - | after | | | 12.686 | 52.595 | 12.132 | 180.0 |
+| rt-200k-moving (ray_traced) | vulkan | - | after | | | 59.854 | 116.241 | 14.149 | None |

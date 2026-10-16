@@ -1,0 +1,551 @@
+{
+ "note": "quiet re-measurement 2026-10-15: idle machine (no other agents' work), AC power, balanced plan; one invocation per round, RTX below 70 C before each",
+ "runs": [
+  {
+   "case": "rt-200k-moving",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "rt",
+   "seconds": 188.3,
+   "cmd": [
+    "--scene",
+    "cubes",
+    "--count",
+    "200000",
+    "--moving",
+    "--frames",
+    "60",
+    "--size",
+    "1920x1080",
+    "--settle",
+    "5.0",
+    "--rt-first"
+   ],
+   "result": {
+    "cascaded": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Direct3D 12",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 13.039,
+      "p50": 13.029,
+      "p95": 13.39
+     },
+     "gpu_ms": {
+      "mean": 12.516,
+      "p50": 12.558,
+      "p95": 13.203
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.193,
+      "gtao": 1.76,
+      "lights": 0.0,
+      "opaque+sky": 9.97,
+      "shadows": 0.593
+     },
+     "rt": null,
+     "shadows": "cascaded",
+     "submit_to_idle_ms": {
+      "mean": 972.606,
+      "p50": 965.924,
+      "p95": 1032.688
+     }
+    },
+    "frames": 60,
+    "heroes": 0,
+    "moving": true,
+    "ray_traced": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Direct3D 12",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 60.913,
+      "p50": 60.449,
+      "p95": 64.615
+     },
+     "gpu_ms": {
+      "mean": 14.018,
+      "p50": 14.053,
+      "p95": 14.426
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.244,
+      "depth prepass": 1.325,
+      "gtao": 2.229,
+      "lights": 0.0,
+      "opaque+sky": 10.22
+     },
+     "rt": {
+      "instances": 200000,
+      "masked": 0,
+      "meshes": 7,
+      "rebuilt_frames": 60
+     },
+     "shadows": "ray traced",
+     "submit_to_idle_ms": {
+      "mean": 1018.309,
+      "p50": 1014.487,
+      "p95": 1075.95
+     }
+    },
+    "rt_first": true,
+    "scene": "cubes",
+    "settle_s": 5.0,
+    "size": [
+     1920,
+     1080
+    ]
+   },
+   "clocks_path": "cascaded",
+   "clocks": {
+    "samples": 1766,
+    "graphics_mhz_median": 180.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 405.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 822,
+     "graphics_mhz_median": 180.0,
+     "graphics_mhz_min": 172,
+     "memory_mhz_median": 405.0,
+     "utilization_median": 0.0,
+     "pstates": [
+      "P2",
+      "P5",
+      "P8"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "before",
+   "headline": {
+    "cascaded": {
+     "frame": 965.924,
+     "cpu": 13.029,
+     "gpu": 12.558
+    },
+    "ray_traced": {
+     "frame": 1014.487,
+     "cpu": 60.449,
+     "gpu": 14.053
+    }
+   }
+  },
+  {
+   "case": "rt-200k-moving",
+   "backend": "dx12",
+   "adapter": null,
+   "kind": "rt",
+   "seconds": 22.6,
+   "cmd": [
+    "--scene",
+    "cubes",
+    "--count",
+    "200000",
+    "--moving",
+    "--frames",
+    "60",
+    "--size",
+    "1920x1080",
+    "--settle",
+    "5.0",
+    "--rt-first"
+   ],
+   "result": {
+    "cascaded": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Direct3D 12",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 3.039,
+      "p50": 3.044,
+      "p95": 3.403
+     },
+     "gpu_ms": {
+      "mean": 0.858,
+      "p50": 0.858,
+      "p95": 0.873
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.044,
+      "gtao": 0.173,
+      "lights": 0.0,
+      "opaque+sky": 0.607,
+      "shadows": 0.035
+     },
+     "rt": null,
+     "shadows": "cascaded",
+     "submit_to_idle_ms": {
+      "mean": 29.365,
+      "p50": 29.143,
+      "p95": 31.396
+     }
+    },
+    "frames": 60,
+    "heroes": 0,
+    "moving": true,
+    "ray_traced": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Direct3D 12",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 40.244,
+      "p50": 40.032,
+      "p95": 41.574
+     },
+     "gpu_ms": {
+      "mean": 1.207,
+      "p50": 1.205,
+      "p95": 1.254
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.034,
+      "gtao": 0.182,
+      "lights": 0.0,
+      "opaque+sky": 0.991
+     },
+     "rt": {
+      "instances": 200000,
+      "masked": 0,
+      "meshes": 7,
+      "rebuilt_frames": 60
+     },
+     "shadows": "ray traced",
+     "submit_to_idle_ms": {
+      "mean": 68.049,
+      "p50": 67.66,
+      "p95": 71.91
+     }
+    },
+    "rt_first": true,
+    "scene": "cubes",
+    "settle_s": 5.0,
+    "size": [
+     1920,
+     1080
+    ],
+    "stall_ms": null
+   },
+   "clocks_path": "cascaded",
+   "clocks": {
+    "samples": 204,
+    "graphics_mhz_median": 1680.0,
+    "graphics_mhz_min": 0,
+    "memory_mhz_median": 10871.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P0",
+     "P2",
+     "P4",
+     "P8"
+    ],
+    "frames": {
+     "samples": 24,
+     "graphics_mhz_median": 1755.0,
+     "graphics_mhz_min": 1680,
+     "memory_mhz_median": 10871.0,
+     "utilization_median": 4.0,
+     "pstates": [
+      "P2"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "after",
+   "headline": {
+    "cascaded": {
+     "frame": 29.143,
+     "cpu": 3.044,
+     "gpu": 0.858
+    },
+    "ray_traced": {
+     "frame": 67.66,
+     "cpu": 40.032,
+     "gpu": 1.205
+    }
+   }
+  },
+  {
+   "case": "rt-200k-moving",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "rt",
+   "seconds": 187.2,
+   "cmd": [
+    "--scene",
+    "cubes",
+    "--count",
+    "200000",
+    "--moving",
+    "--frames",
+    "60",
+    "--size",
+    "1920x1080",
+    "--settle",
+    "5.0",
+    "--rt-first"
+   ],
+   "result": {
+    "cascaded": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Vulkan",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 12.614,
+      "p50": 12.616,
+      "p95": 12.877
+     },
+     "gpu_ms": {
+      "mean": 12.095,
+      "p50": 12.094,
+      "p95": 12.783
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.202,
+      "gtao": 1.368,
+      "lights": 0.023,
+      "opaque+sky": 10.225,
+      "shadows": 0.276
+     },
+     "rt": null,
+     "shadows": "cascaded",
+     "submit_to_idle_ms": {
+      "mean": 961.034,
+      "p50": 955.19,
+      "p95": 1037.276
+     }
+    },
+    "frames": 60,
+    "heroes": 0,
+    "moving": true,
+    "ray_traced": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Vulkan",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 59.154,
+      "p50": 58.814,
+      "p95": 63.027
+     },
+     "gpu_ms": {
+      "mean": 14.257,
+      "p50": 14.394,
+      "p95": 14.991
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.322,
+      "gtao": 2.221,
+      "lights": 0.042,
+      "opaque+sky": 11.672
+     },
+     "rt": {
+      "instances": 200000,
+      "masked": 0,
+      "meshes": 7,
+      "rebuilt_frames": 60
+     },
+     "shadows": "ray traced",
+     "submit_to_idle_ms": {
+      "mean": 1037.499,
+      "p50": 1023.357,
+      "p95": 1162.515
+     }
+    },
+    "rt_first": true,
+    "scene": "cubes",
+    "settle_s": 5.0,
+    "size": [
+     1920,
+     1080
+    ]
+   },
+   "clocks_path": "cascaded",
+   "clocks": {
+    "samples": 1704,
+    "graphics_mhz_median": 180.0,
+    "graphics_mhz_min": 172,
+    "memory_mhz_median": 405.0,
+    "utilization_median": 0.0,
+    "pstates": [
+     "P2",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 781,
+     "graphics_mhz_median": 180,
+     "graphics_mhz_min": 172,
+     "memory_mhz_median": 405,
+     "utilization_median": 0,
+     "pstates": [
+      "P5",
+      "P8"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "before",
+   "headline": {
+    "cascaded": {
+     "frame": 955.19,
+     "cpu": 12.616,
+     "gpu": 12.094
+    },
+    "ray_traced": {
+     "frame": 1023.357,
+     "cpu": 58.814,
+     "gpu": 14.394
+    }
+   }
+  },
+  {
+   "case": "rt-200k-moving",
+   "backend": "vulkan",
+   "adapter": null,
+   "kind": "rt",
+   "seconds": 23.0,
+   "cmd": [
+    "--scene",
+    "cubes",
+    "--count",
+    "200000",
+    "--moving",
+    "--frames",
+    "60",
+    "--size",
+    "1920x1080",
+    "--settle",
+    "5.0",
+    "--rt-first"
+   ],
+   "result": {
+    "cascaded": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Vulkan",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 6.921,
+      "p50": 6.937,
+      "p95": 7.148
+     },
+     "gpu_ms": {
+      "mean": 6.095,
+      "p50": 6.097,
+      "p95": 6.431
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.088,
+      "gtao": 0.759,
+      "lights": 0.014,
+      "opaque+sky": 5.095,
+      "shadows": 0.138
+     },
+     "rt": null,
+     "shadows": "cascaded",
+     "submit_to_idle_ms": {
+      "mean": 40.942,
+      "p50": 40.785,
+      "p95": 44.951
+     }
+    },
+    "frames": 60,
+    "heroes": 0,
+    "moving": true,
+    "ray_traced": {
+     "adapter": "NVIDIA GeForce RTX 5060 Laptop GPU",
+     "backend": "Vulkan",
+     "capture": null,
+     "cpu_encode_ms": {
+      "mean": 48.097,
+      "p50": 47.94,
+      "p95": 49.616
+     },
+     "gpu_ms": {
+      "mean": 7.475,
+      "p50": 7.508,
+      "p95": 7.691
+     },
+     "instances": 200001,
+     "passes_ms": {
+      "cull": 0.224,
+      "depth prepass": 0.717,
+      "gtao": 1.213,
+      "lights": 0.021,
+      "opaque+sky": 5.299
+     },
+     "rt": {
+      "instances": 200000,
+      "masked": 0,
+      "meshes": 7,
+      "rebuilt_frames": 60
+     },
+     "shadows": "ray traced",
+     "submit_to_idle_ms": {
+      "mean": 90.887,
+      "p50": 90.462,
+      "p95": 96.652
+     }
+    },
+    "rt_first": true,
+    "scene": "cubes",
+    "settle_s": 5.0,
+    "size": [
+     1920,
+     1080
+    ],
+    "stall_ms": null
+   },
+   "clocks_path": "cascaded",
+   "clocks": {
+    "samples": 210,
+    "graphics_mhz_median": 742.0,
+    "graphics_mhz_min": 180,
+    "memory_mhz_median": 810.0,
+    "utilization_median": 15.0,
+    "pstates": [
+     "P2",
+     "P5",
+     "P8"
+    ],
+    "frames": {
+     "samples": 34,
+     "graphics_mhz_median": 915.0,
+     "graphics_mhz_min": 180,
+     "memory_mhz_median": 810.0,
+     "utilization_median": 18.0,
+     "pstates": [
+      "P5",
+      "P8"
+     ]
+    }
+   },
+   "round": 0,
+   "build": "after",
+   "headline": {
+    "cascaded": {
+     "frame": 40.785,
+     "cpu": 6.937,
+     "gpu": 6.097
+    },
+    "ray_traced": {
+     "frame": 90.462,
+     "cpu": 47.94,
+     "gpu": 7.508
+    }
+   }
+  }
+ ]
+}

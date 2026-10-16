@@ -1,0 +1,45 @@
+$ python tools/dynamic_scenes_bench.py --build e=<local-path>/out/dynscene/review/e --build d=<local-path>/out/dynscene/review/d --cases crowd --backends dx12,vulkan --rounds 5 --out <local-path>/out/dynscene/traces --summary <local-path>/out/dynscene/review/ed-crowd.json --conditions <local-path>/out/dynscene/review/ed-crowd-conditions
+2026-10-15 00:36:30 start: AC True, CPU 5.3%, RTX 64 C 0/3090 MHz 12.33 W P2 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "e", "seconds": 7.7, "headline": {"crowd": {"frame": 2.429, "cpu": 1.126, "gpu": 0.927, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.4, "headline": {"crowd": {"frame": 2.319, "cpu": 1.07, "gpu": 0.922, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "e", "seconds": 6.9, "headline": {"crowd": {"frame": 1.745, "cpu": 0.531, "gpu": 0.801, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.527, "cpu": 0.424, "gpu": 0.801, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "e", "seconds": 7.4, "headline": {"crowd": {"frame": 2.482, "cpu": 1.16, "gpu": 0.927, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.3, "headline": {"crowd": {"frame": 2.316, "cpu": 1.072, "gpu": 0.929, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "e", "seconds": 6.8, "headline": {"crowd": {"frame": 1.673, "cpu": 0.452, "gpu": 0.801, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.53, "cpu": 0.426, "gpu": 0.802, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "e", "seconds": 7.4, "headline": {"crowd": {"frame": 2.456, "cpu": 1.155, "gpu": 0.926, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.0, "headline": {"crowd": {"frame": 2.296, "cpu": 1.069, "gpu": 0.921, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "e", "seconds": 6.7, "headline": {"crowd": {"frame": 1.704, "cpu": 0.507, "gpu": 0.802, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.551, "cpu": 0.445, "gpu": 0.801, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "e", "seconds": 7.3, "headline": {"crowd": {"frame": 2.418, "cpu": 1.132, "gpu": 0.918, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.3, "headline": {"crowd": {"frame": 2.325, "cpu": 1.077, "gpu": 0.92, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "e", "seconds": 6.8, "headline": {"crowd": {"frame": 1.797, "cpu": 0.584, "gpu": 0.8, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.591, "cpu": 0.488, "gpu": 0.803, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "e", "seconds": 7.3, "headline": {"crowd": {"frame": 2.428, "cpu": 1.127, "gpu": 0.919, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "dx12", "adapter": null, "build": "d", "seconds": 7.3, "headline": {"crowd": {"frame": 2.345, "cpu": 1.096, "gpu": 0.921, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "e", "seconds": 6.8, "headline": {"crowd": {"frame": 1.669, "cpu": 0.494, "gpu": 0.799, "skinning": null}}, "error": null}
+{"case": "crowd", "backend": "vulkan", "adapter": null, "build": "d", "seconds": 6.8, "headline": {"crowd": {"frame": 1.535, "cpu": 0.431, "gpu": 0.802, "skinning": null}}, "error": null}
+2026-10-15 00:39:04 end: AC True, CPU 3.8%, RTX 61 C 0/3090 MHz 10.55 W P0 util 0% reasons 0x0000000000000004; GPU users: <omitted>
+| case | backend | adapter | build | apply | scene sync | render CPU | frame | GPU | GPU MHz |
+| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| crowd (crowd) | dx12 | - | e | | | 1.126 | 2.429 | 0.927 | 1680.0 |
+| crowd (crowd) | dx12 | - | d | | | 1.07 | 2.319 | 0.922 | 1680.0 |
+| crowd (crowd) | vulkan | - | e | | | 0.531 | 1.745 | 0.801 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.424 | 1.527 | 0.801 | None |
+| crowd (crowd) | dx12 | - | e | | | 1.16 | 2.482 | 0.927 | 1680 |
+| crowd (crowd) | dx12 | - | d | | | 1.072 | 2.316 | 0.929 | 1680.0 |
+| crowd (crowd) | vulkan | - | e | | | 0.452 | 1.673 | 0.801 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.426 | 1.53 | 0.802 | 1680 |
+| crowd (crowd) | dx12 | - | e | | | 1.155 | 2.456 | 0.926 | 1680 |
+| crowd (crowd) | dx12 | - | d | | | 1.069 | 2.296 | 0.921 | 1680.0 |
+| crowd (crowd) | vulkan | - | e | | | 0.507 | 1.704 | 0.802 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.445 | 1.551 | 0.801 | 1680 |
+| crowd (crowd) | dx12 | - | e | | | 1.132 | 2.418 | 0.918 | 1680.0 |
+| crowd (crowd) | dx12 | - | d | | | 1.077 | 2.325 | 0.92 | 1680.0 |
+| crowd (crowd) | vulkan | - | e | | | 0.584 | 1.797 | 0.8 | 1680 |
+| crowd (crowd) | vulkan | - | d | | | 0.488 | 1.591 | 0.803 | None |
+| crowd (crowd) | dx12 | - | e | | | 1.127 | 2.428 | 0.919 | 1680.0 |
+| crowd (crowd) | dx12 | - | d | | | 1.096 | 2.345 | 0.921 | 1680 |
+| crowd (crowd) | vulkan | - | e | | | 0.494 | 1.669 | 0.799 | None |
+| crowd (crowd) | vulkan | - | d | | | 0.431 | 1.535 | 0.802 | None |

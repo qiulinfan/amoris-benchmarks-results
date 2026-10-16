@@ -1,0 +1,33 @@
+
+running 8 tests
+test material_names_that_are_not_ascii_do_not_crash_the_renderer ... ok
+test textures_with_other_channel_sets_share_the_pipelines ... ok
+test a_loaded_neural_texture_leaves_other_materials_alone ... ok
+test a_constant_neural_material_draws_like_the_inline_one ... FAILED
+test a_constant_neural_material_draws_on_the_webgpu_baseline ... FAILED
+test a_grown_latent_table_keeps_the_textures_it_holds ... ok
+test a_neural_material_draws_under_taa_with_splats ... ok
+test the_level_of_detail_selects_and_blends_mips_like_the_reference ... ok
+
+failures:
+
+---- a_constant_neural_material_draws_like_the_inline_one stdout ----
+f16 true: worst difference 28, 72 pixels over 2
+
+thread 'a_constant_neural_material_draws_like_the_inline_one' (<tid>) panicked at crates\pocket-render\tests\neural_material.rs:323:9:
+f16 true: the neural material differs by up to 28
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- a_constant_neural_material_draws_on_the_webgpu_baseline stdout ----
+baseline: worst difference 28, 75 pixels over 2
+
+thread 'a_constant_neural_material_draws_on_the_webgpu_baseline' (<tid>) panicked at crates\pocket-render\tests\neural_material.rs:432:5:
+on the baseline the neural material differs by up to 28
+
+
+failures:
+    a_constant_neural_material_draws_like_the_inline_one
+    a_constant_neural_material_draws_on_the_webgpu_baseline
+
+test result: FAILED. 6 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.75s
+

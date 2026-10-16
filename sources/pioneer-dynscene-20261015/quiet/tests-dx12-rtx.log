@@ -1,0 +1,267 @@
+   Compiling pocket-render v0.1.0 (<local-path>\.claude\worktrees\dynscene\crates\pocket-render)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 40s
+     Running unittests src\lib.rs (target\debug\deps\pocket_render-f048c537301afeac.exe)
+
+running 120 tests
+test camera::tests::the_point_ahead_is_inside_and_behind_is_outside ... ok
+test gi::bake::tests::invalid_or_excessive_grids_fail_without_allocating ... ok
+test gi::bake::tests::texture_sampling_decodes_srgb_before_bilinear_and_repeats ... ok
+test app::tests::walk_input_normalizes_diagonal_motion_and_consumes_press_edges ... ok
+test gi::bsdf::tests::fresnel_snell_and_total_internal_reflection ... ok
+test gi::bsdf::tests::smooth_reflection_and_transmission_are_energy_bounded ... ok
+test gi::bake::tests::point_falloff_and_spot_cone_match_forward_light_conventions ... ok
+test gi::nrc::tests::invalid_config_rejected ... ok
+test gi::bsdf::tests::roulette_compensation_preserves_expected_brightness ... ok
+test gi::nrc::tests::packed_contract_and_deterministic_initialization ... ok
+test gi::bake::tests::bvh_nearest_hit_respects_node_transform_and_front_faces ... ok
+test gi::bake::tests::sky_primary_has_no_punctual_direct_component_and_emission_is_recovered ... ok
+test gi::bake::tests::two_bounces_recover_environment_seen_after_diffuse_surface ... ok
+test gi::bake::tests::sky_cube_routes_primary_and_secondary_misses_and_updates_signature ... ok
+test gi::bake::tests::reflected_directional_light_has_shadow_visibility_and_color_bleeding ... ok
+test gi::reservoir::tests::area_measure_conversion_matches_directional_diffuse_estimator ... ok
+test gi::pt::tests::texture_size_is_explicit_and_checked_against_layers_and_upload_bytes ... ok
+test gi::reservoir::tests::reuse_rejects_dynamic_scene_epoch_mismatch_bad_normals_and_history_reset ... ok
+test gi::reservoir::tests::receiver_reconnection_reevaluates_target_without_double_area_jacobian ... ok
+test gi::pt::tests::large_native_scene_capacity_uses_device_bytes_and_blas_limits ... ok
+test gi::reservoir::tests::visibility_is_explicit_and_history_limit_preserves_normalization ... ok
+test gi::reservoir::tests::zero_targets_count_without_selection_and_bad_numbers_do_not_mutate ... ok
+test gi::nrc::tests::backpropagation_matches_finite_differences ... ok
+test gi::pt::tests::pt_gpu_abi_and_limits_are_explicit ... ok
+test gi::sky_radiance::tests::all_faces_match_bake_shader_orientation ... ok
+test gi::sky_radiance::tests::bilinear_sampling_interpolates_texel_centers ... ok
+test gi::sky_radiance::tests::constant_cube_preserves_radiance_and_scales_ambient_once ... ok
+test gi::pt::tests::color_resize_filters_linear_light_and_preserves_alpha ... ok
+test gi::bake::tests::streaming_asset_signature_matches_previous_json_bytes ... ok
+test gi::bake::tests::constant_sky_sh_has_correct_radiance_normalization_and_seed_reproducibility ... ok
+test gi::bake::tests::probes_inside_closed_solid_are_reported_and_disabled ... ok
+test gpu::dxc::tests::fixed_file_info_is_found_in_a_resource_section ... ok
+test gpu::dxc::tests::the_newest_sdk_wins_when_its_dxc_is_supported ... ok
+test gpu::dxc::tests::an_old_dxc_is_passed_over_for_the_next_sdk_or_for_fxc ... ok
+test gpu::dxc::tests::versions_compare_by_major_minor_build ... ok
+test gpu::tests::auto_picks_the_platform_default ... ok
+test gpu::tests::backend_names_parse_in_any_case ... ok
+test gpu::tests::direct3d_12_keeps_indirect_validation ... ok
+test gpu::dxc::tests::sdk_versions_order_numerically ... ok
+test gpu::tests::validation_keeps_labels ... ok
+test gi::sky_radiance::tests::rejects_bad_shapes_values_formats_and_unknown_fields ... ok
+test gpu::tests::browser_emulation_and_d3d12_keep_indirect_validation ... ok
+test lod::tests::a_pixel_at_a_distance ... ok
+test lod::tests::modes_parse ... ok
+test neural::tests::channel_words_locate_each_group ... ok
+test meshes::tests::a_skinned_copys_occlusion_box_holds_its_grown_sphere ... ok
+test neural::tests::profile_constants_are_consistent ... ok
+test loader::tests::neural_texture_paths_are_recognized_in_any_script ... ok
+test neural::train::tests::mips_average_color_in_linear_light_and_renormalize_normals ... ok
+test neural::train::tests::quantization_rounds_ties_to_even_and_clamps ... ok
+test neural::tests::weights_pack_into_column_major_blocks ... ok
+test occlusion::tests::a_brief_probe_counts_readings_from_the_frame_after_activation ... ok
+test occlusion::tests::levels_halve_down_to_one_texel ... ok
+test occlusion::tests::modes_parse ... ok
+test occlusion::tests::auto_keeps_what_pays_and_drops_what_does_not ... ok
+test gpu::tests::adapters_match_by_index_or_name ... ok
+test gpu::dxc::tests::windows_dll_versions_read ... ok
+test gi::bake::tests::project_loader_imports_default_nodes_and_mesh_selector_with_materials ... ok
+test gi::bake::tests::path_tracing_accepts_atmosphere_and_glass_without_weakening_baker ... ok
+test gi::reservoir::tests::seeded_ris_constant_integrator_converges_under_nonuniform_proposal_and_target ... ok
+test gi::reservoir::tests::standalone_reservoir_wgsl_parses_and_validates_without_tracer_globals ... ok
+test prepass::tests::a_probe_gives_up_after_its_timeout_in_frames_of_any_kind ... ok
+test post::tests::defaults_by_adapter ... ok
+test par::tests::tasks_return_their_results_in_order ... ok
+test prepass::tests::a_probe_measures_both_ways_whatever_readings_are_lost ... ok
+test par::tests::nested_tasks_finish ... ok
+test prepass::tests::modes_without_timings_and_without_instances ... ok
+test prepass::tests::probes_back_off_while_the_choice_holds ... ok
+test prepass::tests::one_and_two_phase_frames_decide_separately ... ok
+test prepass::tests::auto_turns_on_where_the_prepass_pays_and_stays_off_where_it_does_not ... ok
+test prepass::tests::readings_sum_the_opaque_passes_and_the_prepass ... ok
+test rt_shadows::tests::transforms_interpolate_like_the_cull_pass ... ok
+test scene::tests::a_tick_moving_every_instance_costs_about_what_making_them_does ... ignored
+test prepass::tests::auto_probes_again_and_follows_a_change_with_hysteresis ... ok
+test prepass::tests::frames_without_instances_never_decide ... ok
+test scene::tests::pending_or_empty_assets_do_not_enable_prepass_probes ... ok
+test prepass::tests::a_somewhat_slower_way_is_drawn_one_frame_at_a_time ... ok
+test par::tests::a_panic_reaches_the_caller - should panic ... ok
+test prepass::tests::readings_from_before_a_restart_do_not_count ... ok
+test gi::bake::tests::inward_normal_map_preserves_sun_and_bounces_but_valid_maps_still_apply ... ok
+test scene::tests::visible_instances_follow_hide_remove_reuse_and_reset_without_shrinking_slots ... ok
+test splat::cloud::tests::halves_round_trip ... ok
+test splat::cloud::tests::quaternions_round_trip ... ok
+test splat::loader::tests::rejects_other_plys ... ok
+test splat::loader::tests::splat_format_decodes ... ok
+test splat::loader::tests::ply_round_trips ... ok
+test splat::tile::tests::growth_respects_binding_limit ... ignored, 4.1M splats; run with POCKET_GPU_MINIMAL=limits
+test splat::sort::tests::the_tile_matches_the_shaders ... ok
+test prepass::tests::a_much_slower_way_is_drawn_for_one_frame_per_probe ... ok
+test rt_shadows::tests::forward_variant_replaces_only_the_shadow_lookup ... ok
+test scene::tests::applied_frames_move_and_stop_slots_as_their_poses_say ... ok
+test gi::reservoir::tests::source_reservoir_merge_converges_and_counts_represented_candidates ... ok
+test shaders::tests::forward_clip_positions_are_invariant_in_every_backend ... ok
+test scene::tests::a_tick_moving_every_instance_lists_each_once_by_its_mark ... ok
+test gi::bsdf::tests::vndf_sampling_matches_direction_pdf_and_transport_integral ... ok
+test trace::tests::brackets_intersect_to_the_tightest_offset ... ok
+test trace::tests::calibrations_combine_or_drift ... ok
+test trace::tests::drifting_clocks_place_gpu_passes_between_the_calibrations ... ok
+test trace::tests::export_places_gpu_passes_with_the_calibration ... ok
+test trace::tests::export_without_a_calibration_starts_gpu_work_after_the_submit ... ok
+test trace::tests::gpu_clock_samples_are_current_and_bound_by_the_cpu_brackets ... ok
+test trace::tests::overlapping_spans_get_their_own_lanes ... ok
+test trace::tests::specs_parse_and_refuse ... ok
+test upload::tests::batches_cover_every_slot_once_in_order ... ok
+test upload::tests::written_slots_reach_the_instance_buffer ... ok
+test gpu::tests::indirect_draws_keep_their_first_instance ... ok
+test splat::sort::tests::sorts_like_a_stable_cpu_sort ... ok
+test splat::tile::tests::quads_are_the_default_rasterizer ... ok
+test splat::tile::tests::subtile_culling_limits_tests ... ok
+test splat::tile::tests::transient_pair_drops_are_reported ... ok
+test splat::tile::tests::pair_overflow_is_reported ... ok
+test splat::tile::tests::splat_overflow_is_reported ... ok
+test splat::tile::tests::picking_sees_splats ... ok
+test splat::tile::tests::tiles_match_quads ... ok
+test splat::tile::tests::antialias_fades_subpixel_splats ... ok
+test splat::tile::tests::ties_are_stable ... ok
+test gi::rt::tests::ray_query_ris_matches_raw_and_bounds_history ... ok
+test gi::rt::tests::ray_query_cache_requires_history_and_resets ... ok
+test gi::pt::tests::ray_query_pt_transport_training_and_accumulation ... ok
+test neural::tests::neural_shaders_validate ... ok
+
+test result: ok. 118 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 35.62s
+
+     Running tests\draw_paths.rs (target\debug\deps\draw_paths-bcd8217a8abcb21c.exe)
+
+running 1 test
+test every_draw_path_draws_the_same_frame ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.70s
+
+     Running tests\forward_variants.rs (target\debug\deps\forward_variants-f20d4f483cddada5.exe)
+
+running 1 test
+test every_forward_variant_draws_its_material ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.51s
+
+     Running tests\frame_trace.rs (target\debug\deps\frame_trace-52071c364347e3c1.exe)
+
+running 2 tests
+test tracing_after_normal_frames_keeps_the_first_gpu_frame_and_can_finish_later ... ok
+test a_headless_trace_places_gpu_work_inside_its_frame ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.03s
+
+     Running tests\gpu_profiler.rs (target\debug\deps\gpu_profiler-98d5d32d8fb0ce76.exe)
+
+running 1 test
+test asynchronous_frames_keep_their_queries_and_only_record_the_capture_window ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.62s
+
+     Running tests\hiz.rs (target\debug\deps\hiz-84a2b492c8f7fc3a.exe)
+
+running 2 tests
+test occlusion_test_never_hides_a_box_in_front_of_the_depth ... ok
+test pyramid_is_the_minimum_over_every_sample ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.73s
+
+     Running tests\lod.rs (target\debug\deps\lod-2f12ea13c0adbc6b.exe)
+
+running 6 tests
+test cascades_pick_levels_by_their_texels ... ok
+test hysteresis_holds_a_level_until_the_margin ... ok
+test levels_cut_triangles_and_stay_within_a_pixel ... ok
+test skinned_levels_follow_the_pose ... ok
+test levels_give_way_at_the_binding_limit ... ok
+test every_draw_path_and_occlusion_draw_the_same_levels ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.91s
+
+     Running tests\neural.rs (target\debug\deps\neural-fce1bab00d5b610f.exe)
+
+running 2 tests
+test training_is_deterministic_for_a_seed ... ok
+test trains_and_decodes_like_the_reference ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.09s
+
+     Running tests\neural_material.rs (target\debug\deps\neural_material-76cdd439dafff6c0.exe)
+
+running 8 tests
+test material_names_that_are_not_ascii_do_not_crash_the_renderer ... ok
+test a_loaded_neural_texture_leaves_other_materials_alone ... ok
+test textures_with_other_channel_sets_share_the_pipelines ... ok
+test a_grown_latent_table_keeps_the_textures_it_holds ... ok
+test a_neural_material_draws_under_taa_with_splats ... ok
+test a_constant_neural_material_draws_on_the_webgpu_baseline ... ok
+test the_level_of_detail_selects_and_blends_mips_like_the_reference ... ok
+test a_constant_neural_material_draws_like_the_inline_one ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 27.52s
+
+     Running tests\neural_mlp.rs (target\debug\deps\neural_mlp-d89d52da50234917.exe)
+
+running 1 test
+test neural_mlp_wgsl_is_current ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\occlusion.rs (target\debug\deps\occlusion-6727dc1fdea4eea9.exe)
+
+running 1 test
+test occlusion_culling_never_drops_a_visible_instance ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.27s
+
+     Running tests\prepass.rs (target\debug\deps\prepass-d37b50691801e68a.exe)
+
+running 2 tests
+test coplanar_masks_preserve_holes_and_valid_ties_follow_draw_order ... ok
+test the_depth_prepass_leaves_the_image_alone ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 21.49s
+
+     Running tests\rt_shadows.rs (target\debug\deps\rt_shadows-9d5de1d467ec2327.exe)
+
+running 1 test
+test ray_traced_shadows_fall_where_cascades_do ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.96s
+
+     Running tests\scene_changes.rs (target\debug\deps\scene_changes-8d398a6bd24d41cc.exe)
+
+running 3 tests
+test exposure_and_resizes_reach_the_display_transform ... ok
+test skinned_characters_added_later_draw_in_their_own_poses ... ok
+test moved_instances_draw_where_they_were_moved ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.75s
+
+     Running tests\skinned_bounds.rs (target\debug\deps\skinned_bounds-4c9828d8956c6fb8.exe)
+
+running 1 test
+test skinned_occlusion_boxes_hold_every_pose_their_spheres_do ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests\taa.rs (target\debug\deps\taa-1beb536618163779.exe)
+
+running 11 tests
+test camera_cuts_and_resizes_drop_the_history ... ok
+test the_entity_id_pass_is_not_jittered ... ok
+test gtao_darkens_only_indirect_light ... ok
+test skinned_motion_reprojects_a_sliding_board_exactly ... ok
+test gtao_normals_from_the_target_match_the_depth ... ok
+test a_still_capture_settles_taa ... ok
+test the_sea_hides_what_lies_under_it ... ok
+test msaa_with_taa_converges_beyond_msaa ... ok
+test object_motion_reprojects_a_moving_board_exactly ... ok
+test taa_reprojects_a_whole_pixel_pan_exactly ... ok
+test splats_behind_meshes_are_stable_under_taa ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.36s
+
+   Doc-tests pocket_render
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
