@@ -292,7 +292,9 @@ AMORIS = ("Amoris", "amoris")
 
 def main():
     # docs/bench/bevy-baseline.md, "Amoris on the same machine and scenes" (Amoris frame
-    # 8.35 and 11.7 ms; Bevy 10.3-10.5 and 13.0-13.1 ms; Amoris sphere GPU 2.3-3.4 ms).
+    # 8.35 and 11.7 ms; Bevy 10.3-10.5 and 13.0-13.1 ms; the sphere frame is the 120 Hz cap).
+    # Its native GPU column is left out: web.md's "Historical observation" says those Metal
+    # readings predate the frame-attribution fix (metal-profiling.md).
     # Bar lengths for Bevy use the charter's single figures (docs/charter.md section 6, the
     # baseline line under the table: sphere about 10.4 ms, dense about 13.0 ms); the labels
     # keep the measured ranges.
@@ -308,7 +310,7 @@ def main():
              [(13.0, "13.0–13.1 ms", "other"), (11.7, "11.7 ms", "amoris")]),
         ],
         ["Apple M5 · Metal · 2026-10-04 · one mesh, one material, 1,600,000 cubes, release builds.",
-         "Amoris's sphere frame is held at the display rate; its GPU time was 2.3–3.4 ms."],
+         "macOS holds a windowed app at the display rate, so Amoris's sphere frame is the 120 Hz cap."],
         label_w=210,
     )
 
@@ -331,7 +333,8 @@ def main():
 
     # docs/bench/physics.md, "Paired ratios of step time", column "Rapier det. / Jolt det.,
     # 1 thread" (median over repetitions): Pyramid 0.67, Pyramid30 0.42, ConvexVsMesh 1.62,
-    # "Raycast: the 10,000 rays" 1.16, RagdollNoSleep 2.44. Body counts: "Outcome check"
+    # "Raycast: the 10,000 rays" 1.16 (the rays' time, not the step's), RagdollNoSleep 2.44.
+    # Body counts: "Outcome check"
     # (1,240 and 9,455 active boxes) and "Verdict" (160 ragdolls).
     ratio_chart(
         "physics-rapier-jolt.svg",
@@ -340,7 +343,7 @@ def main():
         [
             ("Box pyramid", "1,240 boxes", 0.67, "0.67×"),
             ("Large box pyramid", "9,455 boxes", 0.42, "0.42×"),
-            ("10,000 ray casts", "closest hit, per step", 1.16, "1.16×"),
+            ("10,000 ray casts", "the rays' time, not the step's", 1.16, "1.16×"),
             ("Convex bodies on a mesh terrain", None, 1.62, "1.62×"),
             ("Ragdolls, no sleeping", "160 motor-driven ragdolls", 2.44, "2.44×"),
         ],
@@ -433,11 +436,13 @@ def main():
     )
 
     # docs/bench/gizmo.md, section 6 table (quiet re-measurement 2026-10-16): Input to
-    # frame, median (p95): base 60.5 (92.4), host 48.0 (75.8), new 14.6 (26.1).
+    # frame, median (p95): base 60.5 (92.4), host 48.0 (75.8), new 14.6 (26.1). Section 1
+    # defines the end point (the first requestAnimationFrame after the feed message) and says
+    # compositing and presentation are not measured, so the numbers are lower bounds.
     bar_chart(
         "editor-drag-latency.svg",
         "Editor: dragging an object on the live host",
-        "From a pointer move to the frame that shows it, median ms (lower is better)",
+        "From a pointer move to the page's first frame after the update, median ms (lower is better)",
         None,
         [
             ("Before", None, [(60.5, "60.5 ms (p95 92.4)", "muted")]),
@@ -445,7 +450,8 @@ def main():
             ("Editor also sends each move at once", None, [(14.6, "14.6 ms (p95 26.1)", "amoris")]),
         ],
         ["Windows laptop · Chrome 155 headless, WebGPU on the Radeon 780M · editor production build",
-         "on the real host · 2026-10-16, quiet machine, median of five runs of a 1.5 s drag."],
+         "on the real host · 2026-10-16, quiet machine, median of five runs of a 1.5 s drag.",
+         "Compositing and presentation are not measured, so these are lower bounds on what a person sees."],
         label_w=250,
     )
 
@@ -455,7 +461,7 @@ def main():
     bar_chart(
         "neural-textures.svg",
         "Neural texture compression: storage",
-        "Bits per texel for a 9-channel 1024x1024 PBR material, whole mip chain (lower is smaller)",
+        "Bits per mip-0 texel, all mips included, for a 9-channel 1024x1024 PBR material (lower is smaller)",
         None,
         [
             ("8-bit, GPU formats", None, [(117.3, "117.3", "muted")]),

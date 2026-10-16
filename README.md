@@ -6,7 +6,7 @@ editor, and one set of commands shared by people and AI agents. This page shows 
 against open-source engines and libraries, what its own optimizations bought, and what it looks
 like running. Some results come from Amoris Pioneer, the engine's experimental line, before they
 reach the main repository. Every chart names its hardware, backend and date, and links to its
-method.
+method or, until that work reaches the main repository, to its run data.
 
 ## Against open-source engines and libraries
 
@@ -22,18 +22,21 @@ layouts on the same machine. [Method](https://github.com/qiulinfan/amoris/blob/m
 ![GPU time in Chrome WebGPU. 100,000 cubes: three.js 2.45 ms, Amoris 0.71 ms. 400,000: 2.36 and 1.81 ms. 1,600,000: 21.9 and 14.7 ms.](charts/threejs-webgpu.svg)
 
 Apple M5, Chrome 152 (WebGPU), 2026-10-04. three.js draws one `InstancedMesh`, its fastest path for
-copies of a mesh; Amoris runs its native renderer compiled to WebAssembly. These figures predate
-later changes to the Amoris viewport. [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/web.md)
+copies of a mesh; it culls that mesh as a whole and draws every copy, while Amoris, its native
+renderer compiled to WebAssembly, culls each cube on the GPU. These figures predate later changes
+to the Amoris viewport. [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/web.md)
 
 ### Jolt Physics 5.6
 
-![Rapier's step time relative to Jolt's: box pyramid 0.67×, large pyramid 0.42×, ray casts 1.16×, convex bodies on a mesh 1.62×, ragdolls 2.44×.](charts/physics-rapier-jolt.svg)
+![Rapier's time relative to Jolt's: box pyramid 0.67×, large pyramid 0.42×, ray casts 1.16×, convex bodies on a mesh 1.62×, ragdolls 2.44×.](charts/physics-rapier-jolt.svg)
 
 Apple M5, native, one thread, 2026-10-04. Amoris ships Rapier with cross-platform determinism, so a
 game gives the same bits natively and in the browser. Rapier steps box stacks faster, Jolt is faster
-on meshes and ragdolls, and ray casts are close. In the browser (WebAssembly in V8) Jolt was faster
-on all four scenes measured there. The machine was shared with other work, so the paired ratios are
-the reliable figure. [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/physics.md)
+on meshes and ragdolls, and ray casts are close. In WebAssembly (V8 under Node), Jolt's fastest
+runs beat Rapier's shipped build on all four scenes measured there, least clearly on the box
+pyramid. The machine was shared with other work, so the chart shows paired ratios, the reliable
+figure.
+[Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/physics.md)
 
 ## What the engine's own work bought
 
@@ -60,7 +63,8 @@ speedup. [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/lod.m
 
 Same laptop, Direct3D 12, 2026-10-15 (Amoris Pioneer). Each cascade now skips casters that cannot
 shadow anything in the slice of the view it covers, and its cost falls with the triangles it drops.
-[Methods](https://github.com/qiulinfan/amoris/tree/main/docs/bench)
+The method page follows when this work reaches the main repository; until then, the
+[run data](sources/pioneer-shadowcull-20261015/quiet/).
 
 ### Many moving objects
 
@@ -68,20 +72,23 @@ shadow anything in the slice of the view it covers, and its cost falls with the 
 
 Same laptop, RTX 5060, Direct3D 12, 2026-10-15 (Amoris Pioneer). Applying moves is now linear, about
 60 ns per moved object, and scattered moves reach the GPU in one write instead of one write each.
-[Methods](https://github.com/qiulinfan/amoris/tree/main/docs/bench)
+The method page follows when this work reaches the main repository; until then, the
+[run data](sources/pioneer-dynscene-20261015/quiet/).
 
 ### Editor latency
 
-![Pointer move to frame while dragging an object: 60.5 ms before, 48.0 ms with the host's change, 14.6 ms with both changes.](charts/editor-drag-latency.svg)
+![Pointer move to the page's next frame while dragging an object: 60.5 ms before, 48.0 ms with the host's change, 14.6 ms with both changes.](charts/editor-drag-latency.svg)
 
 Same laptop, Chrome 155 (WebGPU on the Radeon 780M), the real host, 2026-10-16 (Amoris Pioneer). The
 host now sends a frame as soon as the game publishes a change instead of checking every 16 ms, and
-the editor sends a drag's change at once instead of at most every 60 ms.
-[Methods](https://github.com/qiulinfan/amoris/tree/main/docs/bench)
+the editor sends a drag's change at once when none is in flight, instead of at most every 60 ms.
+Presentation to the screen is not included, so these are lower bounds. The method page follows
+when this work reaches the main repository; until then, the
+[run data](sources/pioneer-serveloop-20261016/quiet/).
 
 ## Neural texture compression
 
-![Bits per texel for a 9-channel material: 8-bit GPU formats 117.3, 8-bit packed 96.0, BC high 37.33, BC low 26.67, neural 5.37.](charts/neural-textures.svg)
+![Bits per mip-0 texel, all mips included, for a 9-channel material: 8-bit GPU formats 117.3, 8-bit packed 96.0, BC high 37.33, BC low 26.67, neural 5.37.](charts/neural-textures.svg)
 
 Quality is content-dependent. PSNR at mip 0 against the 8-bit source, in dB (higher is better):
 
@@ -107,7 +114,9 @@ then checks the fix against a 720-tick scenario.
 | Command line, debugger required | 7 | 7 | 6 |
 | MCP, free choice of tools | 3 | 3 | 1 |
 
-Apple M5, 2026-10-04. A small sample, two or three trials per bug, so the rates are indicative.
+Apple M5, 2026-10-04. The runs predate the harness's current isolation (the old sandbox could
+reveal bug names through directory names and kept a clean copy of the game within reach), and the
+sample is small, two or three trials per bug, so the rates are indicative.
 [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/debug-eval.md)
 
 ## Scenes

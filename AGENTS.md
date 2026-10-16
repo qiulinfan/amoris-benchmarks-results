@@ -137,9 +137,17 @@ numbers sit in the script with a comment naming the engine document and section 
   or `docs/charter.md`, never from provisional tables, and cross-check them against the archived
   raw data in `sources/` where it exists. Never recompute: a ratio or average appears only if the
   document states it.
-- Each chart and its README caption state the hardware, backend and date and link to the method
-  page in the public engine repository (the specific file when Amoris has it, otherwise its
-  `docs/bench/` tree).
+- Each chart and its README caption state the hardware, backend and date and link to the specific
+  method page in the public engine repository. A Pioneer-only result whose page Amoris does not
+  have yet says that the method page follows and links its quiet run data under `sources/`
+  instead; never link the bare `docs/bench/` tree as its method. Today that applies to three
+  charts: when Amoris has `docs/bench/shadows.md`, `docs/bench/dynamic-scenes.md` and
+  `docs/bench/gizmo.md`, repoint the shadow slice culling, many moving objects and editor latency
+  captions to them (check with `git ls-tree origin/main docs/bench/` in an Amoris clone).
+- Carry the source's caveats that change how a number reads: what a measurement includes or
+  leaves out, readings an engine document later marks as superseded (for example Metal GPU
+  timestamps before the 2026-10-10 frame-attribution fix, metal-profiling.md), how the compared
+  systems differ, and validity limits such as debug-eval.md's pre-isolation runs.
 - The SVGs carry their own light and dark colors (`prefers-color-scheme`) and a `<title>` and
   `<desc>`; the README's alt text repeats the key numbers. Orange marks the reference (another
   engine, off, before), blue Amoris (on, after); gray de-emphasizes in single-series charts.
