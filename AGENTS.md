@@ -76,6 +76,14 @@ Pioneer-only methods (dynamic scenes, shadow slice culling, the serve loop and g
 upscaling, transparency, script cost, R1 physics) are in Pioneer's `docs/bench/` until Amoris
 integrates them.
 
+**Names before 2026-10-16.** On 2026-10-16 the owner renamed the engine's old identifier `pocket`
+to `amoris` in Pioneer (Pioneer `master` `b9cc3108`; Amoris itself still used `pocket` then).
+Every archived record keeps the names its run used: the `pocket` CLI (`pocket.exe`), crates
+`pocket-*`, `POCKET_*` environment variables, the TypeScript module `pocket`, `.pocket/`,
+`window.pocket` and the scene format `pocket-scene` are today's `amoris` CLI, `amoris-*`,
+`AMORIS_*`, `amoris`, `.amoris/`, `window.amoris` and `amoris-scene`. Do not rewrite records to
+the new names; write new sources and charts with the names of the build that produced them.
+
 ## Publication and sanitization policy
 
 Everything here is public. Before a file enters `sources/`, `media/` or `charts/`:
