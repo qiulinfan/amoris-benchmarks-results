@@ -1,9 +1,11 @@
 # Working on amoris-benchmarks-results
 
 This public repository holds the measured outputs, quality comparisons and validation logs of
-[Amoris](https://github.com/qiulinfan/amoris) and of Amoris Pioneer (the private, agent-developed
-experimental engine, `qiulinfan/amoris-pioneer`), plus a showcase of the results for people.
-Engine code, benchmark programs, specifications and methods stay in the engine repositories
+[Amoris](https://github.com/qiulinfan/amoris), plus a showcase of the results for people. It also
+keeps the archived outputs of Amoris Pioneer, the engine's private experimental line until the
+owner retired it on 2026-10-25: its adopted work, methods included, is in Amoris, and its repository
+was deleted without an archive; the `pioneer-*` sources keep its published runs.
+Engine code, benchmark programs, specifications and methods stay in the engine repository
 (`docs/bench/`, `docs/charter.md`). Historical results keep their original workload, platform and
 date; an archived snapshot is not a new run.
 
@@ -72,9 +74,8 @@ Methods and interpretation live in the engine: [rendering](https://github.com/qi
 [physics](https://github.com/qiulinfan/amoris/blob/main/docs/bench/physics.md),
 [agent development](https://github.com/qiulinfan/amoris/blob/main/bench/agent-dev/protocol.md) and
 [agent debugging](https://github.com/qiulinfan/amoris/blob/main/docs/bench/agent-debug.md).
-Pioneer-only methods (dynamic scenes, shadow slice culling, the serve loop and gizmo drags, TAA
-upscaling, transparency, script cost, R1 physics) are in Pioneer's `docs/bench/` until Amoris
-integrates them.
+The methods first written on Pioneer (dynamic scenes, shadow slice culling, the serve loop and
+gizmo drags, TAA upscaling, transparency, script cost, R1 physics) are in Amoris's `docs/bench/`.
 
 **Names before 2026-10-16.** On 2026-10-16 the owner renamed the engine's old identifier `pocket`
 to `amoris` in Pioneer (Pioneer `master` `b9cc3108`; Amoris itself still used `pocket` then).
@@ -90,7 +91,7 @@ Everything here is public. Before a file enters `sources/`, `media/` or `charts/
 
 - **No local paths, user or host names, or endpoints.** Replace them with `<local-path>`,
   `<local-user>`, `<local-host>` and `<local-endpoint>` (`<redacted>` for anything else private);
-  a path inside the Pioneer checkout keeps its part below the checkout root.
+  a path inside an engine checkout keeps its part below the checkout root.
 - **No process inventories.** Process names, full command lines, PIDs and native thread IDs are
   removed from condition records and logs. Condition JSONs (`tools/machine_conditions.py` output)
   carry a sanitization block: `"sanitization": {"source_file": ..., "source_commit": ...,
@@ -124,9 +125,9 @@ grep -rIlE 'C:\\\\Users|C:/Users|/Users/[a-z]|/home/[a-z]|127\.0\.0\.1|localhost
 
 ## Adding a source
 
-1. Copy the sanitized results to `sources/<origin>-<date>/`: `<origin>` is `pioneer-<track>` for
-   a Pioneer exploration track (its `out/<track>/` layout kept below it) or `amoris[-<topic>]` for
-   the main engine; `<date>` is the archive date, `YYYYMMDD`. Never rewrite an archived source
+1. Copy the sanitized results to `sources/<origin>-<date>/`: `<origin>` is `amoris[-<topic>]`
+   (each archived `pioneer-<track>` source keeps its Pioneer track's `out/<track>/` layout);
+   `<date>` is the archive date, `YYYYMMDD`. Never rewrite an archived source
    except to fix a sanitization miss.
 2. Add a row to the table above: origin repository, branch, commit (and merge commit if any),
    contents, and what stayed local.
@@ -146,12 +147,8 @@ numbers sit in the script with a comment naming the engine document and section 
   raw data in `sources/` where it exists. Never recompute: a ratio or average appears only if the
   document states it.
 - Each chart and its README caption state the hardware, backend and date and link to the specific
-  method page in the public engine repository. A Pioneer-only result whose page Amoris does not
-  have yet says that the method page follows and links its quiet run data under `sources/`
-  instead; never link the bare `docs/bench/` tree as its method. Today that applies to three
-  charts: when Amoris has `docs/bench/shadows.md`, `docs/bench/dynamic-scenes.md` and
-  `docs/bench/gizmo.md`, repoint the shadow slice culling, many moving objects and editor latency
-  captions to them (check with `git ls-tree origin/main docs/bench/` in an Amoris clone).
+  method page in the public engine repository, never the bare `docs/bench/` tree; a caption may
+  also link its quiet run data under `sources/`.
 - Carry the source's caveats that change how a number reads: what a measurement includes or
   leaves out, readings an engine document later marks as superseded (for example Metal GPU
   timestamps before the 2026-10-10 frame-attribution fix, metal-profiling.md), how the compared

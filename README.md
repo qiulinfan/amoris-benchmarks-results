@@ -4,9 +4,7 @@
 rules in TypeScript, a wgpu renderer on Metal, Vulkan, Direct3D 12 and WebGPU in the browser, a web
 editor, and one set of commands shared by people and AI agents. This page shows how it measures up
 against open-source engines and libraries, what its own optimizations bought, and what it looks
-like running. Some results come from Amoris Pioneer, the engine's experimental line, before they
-reach the main repository. Every chart names its hardware, backend and date, and links to its
-method or, until that work reaches the main repository, to its run data.
+like running. Every chart names its hardware, backend and date, and links to its method.
 
 ## Against open-source engines and libraries
 
@@ -61,29 +59,29 @@ speedup. [Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/lod.m
 
 ![Shadow pass GPU time with slice culling off and on: 33.86 to 18.72 ms, 39.27 to 20.20 ms and 27.1 to 15.4 ms on RTX 5060; 35.75 to 20.56 ms and 45.45 to 24.76 ms on Radeon 780M.](charts/shadow-slice-culling.svg)
 
-Same laptop, Direct3D 12, 2026-10-15 (Amoris Pioneer). Each cascade now skips casters that cannot
+Same laptop, Direct3D 12, 2026-10-15. Each cascade now skips casters that cannot
 shadow anything in the slice of the view it covers, and its cost falls with the triangles it drops.
-The method page follows when this work reaches the main repository; until then, the
+[Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/shadows.md),
 [run data](sources/pioneer-shadowcull-20261015/quiet/).
 
 ### Many moving objects
 
 ![Frame time with N of 1.6 million cubes moving. 100,000 side by side: 284 to 14.5 ms. 100,000 scattered: 2,403 to 18.1 ms.](charts/dynamic-scenes.svg)
 
-Same laptop, RTX 5060, Direct3D 12, 2026-10-15 (Amoris Pioneer). Applying moves is now linear, about
+Same laptop, RTX 5060, Direct3D 12, 2026-10-15. Applying moves is now linear, about
 60 ns per moved object, and scattered moves reach the GPU in one write instead of one write each.
-The method page follows when this work reaches the main repository; until then, the
+[Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/dynamic-scenes.md),
 [run data](sources/pioneer-dynscene-20261015/quiet/).
 
 ### Editor latency
 
 ![Pointer move to the page's next frame while dragging an object: 60.5 ms before, 48.0 ms with the host's change, 14.6 ms with both changes.](charts/editor-drag-latency.svg)
 
-Same laptop, Chrome 155 (WebGPU on the Radeon 780M), the real host, 2026-10-16 (Amoris Pioneer). The
+Same laptop, Chrome 155 (WebGPU on the Radeon 780M), the real host, 2026-10-16. The
 host now sends a frame as soon as the game publishes a change instead of checking every 16 ms, and
 the editor sends a drag's change at once when none is in flight, instead of at most every 60 ms.
-Presentation to the screen is not included, so these are lower bounds. The method page follows
-when this work reaches the main repository; until then, the
+Presentation to the screen is not included, so these are lower bounds.
+[Method](https://github.com/qiulinfan/amoris/blob/main/docs/bench/gizmo.md),
 [run data](sources/pioneer-serveloop-20261016/quiet/).
 
 ## Neural texture compression
